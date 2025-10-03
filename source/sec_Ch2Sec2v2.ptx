@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec_Ch2Sec2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec_Ch2Sec2v2" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>The Limit of a Function</title>
   <introduction>
   <title> Learning Objectives</title>
@@ -36,13 +36,74 @@
 <p id="fs-id1170572151707">Let <m>f(x)</m> be a function defined at all values in an open interval containing <m> a </m>, with the possible exception of <m> a </m> itself, and let <m> L </m> be a real number. If <emphasis effect="italics">all</emphasis> values of the function <m>f(x)</m> approach the real number <m> L </m> as the values of <m>x(\neq a)</m> approach the number <m> a </m>, then we say that the limit of <m>f(x)</m> as <m>x</m> approaches <m> a </m> is <m> L </m>. (More succinct, as <m>x</m> gets closer to <m> a </m>, <m>f(x)</m> gets closer and stays close to <m> L </m>.) Symbolically, we express this idea as</p>
 <me>\lim_{x \to a} f(x)=L.</me>
 </definition>
-<!-- <p id="fs-id1170572244141">We can estimate limits by constructing tables of functional values and by looking at their graphs. This process is described in the following Problem-Solving Strategy.</p>
+
+
+<!--p id="fs-id1170572175147">We apply this Problem-Solving Strategy to compute a limit in <xref ref="fs-id1170572561451"/>.</p -->
+<p id="revise1">In this section, we'll focus on finding a table of values and the graph of a function.  As an example, consider <m>\displaystyle\lim_{x\to 0}\frac{\sin{x}}{x}</m>. Notice that <m>\sin{x}/x</m> is undefined at <m>x=0</m>, but we are not interested in the function value at <m>x=0</m>, only in the <m>y-</m>value the function is approaching as the <m>x-</m>values approach <m>0</m>.</p>
+<example xml:id="fs-id1170572561451">
+<title>Evaluating a Limit Using a Table of Functional Values 1</title>
+ <statement id="fs-id1170572106890">
+<p id="fs-id1170571596728">Evaluate <m>\displaystyle\lim_{x\to 0}\frac{\sin x}{x}</m> using a table of functional values.</p>
+</statement>
+<solution id="fs-id1170572552454">
+<p id="fs-id1170572169167">We have calculated the values of <m>f(x)=(\sin x)/x</m> for the values of <m>x</m> listed in <xref ref="fs-id1170572208852"/>.</p>
+<table xml:id="fs-id1170572208852" summary="There are two tables. They both have two columns and five rows. The first table has headers x and sin(x)/x in the first row. Under x in the first column are the values -0.1, -0.01, -0.001, and -0.0001. Under sin(x)/x in the second column are values 0.998334166468, 0.999983333417, 0.999999833333, and 0.999999998333. The second table has headers x and sin(x)/x in the first row. Under x in the first column are the values 0.1, 0.01, 0.001, and 0.0001. Under sin(x)/x in the second column are values 0.998334166468, 0.999983333417, 0.999999833333, and 0.999999998333.">
+<title>Table of Functional Values for <m>\displaystyle\lim_{x\to 0}\frac{\sin x }{x}</m></title>
+<tabular>
+<row valign="top" header="yes">
+<cell halign ="left"><m>x</m></cell>
+<cell halign ="left"><m> \frac{\sin x}{x}</m></cell>
+<cell halign ="left"/>
+<cell halign ="left"><m>x</m></cell>
+<cell halign ="left"><m>\frac{\sin x}{x}</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left">-0.1</cell>
+<cell halign ="left">0.998334166468</cell>
+<cell halign ="left"/>
+<cell halign ="left">0.1</cell>
+<cell halign ="left">0.998334166468</cell>
+</row>
+<row valign="top">
+<cell halign ="left">-0.01</cell>
+<cell halign ="left">0.999983333417</cell>
+<cell halign ="left"/>
+<cell halign ="left">0.01</cell>
+<cell halign ="left">0.999983333417</cell>
+</row>
+<row valign="top">
+<cell halign ="left">-0.001</cell>
+<cell halign ="left">0.999999833333</cell>
+<cell halign ="left"/>
+<cell halign ="left">0.001</cell>
+<cell halign ="left">0.999999833333</cell>
+</row>
+<row valign="top">
+<cell halign ="left">-0.0001</cell>
+<cell halign ="left">0.999999998333</cell>
+<cell halign ="left"/>
+<cell halign ="left">0.0001</cell>
+<cell halign ="left">0.999999998333</cell>
+</row>
+</tabular>
+</table>
+<p xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1170572236179"><em>Note</em>: The values in this table were obtained using a calculator and using all the places given in the calculator output.</p><p id="fs-id1170572558630">As we read down each <m> \frac{\sin(x)}{x}</m> column, we see that the values in each column appear to be approaching one. Thus, it is fairly reasonable to conclude that <m>\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1.</m> A calculator-or computer-generated graph of <m>f(x)= \frac{\sin x}{x}</m> would be similar to that shown in <xref ref="CNX_Calc_Figure_02_02_003"/>, and it confirms our estimate.</p>
+<figure xml:id="CNX_Calc_Figure_02_02_003">
+<image source="CNX_Calc_Figure_02_02_003.jpg" width="50%">
+<description>"A graph of f(x) = sin(x)/x over the interval [-6, 6]. The curving function has a y intercept at x=0 and x intercepts at y=pi and y=-pi."
+</description></image> <caption>The graph of <m>f(x)=(\sin x)/x</m> confirms the estimate from <xref ref="fs-id1170572208852"/>.</caption>
+</figure>
+</solution>
+</example>
+
+
+<!--p id="fs-id1170572244141">We can estimate limits by constructing tables of functional values and by looking at their graphs. This process is described in the following Problem-Solving Strategy.</p-->
 <note id="fs-id1170571656330" class="problem-solving">
 <title>Problem-Solving Strategy: Evaluating a Limit Using a Table of Functional Values</title>
 <ol xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1170572480841" list-type="enumerated" number-style="arabic">
-<li>To evaluate <m>\lim_{x \to a} f(x),</m> we begin by completing a table of functional values. We should choose two sets of <m>x</m>-values—one set of values approaching <m> a </m> and less than <m> a </m>, and another set of values approaching <m> a </m> and greater than <m> a </m>. <xref ref="fs-id1170572204940"/> demonstrates what your tables might look like.<newline/>
+<li>To evaluate <m>\ds\lim_{x \to a} f(x),</m> we begin by completing a table of functional values. We should choose two sets of <m>x</m>-values—one set of values approaching <m> a </m> and less than <m> a </m>, and another set of values approaching <m> a </m> and greater than <m> a </m>. <xref ref="fs-id1170572204940"/> demonstrates what your tables might look like.<newline/>
 <table xml:id="fs-id1170572204940" summary="There are two tables. They both have two columns and five rows. The first table has headers x and f(x) in the first row. Under x in the first column are the values a-0.1, a-0.01, a-0.001, and a-0.0001. Under f(x) in the second column are values f(a-0.1), f(a-0.01), f(a-0.001), and f(a-0.0001). At the bottom is a note that one may “use additional values as necessary” in both columns. The second table has headers x and f(x) in the first row. Under x in the first column are the values a+0.1, a+0.01, a+0.001, and a+0.0001. Under f(x) in the second column are values f(a+0.1), f(a+0.01), f(a+0.001), and f(a+0.0001). At the bottom is a note that one may “use additional values as necessary” in both columns.">
-<title>Table of Functional Values for <m>\lim_{x \to a} f(x)</m></title>
+<title>Table of Functional Values for <m>\ds\lim_{x \to a} f(x)</m></title>
 <tabular>
 <row valign="top" header ="yes">
 <cell halign ="left"><m>x</m></cell>
@@ -85,69 +146,12 @@
 </row>
 </tabular>
 </table></li>
-<li>Next, let’s look at the values in each of the <m>f(x)</m> columns and determine whether the values seem to be approaching a single value as we move down each column. In our columns, we look at the sequence <m>f(a-0.1),f(a-0.01),f(a-0.001).,f(a-0.0001),</m> and so on, and <m>f(a+0.1),f(a+0.01),f(a+0.001),f(a+0.0001),</m> and so on. (<emphasis effect="italics">Note</emphasis>: Although we have chosen the <m>x</m>-values <m>a\pm 0.1,a\pm 0.01,a\pm 0.001,a\pm 0.0001,</m> and so forth, and these values will probably work nearly every time, on very rare occasions we may need to modify our choices.)</li>
-<li>If both columns approach a common <emphasis effect="italics">y</emphasis>-value <m> L </m>, we state <m>\lim_{x \to a} f(x)=L.</m> We can use the following strategy to confirm the result obtained from the table or as an alternative method for estimating a limit.</li>
-<li>Using a graphing calculator or computer software that allows us graph functions, we can plot the function <m>f(x),</m> making sure the functional values of <m>f(x)</m> for <m>x</m>-values near <m> a </m> are in our window. We can use the trace feature to move along the graph of the function and watch the <emphasis effect="italics">y</emphasis>-value readout as the <m>x</m>-values approach <m> a </m>. If the <emphasis effect="italics">y</emphasis>-values approach <m> L </m> as our <m>x</m>-values approach <m> a </m> from both directions, then <m>\lim_{x \to a} f(x)=L.</m> We may need to zoom in on our graph and repeat this process several times.</li>
+<li>Next, let’s look at the values in each of the <m>f(x)</m> columns and determine whether the values seem to be approaching a single value as we move down each column. In our columns, we look at the sequence <m>f(a-0.1),f(a-0.01),f(a-0.001).,f(a-0.0001),</m> and so on, and <m>f(a+0.1),f(a+0.01),f(a+0.001),f(a+0.0001),</m> and so on. (<em>Note</em>: Although we have chosen the <m>x</m>-values <m>a\pm 0.1,a\pm 0.01,a\pm 0.001,a\pm 0.0001,</m> and so forth, and these values will probably work nearly every time, on very rare occasions we may need to modify our choices.)</li>
+<li>If both columns approach a common <em>y</em>-value <m> L </m>, we state <m>\lim_{x \to a} f(x)=L.</m> We can use the following strategy to confirm the result obtained from the table or as an alternative method for estimating a limit.</li>
+<li>Using a graphing calculator or computer software that allows us graph functions, we can plot the function <m>f(x),</m> making sure the functional values of <m>f(x)</m> for <m>x</m>-values near <m> a </m> are in our window. We can use the trace feature to move along the graph of the function and watch the <em>y</em>-value readout as the <m>x</m>-values approach <m> a </m>. If the <emphasis effect="italics">y</emphasis>-values approach <m> L </m> as our <m>x</m>-values approach <m> a </m> from both directions, then <m>\lim_{x \to a} f(x)=L.</m> We may need to zoom in on our graph and repeat this process several times.</li>
 </ol></note> 
 
-<p id="fs-id1170572175147">We apply this Problem-Solving Strategy to compute a limit in <xref ref="fs-id1170572561451"/>.</p>-->
-<p id="revise1">In this section, we'll focus on finding a table of values and the graph of a function.  As an example, consider <m>\displaystyle\lim_{x\to 0}\frac{\sin{x}}{x}</m>. Notice that <m>\sin{x}/x</m> is undefined at <m>x=0</m>, but we are not interested in the function value at <m>x=0</m>, only in the <m>y-</m>value the function is approaching as the <m>x-</m>values approach <m>0</m>.THIS IS JJJUST A TEST</p>
-<example xml:id="fs-id1170572561451">
-<title>Evaluating a Limit Using a Table of Functional Values 1</title>
- <statement id="fs-id1170572106890">
-<p id="fs-id1170571596728">Evaluate <m>\lim_{x\to 0}\frac{\sin x}{x}</m> using a table of functional values.</p>
-</statement>
-<solution id="fs-id1170572552454">
-<p id="fs-id1170572169167">We have calculated the values of <m>f(x)=(\sin x)/x</m> for the values of <m>x</m> listed in <xref ref="fs-id1170572208852"/>.</p>
-<table xml:id="fs-id1170572208852" summary="There are two tables. They both have two columns and five rows. The first table has headers x and sin(x)/x in the first row. Under x in the first column are the values -0.1, -0.01, -0.001, and -0.0001. Under sin(x)/x in the second column are values 0.998334166468, 0.999983333417, 0.999999833333, and 0.999999998333. The second table has headers x and sin(x)/x in the first row. Under x in the first column are the values 0.1, 0.01, 0.001, and 0.0001. Under sin(x)/x in the second column are values 0.998334166468, 0.999983333417, 0.999999833333, and 0.999999998333.">
-<title>Table of Functional Values for <m>\lim_{x\to 0}\frac{\sin x }{x}</m></title>
-<tabular>
-<row valign="top" header="yes">
-<cell halign ="left"><m>x</m></cell>
-<cell halign ="left"><m> \frac{\sin x}{x}</m></cell>
-<cell halign ="left"/>
-<cell halign ="left"><m>x</m></cell>
-<cell halign ="left"><m>\frac{\sin x}{x}</m></cell>
-</row>
-<row valign="top">
-<cell halign ="left">-0.1</cell>
-<cell halign ="left">0.998334166468</cell>
-<cell halign ="left"/>
-<cell halign ="left">0.1</cell>
-<cell halign ="left">0.998334166468</cell>
-</row>
-<row valign="top">
-<cell halign ="left">-0.01</cell>
-<cell halign ="left">0.999983333417</cell>
-<cell halign ="left"/>
-<cell halign ="left">0.01</cell>
-<cell halign ="left">0.999983333417</cell>
-</row>
-<row valign="top">
-<cell halign ="left">-0.001</cell>
-<cell halign ="left">0.999999833333</cell>
-<cell halign ="left"/>
-<cell halign ="left">0.001</cell>
-<cell halign ="left">0.999999833333</cell>
-</row>
-<row valign="top">
-<cell halign ="left">-0.0001</cell>
-<cell halign ="left">0.999999998333</cell>
-<cell halign ="left"/>
-<cell halign ="left">0.0001</cell>
-<cell halign ="left">0.999999998333</cell>
-</row>
-</tabular>
-</table>
-<p xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1170572236179"><emphasis effect="italics">Note</emphasis>: The values in this table were obtained using a calculator and using all the places given in the calculator output.</p><p id="fs-id1170572558630">As we read down each <m> \frac{\sin(x)}{x}</m> column, we see that the values in each column appear to be approaching one. Thus, it is fairly reasonable to conclude that <m>\lim_{x\to0}\frac{\sin x}{x}=1.</m> A calculator-or computer-generated graph of <m>f(x)= \frac{(\sin x)}{x}</m> would be similar to that shown in <xref ref="CNX_Calc_Figure_02_02_003"/>, and it confirms our estimate.</p>
-<figure xml:id="CNX_Calc_Figure_02_02_003">
-<image source="CNX_Calc_Figure_02_02_003.jpg" width="50%">
-<description>"A graph of f(x) = sin(x)/x over the interval [-6, 6]. The curving function has a y intercept at x=0 and x intercepts at y=pi and y=-pi."
-</description></image> <caption>The graph of <m>f(x)=(\sin x)/x</m> confirms the estimate from <xref ref="fs-id1170572208852"/>.</caption>
-</figure>
-</solution>
 
-</example>
 <example xml:id="fs-id1170571656691">
 <title>Evaluating a Limit Using a Table of Functional Values 2</title>
  <statement id="fs-id1170572627386">

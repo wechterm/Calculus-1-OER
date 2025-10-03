@@ -1,5 +1,5 @@
-/mnt/c/Users/goku_/Documents/PretextText/new-pretext-project/source/main.ptx:18:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element idx, got subtitle
-/mnt/c/Users/goku_/Documents/PretextText/new-pretext-project/source/main.ptx:8:0:ERROR:RELAXNGV:RELAXNG_ERR_NOTELEM: Expecting an element got text
-/mnt/c/Users/goku_/Documents/PretextText/new-pretext-project/source/main.ptx:5:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element text there
-/mnt/c/Users/goku_/Documents/PretextText/new-pretext-project/source/main.ptx:5:0:ERROR:RELAXNGV:RELAXNG_ERR_NOTELEM: Expecting an element got text
-/mnt/c/Users/goku_/Documents/PretextText/new-pretext-project/source/main.ptx:5:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element chapter failed to validate content
+/mnt/c/Users/wechterm/OneDrive - College of DuPage/Documents/new-pretext-project/source/main.ptx:18:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element idx, got subtitle
+/mnt/c/Users/wechterm/OneDrive - College of DuPage/Documents/new-pretext-project/source/main.ptx:8:0:ERROR:RELAXNGV:RELAXNG_ERR_NOTELEM: Expecting an element got text
+/mnt/c/Users/wechterm/OneDrive - College of DuPage/Documents/new-pretext-project/source/main.ptx:5:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element text there
+/mnt/c/Users/wechterm/OneDrive - College of DuPage/Documents/new-pretext-project/source/main.ptx:5:0:ERROR:RELAXNGV:RELAXNG_ERR_NOTELEM: Expecting an element got text
+/mnt/c/Users/wechterm/OneDrive - College of DuPage/Documents/new-pretext-project/source/main.ptx:5:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element chapter failed to validate content
