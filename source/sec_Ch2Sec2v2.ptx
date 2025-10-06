@@ -147,15 +147,15 @@
 </tabular>
 </table></li>
 <li>Next, let’s look at the values in each of the <m>f(x)</m> columns and determine whether the values seem to be approaching a single value as we move down each column. In our columns, we look at the sequence <m>f(a-0.1),f(a-0.01),f(a-0.001).,f(a-0.0001),</m> and so on, and <m>f(a+0.1),f(a+0.01),f(a+0.001),f(a+0.0001),</m> and so on. (<em>Note</em>: Although we have chosen the <m>x</m>-values <m>a\pm 0.1,a\pm 0.01,a\pm 0.001,a\pm 0.0001,</m> and so forth, and these values will probably work nearly every time, on very rare occasions we may need to modify our choices.)</li>
-<li>If both columns approach a common <em>y</em>-value <m> L </m>, we state <m>\lim_{x \to a} f(x)=L.</m> We can use the following strategy to confirm the result obtained from the table or as an alternative method for estimating a limit.</li>
-<li>Using a graphing calculator or computer software that allows us graph functions, we can plot the function <m>f(x),</m> making sure the functional values of <m>f(x)</m> for <m>x</m>-values near <m> a </m> are in our window. We can use the trace feature to move along the graph of the function and watch the <em>y</em>-value readout as the <m>x</m>-values approach <m> a </m>. If the <emphasis effect="italics">y</emphasis>-values approach <m> L </m> as our <m>x</m>-values approach <m> a </m> from both directions, then <m>\lim_{x \to a} f(x)=L.</m> We may need to zoom in on our graph and repeat this process several times.</li>
+<li>If both columns approach a common <em>y</em>-value <m> L </m>, we state <m>\ds\lim_{x \to a} f(x)=L.</m> We can use the following strategy to confirm the result obtained from the table or as an alternative method for estimating a limit.</li>
+<li>Using a graphing calculator or computer software that allows us graph functions, we can plot the function <m>f(x),</m> making sure the functional values of <m>f(x)</m> for <m>x</m>-values near <m> a </m> are in our window. We can use the trace feature to move along the graph of the function and watch the <em>y</em>-value readout as the <m>x</m>-values approach <m> a </m>. If the <m>y</m>-values approach <m> L </m> as our <m>x</m>-values approach <m> a </m> from both directions, then <m>\ds\lim_{x \to a} f(x)=L.</m> We may need to zoom in on our graph and repeat this process several times.</li>
 </ol></note> 
 
 
 <example xml:id="fs-id1170571656691">
 <title>Evaluating a Limit Using a Table of Functional Values 2</title>
  <statement id="fs-id1170572627386">
-<p id="fs-id1170572550814">Evaluate <m>\lim_{x\to4}\frac{\sqrt{x}-2}{x-4}</m> using a table of functional values.</p>
+<p id="fs-id1170572550814">Evaluate <m>\ds\lim_{x\to4}\frac{\sqrt{x}-2}{x-4}</m> using a table of functional values.</p>
 </statement>
 <solution id="fs-id1170572203578">
 <p id="fs-id1170572141980">As before, we use a table—in this case, <xref ref="fs-id1170571595483"/>—to list the values of the function for the given values of <m>x</m>.</p>
@@ -172,37 +172,41 @@
 <row valign="top">
 <cell halign ="left">3.9</cell>
 <cell halign ="left">0.251582341869</cell>
-<cell morerows="4"/>
+<cell halign ="left"/>
 <cell halign ="left">4.1</cell>
 <cell halign ="left">0.248456731317</cell>
 </row>
 <row valign="top">
 <cell halign ="left">3.99</cell>
 <cell halign ="left">0.25015644562</cell>
+<cell halign ="left"/>
 <cell halign ="left">4.01</cell>
 <cell halign ="left">0.24984394501</cell>
 </row>
 <row valign="top">
 <cell halign ="left">3.999</cell>
 <cell halign ="left">0.250015627</cell>
+<cell halign ="left"/>
 <cell halign ="left">4.001</cell>
 <cell halign ="left">0.249984377</cell>
 </row>
 <row valign="top">
 <cell halign ="left">3.9999</cell>
 <cell halign ="left">0.250001563</cell>
+<cell halign ="left"/>
 <cell halign ="left">4.0001</cell>
 <cell halign ="left">0.249998438</cell>
 </row>
 <row valign="top">
 <cell halign ="left">3.99999</cell>
 <cell halign ="left">0.25000016</cell>
+<cell halign ="left"/>
 <cell halign ="left">4.00001</cell>
 <cell halign ="left">0.24999984</cell>
 </row>
 </tabular>
 </table>
-<p id="fs-id1170572455426">After inspecting this table, we see that the functional values less than 4 appear to be decreasing toward 0.25 whereas the functional values greater than 4 appear to be increasing toward 0.25. We conclude that <m>\lim_{x\to4} \frac{\sqrt{x}-2}{x-4}=0.25.</m> We confirm this estimate using the graph of <m>f(x)=\frac{\sqrt{x}-2}{x-4}</m> shown in <xref ref="CNX_Calc_Figure_02_02_004"/>.</p>
+<p id="fs-id1170572455426">After inspecting this table, we see that the functional values less than 4 appear to be decreasing toward <m> 0.25</m> whereas the functional values greater than <m>4</m> appear to be increasing toward <m>0.25</m>. We conclude that <m>\ds\lim_{x\to4} \frac{\sqrt{x}-2}{x-4}=0.25.</m> We confirm this estimate using the graph of <m>f(x)=\frac{\sqrt{x}-2}{x-4}</m> shown in <xref ref="CNX_Calc_Figure_02_02_004"/>.</p>
 <figure xml:id="CNX_Calc_Figure_02_02_004">
 <image source="CNX_Calc_Figure_02_02_004.jpg" width="50%">
 <description>"A graph of the function f(x) = (sqrt(x) – 2 ) / (x-4) over the interval [0,8]. There is an open circle on the function at x=4. The function curves asymptotically towards the x axis and y axis in quadrant one."
@@ -213,50 +217,175 @@
 </example>
 
 <exercise>  <statement id="fs-id1170571596040">
-<p id="fs-id1170571596043">Estimate <m>\lim_{x\to1}\frac{\frac{1}{x}-1}{x-1}</m> using a table of functional values. Use a graph to confirm your estimate.</p>
+<p id="fs-id1170571596043">Estimate <m>\ds\lim_{x\to1}\frac{\frac{1}{x}-1}{x-1}</m> using a table of functional values. Use a graph to confirm your estimate.</p>
 </statement>
 <solution id="fs-id1170572227897">
-<p id="fs-id1170572227899"><m>\lim_{x\to1}\frac{\frac{1}{x}-1}{x-1}=-1</m></p>
+<p id="fs-id1170572227899"><m>\ds\lim_{x\to1}\frac{\frac{1}{x}-1}{x-1}=-1</m></p>
 </solution>
 <hint>
 
-<p id="fs-id1170571656412">Use 0.9, 0.99, 0.999, 0.9999, 0.99999 and 1.1, 1.01, 1.001, 1.0001, 1.00001 as your table values.</p>
+<p id="fs-id1170571656412">Use <m>0.9,\, 0.99,\, 0.999,\, 0.9999,\, 0.99999</m> and <m>1.1, \,1.01,\, 1.001,\, 1.0001,\, 1.00001</m> as your table values.</p>
 </hint>
 
 </exercise>
 
 <p id="fs-id1170572506486">At this point, we see from <xref ref="fs-id1170572561451"/> and <xref ref="fs-id1170571656691"/> that it may be just as easy, if not easier, to estimate a limit of a function by inspecting its graph as it is to estimate the limit by using a table of functional values. In <xref ref="fs-id1170572337207"/>, we evaluate a limit exclusively by looking at a graph rather than by using a table of functional values.</p>
+
 <example xml:id="fs-id1170572337207">
 <title>Evaluating a Limit Using a Graph</title>
 <statement id="fs-id1170572347396">
-<p id="fs-id1170572347401">For <m>g(x)</m> shown in <xref ref="CNX_Calc_Figure_02_02_006"/>, evaluate <m>\lim_{x\to-1}g(x).</m></p>
+<p id="fs-id1170572347401">For <m>g(x)</m> shown in <xref ref="CNX_Calc_Figure_02_02_006"/>, evaluate <m>\ds\lim_{x\to-1}g(x).</m></p>
 <figure xml:id="CNX_Calc_Figure_02_02_006">
 <image source="CNX_Calc_Figure_02_02_006.jpg" width="50%">
-<description>"The graph of a generic curving function g(x). In quadrant two, there is an open circle on the function at (-1,3) and a closed circle one unit up at (-1, 4)."  </description></image> <caption>The graph of <m>g(x)</m> includes one value not on a smooth curve.</caption>
+<description>"The graph of a generic curving function g(x). In quadrant two, there is an open circle on the function at (-1,3) and a closed circle one unit up at (-1,4)."  </description></image> <caption>The graph of <m>g(x)</m> includes one value not on a smooth curve.</caption>
 </figure>
 </statement>
 <solution id="fs-id1170571654408">
-<p id="fs-id1170571654410">Despite the fact that <m>g(-1)=4,</m> as the <m>x</m>-values approach -1 from either side, the <m>g(x)</m> values approach 3. Therefore, <m>\lim_{x\to-1}g(x)=3.</m> Note that we can determine this limit without even knowing the algebraic expression of the function.</p>
+<p id="fs-id1170571654410">Despite the fact that <m>g(-1)=4,</m> as the <m>x</m>-values approach <m>-1</m> from either side, the <m>g(x)</m> values approach <m>3</m>. Therefore, <m>\ds\lim_{x\to-1}g(x)=3.</m> Note that we can determine this limit without even knowing the algebraic expression of the function.</p>
 </solution>
 
 </example>
 <p id="fs-id1170571654758">Based on <xref ref="fs-id1170572337207"/>, we make the following observation: It is possible for the limit of a function to exist at a point, and for the function to be defined at this point, but the limit of the function and the value of the function at the point may be different.</p>
+
 <exercise><statement id="fs-id1170571656655">
-<p id="fs-id1170571656657">Use the graph of <m>h(x)</m> in <xref ref="CNX_Calc_Figure_02_02_007"/> to evaluate <m>\lim_{x\to2}h(x),</m> if possible.</p>
+<p id="fs-id1170571656657">Use the graph of <m>h(x)</m> in <xref ref="CNX_Calc_Figure_02_02_007"/> to evaluate <m>\ds\lim_{x\to2}h(x),</m> if possible.</p>
 <figure xml:id="CNX_Calc_Figure_02_02_007">
 <image source="CNX_Calc_Figure_02_02_007.jpg" width="50%">
 <description>"A graph of the function h(x), which is a parabola graphed over [-2.5, 5]. There is an open circle where the vertex should be at the point (2,-1)." </description> </image>
 </figure>
 </statement>
 <solution id="fs-id1170571593049">
-<p id="fs-id1170571593051"><m>\lim_{x\to2}h(x)=-1.</m></p>
+<p id="fs-id1170571593051"><m>\ds\lim_{x\to2}h(x)=-1.</m></p>
 </solution>
 <hint>
 
-<p id="fs-id1170571657959">What <emphasis effect="italics">y</emphasis>-value does the function approach as the <m>x</m>-values approach 2?</p>
+<p id="fs-id1170571657959">What <m>y</m>-value does the function approach as the <m>x</m>-values approach <m>2</m>?</p>
 </hint>
 
 </exercise>
+</subsection>
+
+<subsection id="LimitsNA">
+<title>Identifying When Limits Do Not Exist</title>
+<p id="limitsfail">A function may not have a limit for all values of <m>x</m>.  that is, we cannot write that <m>\ds\lim_{x\to a}f(x)=L</m> (where <m>L</m> is some real number) for all values of <m>a</m>, for there may not be a number that <m>f(x)</m> is approaching.  There are three common ways in which a limit may fail to exist.
+  <ol id="limitfaillist">
+    <li>The function <m>f(x)</m> may approach different values on either side of <m>a</m></li>
+    <li>The function may grow without upper or lower bound as <m>x</m> approaches <m>a</m></li>
+    <li>The function may oscillate as <m>x</m> approaches <m>a</m> without approaching a specific value</li>
+
+  </ol>
+We'll explore each of these in turn.
+</p>
+
+<example id="leftrightnolimit">
+<title>Different Values Approached From Left and Right</title>
+<p>Explore why <m>\ds\lim_{x\to 1}f(x)</m> does not exist where <me>f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x>1\end{cases}</me>
+</p>
+<solution>
+  <p>A graph of <m>f(x)</m> around <m>x=1</m> and a table are given in <xref ref="APEX_fig1-1"/> and <xref ref="APEX_table1-1"/>, respectively.  It is clear that as <m>x</m> approaches <m>1</m>, <m>f(x)</m> does not seem to approach a single number.  Instead it seems as though <m>f(x)</m> approaches two different numbers.  When considering values of <m>x</m> less than <m>1</m> (approaching <m>1</m> from the left), it seems <m>f(x)</m> is approaching <m>2</m>; when considering values of <m>x</m> greater than <m>1</m> (approaching <m>1</m> from the right), it seems <m>f(x)</m> is approaching <m>1</m>.</p>  <p>Recognizing this behavior is important; we'll study this in greater depth later.  Right now, it suffices to say that the limit does not exist since <m>f(x)</m> is approaching two <em>different</em> values as <m>x</m> approaches <m>1</m>.
+  </p>
+<figure xml:id="APEX_fig1-1">
+<image source="APEX_fig1-1_01.svg" width="50%">
+  <description>A graph of a polynomial from (0,3) to (2,1) with a point at (2,1) and on the same axes a line from (1,1) to (2,2) with a hole at (1,1)</description>
+</image>
+<caption>The limit of <m>f(x)</m> does not exist at <m>x=1</m></caption>
+</figure>
+<table xml:id="APEX_table1-1">
+<title>Values of <m>f(x)</m> near <m>x=1</m></title>
+<tabular>
+<row valign="top" header ="yes">
+<cell halign ="left"><m>x</m></cell>
+<cell halign ="left"><m>f(x)</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left"><m>.9</m></cell>
+<cell halign ="left"><m>2.01</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left"><m>.99</m></cell>
+<cell halign ="left"><m>2.0001</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left"><m>.999</m></cell>
+<cell halign ="left"><m>2.000001</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left"><m>1.001</m></cell>
+<cell halign ="left"><m>1.001</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left"><m>1.01</m></cell>
+<cell halign ="left"><m>1.01</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left"><m>1.1</m></cell>
+<cell halign ="left"><m>1.1</m></cell>
+</row>
+</tabular>
+</table>
+</solution>
+</example>
+
+<example id="infinitenolimit">
+<title>The Function Grows Without Bound</title>
+<p>Explore why <m>\ds\lim_{x\to 1}\frac{1}{(x-1)^2}</m> does not exist.
+</p>
+<solution>
+  <p>A graph and table of <m>f(x)=\ds\frac{1}{(x-1)^2}</m> are given in <xref ref="APEX_fig1-2"/> and <xref ref="APEX_table1-2"/>, respectively.  Both show that as <m>x</m> approaches <m>1</m>, <m>f(x)</m> grows larger and larger
+  </p>
+<figure xml:id="APEX_fig1-2">
+<image source="APEX_fig1-1_02.svg" width="50%">
+  <description>A graph of 1/(x-1)^2 showing a vertical asymptote at x=1 </description>
+</image>
+<caption>Observing no limit as <m>x\to 1</m></caption>
+</figure>
+<table xml:id="APEX_table1-2">
+<title>Values of <m>f(x)</m> near <m>x=1</m></title>
+<tabular>
+<row valign="top" header ="yes">
+<cell halign ="left"><m>x</m></cell>
+<cell halign ="left"><m>f(x)</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left"><m>.9</m></cell>
+<cell halign ="left"><m>100</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left"><m>.99</m></cell>
+<cell halign ="left"><m>10000</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left"><m>.999</m></cell>
+<cell halign ="left"><m>1\times 10^6</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left"><m>1.001</m></cell>
+<cell halign ="left"><m>1\times 10^6</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left"><m>1.01</m></cell>
+<cell halign ="left"><m>10000</m></cell>
+</row>
+<row valign="top">
+<cell halign ="left"><m>1.1</m></cell>
+<cell halign ="left"><m>100</m></cell>
+</row>
+</tabular>
+</table>
+<p>We can deduce this on our own with the aid of the graph and table.  If <m>x</m> is near <m>1</m>, then <m>(x-1)^2</m> is very small, and <me>\frac{1}{\text{very small number}}=\text{very large number}</me> Since <m>f(x)</m> is not approaching a single number, we conclude
+  <me>\lim_{x\to 1}\frac{1}{(x-1)^2}</me> does not exist.
+  </p>
+</solution>
+</example>
+
+<figure xml:id="APEX_fig1-3">
+<image source="APEX_fig1-1_03.svg" width="50%"></image>
+<image source="APEX_fig1-1_04.svg" width="50%"></image>
+  <!-- <description>A graph of 1/(x-1)^2 showing a vertical asymptote at x=1 </description> -->
+
+<caption>Observing no limit as <m>x\to 1</m></caption>
+</figure>
+
 <p id="fs-id1170572086316">Looking at a table of functional values or looking at the graph of a function provides us with useful insight into the value of the limit of a function at a given point. However, these techniques rely too much on guesswork. We eventually need to develop alternative methods of evaluating limits. These new methods are more algebraic in nature and we explore them in the next section; however, at this point we introduce two special limits that are foundational to the techniques to come.</p>
 <theorem xml:id="fs-id1170572086324" class="theorem">
 <title>Two Important Limits</title>

@@ -1,0 +1,71 @@
+DEBUG   : CLI version 2.29.2 matches requirements.txt 2.29.2.
+WARNING : Could not find a target 'html', but found a target 'web' with format='html'; using this target.
+INFO    : Building target web
+DEBUG   : XML syntax appears well formed.
+DEBUG   : PreTeXt document did not pass schema validation; unexpected output may result. See .error_schema.log for hints.  Continuing with build.
+DEBUG   : converting C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\source\main.ptx to enhanced (pre-processed) PreTeXt source for internal use
+INFO    : XSL conversion of C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\source\main.ptx by C:\Users\wechterm\.ptx\2.29.2\core\xsl\utilities\pretext-enhanced-source.xsl
+DEBUG   : XSL conversion via C:\Users\wechterm\.ptx\2.29.2\core\xsl\utilities\pretext-enhanced-source.xsl of C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\source\main.ptx to None and/or into directory None with parameters {'cli.version': '2.29', 'publisher': 'C:/Users/wechterm/OneDrive - College of DuPage/Documents/new-pretext-project/publication/publication.ptx', 'assembly.version-only': 'yes'}
+INFO    : successful application of C:\Users\wechterm\.ptx\2.29.2\core\xsl\utilities\pretext-enhanced-source.xsl
+DEBUG   : Source does not contain webwork problems
+INFO    : Generating any needed assets.
+DEBUG   : Using cached assets in C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\.cache where possible.
+DEBUG   : Ensuring webwork representations file is present.
+DEBUG   : Ensuring MyOpenMath XML files are present.
+DEBUG   : Source does not contain myopenmath problems
+DEBUG   : Assets generation requested for: ['webwork', 'latex-image', 'sageplot', 'asymptote', 'prefigure', 'youtube', 'codelens', 'datafile', 'interactive', 'qrcode', 'mermaid', 'myopenmath', 'dynamic-subs', 'references', 'stack'].
+DEBUG   : Based on format Format.HTML, assets to be generated are: ['webwork', 'latex-image', 'sageplot', 'asymptote', 'prefigure', 'codelens', 'datafile', 'myopenmath', 'dynamic-subs'].
+DEBUG   : Based on what is in your source, the assets that will be considered are [].
+DEBUG   : Assets to be generated: []
+DEBUG   : Temporary directories left behind for inspection: []
+DEBUG   : Updated these assets successfully: []
+INFO    : Finished generating assets.
+
+DEBUG   : Ensuring output directory for web: C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\output\web
+INFO    : Preparing to build into C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\output\web.
+DEBUG   : Now working in directory C:\Users\wechterm\.ptx\2.29.2\core\script\cssbuilder
+WARNING : Node.js must be installed to build CSS files.  Please install node.js and npm.
+ Will try to use prebuilt CSS files instead.
+DEBUG   : 
+DEBUG   : Attempting to install/update required node packages to generate css from sass.
+WARNING : Cannot find npm.  Will try to use prebuilt CSS files instead.
+WARNING : Unable to install npm packages to build css files.  Non-default CSS themes require node.js and npm to be installed.  See https://pretextbook.org/doc/guide/html/node-and-npm.html
+WARNING : 
+DEBUG   : Successfully changed directory back to C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project
+INFO    : discovering source file's directory name: C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\source
+INFO    : verifying and expanding input directory: C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\source\../generated-assets
+INFO    : input directory expanded to absolute path: C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\generated-assets
+INFO    : verifying and expanding input directory: C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\assets
+DEBUG   : parsing the publisher file variables
+DEBUG   : temporary directory for publisher variables: C:\Users\wechterm\AppData\Local\Temp\ptx-wvxk3033
+DEBUG   : file of publisher variables: C:\Users\wechterm\AppData\Local\Temp\ptx-wvxk3033\pub_var.txt
+INFO    : XSL conversion of C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\source\main.ptx by C:\Users\wechterm\.ptx\2.29.2\core\xsl\utilities\report-publisher-variables.xsl
+DEBUG   : XSL conversion via C:\Users\wechterm\.ptx\2.29.2\core\xsl\utilities\report-publisher-variables.xsl of C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\source\main.ptx to C:\Users\wechterm\AppData\Local\Temp\ptx-wvxk3033\pub_var.txt and/or into directory None with parameters {'cli.version': '2.29', 'publisher': 'C:/Users/wechterm/OneDrive - College of DuPage/Documents/new-pretext-project/publication/publication.ptx', 'assembly.version-only': 'yes'}
+INFO    : successful application of C:\Users\wechterm\.ptx\2.29.2\core\xsl\utilities\report-publisher-variables.xsl
+DEBUG   : determining value of publisher variable 'portable-html'
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 7.9.12
+INFO    : Downloading Runestone Services, version 7.9.12
+DEBUG   : Extracting rs services file to C:\Users\wechterm\AppData\Local\Temp\ptx-pu2pugj7\_static.
+INFO    : Extracting Runestone Services from archive file
+DEBUG   : determining value of publisher variable 'html-theme-name'
+DEBUG   : determining value of publisher variable 'html-theme-options'
+DEBUG   : locating "node" in [executables] section of configuration file
+INFO    : Node.js not available. Relying on prebuilt default-modern.
+INFO    : Using prebuilt CSS theme: default-modern with options: {'options': {'primary-color': '#195684', 'secondary-color': '#932c1c'}, 'contrast-checks': {'primary-color': '#fff', 'secondary-color': '#fff', 'primary-color-dark': '#23241f'}}
+INFO    : converting C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\source\main.ptx to HTML in C:\Users\wechterm\AppData\Local\Temp\ptx-pu2pugj7
+INFO    : XSL conversion of C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\source\main.ptx by C:\Users\wechterm\.ptx\2.29.2\core\xsl\pretext-html.xsl
+DEBUG   : XSL conversion via C:\Users\wechterm\.ptx\2.29.2\core\xsl\pretext-html.xsl of C:\Users\wechterm\OneDrive - College of DuPage\Documents\new-pretext-project\source\main.ptx to None and/or into directory C:\Users\wechterm\AppData\Local\Temp\ptx-pu2pugj7 with parameters {'cli.version': '2.29', 'rs-js': 'prefix-runtime.a85e2f1fefeea635.bundle.js:prefix-723.3e6434f80549315a.bundle.js:prefix-runestone.a707b621c77f7e48.bundle.js', 'rs-css': 'prefix-723.3bccd435914aa0ff.css:prefix-runestone.557d81b04b3ec0e4.css', 'rs-version': '7.9.12', 'publisher': 'C:/Users/wechterm/OneDrive - College of DuPage/Documents/new-pretext-project/publication/publication.ptx'}
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of C:\Users\wechterm\.ptx\2.29.2\core\xsl\pretext-html.xsl
+DEBUG   : Temporary directories left behind for inspection: ['C:\\Users\\wechterm\\AppData\\Local\\Temp\\ptx-pu2pugj7', 'C:\\Users\\wechterm\\AppData\\Local\\Temp\\ptx-wvxk3033']
+INFO    : 
+Finished build for target web. Run `pretext view web` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+DEBUG   : Completed without errors.
+INFO    : 
