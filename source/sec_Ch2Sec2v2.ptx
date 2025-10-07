@@ -108,35 +108,35 @@
 <row valign="top" header ="yes">
 <cell halign ="left"><m>x</m></cell>
 <cell halign ="left"><m>f(x)</m></cell>
-<cell halign ="left"/>
+<!--cell halign ="left"></cell-->
 <cell halign ="left"><m>x</m></cell>
 <cell halign ="left"><m>f(x)</m></cell>
 </row>
 <row valign="top">
 <cell halign ="left"><m>a-0.1</m></cell>
 <cell halign ="left"><m>f(a-0.1)</m></cell>
-<cell/>
+<!--cell halign ="left"></cell-->
 <cell halign ="left"><m>a+0.1</m></cell>
 <cell halign ="left"><m>f(a+0.1)</m></cell>
 </row>
 <row valign="top">
 <cell halign ="left"><m>a-0.01</m></cell>
 <cell halign ="left"><m>f(a-0.01)</m></cell>
-<cell/>
+<!--cell halign="left"></cell-->
 <cell halign ="left"><m>a+0.01</m></cell>
 <cell halign ="left"><m>f(a+0.01)</m></cell>
 </row>
 <row valign="top">
 <cell halign ="left"><m>a-0.001</m></cell>
 <cell halign ="left"><m>f(a-0.001)</m></cell>
-<cell/>
+<!--cell halign="left"></cell-->
 <cell halign ="left"><m>a+0.001</m></cell>
 <cell halign ="left"><m>f(a+0.001)</m></cell>
 </row>
 <row valign="top">
 <cell halign ="left"><m>a-0.0001</m></cell>
 <cell halign ="left"><m>f(a-0.0001)</m></cell>
-<cell/>
+<!--cell halign="left"></cell-->
 <cell halign ="left"><m>a+0.0001</m></cell>
 <cell halign ="left"><m>f(a+0.0001)</m></cell>
 </row>
@@ -150,6 +150,7 @@
 <li>If both columns approach a common <em>y</em>-value <m> L </m>, we state <m>\ds\lim_{x \to a} f(x)=L.</m> We can use the following strategy to confirm the result obtained from the table or as an alternative method for estimating a limit.</li>
 <li>Using a graphing calculator or computer software that allows us graph functions, we can plot the function <m>f(x),</m> making sure the functional values of <m>f(x)</m> for <m>x</m>-values near <m> a </m> are in our window. We can use the trace feature to move along the graph of the function and watch the <em>y</em>-value readout as the <m>x</m>-values approach <m> a </m>. If the <m>y</m>-values approach <m> L </m> as our <m>x</m>-values approach <m> a </m> from both directions, then <m>\ds\lim_{x \to a} f(x)=L.</m> We may need to zoom in on our graph and repeat this process several times.</li>
 </ol></note> 
+
 
 
 <example xml:id="fs-id1170571656691">
