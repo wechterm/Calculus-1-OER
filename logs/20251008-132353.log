@@ -1,0 +1,15 @@
+WARNING : Could not find a target 'html', but found a target 'web' with format='html'; using this target.
+INFO    : Building target web
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /mnt/c/Users/wechterm/OneDrive - College of DuPage/Documents/new-pretext-project/source/sec_Ch2Sec2v2.ptx:699:19:FATAL:PARSER:ERR_GT_REQUIRED: expected '>'
+/mnt/c/Users/wechterm/OneDrive - College of DuPage/Documents/new-pretext-project/source/sec_Ch2Sec2v2.ptx:699:19:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: definition line 662 and definitionxml:id
+/mnt/c/Users/wechterm/OneDrive - College of DuPage/Documents/new-pretext-project/source/ch_second.ptx:12:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /mnt/c/Users/wechterm/OneDrive - College of DuPage/Documents/new-pretext-project/source/sec_Ch2Sec2v2.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

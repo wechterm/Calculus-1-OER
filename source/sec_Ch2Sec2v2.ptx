@@ -146,7 +146,7 @@
 </row>
 </tabular>
 </table></li>
-<li>Next, let’s look at the values in each of the <m>f(x)</m> columns and determine whether the values seem to be approaching a single value as we move down each column. In our columns, we look at the sequence <m>f(a-0.1),f(a-0.01),f(a-0.001).,f(a-0.0001),</m> and so on, and <m>f(a+0.1),f(a+0.01),f(a+0.001),f(a+0.0001),</m> and so on. (<em>Note</em>: Although we have chosen the <m>x</m>-values <m>a\pm 0.1,a\pm 0.01,a\pm 0.001,a\pm 0.0001,</m> and so forth, and these values will probably work nearly every time, on very rare occasions we may need to modify our choices.)</li>
+<li>Next, let’s look at the values in each of the <m>f(x)</m> columns and determine whether the values seem to be approaching a single value as we move down each column. In our columns, we look at the sequence <m>f(a-0.1),f(a-0.01),f(a-0.001),f(a-0.0001),</m> and so on, and <m>f(a+0.1),f(a+0.01),f(a+0.001),f(a+0.0001),</m> and so on. (<em>Note</em>: Although we have chosen the <m>x</m>-values <m>a\pm 0.1,a\pm 0.01,a\pm 0.001,a\pm 0.0001,</m> and so forth, and these values will probably work nearly every time, on very rare occasions we may need to modify our choices.)</li>
 <li>If both columns approach a common <em>y</em>-value <m> L </m>, we state <m>\ds\lim_{x \to a} f(x)=L.</m> We can use the following strategy to confirm the result obtained from the table or as an alternative method for estimating a limit.</li>
 <li>Using a graphing calculator or computer software that allows us graph functions, we can plot the function <m>f(x),</m> making sure the functional values of <m>f(x)</m> for <m>x</m>-values near <m> a </m> are in our window. We can use the trace feature to move along the graph of the function and watch the <em>y</em>-value readout as the <m>x</m>-values approach <m> a </m>. If the <m>y</m>-values approach <m> L </m> as our <m>x</m>-values approach <m> a </m> from both directions, then <m>\ds\lim_{x \to a} f(x)=L.</m> We may need to zoom in on our graph and repeat this process several times.</li>
 </ol></note> 
@@ -379,15 +379,9 @@ We'll explore each of these in turn.
 </solution>
 </example>
 
-<figure xml:id="APEX_fig1-3">
-<image source="APEX_fig1-1_03.svg" width="50%"></image>
-<image source="APEX_fig1-1_04.svg" width="50%"></image>
-  <!-- <description>A graph of 1/(x-1)^2 showing a vertical asymptote at x=1 </description> -->
 
-<caption>Observing no limit as <m>x\to 1</m></caption>
-</figure>
 
-<p id="fs-id1170572086316">Looking at a table of functional values or looking at the graph of a function provides us with useful insight into the value of the limit of a function at a given point. However, these techniques rely too much on guesswork. We eventually need to develop alternative methods of evaluating limits. These new methods are more algebraic in nature and we explore them in the next section; however, at this point we introduce two special limits that are foundational to the techniques to come.</p>
+<!-- <p id="fs-id1170572086316">Looking at a table of functional values or looking at the graph of a function provides us with useful insight into the value of the limit of a function at a given point. However, these techniques rely too much on guesswork. We eventually need to develop alternative methods of evaluating limits. These new methods are more algebraic in nature and we explore them in the next section; however, at this point we introduce two special limits that are foundational to the techniques to come.</p>
 <theorem xml:id="fs-id1170572086324" class="theorem">
 <title>Two Important Limits</title>
 <p id="fs-id1170572243382">Let <m> a </m> be a real number and <emphasis effect="italics">c</emphasis> be a constant.</p>
@@ -442,94 +436,111 @@ We'll explore each of these in turn.
 </row>
 </tabular>
 </table>
-<p id="fs-id1170571576778">Observe that for all values of <m>x</m> (regardless of whether they are approaching <m> a </m>), the values <m>f(x)</m> remain constant at <emphasis effect="italics">c</emphasis>. We have no choice but to conclude <m>\lim_{x \to a} c=c.</m></p>
-</subsection>
-<subsection id="fs-id1170572342287">
+<p id="fs-id1170571576778">Observe that for all values of <m>x</m> (regardless of whether they are approaching <m> a </m>), the values <m>f(x)</m> remain constant at <emphasis effect="italics">c</emphasis>. We have no choice but to conclude <m>\lim_{x \to a} c=c.</m></p> -->
+<!-- </subsection> -->
+<!-- <subsection id="fs-id1170572342287">
 <title>The Existence of a Limit</title>
-<p id="fs-id1170572342292">As we consider the limit in the next example, keep in mind that for the limit of a function to exist at a point, the functional values must approach a single real-number value at that point. If the functional values do not approach a single value, then the limit does not exist.</p>
+<p id="fs-id1170572342292">As we consider the limit in the next example, keep in mind that for the limit of a function to exist at a point, the functional values must approach a single real-number value at that point. If the functional values do not approach a single value, then the limit does not exist.</p> -->
 <example id="fs-id1170571656076">
-<title>Evaluating a Limit That Fails to Exist</title>
+<title>The Function Oscillates</title>
 <statement id="fs-id1170571656081">
 
-<p id="fs-id1170571656086">Evaluate <m>\lim_{x\to 0}\sin (1/x)</m> using a table of values.</p>
+<p id="fs-id1170571656086">Explore why <m>\ds\lim_{x\to 0}\sin (1/x)</m> does not exist.</p>
 </statement>
 <solution id="fs-id1170571614815">
+  <p>Two graphs of <m>f(x)=\ds\sin(1/x)</m> are given in <xref ref="APEX_fig1-3"/>. The first shows <m>f(x)</m> on the interval <m>[-1,1]</m>; notice how <m>f(x)</m> seems to oscillate near <m>x=0</m>.  One might think that despite the oscillation, as <m>x</m> approaches <m>0</m>, <m>f(x)</m> approaches <m>0</m>.  However, the second image zooms in on <m>\sin(1/x)</m> on the interval <m>[-1,1]</m>.  Here the oscillation is even more pronounced.
+  </p>
+  <figure xml:id="APEX_fig1-3">
+    <image source="APEX_fig1-1_03.svg" width="50%"></image>
+    <image source="CNX_Calc_Figure_02_02_008.jpg" width="50%"></image>
+    <image source="APEX_fig1-1_04.svg" width="50%">
+      <description>"The graph of the function f(x) = sin(1/x), which oscillates rapidly between -1 and 1 as x approaches 0. The oscillations are less frequent as the function moves away from 0 on the x axis." </description>
+    </image>
+    
+    <caption>Observing no limit as <m>x\to 1</m></caption>
+  </figure>
+
 <p id="fs-id1170571614817"><xref ref="fs-id1170572233784"/> lists values for the function <m>\sin(1/x)</m> for the given values of <m>x</m>.</p>
 <table xml:id="fs-id1170572233784" summary="Two tables side by side, each with two columns and seven rows. The headers are the same, x and sin(1/x) in the first row. In the first table, the values in the first column under x are -0.1, -0.01, -0.001, -0.0001, -0.00001, and -0.000001. The values in the second column under the header are 0.544021110889, 0.50636564111, -0;.8268795405312, 0.305614388888, -0;.035748797987, and 0.349993504187. In the second column, the values in the first column under x are 0.1, 0.01, 0.001, 0.0001, 0.00001, and 0.000001. The values in the second column under the header are -0;.544021110889, -0;.50636564111, 0.826879540532, -0;.305614388888,  0.035748797987, and -0;.349993504187.">
-<title>Table of Functional Values for <m>\lim_{x\to0}\sin (\frac{1}{x})</m></title>
+<title>Table of Functional Values for <m>\ds\lim_{x\to0}\sin (\frac{1}{x})</m></title>
 <tabular>
 <row valign="top" header="yes">
 <cell halign ="left"><m>x</m></cell>
-<cell halign ="left"><m>\sin(\frac{1}{x})</m></cell>
-<cell/>
+<cell halign ="left"><m>\ds\sin(\frac{1}{x})</m></cell>
+<!-- <cell/> -->
 <cell halign ="left"><m>x</m></cell>
-<cell halign ="left"><m>\sin(\frac{1}{x})</m></cell>
+<cell halign ="left"><m>\ds\sin(\frac{1}{x})</m></cell>
 </row>
 <row valign="top">
-<cell halign ="left">-0.1</cell>
-<cell halign ="left">0.544021110889</cell>
-<cell />
-<cell halign ="left">0.1</cell>
-<cell halign ="left">-0.544021110889</cell>
+<cell halign ="left"><m>-0.1</m></cell>
+<cell halign ="left"><m>0.544021110889</m></cell>
+<!-- <cell /> -->
+<cell halign ="left"><m>0.1</m></cell>
+<cell halign ="left"><m>-0.544021110889</m></cell>
 </row>
 <row valign="top">
-<cell halign ="left">-0.01</cell>
-<cell halign ="left">0.50636564111</cell>
-<cell />
-<cell halign ="left">0.01</cell>
-<cell halign ="left">-0.50636564111</cell>
+<cell halign ="left"><m>-0.01</m></cell>
+<cell halign ="left"><m>0.50636564111</m></cell>
+<!-- <cell /> -->
+<cell halign ="left"><m>0.01</m></cell>
+<cell halign ="left"><m>-0.50636564111</m></cell>
 </row>
 <row valign="top">
-<cell halign ="left">-0.001</cell>
-<cell halign ="left">-0.8268795405312</cell>
-<cell />
-<cell halign ="left">0.001</cell>
-<cell halign ="left">0.826879540532</cell>
+<cell halign ="left"><m>-0.001</m></cell>
+<cell halign ="left"><m>-0.8268795405312</m></cell>
+<!-- <cell /> -->
+<cell halign ="left"><m>0.001</m></cell>
+<cell halign ="left"><m>0.826879540532</m></cell>
 </row>
 <row valign="top">
-<cell halign ="left">-0.0001</cell>
-<cell halign ="left">0.305614388888</cell>
-<cell />
-<cell halign ="left">0.0001</cell>
-<cell halign ="left">-0.305614388888</cell>
+<cell halign ="left"><m>-0.0001</m></cell>
+<cell halign ="left"><m>0.305614388888</m></cell>
+<!-- <cell /> -->
+<cell halign ="left"><m>0.0001</m></cell>
+<cell halign ="left"><m>-0.305614388888</m></cell>
 </row>
 <row valign="top">
-<cell halign ="left">-0.00001</cell>
-<cell halign ="left">-0.035748797987</cell>
-<cell />
-<cell halign ="left">0.00001</cell>
-<cell halign ="left">0.035748797987</cell>
+<cell halign ="left"><m>-0.00001</m></cell>
+<cell halign ="left"><m>-0.035748797987</m></cell>
+<!-- <cell /> -->
+<cell halign ="left"><m>0.00001</m></cell>
+<cell halign ="left"><m>0.035748797987</m></cell>
 </row>
 <row valign="top">
-<cell halign ="left">-0.000001</cell>
-<cell halign ="left">0.349993504187</cell>
-<cell />
-<cell halign ="left">0.000001</cell>
-<cell halign ="left">-0.349993504187</cell>
+<cell halign ="left"><m>-0.000001</m></cell>
+<cell halign ="left"><m>0.349993504187</m></cell>
+<!-- <cell /> -->
+<cell halign ="left"><m>0.000001</m></cell>
+<cell halign ="left"><m>-0.349993504187</m></cell>
 </row>
 </tabular>
 </table>
-<p id="fs-id1170572420238">After examining the table of functional values, we can see that the <emphasis effect="italics">y</emphasis>-values do not seem to approach any one single value. It appears the limit does not exist. Before drawing this conclusion, let’s take a more systematic approach. Take the following sequence of <m>x</m>-values approaching 0:</p>
+<p id="fs-id1170572420238">After examining the table of functional values, we can see that the <m>y</m>-values do not seem to approach any one single value. It appears the limit does not exist. Before drawing this conclusion, let’s take a more systematic approach. Take the following sequence of <m>x</m>-values approaching <m>0</m>:</p>
 <me> \frac{2}{\pi}, \frac{2}{3\pi}, \frac{2}{5\pi}, \frac{2}{7\pi}, \frac{2}{9\pi},\frac{2}{11\pi}, \dots .</me>
-<p id="fs-id1170572561333">The corresponding <emphasis effect="italics">y</emphasis>-values are</p>
+<p id="fs-id1170572561333">The corresponding <m>y</m>-values are</p>
 <me>1,-1,1,-1,1,-1, \dots .</me>
-<p id="fs-id1170571594790">At this point we can indeed conclude that <m>\lim_{x\to0}\sin (1/x)</m> does not exist. (Mathematicians frequently abbreviate “does not exist” as DNE. Thus, we would write <m>\lim_{x\to0}\sin (1/x)</m> DNE.) The graph of <m>f(x)=\sin (1/x)</m> is shown in <xref ref="CNX_Calc_Figure_02_02_008"/> and it gives a clearer picture of the behavior of <m>\sin(1/x)</m> as <m>x</m> approaches 0. You can see that <m>\sin(1/x)</m> oscillates ever more wildly between -1 and 1 as <m>x</m> approaches 0.</p>
-<figure xml:id="CNX_Calc_Figure_02_02_008">
+<p id="fs-id1170571594790">At this point we can indeed conclude that <m>\ds\lim_{x\to0}\sin (1/x)</m> does not exist.</p> 
+
+<p>Mathematicians frequently abbreviate “does not exist” as DNE.</p> 
+
+<!-- <p>Thus, we would write <m>\lim_{x\to0}\sin (1/x)</m> DNE.) The graph of <m>f(x)=\sin (1/x)</m> is shown in <xref ref="CNX_Calc_Figure_02_02_008"/> and it gives a clearer picture of the behavior of <m>\sin(1/x)</m> as <m>x</m> approaches 0. You can see that <m>\sin(1/x)</m> oscillates ever more wildly between -1 and 1 as <m>x</m> approaches 0.</p> -->
+
+<!-- <figure xml:id="CNX_Calc_Figure_02_02_008">
 <image source="CNX_Calc_Figure_02_02_008.jpg" width="50%">
 <description>"The graph of the function f(x) = sin(1/x), which oscillates rapidly between -1 and 1 as x approaches 0. The oscillations are less frequent as the function moves away from 0 on the x axis."
 </description></image> <caption>The graph of <m>f(x)=\sin(1/x)</m> oscillates rapidly between -1 and 1 as <m>x</m> approaches 0.</caption>
-</figure>
+</figure> -->
 </solution>
 
 </example>
 <exercise>  <statement id="fs-id1170572455167">
-<p id="fs-id1170572455169">Use a table of functional values to evaluate <m>\lim_{x\to2} \frac{|x^2-4|}{x-2},</m> if possible.</p>
+<p id="fs-id1170572455169">Use a table of functional values to evaluate <m>\ds\lim_{x\to2} \frac{|x^2-4|}{x-2},</m> if possible.</p>
 </statement>
 <solution id="fs-id1170572560591">
-<p id="fs-id1170572560593"><m>\lim_{x\to2} \frac{|x^2-4|}{x-2}</m> does not exist.</p>
+<p id="fs-id1170572560593"><m>\ds\lim_{x\to2} \frac{|x^2-4|}{x-2}</m> does not exist.</p>
 </solution>
-<hint>
 
+<hint>
 <p id="fs-id1170572560581">Use <m>x</m>-values 1.9, 1.99, 1.999, 1.9999, 1.9999 and 2.1, 2.01, 2.001, 2.0001, 2.00001 in your table.</p>
 </hint>
 
@@ -537,16 +548,17 @@ We'll explore each of these in turn.
 </subsection>
 <subsection id="fs-id1170572334719">
 <title>One-Sided Limits</title>
-<p id="fs-id1170572334724">Sometimes indicating that the limit of a function fails to exist at a point does not provide us with enough information about the behavior of the function at that particular point. To see this, we now revisit the function <m>g(x)=|x-2|/(x-2)</m> introduced at the beginning of the section (see <xref ref="CNX_Calc_Figure_02_02_001"/>(b)). As we pick values of <m>x</m> close to 2, <m>g(x)</m> does not approach a single value, so the limit as <m>x</m> approaches 2 does not exist—that is, <m>\lim_{x\to2}g(x)</m> DNE. However, this statement alone does not give us a complete picture of the behavior of the function around the <m>x</m>-value 2. To provide a more accurate description, we introduce the idea of a <term>one-sided limit</term>. For all values to the left of 2 (or <emphasis effect="italics">the negative side of</emphasis> 2), <m>g(x)=-1.</m> Thus, as <m>x</m> approaches 2 from the left, <m>g(x)</m> approaches -1. Mathematically, we say that the limit as <m>x</m> approaches 2 from the left is -1. Symbolically, we express this idea as</p>
+<p id="fs-id1170572334724">Sometimes indicating that the limit of a function fails to exist at a point does not provide us with enough information about the behavior of the function at that particular point. To see this, we now revisit the function <m>g(x)=|x-2|/(x-2)</m> introduced at the beginning of the section (see <xref ref="CNX_Calc_Figure_02_02_001"/>(b)). As we pick values of <m>x</m> close to <m>2</m>, <m>g(x)</m> does not approach a single value, so the limit as <m>x</m> approaches 2 does not exist—that is, <m>\ds\lim_{x\to2}g(x)</m> DNE.</p>
+<p>However, this statement alone does not give us a complete picture of the behavior of the function around the <m>x</m>-value <m>2</m>. To provide a more accurate description, we introduce the idea of a <term>one-sided limit</term>. For all values to the left of <m>2</m> (or <em>the negative side of</em> <m>2</m>), <m>g(x)=-1.</m> Thus, as <m>x</m> approaches <m>2</m> from the left, <m>g(x)</m> approaches -1. Mathematically, we say that the limit as <m>x</m> approaches <m>2</m> from the left is <m>-1</m>. Symbolically, we express this idea as</p>
 <me>\lim_{x\to 2^- }g(x)=-1.</me>
-<p id="fs-id1170571569214">Similarly, as <m>x</m> approaches 2 from the right (or <emphasis effect="italics">from the positive side</emphasis>), <m>g(x)</m> approaches 1. Symbolically, we express this idea as</p>
+<p id="fs-id1170571569214">Similarly, as <m>x</m> approaches <m>2</m> from the right (or <em>from the positive side</em>), <m>g(x)</m> approaches <m>1</m>. Symbolically, we express this idea as</p>
 <me>\lim_{x\to 2^+ }g(x)=1.</me>
 <p id="fs-id1170572307691">We can now present an informal definition of one-sided limits.</p>
 
 <definition> <!-- Change next /note to /definition and remove above note-->
-<p id="fs-id1170572307699">We define two types of <emphasis effect="bold">one-sided limits</emphasis>.</p>
-<p xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1170572307707"><emphasis effect="italics">Limit from the left:</emphasis> Let <m>f(x)</m> be a function defined at all values in an open interval of the form <m>(c,a </m>), and let <m> L </m> be a real number. If the values of the function <m>f(x)</m> approach the real number <m> L </m> as the values of <m>x</m> (where <m>x\lt a ).</m> approach the number <m> a </m>, then we say that <m> L </m> is the limit of <m>f(x)</m> as <m>x</m> approaches a from the left. Symbolically, we express this idea as</p><me>\lim_{x\to a^{-} }f(x)=L.</me>
-<p id="fs-id1170571655616"><emphasis effect="italics">Limit from the right:</emphasis> Let <m>f(x)</m> be a function defined at all values in an open interval of the form <m>(a,c),</m> and let <m> L </m> be a real number. If the values of the function <m>f(x)</m> approach the real number L as the values of <m>x</m> (where <m>x\gt a .</m>) approach the number <m> a </m>, then we say that <m> L </m> is the limit of <m>f(x)</m> as <m>x</m> approaches <m> a </m> from the right. Symbolically, we express this idea as</p>
+<p id="fs-id1170572307699">We define two types of <term>one-sided limits</term>.</p>
+<p xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1170572307707"><em>Limit from the left:</em> Let <m>f(x)</m> be a function defined at all values in an open interval of the form <m>(c,a </m>), and let <m> L </m> be a real number. If the values of the function <m>f(x)</m> approach the real number <m> L </m> as the values of <m>x</m> (where <m>x\lt a ).</m> approach the number <m> a </m>, then we say that <m> L </m> is the limit of <m>f(x)</m> as <m>x</m> approaches a from the left. Symbolically, we express this idea as</p><me>\lim_{x\to a^{-} }f(x)=L.</me>
+<p id="fs-id1170571655616"><em>Limit from the right:</em> Let <m>f(x)</m> be a function defined at all values in an open interval of the form <m>(a,c),</m> and let <m> L </m> be a real number. If the values of the function <m>f(x)</m> approach the real number L as the values of <m>x</m> (where <m>x\gt a .</m>) approach the number <m> a </m>, then we say that <m> L </m> is the limit of <m>f(x)</m> as <m>x</m> approaches <m> a </m> from the right. Symbolically, we express this idea as</p>
 <me>\lim_{x\to a^{+}}f(x)=L.</me>
 </definition>
 
@@ -561,21 +573,21 @@ We'll explore each of these in turn.
 </ol>
 </statement>
 <solution id="fs-id1170572307128">
-<p id="fs-id1170572307130">We can use tables of functional values again <xref ref="fs-id1170572347185"/>. Observe that for values of <m>x</m> less than 2, we use <m>f(x)=x+1</m> and for values of <m>x</m> greater than 2, we use <m>f(x)=x^2-4.</m></p>
+<p id="fs-id1170572307130">We can use tables of functional values again <xref ref="fs-id1170572347185"/>. Observe that for values of <m>x</m> less than <m>2</m>, we use <m>f(x)=x+1</m> and for values of <m>x</m> greater than 2<m>2</m>, we use <m>f(x)=x^2-4.</m></p>
 <table xml:id="fs-id1170572347185" summary="Two tables side by side, each with two columns and six rows. The headers are the same, x and f(x) = x+1 in the first row. In the first table, the values in the first column under x are 1.9, 1.99, 1.999, 1.9999, and 1.99999. The values in the second column under the header are 2.9, 2.99, 2.999, 2.9999, and 2.99999. In the second column, the values in the first column under x are 2.1, 2.01, 2.001, 2.0001, and 2.00001. The values in the second column under the header are 0.41, 0.0401, 0.004001, 0.00040001, and 0.0000400001.">
-<title>Table of Functional Values for <m>f(x)=f(x)=\begin{cases} x+1 \amp  x\lt 2 \\ x^2-4\amp x\geq 2 \end{cases}</m></title>
+<title>Table of Functional Values for <m>f(x)=\begin{cases} x+1 \amp  x\lt 2 \\ x^2-4\amp x\geq 2 \end{cases}</m></title>
 <tabular>
 <row valign="top"  header="yes">
 <cell halign ="left"><m>x</m></cell>
 <cell halign ="left"><m>f(x)=x+1</m></cell>
-<cell/>
+<!-- <cell/> -->
 <cell halign ="left"><m>x</m></cell>
 <cell halign ="left"><m>f(x)=x^2-4</m></cell>
 </row>
 <row valign="top">
 <cell halign ="left">1.9</cell>
 <cell halign ="left">2.9</cell>
-<cell morerows="4"/>
+<!-- <cell morerows="4"/> -->
 <cell halign ="left">2.1</cell>
 <cell halign ="left">0.41</cell>
 </row>
@@ -605,7 +617,7 @@ We'll explore each of these in turn.
 </row>
 </tabular>
 </table>
-<p id="fs-id1170572233834">Based on this table, we can conclude that a. <m>\lim_{x\to 2^- }f(x)=3</m> and b. <m>\lim_{x\to 2^+ }f(x)=0.</m> Therefore, the (two-sided) limit of <m>f(x)</m> does not exist at <m>x=2.</m> <xref ref="CNX_Calc_Figure_02_02_010"/> shows a graph of <m>f(x)</m> and reinforces our conclusion about these limits.</p>
+<p id="fs-id1170572233834">Based on this table, we can conclude that a. <m>\ds\lim_{x\to 2^- }f(x)=3</m> and b. <m>\ds\lim_{x\to 2^+ }f(x)=0.</m> Therefore, the (two-sided) limit of <m>f(x)</m> does not exist at <m>x=2.</m> <xref ref="CNX_Calc_Figure_02_02_010"/> shows a graph of <m>f(x)</m> and reinforces our conclusion about these limits.</p>
 <figure xml:id="CNX_Calc_Figure_02_02_010">
 <image source="CNX_Calc_Figure_02_02_010.jpg" width="50%">
 <description>"The graph of the given piecewise function. The first piece is f(x) = x+1 if x \lt  2. The second piece is x^2 – 4 if x \gt = 2. The first piece is a line with x intercept at (-1, 0) and y intercept at (0,1). There is an open circle at (2,3), where the endpoint would be. The second piece is the right half of a parabola opening upward. The vertex at (2,0) is a solid circle."
@@ -622,13 +634,13 @@ We'll explore each of these in turn.
 </ol>
 </statement>
 <solution id="fs-id1170572306436">
-<p id="fs-id1170572306438">a. <m>\lim_{x\to 2^- } \frac{|x^2-4|}{x-2}=-4;</m> b. <m>\lim_{x\to 2^+ } \frac{|x^2-4|}{x-2}=4</m></p>
+<p id="fs-id1170572306438">a. <m>\ds\lim_{x\to 2^- } \frac{|x^2-4|}{x-2}=-4;</m> b. <m>\ds\lim_{x\to 2^+ } \frac{|x^2-4|}{x-2}=4</m></p>
 </solution>
 <hint>
 
 <ol>
-<li>Use <m>x</m>-values 1.9, 1.99, 1.999, 1.9999, 1.9999 to estimate <m>\lim_{x\to 2^- } \frac{|x^2-4|}{x-2}.</m></li>
-<li>Use <m>x</m>-values 2.1, 2.01, 2.001, 2.0001, 2.00001 to estimate <m>\lim_{x\to 2^+ } \frac{|x^2-4|}{x-2}.</m><newline/>
+<li>Use <m>x</m>-values 1.9, 1.99, 1.999, 1.9999, 1.9999 to estimate <m>\ds\lim_{x\to 2^- } \frac{|x^2-4|}{x-2}.</m></li>
+<li>Use <m>x</m>-values 2.1, 2.01, 2.001, 2.0001, 2.00001 to estimate <m>\ds\lim_{x\to 2^+ } \frac{|x^2-4|}{x-2}.</m><newline/>
 (These tables are available from a previous Checkpoint problem.)</li>
 </ol>
 </hint>
@@ -637,18 +649,31 @@ We'll explore each of these in turn.
 <theorem xml:id="fs-id1170571598073" class="theorem">
 <title>Relating One-Sided and Two-Sided Limits</title>
 <p id="fs-id1170572560622">Let <m>f(x)</m> be a function defined at all values in an open interval containing <m> a </m>, with the possible exception of <m> a </m> itself, and let <m> L </m> be a real number. Then,</p>
-<me>\lim_{x \to a} f(x)=L. \text{ if and only if } \lim_{x\to a^{-} }f(x)=L \text{ and } \lim_{x\to a^{+}}f(x)=L.</me>
+<me>\lim_{x \to a} f(x)=L \text{ if and only if } \lim_{x\to a^{-} }f(x)=L \text{ and } \lim_{x\to a^{+}}f(x)=L.</me>
 </theorem>
 </subsection>
 <subsection id="fs-id1170571611973">
 <title>Infinite Limits</title>
 <p id="fs-id1170571611978">Evaluating the limit of a function at a point or evaluating the limit of a function from the right and left at a point helps us to characterize the behavior of a function around a given value. As we shall see, we can also describe the behavior of functions that do not have finite limits.</p>
-<p id="fs-id1170571611984">We now turn our attention to <m>h(x)=1/ (x-2)^2 ,</m> the third and final function introduced at the beginning of this section (see <xref ref="CNX_Calc_Figure_02_02_001"/>(c)). From its graph we see that as the values of <m>x</m> approach 2, the values of <m>h(x)=1/ (x-2)^2 </m> become larger and larger and, in fact, become infinite. Mathematically, we say that the limit of <m>h(x)</m> as <m>x</m> approaches 2 is positive infinity. Symbolically, we express this idea as</p>
+<p id="fs-id1170571611984">We now turn our attention to <m>h(x)=1/ (x-2)^2 ,</m> the third and final function introduced at the beginning of this section (see <xref ref="CNX_Calc_Figure_02_02_001"/>(c)). From its graph we see that as the values of <m>x</m> approach <m>2</m>, the values of <m>h(x)=1/ (x-2)^2 </m> become larger and larger and, in fact, become infinite. Mathematically, we say that the limit of <m>h(x)</m> as <m>x</m> approaches <m>2</m> is positive infinity. Symbolically, we express this idea as</p>
 <me>\lim_{x\to 2}h(x)=+\infty.</me>
 <p id="fs-id1170571612271">More generally, we define <term>infinite limits</term> as follows:</p>
 
 <definition>
-<p id="fs-id1170571612282">We define three types of <emphasis effect="bold">infinite limits</emphasis>.</p>
+  <p>An <term>infinite limit</term> describes the behavior of a function when its values increase or decrease without bound as <m>x</m> approaches a point.
+  </p>
+  <ul>
+    <li><term>From the left:</term><me>\ds\lim_{x\to a^-}f(x)=+\infty</me>
+    means <m>f(x)</m> grows larger and larger as <m>x</m> approaches <m>a</m> from the left.<me>\lim_{a\to a^-}f(x)=-\infty</me> means <m>f(x)</m> decreases without bound as <m>x</m> approaches <m>a</m> from the left
+    </li>
+    <li><term>From the right:</term><me>\ds\lim_{x\to a^+}f(x)=+\infty</me>
+    means <m>f(x)</m> grows larger and larger as <m>x</m> approaches <m>a</m> from the right.<me>\lim_{a\to a^+}f(x)=-\infty</me> means <m>f(x)</m> decreases without bound as <m>x</m> approaches <m>a</m> from the right
+    </li>
+    <li><term>Two-sided:</term><me>\ds\lim_{x\to a}f(x)=+\infty\quad\text{or}\quad \lim_{x\to a}f(x)=-\infty</me>
+    means that both one-sided limits agree and the function increases or decreases without bound as <m>x</m> approaches <m>a</m> from either side.
+    </li>
+  </ul>
+<!-- <p id="fs-id1170571612282">We define three types of <emphasis effect="bold">infinite limits</emphasis>.</p>
 <p id="fs-id1170571612290"><emphasis effect="italics">Infinite limits from the left:</emphasis> Let <m>f(x)</m> be a function defined at all values in an open interval of the form <m>(b,a).</m></p>
 <ol id="fs-id1170571562562" list-type="enumerated" number-style="lower-roman">
 <li>If the values of <m>f(x)</m> increase without bound as the values of <m>x</m> (where <m> x \lt a </m>). approach the number <m> a </m>, then we say that the limit as <m>x</m> approaches <m> a </m> from the left is positive infinity and we write<newline/>
@@ -669,9 +694,10 @@ We'll explore each of these in turn.
 <me>\lim_{x \to a} f(x)=+\infty.</me></li>
 <li>If the values of <m>f(x)</m> decrease without bound as the values of <m>x</m> (where <m> x \neq a </m>). approach the number <m> a </m>, then we say that the limit as <m>x</m> approaches <m> a </m> is negative infinity and we write<newline/>
 <me>\lim_{x \to a} f(x)=-\infty.</me></li>
-</ol>
+</ol> -->
+
 </definition>
-<p id="fs-id1170572337910">It is important to understand that when we write statements such as <m>\lim_{x \to a} f(x)=+\infty</m> or <m>\lim_{x \to a} f(x)=-\infty</m> we are describing the behavior of the function, as we have just defined it. We are not asserting that a limit exists. For the limit of a function <m>f(x)</m> to exist at <m> a </m>, it must approach a real number <m> L </m> as <m>x</m> approaches <m> a </m>. That said, if, for example, <m>\lim_{x \to a} f(x)=+\infty,</m> we always write <m>\lim_{x \to a} f(x)=+\infty</m> rather than <m>\lim_{x \to a} f(x)</m> DNE.</p>
+<p id="fs-id1170572337910">It is important to understand that when we write statements such as <m>\ds\lim_{x \to a} f(x)=+\infty</m> or <m>\ds\lim_{x \to a} f(x)=-\infty</m> we are describing the behavior of the function, as we have just defined it. We are not asserting that a limit exists. For the limit of a function <m>f(x)</m> to exist at <m> a </m>, it must approach a real number <m> L </m> as <m>x</m> approaches <m> a </m>. That said, if, for example, <m>\ds\lim_{x \to a} f(x)=+\infty,</m> we always write <m>\ds\lim_{x \to a} f(x)=+\infty</m> rather than <m>\ds\lim_{x \to a} f(x)</m> DNE.</p>
 <example xml:id="fs-id1170571611150">
 <title>Recognizing an Infinite Limit</title>
 <statement id="fs-id1170571611155">
@@ -686,7 +712,7 @@ We'll explore each of these in turn.
 <p id="fs-id1170572346978">Begin by constructing a table of functional values.</p>
 <table xml:id="fs-id1170572346981" summary="Two tables side by side, each with two columns and seven rows. The headers are the same, x and 1/x in the first row. In the first table, the values in the first column under x are -.01, -0.01, -0.001, -0.0001, -0.00001, and -0.000001. The values in the second column under the header are -10, -100, -1000, -10,000, -100,000, and -1,000,000. In the second column, the values in the first column under x are 0.1, 0.01, 0.001, 0.0001, 0.00001 and 0.000001. The values in the second column under the header are 10, 100, 1000, 10,000, 100,000, 1,000,000.">
 <title>Table of Functional Values for <m>f(x)=\frac{1}{x}</m></title>
-<tabular>>
+<tabular>
 <row valign="top" header="yes">
 <cell halign ="left"><m>x</m></cell>
 <cell halign ="left"><m>\frac{1}{x}</m></cell>
@@ -736,14 +762,14 @@ We'll explore each of these in turn.
 <cell halign ="left">0.000001</cell>
 <cell halign ="left">1,000,000</cell>
 </row>
-</tabular>>
+</tabular>
 </table>
 <ol>
 <li>The values of <m>1/x</m> decrease without bound as <m>x</m> approaches 0 from the left. We conclude that<newline/>
 <me>\lim_{x\to 0^- }\frac{1}{x}=-\infty.</me></li>
 <li>The values of <m>1/x</m> increase without bound as <m>x</m> approaches 0 from the right. We conclude that<newline/>
 <me>\lim_{x\to 0^+ }\frac{1}{x}=+\infty.</me></li>
-<li>Since <m>\lim_{x\to 0^- }\frac{1}{x}=-\infty</m> and <m>\lim_{x\to 0^+ }\frac{1}{x}=+\infty</m> have different values, we conclude that<newline/>
+<li>Since <m>\ds\lim_{x\to 0^- }\frac{1}{x}=-\infty</m> and <m>\ds\lim_{x\to 0^+ }\frac{1}{x}=+\infty</m> have different values, we conclude that
 <me>\lim_{x\to0}\frac{1}{x} \text{ DNE. }</me></li>
 </ol>
 <p id="fs-id1170571596248">The graph of <m>f(x)=1/x</m> in <xref ref="CNX_Calc_Figure_02_02_012"/> confirms these conclusions.</p>
@@ -764,14 +790,15 @@ We'll explore each of these in turn.
 </ol>
 </statement>
 <solution id="fs-id1170571612951">
-<p id="fs-id1170571612954">a. <m>\lim_{x\to 0^- } \frac{1}{x^2}=+\infty;</m> b. <m>\lim_{x\to 0^+ } \frac{1}{x^2}=+\infty;</m> c. <m>\lim_{x\to 0} \frac{1}{x^2}=+\infty</m></p>
+<p id="fs-id1170571612954">a. <m>\ds\lim_{x\to 0^- } \frac{1}{x^2}=+\infty;</m> b. <m>\ds\lim_{x\to 0^+ } \frac{1}{x^2}=+\infty;</m> c. <m>\ds\lim_{x\to 0} \frac{1}{x^2}=+\infty</m></p>
 </solution>
 <hint>
 
 <p id="fs-id1170571612943">Follow the procedures from <xref ref="fs-id1170571611150"/>.</p>
 </hint>
-
 </exercise>
+
+<!-- 
 <p id="fs-id1170572611930">It is useful to point out that functions of the form <m>f(x)=1/ (x-a)^n ,</m> where <m> n </m> is a positive integer, have infinite limits as <m>x</m> approaches <m> a </m> from either the left or right (<xref ref="CNX_Calc_Figure_02_02_014"/>). These limits are summarized in <xref ref="fs-id1170571654206"/>.</p>
 <figure xml:id="CNX_Calc_Figure_02_02_014">
 <image source="CNX_Calc_Figure_02_02_014.jpg" width="67%">
@@ -780,7 +807,7 @@ We'll explore each of these in turn.
 <theorem xml:id="fs-id1170571654206" class="theorem">
 <title>Infinite Limits from Positive Integers</title>
  <p id="fs-id1170571654222">If <m> n </m> is a positive even integer, then</p>
-<!--<me xml:id="fs-id1170571654230"> \lim_{x \to a}  \frac{1}{ (x-a)^n }=+\infty.</me> -->
+<me xml:id="fs-id1170571654230"> \lim_{x \to a}  \frac{1}{ (x-a)^n }=+\infty.</me>
 <p id="fs-id1170571654279">If <m> n </m> is a positive odd integer, then</p>
 <me>\lim_{x\to a^{+}} \frac{1}{ (x-a)^n }=+\infty</me>
 <p id="fs-id1170571654339">and</p>
@@ -815,8 +842,10 @@ We'll explore each of these in turn.
 </ol>
 <p id="fs-id1170571652076">The function <m>f(x)=1/ (x+3)^4</m> has a vertical asymptote of <m>x=-3.</m></p>
 </solution>
-
 </example>
+
+
+
 <exercise>  <statement id="fs-id1170571652138">
 <p id="fs-id1170571652140">Evaluate each of the following limits. Identify any vertical asymptotes of the function <m>f(x)= \frac{1}{ (x-2)^3 }.</m></p>
 <ol>
@@ -832,6 +861,8 @@ We'll explore each of these in turn.
 <p id="fs-id1170571545540">Use <xref ref="fs-id1170571654206"/>.</p>
 </hint>
 </exercise>
+-->
+
 <p id="fs-id1170572642379">In the next example we put our knowledge of various types of limits to use to analyze the behavior of a function at several different points.</p>
 <example id="fs-id1170572642384">
 <title>Behavior of a Function at Different Points</title>
