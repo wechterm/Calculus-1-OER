@@ -149,7 +149,8 @@
 <li>Next, let’s look at the values in each of the <m>f(x)</m> columns and determine whether the values seem to be approaching a single value as we move down each column. In our columns, we look at the sequence <m>f(a-0.1),f(a-0.01),f(a-0.001),f(a-0.0001),</m> and so on, and <m>f(a+0.1),f(a+0.01),f(a+0.001),f(a+0.0001),</m> and so on. (<em>Note</em>: Although we have chosen the <m>x</m>-values <m>a\pm 0.1,a\pm 0.01,a\pm 0.001,a\pm 0.0001,</m> and so forth, and these values will probably work nearly every time, on very rare occasions we may need to modify our choices.)</li>
 <li>If both columns approach a common <em>y</em>-value <m> L </m>, we state <m>\ds\lim_{x \to a} f(x)=L.</m> We can use the following strategy to confirm the result obtained from the table or as an alternative method for estimating a limit.</li>
 <li>Using a graphing calculator or computer software that allows us graph functions, we can plot the function <m>f(x),</m> making sure the functional values of <m>f(x)</m> for <m>x</m>-values near <m> a </m> are in our window. We can use the trace feature to move along the graph of the function and watch the <em>y</em>-value readout as the <m>x</m>-values approach <m> a </m>. If the <m>y</m>-values approach <m> L </m> as our <m>x</m>-values approach <m> a </m> from both directions, then <m>\ds\lim_{x \to a} f(x)=L.</m> We may need to zoom in on our graph and repeat this process several times.</li>
-</ol></note> 
+</ol>
+</note> 
 
 
 
@@ -790,7 +791,12 @@ We'll explore each of these in turn.
 </ol>
 </statement>
 <solution id="fs-id1170571612951">
-<p id="fs-id1170571612954">a. <m>\ds\lim_{x\to 0^- } \frac{1}{x^2}=+\infty;</m> b. <m>\ds\lim_{x\to 0^+ } \frac{1}{x^2}=+\infty;</m> c. <m>\ds\lim_{x\to 0} \frac{1}{x^2}=+\infty</m></p>
+
+<ol>
+	<li><m>\ds\ds\lim_{x\to 0^- } \frac{1}{x^2}=+\infty;</m></li>
+	<li><m>\ds\lim_{x\to 0^+ } \frac{1}{x^2}=+\infty;</m></li>
+	<li><m>\ds\lim_{x\to 0} \frac{1}{x^2}=+\infty</m></li>
+</ol>
 </solution>
 <hint>
 
@@ -869,10 +875,10 @@ We'll explore each of these in turn.
 <statement id="fs-id1170572642388">
 <p id="fs-id1170572642393">Use the graph of <m>f(x)</m> in <xref ref="CNX_Calc_Figure_02_02_015"/> to determine each of the following values:</p>
 <ol>
-<li><m>\lim_{x\to -4^-}f(x);\lim_{x\to-4^+}f(x);\lim_{x\to-4}f(x);f(-4)</m></li>
-<li><m>\lim_{x\to -2^-}f(x);\lim_{x\to-2^+}f(x);\lim_{x\to-2}f(x);f(-2)</m></li>
-<li><m>\lim_{x\to 1^- }f(x);\lim_{x\to 1^+ }f(x);\lim_{x\to1}f(x);f(1)</m></li>
-<li><m>\lim_{x\to 3^- }f(x);\lim_{x\to 3^+ }f(x);\lim_{x\to3}f(x);f(3)</m></li>
+<li><m>\ds\lim_{x\to -4^-}f(x);\lim_{x\to-4^+}f(x);\lim_{x\to-4}f(x);f(-4)</m></li>
+<li><m>\ds\lim_{x\to -2^-}f(x);\lim_{x\to-2^+}f(x);\lim_{x\to-2}f(x);f(-2)</m></li>
+<li><m>\ds\lim_{x\to 1^- }f(x);\lim_{x\to 1^+ }f(x);\lim_{x\to1}f(x);f(1)</m></li>
+<li><m>\ds\lim_{x\to 3^- }f(x);\lim_{x\to 3^+ }f(x);\lim_{x\to3}f(x);f(3)</m></li>
 </ol>
 <figure xml:id="CNX_Calc_Figure_02_02_015">
 <image source="CNX_Calc_Figure_02_02_015.jpg" width="50%">
@@ -881,18 +887,18 @@ We'll explore each of these in turn.
 </figure>
 </statement>
 <solution id="fs-id1170571610255">
-<p id="fs-id1170571610257">Using <xref ref="fs-id1170571654206"/> and the graph for reference, we arrive at the following values:</p>
+<!-- <p id="fs-id1170571610257">Using <xref ref="fs-id1170571654206"/> and the graph for reference, we arrive at the following values:</p> -->
 <ol>
 <li><m>\lim_{x\to -4^-}f(x)=0;\lim_{x\to-4^+}f(x)=0;\lim_{x\to-4}f(x)=0;f(-4)=0</m></li>
-<li><m>\lim_{x\to -2^-}f(x)=3.;\lim_{x\to-2^+}f(x)=3;\lim_{x\to-2}f(x)=3;f(-2)</m> is undefined</li>
-<li><m>\lim_{x\to 1^- }f(x)=6;\lim_{x\to 1^+ }f(x)=3;\lim_{x\to1}f(x)</m> DNE; <m>f(1)=6</m></li>
-<li><m>\lim_{x\to 3^- }f(x)=-\infty;\lim_{x\to 3^+ }f(x)=-\infty;\lim_{x\to3}f(x)=-\infty;f(3)</m> is undefined</li>
+<li><m>\ds\lim_{x\to -2^-}f(x)=3.;\lim_{x\to-2^+}f(x)=3;\lim_{x\to-2}f(x)=3;f(-2)</m> is undefined</li>
+<li><m>\ds\lim_{x\to 1^- }f(x)=6;\lim_{x\to 1^+ }f(x)=3;\lim_{x\to1}f(x)</m> DNE; <m>f(1)=6</m></li>
+<li><m>\ds\lim_{x\to 3^- }f(x)=-\infty;\lim_{x\to 3^+ }f(x)=-\infty;\lim_{x\to3}f(x)=-\infty;f(3)</m> is undefined</li>
 </ol>
 </solution>
 
 </example>
 <exercise>  <statement id="fs-id1170572624473">
-<p id="fs-id1170572624475">Evaluate <m>\lim_{x\to1}f(x)</m> for <m>f(x)</m> shown here:</p>
+<p id="fs-id1170572624475">Evaluate <m>\ds\lim_{x\to1}f(x)</m> for <m>f(x)</m> shown here:</p>
 <image source="CNX_Calc_Figure_02_02_016.jpg" width="50%">
 <description>"A graph of a piecewise function. The first segment curves from the third quadrant to the first, crossing through the second quadrant. Where the endpoint would be in the first quadrant is an open circle. The second segment starts at a closed circle a few units below the open circle. It curves down from quadrant one to quadrant four." </description> </image>
 
@@ -905,9 +911,9 @@ We'll explore each of these in turn.
 
 <p id="fs-id1170572624532">Compare the limit from the right with the limit from the left.</p>
 </hint>
-
 </exercise>
-<example id="fs-id1170572624544">
+
+<!-- example id="fs-id1170572624544">
 <title>Chapter Opener: Einstein’s Equation</title>
  <statement id="fs-id1170572624549">
 <figure xml:id="CNX_Calc_Figure_02_02_018">
@@ -954,9 +960,11 @@ We'll explore each of these in turn.
 </table>
 <p id="fs-id1170572347624">Thus, according to <xref ref="fs-id1170572597937"/>, if an object with mass 100 kg is traveling at 0.9999<emphasis effect="italics">c</emphasis>, its mass becomes 7071 kg. Since no object can have an infinite mass, we conclude that no object can travel at or more than the speed of light.</p>
 </solution>
-</example>
+</example -->
+
 </subsection>
-<subsection id="fs-id1170572347643" class="key-concepts">
+
+<!-- <subsection id="fs-id1170572347643" class="key-concepts">
 <title>Key Concepts</title>
 <ul id="fs-id1170572347650" list-type="bulleted" bullet-style="bullet">
 <li>A table of values or graph may be used to estimate a limit.</li>
@@ -982,7 +990,7 @@ We'll explore each of these in turn.
 <m>\lim_{x \to a} f(x)=+\infty:\lim_{x\to a^{-} }f(x)=+\infty</m> and <m>\lim_{x\to a^{+}}f(x)=+\infty</m><newline/>
 <m>\lim_{x \to a} f(x)=-\infty:\lim_{x\to a^{-} }f(x)=-\infty</m> and <m>\lim_{x\to a^{+}}f(x)=-\infty</m></li>
 </ul>
-</subsection>
+</subsection> -->
 
 </section>
 <?ignore
