@@ -992,13 +992,15 @@ We'll explore each of these in turn.
 </ul>
 </subsection> -->
 
-</section>
-<?ignore
 
-<section id="fs-id1170572347374" class="section-exercises">
+
+
+
+<subsection xml:id="sec_Ch2Sec2v2Exercises" id="fs-id1170572347374" class="section-exercises">
+  <title>Section Exercises</title>
 <p id="fs-id1170572347378">For the following exercises, consider the function <m>f(x)=<!-- Edit FRAC!--> \frac{x^2-1|x-1|}.</m></p>
 
-<!-- Move title outside statement--> <statement id="fs-id1170571655733">
+<!-- Move title outside statement --> <statement id="fs-id1170571655733">
 <p id="fs-id1170571655735"><emphasis effect="bold">[T]</emphasis> Complete the following table for the function. Round your solutions to four decimal places.</p>
 <table xml:id="fs-id1170571655743" class="unnumbered" summary="A table with four columns and five rows. The first row contains the headings x, f(x), x, and f(x). The values of the first column under the header are 0.9, .99, 0.999, and 0.9999. The values of the second column under the header are a, b, c, and d. The values of the third column under the header are 1.1, 1.01, 1.001, and 1.0001. The values of the fourth column under the header are e, f, g, and h.">
 <tgroup cols="4">
@@ -1043,6 +1045,12 @@ We'll explore each of these in turn.
 </tgroup>
 </table>
 </statement>
+
+</subsection>
+</section>
+
+<!-- THE IGNORE TAG BELOW SHOULD BE MOVED ONE EXERCISE UP-->
+<?ignore
 
 
 <!-- Move title outside statement--> <statement id="fs-id1170571657431">
@@ -1908,9 +1916,9 @@ We'll explore each of these in turn.
 </table>
 </statement>
 
-</section>
-</content>
-<glossary>
+
+</content> -->
+<!-- <glossary>
 <definition id="fs-id1170572541944">
 <term>infinite limit</term>
 <meaning id="fs-id1170572541950">A function has an infinite limit at a point <m> a </m> if it either increases or decreases without bound as it approaches <m> a </m></meaning>
@@ -1927,6 +1935,6 @@ We'll explore each of these in turn.
 <term>vertical asymptote</term>
 <meaning id="fs-id1170572468012">A function has a vertical asymptote at <m>x=a</m> if the limit as <m>x</m> approaches <m> a </m> from the right or left is infinite</meaning>
 </definition>
-</glossary>
-</document>
+</glossary> -->
+<!-- </document>
 ?>
