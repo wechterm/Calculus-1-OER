@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Inverse Functions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="OpenStax Calculus">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.17';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.3ea59cc2563cc8e9.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">OpenStax Calculus</span> <span class="subtitle">Volume 1</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_Ch1Sec3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_first.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_Ch1Sec5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_first.html" class="internal"><span class="codenumber">1</span> <span class="title">Functions and Graphs</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Review of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#subsec_Ch1Sec1Ss1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Representing Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-3" class="internal"><span class="codenumber">1.1.2.1</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-4" class="internal"><span class="codenumber">1.1.2.2</span> <span class="title">Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-5" class="internal"><span class="codenumber">1.1.2.3</span> <span class="title">Algebraic Formulas</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Combining Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-3" class="internal"><span class="codenumber">1.1.3.1</span> <span class="title">Combining Functions with Mathematical Operators</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-4" class="internal"><span class="codenumber">1.1.3.2</span> <span class="title">Function Composition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetry of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Basic Classes of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear Functions and Slope</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-3" class="internal"><span class="codenumber">1.2.2.1</span> <span class="title">Power Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-4" class="internal"><span class="codenumber">1.2.2.2</span> <span class="title">Behavior at Infinity</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-5" class="internal"><span class="codenumber">1.2.2.3</span> <span class="title">Zeros of Polynomial Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-6" class="internal"><span class="codenumber">1.2.2.4</span> <span class="title">Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Algebraic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Transcendental Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Piecewise-Defined Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Transformations of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-9" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-10" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Mathematical Modeling</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3-12" class="internal"><span class="codenumber">1.3.1.1</span> <span class="title">Break-even Analysis</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4-5" class="internal"><span class="codenumber">1.3.2.1</span> <span class="title">Equilibrium</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Quadratic Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Inverse Functions</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Existence of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding a Function’s Inverse</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-2" class="internal"><span class="codenumber">1.4.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-3" class="internal"><span class="codenumber">1.4.2.2</span> <span class="title">Graphing Inverse Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-4" class="internal"><span class="codenumber">1.4.2.3</span> <span class="title">Restricting Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Inverse Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-7" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exponential Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-3" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Evaluating Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-4" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">Graphing Exponential Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-4" class="internal"><span class="codenumber">1.5.2</span> <span class="title">The Number <span class="process-math">\(e \)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-5" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Hyperbolic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-3" class="internal"><span class="codenumber">1.5.4.1</span> <span class="title">Graphs of Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-4" class="internal"><span class="codenumber">1.5.4.2</span> <span class="title">Identities Involving Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-5" class="internal"><span class="codenumber">1.5.4.3</span> <span class="title">Inverse Hyperbolic Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-7" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Key Concepts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_second.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Limit of a Function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.1.3</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Infinite Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2Exercises" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Section Exercises</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_Ch1Sec4"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inverse Functions</span>
+</h2>
+<section class="introduction" id="sec_Ch1Sec4-2"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ol class="decimal" id="sec_Ch1Sec4-2-2">
+<li id="sec_Ch1Sec4-2-2-1">
+<div class="para" id="p-derived-sec_Ch1Sec4-2-2-1">Determine the conditions for when a function has an inverse.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec4-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-2-2-2">
+<div class="para" id="p-derived-sec_Ch1Sec4-2-2-2">Use the horizontal line test to recognize when a function is one-to-one.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec4-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-2-2-3">
+<div class="para" id="p-derived-sec_Ch1Sec4-2-2-3">Find the inverse of a given function.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_Ch1Sec4-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-2-2-4">
+<div class="para" id="p-derived-sec_Ch1Sec4-2-2-4">Draw the graph of an inverse function.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec_Ch1Sec4-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-2-2-5">
+<div class="para" id="p-derived-sec_Ch1Sec4-2-2-5">Evaluate inverse trigonometric functions.</div>
+<div class="autopermalink" data-description="Item 5"><a href="#sec_Ch1Sec4-2-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="sec_Ch1Sec4-2-3">An inverse function reverses the operation done by a particular function. In other words, whatever a function does, the inverse function undoes it. In this section, we define an inverse function formally and state the necessary conditions for an inverse function to exist. We examine how to find an inverse function and study the relationship between the graph of a function and the graph of its inverse. Then we apply these ideas to define and discuss properties of the inverse trigonometric functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="sec_Ch1Sec4-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Existence of an Inverse Function</span>
+</h3>
+<div class="para" id="sec_Ch1Sec4-3-2">We begin with an example. Given a function <span class="process-math">\(f\)</span> and an output <span class="process-math">\(y=f(x),\)</span> we are often interested in finding what value or values <span class="process-math">\(x\)</span> were mapped to <span class="process-math">\(y\)</span> by <span class="process-math">\(f.\)</span> For example, consider the function <span class="process-math">\(f(x)=x^3+4.\)</span> Since any output <span class="process-math">\(y=x^3+4,\)</span> we can solve this equation for <span class="process-math">\(x\)</span> to find that the input is <span class="process-math">\(x=\sqrt[3]{y-3}.\)</span> This equation defines <span class="process-math">\(x\)</span> as a function of <span class="process-math">\(y.\)</span> Denoting this function as <span class="process-math">\(f^{-1}\text{,}\)</span> and writing <span class="process-math">\(x=f^{-1} (y)=\sqrt[3]{y-3},\)</span> we see that for any <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f,f^{-1} (f(x))=f^{-1} (x^3+4)=x.\)</span> Thus, this new function, <span class="process-math">\(f^{-1} ,\)</span> “undid” what the original function <span class="process-math">\(f\)</span> did. A function with this property is called the inverse function of the original function.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="sec_Ch1Sec4-3-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec_Ch1Sec4-3-3-1">Given a function <span class="process-math">\(f\)</span> with domain <span class="process-math">\(D\)</span> and range <span class="process-math">\(R,\)</span> its <dfn class="terminology">inverse function</dfn> (if it exists) is the function <span class="process-math">\(f^{-1} \)</span> with domain <span class="process-math">\(R\)</span> and range <span class="process-math">\(D\)</span> such that <span class="process-math">\(f^{-1} (y)=x\)</span> if <span class="process-math">\(f(x)=y.\)</span> In other words, for a function <span class="process-math">\(f\)</span> and its inverse <span class="process-math">\(f^{-1} ,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^{-1} (f(x))=x \text{ for all } x \text{ in } D,\text{ and } f(f^{-1} (y))=y \text{ for all } y \text{ in } R.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Definition 1.4.1"><a href="#sec_Ch1Sec4-3-3" title="Copy heading and permalink for Definition 1.4.1" aria-label="Copy heading and permalink for Definition 1.4.1">🔗</a></div></article><div class="para" id="sec_Ch1Sec4-3-4">Note that <span class="process-math">\(f^{-1} \)</span> is read as “f inverse.” Here, the <span class="process-math">\(-1\)</span> is not used as an exponent and <span class="process-math">\(f^{-1} (x)\neq 1/f(x).\)</span> <a href="sec_Ch1Sec4.html#CNX_Calc_Figure_01_04_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_04_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.4.2">Figure 1.4.2</a> shows the relationship between the domain and range of <span class="process-math">\(f\)</span> and the domain and range of <span class="process-math">\(f^{-1} .\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_01_04_001"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_001.jpg" class="contained" alt='"An image of two bubbles. The first bubble is orange and has two labels: the top label is “Domain of f” and the bottom label is “Range of f inverse”. Within this bubble is the variable “x”. An orange arrow with the label “f” points from this bubble to the second bubble. The second bubble is blue and has two labels: the top label is “range of f” and the bottom label is “domain of f inverse”. Within this bubble is the variable “y”. A blue arrow with the label “f inverse” points from this bubble to the first bubble."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Given a function <span class="process-math">\(f\)</span> and its inverse <span class="process-math">\(f^{-1} ,f^{-1} (y)=x\)</span> if and only if <span class="process-math">\(f(x)=y.\)</span> The range of <span class="process-math">\(f\)</span> becomes the domain of <span class="process-math">\(f^{-1} \)</span> and the domain of <span class="process-math">\(f\)</span> becomes the range of <span class="process-math">\(f^{-1} .\)</span><div class="autopermalink" data-description="Figure 1.4.2"><a href="#CNX_Calc_Figure_01_04_001" title="Copy heading and permalink for Figure 1.4.2" aria-label="Copy heading and permalink for Figure 1.4.2">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch1Sec4-3-6">Recall that a function has exactly one output for each input. Therefore, to define an inverse function, we need to map each input to exactly one output. For example, let’s try to find the inverse function for <span class="process-math">\(f(x)=x^2.\)</span> Solving the equation <span class="process-math">\(y=x^2\)</span> for <span class="process-math">\(x,\)</span> we arrive at the equation <span class="process-math">\(x=\pm \sqrt{y}.\)</span> This equation does not describe <span class="process-math">\(x\)</span> as a function of <span class="process-math">\(y\)</span> because there are two solutions to this equation for every <span class="process-math">\(y\gt 0.\)</span> The problem with trying to find an inverse function for <span class="process-math">\(f(x)=x^2\)</span> is that two inputs are sent to the same output for each output <span class="process-math">\(y\gt 0.\)</span> The function <span class="process-math">\(f(x)=x^3+4\)</span> discussed earlier did not have this problem. For that function, each input was sent to a different output. A function that sends each input to a different output is called a one-to-one function.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="sec_Ch1Sec4-3-7"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec_Ch1Sec4-3-7-1">We say a <span class="process-math">\(f\)</span> is a <dfn class="terminology">one-to-one function</dfn> if <span class="process-math">\(f(x_1)\neq f(x_2)\)</span> when <span class="process-math">\(x_1\neq x_2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.4.3"><a href="#sec_Ch1Sec4-3-7" title="Copy heading and permalink for Definition 1.4.3" aria-label="Copy heading and permalink for Definition 1.4.3">🔗</a></div></article><div class="para" id="sec_Ch1Sec4-3-8">One way to determine whether a function is one-to-one is by looking at its graph. If a function is one-to-one, then no two inputs can be sent to the same output. Therefore, if we draw a horizontal line anywhere in the <span class="process-math">\(xy\)</span>-plane, according to the <dfn class="terminology">horizontal line test</dfn>, it cannot intersect the graph more than once. We note that the horizontal line test is different from the vertical line test. The vertical line test determines whether a graph is the graph of a function. The horizontal line test determines whether a function is one-to-one (<a href="sec_Ch1Sec4.html#CNX_Calc_Figure_01_04_002" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_04_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.4.5">Figure 1.4.5</a>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="note remark-like" id="sec_Ch1Sec4-3-9"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rule: Horizontal Line Test.</span>
+</h4>
+<div class="para" id="sec_Ch1Sec4-3-9-2">A function <span class="process-math">\(f\)</span> is one-to-one if and only if every horizontal line intersects the graph of <span class="process-math">\(f\)</span> no more than once.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-3-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 1.4.4: Rule: Horizontal Line Test"><a href="#sec_Ch1Sec4-3-9" title="Copy heading and permalink for Note 1.4.4: Rule: Horizontal Line Test" aria-label="Copy heading and permalink for Note 1.4.4: Rule: Horizontal Line Test">🔗</a></div></article><figure class="figure figure-like" id="CNX_Calc_Figure_01_04_002"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_002.jpg" class="contained" alt='"An image of two graphs. Both graphs have an x axis that runs from -3 to 3 and a y axis that runs from -3 to 4. The first graph is of the function “f(x) = x squared”, which is a parabola. The function decreases until it hits the origin, where it begins to increase. The x intercept and y intercept are both at the origin. There are two orange horizontal lines also plotted on the graph, both of which run through the function at two points each. The second graph is of the function “f(x) = x cubed”, which is an increasing curved function. The x intercept and y intercept are both at the origin. There are three orange lines also plotted on the graph, each of which only intersects the function at one point."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>(a) The function <span class="process-math">\(f(x)=x^2\)</span> is not one-to-one because it fails the horizontal line test. (b) The function <span class="process-math">\(f(x)=x^3\)</span> is one-to-one because it passes the horizontal line test.<div class="autopermalink" data-description="Figure 1.4.5"><a href="#CNX_Calc_Figure_01_04_002" title="Copy heading and permalink for Figure 1.4.5" aria-label="Copy heading and permalink for Figure 1.4.5">🔗</a></div></figcaption></figure><details id="sec_Ch1Sec4-3-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Determining Whether a Function Is One-to-One.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec_Ch1Sec4-3-11-2-1">For each of the following functions, use the horizontal line test to determine whether it is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-3-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="decimal" id="sec_Ch1Sec4-3-11-2-2">
+<li id="sec_Ch1Sec4-3-11-2-2-1">
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_003.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 11 and the y axis runs from -3 to 11. The graph is of a step function which contains 10 horizontal steps. Each steps starts with a closed circle and ends with an open circle. The first step starts at the origin and ends at the point (1, 0). The second step starts at the point (1, 1) and ends at the point (1, 2). Each of the following 8 steps starts 1 unit higher in the y direction than where the previous step ended. The tenth and final step starts at the point (9, 9) and ends at the point (10, 9)"'></div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec4-3-11-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-3-11-2-2-2">
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_004.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 6 and the y axis runs from -3 to 6. The graph is of the function “f(x) = (1/x)”, a curved decreasing function. The graph of the function starts right below the x axis in the 4th quadrant and begins to decreases until it comes close to the y axis. The graph keeps decreasing as it gets closer and closer to the y axis, but never touches it due to the vertical asymptote. In the first quadrant, the graph of the function starts close to the y axis and keeps decreasing until it gets close to the x axis. As the function continues to decreases it gets closer and closer to the x axis without touching it, where there is a horizontal asymptote."'></div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec4-3-11-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="solutions"><details id="sec_Ch1Sec4-3-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<ol class="decimal" id="sec_Ch1Sec4-3-11-3-1">
+<li id="sec_Ch1Sec4-3-11-3-1-1">Since the horizontal line <span class="process-math">\(y=n\)</span> for any integer <span class="process-math">\(n\geq 0\)</span> intersects the graph more than once, this function is not one-to-one. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_005.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 11 and the y axis runs from -3 to 11. The graph is of a step function which contains 10 horizontal steps. Each steps starts with a closed circle and ends with an open circle. The first step starts at the origin and ends at the point (1, 0). The second step starts at the point (1, 1) and ends at the point (1, 2). Each of the following 8 steps starts 1 unit higher in the y direction than where the previous step ended. The tenth and final step starts at the point (9, 9) and ends at the point (10, 9). There are also two horizontal orange lines plotted on the graph, each of which run through an entire step of the function."'></div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec4-3-11-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-3-11-3-1-2">Since every horizontal line intersects the graph once (at most), this function is one-to-one. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_006.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 6 and the y axis runs from -3 to 6. The graph is of the function “f(x) = (1/x)”, a curved decreasing function. The graph of the function starts right below the x axis in the 4th quadrant and begins to decreases until it comes close to the y axis. The graph keeps decreasing as it gets closer and closer to the y axis, but never touches it due to the vertical asymptote. In the first quadrant, the graph of the function starts close to the y axis and keeps decreasing until it gets close to the x axis. As the function continues to decreases it gets closer and closer to the x axis without touching it, where there is a horizontal asymptote. There are also three horizontal orange lines plotted on the graph, each of which only runs through the function at one point."'></div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec4-3-11-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 1.4.6.1"><a href="#sec_Ch1Sec4-3-11-3" title="Copy heading and permalink for Solution 1.4.6.1" aria-label="Copy heading and permalink for Solution 1.4.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.4.6: Determining Whether a Function Is One-to-One"><a href="#sec_Ch1Sec4-3-11" title="Copy heading and permalink for Example 1.4.6: Determining Whether a Function Is One-to-One" aria-label="Copy heading and permalink for Example 1.4.6: Determining Whether a Function Is One-to-One">🔗</a></div></article></details><details id="sec_Ch1Sec4-3-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec4-3-12-1-1">Is the function <span class="process-math">\(f\)</span> graphed in the following image one-to-one?<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-3-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_007.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 4 and the y axis runs from -3 to 5. The graph is of the function “f(x) = (x cubed) - x” which is a curved function. The function increases, decreases, then increases again. The x intercepts are at the points (-1, 0), (0,0), and (1, 0). The y intercept is at the origin."'></div>
+<div class="solutions">
+<details id="sec_Ch1Sec4-3-12-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch1Sec4-3-12-3-1">Use the horizontal line test.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-3-12-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.4.7.1"><a href="#sec_Ch1Sec4-3-12-3" title="Copy heading and permalink for Hint 1.4.7.1" aria-label="Copy heading and permalink for Hint 1.4.7.1">🔗</a></div>
+</div></details><details id="sec_Ch1Sec4-3-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch1Sec4-3-12-2-1">No.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-3-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.4.7.1"><a href="#sec_Ch1Sec4-3-12-2" title="Copy heading and permalink for Solution 1.4.7.1" aria-label="Copy heading and permalink for Solution 1.4.7.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.4.7"><a href="#sec_Ch1Sec4-3-12" title="Copy heading and permalink for Checkpoint 1.4.7" aria-label="Copy heading and permalink for Checkpoint 1.4.7">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 1.4.1: Existence of an Inverse Function"><a href="#sec_Ch1Sec4-3" title="Copy heading and permalink for Subsection 1.4.1: Existence of an Inverse Function" aria-label="Copy heading and permalink for Subsection 1.4.1: Existence of an Inverse Function">🔗</a></div></section><section class="subsection" id="sec_Ch1Sec4-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding a Function’s Inverse</span>
+</h3>
+<section class="subsubsection" id="sec_Ch1Sec4-4-2"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"></span>
+</h4>
+<div class="para" id="sec_Ch1Sec4-4-2-1">We can now consider one-to-one functions and show how to find their inverses. Recall that a function maps elements in the domain of <span class="process-math">\(f\)</span> to elements in the range of <span class="process-math">\(f.\)</span> The inverse function maps each element from the range of <span class="process-math">\(f\)</span> back to its corresponding element from the domain of <span class="process-math">\(f.\)</span> Therefore, to find the inverse function of a one-to-one function <span class="process-math">\(f,\)</span> given any <span class="process-math">\(y\)</span> in the range of <span class="process-math">\(f,\)</span> we need to determine which <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f\)</span> satisfies <span class="process-math">\(f(x)=y.\)</span> Since <span class="process-math">\(f\)</span> is one-to-one, there is exactly one such value <span class="process-math">\(x.\)</span> We can find that value <span class="process-math">\(x\)</span> by solving the equation <span class="process-math">\(f(x)=y\)</span> for <span class="process-math">\(x.\)</span> Doing so, we are able to write <span class="process-math">\(x\)</span> as a function of <span class="process-math">\(y\)</span> where the domain of this function is the range of <span class="process-math">\(f\)</span> and the range of this new function is the domain of <span class="process-math">\(f.\)</span> Consequently, this function is the inverse of <span class="process-math">\(f,\)</span> and we write <span class="process-math">\(x=f^{-1} (y).\)</span> Since we typically use the variable <span class="process-math">\(x\)</span> to denote the independent variable and <span class="process-math">\(y\)</span> to denote the dependent variable, we often interchange the roles of <span class="process-math">\(x\)</span> and <span class="process-math">\(y,\)</span> and write <span class="process-math">\(y=f^{-1} (x).\)</span> Representing the inverse function in this way is also helpful later when we graph a function <span class="process-math">\(f\)</span> and its inverse <span class="process-math">\(f^{-1} \)</span> on the same axes.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="note remark-like" id="fs-id1170572552427"><h5 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problem-Solving Strategy: Finding an Inverse Function.</span>
+</h5>
+<ol class="decimal" id="fs-id1170572552427-2">
+<li id="fs-id1170572552427-2-1">
+<div class="para" id="p-derived-fs-id1170572552427-2-1">Solve the equation <span class="process-math">\(y=f(x)\)</span> for <span class="process-math">\(x.\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#fs-id1170572552427-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="fs-id1170572552427-2-2">
+<div class="para" id="p-derived-fs-id1170572552427-2-2">Interchange the variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> and write <span class="process-math">\(y=f^{-1} (x).\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#fs-id1170572552427-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Note 1.4.8: Problem-Solving Strategy: Finding an Inverse Function"><a href="#fs-id1170572552427" title="Copy heading and permalink for Note 1.4.8: Problem-Solving Strategy: Finding an Inverse Function" aria-label="Copy heading and permalink for Note 1.4.8: Problem-Solving Strategy: Finding an Inverse Function">🔗</a></div></article><details id="sec_Ch1Sec4-4-2-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding an Inverse Function.</span>
+</h5></summary><article class="example example-like knowl__content"><div class="para" id="sec_Ch1Sec4-4-2-3-2-1">Find the inverse for the function <span class="process-math">\(f(x)=3x-4.\)</span> State the domain and range of the inverse function. Verify that <span class="process-math">\(f^{-1} (f(x))=x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec_Ch1Sec4-4-2-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch1Sec4-4-2-3-3-1">Follow the steps outlined in the strategy.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch1Sec4-4-2-3-3-2">Step 1. If <span class="process-math">\(y=3x-4,\)</span> then <span class="process-math">\(3x=y+4\)</span> and <span class="process-math">\(x= \frac{1}{3}y+ \frac{4}{3}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-2-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch1Sec4-4-2-3-3-3">Step 2. Rewrite as <span class="process-math">\(y=\frac{1}{3}x+ \frac{4}{3}\)</span> and let <span class="process-math">\(y=f^{-1} (x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-2-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch1Sec4-4-2-3-3-4">Therefore, <span class="process-math">\(f^{-1} (x)= \frac{1}{3}x+ \frac{4}{3}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-2-3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch1Sec4-4-2-3-3-5">Since the domain of <span class="process-math">\(f\)</span> is <span class="process-math">\((-\infty ,\infty ),\)</span> the range of <span class="process-math">\(f^{-1} \)</span> is <span class="process-math">\((-\infty ,\infty ).\)</span> Since the range of <span class="process-math">\(f\)</span> is <span class="process-math">\((-\infty ,\infty ),\)</span> the domain of <span class="process-math">\(f^{-1} \)</span> is <span class="process-math">\((-\infty ,\infty ).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-2-3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch1Sec4-4-2-3-3-6">You can verify that <span class="process-math">\(f^{-1} (f(x))=x\)</span> by writing<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-2-3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^{-1} (f(x))=f^{-1} (3x-4)= \frac{1}{3}(3x-4)+ \frac{4}{3}=x- \frac{4}{3}+ \frac{4}{3}=x.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch1Sec4-4-2-3-3-8">Note that for <span class="process-math">\(f^{-1} (x)\)</span> to be the inverse of <span class="process-math">\(f(x),\)</span> both <span class="process-math">\(f^{-1} (f(x))=x\)</span> and <span class="process-math">\(f(f^{-1} (x))=x\)</span> for all <span class="process-math">\(x\)</span> in the domain of the inside function.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-2-3-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.4.9.1"><a href="#sec_Ch1Sec4-4-2-3-3" title="Copy heading and permalink for Solution 1.4.9.1" aria-label="Copy heading and permalink for Solution 1.4.9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.4.9: Finding an Inverse Function"><a href="#sec_Ch1Sec4-4-2-3" title="Copy heading and permalink for Example 1.4.9: Finding an Inverse Function" aria-label="Copy heading and permalink for Example 1.4.9: Finding an Inverse Function">🔗</a></div></article></details><details id="sec_Ch1Sec4-4-2-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec4-4-2-4-1-1">Find the inverse of the function <span class="process-math">\(f(x)=3x/(x-2).\)</span> State the domain and range of the inverse function.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch1Sec4-4-2-4-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch1Sec4-4-2-4-3-1">Use the <a href="sec_Ch1Sec4.html#fs-id1170572552427" class="xref" data-knowl="./knowl/xref/fs-id1170572552427.html" data-reveal-label="Reveal" data-close-label="Close" title="Note 1.4.8: Problem-Solving Strategy: Finding an Inverse Function">Note 1.4.8</a> for finding inverse functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-2-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.4.10.1"><a href="#sec_Ch1Sec4-4-2-4-3" title="Copy heading and permalink for Hint 1.4.10.1" aria-label="Copy heading and permalink for Hint 1.4.10.1">🔗</a></div>
+</div></details><details id="sec_Ch1Sec4-4-2-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch1Sec4-4-2-4-2-1">
+<span class="process-math">\(f^{-1} (x)= \frac{2x}{x-3}.\)</span> The domain of <span class="process-math">\(f^{-1} \)</span> is <span class="process-math">\(\{x|x\neq 3\}.\)</span> The range of <span class="process-math">\(f^{-1} \)</span> is <span class="process-math">\(\{y|y\neq 2\}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.4.10.1"><a href="#sec_Ch1Sec4-4-2-4-2" title="Copy heading and permalink for Solution 1.4.10.1" aria-label="Copy heading and permalink for Solution 1.4.10.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.4.10"><a href="#sec_Ch1Sec4-4-2-4" title="Copy heading and permalink for Checkpoint 1.4.10" aria-label="Copy heading and permalink for Checkpoint 1.4.10">🔗</a></div></article></details><div class="autopermalink" data-description="Subsubsection 1.4.2.1"><a href="#sec_Ch1Sec4-4-2" title="Copy heading and permalink for Subsubsection 1.4.2.1" aria-label="Copy heading and permalink for Subsubsection 1.4.2.1">🔗</a></div></section><section class="subsubsection" id="sec_Ch1Sec4-4-3"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Graphing Inverse Functions</span>
+</h4>
+<div class="para" id="sec_Ch1Sec4-4-3-2">Let’s consider the relationship between the graph of a function <span class="process-math">\(f\)</span> and the graph of its inverse. Consider the graph of <span class="process-math">\(f\)</span> shown in <a href="sec_Ch1Sec4.html#CNX_Calc_Figure_01_04_008" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_04_008.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.4.11">Figure 1.4.11</a> and a point <span class="process-math">\((a,b)\)</span> on the graph. Since <span class="process-math">\(b=f(a),\)</span> then <span class="process-math">\(f^{-1} (b)=a.\)</span> Therefore, when we graph <span class="process-math">\(f^{-1} ,\)</span> the point <span class="process-math">\((b,a)\)</span> is on the graph. As a result, the graph of <span class="process-math">\(f^{-1} \)</span> is a reflection of the graph of <span class="process-math">\(f\)</span> about the line <span class="process-math">\(y=x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_01_04_008"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_017.jpg" class="contained" alt='"An image of two graphs. The first graph is of “y = f(x)”, which is a curved increasing function, that increases at a faster rate as x increases. The point (a, b) is on the graph of the function in the first quadrant. The second graph also graphs “y = f(x)” with the point (a, b), but also graphs the function “y = f inverse (x)”, an increasing curved function, that increases at a slower rate as x increases. This function includes the point (b, a). In addition to the two functions, there is a diagonal dotted line potted with the equation “y =x”, which shows that “f(x)” and “f inverse (x)” are mirror images about the line “y =x”."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>(a) The graph of this function <span class="process-math">\(f\)</span> shows point <span class="process-math">\((a,b)\)</span> on the graph of <span class="process-math">\(f.\)</span> (b) Since <span class="process-math">\((a,b)\)</span> is on the graph of <span class="process-math">\(f,\)</span> the point <span class="process-math">\((b,a)\)</span> is on the graph of <span class="process-math">\(f^{-1} .\)</span> The graph of <span class="process-math">\(f^{-1} \)</span> is a reflection of the graph of <span class="process-math">\(f\)</span> about the line <span class="process-math">\(y=x.\)</span><div class="autopermalink" data-description="Figure 1.4.11"><a href="#CNX_Calc_Figure_01_04_008" title="Copy heading and permalink for Figure 1.4.11" aria-label="Copy heading and permalink for Figure 1.4.11">🔗</a></div></figcaption></figure><details id="sec_Ch1Sec4-4-3-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sketching Graphs of Inverse Functions.</span>
+</h5></summary><article class="example example-like knowl__content"><div class="para" id="sec_Ch1Sec4-4-3-4-2-1">For the graph of <span class="process-math">\(f\)</span> in the following image, sketch a graph of <span class="process-math">\(f^{-1} \)</span> by sketching the line <span class="process-math">\(y=x\)</span> and using symmetry. Identify the domain and range of <span class="process-math">\(f^{-1} .\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_009.jpg" class="contained" alt='"An image of a graph. The x axis runs from -2 to 2 and the y axis runs from 0 to 2. The graph is of the function “f(x) = square root of (x +2)”, an increasing curved function. The function starts at the point (-2, 0). The x intercept is at (-2, 0) and the y intercept is at the approximate point (0, 1.4)."'></div>
+<div class="solutions"><details id="sec_Ch1Sec4-4-3-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch1Sec4-4-3-4-3-1">Reflect the graph about the line <span class="process-math">\(y=x.\)</span> The domain of <span class="process-math">\(f^{-1} \)</span> is <span class="process-math">\([0,\infty ).\)</span> The range of <span class="process-math">\(f^{-1} \)</span> is <span class="process-math">\([-2,\infty ).\)</span> By using the preceding strategy for finding inverse functions, we can verify that the inverse function is <span class="process-math">\(f^{-1} (x)=x^2-2,\)</span> as shown in the graph.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-3-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_010.jpg" class="contained" alt='"An image of a graph. The x axis runs from -2 to 2 and the y axis runs from -2 to 2. The graph is of two functions. The first function is “f(x) = square root of (x +2)”, an increasing curved function. The function starts at the point (-2, 0). The x intercept is at (-2, 0) and the y intercept is at the approximate point (0, 1.4). The second function is “f inverse (x) = (x squared) -2”, an increasing curved function that starts at the point (0, -2). The x intercept is at the approximate point (1.4, 0) and the y intercept is at the point (0, -2). In addition to the two functions, there is a diagonal dotted line potted with the equation “y =x”, which shows that “f(x)” and “f inverse (x)” are mirror images about the line “y =x”."'></div>
+<div class="autopermalink" data-description="Solution 1.4.12.1"><a href="#sec_Ch1Sec4-4-3-4-3" title="Copy heading and permalink for Solution 1.4.12.1" aria-label="Copy heading and permalink for Solution 1.4.12.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.4.12: Sketching Graphs of Inverse Functions"><a href="#sec_Ch1Sec4-4-3-4" title="Copy heading and permalink for Example 1.4.12: Sketching Graphs of Inverse Functions" aria-label="Copy heading and permalink for Example 1.4.12: Sketching Graphs of Inverse Functions">🔗</a></div></article></details><details id="sec_Ch1Sec4-4-3-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec4-4-3-5-1-1">Sketch the graph of <span class="process-math">\(f(x)=2x+3\)</span> and the graph of its inverse using the symmetry property of inverse functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch1Sec4-4-3-5-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch1Sec4-4-3-5-3-1">The graphs are symmetric about the line <span class="process-math">\(y=x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-3-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.4.13.1"><a href="#sec_Ch1Sec4-4-3-5-3" title="Copy heading and permalink for Hint 1.4.13.1" aria-label="Copy heading and permalink for Hint 1.4.13.1">🔗</a></div>
+</div></details><details id="sec_Ch1Sec4-4-3-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch1Sec4-4-3-5-2-1"> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_011.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 4 and the y axis runs from -3 to 5. The graph is of two functions. The first function is “f(x) = 2x +3”, an increasing straight line function. The function has an x intercept at (-1.5, 0) and a y intercept at (0, 3). The second function is “f inverse (x) = (x - 3)/2”, an increasing straight line function, which increases at a slower rate than the first function. The function has an x intercept at (3, 0) and a y intercept at (0, -1.5). In addition to the two functions, there is a diagonal dotted line potted with the equation “y =x”, which shows that “f(x)” and “f inverse (x)” are mirror images about the line “y =x”."'></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-3-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.4.13.1"><a href="#sec_Ch1Sec4-4-3-5-2" title="Copy heading and permalink for Solution 1.4.13.1" aria-label="Copy heading and permalink for Solution 1.4.13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.4.13"><a href="#sec_Ch1Sec4-4-3-5" title="Copy heading and permalink for Checkpoint 1.4.13" aria-label="Copy heading and permalink for Checkpoint 1.4.13">🔗</a></div></article></details><div class="autopermalink" data-description="Subsubsection 1.4.2.2: Graphing Inverse Functions"><a href="#sec_Ch1Sec4-4-3" title="Copy heading and permalink for Subsubsection 1.4.2.2: Graphing Inverse Functions" aria-label="Copy heading and permalink for Subsubsection 1.4.2.2: Graphing Inverse Functions">🔗</a></div></section><section class="subsubsection" id="sec_Ch1Sec4-4-4"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Restricting Domains</span>
+</h4>
+<div class="para" id="sec_Ch1Sec4-4-4-2">As we have seen, <span class="process-math">\(f(x)=x^2\)</span> does not have an inverse function because it is not one-to-one. However, we can choose a subset of the domain of <span class="process-math">\(f\)</span> such that the function is one-to-one. This subset is called a <dfn class="terminology">restricted domain</dfn>. By restricting the domain of <span class="process-math">\(f,\)</span> we can define a new function <span class="process-math">\(g\)</span> such that the domain of <span class="process-math">\(g\)</span> is the restricted domain of <span class="process-math">\(f\)</span> and <span class="process-math">\(g(x)=f(x)\)</span> for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(g.\)</span> Then we can define an inverse function for <span class="process-math">\(g\)</span> on that domain. For example, since <span class="process-math">\(f(x)=x^2\)</span> is one-to-one on the interval <span class="process-math">\([0,\infty ),\)</span> we can define a new function <span class="process-math">\(g\)</span> such that the domain of <span class="process-math">\(g\)</span> is <span class="process-math">\([0,\infty )\)</span> and <span class="process-math">\(g(x)=x^2\)</span> for all <span class="process-math">\(x\)</span> in its domain. Since <span class="process-math">\(g\)</span> is a one-to-one function, it has an inverse function, given by the formula <span class="process-math">\(g^{-1}(x)=\sqrt{x}.\)</span> On the other hand, the function <span class="process-math">\(f(x)=x^2\)</span> is also one-to-one on the domain <span class="process-math">\((-\infty ,0].\)</span> Therefore, we could also define a new function <span class="process-math">\(h\)</span> such that the domain of <span class="process-math">\(h\)</span> is <span class="process-math">\((-\infty ,0]\)</span> and <span class="process-math">\(h(x)=x^2\)</span> for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(h.\)</span> Then <span class="process-math">\(h\)</span> is a one-to-one function and must also have an inverse. Its inverse is given by the formula <span class="process-math">\(h^{-1}(x)=-\sqrt{x}\)</span> (<a href="sec_Ch1Sec4.html#CNX_Calc_Figure_01_04_012" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_04_012.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.4.14">Figure 1.4.14</a>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_01_04_012"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_012.jpg" class="contained" alt='"An image of two graphs. Both graphs have an x axis that runs from -2 to 5 and a y axis that runs from -2 to 5. The first graph is of two functions. The first function is “g(x) = x squared”, an increasing curved function that starts at the point (0, 0). This function increases at a faster rate for larger values of x. The second function is “g inverse (x) = square root of x”, an increasing curved function that starts at the point (0, 0). This function increases at a slower rate for larger values of x. The first function is “h(x) = x squared”, a decreasing curved function that ends at the point (0, 0). This function decreases at a slower rate for larger values of x. The second function is “h inverse (x) = -(square root of x)”, an increasing curved function that starts at the point (0, 0). This function decreases at a slower rate for larger values of x. In addition to the two functions, there is a diagonal dotted line potted with the equation “y =x”, which shows that “f(x)” and “f inverse (x)” are mirror images about the line “y =x”."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>(a) For <span class="process-math">\(g(x)=x^2\)</span> restricted to <span class="process-math">\([0,\infty ),g^{-1}(x)=\sqrt{x}.\)</span> (b) For <span class="process-math">\(h(x)=x^2\)</span> restricted to <span class="process-math">\((-\infty ,0],h^{-1}(x)=-\sqrt{x}.\)</span><div class="autopermalink" data-description="Figure 1.4.14"><a href="#CNX_Calc_Figure_01_04_012" title="Copy heading and permalink for Figure 1.4.14" aria-label="Copy heading and permalink for Figure 1.4.14">🔗</a></div></figcaption></figure><details id="sec_Ch1Sec4-4-4-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Restricting the Domain.</span>
+</h5></summary><article class="example example-like knowl__content"><div class="para" id="sec_Ch1Sec4-4-4-4-2-1">Consider the function <span class="process-math">\(f(x)=(x+1)^2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-4-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="decimal" id="sec_Ch1Sec4-4-4-4-2-2">
+<li id="sec_Ch1Sec4-4-4-4-2-2-1">
+<div class="para" id="p-derived-sec_Ch1Sec4-4-4-4-2-2-1">Sketch the graph of <span class="process-math">\(f\)</span> and use the horizontal line test to show that <span class="process-math">\(f\)</span> is not one-to-one.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec4-4-4-4-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-4-4-4-2-2-2">
+<div class="para" id="p-derived-sec_Ch1Sec4-4-4-4-2-2-2">Show that <span class="process-math">\(f\)</span> is one-to-one on the restricted domain <span class="process-math">\([-1,\infty ).\)</span> Determine the domain and range for the inverse of <span class="process-math">\(f\)</span> on this restricted domain and find a formula for <span class="process-math">\(f^{-1} .\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec4-4-4-4-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="solutions"><details id="sec_Ch1Sec4-4-4-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<ol class="decimal" id="sec_Ch1Sec4-4-4-4-3-1">
+<li id="sec_Ch1Sec4-4-4-4-3-1-1">The graph of <span class="process-math">\(f\)</span> is the graph of <span class="process-math">\(y=x^2\)</span> shifted left 1 unit. Since there exists a horizontal line intersecting the graph more than once, <span class="process-math">\(f\)</span> is not one-to-one. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_013.jpg" class="contained" alt='"An image of a graph. The x axis runs from -6 to 6 and the y axis runs from -2 to 10. The graph is of the function “f(x) = (x+ 1) squared”, which is a parabola. The function decreases until the point (-1, 0), where it begins it increases. The x intercept is at the point (-1, 0) and the y intercept is at the point (0, 1). There is also a horizontal dotted line plotted on the graph, which crosses through the function at two points."'></div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec4-4-4-4-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-4-4-4-3-1-2">On the interval <span class="process-math">\([-1,\infty ), f\)</span> is one-to-one. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_014.jpg" class="contained" alt='"An image of a graph. The x axis runs from -6 to 6 and the y axis runs from -2 to 10. The graph is of the function “f(x) = (x+ 1) squared”, on the interval [1, infinity). The function starts from the point (-1, 0) and increases. The x intercept is at the point (-1, 0) and the y intercept is at the point (0, 1)."'></div>  The domain and range of <span class="process-math">\(f^{-1} \)</span> are given by the range and domain of <span class="process-math">\(f,\)</span> respectively. Therefore, the domain of <span class="process-math">\(f^{-1} \)</span> is <span class="process-math">\([0,\infty )\)</span> and the range of <span class="process-math">\(f^{-1} \)</span> is <span class="process-math">\([-1,\infty ).\)</span> To find a formula for <span class="process-math">\(f^{-1} ,\)</span> solve the equation <span class="process-math">\(y=(x+1)^2\)</span> for <span class="process-math">\(x.\)</span> If <span class="process-math">\(y=(x+1)^2,\)</span> then <span class="process-math">\(x=-1\pm \sqrt{y}.\)</span> Since we are restricting the domain to the interval where <span class="process-math">\(x\geq -1,\)</span> we need <span class="process-math">\(\pm \sqrt{y}\geq 0.\)</span> Therefore, <span class="process-math">\(x=-1+\sqrt{y}.\)</span> Interchanging <span class="process-math">\(x\)</span> and <span class="process-math">\(y,\)</span> we write <span class="process-math">\(y=-1+\sqrt{x}\)</span> and conclude that <span class="process-math">\(f^{-1} (x)=-1+\sqrt{x}.\)</span><div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec4-4-4-4-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 1.4.15.1"><a href="#sec_Ch1Sec4-4-4-4-3" title="Copy heading and permalink for Solution 1.4.15.1" aria-label="Copy heading and permalink for Solution 1.4.15.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.4.15: Restricting the Domain"><a href="#sec_Ch1Sec4-4-4-4" title="Copy heading and permalink for Example 1.4.15: Restricting the Domain" aria-label="Copy heading and permalink for Example 1.4.15: Restricting the Domain">🔗</a></div></article></details><details id="sec_Ch1Sec4-4-4-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec4-4-4-5-1-1">Consider <span class="process-math">\(f(x)=1/x^2\)</span> restricted to the domain <span class="process-math">\((-\infty ,0).\)</span> Verify that <span class="process-math">\(f\)</span> is one-to-one on this domain. Determine the domain and range of the inverse of <span class="process-math">\(f\)</span> and find a formula for <span class="process-math">\(f^{-1} .\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-4-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch1Sec4-4-4-5-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch1Sec4-4-4-5-3-1">The domain and range of <span class="process-math">\(f^{-1} \)</span> is given by the range and domain of <span class="process-math">\(f,\)</span> respectively. To find <span class="process-math">\(f^{-1} ,\)</span> solve <span class="process-math">\(y=1/x^2\)</span> for <span class="process-math">\(x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-4-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.4.16.1"><a href="#sec_Ch1Sec4-4-4-5-3" title="Copy heading and permalink for Hint 1.4.16.1" aria-label="Copy heading and permalink for Hint 1.4.16.1">🔗</a></div>
+</div></details><details id="sec_Ch1Sec4-4-4-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch1Sec4-4-4-5-2-1">The domain of <span class="process-math">\(f^{-1} \)</span> is <span class="process-math">\((0,\infty ).\)</span> The range of <span class="process-math">\(f^{-1} \)</span> is <span class="process-math">\((-\infty ,0).\)</span> The inverse function is given by the formula <span class="process-math">\(f^{-1} (x)=-1/\sqrt{x}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-4-4-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.4.16.1"><a href="#sec_Ch1Sec4-4-4-5-2" title="Copy heading and permalink for Solution 1.4.16.1" aria-label="Copy heading and permalink for Solution 1.4.16.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.4.16"><a href="#sec_Ch1Sec4-4-4-5" title="Copy heading and permalink for Checkpoint 1.4.16" aria-label="Copy heading and permalink for Checkpoint 1.4.16">🔗</a></div></article></details><div class="autopermalink" data-description="Subsubsection 1.4.2.3: Restricting Domains"><a href="#sec_Ch1Sec4-4-4" title="Copy heading and permalink for Subsubsection 1.4.2.3: Restricting Domains" aria-label="Copy heading and permalink for Subsubsection 1.4.2.3: Restricting Domains">🔗</a></div></section><div class="autopermalink" data-description="Subsection 1.4.2: Finding a Function’s Inverse"><a href="#sec_Ch1Sec4-4" title="Copy heading and permalink for Subsection 1.4.2: Finding a Function’s Inverse" aria-label="Copy heading and permalink for Subsection 1.4.2: Finding a Function’s Inverse">🔗</a></div></section><section class="subsection" id="sec_Ch1Sec4-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inverse Trigonometric Functions</span>
+</h3>
+<div class="para" id="sec_Ch1Sec4-5-2">The six basic trigonometric functions are periodic, and therefore they are not one-to-one. However, if we restrict the domain of a trigonometric function to an interval where it is one-to-one, we can define its inverse. Consider the sine function. The sine function is one-to-one on an infinite number of intervals, but the standard convention is to restrict the domain to the interval <span class="process-math">\([- \frac{\pi}{2},\frac{\pi}{2}].\)</span> By doing so, we define the inverse sine function on the domain <span class="process-math">\([-1,1]\)</span> such that for any <span class="process-math">\(x\)</span> in the interval <span class="process-math">\([-1,1],\)</span> the inverse sine function tells us which angle <span class="process-math">\(\theta \)</span> in the interval <span class="process-math">\([-\frac{\pi}{2},\frac{\pi}{2}]\)</span> satisfies <span class="process-math">\(\sin\,\theta =x.\)</span> Similarly, we can restrict the domains of the other trigonometric functions to define <dfn class="terminology">inverse trigonometric functions</dfn>, which are functions that tell us which angle in a certain interval has a specified trigonometric value.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="sec_Ch1Sec4-5-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec_Ch1Sec4-5-3-1">The inverse sine function, denoted <span class="process-math">\(\sin^{-1} \)</span> or arcsin, and the inverse cosine function, denoted <span class="process-math">\(\cos^{-1}\)</span> or arccos, are defined on the domain <span class="process-math">\(D=\{x|-1\leq x\leq 1\}\)</span> as follows:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch1Sec4-5-3-2">
+\begin{align*}
+\sin^{-1} (x) \amp =y \text{ if and only if } \sin(y)=x \text{ and } -\frac{\pi}{2}\leq y\leq \frac{\pi}{2} \\
+\cos^{-1}(x)\amp =y \text{ if and only if } \text{ cos }(y)=x \text{ and } 0\leq y\leq \pi. 
+\end{align*}
+</div>
+<div class="para" id="sec_Ch1Sec4-5-3-3">The inverse tangent function, denoted <span class="process-math">\(\tan^{-1} \)</span> or arctan, and inverse cotangent function, denoted <span class="process-math">\(\cot^{-1} \)</span> or arccot, are defined on the domain <span class="process-math">\(D=\{x|-\infty \lt x\lt \infty \}\)</span> as follows:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch1Sec4-5-3-4">
+\begin{gather*}
+\tan^{-1} (x)=y \text{ if and only if } \text{ tan }(y)=x \text{ and } -\frac{\pi}{2}\lt y\lt \frac{\pi}{2};\\
+\cot^{-1} (x)=y \text{ if and only if } \text{ cot }(y)=x \text{ and } 0\lt y\lt \pi.
+\end{gather*}
+</div>
+<div class="para" id="sec_Ch1Sec4-5-3-5">The inverse cosecant function, denoted <span class="process-math">\(\csc^{-1} \)</span> or arccsc, and inverse secant function, denoted <span class="process-math">\(\sec^{-1} \)</span> or arcsec, are defined on the domain <span class="process-math">\(D=\{x||x|\geq \}\)</span> as follows:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch1Sec4-5-3-6">
+\begin{gather*}
+\csc^{-1} (x)=y \text{ if and only if } \text{ csc }(y)=x \text{ and } -\frac{\pi}{2}\leq y\leq \frac{\pi}{2},y\neq 0;\\
+\sec^{-1} (x)=y \text{ if and only if } \text{ sec }(y)=x \text{ and } 0\leq y\leq \pi,y\neq \pi/2.
+\end{gather*}
+</div>
+<div class="autopermalink" data-description="Definition 1.4.17"><a href="#sec_Ch1Sec4-5-3" title="Copy heading and permalink for Definition 1.4.17" aria-label="Copy heading and permalink for Definition 1.4.17">🔗</a></div></article><div class="para" id="sec_Ch1Sec4-5-4">To graph the inverse trigonometric functions, we use the graphs of the trigonometric functions restricted to the domains defined earlier and reflect the graphs about the line <span class="process-math">\(y=x\)</span> (<a href="sec_Ch1Sec4.html#CNX_Calc_Figure_01_04_015" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_04_015.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.4.18">Figure 1.4.18</a>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_01_04_015"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_018.jpg" class="contained" alt='"An image of six graphs. The first graph is of the function “f(x) = sin inverse(x)”, which is an increasing curve function. The function starts at the point (-1, -(pi/2)) and increases until it ends at the point (1, (pi/2)). The x intercept and y intercept are at the origin. The second graph is of the function “f(x) = cos inverse (x)”, which is a decreasing curved function. The function starts at the point (-1, pi) and decreases until it ends at the point (1, 0). The x intercept is at the point (1, 0). The y intercept is at the point (0, (pi/2)). The third graph is of the function f(x) = tan inverse (x)”, which is an increasing curve function. The function starts close to the horizontal line “y = -(pi/2)” and increases until it comes close the “y = (pi/2)”. The function never intersects either of these lines, it always stays between them - they are horizontal asymptotes. The x intercept and y intercept are both at the origin. The fourth graph is of the function “f(x) = cot inverse (x)”, which is a decreasing curved function. The function starts slightly below the horizontal line “y = pi” and decreases until it gets close the x axis. The function never intersects either of these lines, it always stays between them - they are horizontal asymptotes. The fifth graph is of the function “f(x) = csc inverse (x)”, a decreasing curved function. The function starts slightly below the x axis, then decreases until it hits a closed circle point at (-1, -(pi/2)). The function then picks up again at the point (1, (pi/2)), where is begins to decrease and approach the x axis, without ever touching the x axis. There is a horizontal asymptote at the x axis. The sixth graph is of the function “f(x) = sec inverse (x)”, an increasing curved function. The function starts slightly above the horizontal line “y = (pi/2)”, then increases until it hits a closed circle point at (-1, pi). The function then picks up again at the point (1, 0), where is begins to increase and approach the horizontal line “y = (pi/2)”, without ever touching the line. There is a horizontal asymptote at the “y = (pi/2)”."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of each of the inverse trigonometric functions is a reflection about the line <span class="process-math">\(y=x\)</span> of the corresponding restricted trigonometric function.<div class="autopermalink" data-description="Figure 1.4.18"><a href="#CNX_Calc_Figure_01_04_015" title="Copy heading and permalink for Figure 1.4.18" aria-label="Copy heading and permalink for Figure 1.4.18">🔗</a></div></figcaption></figure><article class="note remark-like" id="sec_Ch1Sec4-5-6"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec_Ch1Sec4-5-6-1">Go to the following site for more comparisons of functions and their inverses.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 1.4.19"><a href="#sec_Ch1Sec4-5-6" title="Copy heading and permalink for Note 1.4.19" aria-label="Copy heading and permalink for Note 1.4.19">🔗</a></div></article><div class="para" id="sec_Ch1Sec4-5-7">When evaluating an inverse trigonometric function, the output is an angle. For example, to evaluate <span class="process-math">\(\cos^{-1}(\frac{1}{2}),\)</span> we need to find an angle <span class="process-math">\(\theta \)</span> such that <span class="process-math">\(\text{ cos }\,\theta =\frac{1}{2}.\)</span> Clearly, many angles have this property. However, given the definition of <span class="process-math">\(\cos^{-1},\)</span> we need the angle <span class="process-math">\(\theta \)</span> that not only solves this equation, but also lies in the interval <span class="process-math">\([0,\pi].\)</span> We conclude that <span class="process-math">\(\cos^{-1}(\frac{1}{2})=\frac{\pi}{3}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch1Sec4-5-8">We now consider a composition of a trigonometric function and its inverse. For example, consider the two expressions <span class="process-math">\(\sin(\sin^{-1} (\frac{\sqrt{2}}{2}))\)</span> and <span class="process-math">\(\sin^{-1} (\sin(\pi)).\)</span> For the first one, we simplify as follows:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_04_015.html ./knowl/xref/CNX_Calc_Figure_01_04_016.html">
+\begin{equation*}
+\sin(\sin^{-1} ( \frac{\sqrt{2}}{2}))=\sin( \frac{\pi}{4})= \frac{\sqrt{2}}{2}.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch1Sec4-5-10">For the second one, we have<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_04_015.html ./knowl/xref/CNX_Calc_Figure_01_04_016.html">
+\begin{equation*}
+\sin^{-1} (\sin(\pi))=\sin^{-1} (0)=0.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch1Sec4-5-12">The inverse function is supposed to “undo” the original function, so why isn’t <span class="process-math">\(\sin^{-1} (\sin(\pi))=\pi?\)</span> Recalling our definition of inverse functions, a function <span class="process-math">\(f\)</span> and its inverse <span class="process-math">\(f^{-1} \)</span> satisfy the conditions <span class="process-math">\(f(f^{-1} (y))=y\)</span> for all <span class="process-math">\(y\)</span> in the domain of <span class="process-math">\(f^{-1} \)</span> and <span class="process-math">\(f^{-1} (f(x))=x\)</span> for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f,\)</span> so what happened here? The issue is that the inverse sine function, <span class="process-math">\(\sin^{-1} ,\)</span> is the inverse of the restricted sine function defined on the domain <span class="process-math">\([-\frac{\pi}{2},\frac{\pi}{2}].\)</span> Therefore, for <span class="process-math">\(x\)</span> in the interval <span class="process-math">\([-\frac{\pi}{2},\frac{\pi}{2}]\text{ , }\)</span> it is true that <span class="process-math">\(\sin^{-1} (\sin\,x)=x.\)</span> However, for values of <span class="process-math">\(x\)</span> outside this interval, the equation does not hold, even though <span class="process-math">\(\sin^{-1} (\sin\,x)\)</span> is defined for all real numbers <span class="process-math">\(x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch1Sec4-5-13">What about <span class="process-math">\(\sin(\sin^{-1} y)?\)</span> Does that have a similar issue? The answer is no. Since the domain of <span class="process-math">\(\sin^{-1} \)</span> is the interval <span class="process-math">\([-1,1],\)</span> we conclude that <span class="process-math">\(\sin(\sin^{-1} y)=y\)</span> if <span class="process-math">\(-1\leq y\leq 1\)</span> and the expression is not defined for other values of <span class="process-math">\(y.\)</span> To summarize,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_04_015.html ./knowl/xref/CNX_Calc_Figure_01_04_016.html">
+\begin{equation*}
+\sin(\sin^{-1} y)=y \text{ if } -1\leq y\leq 1
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch1Sec4-5-15">and<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_04_015.html ./knowl/xref/CNX_Calc_Figure_01_04_016.html">
+\begin{equation*}
+\sin^{-1} (\sin\,x)=x \text{ if } -\frac{\pi}{2}\leq x\leq \frac{\pi}{2}.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch1Sec4-5-17">Similarly, for the cosine function,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_04_015.html ./knowl/xref/CNX_Calc_Figure_01_04_016.html">
+\begin{equation*}
+\text{ cos }(\cos^{-1}y)=y \text{ if } -1\leq y\leq 1
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch1Sec4-5-19">and<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_04_015.html ./knowl/xref/CNX_Calc_Figure_01_04_016.html">
+\begin{equation*}
+\cos^{-1}(\text{ cos }\,x)=x \text{ if } 0\leq x\leq \pi.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch1Sec4-5-21">Similar properties hold for the other trigonometric functions and their inverses.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec_Ch1Sec4-5-22" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating Expressions Involving Inverse Trigonometric Functions.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec_Ch1Sec4-5-22-2-1">Evaluate each of the following expressions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-22-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="decimal" id="sec_Ch1Sec4-5-22-2-2">
+<li id="sec_Ch1Sec4-5-22-2-2-1">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-22-2-2-1"><span class="process-math">\(\displaystyle \sin^{-1} (- \frac{\sqrt{3}}{2})\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec4-5-22-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-5-22-2-2-2">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-22-2-2-2"><span class="process-math">\(\displaystyle \text{ tan }(\tan^{-1} (- \frac{1}{\sqrt{3}}))\)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec4-5-22-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-5-22-2-2-3">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-22-2-2-3"><span class="process-math">\(\displaystyle \cos^{-1}(\text{ cos }( \frac{5\pi}{4}))\)</span></div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_Ch1Sec4-5-22-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-5-22-2-2-4">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-22-2-2-4"><span class="process-math">\(\displaystyle \sin^{-1} (\text{ cos }( \frac{2\pi}{3}))\)</span></div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec_Ch1Sec4-5-22-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="solutions"><details id="sec_Ch1Sec4-5-22-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<ol class="decimal" id="sec_Ch1Sec4-5-22-3-1">
+<li id="sec_Ch1Sec4-5-22-3-1-1">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-22-3-1-1">Evaluating <span class="process-math">\(\sin^{-1} (-\sqrt{3}/2)\)</span> is equivalent to finding the angle <span class="process-math">\(\theta \)</span> such that <span class="process-math">\(\sin\,\theta =-\sqrt{3}/2\)</span> and <span class="process-math">\(-\pi/2\leq \theta \leq \pi/2.\)</span> The angle <span class="process-math">\(\theta =-\pi/3\)</span> satisfies these two conditions. Therefore, <span class="process-math">\(\sin^{-1} (-\sqrt{3}/2)=-\pi/3.\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec4-5-22-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-5-22-3-1-2">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-22-3-1-2">First we use the fact that <span class="process-math">\(\tan^{-1} (-1/\sqrt{3})=-\pi/6.\)</span> Then <span class="process-math">\(\text{ tan }(\pi/6)=-1/\sqrt{3}.\)</span> Therefore, <span class="process-math">\(\text{ tan }(\tan^{-1} (-1/\sqrt{3}))=-1/\sqrt{3}.\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec4-5-22-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-5-22-3-1-3">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-22-3-1-3">To evaluate <span class="process-math">\(\cos^{-1}(\text{ cos }(5\pi/4)),\)</span> first use the fact that <span class="process-math">\(\text{ cos }(5\pi/4)=-\sqrt{2}/2.\)</span> Then we need to find the angle <span class="process-math">\(\theta \)</span> such that <span class="process-math">\(\text{ cos }(\theta )=-\sqrt{2}/2\)</span> and <span class="process-math">\(0\leq \theta \leq \pi.\)</span> Since <span class="process-math">\(3\pi/4\)</span> satisfies both these conditions, we have <span class="process-math">\(\text{ cos }(\cos^{-1}(5\pi/4))=\text{ cos }(\cos^{-1}(-\sqrt{2}/2))=3\pi/4.\)</span>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_Ch1Sec4-5-22-3-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-5-22-3-1-4">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-22-3-1-4">Since <span class="process-math">\(\text{ cos }(2\pi/3)=-1/2,\)</span> we need to evaluate <span class="process-math">\(\sin^{-1} (-1/2).\)</span> That is, we need to find the angle <span class="process-math">\(\theta \)</span> such that <span class="process-math">\(\sin(\theta )=-1/2\)</span> and <span class="process-math">\(-\pi/2\leq \theta \leq \pi/2.\)</span> Since <span class="process-math">\(-\pi/6\)</span> satisfies both these conditions, we can conclude that <span class="process-math">\(\sin^{-1} (\text{ cos }(2\pi/3))=\sin^{-1} (-1/2)=-\pi/6.\)</span>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec_Ch1Sec4-5-22-3-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 1.4.20.1"><a href="#sec_Ch1Sec4-5-22-3" title="Copy heading and permalink for Solution 1.4.20.1" aria-label="Copy heading and permalink for Solution 1.4.20.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.4.20: Evaluating Expressions Involving Inverse Trigonometric Functions"><a href="#sec_Ch1Sec4-5-22" title="Copy heading and permalink for Example 1.4.20: Evaluating Expressions Involving Inverse Trigonometric Functions" aria-label="Copy heading and permalink for Example 1.4.20: Evaluating Expressions Involving Inverse Trigonometric Functions">🔗</a></div></article></details><article class="note remark-like" id="sec_Ch1Sec4-5-23"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Project: The Maximum Value of a Function.</span>
+</h4>
+<div class="para" id="sec_Ch1Sec4-5-23-2">In many areas of science, engineering, and mathematics, it is useful to know the maximum value a function can obtain, even if we don’t know its exact value at a given instant. For instance, if we have a function describing the strength of a roof beam, we would want to know the maximum weight the beam can support without breaking. If we have a function that describes the speed of a train, we would want to know its maximum speed before it jumps off the rails. Safe design often depends on knowing maximum values.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-23-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch1Sec4-5-23-3">This project describes a simple example of a function with a maximum value that depends on two equation coefficients. We will see that maximum values can depend on several factors other than the independent variable <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec4-5-23-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="sec_Ch1Sec4-5-23-4">
+<li id="sec_Ch1Sec4-5-23-4-1">Consider the graph in <a href="sec_Ch1Sec4.html#CNX_Calc_Figure_01_04_016" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_04_016.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.4.22">Figure 1.4.22</a> of the function <span class="process-math">\(y=\sin\,x+\text{ cos }\,x.\)</span> Describe its overall shape. Is it periodic? How do you know? <figure class="figure figure-like" id="CNX_Calc_Figure_01_04_016"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_04_016.jpg" class="contained" alt='"An image of a graph. The x axis runs from -4 to 4 and the y axis runs from -4 to 4. The graph is of the function “y = sin(x) + cos(x)”, a curved wave function. The graph of the function decreases until it hits the approximate point (-(3pi/4), -1.4), where it increases until the approximate point ((pi/4), 1.4), where it begins to decrease again. The x intercepts shown on this graph of the function are at (-(5pi/4), 0), (-(pi/4), 0), and ((3pi/4), 0). The y intercept is at (0, 1)."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(y=\sin\,x+\text{ cos }\,x.\)</span><div class="autopermalink" data-description="Figure 1.4.22"><a href="#CNX_Calc_Figure_01_04_016" title="Copy heading and permalink for Figure 1.4.22" aria-label="Copy heading and permalink for Figure 1.4.22">🔗</a></div></figcaption></figure> Using a graphing calculator or other graphing device, estimate the <span class="process-math">\(x\)</span>- and <span class="process-math">\(y\)</span>-values of the maximum point for the graph (the first such point where <span class="process-math">\(x\)</span> \gt  0). It may be helpful to express the <span class="process-math">\(x\)</span>-value as a multiple of \pi.<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec4-5-23-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-5-23-4-2">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-23-4-2">Now consider other graphs of the form <span class="process-math">\(y=A\,\sin\,x+B\,\text{ cos }\,x\)</span> for various values of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> Sketch the graph when <span class="process-math">\(A\)</span> = 2 and <span class="process-math">\(B\)</span> = 1, and find the <span class="process-math">\(x\)</span>- and <span class="process-math">\(y\)</span>-values for the maximum point. (Remember to express the <span class="process-math">\(x\)</span>-value as a multiple of \pi, if possible.) Has it moved?</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec4-5-23-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-5-23-4-3">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-23-4-3">Repeat for <span class="process-math">\(A\)</span> = 1, <span class="process-math">\(B\)</span> = 2. Is there any relationship to what you found in part (2)?</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_Ch1Sec4-5-23-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-5-23-4-4">Complete the following table, adding a few choices of your own for <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{:}\)</span> <figure class="table table-like" id="fs-id1170572554057"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Table 1.4.23"><a href="#fs-id1170572554057" title="Copy heading and permalink for Table 1.4.23" aria-label="Copy heading and permalink for Table 1.4.23">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l t b3 r0 l0 t0 lines"><span class="process-math">\(A\)</span></th>
+<th scope="col" class="l t b3 r0 l0 t0 lines"><span class="process-math">\(B\)</span></th>
+<th scope="col" class="l t b3 r0 l0 t0 lines"><span class="process-math">\(x\)</span></th>
+<th scope="col" class="l t b3 r0 l0 t0 lines"><span class="process-math">\(y\)</span></th>
+<th scope="col" class="l t b3 r0 l0 t0 lines"></th>
+<th scope="col" class="l t b3 r0 l0 t0 lines"><span class="process-math">\(A\)</span></th>
+<th scope="col" class="l t b3 r0 l0 t0 lines"><span class="process-math">\(B\)</span></th>
+<th scope="col" class="l t b3 r0 l0 t0 lines"><span class="process-math">\(x\)</span></th>
+<th scope="col" class="l t b3 r0 l0 t0 lines"><span class="process-math">\(y\)</span></th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines">1</td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="l t b0 r0 l0 t0 lines">1</td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">1</td>
+<td class="l t b0 r0 l0 t0 lines">0</td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines">1</td>
+<td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">1</td>
+<td class="l t b0 r0 l0 t0 lines">1</td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines">12</td>
+<td class="l t b0 r0 l0 t0 lines">5</td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">1</td>
+<td class="l t b0 r0 l0 t0 lines">2</td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines">5</td>
+<td class="l t b0 r0 l0 t0 lines">12</td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">2</td>
+<td class="l t b0 r0 l0 t0 lines">1</td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">2</td>
+<td class="l t b0 r0 l0 t0 lines">2</td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">3</td>
+<td class="l t b0 r0 l0 t0 lines">4</td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines">4</td>
+<td class="l t b0 r0 l0 t0 lines">3</td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+<td class="l t b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure><div class="autopermalink" data-description="Item 4"><a href="#sec_Ch1Sec4-5-23-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-5-23-4-5">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-23-4-5">Try to figure out the formula for the <span class="process-math">\(y\)</span>-values.</div>
+<div class="autopermalink" data-description="Item 5"><a href="#sec_Ch1Sec4-5-23-4-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-5-23-4-6">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-23-4-6">The formula for the <span class="process-math">\(x\)</span>-values is a little harder. The most helpful points from the table are <span class="process-math">\((1,1),(1,\sqrt{3}),(\sqrt{3},1).\)</span> (Hint: Consider inverse trigonometric functions.)</div>
+<div class="autopermalink" data-description="Item 6"><a href="#sec_Ch1Sec4-5-23-4-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-5-23-4-7">
+<div class="para" id="p-derived-sec_Ch1Sec4-5-23-4-7">If you found formulas for parts (5) and (6), show that they work together. That is, substitute the <span class="process-math">\(x\)</span>-value formula you found into <span class="process-math">\(y=A\,\sin\,x+B\,\text{ cos }\,x\)</span> and simplify it to arrive at the <span class="process-math">\(y\)</span>-value formula you found.</div>
+<div class="autopermalink" data-description="Item 7"><a href="#sec_Ch1Sec4-5-23-4-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Note 1.4.21: Project: The Maximum Value of a Function"><a href="#sec_Ch1Sec4-5-23" title="Copy heading and permalink for Note 1.4.21: Project: The Maximum Value of a Function" aria-label="Copy heading and permalink for Note 1.4.21: Project: The Maximum Value of a Function">🔗</a></div></article><div class="autopermalink" data-description="Subsection 1.4.3: Inverse Trigonometric Functions"><a href="#sec_Ch1Sec4-5" title="Copy heading and permalink for Subsection 1.4.3: Inverse Trigonometric Functions" aria-label="Copy heading and permalink for Subsection 1.4.3: Inverse Trigonometric Functions">🔗</a></div></section><section class="subsection" id="sec_Ch1Sec4-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Key Concepts</span>
+</h3>
+<ul class="disc" id="sec_Ch1Sec4-6-2">
+<li id="sec_Ch1Sec4-6-2-1">
+<div class="para" id="p-derived-sec_Ch1Sec4-6-2-1">For a function to have an inverse, the function must be one-to-one. Given the graph of a function, we can determine whether the function is one-to-one by using the horizontal line test.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch1Sec4-6-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-6-2-2">
+<div class="para" id="p-derived-sec_Ch1Sec4-6-2-2">If a function is not one-to-one, we can restrict the domain to a smaller domain where the function is one-to-one and then define the inverse of the function on the smaller domain.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch1Sec4-6-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-6-2-3">
+<div class="para" id="p-derived-sec_Ch1Sec4-6-2-3">For a function <span class="process-math">\(f\)</span> and its inverse <span class="process-math">\(f^{-1} ,f(f^{-1} (x))=x\)</span> for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f^{-1} \)</span> and <span class="process-math">\(f^{-1} (f(x))=x\)</span> for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f.\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch1Sec4-6-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-6-2-4">
+<div class="para" id="p-derived-sec_Ch1Sec4-6-2-4">Since the trigonometric functions are periodic, we need to restrict their domains to define the inverse trigonometric functions.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch1Sec4-6-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch1Sec4-6-2-5">
+<div class="para" id="p-derived-sec_Ch1Sec4-6-2-5">The graph of a function <span class="process-math">\(f\)</span> and its inverse <span class="process-math">\(f^{-1} \)</span> are symmetric about the line <span class="process-math">\(y=x.\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch1Sec4-6-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Subsection 1.4.4: Key Concepts"><a href="#sec_Ch1Sec4-6" title="Copy heading and permalink for Subsection 1.4.4: Key Concepts" aria-label="Copy heading and permalink for Subsection 1.4.4: Key Concepts">🔗</a></div></section><section class="subsection" id="sec_Ch1Sec4-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.4.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Key Equations</span>
+</h3>
+<ol class="decimal" id="sec_Ch1Sec4-7-2"><li id="sec_Ch1Sec4-7-2-1">
+<div class="para" id="p-derived-sec_Ch1Sec4-7-2-1">Inverse functions <span class="process-math">\(f^{-1} (f(x))=x \text{ for all } x \text{ in } D,\text{ and } f(f^{-1} (y))=y \text{ for all } y \text{ in } R.\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec4-7-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li></ol>
+<div class="autopermalink" data-description="Subsection 1.4.5: Key Equations"><a href="#sec_Ch1Sec4-7" title="Copy heading and permalink for Subsection 1.4.5: Key Equations" aria-label="Copy heading and permalink for Subsection 1.4.5: Key Equations">🔗</a></div></section><div class="autopermalink" data-description="Section 1.4: Inverse Functions"><a href="#sec_Ch1Sec4" title="Copy heading and permalink for Section 1.4: Inverse Functions" aria-label="Copy heading and permalink for Section 1.4: Inverse Functions">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec_Ch1Sec3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_Ch1Sec5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

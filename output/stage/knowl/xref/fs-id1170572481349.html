@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Compositions of Functions Defined by Formulas.</span>
+</h5>
+<div class="para">Consider the functions <span class="process-math">\(f(x)=x^2+1\)</span> and <span class="process-math">\(g(x)=1/x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572481349-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="decimal" id="fs-id1170572481349-2-2">
+<li>
+<div class="para">Find <span class="process-math">\((g\circ f)(x)\)</span> and state its domain and range.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#fs-id1170572481349-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para">Evaluate <span class="process-math">\((g\circ f)(4),(g\circ f)(-1/2).\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#fs-id1170572481349-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para">Find <span class="process-math">\((f\circ g)(x)\)</span> and state its domain and range.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#fs-id1170572481349-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li>
+<div class="para">Evaluate <span class="process-math">\((f\circ g)(4),(f\circ g)(-1/2).\)</span>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#fs-id1170572481349-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<ol class="decimal" id="fs-id1170572222941-1">
+<li>
+<div class="para">We can find the formula for <span class="process-math">\((g\circ f)(x)\)</span> in two different ways. We could write<div class="displaymath process-math">
+\begin{equation*}
+(g\circ f)(x)=g(f(x))=g(x^2+1)=\frac{1}{x^2+1}.
+\end{equation*}
+</div>Alternatively, we could write<div class="displaymath process-math">
+\begin{equation*}
+(g\circ f)(x)=g(f(x))=\frac{1}{f(x)}=\frac{1}{x^2+1}.
+\end{equation*}
+</div>Since <span class="process-math">\(x^2+1\neq 0\)</span> for all real numbers <span class="process-math">\(x,\)</span> the domain of <span class="process-math">\((g\circ f)(x)\)</span> is the set of all real numbers. Since <span class="process-math">\(0 \lt 1/(x^2+1) \leq 1,\)</span> the range is, at most, the interval <span class="process-math">\((0,1].\)</span> To show that the range is this entire interval, we let <span class="process-math">\(y=1/(x^2+1)\)</span> and solve this equation for <span class="process-math">\(x\)</span> to show that for all <span class="process-math">\(y\)</span> in the interval <span class="process-math">\((0,1],\)</span> there exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(y=1/(x^2+1).\)</span> Solving this equation for <span class="process-math">\(x,\)</span> we see that <span class="process-math">\(x^2+1=1/y,\)</span> which implies that<div class="displaymath process-math">
+\begin{equation*}
+x=\pm\sqrt{\frac{1}{y}-1}.
+\end{equation*}
+</div>If <span class="process-math">\(y\)</span> is in the interval <span class="process-math">\((0,1],\)</span> the expression under the radical is nonnegative, and therefore there exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(1/(x^2+1)=y.\)</span> We conclude that the range of <span class="process-math">\(g\circ f\)</span> is the interval <span class="process-math">\((0,1].\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#fs-id1170572222941-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\((g\circ f)(4)=g(f(4))=g(4^2+1)=g(17)=\frac{1}{17}\)</span>  and <span class="process-math">\((g\circ f)(-\frac{1}{2})=g(f(-\frac{1}{2}))=g((-\frac{1}{2})^2+1)=g(\frac{5}{4})=\frac{4}{5}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#fs-id1170572222941-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para">We can find a formula for <span class="process-math">\((f\circ g)(x)\)</span> in two ways. First, we could write<div class="displaymath process-math">
+\begin{equation*}
+(f\circ g)(x)=f(g(x))=f\left(\frac{1}{x}\right)=\left(\frac{1}{x}\right)^2+1.
+\end{equation*}
+</div>Alternatively, we could write<div class="displaymath process-math">
+\begin{equation*}
+(f\circ g)(x)=f(g(x))=(g(x))^2+1=\left(\frac{1}{x}\right)^2+1.
+\end{equation*}
+</div>The domain of <span class="process-math">\(f\circ g\)</span> is the set of all real numbers <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\neq 0.\)</span> To find the range of <span class="process-math">\(f,\)</span> we need to find all values <span class="process-math">\(y\)</span> for which there exists a real number <span class="process-math">\(x\neq0\)</span> such that<div class="displaymath process-math">
+\begin{equation*}
+\left(\frac{1}{x}\right)^2+1=y.
+\end{equation*}
+</div>Solving this equation for <span class="process-math">\(x,\)</span> we see that we need <span class="process-math">\(x\)</span> to satisfy<div class="displaymath process-math">
+\begin{equation*}
+\left(\frac{1}{x}\right)^2=y-1,
+\end{equation*}
+</div>which simplifies to<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{x}=\pm\sqrt{y-1}.
+\end{equation*}
+</div>Finally, we obtain<div class="displaymath process-math">
+\begin{equation*}
+x=\pm\frac{1}{\sqrt{y-1}}.
+\end{equation*}
+</div>Since <span class="process-math">\(1/\sqrt{y-1}\)</span> is a real number if and only if <span class="process-math">\(y\gt 1,\)</span> the range of <span class="process-math">\(f\)</span> is the set <span class="process-math">\(\{y|y\gt 1\}.\)</span>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#fs-id1170572222941-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\((f\circ g)(4)=f(g(4))=f(\frac{1}{4})=(\frac{1}{4})^2+1=\frac{17}{16}\)</span> <span class="process-math">\((f\circ g)(-\frac{1}{2})=f(g(-\frac{1}{2}))=f(-2)=(-2)^2+1=5\)</span>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#fs-id1170572222941-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 1.1.31.1"><a href="#fs-id1170572222941" title="Copy heading and permalink for Solution 1.1.31.1" aria-label="Copy heading and permalink for Solution 1.1.31.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.1.31: Compositions of Functions Defined by Formulas"><a href="#fs-id1170572481349" title="Copy heading and permalink for Example 1.1.31: Compositions of Functions Defined by Formulas" aria-label="Copy heading and permalink for Example 1.1.31: Compositions of Functions Defined by Formulas">🔗</a></div></article><span class="incontext"><a class="internal" href="sec_Ch1Sec1.html#fs-id1170572481349">in-context</a></span>
+</body>
+</html>

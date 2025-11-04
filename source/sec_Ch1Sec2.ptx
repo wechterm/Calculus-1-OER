@@ -252,7 +252,7 @@
   <description>"An image of a graph. The y axis runs from 0 to 28 and is labeled &#x201C;n, units sold in thousands&#x201D;. The x axis runs from 0 to 28 and is labeled &#x201C;p, price in dollars&#x201D;. The graph is of the function &#x201C;n = -1.04p + 26&#x201D;, which is a decreasing line function that starts at the y intercept point (0, 26). There are 5 points plotted on the graph at (6, 19.4), (8, 18.5), (10, 16.2), (12, 13.8), and (14, 12.2). The points are not on the graph of the function line, but are very close to it. The function has an x intercept at the point (25, 0)."
   </description> </image> <caption>The data collected for the number of items sold as a function of price is roughly linear. We use the linear function <m>n= -1.04 p+ 26 </m> to estimate this function.</caption>
   </figure>
-  <example xml:id="fs-id1170573569241">
+  <example id="fs-id1170573569241">
   <title>Maximizing Revenue</title>
    <statement id="fs-id1170573417595">
   <p id="fs-id1170573417597">A company is interested in predicting the amount of revenue it will receive depending on the price it charges for a particular item. Using the data from <xref ref="fs-id1170573493744"/>, the company arrives at the following quadratic function to model revenue <m>R</m> (in thousands of dollars) as a function of price per item <m>p:</m></p>
