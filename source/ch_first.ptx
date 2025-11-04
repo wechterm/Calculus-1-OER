@@ -14,11 +14,11 @@
   <!-- with organization to include them as separate files.      -->
   <!-- That way it is easy to include the section in a different -->
   <!-- chapter later if you change your mind about the order.    -->
-  <!-- <xi:include href="./sec_Ch1Sec1.ptx" /> -->
+  <xi:include href="./sec_Ch1Sec1.ptx" />
   <xi:include href="./sec_Ch1Sec2.ptx" />
  <xi:include href="./sec_Ch1Sec3.ptx" />
-  <!-- <xi:include href="./sec_Ch1Sec4.ptx" /> -->
-  <!-- <xi:include href="./sec_Ch1Sec5.ptx" /> -->
+  <xi:include href="./sec_Ch1Sec4.ptx" />
+  <xi:include href="./sec_Ch1Sec5.ptx" />
 
   <!-- One or more of the sections of a chapter might be exercises-->
 </chapter>

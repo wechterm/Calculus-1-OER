@@ -208,18 +208,18 @@ var ptx_lunr_docs = [
   "body": "mathematical models "
 },
 {
-  "id": "fs-id1170573493744",
+  "id": "sec_Ch1Sec2-4-6-4",
   "level": "2",
-  "url": "sec_Ch1Sec2.html#fs-id1170573493744",
+  "url": "sec_Ch1Sec2.html#sec_Ch1Sec2-4-6-4",
   "type": "Table",
   "number": "1.1.14",
   "title": "Number of Units Sold <span class=\"process-math\">\\(n\\)<\/span> (in Thousands) as a Function of Price per Unit <span class=\"process-math\">\\(p\\)<\/span> (in Dollars)",
   "body": " Number of Units Sold (in Thousands) as a Function of Price per Unit (in Dollars)                    "
 },
 {
-  "id": "CNX_Calc_Figure_01_02_008",
+  "id": "sec_Ch1Sec2-4-6-8",
   "level": "2",
-  "url": "sec_Ch1Sec2.html#CNX_Calc_Figure_01_02_008",
+  "url": "sec_Ch1Sec2.html#sec_Ch1Sec2-4-6-8",
   "type": "Figure",
   "number": "1.1.15",
   "title": "",
