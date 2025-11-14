@@ -2006,6 +2006,24 @@ var ptx_lunr_docs = [
   "number": "2.1.40",
   "title": "",
   "body": "                0.9  a.  1.1  e.    0.99  b.  1.01  f.    0.999  c.  1.001  g.    0.9999  d.  1.0001  h.     "
+},
+{
+  "id": "sec-section-name",
+  "level": "1",
+  "url": "sec-section-name.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Antiderivatives, Integrals, and the Fundamental Theorem of Calculus",
+  "body": " Antiderivatives, Integrals, and the Fundamental Theorem of Calculus  The derivative of a function is the function defined by the limit , where the domain of includes all values in the domain of for which the limit exists.   A figure generated with TikZ in latex         a=1  f(x)=exp(x\/3)*cos(x)       (a,f(a))                "
+},
+{
+  "id": "fig-tikz",
+  "level": "2",
+  "url": "sec-section-name.html#fig-tikz",
+  "type": "Figure",
+  "number": "2.2.1",
+  "title": "",
+  "body": " A figure generated with TikZ in latex     "
 }
 ]
 
