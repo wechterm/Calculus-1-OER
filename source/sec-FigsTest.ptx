@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-section-name" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Antiderivatives, Integrals, and the Fundamental Theorem of Calculus</title>
+
+  <p> The derivative of a function <m>f(x)</m> is the function <m>f'(x)</m> defined by the limit <me>f'(x)=\lim_{h \rightarrow 0} \frac{f(x+h)-f(x)}{h}</me>, where the domain of <m>f'(x)</m> includes all values <m>x</m> in the domain of <m>f</m> for which the limit exists.    </p>
+
+
+<figure xml:id="fig-tikz">
+  <caption>A figure generated with TikZ in
+  <latex /></caption>
+  <image width="50%" xml:id="poset">
+
+<latex-image >
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = center,
+    clip=false,
+    xlabel = {\(x\)},
+    ylabel = {\(y\)},
+    xmin=-4.5, xmax=4.5,
+    ymin=-2.5, ymax=6.5 ,
+    xtick={-4, -3,...,4}, ytick={-2, -1, ..., 6}, ticklabel style={font=\footnotesize, inner sep=1pt}, xlabel style={right}, ylabel style={above}
+]
+    \draw[CODa, ultra thick, domain={-4}:{4}, variable=\t, smooth, samples=201] plot (axis cs: {\t},{\t+2});
+    \draw[CODa, fill=white, ultra thick] (axis cs: 2, 4)circle (3pt);
+\end{axis}
+\end{tikzpicture}
+</latex-image>
+  </image>
+
+</figure>
+
+
+
+<image width="60%">
+  <prefigure xmlns="https://prefigure.org"
+             label="prefigure-rectangle">
+<diagram dimensions="(300, 300)" margins="5">
+  <definition> a=1 </definition>
+  <definition> f(x)=exp(x/3)*cos(x) </definition>
+  <coordinates bbox="[-4,-4,4,4]">
+    <grid-axes xlabel="x" ylabel="y"/>
+    <graph function="f"/>
+    <tangent-line function="f" point="a"/>
+    <point p="(a, f(a))">
+      <m>(a,f(a))</m>
+    </point>
+  </coordinates>
+   <annotations>
+    <annotation ref="figure"
+                text="The graph of a function and its tangent line at the point a equals 1">
+      <annotation ref="graph-tangent" text="The graph and its tangent line">
+        <annotation ref="graph" text="The graph of the function f" sonify="yes"/>
+        <annotation ref="point" text="The point a comma f of a"/>
+        <annotation ref="tangent" text="The tangent line to the graph of f at the point"/>
+      </annotation>
+    </annotation>
+  </annotations>
+</diagram>
+</prefigure>
+</image>
+
+</section>
