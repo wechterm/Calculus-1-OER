@@ -22,8 +22,8 @@
     ymin=-2.5, ymax=6.5 ,
     xtick={-4, -3,...,4}, ytick={-2, -1, ..., 6}, ticklabel style={font=\footnotesize, inner sep=1pt}, xlabel style={right}, ylabel style={above}
 ]
-    \draw[CODa, ultra thick, domain={-4}:{4}, variable=\t, smooth, samples=201] plot (axis cs: {\t},{\t+2});
-    \draw[CODa, fill=white, ultra thick] (axis cs: 2, 4)circle (3pt);
+    \draw[blue, ultra thick, domain={-4}:{4}, variable=\t, smooth, samples=201] plot (axis cs: {\t},{\t+2});
+    \draw[blue, fill=white, ultra thick] (axis cs: 2, 4)circle (3pt);
 \end{axis}
 \end{tikzpicture}
 </latex-image>

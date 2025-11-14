@@ -26,11 +26,12 @@
   <latex-image-preamble> 
     \usepackage{tikz, pgfplots} 
     \usetikzlibrary{positioning,matrix,arrows} 
-    \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} \usetikzlibrary{decorations.markings} 
+    \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} 
+    \usetikzlibrary{decorations.markings} 
     \usetikzlibrary{shapes.callouts} 
     \usetikzlibrary{decorations.pathreplacing,angles,quotes}
     \usepgfplotslibrary{fillbetween} 
-    \usepackage[dvisvgm]{xcolor}
+    \usepackage{xcolor}
     \definecolor{CODa}{RGB}{101, 176, 66}
     \definecolor{CODb}{RGB}{38, 79, 58}
     \definecolor{CODc}{RGB}{68, 155, 70}
