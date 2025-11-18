@@ -1,5 +1,5 @@
-file:/C:/Users/zinzers/OneDrive%20-%20College%20of%20DuPage/Desktop/CalcBook/Calculus-1-OER/source/main.ptx:18:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element idx, got subtitle
-file:/C:/Users/zinzers/OneDrive%20-%20College%20of%20DuPage/Desktop/CalcBook/Calculus-1-OER/source/main.ptx:8:0:ERROR:RELAXNGV:RELAXNG_ERR_NOTELEM: Expecting an element got text
-file:/C:/Users/zinzers/OneDrive%20-%20College%20of%20DuPage/Desktop/CalcBook/Calculus-1-OER/source/main.ptx:1:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element introduction there
-file:/C:/Users/zinzers/OneDrive%20-%20College%20of%20DuPage/Desktop/CalcBook/Calculus-1-OER/source/main.ptx:1:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element sidebyside, got introduction
-file:/C:/Users/zinzers/OneDrive%20-%20College%20of%20DuPage/Desktop/CalcBook/Calculus-1-OER/source/main.ptx:1:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element proof, got introduction
+/workspaces/Calculus-1-OER/source/main.ptx:18:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element idx, got subtitle
+/workspaces/Calculus-1-OER/source/main.ptx:8:0:ERROR:RELAXNGV:RELAXNG_ERR_NOTELEM: Expecting an element got text
+/workspaces/Calculus-1-OER/source/main.ptx:1:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element introduction there
+/workspaces/Calculus-1-OER/source/main.ptx:1:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element sidebyside, got introduction
+/workspaces/Calculus-1-OER/source/main.ptx:1:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element proof, got introduction
