@@ -57,4 +57,8 @@ We have tried to keep the codespace small (so it starts up quickly and doesn't e
 
 By far the largest space-hog in a PreTeXt authoring environment is SageMath, which is only required if you generate images using sageplots.  By default, SageMath is not installed in a PreTeXt codespace, but it should be easy to install if you need it.  
 
+
 Just open the command palette (`Ctrl+Shift+P` of `F1`) and search for "PreTeXt: Install SageMath".  This will also update the `.devcontainer/devcontainer.json` file so that the next time you create a codespace for this project, it should install automatically.
+
+### Link to Kathy's Edits
+https://dupageedu-my.sharepoint.com/:f:/g/personal/kosrowl_cod_edu/EhARkHyWcw5EiVA9J8XHsvEBBk3_VhTFKORFegU-iqwaRw?e=0AFCGd
