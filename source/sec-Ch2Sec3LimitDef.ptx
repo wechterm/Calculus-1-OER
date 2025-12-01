@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="Ch2Sec3LimitDef">
+    <title>Formal <m>\delta-\varepsilon</m> Definition of a Limit
+    </title>
+    <introduction>
+        <title> Learning Objectives
+        </title>
+        <ol>
+            <li>Describe the <m>\delta-\varepsilon</m> definition of a limit.</li>
+            <li>Apply the <m>\delta-\varepsilon</m> definition to find the limit of a function.</li>
+            <li>Describe the <m>\delta-\varepsilon</m> definitions of one-sided limits</li>     
+        </ol>
+        <p>
+        So far, you’ve built an intuitive understanding of limits using tables, graphs, one-sided behavior, and examples of when limits fail to exist.
+        Now we turn to the formal, precise, mathematical definition of a limit: the <term><m>\delta-\varepsilon</m> (<q>delta epsilon</q>) definition </term>.
+        This is often one of the most challenging definitions in early calculus but learning it pays off. Understanding this definition is the key that opens the door to a better understanding of calculus.
+        </p>
+    </introduction>
+    <subsection xml:id="subsec-coreidea">
+        <title>The Core Idea: Quantifying Closeness</title>
+        <p>
+            The intuitive meaning of a limit is 
+            <me>\text{As }x \text{ gets close to }a\text{, the value of }f(x)\text{ gets close to }L.</me>
+        </p>
+        <p>
+            We translate what "gets close" means in mathematical language. 
+        </p>
+        
+        <paragraphs>
+            <title>Describing closeness in <m>x</m></title>
+            <p>
+                Saying that "<m>x</m> is within <m>\delta</m> units of <m>a</m>" means <m>x</m> is a solution to the inequality
+                <me>
+                    |x-a|\lt\delta    
+                </me>
+                This simply means the distance between <m>x</m> and <m>a</m> is less than <m>\delta</m>
+            </p>
+            <p>
+                Because the limit can ignore the value of <m>f(x)</m> at <m>x=a</m> (see <xref ref="fs-id1170572337207"/>), we can exclude it from the inequality by specifying
+                <me>
+                    0\lt|x-a|\lt \delta
+                </me>
+                This means the distance between <m>x</m> and <m>a</m> is less than <m>\delta</m> <em>and</em> <m>x\ne a</m>
+            </p>
+        </paragraphs>
+        <paragraphs>
+            <title>Describing closeness in <m>y</m></title>
+            <p>
+                Similarly, "<m>f(x)</m> is within <m>\varepsilon</m> units of <m>L</m>" can be written
+                <me>
+                    |f(x)-L|\lt \varepsilon    
+                </me>
+                This means the distance between the <m>y</m>-values of the function and the limit is less than <m>\varepsilon</m>
+            </p>
+        </paragraphs>
+        <paragraphs>
+            <title>Putting these ideas together</title>
+            <p>
+                The formal definition rewrites the informal statement 
+                <me>\text{As }x \text{ gets close to }a\text{, the value of }f(x)\text{ gets close to }L.</me>
+                as 
+                <me>\text{If }0\lt|x-a|\lt\delta\text{, then }|f(x)-L|\lt \varepsilon</me>
+                This is the heart of the <m>\delta-\varepsilon</m> definition.
+            </p>
+            
+        </paragraphs>
+        <definition xml:id="def-limit">
+            <statement>
+                <p>
+                    Let <m>f(x)</m> be defined for all <m>x\ne a</m> over an open interval containing <m>a</m>.  Let <m>L</m> be a real number.  Then
+                    <me>
+                        \lim_{x\to a} f(x)=L
+                    </me>
+                    if, for every <m>\varepsilon\gt 0</m> there exists a <m>\delta\gt 0</m>, such that if <m>0\lt|x-a|\lt\delta</m>, then <m>|f(x)-L|\lt\varepsilon</m>.
+                </p>
+            </statement>
+        </definition>
+        <p>
+            Let's look at <xref ref="deltaepsilondeftable"/>, which breaks down the definition and translates each part.
+        </p>
+        <table xml:id="deltaepsilondeftable">
+            <title>Translation of the <m>\delta-\varepsilon</m> Definition of a Limit</title>
+            <tabular halign="left">
+                <row header="yes">
+                    <cell>Definition</cell>
+                    <cell>Translation</cell>
+                </row>
+                <row>
+                    <cell>For every <m>\varepsilon\gt 0</m></cell>
+                    <cell>For every positive distance <m>\varepsilon</m> from <m>L</m></cell>
+                </row>
+                <row>
+                    <cell>there exists <m>\delta\gt 0</m>,</cell>
+                    <cell>There is a positive distance <m>\delta</m> from <m>a</m></cell>
+                </row>
+                <row>
+                    <cell>such that</cell>
+                    <cell>such that</cell>
+                </row>
+                <row>
+                    <cell>if <m>0\lt |x-a|\lt \delta</m>, then <m>|f(x)-L|\lt \varepsilon</m></cell>
+                    <cell>if <m>x</m> is closer than <m>\delta</m> to <m>a</m> and <m>x\ne a</m>, then <m>f(x)</m> is closer than <m>\varepsilon</m> to <m>L</m></cell>
+                </row>
+            </tabular>
+        </table>
+        <p>
+            We can get a better handle on this definition by looking at the definition geometrically. <xref ref="CNX_Calc_Figure_02_05_001"/> shows possible values of <m>\delta</m> for various choices of <m>\varepsilon</m> for a given function <m>f(x)</m>, a number <m>a</m>, and a limit <m>L</m>.
+        </p>
+        <p>
+            Notice that as we choose smaller values of <m>\varepsilon</m> (the distance between the function and the limit), we can always find a <m>\delta</m> small enough so that we have chosen an <m>x</m> value within <m>\delta</m> of <m>a</m>, then the value of <m>f(x)</m> is within <m>\varepsilon</m> of the limit <m>L</m>.
+        </p>
+        <figure xml:id="CNX_Calc_Figure_02_05_001">
+            <image source="CNX_Calc_Figure_02_05_001.jpg" width="100%">
+                <description>"Three zoomed in images of a function f(x) over the interval "
+                </description>
+            </image> 
+            <caption>These graphs show possible values of <m>\delta</m> given successively smaller values of <m>\varepsilon</m>.<alert>FIX THE IMAGE DESCRIPTION</alert></caption>
+        </figure>
+
+        <insight>
+            <!-- <title></title> -->
+            <p>Visit the following site to experiment with finding values of <m>\delta</m> for selected values of <m>\varepsilon</m>.</p>
+            <ul>
+                <li>
+                    <p halign="center"><url href="https://www.geogebra.org/m/mj2bXA5y" visual="https://www.geogebra.org/m/mj2bXA5y"><m>\delta-\varepsilon</m> Visualizer</url></p>
+                </li>
+            </ul>
+        </insight>
+
+        <example>
+            <title>
+                Proving a Statement About the Limit of a Specific Function
+            </title>
+            <statement>
+                <p>
+                    Prove that <m>\ds\lim_{x\to 1}(2x+1)=3</m>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Let <m>\varepsilon\gt 0</m>. 
+                </p>
+                <p>
+                    Choose <m>\delta=\varepsilon/2</m>.
+                </p>
+                <p>
+                    Assume <m>0\lt|x-1|\lt\delta</m>.
+                </p>
+                <p>
+                    Thus,
+                    <md>
+                        <mrow>|(2x+1)-3|\amp=|2x-2|</mrow>
+                        <mrow>\amp=|2(x-1)|</mrow>
+                        <mrow>\amp=|2||x-1|</mrow>
+                        <mrow>\amp=2|x-1|</mrow>
+                        <mrow>\amp\lt 2\delta\</mrow>
+                        <mrow>\amp=2\cdot\frac{\varepsilon}{2}</mrow>
+                        <mrow>\amp=\varepsilon</mrow>
+                    </md>
+                </p>
+                <p>
+                    Therefore, <m>\ds\lim_{x\to 1}(2x+1)=3</m>
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    We started with <m>|(2x+1)-3|</m> and used our assumption <m>0\lt|x-1|\lt\delta</m> in a key part of the chain of inequalities to get <m>|(2x+1)-3|</m> to be less than <m>\varepsilon</m>.  
+                </p>
+                <p>
+                    We could just as easily have manipulated the assumed inequality <m>0\le|x-1|\lt \delta</m> to arrive at <m>|(2x+1)-3|\lt\varepsilon</m> as follows:
+                    <md>
+                        <mrow>0\lt|x-1|\lt\delta \amp \Rightarrow|x-1|\lt\delta</mrow>
+                        <mrow> \amp \Rightarrow -\delta\lt x-1\lt\delta</mrow>
+                        <mrow> \amp \Rightarrow -\frac{\varepsilon}{2}\lt x-1\lt\frac{\varepsilon}{2}</mrow>
+                        <mrow> \amp \Rightarrow -\varepsilon\lt 2x-2\lt \varepsilon</mrow>
+                        <mrow> \amp \Rightarrow |2x-2|\lt\varepsilon</mrow>
+                        <mrow> \amp \Rightarrow |(2x+1)-3|\lt\varepsilon</mrow>
+                    </md>
+                </p>
+                <p>
+                    Therefore, <m>\ds\lim_{x\to1}(2x+1)=3</m>. (Having completed the proof, we state what we have accomplished.)
+                </p>
+            </solution>
+            
+        </example>
+        <note>
+            <title>Problem-Solving Strategy: Proving that <m>\ds \lim_{x\to a}f(x)=L</m> for a Specific Function <m>f(x)</m></title>
+            <ol>
+                <li>
+                    <p>
+                        Let's begin the proof with the following statement: Let <m>\varepsilon\gt 0</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Next we need to obtain a value for <m>\delta</m>. After we have obtained this value, we make the following statement, filling in the blank with our choice of <m>\delta</m>: Choose <m>\delta=\rule{20pt}{.5pt}</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The next statement in the proof should be (at this point, we fill in our given value for <m>a</m>): Assume <m>0\lt |x-a\lt\delta</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Next, based on this assumption, we need to show that <m>|f(x)-L|\lt \varepsilon</m>, where <m>f(x)</m> and <m>L</m> are our function <m>f(x)</m> and our limit <m>L</m>.  At some point, we need to use <m>0\lt |x-a|\lt \delta</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        We conclude our proof with the statement: Therefore, <m>\ds \lim_{x\to a}f(x)=L</m>.
+                    </p>
+                </li>
+            </ol>>
+                
+            
+        </note>
+        <example>
+            <title>Proving a Statement about a Limit</title>
+            <statement>
+                <p>
+                    Complete the proof that <m>\ds\lim_{x\to -1}(4x+1)=-3</m> by filling in the blanks.
+                </p>
+                <p>
+                    Let <m>\rule{20pt}{.5pt}</m>.
+                </p>
+                <p>
+                    Choose <m>\delta=\rule{20pt}{.5pt}</m>.
+                </p>
+                <p>
+                    Assume <m>0\lt |x-\rule{20pt}{.5pt}|\lt \delta</m>.
+                </p>
+                <p>
+                    Thus, <m>|\rule{20pt}{.5pt}-\rule{20pt}{.5pt}|\lt\rule{20pt}{.5pt}=\varepsilon</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    We begin by filling in the blanks where the choices are specified by the definition.  Thus we have
+                </p>
+                <p>
+                    Let <m>\varepsilon\gt 0</m>.
+                </p>
+                <p>
+                    Choose <m>\delta=\rule{20pt}{.5pt}</m>.
+                </p>
+                <p>
+                    Assume <m>0\lt |x-(-1)|\lt \delta</m> (or equivalently, <m>0\lt |x+1|\lt \delta</m>).
+                </p>
+                <p>
+                    Thus, <m>|(4x+1)-(-3)|=|4x+4|=|4||x+1|\lt 4\delta\rule{20pt}{.5pt}\varepsilon</m>.
+                </p>
+                <p>
+                    Focusing on the final line of the proof, we see that we should choose <m>\delta=\frac{\varepsilon}{4}</m>.
+                </p>
+                <p>
+                    We now complete the final write-up of the proof:
+                </p>
+                <p>
+                    Let <m>\varepsilon\gt 0</m>.
+                </p>
+                <p>
+                    Choose <m>\delta=\frac{\varepsilon}{4}</m>.
+                </p>
+                <p>
+                    Assume <m>0\lt |x-(-1)|\lt \delta</m> (or equivalently, <m>0\lt|x+1|\lt\delta</m>).
+                </p>
+                <p>
+                    Thus, <m>|(4x+1)-(-3)|=|4x+4|=|4||x+1|\lt 4\delta=4(\varepsilon/4)=\varepsilon</m>
+                </p>
+            </solution>
+        </example>
+        <example xml:id="geometriclimitproof">
+            <title>Proving a Statement about the Limit of a Specific Function (Geometric Approach)</title>
+            <statement>
+                <p>
+                    Prove that <m>\ds\lim_{x\to 2}x^2=4</m>
+                </p>
+            </statement>
+            <solution>
+                <ol>
+                    <li>
+                        <p>
+                            Let <m>\varepsilon\gt 0</m>. The first part of the definition begins <q>For every <m>\varepsilon\gt 0</m>,</q> so we must prove that whatever follows is true no matter what positive value of <m>\varepsilon</m> is chosen.  By stating <q>Let <m>\varepsilon\gt 0</m>,</q> we signal our intent to do so.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Without loss of generality, assume <m>\varepsilon\le 4</m>.  Two questions present themselves: Why do we want <m>\varepsilon\le 4</m> and why is it okay to make this assumption?  
+                        </p>
+                        <p>
+                            In answer to the first question: Later on, in the process of solving for <m>\delta</m>, we will discover that <m>\delta</m> involves the quantity <m>\sqrt{4-\varepsilon}</m>.  Consequently, we need <m>\varepsilon\le 4</m>.
+                        </p>
+                        <p>
+                            In answer to the second question: If we can find <m>\delta\gt 0</m> that <q>works</q> for <m>\varepsilon\le 4</m>, then it will <q>work</q> for any <m>\varepsilon \gt 4</m> as well.  Keep in mind that, although it is always okay to put an upper bound on <m>\varepsilon</m>, it is never okay to put a lower bound (other than zero) on <m>\varepsilon</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Choose <m>\delta=\min\left\{2-\sqrt{4-\varepsilon}, \sqrt{4+\varepsilon}-2\right\}</m>. <xref ref="CNX_Calc_Figure_02_05_003"/> shows how we made this choice of <m>\delta</m>.
+                        </p>
+                        <figure xml:id="CNX_Calc_Figure_02_05_003">
+                            <image source="CNX_Calc_Figure_02_05_003.jpg" width="100%">
+                            <description>"Three zoomed in images of a function f(x) over the interval"
+                            </description>
+                            </image> 
+                            <caption>This graph shows how we find <m>\delta</m> geometrically for a given <m>\varepsilon</m> for the proof in <xref ref="geometriclimitproof"/>.<alert>FIX THE IMAGE DESCRIPTION</alert></caption>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>
+                            We must show: If <m>0\lt|x-2|\lt\delta</m>, then <m>|x^2-4|\lt \varepsilon</m>, so we must begin by assuming 
+                            <me>
+                            0\lt|x-2|\lt \delta    
+                            </me>
+                            We don't really need <m>0\lt|x-2|</m> (in other words, <m>x\ne 2</m>) for this proof.  Since <m>0\lt |x-2|\lt \delta\Rightarrow|x-2|\lt \delta</m>, it is okay to drop <m>0\lt |x-2|</m>.
+                            <me>
+                                |x-2|\lt \delta
+                            </me>
+                            Hence,
+                            <me>
+                                -\delta\lt x-2\lt\delta
+                            </me>
+                            
+                        </p>
+                        <p>
+                            Recall that <m>\delta=\min\left\{2-\sqrt{4-\varepsilon}, \sqrt{4+\varepsilon}-2\right\}</m>.  Thus, <m>\delta\le 2-\sqrt{4-\varepsilon}</m> and consequently <m>-(2-\sqrt{4-\varepsilon})\le -\delta</m>.  We also use <m>\delta\le \sqrt{4+\varepsilon}-2</m> here.
+                        </p>
+                        <p>
+                            We might ask at this point: Why did we substitute <m>2-\sqrt{4-\varepsilon}</m> for <m>\delta</m> on the left-hand side of the inequality and <m>\sqrt{4+\varepsilon}-2</m> on the right-hand side of the inequality?  If we look at <xref ref="CNX_Calc_Figure_02_05_003"/>, we see that <m>2-\sqrt{4-\varepsilon}</m> corresponds to the distance on the left of <m>2</m> on the <m>x</m>-axis and <m>\sqrt{4+\varepsilon}-2</m> corresponds to the distance on the right.  Thus,
+                            <me>
+                                -(2-\sqrt{4-\varepsilon})\le -\delta\lt x-2\lt\delta\le\sqrt{4+\varepsilon}-2
+                            </me>
+                        </p>
+                        <p>
+                            We simplify the expression on the left:
+                            <me>
+                                -2+\sqrt{4-\varepsilon}\lt x-2\lt \sqrt{4+\varepsilon}-2
+                            </me>
+                            Then, we add <m>2</m> to all parts of the inequality:
+                            <me>
+                                \sqrt{4-\varepsilon}\lt x\lt\sqrt{4+\varepsilon}
+                            </me>
+                            We square all parts of the inequality.  It is okay to do so, since all parts of the inequality are positive:
+                            <me>
+                                4-\varepsilon\lt x^2\lt 4+\varepsilon
+                            </me>
+                            We subtract <m>4</m> from all parts of the inequality:
+                            <me>
+                                -\varepsilon\lt x^2-4\lt \varepsilon
+                            </me>
+                            Last,
+                            <me>
+                                |x^2-4|\lt \varepsilon
+                            </me>
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Therefore,
+                            <me>
+                                \lim_{x\to 2}x^2=4
+                            </me>
+                            
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+            
+        </example>
+        <example>
+            <title>Proving a Statement about the Nonexistence of a Limit</title>
+            <statement>
+                <p>
+                    Let 
+                    <me>
+                    f(x)=\begin{cases}-1,&amp; x\lt 0\\1,&amp;x\ge 0\end{cases}     
+                    </me>
+                    Prove that <m>\ds\lim_{x\to 0}f(x)</m> does not exist.
+                    
+                </p>
+                </statement>
+                <solution>
+                    <p>
+                        One way to prove that a limit does not exist is to show that, for any possible value <m>L</m> one might think the limit equals, one can find an <m>\varepsilon\gt 0</m> such that no possible <m>\delta\gt 0</m> works in the <m>\varepsilon-\delta</m> definition. 
+                    </p>
+                    <p>
+                        Suppose a person think the limit exists, and <m>\ds\lim_{x\to 0}f(x)=L</m> (some common values of <m>L</m> might be <m>1</m> or <m>-1</m>, but we'll stick with a generic real number). Let <m>\varepsilon=0.5</m>.  We show that there is no possible <m>\delta\gt 0</m> that would satisfy <xref ref="def-limit"/>.
+                    </p>
+                    <p>
+                        The inequality <m>|f(x)-L|\lt 0.5</m> can be written as 
+                        <me>
+                        L-.5\lt f(x)\lt L+0.5 
+                        </me>
+                        For any <m>\delta\gt 0</m>, the solution to <m>|x-0|\lt \delta</m> are <m>x-</m>values <m>-\delta\lt x\lt\delta</m>.  This interval contains both positive and negative numbers.  When <m>x</m> is positive, <m>f(x)=1</m> and when <m>x</m> is negative, <m>f(x)=-1</m>.  Since these two values of <m>f(x)</m> are <m>2</m> units, apart, it would be impossible for them <em>both</em> to be within <m>0.5</m> of any number <m>L</m>. 
+                    </p>
+                    <p>
+                        That is, if 
+                        <me>L-0.5\lt -1\lt L+0.5</me>
+                        then it can't also be true that
+                        <me>
+                            L-0.5\lt 1\lt L+0.5,
+                        </me>
+                        and vice-versa. Any <m>\delta\gt 0</m> will result in an interval with both positive and negative <m>x-</m>values, thus no value of <m>\delta\gt 0</m> can satisfy the <m>\delta-\varepsilon</m> defintion.
+                    </p>
+                </solution>
+
+            
+        </example>
+    </subsection>
+    <subsection xml:id="subsec-onesidedlimit">
+        <title>One-Sided Limits</title>
+        <p>
+            Just as we first gained an intuitive understanding of limits and then moved on to a more rigorous definition of limits, we now revisit one-sided limits through that same lens.  To do this, we modify the <m>\delta-\varepsilon</m> definition of a limit to give formal <m>\delta-\varepsilon</m> definitions for limits from the left and from the right at a point.
+        </p>
+        <p>
+            These definitions require only slight modifications from the definition of the limit.  In the definition of the limit from the right, the inequality <m>0\lt x-a\lt \delta</m> replaces <m>0\lt |x-a|\lt \delta</m>, which ensures that we only consider values of <m>x</m> that are greater than (to the right of) <m>a</m>.
+        </p>
+        <p>
+            Similarly, in the definition of the limit from the left, the inequality <m>-\delta\lt x-a\le 0</m> replaces <m>0\lt|x-a|\lt \delta</m>, which ensures that we only consider values of <m>x</m> that are less than (to the left of) <m>a</m>.
+        </p>
+        <definition xml:id="def-onesidedlimitdef">
+            <statement>
+                <paragraphs>
+                    <title>Limit from the Right:</title>
+                    <p>
+                        Let <m>f(x)</m> be defined over an open interval of the form <m>(a,b)</m> where <m>a\lt b</m>.  Then,
+                        <me>
+                            \lim_{x\to a^+}f(x)=L
+                        </me>
+                        if for every <m>\varepsilon\gt 0</m>, there exists a <m>\delta\gt 0</m> such that if <m>0\lt x-a\lt \delta</m>, then <m>|f(x)-L|\lt\varepsilon</m>
+                    </p>
+                </paragraphs>
+                <paragraphs>
+                    <title>Limit from the Left</title>
+                    <p>
+                        Let <m>f(x)</m> be defined over an open interval of the form <m>(b,a)</m> where <m>b\lt a</m>.  Then,
+                        <me>
+                            \lim_{x\to a^-}f(x)=L
+                        </me>
+                        if for every <m>\varepsilon\gt 0</m>, there exists a <m>\delta\gt 0</m> such that if <m>-\delta\lt x-a\lt 0</m>, then <m>|f(x)-L|\lt \varepsilon</m>.
+                    </p>
+                </paragraphs>
+            </statement>
+        </definition>
+        <example xml:id="ex-onesidedproof">
+            <title>Proving a Statement about a Limit From the Right</title>
+            <statement>
+                <p>
+                    Prove that <m>\ds\lim_{x\to 4^+}\sqrt{x-4}=0</m>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Let <m>\varepsilon\gt 0</m>.
+                </p>
+                <p>
+                    Choose <m>\delta=\varepsilon^2</m>.  Since we ultimately want <m>|\sqrt{x-4}-0|\lt \varepsilon</m>, we manipulate this inequality to get <m>\sqrt{x-4}\lt \varepsilon</m>, or equivalently, <m>0\lt x-4\lt \varepsilon^2</m>, making <m>\delta=\varepsilon^2</m> a clear choice.  
+                </p>
+                <p>
+                    We may also determine <m>\delta</m> geometrically as shown in <xref ref="CNX_Calc_Figure_02_05_004"/>
+                </p>
+                <figure xml:id="CNX_Calc_Figure_02_05_004">
+                        <image source="CNX_Calc_Figure_02_05_004.jpg" width="100%">
+                            <description>"Three zoomed in images of a function f(x) over the interval" ></description>
+                        </image> 
+                        <caption>This graph shows how we find <m>\delta</m>  for the proof in <xref ref="ex-onesidedproof"/>.<alert>FIX THE IMAGE DESCRIPTION</alert></caption>
+                </figure>
+                <p>
+                    Assume <m>0\lt x-4\lt \delta</m>.  Thus, <m>0\lt x-4\lt \varepsilon^2</m>.  Hence, <m>0\lt \sqrt{x-4}\lt \varepsilon</m>.  Finally, <m>|\sqrt{x-4}-0|\lt \varepsilon</m>.
+                </p>
+                <p>
+                    Therefore, <m>\ds\lim_{x\to 4^+}\sqrt{x-4}=0</m>.
+                </p>
+            </solution>
+        </example>
+        <p>
+            We do not normally use the <m>\delta-\varepsilon</m> definition to compute everyday limits like the ones you've seen earlier.  Instead, the definition is used to prove the limit laws you'll see in the next section.  Once these theorems are proven, you can use them freely<mdash/>without going back to <m>\delta</m> and <m>\varepsilon</m> each time.
+        </p>
+    </subsection>
+</section>
