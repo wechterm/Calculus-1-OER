@@ -2008,22 +2008,121 @@ var ptx_lunr_docs = [
   "body": "                0.9  a.  1.1  e.    0.99  b.  1.01  f.    0.999  c.  1.001  g.    0.9999  d.  1.0001  h.     "
 },
 {
-  "id": "sec-section-name",
+  "id": "Ch2Sec3LimitDef",
   "level": "1",
-  "url": "sec-section-name.html",
+  "url": "Ch2Sec3LimitDef.html",
   "type": "Section",
   "number": "2.2",
-  "title": "Antiderivatives, Integrals, and the Fundamental Theorem of Calculus",
-  "body": " Antiderivatives, Integrals, and the Fundamental Theorem of Calculus  The derivative of a function is the function defined by the limit , where the domain of includes all values in the domain of for which the limit exists.   A figure generated with TikZ in latex         a=1  f(x)=exp(x\/3)*cos(x)       (a,f(a))                "
+  "title": "Formal <span class=\"process-math\">\\(\\delta-\\varepsilon\\)<\/span> Definition of a Limit",
+  "body": " Formal Definition of a Limit   Learning Objectives   Describe the definition of a limit.  Apply the definition to find the limit of a function.  Describe the definitions of one-sided limits   So far, you’ve built an intuitive understanding of limits using tables, graphs, one-sided behavior, and examples of when limits fail to exist. Now we turn to the formal, precise, mathematical definition of a limit: the ( delta epsilon ) definition . This is often one of the most challenging definitions in early calculus but learning it pays off. Understanding this definition is the key that opens the door to a better understanding of calculus.    The Core Idea: Quantifying Closeness  The intuitive meaning of a limit is   We translate what \"gets close\" means in mathematical language.   Describing closeness in  Saying that \" is within units of \" means is a solution to the inequality This simply means the distance between and is less than   Because the limit can ignore the value of at (see ), we can exclude it from the inequality by specifying This means the distance between and is less than  and      Describing closeness in  Similarly, \" is within units of \" can be written This means the distance between the -values of the function and the limit is less than     Putting these ideas together  The formal definition rewrites the informal statement as This is the heart of the definition.     Let be defined for all over an open interval containing . Let be a real number. Then if, for every there exists a , such that if , then .    Let's look at , which breaks down the definition and translates each part.   Translation of the Definition of a Limit    Definition  Translation    For every  For every positive distance from    there exists ,  There is a positive distance from    such that  such that    if , then  if is closer than to and , then is closer than to     We can get a better handle on this definition by looking at the definition geometrically. shows possible values of for various choices of for a given function , a number , and a limit .  Notice that as we choose smaller values of (the distance between the function and the limit), we can always find a small enough so that we have chosen an value within of , then the value of is within of the limit .    \"Three zoomed in images of a function f(x) over the interval \"   These graphs show possible values of given successively smaller values of . FIX THE IMAGE DESCRIPTION     Visit the following site to experiment with finding values of for selected values of .    Visualizer      Proving a Statement About the Limit of a Specific Function   Prove that     Let .  Choose .  Assume .  Thus,   Therefore,     We started with and used our assumption in a key part of the chain of inequalities to get to be less than .  We could just as easily have manipulated the assumed inequality to arrive at as follows:   Therefore, . (Having completed the proof, we state what we have accomplished.)     Problem-Solving Strategy: Proving that for a Specific Function    Let's begin the proof with the following statement: Let .    Next we need to obtain a value for . After we have obtained this value, we make the following statement, filling in the blank with our choice of : Choose     The next statement in the proof should be (at this point, we fill in our given value for ): Assume .    Next, based on this assumption, we need to show that , where and are our function and our limit . At some point, we need to use .    We conclude our proof with the statement: Therefore, .   >   Proving a Statement about a Limit   Complete the proof that by filling in the blanks.  Let .  Choose .  Assume .  Thus, .    We begin by filling in the blanks where the choices are specified by the definition. Thus we have  Let .  Choose .  Assume (or equivalently, ).  Thus, .  Focusing on the final line of the proof, we see that we should choose .  We now complete the final write-up of the proof:  Let .  Choose .  Assume (or equivalently, ).  Thus,      Proving a Statement about the Limit of a Specific Function (Geometric Approach)   Prove that       Let . The first part of the definition begins For every , so we must prove that whatever follows is true no matter what positive value of is chosen. By stating Let , we signal our intent to do so.    Without loss of generality, assume . Two questions present themselves: Why do we want and why is it okay to make this assumption?  In answer to the first question: Later on, in the process of solving for , we will discover that involves the quantity . Consequently, we need .  In answer to the second question: If we can find that works for , then it will work for any as well. Keep in mind that, although it is always okay to put an upper bound on , it is never okay to put a lower bound (other than zero) on     Choose . shows how we made this choice of .    \"Three zoomed in images of a function f(x) over the interval\"   This graph shows how we find geometrically for a given for the proof in . FIX THE IMAGE DESCRIPTION     We must show: If , then , so we must begin by assuming We don't really need (in other words, ) for this proof. Since , it is okay to drop . Hence,   Recall that . Thus, and consequently . We also use here.  We might ask at this point: Why did we substitute for on the left-hand side of the inequality and on the right-hand side of the inequality? If we look at , we see that corresponds to the distance on the left of on the -axis and corresponds to the distance on the right. Thus,   We simplify the expression on the left: Then, we add to all parts of the inequality: We square all parts of the inequality. It is okay to do so, since all parts of the inequality are positive: We subtract from all parts of the inequality: Last,     Therefore,        Proving a Statement about the Nonexistence of a Limit   Let Prove that does not exist.    One way to prove that a limit does not exist is to show that, for any possible value one might think the limit equals, one can find an such that no possible works in the definition.  Suppose a person think the limit exists, and (some common values of might be or , but we'll stick with a generic real number). Let . We show that there is no possible that would satisfy .  The inequality can be written as For any , the solution to are values . This interval contains both positive and negative numbers. When is positive, and when is negative, . Since these two values of are units, apart, it would be impossible for them both to be within of any number .  That is, if then it can't also be true that and vice-versa. Any will result in an interval with both positive and negative values, thus no value of can satisfy the defintion.      One-Sided Limits  Just as we first gained an intuitive understanding of limits and then moved on to a more rigorous definition of limits, we now revisit one-sided limits through that same lens. To do this, we modify the definition of a limit to give formal definitions for limits from the left and from the right at a point.  These definitions require only slight modifications from the definition of the limit. In the definition of the limit from the right, the inequality replaces , which ensures that we only consider values of that are greater than (to the right of) .  Similarly, in the definition of the limit from the left, the inequality replaces , which ensures that we only consider values of that are less than (to the left of) .     Limit from the Right:  Let be defined over an open interval of the form where . Then, if for every , there exists a such that if , then     Limit from the Left  Let be defined over an open interval of the form where . Then, if for every , there exists a such that if , then .      Proving a Statement about a Limit From the Right   Prove that     Let .  Choose . Since we ultimately want , we manipulate this inequality to get , or equivalently, , making a clear choice.  We may also determine geometrically as shown in     \"Three zoomed in images of a function f(x) over the interval\" >   This graph shows how we find for the proof in . FIX THE IMAGE DESCRIPTION   Assume . Thus, . Hence, . Finally, .  Therefore, .    We do not normally use the definition to compute everyday limits like the ones you've seen earlier. Instead, the definition is used to prove the limit laws you'll see in the next section. Once these theorems are proven, you can use them freely without going back to and each time.   "
 },
 {
-  "id": "fig-tikz",
+  "id": "Ch2Sec3LimitDef-2-3",
   "level": "2",
-  "url": "sec-section-name.html#fig-tikz",
-  "type": "Figure",
+  "url": "Ch2Sec3LimitDef.html#Ch2Sec3LimitDef-2-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "( delta epsilon ) definition "
+},
+{
+  "id": "def-limit",
+  "level": "2",
+  "url": "Ch2Sec3LimitDef.html#def-limit",
+  "type": "Definition",
   "number": "2.2.1",
   "title": "",
-  "body": " A figure generated with TikZ in latex     "
+  "body": "  Let be defined for all over an open interval containing . Let be a real number. Then if, for every there exists a , such that if , then .   "
+},
+{
+  "id": "deltaepsilondeftable",
+  "level": "2",
+  "url": "Ch2Sec3LimitDef.html#deltaepsilondeftable",
+  "type": "Table",
+  "number": "2.2.2",
+  "title": "Translation of the <span class=\"process-math\">\\(\\delta-\\varepsilon\\)<\/span> Definition of a Limit",
+  "body": " Translation of the Definition of a Limit    Definition  Translation    For every  For every positive distance from    there exists ,  There is a positive distance from    such that  such that    if , then  if is closer than to and , then is closer than to    "
+},
+{
+  "id": "CNX_Calc_Figure_02_05_001",
+  "level": "2",
+  "url": "Ch2Sec3LimitDef.html#CNX_Calc_Figure_02_05_001",
+  "type": "Figure",
+  "number": "2.2.3",
+  "title": "",
+  "body": "  \"Three zoomed in images of a function f(x) over the interval \"   These graphs show possible values of given successively smaller values of . FIX THE IMAGE DESCRIPTION  "
+},
+{
+  "id": "subsec-coreidea-13",
+  "level": "2",
+  "url": "Ch2Sec3LimitDef.html#subsec-coreidea-13",
+  "type": "Insight",
+  "number": "2.2.4",
+  "title": "",
+  "body": "  Visit the following site to experiment with finding values of for selected values of .    Visualizer    "
+},
+{
+  "id": "subsec-coreidea-14",
+  "level": "2",
+  "url": "Ch2Sec3LimitDef.html#subsec-coreidea-14",
+  "type": "Example",
+  "number": "2.2.5",
+  "title": "Proving a Statement About the Limit of a Specific Function.",
+  "body": " Proving a Statement About the Limit of a Specific Function   Prove that     Let .  Choose .  Assume .  Thus,   Therefore,     We started with and used our assumption in a key part of the chain of inequalities to get to be less than .  We could just as easily have manipulated the assumed inequality to arrive at as follows:   Therefore, . (Having completed the proof, we state what we have accomplished.)   "
+},
+{
+  "id": "subsec-coreidea-15",
+  "level": "2",
+  "url": "Ch2Sec3LimitDef.html#subsec-coreidea-15",
+  "type": "Note",
+  "number": "2.2.6",
+  "title": "Problem-Solving Strategy: Proving that <span class=\"process-math\">\\(\\ds \\lim_{x\\to a}f(x)=L\\)<\/span> for a Specific Function <span class=\"process-math\">\\(f(x)\\)<\/span>.",
+  "body": " Problem-Solving Strategy: Proving that for a Specific Function    Let's begin the proof with the following statement: Let .    Next we need to obtain a value for . After we have obtained this value, we make the following statement, filling in the blank with our choice of : Choose     The next statement in the proof should be (at this point, we fill in our given value for ): Assume .    Next, based on this assumption, we need to show that , where and are our function and our limit . At some point, we need to use .    We conclude our proof with the statement: Therefore, .   > "
+},
+{
+  "id": "subsec-coreidea-16",
+  "level": "2",
+  "url": "Ch2Sec3LimitDef.html#subsec-coreidea-16",
+  "type": "Example",
+  "number": "2.2.7",
+  "title": "Proving a Statement about a Limit.",
+  "body": " Proving a Statement about a Limit   Complete the proof that by filling in the blanks.  Let .  Choose .  Assume .  Thus, .    We begin by filling in the blanks where the choices are specified by the definition. Thus we have  Let .  Choose .  Assume (or equivalently, ).  Thus, .  Focusing on the final line of the proof, we see that we should choose .  We now complete the final write-up of the proof:  Let .  Choose .  Assume (or equivalently, ).  Thus,    "
+},
+{
+  "id": "geometriclimitproof",
+  "level": "2",
+  "url": "Ch2Sec3LimitDef.html#geometriclimitproof",
+  "type": "Example",
+  "number": "2.2.8",
+  "title": "Proving a Statement about the Limit of a Specific Function (Geometric Approach).",
+  "body": " Proving a Statement about the Limit of a Specific Function (Geometric Approach)   Prove that       Let . The first part of the definition begins For every , so we must prove that whatever follows is true no matter what positive value of is chosen. By stating Let , we signal our intent to do so.    Without loss of generality, assume . Two questions present themselves: Why do we want and why is it okay to make this assumption?  In answer to the first question: Later on, in the process of solving for , we will discover that involves the quantity . Consequently, we need .  In answer to the second question: If we can find that works for , then it will work for any as well. Keep in mind that, although it is always okay to put an upper bound on , it is never okay to put a lower bound (other than zero) on     Choose . shows how we made this choice of .    \"Three zoomed in images of a function f(x) over the interval\"   This graph shows how we find geometrically for a given for the proof in . FIX THE IMAGE DESCRIPTION     We must show: If , then , so we must begin by assuming We don't really need (in other words, ) for this proof. Since , it is okay to drop . Hence,   Recall that . Thus, and consequently . We also use here.  We might ask at this point: Why did we substitute for on the left-hand side of the inequality and on the right-hand side of the inequality? If we look at , we see that corresponds to the distance on the left of on the -axis and corresponds to the distance on the right. Thus,   We simplify the expression on the left: Then, we add to all parts of the inequality: We square all parts of the inequality. It is okay to do so, since all parts of the inequality are positive: We subtract from all parts of the inequality: Last,     Therefore,      "
+},
+{
+  "id": "subsec-coreidea-18",
+  "level": "2",
+  "url": "Ch2Sec3LimitDef.html#subsec-coreidea-18",
+  "type": "Example",
+  "number": "2.2.10",
+  "title": "Proving a Statement about the Nonexistence of a Limit.",
+  "body": " Proving a Statement about the Nonexistence of a Limit   Let Prove that does not exist.    One way to prove that a limit does not exist is to show that, for any possible value one might think the limit equals, one can find an such that no possible works in the definition.  Suppose a person think the limit exists, and (some common values of might be or , but we'll stick with a generic real number). Let . We show that there is no possible that would satisfy .  The inequality can be written as For any , the solution to are values . This interval contains both positive and negative numbers. When is positive, and when is negative, . Since these two values of are units, apart, it would be impossible for them both to be within of any number .  That is, if then it can't also be true that and vice-versa. Any will result in an interval with both positive and negative values, thus no value of can satisfy the defintion.   "
+},
+{
+  "id": "def-onesidedlimitdef",
+  "level": "2",
+  "url": "Ch2Sec3LimitDef.html#def-onesidedlimitdef",
+  "type": "Definition",
+  "number": "2.2.11",
+  "title": "",
+  "body": "   Limit from the Right:  Let be defined over an open interval of the form where . Then, if for every , there exists a such that if , then     Limit from the Left  Let be defined over an open interval of the form where . Then, if for every , there exists a such that if , then .    "
+},
+{
+  "id": "ex-onesidedproof",
+  "level": "2",
+  "url": "Ch2Sec3LimitDef.html#ex-onesidedproof",
+  "type": "Example",
+  "number": "2.2.12",
+  "title": "Proving a Statement about a Limit From the Right.",
+  "body": " Proving a Statement about a Limit From the Right   Prove that     Let .  Choose . Since we ultimately want , we manipulate this inequality to get , or equivalently, , making a clear choice.  We may also determine geometrically as shown in     \"Three zoomed in images of a function f(x) over the interval\" >   This graph shows how we find for the proof in . FIX THE IMAGE DESCRIPTION   Assume . Thus, . Hence, . Finally, .  Therefore, .   "
 }
 ]
 
