@@ -1774,11 +1774,245 @@ var ptx_lunr_docs = [
   "body": "  Evaluate       Use the definition of and simplify.   "
 },
 {
+  "id": "sec_Ch2Sec1",
+  "level": "1",
+  "url": "sec_Ch2Sec1.html",
+  "type": "Section",
+  "number": "2.1",
+  "title": "A Preview of Calculus",
+  "body": " A Preview of Calculus   Introduction  Don't forget the photo    Science fiction writers often imagine spaceships that can travel to far-off planets in distant galaxies. However, back in 1905, Albert Einstein showed that a limit exists to how fast any object can travel. The problem is that the faster an object moves, the more mass it attains (in the form of energy), according to the equation   where is the object's mass at rest, is its speed, and is the speed of light. What is this speed limit?  The idea of a limit is central to all of calculus. We begin this chapter by examining why limits are so important. Then, we go on to describe how to find the limit of a function at a given point. Not all functions have limits at all points, and we discuss what this means and how we can tell if a function does or does not have a limit at a particular value.    Learning Objectives   Describe the tangent problem and how it led to the idea of a derivative.  Explain how the idea of a limit is involved in solving the tangent problem.  Recognize a tangent to a curve at a point as the limit of secant lines.  Identify instantaneous velocity as the limit of average velocity over a small time interval.  Describe the area problem and how it was solved by the integral.  Explain how the idea of a limit is involved in solving the area problem.  Recognize how the ideas of limit, derivative, and integral led to the studies of infinite series and multivariable calculus.   As we embark on our study of calculus, we shall see how its development arose from common solutions to practical problems in areas such as engineering physics—like the space travel problem posed in the chapter opener. Two key problems led to the initial formulation of calculus: (1) the tangent problem, or how to determine the slope of a line tangent to a curve at a point; and (2) the area problem, or how to determine the area under a curve.    The Tangent Problem and Differential Calculus  Rate of change is one of the most critical concepts in calculus. We begin our investigation of rates of change by looking at the graphs of the three lines and shown in .    \"Three graphs of different linear functions are shown. The first is f(x) = -2x – 3, with slope of -2 and y intercept of -3. The second is g(x) = x \/ 2 + 1, with slope of 1\/2 and y intercept of 1. The third is h(x) = 2, with slope of 0 and y intercept of 2. The rate of change of each is constant, as determined by the slope.\"  The rate of change of a linear function is constant in each of these three graphs, with the constant determined by the slope.   As we move from left to right along the graph of we see that the graph decreases at a constant rate. For every 1 unit we move to the right along the -axis, the -coordinate decreases by 2 units. This rate of change is determined by the slope (-2) of the line. Similarly, the slope of 1\/2 in the function tells us that for every change in of 1 unit there is a corresponding change in of 1\/2 unit. The function has a slope of zero, indicating that the values of the function remain constant. We see that the slope of each linear function indicates the rate of change of the function.  Compare the graphs of these three functions with the graph of ( ). The graph of starts from the left by decreasing rapidly, then begins to decrease more slowly and level off, and then finally begins to increase—slowly at first, followed by an increasing rate of increase as it moves toward the right. Unlike a linear function, no single number represents the rate of change for this function. We quite naturally ask: How do we measure the rate of change of a nonlinear function?    \"A graph of the parabola k(x) = x^2, which opens up and has its vertex at the origin.\"  The function does not have a constant rate of change.   We can approximate the rate of change of a function at a point on its graph by taking another point on the graph of drawing a line through the two points, and calculating the slope of the resulting line. Such a line is called a secant line. shows a secant line to a function at a point    \"A graph showing a generic curved function going through the points (0,0), (a, fa.), and (x, f(x)). A straight line called the secant line is drawn through the points (a, fa.), and (x, f(x)), going below the curved function between a and x and going above the curved function at values greater than x or less than a. The curved function and the secant line cross once more at some point in the third quadrant. The slope of the secant line is ( f(x) – fa. ) \/ (x – a).\">  The slope of a secant line through a point estimates the rate of change of the function at the point   We formally define a secant line as follows:   The secant to the function through the points and is the line passing through these points. Its slope is given by    The accuracy of approximating the rate of change of the function with a secant line depends on how close is to . As we see in , if is closer to , the slope of the secant line is a better measure of the rate of change of at .    \"This graph is the same as the previous secant line and generic curved function graph. However, another point x is added, this time plotted closer to a on the x-axis. As such, another secant line is drawn through the points (a, fa.) and the new, closer (x, f(x)). The line stays much closer to the generic curved function around (a, fa.). The slope of this secant line has become a better approximation of the rate of change of the generic function.\">  As gets closer to , the slope of the secant line becomes a better approximation to the rate of change of the function at .   The secant lines themselves approach a line that is called the tangent to the function at ( ). The slope of the tangent line to the graph at measures the rate of change of the function at . This value also represents the derivative of the function at , or the rate of change of the function at . This derivative is denoted by  Differential calculus is the field of calculus concerned with the study of derivatives and their applications.   Media  For an interactive demonstration of the slope of a secant line that you can manipulate yourself, visit this applet ( Note: this site requires a Java browser plugin): Math Insight .    \"This graph is a continuation of the previous two. This time, the graph contains the curved function, the two secant lines, and a tangent line. As x approaches a, the secant lines approach the tangent line.\"  Solving the Tangent Problem : As approaches , the secant lines approach the tangent line.   illustrates how to find slopes of secant lines. These slopes estimate the slope of the tangent line or, equivalently, the rate of change of the function at the point at which the slopes are calculated.   Finding Slopes of Secant Lines   Estimate the slope of the tangent line (rate of change) to at by finding slopes of secant lines through and each of the following points on the graph of        Use the formula for the slope of a secant line from the definition.      The point in part b. is closer to the point so the slope of 2.5 is closer to the slope of the tangent line. A good estimate for the slope of the tangent would be in the range of 2 to 2.5 ( ).    \"Two graphs of the parabola f(x) = x^2 are shown. The first has a secant line drawn, intersecting the parabola at (1,1) and (2,4). The second has a secant line drawn, intersecting the parabola at (1,1) and (3\/2, 9\/4). These lines provide successively closer approximations to the tangent line to the function at (1,1).\"  The secant lines to at through (a) and (b) provide successively closer approximations to the tangent line to at       Estimate the slope of the tangent line (rate of change) to at by finding slopes of secant lines through and the point on the graph of    2.25    Use and as a solving guide.    We continue our investigation by exploring a related question. Keeping in mind that velocity may be thought of as the rate of change of position, suppose that we have a function, that gives the position of an object along a coordinate axis at any given time . Can we use these same ideas to create a reasonable definition of the instantaneous velocity at a given time We start by approximating the instantaneous velocity with an average velocity. First, recall that the speed of an object traveling at a constant rate is the ratio of the distance traveled to the length of time it has traveled. We define the average velocity of an object over a time period to be the change in its position divided by the length of the time period.   Let be the position of an object moving along a coordinate axis at time . The average velocity of the object over a time interval where (or if is    As is chosen closer to , the average velocity becomes closer to the instantaneous velocity. Note that finding the average velocity of a position function over a time interval is essentially the same as finding the slope of a secant line to a function. Furthermore, to find the slope of a tangent line at a point , we let the -values approach in the slope of the secant line. Similarly, to find the instantaneous velocity at time , we let the -values approach in the average velocity. This process of letting or approach in an expression is called taking a limit . Thus, we may define the instantaneous velocity as follows.   For a position function the instantaneous velocity at a time is the value that the average velocities approach on intervals of the form and as the values of become closer to , provided such a value exists.   illustrates this concept of limits and average velocity.   Finding Average Velocity   A rock is dropped from a height of 64 ft. It is determined that its height (in feet) above ground seconds later (for is given by Find the average velocity of the rock over each of the given time intervals. Use this information to guess the instantaneous velocity of the rock at time        Substitute the data into the formula for the definition of average velocity.    The instantaneous velocity is somewhere between -15.84 and -16.16 ft\/sec. A good guess might be -16 ft\/sec.      An object moves along a coordinate axis so that its position at time is given by Estimate its instantaneous velocity at time by computing its average velocity over the time interval    12.006001    Use      The Area Problem and Integral Calculus  We now turn our attention to a classic question from calculus. Many quantities in physics—for example, quantities of work—may be interpreted as the area under a curve. This leads us to ask the question: How can we find the area between the graph of a function and the -axis over an interval ( )?    \"A graph is shown of a generic curved function f(x) shaped like a hill in quadrant one. An area under the function is shaded above the x-axis and between x=a and x=b.\"  The Area Problem : How do we find the area of the shaded region?   As in the answer to our previous questions on velocity, we first try to approximate the solution. We approximate the area by dividing up the interval into smaller intervals in the shape of rectangles. The approximation of the area comes from adding up the areas of these rectangles ( ).    \"The graph is the same as the previous image, with one difference. Instead of the area completely shaded under the curved function, the interval [a, b] is divided into smaller intervals in the shape of rectangles. The rectangles have the same small width. The height of each rectangle is the height of the function at the midpoint of the base of that specific rectangle.\"  The area of the region under the curve is approximated by summing the areas of thin rectangles.   As the widths of the rectangles become smaller (approach zero), the sums of the areas of the rectangles approach the area between the graph of and the -axis over the interval Once again, we find ourselves taking a limit. Limits of this type serve as a basis for the definition of the definite integral. Integral calculus is the study of integrals and their applications.   Estimation Using Rectangles   Estimate the area between the -axis and the graph of over the interval by using the three rectangles shown in .    \"A graph of the parabola f(x) – x^2 + 1 drawn on graph paper with all units shown. The rectangles completely contained under the function and above the x-axis in the interval [0,3] are shaded. This strategy sets the heights of the rectangles as the smaller of the two corners that could intersect with the function. As such, the rectangles are shorter than the height of the function.\"  The area of the region under the curve of can be estimated using rectangles.     The areas of the three rectangles are 1 unit , 2 unit , and 5 unit . Using these rectangles, our area estimate is 8 unit .      Estimate the area between the -axis and the graph of over the interval by using the three rectangles shown here:   \"A graph of the same parabola f(x) = x^2 + 1, but with a different shading strategy over the interval [0,3]. This time, the shaded rectangles are given the height of the taller corner that could intersect with the function. As such, the rectangles go higher than the height of the function     16 unit    Use as a guide.      Other Aspects of Calculus  So far, we have studied functions of one variable only. Such functions can be represented visually using graphs in two dimensions; however, there is no good reason to restrict our investigation to two dimensions. Suppose, for example, that instead of determining the velocity of an object moving along a coordinate axis, we want to determine the velocity of a rock fired from a catapult at a given time, or of an airplane moving in three dimensions. We might want to graph real-value functions of two variables or determine volumes of solids of the type shown in . These are only a few of the types of questions that can be asked and answered using multivariable calculus . Informally, multivariable calculus can be characterized as the study of the calculus of functions of two or more variables. However, before exploring these and other ideas, we must first lay a foundation for the study of calculus in one variable by exploring the concept of a limit.    \"A diagram in three dimensional space, over the x, y, and z axis where z = f(x,y). The base is the x,y axis, and the height is the z axis. The base is a rectangle contained in the x,y axis plane. The top is a surface of changing height with corners located directly above those of the rectangle in the x,y plane.. The highest point is above the corner at x=0, y=0. The lowest point is at the corner somewhere in the first quadrant of the x, y plane. The other two points are roughly the same height and located above the corners on the x axis and y axis. Lines are drawn connecting the corners of the rectangle to those of the surface.\"  We can use multivariable calculus to find the volume between a surface defined by a function of two variables and a plane.     Key Concepts   Differential calculus arose from trying to solve the problem of determining the slope of a line tangent to a curve at a point. The slope of the tangent line indicates the rate of change of the function, also called the derivative . Calculating a derivative requires finding a limit.  Integral calculus arose from trying to solve the problem of finding the area of a region between the graph of a function and the -axis. We can approximate the area by dividing it into thin rectangles and summing the areas of these rectangles. This summation leads to the value of a function called the integral . The integral is also calculated by finding a limit and, in fact, is related to the derivative of a function.  Multivariable calculus enables us to solve problems in three-dimensional space, including determining motion in space and finding volumes of solids.     Key Equations   Slope of a Secant Line   Average Velocity over Interval      "
+},
+{
+  "id": "CNX_Calc_Figure_02_01_001",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_001",
+  "type": "Figure",
+  "number": "2.1.1",
+  "title": "",
+  "body": "  \"Three graphs of different linear functions are shown. The first is f(x) = -2x – 3, with slope of -2 and y intercept of -3. The second is g(x) = x \/ 2 + 1, with slope of 1\/2 and y intercept of 1. The third is h(x) = 2, with slope of 0 and y intercept of 2. The rate of change of each is constant, as determined by the slope.\"  The rate of change of a linear function is constant in each of these three graphs, with the constant determined by the slope.  "
+},
+{
+  "id": "sec_Ch2Sec1-4-4",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-4-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "rate of change "
+},
+{
+  "id": "CNX_Calc_Figure_02_01_002",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_002",
+  "type": "Figure",
+  "number": "2.1.2",
+  "title": "",
+  "body": "  \"A graph of the parabola k(x) = x^2, which opens up and has its vertex at the origin.\"  The function does not have a constant rate of change.  "
+},
+{
+  "id": "sec_Ch2Sec1-4-7",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-4-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "secant "
+},
+{
+  "id": "CNX_Calc_Figure_02_01_003",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_003",
+  "type": "Figure",
+  "number": "2.1.3",
+  "title": "",
+  "body": "  \"A graph showing a generic curved function going through the points (0,0), (a, fa.), and (x, f(x)). A straight line called the secant line is drawn through the points (a, fa.), and (x, f(x)), going below the curved function between a and x and going above the curved function at values greater than x or less than a. The curved function and the secant line cross once more at some point in the third quadrant. The slope of the secant line is ( f(x) – fa. ) \/ (x – a).\">  The slope of a secant line through a point estimates the rate of change of the function at the point  "
+},
+{
+  "id": "sec_Ch2Sec1-4-10",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-4-10",
+  "type": "Definition",
+  "number": "2.1.4",
+  "title": "",
+  "body": " The secant to the function through the points and is the line passing through these points. Its slope is given by   "
+},
+{
+  "id": "CNX_Calc_Figure_02_01_004",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_004",
+  "type": "Figure",
+  "number": "2.1.5",
+  "title": "",
+  "body": "  \"This graph is the same as the previous secant line and generic curved function graph. However, another point x is added, this time plotted closer to a on the x-axis. As such, another secant line is drawn through the points (a, fa.) and the new, closer (x, f(x)). The line stays much closer to the generic curved function around (a, fa.). The slope of this secant line has become a better approximation of the rate of change of the generic function.\">  As gets closer to , the slope of the secant line becomes a better approximation to the rate of change of the function at .  "
+},
+{
+  "id": "sec_Ch2Sec1-4-13",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-4-13",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "tangent Differential calculus "
+},
+{
+  "id": "sec_Ch2Sec1-4-14",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-4-14",
+  "type": "Note",
+  "number": "2.1.6",
+  "title": "Media.",
+  "body": " Media  For an interactive demonstration of the slope of a secant line that you can manipulate yourself, visit this applet ( Note: this site requires a Java browser plugin): Math Insight . "
+},
+{
+  "id": "CNX_Calc_Figure_02_01_005",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_005",
+  "type": "Figure",
+  "number": "2.1.7",
+  "title": "",
+  "body": "  \"This graph is a continuation of the previous two. This time, the graph contains the curved function, the two secant lines, and a tangent line. As x approaches a, the secant lines approach the tangent line.\"  Solving the Tangent Problem : As approaches , the secant lines approach the tangent line.  "
+},
+{
+  "id": "fs-id1170573387465",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#fs-id1170573387465",
+  "type": "Example",
+  "number": "2.1.8",
+  "title": "Finding Slopes of Secant Lines.",
+  "body": " Finding Slopes of Secant Lines   Estimate the slope of the tangent line (rate of change) to at by finding slopes of secant lines through and each of the following points on the graph of        Use the formula for the slope of a secant line from the definition.      The point in part b. is closer to the point so the slope of 2.5 is closer to the slope of the tangent line. A good estimate for the slope of the tangent would be in the range of 2 to 2.5 ( ).    \"Two graphs of the parabola f(x) = x^2 are shown. The first has a secant line drawn, intersecting the parabola at (1,1) and (2,4). The second has a secant line drawn, intersecting the parabola at (1,1) and (3\/2, 9\/4). These lines provide successively closer approximations to the tangent line to the function at (1,1).\"  The secant lines to at through (a) and (b) provide successively closer approximations to the tangent line to at    "
+},
+{
+  "id": "sec_Ch2Sec1-4-18",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-4-18",
+  "type": "Checkpoint",
+  "number": "2.1.10",
+  "title": "",
+  "body": "  Estimate the slope of the tangent line (rate of change) to at by finding slopes of secant lines through and the point on the graph of    2.25    Use and as a solving guide.   "
+},
+{
+  "id": "sec_Ch2Sec1-4-19",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-4-19",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "average velocity "
+},
+{
+  "id": "sec_Ch2Sec1-4-20",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-4-20",
+  "type": "Definition",
+  "number": "2.1.11",
+  "title": "",
+  "body": " Let be the position of an object moving along a coordinate axis at time . The average velocity of the object over a time interval where (or if is   "
+},
+{
+  "id": "sec_Ch2Sec1-4-21",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-4-21",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "limit instantaneous velocity "
+},
+{
+  "id": "sec_Ch2Sec1-4-22",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-4-22",
+  "type": "Definition",
+  "number": "2.1.12",
+  "title": "",
+  "body": " For a position function the instantaneous velocity at a time is the value that the average velocities approach on intervals of the form and as the values of become closer to , provided such a value exists.  "
+},
+{
+  "id": "fs-id1170573397285",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#fs-id1170573397285",
+  "type": "Example",
+  "number": "2.1.13",
+  "title": "Finding Average Velocity.",
+  "body": " Finding Average Velocity   A rock is dropped from a height of 64 ft. It is determined that its height (in feet) above ground seconds later (for is given by Find the average velocity of the rock over each of the given time intervals. Use this information to guess the instantaneous velocity of the rock at time        Substitute the data into the formula for the definition of average velocity.    The instantaneous velocity is somewhere between -15.84 and -16.16 ft\/sec. A good guess might be -16 ft\/sec.   "
+},
+{
+  "id": "sec_Ch2Sec1-4-25",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-4-25",
+  "type": "Checkpoint",
+  "number": "2.1.14",
+  "title": "",
+  "body": "  An object moves along a coordinate axis so that its position at time is given by Estimate its instantaneous velocity at time by computing its average velocity over the time interval    12.006001    Use   "
+},
+{
+  "id": "CNX_Calc_Figure_02_01_006",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_006",
+  "type": "Figure",
+  "number": "2.1.15",
+  "title": "",
+  "body": "  \"A graph is shown of a generic curved function f(x) shaped like a hill in quadrant one. An area under the function is shaded above the x-axis and between x=a and x=b.\"  The Area Problem : How do we find the area of the shaded region?  "
+},
+{
+  "id": "CNX_Calc_Figure_02_01_007",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_007",
+  "type": "Figure",
+  "number": "2.1.16",
+  "title": "",
+  "body": "  \"The graph is the same as the previous image, with one difference. Instead of the area completely shaded under the curved function, the interval [a, b] is divided into smaller intervals in the shape of rectangles. The rectangles have the same small width. The height of each rectangle is the height of the function at the midpoint of the base of that specific rectangle.\"  The area of the region under the curve is approximated by summing the areas of thin rectangles.  "
+},
+{
+  "id": "sec_Ch2Sec1-5-6",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-5-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Integral calculus "
+},
+{
+  "id": "fs-id1170573406196",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#fs-id1170573406196",
+  "type": "Example",
+  "number": "2.1.17",
+  "title": "Estimation Using Rectangles.",
+  "body": " Estimation Using Rectangles   Estimate the area between the -axis and the graph of over the interval by using the three rectangles shown in .    \"A graph of the parabola f(x) – x^2 + 1 drawn on graph paper with all units shown. The rectangles completely contained under the function and above the x-axis in the interval [0,3] are shaded. This strategy sets the heights of the rectangles as the smaller of the two corners that could intersect with the function. As such, the rectangles are shorter than the height of the function.\"  The area of the region under the curve of can be estimated using rectangles.     The areas of the three rectangles are 1 unit , 2 unit , and 5 unit . Using these rectangles, our area estimate is 8 unit .   "
+},
+{
+  "id": "sec_Ch2Sec1-5-8",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-5-8",
+  "type": "Checkpoint",
+  "number": "2.1.19",
+  "title": "",
+  "body": "  Estimate the area between the -axis and the graph of over the interval by using the three rectangles shown here:   \"A graph of the same parabola f(x) = x^2 + 1, but with a different shading strategy over the interval [0,3]. This time, the shaded rectangles are given the height of the taller corner that could intersect with the function. As such, the rectangles go higher than the height of the function     16 unit    Use as a guide.   "
+},
+{
+  "id": "sec_Ch2Sec1-6-2",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#sec_Ch2Sec1-6-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "multivariable calculus "
+},
+{
+  "id": "CNX_Calc_Figure_02_01_010",
+  "level": "2",
+  "url": "sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_010",
+  "type": "Figure",
+  "number": "2.1.20",
+  "title": "",
+  "body": "  \"A diagram in three dimensional space, over the x, y, and z axis where z = f(x,y). The base is the x,y axis, and the height is the z axis. The base is a rectangle contained in the x,y axis plane. The top is a surface of changing height with corners located directly above those of the rectangle in the x,y plane.. The highest point is above the corner at x=0, y=0. The lowest point is at the corner somewhere in the first quadrant of the x, y plane. The other two points are roughly the same height and located above the corners on the x axis and y axis. Lines are drawn connecting the corners of the rectangle to those of the surface.\"  We can use multivariable calculus to find the volume between a surface defined by a function of two variables and a plane.  "
+},
+{
   "id": "sec_Ch2Sec2v2",
   "level": "1",
   "url": "sec_Ch2Sec2v2.html",
   "type": "Section",
-  "number": "2.1",
+  "number": "2.2",
   "title": "The Limit of a Function",
   "body": " The Limit of a Function   Learning Objectives   Using correct notation, describe the limit of a function.  Use a table of values to estimate the limit of a function or to identify when the limit does not exist.  Use a graph to estimate the limit of a function or to identify when the limit does not exist.  Define one-sided limits and provide examples.  Explain the relationship between one-sided and two-sided limits.  Using correct notation, describe an infinite limit.    The concept of a limit or limiting process, essential to the understanding of calculus, has been around for thousands of years. In fact, early mathematicians used a limiting process to obtain better and better approximations of areas of circles. Yet, the formal definition of a limit—as we know and understand it today—did not appear until the late 19th century. We therefore begin our quest to understand limits, as our mathematical ancestors did, by using an intuitive approach. In the next section, armed with a conceptual understanding of limits, we examine the formal definition of a limit.  We begin our exploration of limits by taking a look at the graphs of the functions   which are shown in . In particular, let’s focus our attention on the behavior of each graph at and around    \"Three graphs of functions. The first is f(s) = (x^2 – 4) \/ (x-2), which is a line of slope, x intercept (-2,0), and open circle at (2,4). The second is g(x) = |x – 2 | \/ (x-2), which contains two lines: x=1 for x\\gt 2 and x= -1 for x \\lt 2. There are open circles at both endpoints (2, 1) and (-2, 1). The third is h(x) = 1 \/ (x-2)^2, in which the function curves asymptotically towards y=0 and x=2 in quadrants one and two.\"  These graphs show the behavior of three different functions around   Each of the three functions is undefined at but if we make this statement and no other, we give a very incomplete picture of how each function behaves in the vicinity of To express the behavior of each graph in the vicinity of 2 more completely, we need to introduce the concept of a limit.    Intuitive Definition of a Limit  Let’s first take a closer look at how the function behaves around in . As the values of approach 2 from either side of 2, the values of approach 4. Mathematically, we say that the limit of as approaches 2 is 4. Symbolically, we express this limit as   From this very brief informal look at one limit, let’s start to develop an intuitive definition of the limit . We can think of the limit of a function at a number as being the one real number that the functional values approach as the -values approach provided such a real number exists. Stated more carefully, we have the following definition:   Let be a function defined at all values in an open interval containing , with the possible exception of itself, and let be a real number. If all values of the function approach the real number as the values of approach the number , then we say that the limit of as approaches is . (More succinct, as gets closer to , gets closer and stays close to .) Symbolically, we express this idea as     In this section, we'll focus on finding a table of values and the graph of a function. As an example, consider . Notice that is undefined at , but we are not interested in the function value at , only in the value the function is approaching as the values approach .   Evaluating a Limit Using a Table of Functional Values 1   Evaluate using a table of functional values.    We have calculated the values of for the values of listed in .   Table of Functional Values for           -0.1  0.998334166468   0.1  0.998334166468    -0.01  0.999983333417   0.01  0.999983333417    -0.001  0.999999833333   0.001  0.999999833333    -0.0001  0.999999998333   0.0001  0.999999998333     Note : The values in this table were obtained using a calculator and using all the places given in the calculator output. As we read down each column, we see that the values in each column appear to be approaching one. Thus, it is fairly reasonable to conclude that A calculator-or computer-generated graph of would be similar to that shown in , and it confirms our estimate.    \"A graph of f(x) = sin(x)\/x over the interval [-6, 6]. The curving function has a y intercept at x=0 and x intercepts at y=pi and y=-pi.\"  The graph of confirms the estimate from .       Problem-Solving Strategy: Evaluating a Limit Using a Table of Functional Values   To evaluate we begin by completing a table of functional values. We should choose two sets of -values—one set of values approaching and less than , and another set of values approaching and greater than . demonstrates what your tables might look like.   Table of Functional Values for                                       Use additional values as necessary.  Use additional values as necessary.     Next, let’s look at the values in each of the columns and determine whether the values seem to be approaching a single value as we move down each column. In our columns, we look at the sequence and so on, and and so on. ( Note : Although we have chosen the -values and so forth, and these values will probably work nearly every time, on very rare occasions we may need to modify our choices.)  If both columns approach a common y -value , we state We can use the following strategy to confirm the result obtained from the table or as an alternative method for estimating a limit.  Using a graphing calculator or computer software that allows us graph functions, we can plot the function making sure the functional values of for -values near are in our window. We can use the trace feature to move along the graph of the function and watch the y -value readout as the -values approach . If the -values approach as our -values approach from both directions, then We may need to zoom in on our graph and repeat this process several times.     Evaluating a Limit Using a Table of Functional Values 2   Evaluate using a table of functional values.    As before, we use a table—in this case, —to list the values of the function for the given values of .   Table of Functional Values for           3.9  0.251582341869   4.1  0.248456731317    3.99  0.25015644562   4.01  0.24984394501    3.999  0.250015627   4.001  0.249984377    3.9999  0.250001563   4.0001  0.249998438    3.99999  0.25000016   4.00001  0.24999984     After inspecting this table, we see that the functional values less than 4 appear to be decreasing toward whereas the functional values greater than appear to be increasing toward . We conclude that We confirm this estimate using the graph of shown in .    \"A graph of the function f(x) = (sqrt(x) – 2 ) \/ (x-4) over the interval [0,8]. There is an open circle on the function at x=4. The function curves asymptotically towards the x axis and y axis in quadrant one.\"  The graph of confirms the estimate from .       Estimate using a table of functional values. Use a graph to confirm your estimate.       Use and as your table values.    At this point, we see from and that it may be just as easy, if not easier, to estimate a limit of a function by inspecting its graph as it is to estimate the limit by using a table of functional values. In , we evaluate a limit exclusively by looking at a graph rather than by using a table of functional values.   Evaluating a Limit Using a Graph   For shown in , evaluate    \"The graph of a generic curving function g(x). In quadrant two, there is an open circle on the function at (-1,3) and a closed circle one unit up at (-1,4).\"  The graph of includes one value not on a smooth curve.     Despite the fact that as the -values approach from either side, the values approach . Therefore, Note that we can determine this limit without even knowing the algebraic expression of the function.    Based on , we make the following observation: It is possible for the limit of a function to exist at a point, and for the function to be defined at this point, but the limit of the function and the value of the function at the point may be different.   Use the graph of in to evaluate if possible.    \"A graph of the function h(x), which is a parabola graphed over [-2.5, 5]. There is an open circle where the vertex should be at the point (2,-1).\"         What -value does the function approach as the -values approach ?      Identifying When Limits Do Not Exist  A function may not have a limit for all values of . that is, we cannot write that (where is some real number) for all values of , for there may not be a number that is approaching. There are three common ways in which a limit may fail to exist.  The function may approach different values on either side of  The function may grow without upper or lower bound as approaches  The function may oscillate as approaches without approaching a specific value  We'll explore each of these in turn.   Different Values Approached From Left and Right  Explore why does not exist where    A graph of around and a table are given in and , respectively. It is clear that as approaches , does not seem to approach a single number. Instead it seems as though approaches two different numbers. When considering values of less than (approaching from the left), it seems is approaching ; when considering values of greater than (approaching from the right), it seems is approaching .  Recognizing this behavior is important; we'll study this in greater depth later. Right now, it suffices to say that the limit does not exist since is approaching two different values as approaches .    A graph of a polynomial from (0,3) to (2,1) with a point at (2,1) and on the same axes a line from (1,1) to (2,2) with a hole at (1,1)   The limit of does not exist at    Values of near                                    The Function Grows Without Bound  Explore why does not exist.   A graph and table of are given in and , respectively. Both show that as approaches , grows larger and larger    A graph of 1\/(x-1)^2 showing a vertical asymptote at x=1   Observing no limit as    Values of near                                 We can deduce this on our own with the aid of the graph and table. If is near , then is very small, and Since is not approaching a single number, we conclude does not exist.        The Function Oscillates   Explore why does not exist.    Two graphs of are given in . The first shows on the interval ; notice how seems to oscillate near . One might think that despite the oscillation, as approaches , approaches . However, the second image zooms in on on the interval . Here the oscillation is even more pronounced.      \"The graph of the function f(x) = sin(1\/x), which oscillates rapidly between -1 and 1 as x approaches 0. The oscillations are less frequent as the function moves away from 0 on the x axis.\"   Observing no limit as   lists values for the function for the given values of .   Table of Functional Values for                                                      After examining the table of functional values, we can see that the -values do not seem to approach any one single value. It appears the limit does not exist. Before drawing this conclusion, let’s take a more systematic approach. Take the following sequence of -values approaching :   The corresponding -values are   At this point we can indeed conclude that does not exist.  Mathematicians frequently abbreviate “does not exist” as DNE.        Use a table of functional values to evaluate if possible.    does not exist.    Use -values 1.9, 1.99, 1.999, 1.9999, 1.9999 and 2.1, 2.01, 2.001, 2.0001, 2.00001 in your table.      One-Sided Limits  Sometimes indicating that the limit of a function fails to exist at a point does not provide us with enough information about the behavior of the function at that particular point. To see this, we now revisit the function introduced at the beginning of the section (see (b)). As we pick values of close to , does not approach a single value, so the limit as approaches 2 does not exist—that is, DNE.  However, this statement alone does not give us a complete picture of the behavior of the function around the -value . To provide a more accurate description, we introduce the idea of a one-sided limit . For all values to the left of (or the negative side of  ), Thus, as approaches from the left, approaches -1. Mathematically, we say that the limit as approaches from the left is . Symbolically, we express this idea as   Similarly, as approaches from the right (or from the positive side ), approaches . Symbolically, we express this idea as   We can now present an informal definition of one-sided limits.    We define two types of one-sided limits .  Limit from the left: Let be a function defined at all values in an open interval of the form ), and let be a real number. If the values of the function approach the real number as the values of (where approach the number , then we say that is the limit of as approaches a from the left. Symbolically, we express this idea as  Limit from the right: Let be a function defined at all values in an open interval of the form and let be a real number. If the values of the function approach the real number L as the values of (where ) approach the number , then we say that is the limit of as approaches from the right. Symbolically, we express this idea as     Evaluating One-Sided Limits   For the function evaluate each of the following limits.        We can use tables of functional values again . Observe that for values of less than , we use and for values of greater than 2 , we use   Table of Functional Values for           1.9  2.9   2.1  0.41    1.99  2.99  2.01  0.0401    1.999  2.999  2.001  0.004001    1.9999  2.9999  2.0001  0.00040001    1.99999  2.99999  2.00001  0.0000400001     Based on this table, we can conclude that a. and b. Therefore, the (two-sided) limit of does not exist at  shows a graph of and reinforces our conclusion about these limits.    \"The graph of the given piecewise function. The first piece is f(x) = x+1 if x \\lt 2. The second piece is x^2 – 4 if x \\gt = 2. The first piece is a line with x intercept at (-1, 0) and y intercept at (0,1). There is an open circle at (2,3), where the endpoint would be. The second piece is the right half of a parabola opening upward. The vertex at (2,0) is a solid circle.\"  The graph of has a break at      Use a table of functional values to estimate the following limits, if possible.        a. b.     Use -values 1.9, 1.99, 1.999, 1.9999, 1.9999 to estimate  Use -values 2.1, 2.01, 2.001, 2.0001, 2.00001 to estimate (These tables are available from a previous Checkpoint problem.)     Let us now consider the relationship between the limit of a function at a point and the limits from the right and left at that point. It seems clear that if the limit from the right and the limit from the left have a common value, then that common value is the limit of the function at that point. Similarly, if the limit from the left and the limit from the right take on different values, the limit of the function does not exist. These conclusions are summarized in .   Relating One-Sided and Two-Sided Limits  Let be a function defined at all values in an open interval containing , with the possible exception of itself, and let be a real number. Then,      Infinite Limits  Evaluating the limit of a function at a point or evaluating the limit of a function from the right and left at a point helps us to characterize the behavior of a function around a given value. As we shall see, we can also describe the behavior of functions that do not have finite limits.  We now turn our attention to the third and final function introduced at the beginning of this section (see (c)). From its graph we see that as the values of approach , the values of become larger and larger and, in fact, become infinite. Mathematically, we say that the limit of as approaches is positive infinity. Symbolically, we express this idea as   More generally, we define infinite limits as follows:   An infinite limit describes the behavior of a function when its values increase or decrease without bound as approaches a point.   From the left: means grows larger and larger as approaches from the left. means decreases without bound as approaches from the left  From the right: means grows larger and larger as approaches from the right. means decreases without bound as approaches from the right  Two-sided: means that both one-sided limits agree and the function increases or decreases without bound as approaches from either side.     It is important to understand that when we write statements such as or we are describing the behavior of the function, as we have just defined it. We are not asserting that a limit exists. For the limit of a function to exist at , it must approach a real number as approaches . That said, if, for example, we always write rather than DNE.   Recognizing an Infinite Limit   Evaluate each of the following limits, if possible. Use a table of functional values and graph to confirm your conclusion.         Begin by constructing a table of functional values.   Table of Functional Values for           -0.1  -10   0.1  10    -0.01  -100   0.01  100    -0.001  -1000   0.001  1000    -0.0001  -10,000   0.0001  10,000    -0.00001  -100,000   0.00001  100,000    -0.000001  -1,000,000   0.000001  1,000,000      The values of decrease without bound as approaches 0 from the left. We conclude that   The values of increase without bound as approaches 0 from the right. We conclude that   Since and have different values, we conclude that   The graph of in confirms these conclusions.    \"The graph of the function f(x) = 1\/x. The function curves asymptotically towards x=0 and y=0 in quadrants one and three.\"  The graph of confirms that the limit as approaches 0 does not exist.       Evaluate each of the following limits, if possible. Use a table of functional values and graph to confirm your conclusion.                Follow the procedures from .     In the next example we put our knowledge of various types of limits to use to analyze the behavior of a function at several different points.   Behavior of a Function at Different Points   Use the graph of in to determine each of the following values:          \"The graph of a function f(x) described by the above limits and values. There is a smooth curve for values below x=-2; at (-2, 3), there is an open circle. There is a smooth curve between (-2, 1] with a closed circle at (1,6). There is an open circle at (1,3), and a smooth curve stretching from there down asymptotically to negative infinity along x=3. The function also curves asymptotically along x=3 on the other side, also stretching to negative infinity. The function then changes concavity in the first quadrant around y=4.5 and continues up.\"  The graph shows        is undefined  DNE;  is undefined       Evaluate for shown here:   \"A graph of a piecewise function. The first segment curves from the third quadrant to the first, crossing through the second quadrant. Where the endpoint would be in the first quadrant is an open circle. The second segment starts at a closed circle a few units below the open circle. It curves down from quadrant one to quadrant four.\"     Does not exist.    Compare the limit from the right with the limit from the left.        Section Exercises  For the following exercises, consider the function    [T] Complete the following table for the function. Round your solutions to four decimal places.                  0.9  a.  1.1  e.    0.99  b.  1.01  f.    0.999  c.  1.001  g.    0.9999  d.  1.0001  h.        "
 },
@@ -1787,7 +2021,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#CNX_Calc_Figure_02_02_001",
   "type": "Figure",
-  "number": "2.1.1",
+  "number": "2.2.1",
   "title": "",
   "body": "  \"Three graphs of functions. The first is f(s) = (x^2 – 4) \/ (x-2), which is a line of slope, x intercept (-2,0), and open circle at (2,4). The second is g(x) = |x – 2 | \/ (x-2), which contains two lines: x=1 for x\\gt 2 and x= -1 for x \\lt 2. There are open circles at both endpoints (2, 1) and (-2, 1). The third is h(x) = 1 \/ (x-2)^2, in which the function curves asymptotically towards y=0 and x=2 in quadrants one and two.\"  These graphs show the behavior of three different functions around  "
 },
@@ -1805,7 +2039,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3-5",
   "type": "Definition",
-  "number": "2.1.2",
+  "number": "2.2.2",
   "title": "",
   "body": " Let be a function defined at all values in an open interval containing , with the possible exception of itself, and let be a real number. If all values of the function approach the real number as the values of approach the number , then we say that the limit of as approaches is . (More succinct, as gets closer to , gets closer and stays close to .) Symbolically, we express this idea as   "
 },
@@ -1814,7 +2048,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#fs-id1170572561451",
   "type": "Example",
-  "number": "2.1.3",
+  "number": "2.2.3",
   "title": "Evaluating a Limit Using a Table of Functional Values 1.",
   "body": " Evaluating a Limit Using a Table of Functional Values 1   Evaluate using a table of functional values.    We have calculated the values of for the values of listed in .   Table of Functional Values for           -0.1  0.998334166468   0.1  0.998334166468    -0.01  0.999983333417   0.01  0.999983333417    -0.001  0.999999833333   0.001  0.999999833333    -0.0001  0.999999998333   0.0001  0.999999998333     Note : The values in this table were obtained using a calculator and using all the places given in the calculator output. As we read down each column, we see that the values in each column appear to be approaching one. Thus, it is fairly reasonable to conclude that A calculator-or computer-generated graph of would be similar to that shown in , and it confirms our estimate.    \"A graph of f(x) = sin(x)\/x over the interval [-6, 6]. The curving function has a y intercept at x=0 and x intercepts at y=pi and y=-pi.\"  The graph of confirms the estimate from .    "
 },
@@ -1823,7 +2057,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3-8",
   "type": "Note",
-  "number": "2.1.6",
+  "number": "2.2.6",
   "title": "Problem-Solving Strategy: Evaluating a Limit Using a Table of Functional Values.",
   "body": " Problem-Solving Strategy: Evaluating a Limit Using a Table of Functional Values   To evaluate we begin by completing a table of functional values. We should choose two sets of -values—one set of values approaching and less than , and another set of values approaching and greater than . demonstrates what your tables might look like.   Table of Functional Values for                                       Use additional values as necessary.  Use additional values as necessary.     Next, let’s look at the values in each of the columns and determine whether the values seem to be approaching a single value as we move down each column. In our columns, we look at the sequence and so on, and and so on. ( Note : Although we have chosen the -values and so forth, and these values will probably work nearly every time, on very rare occasions we may need to modify our choices.)  If both columns approach a common y -value , we state We can use the following strategy to confirm the result obtained from the table or as an alternative method for estimating a limit.  Using a graphing calculator or computer software that allows us graph functions, we can plot the function making sure the functional values of for -values near are in our window. We can use the trace feature to move along the graph of the function and watch the y -value readout as the -values approach . If the -values approach as our -values approach from both directions, then We may need to zoom in on our graph and repeat this process several times.   "
 },
@@ -1832,7 +2066,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#fs-id1170571656691",
   "type": "Example",
-  "number": "2.1.8",
+  "number": "2.2.8",
   "title": "Evaluating a Limit Using a Table of Functional Values 2.",
   "body": " Evaluating a Limit Using a Table of Functional Values 2   Evaluate using a table of functional values.    As before, we use a table—in this case, —to list the values of the function for the given values of .   Table of Functional Values for           3.9  0.251582341869   4.1  0.248456731317    3.99  0.25015644562   4.01  0.24984394501    3.999  0.250015627   4.001  0.249984377    3.9999  0.250001563   4.0001  0.249998438    3.99999  0.25000016   4.00001  0.24999984     After inspecting this table, we see that the functional values less than 4 appear to be decreasing toward whereas the functional values greater than appear to be increasing toward . We conclude that We confirm this estimate using the graph of shown in .    \"A graph of the function f(x) = (sqrt(x) – 2 ) \/ (x-4) over the interval [0,8]. There is an open circle on the function at x=4. The function curves asymptotically towards the x axis and y axis in quadrant one.\"  The graph of confirms the estimate from .    "
 },
@@ -1841,7 +2075,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3-10",
   "type": "Checkpoint",
-  "number": "2.1.11",
+  "number": "2.2.11",
   "title": "",
   "body": "  Estimate using a table of functional values. Use a graph to confirm your estimate.       Use and as your table values.   "
 },
@@ -1850,7 +2084,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#fs-id1170572337207",
   "type": "Example",
-  "number": "2.1.12",
+  "number": "2.2.12",
   "title": "Evaluating a Limit Using a Graph.",
   "body": " Evaluating a Limit Using a Graph   For shown in , evaluate    \"The graph of a generic curving function g(x). In quadrant two, there is an open circle on the function at (-1,3) and a closed circle one unit up at (-1,4).\"  The graph of includes one value not on a smooth curve.     Despite the fact that as the -values approach from either side, the values approach . Therefore, Note that we can determine this limit without even knowing the algebraic expression of the function.   "
 },
@@ -1859,7 +2093,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3-14",
   "type": "Checkpoint",
-  "number": "2.1.14",
+  "number": "2.2.14",
   "title": "",
   "body": " Use the graph of in to evaluate if possible.    \"A graph of the function h(x), which is a parabola graphed over [-2.5, 5]. There is an open circle where the vertex should be at the point (2,-1).\"         What -value does the function approach as the -values approach ?   "
 },
@@ -1868,7 +2102,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4-3",
   "type": "Example",
-  "number": "2.1.16",
+  "number": "2.2.16",
   "title": "Different Values Approached From Left and Right.",
   "body": " Different Values Approached From Left and Right  Explore why does not exist where    A graph of around and a table are given in and , respectively. It is clear that as approaches , does not seem to approach a single number. Instead it seems as though approaches two different numbers. When considering values of less than (approaching from the left), it seems is approaching ; when considering values of greater than (approaching from the right), it seems is approaching .  Recognizing this behavior is important; we'll study this in greater depth later. Right now, it suffices to say that the limit does not exist since is approaching two different values as approaches .    A graph of a polynomial from (0,3) to (2,1) with a point at (2,1) and on the same axes a line from (1,1) to (2,2) with a hole at (1,1)   The limit of does not exist at    Values of near                                  "
 },
@@ -1877,7 +2111,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4-4",
   "type": "Example",
-  "number": "2.1.19",
+  "number": "2.2.19",
   "title": "The Function Grows Without Bound.",
   "body": " The Function Grows Without Bound  Explore why does not exist.   A graph and table of are given in and , respectively. Both show that as approaches , grows larger and larger    A graph of 1\/(x-1)^2 showing a vertical asymptote at x=1   Observing no limit as    Values of near                                 We can deduce this on our own with the aid of the graph and table. If is near , then is very small, and Since is not approaching a single number, we conclude does not exist.   "
 },
@@ -1886,7 +2120,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4-5",
   "type": "Example",
-  "number": "2.1.22",
+  "number": "2.2.22",
   "title": "The Function Oscillates.",
   "body": " The Function Oscillates   Explore why does not exist.    Two graphs of are given in . The first shows on the interval ; notice how seems to oscillate near . One might think that despite the oscillation, as approaches , approaches . However, the second image zooms in on on the interval . Here the oscillation is even more pronounced.      \"The graph of the function f(x) = sin(1\/x), which oscillates rapidly between -1 and 1 as x approaches 0. The oscillations are less frequent as the function moves away from 0 on the x axis.\"   Observing no limit as   lists values for the function for the given values of .   Table of Functional Values for                                                      After examining the table of functional values, we can see that the -values do not seem to approach any one single value. It appears the limit does not exist. Before drawing this conclusion, let’s take a more systematic approach. Take the following sequence of -values approaching :   The corresponding -values are   At this point we can indeed conclude that does not exist.  Mathematicians frequently abbreviate “does not exist” as DNE.     "
 },
@@ -1895,7 +2129,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4-6",
   "type": "Checkpoint",
-  "number": "2.1.25",
+  "number": "2.2.25",
   "title": "",
   "body": "  Use a table of functional values to evaluate if possible.    does not exist.    Use -values 1.9, 1.99, 1.999, 1.9999, 1.9999 and 2.1, 2.01, 2.001, 2.0001, 2.00001 in your table.   "
 },
@@ -1913,7 +2147,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5-8",
   "type": "Definition",
-  "number": "2.1.26",
+  "number": "2.2.26",
   "title": "",
   "body": "  We define two types of one-sided limits .  Limit from the left: Let be a function defined at all values in an open interval of the form ), and let be a real number. If the values of the function approach the real number as the values of (where approach the number , then we say that is the limit of as approaches a from the left. Symbolically, we express this idea as  Limit from the right: Let be a function defined at all values in an open interval of the form and let be a real number. If the values of the function approach the real number L as the values of (where ) approach the number , then we say that is the limit of as approaches from the right. Symbolically, we express this idea as   "
 },
@@ -1922,7 +2156,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5-9",
   "type": "Example",
-  "number": "2.1.27",
+  "number": "2.2.27",
   "title": "Evaluating One-Sided Limits.",
   "body": " Evaluating One-Sided Limits   For the function evaluate each of the following limits.        We can use tables of functional values again . Observe that for values of less than , we use and for values of greater than 2 , we use   Table of Functional Values for           1.9  2.9   2.1  0.41    1.99  2.99  2.01  0.0401    1.999  2.999  2.001  0.004001    1.9999  2.9999  2.0001  0.00040001    1.99999  2.99999  2.00001  0.0000400001     Based on this table, we can conclude that a. and b. Therefore, the (two-sided) limit of does not exist at  shows a graph of and reinforces our conclusion about these limits.    \"The graph of the given piecewise function. The first piece is f(x) = x+1 if x \\lt 2. The second piece is x^2 – 4 if x \\gt = 2. The first piece is a line with x intercept at (-1, 0) and y intercept at (0,1). There is an open circle at (2,3), where the endpoint would be. The second piece is the right half of a parabola opening upward. The vertex at (2,0) is a solid circle.\"  The graph of has a break at    "
 },
@@ -1931,7 +2165,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5-10",
   "type": "Checkpoint",
-  "number": "2.1.30",
+  "number": "2.2.30",
   "title": "",
   "body": " Use a table of functional values to estimate the following limits, if possible.        a. b.     Use -values 1.9, 1.99, 1.999, 1.9999, 1.9999 to estimate  Use -values 2.1, 2.01, 2.001, 2.0001, 2.00001 to estimate (These tables are available from a previous Checkpoint problem.)    "
 },
@@ -1940,7 +2174,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#fs-id1170571598073",
   "type": "Theorem",
-  "number": "2.1.31",
+  "number": "2.2.31",
   "title": "Relating One-Sided and Two-Sided Limits.",
   "body": " Relating One-Sided and Two-Sided Limits  Let be a function defined at all values in an open interval containing , with the possible exception of itself, and let be a real number. Then,   "
 },
@@ -1958,7 +2192,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6-6",
   "type": "Definition",
-  "number": "2.1.32",
+  "number": "2.2.32",
   "title": "",
   "body": " An infinite limit describes the behavior of a function when its values increase or decrease without bound as approaches a point.   From the left: means grows larger and larger as approaches from the left. means decreases without bound as approaches from the left  From the right: means grows larger and larger as approaches from the right. means decreases without bound as approaches from the right  Two-sided: means that both one-sided limits agree and the function increases or decreases without bound as approaches from either side.    "
 },
@@ -1967,7 +2201,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#fs-id1170571611150",
   "type": "Example",
-  "number": "2.1.33",
+  "number": "2.2.33",
   "title": "Recognizing an Infinite Limit.",
   "body": " Recognizing an Infinite Limit   Evaluate each of the following limits, if possible. Use a table of functional values and graph to confirm your conclusion.         Begin by constructing a table of functional values.   Table of Functional Values for           -0.1  -10   0.1  10    -0.01  -100   0.01  100    -0.001  -1000   0.001  1000    -0.0001  -10,000   0.0001  10,000    -0.00001  -100,000   0.00001  100,000    -0.000001  -1,000,000   0.000001  1,000,000      The values of decrease without bound as approaches 0 from the left. We conclude that   The values of increase without bound as approaches 0 from the right. We conclude that   Since and have different values, we conclude that   The graph of in confirms these conclusions.    \"The graph of the function f(x) = 1\/x. The function curves asymptotically towards x=0 and y=0 in quadrants one and three.\"  The graph of confirms that the limit as approaches 0 does not exist.    "
 },
@@ -1976,7 +2210,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6-9",
   "type": "Checkpoint",
-  "number": "2.1.36",
+  "number": "2.2.36",
   "title": "",
   "body": "  Evaluate each of the following limits, if possible. Use a table of functional values and graph to confirm your conclusion.                Follow the procedures from .   "
 },
@@ -1985,7 +2219,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6-11",
   "type": "Example",
-  "number": "2.1.37",
+  "number": "2.2.37",
   "title": "Behavior of a Function at Different Points.",
   "body": " Behavior of a Function at Different Points   Use the graph of in to determine each of the following values:          \"The graph of a function f(x) described by the above limits and values. There is a smooth curve for values below x=-2; at (-2, 3), there is an open circle. There is a smooth curve between (-2, 1] with a closed circle at (1,6). There is an open circle at (1,3), and a smooth curve stretching from there down asymptotically to negative infinity along x=3. The function also curves asymptotically along x=3 on the other side, also stretching to negative infinity. The function then changes concavity in the first quadrant around y=4.5 and continues up.\"  The graph shows        is undefined  DNE;  is undefined    "
 },
@@ -1994,7 +2228,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6-12",
   "type": "Checkpoint",
-  "number": "2.1.39",
+  "number": "2.2.39",
   "title": "",
   "body": "  Evaluate for shown here:   \"A graph of a piecewise function. The first segment curves from the third quadrant to the first, crossing through the second quadrant. Where the endpoint would be in the first quadrant is an open circle. The second segment starts at a closed circle a few units below the open circle. It curves down from quadrant one to quadrant four.\"     Does not exist.    Compare the limit from the right with the limit from the left.   "
 },
@@ -2003,7 +2237,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch2Sec2v2.html#fs-id1170571655743",
   "type": "Table",
-  "number": "2.1.40",
+  "number": "2.2.40",
   "title": "",
   "body": "                0.9  a.  1.1  e.    0.99  b.  1.01  f.    0.999  c.  1.001  g.    0.9999  d.  1.0001  h.     "
 },
@@ -2012,7 +2246,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "Ch2Sec3LimitDef.html",
   "type": "Section",
-  "number": "2.2",
+  "number": "2.3",
   "title": "Formal <span class=\"process-math\">\\(\\delta-\\varepsilon\\)<\/span> Definition of a Limit",
   "body": " Formal Definition of a Limit   Learning Objectives   Describe the definition of a limit.  Apply the definition to find the limit of a function.  Describe the definitions of one-sided limits   So far, you’ve built an intuitive understanding of limits using tables, graphs, one-sided behavior, and examples of when limits fail to exist. Now we turn to the formal, precise, mathematical definition of a limit: the ( delta epsilon ) definition . This is often one of the most challenging definitions in early calculus but learning it pays off. Understanding this definition is the key that opens the door to a better understanding of calculus.    The Core Idea: Quantifying Closeness  The intuitive meaning of a limit is   We translate what \"gets close\" means in mathematical language.   Describing closeness in  Saying that \" is within units of \" means is a solution to the inequality This simply means the distance between and is less than   Because the limit can ignore the value of at (see ), we can exclude it from the inequality by specifying This means the distance between and is less than  and      Describing closeness in  Similarly, \" is within units of \" can be written This means the distance between the -values of the function and the limit is less than     Putting these ideas together  The formal definition rewrites the informal statement as This is the heart of the definition.     Let be defined for all over an open interval containing . Let be a real number. Then if, for every there exists a , such that if , then .    Let's look at , which breaks down the definition and translates each part.   Translation of the Definition of a Limit    Definition  Translation    For every  For every positive distance from    there exists ,  There is a positive distance from    such that  such that    if , then  if is closer than to and , then is closer than to     We can get a better handle on this definition by looking at the definition geometrically. shows possible values of for various choices of for a given function , a number , and a limit .  Notice that as we choose smaller values of (the distance between the function and the limit), we can always find a small enough so that we have chosen an value within of , then the value of is within of the limit .    \"Three zoomed in images of a function f(x) over the interval \"   These graphs show possible values of given successively smaller values of . FIX THE IMAGE DESCRIPTION     Visit the following site to experiment with finding values of for selected values of .    Visualizer      Proving a Statement About the Limit of a Specific Function   Prove that     Let .  Choose .  Assume .  Thus,   Therefore,     We started with and used our assumption in a key part of the chain of inequalities to get to be less than .  We could just as easily have manipulated the assumed inequality to arrive at as follows:   Therefore, . (Having completed the proof, we state what we have accomplished.)     Problem-Solving Strategy: Proving that for a Specific Function    Let's begin the proof with the following statement: Let .    Next we need to obtain a value for . After we have obtained this value, we make the following statement, filling in the blank with our choice of : Choose     The next statement in the proof should be (at this point, we fill in our given value for ): Assume .    Next, based on this assumption, we need to show that , where and are our function and our limit . At some point, we need to use .    We conclude our proof with the statement: Therefore, .   >   Proving a Statement about a Limit   Complete the proof that by filling in the blanks.  Let .  Choose .  Assume .  Thus, .    We begin by filling in the blanks where the choices are specified by the definition. Thus we have  Let .  Choose .  Assume (or equivalently, ).  Thus, .  Focusing on the final line of the proof, we see that we should choose .  We now complete the final write-up of the proof:  Let .  Choose .  Assume (or equivalently, ).  Thus,      Proving a Statement about the Limit of a Specific Function (Geometric Approach)   Prove that       Let . The first part of the definition begins For every , so we must prove that whatever follows is true no matter what positive value of is chosen. By stating Let , we signal our intent to do so.    Without loss of generality, assume . Two questions present themselves: Why do we want and why is it okay to make this assumption?  In answer to the first question: Later on, in the process of solving for , we will discover that involves the quantity . Consequently, we need .  In answer to the second question: If we can find that works for , then it will work for any as well. Keep in mind that, although it is always okay to put an upper bound on , it is never okay to put a lower bound (other than zero) on     Choose . shows how we made this choice of .    \"Three zoomed in images of a function f(x) over the interval\"   This graph shows how we find geometrically for a given for the proof in . FIX THE IMAGE DESCRIPTION     We must show: If , then , so we must begin by assuming We don't really need (in other words, ) for this proof. Since , it is okay to drop . Hence,   Recall that . Thus, and consequently . We also use here.  We might ask at this point: Why did we substitute for on the left-hand side of the inequality and on the right-hand side of the inequality? If we look at , we see that corresponds to the distance on the left of on the -axis and corresponds to the distance on the right. Thus,   We simplify the expression on the left: Then, we add to all parts of the inequality: We square all parts of the inequality. It is okay to do so, since all parts of the inequality are positive: We subtract from all parts of the inequality: Last,     Therefore,        Proving a Statement about the Nonexistence of a Limit   Let Prove that does not exist.    One way to prove that a limit does not exist is to show that, for any possible value one might think the limit equals, one can find an such that no possible works in the definition.  Suppose a person think the limit exists, and (some common values of might be or , but we'll stick with a generic real number). Let . We show that there is no possible that would satisfy .  The inequality can be written as For any , the solution to are values . This interval contains both positive and negative numbers. When is positive, and when is negative, . Since these two values of are units, apart, it would be impossible for them both to be within of any number .  That is, if then it can't also be true that and vice-versa. Any will result in an interval with both positive and negative values, thus no value of can satisfy the defintion.      One-Sided Limits  Just as we first gained an intuitive understanding of limits and then moved on to a more rigorous definition of limits, we now revisit one-sided limits through that same lens. To do this, we modify the definition of a limit to give formal definitions for limits from the left and from the right at a point.  These definitions require only slight modifications from the definition of the limit. In the definition of the limit from the right, the inequality replaces , which ensures that we only consider values of that are greater than (to the right of) .  Similarly, in the definition of the limit from the left, the inequality replaces , which ensures that we only consider values of that are less than (to the left of) .     Limit from the Right:  Let be defined over an open interval of the form where . Then, if for every , there exists a such that if , then     Limit from the Left  Let be defined over an open interval of the form where . Then, if for every , there exists a such that if , then .      Proving a Statement about a Limit From the Right   Prove that     Let .  Choose . Since we ultimately want , we manipulate this inequality to get , or equivalently, , making a clear choice.  We may also determine geometrically as shown in     \"Three zoomed in images of a function f(x) over the interval\" >   This graph shows how we find for the proof in . FIX THE IMAGE DESCRIPTION   Assume . Thus, . Hence, . Finally, .  Therefore, .    We do not normally use the definition to compute everyday limits like the ones you've seen earlier. Instead, the definition is used to prove the limit laws you'll see in the next section. Once these theorems are proven, you can use them freely without going back to and each time.   "
 },
@@ -2030,7 +2264,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Ch2Sec3LimitDef.html#def-limit",
   "type": "Definition",
-  "number": "2.2.1",
+  "number": "2.3.1",
   "title": "",
   "body": "  Let be defined for all over an open interval containing . Let be a real number. Then if, for every there exists a , such that if , then .   "
 },
@@ -2039,7 +2273,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Ch2Sec3LimitDef.html#deltaepsilondeftable",
   "type": "Table",
-  "number": "2.2.2",
+  "number": "2.3.2",
   "title": "Translation of the <span class=\"process-math\">\\(\\delta-\\varepsilon\\)<\/span> Definition of a Limit",
   "body": " Translation of the Definition of a Limit    Definition  Translation    For every  For every positive distance from    there exists ,  There is a positive distance from    such that  such that    if , then  if is closer than to and , then is closer than to    "
 },
@@ -2048,7 +2282,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Ch2Sec3LimitDef.html#CNX_Calc_Figure_02_05_001",
   "type": "Figure",
-  "number": "2.2.3",
+  "number": "2.3.3",
   "title": "",
   "body": "  \"Three zoomed in images of a function f(x) over the interval \"   These graphs show possible values of given successively smaller values of . FIX THE IMAGE DESCRIPTION  "
 },
@@ -2057,7 +2291,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Ch2Sec3LimitDef.html#subsec-coreidea-13",
   "type": "Insight",
-  "number": "2.2.4",
+  "number": "2.3.4",
   "title": "",
   "body": "  Visit the following site to experiment with finding values of for selected values of .    Visualizer    "
 },
@@ -2066,7 +2300,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Ch2Sec3LimitDef.html#subsec-coreidea-14",
   "type": "Example",
-  "number": "2.2.5",
+  "number": "2.3.5",
   "title": "Proving a Statement About the Limit of a Specific Function.",
   "body": " Proving a Statement About the Limit of a Specific Function   Prove that     Let .  Choose .  Assume .  Thus,   Therefore,     We started with and used our assumption in a key part of the chain of inequalities to get to be less than .  We could just as easily have manipulated the assumed inequality to arrive at as follows:   Therefore, . (Having completed the proof, we state what we have accomplished.)   "
 },
@@ -2075,7 +2309,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Ch2Sec3LimitDef.html#subsec-coreidea-15",
   "type": "Note",
-  "number": "2.2.6",
+  "number": "2.3.6",
   "title": "Problem-Solving Strategy: Proving that <span class=\"process-math\">\\(\\ds \\lim_{x\\to a}f(x)=L\\)<\/span> for a Specific Function <span class=\"process-math\">\\(f(x)\\)<\/span>.",
   "body": " Problem-Solving Strategy: Proving that for a Specific Function    Let's begin the proof with the following statement: Let .    Next we need to obtain a value for . After we have obtained this value, we make the following statement, filling in the blank with our choice of : Choose     The next statement in the proof should be (at this point, we fill in our given value for ): Assume .    Next, based on this assumption, we need to show that , where and are our function and our limit . At some point, we need to use .    We conclude our proof with the statement: Therefore, .   > "
 },
@@ -2084,7 +2318,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Ch2Sec3LimitDef.html#subsec-coreidea-16",
   "type": "Example",
-  "number": "2.2.7",
+  "number": "2.3.7",
   "title": "Proving a Statement about a Limit.",
   "body": " Proving a Statement about a Limit   Complete the proof that by filling in the blanks.  Let .  Choose .  Assume .  Thus, .    We begin by filling in the blanks where the choices are specified by the definition. Thus we have  Let .  Choose .  Assume (or equivalently, ).  Thus, .  Focusing on the final line of the proof, we see that we should choose .  We now complete the final write-up of the proof:  Let .  Choose .  Assume (or equivalently, ).  Thus,    "
 },
@@ -2093,7 +2327,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Ch2Sec3LimitDef.html#geometriclimitproof",
   "type": "Example",
-  "number": "2.2.8",
+  "number": "2.3.8",
   "title": "Proving a Statement about the Limit of a Specific Function (Geometric Approach).",
   "body": " Proving a Statement about the Limit of a Specific Function (Geometric Approach)   Prove that       Let . The first part of the definition begins For every , so we must prove that whatever follows is true no matter what positive value of is chosen. By stating Let , we signal our intent to do so.    Without loss of generality, assume . Two questions present themselves: Why do we want and why is it okay to make this assumption?  In answer to the first question: Later on, in the process of solving for , we will discover that involves the quantity . Consequently, we need .  In answer to the second question: If we can find that works for , then it will work for any as well. Keep in mind that, although it is always okay to put an upper bound on , it is never okay to put a lower bound (other than zero) on     Choose . shows how we made this choice of .    \"Three zoomed in images of a function f(x) over the interval\"   This graph shows how we find geometrically for a given for the proof in . FIX THE IMAGE DESCRIPTION     We must show: If , then , so we must begin by assuming We don't really need (in other words, ) for this proof. Since , it is okay to drop . Hence,   Recall that . Thus, and consequently . We also use here.  We might ask at this point: Why did we substitute for on the left-hand side of the inequality and on the right-hand side of the inequality? If we look at , we see that corresponds to the distance on the left of on the -axis and corresponds to the distance on the right. Thus,   We simplify the expression on the left: Then, we add to all parts of the inequality: We square all parts of the inequality. It is okay to do so, since all parts of the inequality are positive: We subtract from all parts of the inequality: Last,     Therefore,      "
 },
@@ -2102,7 +2336,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Ch2Sec3LimitDef.html#subsec-coreidea-18",
   "type": "Example",
-  "number": "2.2.10",
+  "number": "2.3.10",
   "title": "Proving a Statement about the Nonexistence of a Limit.",
   "body": " Proving a Statement about the Nonexistence of a Limit   Let Prove that does not exist.    One way to prove that a limit does not exist is to show that, for any possible value one might think the limit equals, one can find an such that no possible works in the definition.  Suppose a person think the limit exists, and (some common values of might be or , but we'll stick with a generic real number). Let . We show that there is no possible that would satisfy .  The inequality can be written as For any , the solution to are values . This interval contains both positive and negative numbers. When is positive, and when is negative, . Since these two values of are units, apart, it would be impossible for them both to be within of any number .  That is, if then it can't also be true that and vice-versa. Any will result in an interval with both positive and negative values, thus no value of can satisfy the defintion.   "
 },
@@ -2111,7 +2345,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Ch2Sec3LimitDef.html#def-onesidedlimitdef",
   "type": "Definition",
-  "number": "2.2.11",
+  "number": "2.3.11",
   "title": "",
   "body": "   Limit from the Right:  Let be defined over an open interval of the form where . Then, if for every , there exists a such that if , then     Limit from the Left  Let be defined over an open interval of the form where . Then, if for every , there exists a such that if , then .    "
 },
@@ -2120,7 +2354,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Ch2Sec3LimitDef.html#ex-onesidedproof",
   "type": "Example",
-  "number": "2.2.12",
+  "number": "2.3.12",
   "title": "Proving a Statement about a Limit From the Right.",
   "body": " Proving a Statement about a Limit From the Right   Prove that     Let .  Choose . Since we ultimately want , we manipulate this inequality to get , or equivalently, , making a clear choice.  We may also determine geometrically as shown in     \"Three zoomed in images of a function f(x) over the interval\" >   This graph shows how we find for the proof in . FIX THE IMAGE DESCRIPTION   Assume . Thus, . Hence, . Finally, .  Therefore, .   "
 }
