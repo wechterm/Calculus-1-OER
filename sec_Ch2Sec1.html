@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A Preview of Calculus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="OpenStax Calculus">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.7';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c2757fc695bc848c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">OpenStax Calculus</span> <span class="subtitle">Volume 1</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch_second.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_second.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_Ch2Sec2v2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\limit}{\ds\lim}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_first.html" class="internal"><span class="codenumber">1</span> <span class="title">Functions and Graphs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Review of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#subsec_Ch1Sec1Ss1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Representing Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-3" class="internal"><span class="codenumber">1.1.2.1</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-4" class="internal"><span class="codenumber">1.1.2.2</span> <span class="title">Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-5" class="internal"><span class="codenumber">1.1.2.3</span> <span class="title">Algebraic Formulas</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Combining Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-3" class="internal"><span class="codenumber">1.1.3.1</span> <span class="title">Combining Functions with Mathematical Operators</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-4" class="internal"><span class="codenumber">1.1.3.2</span> <span class="title">Function Composition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetry of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Basic Classes of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear Functions and Slope</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-3" class="internal"><span class="codenumber">1.2.2.1</span> <span class="title">Power Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-4" class="internal"><span class="codenumber">1.2.2.2</span> <span class="title">Behavior at Infinity</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-5" class="internal"><span class="codenumber">1.2.2.3</span> <span class="title">Zeros of Polynomial Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-6" class="internal"><span class="codenumber">1.2.2.4</span> <span class="title">Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Algebraic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Transcendental Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Piecewise-Defined Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Transformations of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-9" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-10" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Mathematical Modeling</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3-12" class="internal"><span class="codenumber">1.3.1.1</span> <span class="title">Break-even Analysis</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4-5" class="internal"><span class="codenumber">1.3.2.1</span> <span class="title">Equilibrium</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Quadratic Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Inverse Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Existence of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding a Function’s Inverse</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-2" class="internal"><span class="codenumber">1.4.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-3" class="internal"><span class="codenumber">1.4.2.2</span> <span class="title">Graphing Inverse Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-4" class="internal"><span class="codenumber">1.4.2.3</span> <span class="title">Restricting Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Inverse Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-7" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exponential Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-3" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Evaluating Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-4" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">Graphing Exponential Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-4" class="internal"><span class="codenumber">1.5.2</span> <span class="title">The Number <span class="process-math">\(e \)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-5" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Hyperbolic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-3" class="internal"><span class="codenumber">1.5.4.1</span> <span class="title">Graphs of Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-4" class="internal"><span class="codenumber">1.5.4.2</span> <span class="title">Identities Involving Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-5" class="internal"><span class="codenumber">1.5.4.3</span> <span class="title">Inverse Hyperbolic Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-7" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Key Concepts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_second.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec_Ch2Sec1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">A Preview of Calculus</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Tangent Problem and Differential Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Area Problem and Integral Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Other Aspects of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Limit of a Function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Infinite Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2Exercises" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Section Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.3.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec3.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Limit Laws</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Limit Laws</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Limits of Polynomial and Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-5" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Additional Limit Evaluation Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-onesidedlimits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-7" class="internal"><span class="codenumber">2.4.5</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsubsec-triglimits" class="internal"><span class="codenumber">2.4.6</span> <span class="title">A Few Important Trigonometric Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-LimitLawProofs" class="internal"><span class="codenumber">2.4.7</span> <span class="title">Proofs of the Limit Laws (Optional)</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_Ch2Sec1"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Preview of Calculus</span>
+</h2>
+<section class="introduction" id="sec_Ch2Sec0"><h3 class="heading">Introduction.<span></span>
+</h3>
+<div class="para" id="sec_Ch2Sec0-2">
+<em class="alert">Don’t forget the photo</em><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec0-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec0-3">Science fiction writers often imagine spaceships that can travel to far-off planets in distant galaxies. However, back in 1905, Albert Einstein showed that a limit exists to how fast any object can travel. The problem is that the faster an object moves, the more mass it attains (in the form of energy), according to the equation<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec0-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+m=\frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}},
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch2Sec0-5">where <span class="process-math">\(m_0\)</span> is the object’s mass at rest, <span class="process-math">\(v\)</span> is its speed, and <span class="process-math">\(c\)</span> is the speed of light. What is this speed limit?<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec0-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec0-6">The idea of a limit is central to all of calculus. We begin this chapter by examining why limits are so important. Then, we go on to describe how to find the limit of a function at a given point. Not all functions have limits at all points, and we discuss what this means and how we can tell if a function does or does not have a limit at a particular value.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec0-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="introduction" id="sec_Ch2Sec1-3"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ol class="decimal" id="sec_Ch2Sec1-3-2">
+<li id="sec_Ch2Sec1-3-2-1">
+<div class="para" id="p-derived-sec_Ch2Sec1-3-2-1">Describe the tangent problem and how it led to the idea of a derivative.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch2Sec1-3-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec1-3-2-2">
+<div class="para" id="p-derived-sec_Ch2Sec1-3-2-2">Explain how the idea of a limit is involved in solving the tangent problem.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch2Sec1-3-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec1-3-2-3">
+<div class="para" id="p-derived-sec_Ch2Sec1-3-2-3">Recognize a tangent to a curve at a point as the limit of secant lines.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_Ch2Sec1-3-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec1-3-2-4">
+<div class="para" id="p-derived-sec_Ch2Sec1-3-2-4">Identify instantaneous velocity as the limit of average velocity over a small time interval.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec_Ch2Sec1-3-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec1-3-2-5">
+<div class="para" id="p-derived-sec_Ch2Sec1-3-2-5">Describe the area problem and how it was solved by the integral.</div>
+<div class="autopermalink" data-description="Item 5"><a href="#sec_Ch2Sec1-3-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec1-3-2-6">
+<div class="para" id="p-derived-sec_Ch2Sec1-3-2-6">Explain how the idea of a limit is involved in solving the area problem.</div>
+<div class="autopermalink" data-description="Item 6"><a href="#sec_Ch2Sec1-3-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec1-3-2-7">
+<div class="para" id="p-derived-sec_Ch2Sec1-3-2-7">Recognize how the ideas of limit, derivative, and integral led to the studies of infinite series and multivariable calculus.</div>
+<div class="autopermalink" data-description="Item 7"><a href="#sec_Ch2Sec1-3-2-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="sec_Ch2Sec1-3-3">As we embark on our study of calculus, we shall see how its development arose from common solutions to practical problems in areas such as engineering physics—like the space travel problem posed in the chapter opener. Two key problems led to the initial formulation of calculus: (1) the tangent problem, or how to determine the slope of a line tangent to a curve at a point; and (2) the area problem, or how to determine the area under a curve.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="sec_Ch2Sec1-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Tangent Problem and Differential Calculus</span>
+</h3>
+<div class="para" id="sec_Ch2Sec1-4-2">Rate of change is one of the most critical concepts in calculus. We begin our investigation of rates of change by looking at the graphs of the three lines <span class="process-math">\(f(x)=-2x-3,g(x)=\frac{1}{2}x+1,\)</span> and <span class="process-math">\(h(x)=2,\)</span> shown in <a href="sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_01_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.1">Figure 2.1.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_01_001"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/CNX_Calc_Figure_02_01_001.jpg" class="contained" alt='"Three graphs of different linear functions are shown. The first is f(x) = -2x – 3, with slope of -2 and y intercept of -3. The second is g(x) = x / 2 + 1, with slope of 1/2 and y intercept of 1. The third is h(x) = 2, with slope of 0 and y intercept of 2. The rate of change of each is constant, as determined by the slope."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The rate of change of a linear function is constant in each of these three graphs, with the constant determined by the slope.<div class="autopermalink" data-description="Figure 2.1.1"><a href="#CNX_Calc_Figure_02_01_001" title="Copy heading and permalink for Figure 2.1.1" aria-label="Copy heading and permalink for Figure 2.1.1">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec1-4-4">As we move from left to right along the graph of <span class="process-math">\(f(x)=-2x-3,\)</span> we see that the graph decreases at a constant rate. For every 1 unit we move to the right along the <span class="process-math">\(x\)</span>-axis, the <span class="process-math">\(y\)</span>-coordinate decreases by 2 units. This <dfn class="terminology">rate of change</dfn> is determined by the slope (-2) of the line. Similarly, the slope of 1/2 in the function <span class="process-math">\(g(x)\)</span> tells us that for every change in <span class="process-math">\(x\)</span> of 1 unit there is a corresponding change in <span class="process-math">\(y\)</span> of 1/2 unit. The function <span class="process-math">\(h(x)=2\)</span> has a slope of zero, indicating that the values of the function remain constant. We see that the slope of each linear function indicates the rate of change of the function.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec1-4-5">Compare the graphs of these three functions with the graph of <span class="process-math">\(k(x)=x^2\)</span> (<a href="sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_002" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_01_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.2">Figure 2.1.2</a>). The graph of <span class="process-math">\(k(x)=x^2\)</span> starts from the left by decreasing rapidly, then begins to decrease more slowly and level off, and then finally begins to increase—slowly at first, followed by an increasing rate of increase as it moves toward the right. Unlike a linear function, no single number represents the rate of change for this function. We quite naturally ask: How do we measure the rate of change of a nonlinear function?<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_01_002"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_01_002.jpg" class="contained" alt='"A graph of the parabola k(x) = x^2, which opens up and has its vertex at the origin."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The function <span class="process-math">\(k(x)=x^2\)</span> does not have a constant rate of change.<div class="autopermalink" data-description="Figure 2.1.2"><a href="#CNX_Calc_Figure_02_01_002" title="Copy heading and permalink for Figure 2.1.2" aria-label="Copy heading and permalink for Figure 2.1.2">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec1-4-7">We can approximate the rate of change of a function <span class="process-math">\(f(x)\)</span> at a point <span class="process-math">\((a,f(a))\)</span> on its graph by taking another point <span class="process-math">\((x,f(x))\)</span> on the graph of <span class="process-math">\(f(x),\)</span> drawing a line through the two points, and calculating the slope of the resulting line. Such a line is called a <dfn class="terminology">secant</dfn> line. <a href="sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_003" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_01_003.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.3">Figure 2.1.3</a> shows a secant line to a function <span class="process-math">\(f(x)\)</span> at a point <span class="process-math">\((a,f(a)).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_01_003"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_01_003.jpg" class="contained" alt='"A graph showing a generic curved function going through the points (0,0), (a, fa.), and (x, f(x)). A straight line called the secant line is drawn through the points (a, fa.), and (x, f(x)), going below the curved function between a and x and going above the curved function at values greater than x or less than a. The curved function and the secant line cross once more at some point in the third quadrant. The slope of the secant line is ( f(x) – fa. ) / (x – a)."&gt;'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The slope of a secant line through a point <span class="process-math">\((a,f(a))\)</span> estimates the rate of change of the function at the point <span class="process-math">\((a,f(a)).\)</span><div class="autopermalink" data-description="Figure 2.1.3"><a href="#CNX_Calc_Figure_02_01_003" title="Copy heading and permalink for Figure 2.1.3" aria-label="Copy heading and permalink for Figure 2.1.3">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec1-4-9">We formally define a secant line as follows:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="sec_Ch2Sec1-4-10"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec_Ch2Sec1-4-10-1">The secant to the function <span class="process-math">\(f(x)\)</span> through the points <span class="process-math">\((a,f(a))\)</span> and <span class="process-math">\((x,f(x))\)</span> is the line passing through these points. Its slope is given by<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+m_{\sec}=\frac{f(x)-f(a)}{x-a}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Definition 2.1.4"><a href="#sec_Ch2Sec1-4-10" title="Copy heading and permalink for Definition 2.1.4" aria-label="Copy heading and permalink for Definition 2.1.4">🔗</a></div></article><div class="para" id="sec_Ch2Sec1-4-11">The accuracy of approximating the rate of change of the function with a secant line depends on how close <span class="process-math">\(x\)</span> is to <span class="process-math">\(a\text{.}\)</span> As we see in <a href="sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_004" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_01_004.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.5">Figure 2.1.5</a>, if <span class="process-math">\(x\)</span> is closer to <span class="process-math">\(a\text{,}\)</span> the slope of the secant line is a better measure of the rate of change of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_01_004"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_01_004.jpg" class="contained" alt='"This graph is the same as the previous secant line and generic curved function graph. However, another point x is added, this time plotted closer to a on the x-axis. As such, another secant line is drawn through the points (a, fa.) and the new, closer (x, f(x)). The line stays much closer to the generic curved function around (a, fa.). The slope of this secant line has become a better approximation of the rate of change of the generic function."&gt;'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>As <span class="process-math">\(x\)</span> gets closer to <span class="process-math">\(a\text{,}\)</span> the slope of the secant line becomes a better approximation to the rate of change of the function <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Figure 2.1.5"><a href="#CNX_Calc_Figure_02_01_004" title="Copy heading and permalink for Figure 2.1.5" aria-label="Copy heading and permalink for Figure 2.1.5">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec1-4-13">The secant lines themselves approach a line that is called the <dfn class="terminology">tangent</dfn> to the function <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(a\)</span> (<a href="sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_005" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_01_005.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.7">Figure 2.1.7</a>). The slope of the tangent line to the graph at <span class="process-math">\(a\)</span> measures the rate of change of the function at <span class="process-math">\(a\text{.}\)</span> This value also represents the derivative of the function <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(a\text{,}\)</span> or the rate of change of the function at <span class="process-math">\(a\text{.}\)</span> This derivative is denoted by <span class="process-math">\(f'(a).\)</span> <dfn class="terminology">Differential calculus</dfn> is the field of calculus concerned with the study of derivatives and their applications.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="note remark-like" id="sec_Ch2Sec1-4-14"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Media.</span>
+</h4>
+<div class="para" id="fs-id1170571137117">For an interactive demonstration of the slope of a secant line that you can manipulate yourself, visit this applet (Note: this site requires a Java browser plugin): <a class="external" href="http://www.openstax.org/l/20_mathinsight" target="_blank">Math Insight</a>.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571137117" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 2.1.6: Media"><a href="#sec_Ch2Sec1-4-14" title="Copy heading and permalink for Note 2.1.6: Media" aria-label="Copy heading and permalink for Note 2.1.6: Media">🔗</a></div></article><figure class="figure figure-like" id="CNX_Calc_Figure_02_01_005"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_01_005.jpg" class="contained" alt='"This graph is a continuation of the previous two. This time, the graph contains the curved function, the two secant lines, and a tangent line. As x approaches a, the secant lines approach the tangent line."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Solving the <dfn class="terminology">Tangent Problem</dfn>: As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\text{,}\)</span> the secant lines approach the tangent line.<div class="autopermalink" data-description="Figure 2.1.7"><a href="#CNX_Calc_Figure_02_01_005" title="Copy heading and permalink for Figure 2.1.7" aria-label="Copy heading and permalink for Figure 2.1.7">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec1-4-16">
+<a href="sec_Ch2Sec1.html#fs-id1170573387465" class="xref" data-knowl="./knowl/xref/fs-id1170573387465.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.1.8: Finding Slopes of Secant Lines">Example 2.1.8</a> illustrates how to find slopes of secant lines. These slopes estimate the slope of the tangent line or, equivalently, the rate of change of the function at the point at which the slopes are calculated.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170573387465"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Slopes of Secant Lines.</span>
+</h4>
+<div class="para" id="fs-id1170573387465-2-1">Estimate the slope of the tangent line (rate of change) to <span class="process-math">\(f(x)=x^2\)</span> at <span class="process-math">\(x=1\)</span> by finding slopes of secant lines through <span class="process-math">\((1,1)\)</span> and each of the following points on the graph of <span class="process-math">\(f(x)=x^2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573387465-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="decimal" id="fs-id1170573387465-2-2">
+<li id="fs-id1170573387465-2-2-1">
+<div class="para" id="p-derived-fs-id1170573387465-2-2-1"><span class="process-math">\(\displaystyle (2,4)\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#fs-id1170573387465-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="fs-id1170573387465-2-2-2">
+<div class="para" id="p-derived-fs-id1170573387465-2-2-2"><span class="process-math">\(\displaystyle (\frac{3}{2},\frac{9}{4})\)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#fs-id1170573387465-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="solutions"><details id="fs-id1170573387465-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573387465-3-1">Use the formula for the slope of a secant line from the definition.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573387465-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="fs-id1170573387465-3-2">
+<li id="fs-id1170573387465-3-2-1">
+<div class="para" id="p-derived-fs-id1170573387465-3-2-1"><span class="process-math">\(\displaystyle m_{\sec}= \frac{4-1}{2-1}=3\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#fs-id1170573387465-3-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="fs-id1170573387465-3-2-2">
+<div class="para" id="p-derived-fs-id1170573387465-3-2-2"><span class="process-math">\(\displaystyle m_{\sec}= \frac{\frac{9}{4}-1}{\frac{3}{2}-1}=\frac{5}{2}=2.5\)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#fs-id1170573387465-3-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="fs-id1170573387465-3-3">The point in part b. is closer to the point <span class="process-math">\((1,1),\)</span> so the slope of 2.5 is closer to the slope of the tangent line. A good estimate for the slope of the tangent would be in the range of 2 to 2.5 (<a href="sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_011" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_01_011.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.9">Figure 2.1.9</a>).<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573387465-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_01_011"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_01_011.jpg" class="contained" alt='"Two graphs of the parabola f(x) = x^2 are shown. The first has a secant line drawn, intersecting the parabola at (1,1) and (2,4). The second has a secant line drawn, intersecting the parabola at (1,1) and (3/2, 9/4). These lines provide successively closer approximations to the tangent line to the function at (1,1)."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The secant lines to <span class="process-math">\(f(x)=x^2\)</span> at <span class="process-math">\((1,1)\)</span> through (a) <span class="process-math">\((2,4)\)</span> and (b) <span class="process-math">\((\frac{3}{2},\frac{9}{4})\)</span> provide successively closer approximations to the tangent line to <span class="process-math">\(f(x)=x^2\)</span> at <span class="process-math">\((1,1).\)</span><div class="autopermalink" data-description="Figure 2.1.9"><a href="#CNX_Calc_Figure_02_01_011" title="Copy heading and permalink for Figure 2.1.9" aria-label="Copy heading and permalink for Figure 2.1.9">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 2.1.8.1"><a href="#fs-id1170573387465-3" title="Copy heading and permalink for Solution 2.1.8.1" aria-label="Copy heading and permalink for Solution 2.1.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.1.8: Finding Slopes of Secant Lines"><a href="#fs-id1170573387465" title="Copy heading and permalink for Example 2.1.8: Finding Slopes of Secant Lines" aria-label="Copy heading and permalink for Example 2.1.8: Finding Slopes of Secant Lines">🔗</a></div></article><details id="sec_Ch2Sec1-4-18" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec1-4-18-1-1">Estimate the slope of the tangent line (rate of change) to <span class="process-math">\(f(x)=x^2\)</span> at <span class="process-math">\(x=1\)</span> by finding slopes of secant lines through <span class="process-math">\((1,1)\)</span> and the point <span class="process-math">\((\frac{5}{4},\frac{25}{16})\)</span> on the graph of <span class="process-math">\(f(x)=x^2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec1-4-18-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec1-4-18-3-1">Use <a href="sec_Ch2Sec1.html#fs-id1170573387465" class="xref" data-knowl="./knowl/xref/fs-id1170573387465.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.1.8: Finding Slopes of Secant Lines">Example 2.1.8</a> and <a href="sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_011" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_01_011.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.9">Figure 2.1.9</a> as a solving guide.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-18-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.1.10.1"><a href="#sec_Ch2Sec1-4-18-3" title="Copy heading and permalink for Hint 2.1.10.1" aria-label="Copy heading and permalink for Hint 2.1.10.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec1-4-18-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec1-4-18-2-1">2.25<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-18-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1.10.1"><a href="#sec_Ch2Sec1-4-18-2" title="Copy heading and permalink for Solution 2.1.10.1" aria-label="Copy heading and permalink for Solution 2.1.10.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.1.10"><a href="#sec_Ch2Sec1-4-18" title="Copy heading and permalink for Checkpoint 2.1.10" aria-label="Copy heading and permalink for Checkpoint 2.1.10">🔗</a></div></article></details><div class="para" id="sec_Ch2Sec1-4-19">We continue our investigation by exploring a related question. Keeping in mind that velocity may be thought of as the rate of change of position, suppose that we have a function, <span class="process-math">\(s(t),\)</span> that gives the position of an object along a coordinate axis at any given time <span class="process-math">\(t \text{.}\)</span> Can we use these same ideas to create a reasonable definition of the instantaneous velocity at a given time <span class="process-math">\(t=a?\)</span> We start by approximating the instantaneous velocity with an average velocity. First, recall that the speed of an object traveling at a constant rate is the ratio of the distance traveled to the length of time it has traveled. We define the <dfn class="terminology">average velocity</dfn> of an object over a time period to be the change in its position divided by the length of the time period.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="sec_Ch2Sec1-4-20"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec_Ch2Sec1-4-20-1">Let <span class="process-math">\(s(t)\)</span> be the position of an object moving along a coordinate axis at time <span class="process-math">\(t \text{.}\)</span> The <dfn class="terminology">average velocity</dfn> of the object over a time interval <span class="process-math">\([a,t]\)</span> where <span class="process-math">\(a\lt t\)</span> (or <span class="process-math">\([t,a]\)</span> if <span class="process-math">\(t\lt a)\)</span> is<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-20-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+v_{\text{ ave }}= \frac{s(t)-s(a)}{t-a}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Definition 2.1.11"><a href="#sec_Ch2Sec1-4-20" title="Copy heading and permalink for Definition 2.1.11" aria-label="Copy heading and permalink for Definition 2.1.11">🔗</a></div></article><div class="para" id="sec_Ch2Sec1-4-21">As <span class="process-math">\(t \)</span> is chosen closer to <span class="process-math">\(a\text{,}\)</span> the average velocity becomes closer to the instantaneous velocity. Note that finding the average velocity of a position function over a time interval is essentially the same as finding the slope of a secant line to a function. Furthermore, to find the slope of a tangent line at a point <span class="process-math">\(a\text{,}\)</span> we let the <span class="process-math">\(x\)</span>-values approach <span class="process-math">\(a\)</span> in the slope of the secant line. Similarly, to find the instantaneous velocity at time <span class="process-math">\(a\text{,}\)</span> we let the <span class="process-math">\(t \)</span>-values approach <span class="process-math">\(a\)</span> in the average velocity. This process of letting <span class="process-math">\(x\)</span> or <span class="process-math">\(t \)</span> approach <span class="process-math">\(a\)</span> in an expression is called taking a <dfn class="terminology">limit</dfn>. Thus, we may define the <dfn class="terminology">instantaneous velocity</dfn> as follows.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="sec_Ch2Sec1-4-22"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec_Ch2Sec1-4-22-1">For a position function <span class="process-math">\(s(t),\)</span> the instantaneous velocity at a time <span class="process-math">\(t=a\)</span> is the value that the average velocities approach on intervals of the form <span class="process-math">\([a,t]\)</span> and <span class="process-math">\([t,a]\)</span> as the values of <span class="process-math">\(t \)</span> become closer to <span class="process-math">\(a\text{,}\)</span> provided such a value exists.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-22-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.1.12"><a href="#sec_Ch2Sec1-4-22" title="Copy heading and permalink for Definition 2.1.12" aria-label="Copy heading and permalink for Definition 2.1.12">🔗</a></div></article><div class="para" id="sec_Ch2Sec1-4-23">
+<a href="sec_Ch2Sec1.html#fs-id1170573397285" class="xref" data-knowl="./knowl/xref/fs-id1170573397285.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.1.13: Finding Average Velocity">Example 2.1.13</a> illustrates this concept of limits and average velocity.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170573397285"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Average Velocity.</span>
+</h4>
+<div class="para" id="fs-id1170573397285-2-1">A rock is dropped from a height of 64 ft. It is determined that its height (in feet) above ground <span class="process-math">\(t \)</span> seconds later (for <span class="process-math">\(0\leq t\leq 2)\)</span> is given by <span class="process-math">\(s(t)=-16t^2+64.\)</span> Find the average velocity of the rock over each of the given time intervals. Use this information to guess the instantaneous velocity of the rock at time <span class="process-math">\(t=0.5.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573397285-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="decimal" id="fs-id1170573397285-2-2">
+<li id="fs-id1170573397285-2-2-1">
+<div class="para" id="p-derived-fs-id1170573397285-2-2-1"><span class="process-math">\(\displaystyle [0.49,0.5]\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#fs-id1170573397285-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="fs-id1170573397285-2-2-2">
+<div class="para" id="p-derived-fs-id1170573397285-2-2-2"><span class="process-math">\(\displaystyle [0.5,0.51]\)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#fs-id1170573397285-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="solutions"><details id="fs-id1170573397285-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573397285-3-1">Substitute the data into the formula for the definition of average velocity.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573397285-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="fs-id1170573397285-3-2">
+<li id="fs-id1170573397285-3-2-1">
+<div class="para" id="p-derived-fs-id1170573397285-3-2-1"><span class="process-math">\(\displaystyle v_{\text{ave}}= \frac{s(0.5)-s(0.49)}{0.5-0.49}=-15.84\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#fs-id1170573397285-3-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="fs-id1170573397285-3-2-2">
+<div class="para" id="p-derived-fs-id1170573397285-3-2-2"><span class="process-math">\(\displaystyle v_{\text{ave}}= \frac{s(0.51)-s(0.5)}{0.51-0.5}=-16.16\)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#fs-id1170573397285-3-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="fs-id1170573397285-3-3">The instantaneous velocity is somewhere between -15.84 and -16.16 ft/sec. A good guess might be -16 ft/sec.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573397285-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1.13.1"><a href="#fs-id1170573397285-3" title="Copy heading and permalink for Solution 2.1.13.1" aria-label="Copy heading and permalink for Solution 2.1.13.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.1.13: Finding Average Velocity"><a href="#fs-id1170573397285" title="Copy heading and permalink for Example 2.1.13: Finding Average Velocity" aria-label="Copy heading and permalink for Example 2.1.13: Finding Average Velocity">🔗</a></div></article><details id="sec_Ch2Sec1-4-25" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec1-4-25-1-1">An object moves along a coordinate axis so that its position at time <span class="process-math">\(t \)</span> is given by <span class="process-math">\(s(t)=t^3.\)</span> Estimate its instantaneous velocity at time <span class="process-math">\(t=2\)</span> by computing its average velocity over the time interval <span class="process-math">\([2,2.001].\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-25-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec1-4-25-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec1-4-25-3-1">Use <span class="process-math">\(v_{\text{ave}}= \frac{s(2.001)-s(2)}{2.001-2}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-25-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.1.14.1"><a href="#sec_Ch2Sec1-4-25-3" title="Copy heading and permalink for Hint 2.1.14.1" aria-label="Copy heading and permalink for Hint 2.1.14.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec1-4-25-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec1-4-25-2-1">12.006001<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-4-25-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1.14.1"><a href="#sec_Ch2Sec1-4-25-2" title="Copy heading and permalink for Solution 2.1.14.1" aria-label="Copy heading and permalink for Solution 2.1.14.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.1.14"><a href="#sec_Ch2Sec1-4-25" title="Copy heading and permalink for Checkpoint 2.1.14" aria-label="Copy heading and permalink for Checkpoint 2.1.14">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.1.1: The Tangent Problem and Differential Calculus"><a href="#sec_Ch2Sec1-4" title="Copy heading and permalink for Subsection 2.1.1: The Tangent Problem and Differential Calculus" aria-label="Copy heading and permalink for Subsection 2.1.1: The Tangent Problem and Differential Calculus">🔗</a></div></section><section class="subsection" id="sec_Ch2Sec1-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Area Problem and Integral Calculus</span>
+</h3>
+<div class="para" id="sec_Ch2Sec1-5-2">We now turn our attention to a classic question from calculus. Many quantities in physics—for example, quantities of work—may be interpreted as the area under a curve. This leads us to ask the question: How can we find the area between the graph of a function and the <span class="process-math">\(x\)</span>-axis over an interval (<a href="sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_006" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_01_006.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.15">Figure 2.1.15</a>)?<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_01_006"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_01_006.jpg" class="contained" alt='"A graph is shown of a generic curved function f(x) shaped like a hill in quadrant one. An area under the function is shaded above the x-axis and between x=a and x=b."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The <dfn class="terminology">Area Problem</dfn>: How do we find the area of the shaded region?<div class="autopermalink" data-description="Figure 2.1.15"><a href="#CNX_Calc_Figure_02_01_006" title="Copy heading and permalink for Figure 2.1.15" aria-label="Copy heading and permalink for Figure 2.1.15">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec1-5-4">As in the answer to our previous questions on velocity, we first try to approximate the solution. We approximate the area by dividing up the interval <span class="process-math">\([a,b]\)</span> into smaller intervals in the shape of rectangles. The approximation of the area comes from adding up the areas of these rectangles (<a href="sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_007" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_01_007.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.16">Figure 2.1.16</a>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_01_007"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_01_007.jpg" class="contained" alt='"The graph is the same as the previous image, with one difference. Instead of the area completely shaded under the curved function, the interval [a, b] is divided into smaller intervals in the shape of rectangles. The rectangles have the same small width. The height of each rectangle is the height of the function at the midpoint of the base of that specific rectangle."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The area of the region under the curve is approximated by summing the areas of thin rectangles.<div class="autopermalink" data-description="Figure 2.1.16"><a href="#CNX_Calc_Figure_02_01_007" title="Copy heading and permalink for Figure 2.1.16" aria-label="Copy heading and permalink for Figure 2.1.16">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec1-5-6">As the widths of the rectangles become smaller (approach zero), the sums of the areas of the rectangles approach the area between the graph of <span class="process-math">\(f(x)\)</span> and the <span class="process-math">\(x\)</span>-axis over the interval <span class="process-math">\([a,b].\)</span> Once again, we find ourselves taking a limit. Limits of this type serve as a basis for the definition of the definite integral. <dfn class="terminology">Integral calculus</dfn> is the study of integrals and their applications.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-5-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170573406196"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Estimation Using Rectangles.</span>
+</h4>
+<div class="para" id="fs-id1170573406196-2-1">Estimate the area between the <span class="process-math">\(x\)</span>-axis and the graph of <span class="process-math">\(f(x)=x^2+1\)</span> over the interval <span class="process-math">\([0,3]\)</span> by using the three rectangles shown in <a href="sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_008" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_01_008.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.18">Figure 2.1.18</a>.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573406196-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="CNX_Calc_Figure_02_01_008"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_01_008.jpg" class="contained" alt='"A graph of the parabola f(x) – x^2 + 1 drawn on graph paper with all units shown. The rectangles completely contained under the function and above the x-axis in the interval [0,3] are shaded. This strategy sets the heights of the rectangles as the smaller of the two corners that could intersect with the function. As such, the rectangles are shorter than the height of the function."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The area of the region under the curve of <span class="process-math">\(f(x)=x^2+1\)</span> can be estimated using rectangles.<div class="autopermalink" data-description="Figure 2.1.18"><a href="#CNX_Calc_Figure_02_01_008" title="Copy heading and permalink for Figure 2.1.18" aria-label="Copy heading and permalink for Figure 2.1.18">🔗</a></div></figcaption></figure><div class="solutions"><details id="fs-id1170573406196-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573406196-3-1">The areas of the three rectangles are 1 unit<span class="process-math">\(^2\text{,}\)</span> 2 unit<span class="process-math">\(^2\text{,}\)</span> and 5 unit<span class="process-math">\(^2\text{.}\)</span> Using these rectangles, our area estimate is 8 unit<span class="process-math">\(^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573406196-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1.17.1"><a href="#fs-id1170573406196-3" title="Copy heading and permalink for Solution 2.1.17.1" aria-label="Copy heading and permalink for Solution 2.1.17.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.1.17: Estimation Using Rectangles"><a href="#fs-id1170573406196" title="Copy heading and permalink for Example 2.1.17: Estimation Using Rectangles" aria-label="Copy heading and permalink for Example 2.1.17: Estimation Using Rectangles">🔗</a></div></article><details id="sec_Ch2Sec1-5-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec1-5-8-1-1">Estimate the area between the <span class="process-math">\(x\)</span>-axis and the graph of <span class="process-math">\(f(x)=x^2+1\)</span> over the interval <span class="process-math">\([0,3]\)</span> by using the three rectangles shown here:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-5-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_01_009.jpg" class="contained" alt='"A graph of the same parabola f(x) = x^2 + 1, but with a different shading strategy over the interval [0,3]. This time, the shaded rectangles are given the height of the taller corner that could intersect with the function. As such, the rectangles go higher than the height of the function'></div>
+<div class="solutions">
+<details id="sec_Ch2Sec1-5-8-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec1-5-8-3-1">Use <a href="sec_Ch2Sec1.html#fs-id1170573406196" class="xref" data-knowl="./knowl/xref/fs-id1170573406196.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.1.17: Estimation Using Rectangles">Example 2.1.17</a> as a guide.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-5-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.1.19.1"><a href="#sec_Ch2Sec1-5-8-3" title="Copy heading and permalink for Hint 2.1.19.1" aria-label="Copy heading and permalink for Hint 2.1.19.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec1-5-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec1-5-8-2-1">16 unit<span class="process-math">\(^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-5-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1.19.1"><a href="#sec_Ch2Sec1-5-8-2" title="Copy heading and permalink for Solution 2.1.19.1" aria-label="Copy heading and permalink for Solution 2.1.19.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.1.19"><a href="#sec_Ch2Sec1-5-8" title="Copy heading and permalink for Checkpoint 2.1.19" aria-label="Copy heading and permalink for Checkpoint 2.1.19">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.1.2: The Area Problem and Integral Calculus"><a href="#sec_Ch2Sec1-5" title="Copy heading and permalink for Subsection 2.1.2: The Area Problem and Integral Calculus" aria-label="Copy heading and permalink for Subsection 2.1.2: The Area Problem and Integral Calculus">🔗</a></div></section><section class="subsection" id="sec_Ch2Sec1-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Other Aspects of Calculus</span>
+</h3>
+<div class="para" id="sec_Ch2Sec1-6-2">So far, we have studied functions of one variable only. Such functions can be represented visually using graphs in two dimensions; however, there is no good reason to restrict our investigation to two dimensions. Suppose, for example, that instead of determining the velocity of an object moving along a coordinate axis, we want to determine the velocity of a rock fired from a catapult at a given time, or of an airplane moving in three dimensions. We might want to graph real-value functions of two variables or determine volumes of solids of the type shown in <a href="sec_Ch2Sec1.html#CNX_Calc_Figure_02_01_010" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_01_010.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.1.20">Figure 2.1.20</a>. These are only a few of the types of questions that can be asked and answered using <dfn class="terminology">multivariable calculus</dfn>. Informally, multivariable calculus can be characterized as the study of the calculus of functions of two or more variables. However, before exploring these and other ideas, we must first lay a foundation for the study of calculus in one variable by exploring the concept of a limit.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec1-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_01_010"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_01_010.jpg" class="contained" alt='"A diagram in three dimensional space, over the x, y, and z axis where z = f(x,y). The base is the x,y axis, and the height is the z axis. The base is a rectangle contained in the x,y axis plane. The top is a surface of changing height with corners located directly above those of the rectangle in the x,y plane.. The highest point is above the corner at x=0, y=0. The lowest point is at the corner somewhere in the first quadrant of the x, y plane. The other two points are roughly the same height and located above the corners on the x axis and y axis. Lines are drawn connecting the corners of the rectangle to those of the surface."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>We can use multivariable calculus to find the volume between a surface defined by a function of two variables and a plane.<div class="autopermalink" data-description="Figure 2.1.20"><a href="#CNX_Calc_Figure_02_01_010" title="Copy heading and permalink for Figure 2.1.20" aria-label="Copy heading and permalink for Figure 2.1.20">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Subsection 2.1.3: Other Aspects of Calculus"><a href="#sec_Ch2Sec1-6" title="Copy heading and permalink for Subsection 2.1.3: Other Aspects of Calculus" aria-label="Copy heading and permalink for Subsection 2.1.3: Other Aspects of Calculus">🔗</a></div></section><section class="subsection" id="sec_Ch2Sec1-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Key Concepts</span>
+</h3>
+<ul class="disc" id="sec_Ch2Sec1-7-2">
+<li id="sec_Ch2Sec1-7-2-1">
+<div class="para" id="p-derived-sec_Ch2Sec1-7-2-1">Differential calculus arose from trying to solve the problem of determining the slope of a line tangent to a curve at a point. The slope of the tangent line indicates the rate of change of the function, also called the derivative. Calculating a derivative requires finding a limit.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch2Sec1-7-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec1-7-2-2">
+<div class="para" id="p-derived-sec_Ch2Sec1-7-2-2">Integral calculus arose from trying to solve the problem of finding the area of a region between the graph of a function and the <span class="process-math">\(x\)</span>-axis. We can approximate the area by dividing it into thin rectangles and summing the areas of these rectangles. This summation leads to the value of a function called the integral. The integral is also calculated by finding a limit and, in fact, is related to the derivative of a function.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch2Sec1-7-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec1-7-2-3">
+<div class="para" id="p-derived-sec_Ch2Sec1-7-2-3">Multivariable calculus enables us to solve problems in three-dimensional space, including determining motion in space and finding volumes of solids.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch2Sec1-7-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Subsection 2.1.4: Key Concepts"><a href="#sec_Ch2Sec1-7" title="Copy heading and permalink for Subsection 2.1.4: Key Concepts" aria-label="Copy heading and permalink for Subsection 2.1.4: Key Concepts">🔗</a></div></section><section class="subsection" id="sec_Ch2Sec1-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Key Equations</span>
+</h3>
+<ul class="disc" id="sec_Ch2Sec1-8-2">
+<li id="sec_Ch2Sec1-8-2-1">
+<div class="para" id="p-derived-sec_Ch2Sec1-8-2-1">Slope of a Secant Line <span class="process-math">\(m_{\sec}= \frac{f(x)-f(a)}{x-a}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch2Sec1-8-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec1-8-2-2">
+<div class="para" id="p-derived-sec_Ch2Sec1-8-2-2">Average Velocity over Interval <span class="process-math">\([a,t]\)</span> <span class="process-math">\(v_{\text{ave}}=\frac{s(t)-s(a)}{t-a}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch2Sec1-8-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Subsection 2.1.5: Key Equations"><a href="#sec_Ch2Sec1-8" title="Copy heading and permalink for Subsection 2.1.5: Key Equations" aria-label="Copy heading and permalink for Subsection 2.1.5: Key Equations">🔗</a></div></section><div class="autopermalink" data-description="Section 2.1: A Preview of Calculus"><a href="#sec_Ch2Sec1" title="Copy heading and permalink for Section 2.1: A Preview of Calculus" aria-label="Copy heading and permalink for Section 2.1: A Preview of Calculus">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch_second.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_Ch2Sec2v2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

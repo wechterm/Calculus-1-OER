@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Limit Laws</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="OpenStax Calculus">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.7';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c2757fc695bc848c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">OpenStax Calculus</span> <span class="subtitle">Volume 1</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="Ch2Sec3LimitDef.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_second.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\limit}{\ds\lim}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_first.html" class="internal"><span class="codenumber">1</span> <span class="title">Functions and Graphs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Review of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#subsec_Ch1Sec1Ss1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Representing Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-3" class="internal"><span class="codenumber">1.1.2.1</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-4" class="internal"><span class="codenumber">1.1.2.2</span> <span class="title">Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-5" class="internal"><span class="codenumber">1.1.2.3</span> <span class="title">Algebraic Formulas</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Combining Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-3" class="internal"><span class="codenumber">1.1.3.1</span> <span class="title">Combining Functions with Mathematical Operators</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-4" class="internal"><span class="codenumber">1.1.3.2</span> <span class="title">Function Composition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetry of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Basic Classes of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear Functions and Slope</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-3" class="internal"><span class="codenumber">1.2.2.1</span> <span class="title">Power Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-4" class="internal"><span class="codenumber">1.2.2.2</span> <span class="title">Behavior at Infinity</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-5" class="internal"><span class="codenumber">1.2.2.3</span> <span class="title">Zeros of Polynomial Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-6" class="internal"><span class="codenumber">1.2.2.4</span> <span class="title">Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Algebraic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Transcendental Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Piecewise-Defined Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Transformations of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-9" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-10" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Mathematical Modeling</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3-12" class="internal"><span class="codenumber">1.3.1.1</span> <span class="title">Break-even Analysis</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4-5" class="internal"><span class="codenumber">1.3.2.1</span> <span class="title">Equilibrium</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Quadratic Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Inverse Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Existence of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding a Function’s Inverse</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-2" class="internal"><span class="codenumber">1.4.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-3" class="internal"><span class="codenumber">1.4.2.2</span> <span class="title">Graphing Inverse Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-4" class="internal"><span class="codenumber">1.4.2.3</span> <span class="title">Restricting Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Inverse Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-7" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exponential Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-3" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Evaluating Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-4" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">Graphing Exponential Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-4" class="internal"><span class="codenumber">1.5.2</span> <span class="title">The Number <span class="process-math">\(e \)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-5" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Hyperbolic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-3" class="internal"><span class="codenumber">1.5.4.1</span> <span class="title">Graphs of Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-4" class="internal"><span class="codenumber">1.5.4.2</span> <span class="title">Identities Involving Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-5" class="internal"><span class="codenumber">1.5.4.3</span> <span class="title">Inverse Hyperbolic Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-7" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Key Concepts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_second.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">A Preview of Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Tangent Problem and Differential Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Area Problem and Integral Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Other Aspects of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Limit of a Function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Infinite Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2Exercises" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Section Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.3.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec_Ch2Sec3.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Limit Laws</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Limit Laws</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Limits of Polynomial and Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-5" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Additional Limit Evaluation Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-onesidedlimits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-7" class="internal"><span class="codenumber">2.4.5</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsubsec-triglimits" class="internal"><span class="codenumber">2.4.6</span> <span class="title">A Few Important Trigonometric Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-LimitLawProofs" class="internal"><span class="codenumber">2.4.7</span> <span class="title">Proofs of the Limit Laws (Optional)</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_Ch2Sec3"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Limit Laws</span>
+</h2>
+<section class="introduction" id="sec_Ch2Sec3-2"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ol class="decimal" id="sec_Ch2Sec3-2-2">
+<li id="sec_Ch2Sec3-2-2-1">
+<div class="para" id="p-derived-sec_Ch2Sec3-2-2-1">Recognize the basic limit laws.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch2Sec3-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec3-2-2-2">
+<div class="para" id="p-derived-sec_Ch2Sec3-2-2-2">Use the limit laws to evaluate the limit of a function.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch2Sec3-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec3-2-2-3">
+<div class="para" id="p-derived-sec_Ch2Sec3-2-2-3">Use the limit laws to evaluate the limit of a polynomial or rational function.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_Ch2Sec3-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec3-2-2-4">
+<div class="para" id="p-derived-sec_Ch2Sec3-2-2-4">Evaluate the limit of a function by factoring or by using conjugates.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec_Ch2Sec3-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec3-2-2-5">
+<div class="para" id="p-derived-sec_Ch2Sec3-2-2-5">Evaluate the limit of a function by using the squeeze theorem.</div>
+<div class="autopermalink" data-description="Item 5"><a href="#sec_Ch2Sec3-2-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="sec_Ch2Sec3-2-3">In <a href="sec_Ch2Sec2v2.html" class="internal" title="Section 2.2: The Limit of a Function">Section 2.2</a>, we evaluated limits by looking at graphs or by constructing a table of values. In this section, we establish laws for calculating limits and learn how to apply these laws.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="sec_Ch2Sec3-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Limit Laws</span>
+</h3>
+<div class="para" id="sec_Ch2Sec3-3-2">A few basic rules allow us to break down complicated functions into simpler ones when calculating limits. By using these limit laws, we can simplify many limit computations. We start with two important limits.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="fs-id1170572451153"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Basic Limit Results.</span>
+</h4>
+<div class="para" id="fs-id1170572451153-2-1">For any real number <span class="process-math">\(a\)</span> and any constant <span class="process-math">\(c\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572451153-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-roman ol-marker-1" id="fs-id1170572451153-2-2">
+<li id="fs-id1170572451153-2-2-1">
+<div class="para" id="p-derived-fs-id1170572451153-2-2-1"><span class="process-math">\(\displaystyle \limit_{x \to a }x=a\)</span></div>
+<div class="autopermalink" data-description="Item i"><a href="#fs-id1170572451153-2-2-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="fs-id1170572451153-2-2-2">
+<div class="para" id="p-derived-fs-id1170572451153-2-2-2"><span class="process-math">\(\displaystyle \limit_{x \to a }c=c\)</span></div>
+<div class="autopermalink" data-description="Item ii"><a href="#fs-id1170572451153-2-2-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Theorem 2.4.1: Basic Limit Results"><a href="#fs-id1170572451153" title="Copy heading and permalink for Theorem 2.4.1: Basic Limit Results" aria-label="Copy heading and permalink for Theorem 2.4.1: Basic Limit Results">🔗</a></div></article><details id="fs-id1170572451153-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><ol class="lower-roman ol-marker-1" id="fs-id1170572451153-3-1">
+<li id="fs-id1170572451153-3-1-1">
+<div class="para logical" id="fs-id1170572451153-3-1-1-1">
+<div class="para">For <span class="process-math">\(\varepsilon \gt 0\text{,}\)</span> let <span class="process-math">\(\delta=\varepsilon\text{.}\)</span>  Whenever</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0\lt |x-a|\lt \delta
+\end{equation*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|f(x)-a|=|x-a|\lt\delta=\varepsilon
+\end{equation*}
+</div>
+<div class="para">Therefore, <span class="process-math">\(\ds\lim_{x\to a}x=a\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572451153-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#fs-id1170572451153-3-1-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="fs-id1170572451153-3-1-2">
+<div class="para logical" id="fs-id1170572451153-3-1-2-1">
+<div class="para">For <span class="process-math">\(\varepsilon \gt 0\text{,}\)</span> let <span class="process-math">\(\delta=\varepsilon\text{.}\)</span>  Whenever</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0\lt |x-a|\lt \delta
+\end{equation*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|f(x)-c|=|c-c|=0\lt\delta=\varepsilon
+\end{equation*}
+</div>
+<div class="para">Therefore, <span class="process-math">\(\ds\lim_{x\to a}c=c\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572451153-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#fs-id1170572451153-3-1-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Proof 2.4.1.1"><a href="#fs-id1170572451153-3" title="Copy heading and permalink for Proof 2.4.1.1" aria-label="Copy heading and permalink for Proof 2.4.1.1">🔗</a></div></article></details><article class="example example-like" id="fs-id1170572111463"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating a Basic Limit.</span>
+</h4>
+<div class="para" id="fs-id1170572111463-2-1">Evaluate each of the following limits using <a href="sec_Ch2Sec3.html#fs-id1170572451153" class="xref" data-knowl="./knowl/xref/fs-id1170572451153.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.4.1: Basic Limit Results">Theorem 2.4.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572111463-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha ol-marker-2" id="fs-id1170572111463-2-2">
+<li id="fs-id1170572111463-2-2-1">
+<div class="para" id="p-derived-fs-id1170572111463-2-2-1"><span class="process-math">\(\displaystyle \limit_{x \to 2 }x\)</span></div>
+<div class="autopermalink" data-description="Item a"><a href="#fs-id1170572111463-2-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="fs-id1170572111463-2-2-2">
+<div class="para" id="p-derived-fs-id1170572111463-2-2-2"><span class="process-math">\(\displaystyle \limit_{x \to 2 }5\)</span></div>
+<div class="autopermalink" data-description="Item b"><a href="#fs-id1170572111463-2-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="solutions"><details id="fs-id1170572111463-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<ol class="lower-alpha ol-marker-2" id="fs-id1170572111463-3-1">
+<li id="fs-id1170572111463-3-1-1">
+<div class="para" id="p-derived-fs-id1170572111463-3-1-1">The limit of <span class="process-math">\(x\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> is <span class="process-math">\(a\text{:}\)</span> <span class="process-math">\(\limit_{x \to 2 }x=2.\)</span>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#fs-id1170572111463-3-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="fs-id1170572111463-3-1-2">
+<div class="para" id="p-derived-fs-id1170572111463-3-1-2">The limit of a constant is that constant: <span class="process-math">\(\limit_{x \to 2 }5=5.\)</span>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#fs-id1170572111463-3-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 2.4.2.1"><a href="#fs-id1170572111463-3" title="Copy heading and permalink for Solution 2.4.2.1" aria-label="Copy heading and permalink for Solution 2.4.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.4.2: Evaluating a Basic Limit"><a href="#fs-id1170572111463" title="Copy heading and permalink for Example 2.4.2: Evaluating a Basic Limit" aria-label="Copy heading and permalink for Example 2.4.2: Evaluating a Basic Limit">🔗</a></div></article><div class="para" id="sec_Ch2Sec3-3-5">We now take a look at the <dfn class="terminology">limit laws</dfn>, the individual properties of limits. The proofs that these laws hold are included at the end of the section.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="limitlaws"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limit Laws.</span>
+</h4>
+<div class="para" id="limitlaws-2">Let <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> be defined for all <span class="process-math">\(x\neq a\)</span> over some open interval containing <span class="process-math">\(a\text{.}\)</span> Assume that <span class="process-math">\(L \)</span> and <span class="process-math">\(M \)</span> are real numbers such that <span class="process-math">\(\limit_{x \to a }f(x)=L\)</span> and <span class="process-math">\(\limit_{x \to a }g(x)=M.\)</span> Let <span class="process-math">\(c\)</span> be a constant. Then, each of the following statements holds:<div class="autopermalink" data-description="Paragraph"><a href="#limitlaws-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="limitlaws-3">
+<dfn class="terminology">Sum law for limits</dfn>: <span class="process-math">\(\limit_{x \to a }(f(x)+g(x))=\limit_{x \to a }f(x)+\limit_{x \to a }g(x)=L+M\)</span><div class="autopermalink" data-description="Paragraph"><a href="#limitlaws-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="limitlaws-4">
+<dfn class="terminology">Difference law for limits</dfn>: <span class="process-math">\(\limit_{x \to a }(f(x)-g(x))=\limit_{x \to a }f(x)-\limit_{x \to a }g(x)=L-M\)</span><div class="autopermalink" data-description="Paragraph"><a href="#limitlaws-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="limitlaws-5">
+<dfn class="terminology">Constant multiple law for limits</dfn>: <span class="process-math">\(\limit_{x \to a }cf(x)=c\cdot \limit_{x \to a }f(x)=cL\)</span><div class="autopermalink" data-description="Paragraph"><a href="#limitlaws-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="limitlaws-6">
+<dfn class="terminology">Product law for limits</dfn>: <span class="process-math">\(\limit_{x \to a }(f(x)\cdot g(x))=\limit_{x \to a }f(x)\cdot \limit_{x \to a }g(x)=L\cdot M\)</span><div class="autopermalink" data-description="Paragraph"><a href="#limitlaws-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="limitlaws-7">
+<dfn class="terminology">Quotient law for limits</dfn>: <span class="process-math">\(\limit_{x \to a }\frac{f(x)}{g(x)}=\frac{\limit_{x \to a }f(x)}{\limit_{x \to a }g(x)}=\frac{L}{M}\)</span> for <span class="process-math">\(M\neq 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#limitlaws-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="limitlaws-8">
+<dfn class="terminology">Power law for limits</dfn>: <span class="process-math">\(\limit_{x \to a }(f(x))^n=(\limit_{x \to a }f(x))^n=L^n\)</span> for every positive integer <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#limitlaws-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="limitlaws-9">
+<dfn class="terminology">Root law for limits</dfn>: <span class="process-math">\(\limit_{x \to a }\sqrt[n]{f(x)}=\sqrt[n]{\limit_{x \to a }f(x)}=\sqrt[n]{L}\)</span> for all <span class="process-math">\(L\)</span> if <span class="process-math">\(n\)</span> is odd and for <span class="process-math">\(L\gt 0\)</span> if <span class="process-math">\(n\)</span> is even. (If <span class="process-math">\(L=0\)</span> then this cannot be computed with a two-sided limit).<div class="autopermalink" data-description="Paragraph"><a href="#limitlaws-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.4.3: Limit Laws"><a href="#limitlaws" title="Copy heading and permalink for Theorem 2.4.3: Limit Laws" aria-label="Copy heading and permalink for Theorem 2.4.3: Limit Laws">🔗</a></div></article><div class="para" id="sec_Ch2Sec3-3-7">We now practice applying these limit laws to evaluate a limit.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170572451489"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating a Limit Using Limit Laws.</span>
+</h4>
+<div class="para" id="fs-id1170572451489-2-1">Use the limit laws to evaluate <span class="process-math">\(\limit_{x \to -3 }(4x+2).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572451489-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170572451489-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170572451489-3-1">Let’s apply the limit laws one step at a time to be sure we understand how they work. We need to keep in mind the requirement that, at each application of a limit law, the new limits must exist for the limit law to be applied.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572451489-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="fs-id1170572451489-3-2">
+<div class="displaymath process-math" id="fs-id1170572451489-3-2-1">
+\begin{align*}
+\limit_{x \to -3 }(4x+2)    \amp=\limit_{x \to -3 }4x+\limit_{x \to -3 }2  \amp \amp\text{ Apply the sum law. }\\
+\amp=4\cdot \limit_{x \to -3 }x+\limit_{x \to -3 }2 \amp \amp\text{ Apply the constant multiple law. }\\
+\amp=\ds 4\cdot (-3)+2=-10.                \amp       \amp\text{ Apply the basic limit results and simplify. }
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572451489-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.4.1"><a href="#fs-id1170572451489-3" title="Copy heading and permalink for Solution 2.4.4.1" aria-label="Copy heading and permalink for Solution 2.4.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.4.4: Evaluating a Limit Using Limit Laws"><a href="#fs-id1170572451489" title="Copy heading and permalink for Example 2.4.4: Evaluating a Limit Using Limit Laws" aria-label="Copy heading and permalink for Example 2.4.4: Evaluating a Limit Using Limit Laws">🔗</a></div></article><article class="example example-like" id="fs-id1170572509954"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using Limit Laws Repeatedly.</span>
+</h4>
+<div class="para" id="fs-id1170572509954-2-1">Use the limit laws to evaluate <span class="process-math">\(\limit_{x \to 2 }\frac{2x^2-3x+1}{x^3+4}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572509954-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170572509954-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170572509954-3-1">To find this limit, we need to apply the limit laws several times. Again, we need to keep in mind that as we rewrite the limit in terms of other limits, each new limit must exist for the limit law to be applied.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572509954-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="fs-id1170572509954-3-2">
+<div class="displaymath process-math" id="fs-id1170572509954-3-2-1">
+\begin{align*}
+\limit_{x \to 2 }\frac{2x^2-3x+1}{x^3+4}\amp=\frac{\limit_{x \to 2 }(2x^2-3x+1)}{\limit_{x \to 2 }(x^3+4)}\amp\text{ Apply the quotient law, making sure that. } (2)^3+4\neq 0\\
+\amp=\frac{2\cdot \limit_{x \to 2 }x^2-3\cdot \limit_{x \to 2 }x+\limit_{x \to 2 }1}{\limit_{x \to 2 }x^3+\limit_{x \to 2 }4}\amp\text{ Apply the sum law and constant multiple law. }\\
+\amp=\frac{2\cdot \limit_{x \to 2 }x^2-3\cdot \limit_{x \to 2 }x+\limit_{x \to 2 }1}{(\limit_{x \to 2 }x)^3+\limit_{x \to 2 }4}\amp\text{ Apply the power law. }\\
+\amp=\frac{2(4)-3(2)+1}{(2)^3+4}=\frac{1}{4}.\amp\text{ Apply the basic limit laws and simplify. }
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572509954-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.5.1"><a href="#fs-id1170572509954-3" title="Copy heading and permalink for Solution 2.4.5.1" aria-label="Copy heading and permalink for Solution 2.4.5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.4.5: Using Limit Laws Repeatedly"><a href="#fs-id1170572509954" title="Copy heading and permalink for Example 2.4.5: Using Limit Laws Repeatedly" aria-label="Copy heading and permalink for Example 2.4.5: Using Limit Laws Repeatedly">🔗</a></div></article><details id="sec_Ch2Sec3-3-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec3-3-10-1-1">Use the limit laws to evaluate <span class="process-math">\(\limit_{x \to 6 }(2x-1)\sqrt{x+4}.\)</span> In each step, indicate the limit law applied.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-3-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec3-3-10-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-3-10-3-1">Begin by applying the product law.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-3-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.6.1"><a href="#sec_Ch2Sec3-3-10-3" title="Copy heading and permalink for Hint 2.4.6.1" aria-label="Copy heading and permalink for Hint 2.4.6.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec3-3-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-3-10-2-1">
+<span class="process-math">\(11\sqrt{10}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-3-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.6.1"><a href="#sec_Ch2Sec3-3-10-2" title="Copy heading and permalink for Solution 2.4.6.1" aria-label="Copy heading and permalink for Solution 2.4.6.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.6"><a href="#sec_Ch2Sec3-3-10" title="Copy heading and permalink for Checkpoint 2.4.6" aria-label="Copy heading and permalink for Checkpoint 2.4.6">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.4.1: The Limit Laws"><a href="#sec_Ch2Sec3-3" title="Copy heading and permalink for Subsection 2.4.1: The Limit Laws" aria-label="Copy heading and permalink for Subsection 2.4.1: The Limit Laws">🔗</a></div></section><section class="subsection" id="sec_Ch2Sec3-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limits of Polynomial and Rational Functions</span>
+</h3>
+<div class="para" id="sec_Ch2Sec3-4-2">By now you have probably noticed that, in each of the previous examples, it has been the case that <span class="process-math">\(\limit_{x \to a }f(x)=f(a).\)</span> This is not always true, but it does hold for all polynomials for any choice of <span class="process-math">\(a\)</span> and for all rational functions at all values of <span class="process-math">\(a\)</span> for which the rational function is defined.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="fs-id1170572557796"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="fs-id1170572557796-1-1">Let <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> be polynomial functions. Let <span class="process-math">\(a\)</span> be a real number. Then,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572557796-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to a }p(x)=p(a)
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to a }\frac{p(x)}{q(x)}=\frac{p(a)}{q(a)} \text{ when } q(a)\neq 0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Theorem 2.4.7"><a href="#fs-id1170572557796" title="Copy heading and permalink for Theorem 2.4.7" aria-label="Copy heading and permalink for Theorem 2.4.7">🔗</a></div></article><details id="fs-id1170572557796-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="fs-id1170572557796-2-1">To see that this theorem holds, consider the polynomial <span class="process-math">\(p(x)=c_nx^n+c_{n-1}x^{n-1}+\cdots+c_1x+c_0.\)</span> By applying the sum, constant multiple, and power laws, we end up with<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572557796-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1170572557796-2-2">
+\begin{align*}
+\limit_{x \to a }p(x)    \amp=\limit_{x \to a }(c_nx^n+c^{n-1}x^{n-1}+\cdots+c_1x+c_0)\\
+\amp=c_n(\limit_{x \to a }x)^n+c^{n-1}(\limit_{x \to a }x)^{n-1}+\cdots+c_1(\limit_{x \to a }x)+\limit_{x \to a }c_0\\
+\amp=c_na^n+c^{n-1}a^{n-1}+\cdots+c_1a+c_0\\
+\amp=p(a).
+\end{align*}
+</div>
+<div class="para" id="fs-id1170572557796-2-3">It now follows from the quotient law that if <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> are polynomials for which <span class="process-math">\(q(a)\neq 0,\)</span> then<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572557796-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to a }\frac{p(x)}{q(x)}=\frac{p(a)}{q(a)}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Proof 2.4.7.1"><a href="#fs-id1170572557796-2" title="Copy heading and permalink for Proof 2.4.7.1" aria-label="Copy heading and permalink for Proof 2.4.7.1">🔗</a></div></article></details><article class="example example-like" id="fs-id1170572305829"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating a Limit of a Rational Function.</span>
+</h4>
+<div class="para" id="fs-id1170572305829-2-1">Evaluate the <span class="process-math">\(\limit_{x \to 3 }\frac{2x^2-3x+1}{5x+4}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572305829-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170572305829-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170572305829-3-1">Since 3 is in the domain of the rational function <span class="process-math">\(f(x)=\frac{2x^2-3x+1}{5x+4},\)</span> we can calculate the limit by substituting 3 for <span class="process-math">\(x\)</span> into the function. Thus,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572305829-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to 3 }\frac{2x^2-3x+1}{5x+4}=\frac{10}{19}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 2.4.8.1"><a href="#fs-id1170572305829-3" title="Copy heading and permalink for Solution 2.4.8.1" aria-label="Copy heading and permalink for Solution 2.4.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.4.8: Evaluating a Limit of a Rational Function"><a href="#fs-id1170572305829" title="Copy heading and permalink for Example 2.4.8: Evaluating a Limit of a Rational Function" aria-label="Copy heading and permalink for Example 2.4.8: Evaluating a Limit of a Rational Function">🔗</a></div></article><details id="sec_Ch2Sec3-4-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec3-4-5-1-1">Evaluate <span class="process-math">\(\limit_{x \to -2 }(3x^3-2x+7).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-4-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec3-4-5-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-4-5-3-1">Use <a href="sec_Ch2Sec3.html#fs-id1170572557796" class="xref" data-knowl="./knowl/xref/fs-id1170572557796.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.4.7">Theorem 2.4.7</a><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-4-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.9.1"><a href="#sec_Ch2Sec3-4-5-3" title="Copy heading and permalink for Hint 2.4.9.1" aria-label="Copy heading and permalink for Hint 2.4.9.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec3-4-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-4-5-2-1">-13;<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-4-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.9.1"><a href="#sec_Ch2Sec3-4-5-2" title="Copy heading and permalink for Solution 2.4.9.1" aria-label="Copy heading and permalink for Solution 2.4.9.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.9"><a href="#sec_Ch2Sec3-4-5" title="Copy heading and permalink for Checkpoint 2.4.9" aria-label="Copy heading and permalink for Checkpoint 2.4.9">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.4.2: Limits of Polynomial and Rational Functions"><a href="#sec_Ch2Sec3-4" title="Copy heading and permalink for Subsection 2.4.2: Limits of Polynomial and Rational Functions" aria-label="Copy heading and permalink for Subsection 2.4.2: Limits of Polynomial and Rational Functions">🔗</a></div></section><section class="subsection" id="sec_Ch2Sec3-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Additional Limit Evaluation Techniques</span>
+</h3>
+<div class="para" id="sec_Ch2Sec3-5-2">As we have seen, we may evaluate easily the limits of polynomials and limits of some (but not all) rational functions by direct substitution. However, as we saw in the introductory section on limits, it is certainly possible for <span class="process-math">\(\limit_{x \to a }f(x)\)</span> to exist when <span class="process-math">\(f(a)\)</span> is undefined. The following observation allows us to evaluate many limits of this type:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec3-5-3">If for all <span class="process-math">\(x\neq a,f(x)=g(x)\)</span> over some open interval containing <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(\limit_{x \to a }f(x)=\limit_{x \to a }g(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec3-5-4">To understand this idea better, consider the limit <span class="process-math">\(\limit_{x \to 1 }\frac{x^2-1}{x-1}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec3-5-5">The function<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_03_001.html ./knowl/xref/fs-id1170571669713.html ./knowl/xref/fs-id1170572307613.html ./knowl/xref/fs-id1170571612021.html ./knowl/xref/fs-id1170571611384.html ./knowl/xref/fs-id1170571669713.html ./knowl/xref/fs-id1170571611384.html ./knowl/xref/fs-id1170572307613.html ./knowl/xref/fs-id1170571611384.html ./knowl/xref/fs-id1170571612021.html ./knowl/xref/fs-id1170571648139.html ./knowl/xref/fs-id1170571648139.html" id="sec_Ch2Sec3-5-6">
+\begin{align*}
+f(x)\amp=\frac{x^2-1}{x-1}\\
+\amp=\frac{(x-1)}{(x+1)}{x-1}
+\end{align*}
+</div>
+<div class="para" id="sec_Ch2Sec3-5-7">and the function <span class="process-math">\(g(x)=x+1\)</span> are identical for all values of <span class="process-math">\(x\neq 1.\)</span> The graphs of these two functions are shown in <a href="sec_Ch2Sec3.html#CNX_Calc_Figure_02_03_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_03_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.4.10">Figure 2.4.10</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_03_001"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/CNX_Calc_Figure_02_03_001.jpg" class="contained" alt='"Two graphs side by side. The first is a graph of g(x) = x + 1, a linear function with y intercept at (0,1) and x intercept at (-1,0). The second is a graph of f(x) = (x^2 – 1) / (x – 1). This graph is identical to the first for all x not equal to 1, as there is an open circle at (1,2) in the second graph."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graphs of <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are identical for all <span class="process-math">\(x\neq 1.\)</span> Their limits at 1 are equal.<div class="autopermalink" data-description="Figure 2.4.10"><a href="#CNX_Calc_Figure_02_03_001" title="Copy heading and permalink for Figure 2.4.10" aria-label="Copy heading and permalink for Figure 2.4.10">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec3-5-9">We see that<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_03_001.html ./knowl/xref/fs-id1170571669713.html ./knowl/xref/fs-id1170572307613.html ./knowl/xref/fs-id1170571612021.html ./knowl/xref/fs-id1170571611384.html ./knowl/xref/fs-id1170571669713.html ./knowl/xref/fs-id1170571611384.html ./knowl/xref/fs-id1170572307613.html ./knowl/xref/fs-id1170571611384.html ./knowl/xref/fs-id1170571612021.html ./knowl/xref/fs-id1170571648139.html ./knowl/xref/fs-id1170571648139.html" id="sec_Ch2Sec3-5-10">
+\begin{align*}
+\limit_{x \to 1 }\frac{x^2-1}{x-1}\amp=\limit_{x \to 1 }\frac{(x-1)}{(x+1)}{x-1}\\
+\amp=\limit_{x \to 1 }(x+1)\\
+\amp=2.
+\end{align*}
+</div>
+<div class="para" id="sec_Ch2Sec3-5-11">The limit has the form <span class="process-math">\(\limit_{x \to a }\frac{f(x)}{g(x)},\)</span> where <span class="process-math">\(\limit_{x \to a }f(x)=0\)</span> and <span class="process-math">\(\limit_{x \to a }g(x)=0.\)</span> (In this case, we say that <span class="process-math">\(f(x)/g(x)\)</span> has the indeterminate form <span class="process-math">\(0/0\text{ .) }\)</span> The following problem-solving strategy provides a general outline for evaluating limits of this type.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="fs-id1170571611384"><h4 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Strategy For Calculating a Limit When <span class="process-math">\(f(x)/g(x)\)</span> has the Indeterminate Form 0/0.</span>
+</h4>
+<ol class="lower-alpha ol-marker-2" id="fs-id1170571611384-2">
+<li id="fs-id1170571611384-2-1">
+<div class="para" id="fs-id1170571611384-2-1-1">First, we need to make sure that our function has the appropriate form and cannot be evaluated immediately using the limit laws.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571611384-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#fs-id1170571611384-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="fs-id1170571611384-2-2">
+<div class="para" id="fs-id1170571611384-2-2-1">We then need to find a function that is equal to <span class="process-math">\(h(x)=f(x)/g(x)\)</span> for all <span class="process-math">\(x\neq a\)</span> over some interval containing <span class="process-math">\(a\text{.}\)</span> To do this, we may need to try one or more of the following steps:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571611384-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-roman ol-marker-1" id="fs-id1170571611384-2-2-2">
+<li id="fs-id1170571611384-2-2-2-1">
+<div class="para" id="fs-id1170571611384-2-2-2-1-1">If <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are polynomials, we should factor each function and cancel out any common factors.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571611384-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b.i"><a href="#fs-id1170571611384-2-2-2-1" title="Copy heading and permalink for Item b.i" aria-label="Copy heading and permalink for Item b.i">🔗</a></div>
+</li>
+<li id="fs-id1170571611384-2-2-2-2">
+<div class="para" id="fs-id1170571611384-2-2-2-2-1">If the numerator or denominator contains a difference involving a square root, we should try multiplying the numerator and denominator by the conjugate of the expression involving the square root.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571611384-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b.ii"><a href="#fs-id1170571611384-2-2-2-2" title="Copy heading and permalink for Item b.ii" aria-label="Copy heading and permalink for Item b.ii">🔗</a></div>
+</li>
+<li id="fs-id1170571611384-2-2-2-3">
+<div class="para" id="fs-id1170571611384-2-2-2-3-1">If <span class="process-math">\(f(x)/g(x)\)</span> is a complex fraction, we begin by simplifying it.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571611384-2-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b.iii"><a href="#fs-id1170571611384-2-2-2-3" title="Copy heading and permalink for Item b.iii" aria-label="Copy heading and permalink for Item b.iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Item b"><a href="#fs-id1170571611384-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="fs-id1170571611384-2-3">
+<div class="para" id="fs-id1170571611384-2-3-1">Last, we apply the limit laws.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571611384-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#fs-id1170571611384-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Problem 2.4.11: Strategy For Calculating a Limit When f(x)/g(x) has the Indeterminate Form 0/0"><a href="#fs-id1170571611384" title="Copy heading and permalink for Problem 2.4.11: Strategy For Calculating a Limit When f(x)/g(x) has the Indeterminate Form 0/0" aria-label="Copy heading and permalink for Problem 2.4.11: Strategy For Calculating a Limit When f(x)/g(x) has the Indeterminate Form 0/0">🔗</a></div></article><div class="para" id="sec_Ch2Sec3-5-13">The next examples demonstrate the use of this Problem-Solving Strategy. <a href="sec_Ch2Sec3.html#fs-id1170571669713" class="xref" data-knowl="./knowl/xref/fs-id1170571669713.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.12: Evaluating a Limit by Factoring and Canceling">Example 2.4.12</a> illustrates the factor-and-cancel technique; <a href="sec_Ch2Sec3.html#fs-id1170572307613" class="xref" data-knowl="./knowl/xref/fs-id1170572307613.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.14: Evaluating a Limit by Multiplying by a Conjugate">Example 2.4.14</a> shows multiplying by a conjugate. In <a href="sec_Ch2Sec3.html#fs-id1170571612021" class="xref" data-knowl="./knowl/xref/fs-id1170571612021.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.16: Evaluating a Limit by Simplifying a Complex Fraction">Example 2.4.16</a>, we look at simplifying a complex fraction.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170571669713"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating a Limit by Factoring and Canceling.</span>
+</h4>
+<div class="para" id="fs-id1170571669713-2-1">Evaluate <span class="process-math">\(\limit_{x \to 3 }\frac{x^2-3x}{2x^2-5x-3}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571669713-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170571669713-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="fs-id1170571669713-3-1">
+<ol class="lower-alpha ol-marker-2" id="fs-id1170571669713-3-1-1">
+<li id="fs-id1170571669713-3-1-1-1">
+<div class="para" id="fs-id1170571669713-3-1-1-1-1">The function <span class="process-math">\(f(x)=\frac{x^2-3x}{2x^2-5x-3}\)</span> is undefined for <span class="process-math">\(x=3.\)</span> In fact, if we substitute 3 into the function we get <span class="process-math">\(0/0,\)</span> which is undefined. Factoring and canceling is a good strategy:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571669713-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to 3 }\frac{x^2-3x}{2x^2-5x-3}=\limit_{x \to 3 }\frac{x(x-3)}{(x-3)}{(2x+1)}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#fs-id1170571669713-3-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="fs-id1170571669713-3-1-1-2">
+<div class="para" id="fs-id1170571669713-3-1-1-2-1">For all <span class="process-math">\(x\neq 3,\frac{x^2-3x}{2x^2-5x-3}=\frac{x}{2x+1}.\)</span> Therefore,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571669713-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to 3 }\frac{x(x-3)}{(x-3)}{(2x+1)}=\limit_{x \to 3 }\frac{x}{2x+1}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#fs-id1170571669713-3-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="fs-id1170571669713-3-1-1-3">
+<div class="para" id="fs-id1170571669713-3-1-1-3-1">Evaluate using the limit laws:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571669713-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to 3 }\frac{x}{2x+1}=\frac{3}{7}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#fs-id1170571669713-3-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571669713-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.12.1"><a href="#fs-id1170571669713-3" title="Copy heading and permalink for Solution 2.4.12.1" aria-label="Copy heading and permalink for Solution 2.4.12.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.4.12: Evaluating a Limit by Factoring and Canceling"><a href="#fs-id1170571669713" title="Copy heading and permalink for Example 2.4.12: Evaluating a Limit by Factoring and Canceling" aria-label="Copy heading and permalink for Example 2.4.12: Evaluating a Limit by Factoring and Canceling">🔗</a></div></article><details id="sec_Ch2Sec3-5-15" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec3-5-15-1-1">Evaluate <span class="process-math">\(\limit_{x \to -3 }\frac{x^2+4x+3}{x^2-9}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec3-5-15-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-5-15-3-1">Follow the steps in <a href="sec_Ch2Sec3.html#fs-id1170571611384" class="xref" data-knowl="./knowl/xref/fs-id1170571611384.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 2.4.11: Strategy For Calculating a Limit When f(x)/g(x) has the Indeterminate Form 0/0">Problem 2.4.11</a> and <a href="sec_Ch2Sec3.html#fs-id1170571669713" class="xref" data-knowl="./knowl/xref/fs-id1170571669713.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.12: Evaluating a Limit by Factoring and Canceling">Example 2.4.12</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-15-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.13.1"><a href="#sec_Ch2Sec3-5-15-3" title="Copy heading and permalink for Hint 2.4.13.1" aria-label="Copy heading and permalink for Hint 2.4.13.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec3-5-15-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-5-15-2-1">
+<span class="process-math">\(\frac{1}{3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-15-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.13.1"><a href="#sec_Ch2Sec3-5-15-2" title="Copy heading and permalink for Solution 2.4.13.1" aria-label="Copy heading and permalink for Solution 2.4.13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.13"><a href="#sec_Ch2Sec3-5-15" title="Copy heading and permalink for Checkpoint 2.4.13" aria-label="Copy heading and permalink for Checkpoint 2.4.13">🔗</a></div></article></details><article class="example example-like" id="fs-id1170572307613"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating a Limit by Multiplying by a Conjugate.</span>
+</h4>
+<div class="para" id="fs-id1170572307613-2-1">Evaluate <span class="process-math">\(\limit_{x \to -1 }\frac{\sqrt{x+2}-1}{x+1}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572307613-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170572307613-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="fs-id1170572307613-3-1">
+<ol class="lower-alpha ol-marker-2" id="fs-id1170572307613-3-1-1">
+<li id="fs-id1170572307613-3-1-1-1">
+<div class="para" id="fs-id1170572307613-3-1-1-1-1">
+<span class="process-math">\(\frac{\sqrt{x+2}-1}{x+1}\)</span> has the form <span class="process-math">\(0/0\)</span> at -1. Let’s begin by multiplying by <span class="process-math">\(\sqrt{x+2}+1,\)</span> the conjugate of <span class="process-math">\(\sqrt{x+2}-1,\)</span> on the numerator and denominator:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572307613-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to -1 }\frac{\sqrt{x+2}-1}{x+1}=\limit_{x \to -1 }\frac{\sqrt{x+2}-1}{x+1}\cdot \frac{\sqrt{x+2}+1}{\sqrt{x+2}+1}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#fs-id1170572307613-3-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="fs-id1170572307613-3-1-1-2">
+<div class="para" id="fs-id1170572307613-3-1-1-2-1">We then multiply out the numerator. We don’t multiply out the denominator because we are hoping that the <span class="process-math">\((x+1)\)</span> in the denominator cancels out in the end:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572307613-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+=\limit_{x \to -1 }\frac{x+1}{(x+1)}{(\sqrt{x+2}+1)}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1170572307613-3-1-1-2-3">Then we cancel:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572307613-3-1-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+=\limit_{x \to -1 }\frac{1}{\sqrt{x+2}+1}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#fs-id1170572307613-3-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="fs-id1170572307613-3-1-1-3">
+<div class="para" id="fs-id1170572307613-3-1-1-3-1">Last, we apply the limit laws:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572307613-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to -1 }\frac{1}{\sqrt{x+2}+1}=\frac{1}{2}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#fs-id1170572307613-3-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572307613-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.14.1"><a href="#fs-id1170572307613-3" title="Copy heading and permalink for Solution 2.4.14.1" aria-label="Copy heading and permalink for Solution 2.4.14.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.4.14: Evaluating a Limit by Multiplying by a Conjugate"><a href="#fs-id1170572307613" title="Copy heading and permalink for Example 2.4.14: Evaluating a Limit by Multiplying by a Conjugate" aria-label="Copy heading and permalink for Example 2.4.14: Evaluating a Limit by Multiplying by a Conjugate">🔗</a></div></article><details id="sec_Ch2Sec3-5-17" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec3-5-17-1-1">Evaluate <span class="process-math">\(\limit_{x \to 5 }\frac{\sqrt{x-1}-2}{x-5}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec3-5-17-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-5-17-3-1">Follow the steps in <a href="sec_Ch2Sec3.html#fs-id1170571611384" class="xref" data-knowl="./knowl/xref/fs-id1170571611384.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 2.4.11: Strategy For Calculating a Limit When f(x)/g(x) has the Indeterminate Form 0/0">Problem 2.4.11</a> and <a href="sec_Ch2Sec3.html#fs-id1170572307613" class="xref" data-knowl="./knowl/xref/fs-id1170572307613.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.14: Evaluating a Limit by Multiplying by a Conjugate">Example 2.4.14</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-17-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.15.1"><a href="#sec_Ch2Sec3-5-17-3" title="Copy heading and permalink for Hint 2.4.15.1" aria-label="Copy heading and permalink for Hint 2.4.15.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec3-5-17-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-5-17-2-1">
+<span class="process-math">\(\frac{1}{4}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-17-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.15.1"><a href="#sec_Ch2Sec3-5-17-2" title="Copy heading and permalink for Solution 2.4.15.1" aria-label="Copy heading and permalink for Solution 2.4.15.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.15"><a href="#sec_Ch2Sec3-5-17" title="Copy heading and permalink for Checkpoint 2.4.15" aria-label="Copy heading and permalink for Checkpoint 2.4.15">🔗</a></div></article></details><article class="example example-like" id="fs-id1170571612021"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating a Limit by Simplifying a Complex Fraction.</span>
+</h4>
+<div class="para" id="fs-id1170571612021-2-1">Evaluate <span class="process-math">\(\limit_{x \to 1 }\frac{\frac{1}{x+1}-\frac{1}{2}}{x-1}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571612021-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170571612021-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="fs-id1170571612021-3-1">
+<ol class="decimal" id="fs-id1170571612021-3-1-1">
+<li id="fs-id1170571612021-3-1-1-1">
+<div class="para" id="fs-id1170571612021-3-1-1-1-1">
+<span class="process-math">\(\ds\frac{\frac{1}{x+1}-\frac{1}{2}}{x-1}\)</span> has the form <span class="process-math">\(0/0\)</span> at 1.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571612021-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#fs-id1170571612021-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="fs-id1170571612021-3-1-1-2">
+<div class="para logical" id="fs-id1170571612021-3-1-1-2-1">
+<div class="para">We simplify the algebraic fraction by multiplying by <span class="process-math">\(2(x+1)/2(x+1):\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to 1 }\frac{\frac{1}{x+1}-\frac{1}{2}}{x-1}=\limit_{x \to 1 }\frac{\frac{1}{x+1}-\frac{1}{2}}{x-1}\cdot \frac{2(x+1)}{2(x+1)}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571612021-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1170571612021-3-1-1-2-2">Next, we multiply through the numerators. Do not multiply the denominators because we want to be able to cancel the factor <span class="process-math">\((x-1)\text{ : }\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571612021-3-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+=\limit_{x \to 1 }\frac{2-(x+1)}{2(x-1)}{(x+1)}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1170571612021-3-1-1-2-4">Then, we simplify the numerator:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571612021-3-1-1-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+=\limit_{x \to 1 }\frac{-x+1}{2(x-1)(x+1)}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1170571612021-3-1-1-2-6">Now we factor out -1 from the numerator:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571612021-3-1-1-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+=\limit_{x \to 1 }\frac{-(x-1)}{2(x-1)(x+1)}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1170571612021-3-1-1-2-8">Then, we cancel the common factors of <span class="process-math">\((x-1)\text{ : }\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571612021-3-1-1-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+=\limit_{x \to 1 }\frac{-1}{2(x+1)}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#fs-id1170571612021-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="fs-id1170571612021-3-1-1-3">
+<div class="para" id="fs-id1170571612021-3-1-1-3-1">Last, we evaluate using the limit laws:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571612021-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to 1 }\frac{-1}{2(x+1)}=-\frac{1}{4}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#fs-id1170571612021-3-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571612021-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.16.1"><a href="#fs-id1170571612021-3" title="Copy heading and permalink for Solution 2.4.16.1" aria-label="Copy heading and permalink for Solution 2.4.16.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.4.16: Evaluating a Limit by Simplifying a Complex Fraction"><a href="#fs-id1170571612021" title="Copy heading and permalink for Example 2.4.16: Evaluating a Limit by Simplifying a Complex Fraction" aria-label="Copy heading and permalink for Example 2.4.16: Evaluating a Limit by Simplifying a Complex Fraction">🔗</a></div></article><details id="sec_Ch2Sec3-5-19" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec3-5-19-1-1">Evaluate <span class="process-math">\(\limit_{x \to -3 }\frac{\frac{1}{x+2}+1}{x+3}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec3-5-19-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-5-19-3-1">Follow the steps in <a href="sec_Ch2Sec3.html#fs-id1170571611384" class="xref" data-knowl="./knowl/xref/fs-id1170571611384.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 2.4.11: Strategy For Calculating a Limit When f(x)/g(x) has the Indeterminate Form 0/0">Problem 2.4.11</a> and <a href="sec_Ch2Sec3.html#fs-id1170571612021" class="xref" data-knowl="./knowl/xref/fs-id1170571612021.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.16: Evaluating a Limit by Simplifying a Complex Fraction">Example 2.4.16</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-19-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.17.1"><a href="#sec_Ch2Sec3-5-19-3" title="Copy heading and permalink for Hint 2.4.17.1" aria-label="Copy heading and permalink for Hint 2.4.17.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec3-5-19-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-5-19-2-1">-1;<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-19-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.17.1"><a href="#sec_Ch2Sec3-5-19-2" title="Copy heading and permalink for Solution 2.4.17.1" aria-label="Copy heading and permalink for Solution 2.4.17.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.17"><a href="#sec_Ch2Sec3-5-19" title="Copy heading and permalink for Checkpoint 2.4.17" aria-label="Copy heading and permalink for Checkpoint 2.4.17">🔗</a></div></article></details><div class="para" id="sec_Ch2Sec3-5-20">
+<a href="sec_Ch2Sec3.html#fs-id1170571648139" class="xref" data-knowl="./knowl/xref/fs-id1170571648139.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.18: Evaluating a Limit When the Limit Laws Do Not Apply">Example 2.4.18</a> does not fall neatly into any of the patterns established in the previous examples. However, with a little creativity, we can still use these same techniques.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170571648139"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating a Limit When the Limit Laws Do Not Apply.</span>
+</h4>
+<div class="para" id="fs-id1170571648139-2-1">Evaluate <span class="process-math">\(\limit_{x \to 0 }\left(\frac{1}{x}+\frac{5}{x(x-5)}\right).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571648139-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170571648139-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170571648139-3-1">Both <span class="process-math">\(1/x\)</span> and <span class="process-math">\(5/x(x-5)\)</span> fail to have a limit at zero. Since neither of the two functions has a limit at zero, we cannot apply the sum law for limits; we must use a different strategy. In this case, we find the limit by performing addition and then applying one of our previous strategies. Observe that<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571648139-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1170571648139-3-2">
+\begin{align*}
+\frac{1}{x}+\frac{5}{x(x-5)}\amp=\frac{x-5+5}{x(x-5)}\\
+\amp=\frac{x}{x(x-5)}.
+\end{align*}
+</div>
+<div class="para" id="fs-id1170571648139-3-3">Thus,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571648139-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1170571648139-3-4">
+\begin{align*}
+\limit_{x \to 0 }\left(\frac{1}{x}+\frac{5}{x(x-5)}\right)\amp=\limit_{x \to 0 }\frac{x}{x(x-5)}\\
+\amp=\limit_{x \to 0 }\frac{1}{x-5}\\
+\amp=-\frac{1}{5}.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Solution 2.4.18.1"><a href="#fs-id1170571648139-3" title="Copy heading and permalink for Solution 2.4.18.1" aria-label="Copy heading and permalink for Solution 2.4.18.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.4.18: Evaluating a Limit When the Limit Laws Do Not Apply"><a href="#fs-id1170571648139" title="Copy heading and permalink for Example 2.4.18: Evaluating a Limit When the Limit Laws Do Not Apply" aria-label="Copy heading and permalink for Example 2.4.18: Evaluating a Limit When the Limit Laws Do Not Apply">🔗</a></div></article><details id="sec_Ch2Sec3-5-22" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec3-5-22-1-1">Evaluate <span class="process-math">\(\limit_{x \to 3 }(\frac{1}{x-3}-\frac{4}{x^2-2x-3}).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-22-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec3-5-22-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-5-22-3-1">Use the same technique as <a href="sec_Ch2Sec3.html#fs-id1170571648139" class="xref" data-knowl="./knowl/xref/fs-id1170571648139.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.18: Evaluating a Limit When the Limit Laws Do Not Apply">Example 2.4.18</a>. Don’t forget to factor <span class="process-math">\(x^2-2x-3\)</span> before getting a common denominator.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-22-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.19.1"><a href="#sec_Ch2Sec3-5-22-3" title="Copy heading and permalink for Hint 2.4.19.1" aria-label="Copy heading and permalink for Hint 2.4.19.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec3-5-22-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-5-22-2-1">
+<span class="process-math">\(\frac{1}{4}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-5-22-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.19.1"><a href="#sec_Ch2Sec3-5-22-2" title="Copy heading and permalink for Solution 2.4.19.1" aria-label="Copy heading and permalink for Solution 2.4.19.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.19"><a href="#sec_Ch2Sec3-5-22" title="Copy heading and permalink for Checkpoint 2.4.19" aria-label="Copy heading and permalink for Checkpoint 2.4.19">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.4.3: Additional Limit Evaluation Techniques"><a href="#sec_Ch2Sec3-5" title="Copy heading and permalink for Subsection 2.4.3: Additional Limit Evaluation Techniques" aria-label="Copy heading and permalink for Subsection 2.4.3: Additional Limit Evaluation Techniques">🔗</a></div></section><section class="subsection" id="subsec-onesidedlimits"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">One-Sided Limits</span>
+</h3>
+<div class="para" id="subsec-onesidedlimits-2">Let’s now revisit one-sided limits. Simple modifications in the limit laws allow us to apply them to one-sided limits. For example, to apply the limit laws to a limit of the form <span class="process-math">\(\limit_{x\to a^-} h(x),\)</span> we require the function <span class="process-math">\(h(x)\)</span> to be defined over an open interval of the form <span class="process-math">\((b,a);\)</span> for a limit of the form <span class="process-math">\(\limit_{x \to a^+} h(x),\)</span> we require the function <span class="process-math">\(h(x)\)</span> to be defined over an open interval of the form <span class="process-math">\((a,c).\)</span> <a href="sec_Ch2Sec3.html#fs-id1170571679268" class="xref" data-knowl="./knowl/xref/fs-id1170571679268.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.20: Evaluating a One-Sided Limit Using the Limit Laws">Example 2.4.20</a> illustrates this point.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-onesidedlimits-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170571679268"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating a One-Sided Limit Using the Limit Laws.</span>
+</h4>
+<div class="para" id="fs-id1170571679268-2-1">Evaluate each of the following limits, if possible.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571679268-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha ol-marker-2" id="fs-id1170571679268-2-2">
+<li id="fs-id1170571679268-2-2-1">
+<div class="para" id="p-derived-fs-id1170571679268-2-2-1"><span class="process-math">\(\displaystyle \limit_{x \to 3^-}\sqrt{x-3}\)</span></div>
+<div class="autopermalink" data-description="Item a"><a href="#fs-id1170571679268-2-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="fs-id1170571679268-2-2-2">
+<div class="para" id="p-derived-fs-id1170571679268-2-2-2"><span class="process-math">\(\displaystyle \limit_{x \to 3^+}\sqrt{x-3}\)</span></div>
+<div class="autopermalink" data-description="Item b"><a href="#fs-id1170571679268-2-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="solutions"><details id="fs-id1170571679268-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170571679268-3-1">
+<a href="sec_Ch2Sec3.html#CNX_Calc_Figure_02_03_002" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_03_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.4.21">Figure 2.4.21</a> illustrates the function <span class="process-math">\(f(x)=\sqrt{x-3}\)</span> and aids in our understanding of these limits.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571679268-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_03_002"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_03_002.jpg" class="contained" alt='"A graph of the function f(x) = sqrt(x-3). Visually, the function looks like the top half of a parabola opening to the right with vertex at (3,0)."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph shows the function <span class="process-math">\(f(x)=\sqrt{x-3}.\)</span><div class="autopermalink" data-description="Figure 2.4.21"><a href="#CNX_Calc_Figure_02_03_002" title="Copy heading and permalink for Figure 2.4.21" aria-label="Copy heading and permalink for Figure 2.4.21">🔗</a></div></figcaption></figure><ol class="lower-alpha ol-marker-2" id="fs-id1170571679268-3-3">
+<li id="fs-id1170571679268-3-3-1">
+<div class="para" id="p-derived-fs-id1170571679268-3-3-1">The function <span class="process-math">\(f(x)=\sqrt{x-3}\)</span> is defined over the interval <span class="process-math">\([3,+\infty).\)</span> Since this function is not defined to the left of 3, we cannot apply the limit laws to compute <span class="process-math">\(\limit_{x \to 3^-}\sqrt{x-3}.\)</span> In fact, since <span class="process-math">\(f(x)=\sqrt{x-3}\)</span> is undefined to the left of 3, <span class="process-math">\(\limit_{x \to 3^-}\sqrt{x-3}\)</span> does not exist.</div>
+<div class="autopermalink" data-description="Item a"><a href="#fs-id1170571679268-3-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="fs-id1170571679268-3-3-2">
+<div class="para" id="p-derived-fs-id1170571679268-3-3-2">Since <span class="process-math">\(f(x)=\sqrt{x-3}\)</span> is defined to the right of 3, the limit laws do apply to <span class="process-math">\(\limit_{x \to 3^+}\sqrt{x-3}.\)</span> By applying these limit laws we obtain <span class="process-math">\(\limit_{x \to 3^+}\sqrt{x-3}=0.\)</span>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#fs-id1170571679268-3-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 2.4.20.1"><a href="#fs-id1170571679268-3" title="Copy heading and permalink for Solution 2.4.20.1" aria-label="Copy heading and permalink for Solution 2.4.20.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.4.20: Evaluating a One-Sided Limit Using the Limit Laws"><a href="#fs-id1170571679268" title="Copy heading and permalink for Example 2.4.20: Evaluating a One-Sided Limit Using the Limit Laws" aria-label="Copy heading and permalink for Example 2.4.20: Evaluating a One-Sided Limit Using the Limit Laws">🔗</a></div></article><div class="para" id="subsec-onesidedlimits-4">In <a href="sec_Ch2Sec3.html#fs-id1170571558882" class="xref" data-knowl="./knowl/xref/fs-id1170571558882.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.22: Evaluating a Two-Sided Limit Using the Limit Laws">Example 2.4.22</a> we look at one-sided limits of a piecewise-defined function and use these limits to draw a conclusion about a two-sided limit of the same function.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-onesidedlimits-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170571558882"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating a Two-Sided Limit Using the Limit Laws.</span>
+</h4>
+<div class="para" id="fs-id1170571558882-2">For <span class="process-math">\(f(x)=\begin{cases} 4x-3\amp\text{ if } x\lt 2\\ (x-3)^2\amp\text{ if } x\geq 2 \end{cases},\)</span> evaluate each of the following limits:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571558882-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-alpha ol-marker-2" id="fs-id1170571558882-3">
+<li id="fs-id1170571558882-3-1">
+<div class="para" id="p-derived-fs-id1170571558882-3-1"><span class="process-math">\(\displaystyle \limit_{x \to 2^-}f(x)\)</span></div>
+<div class="autopermalink" data-description="Item a"><a href="#fs-id1170571558882-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="fs-id1170571558882-3-2">
+<div class="para" id="p-derived-fs-id1170571558882-3-2"><span class="process-math">\(\displaystyle \limit_{x \to 2^+}f(x)\)</span></div>
+<div class="autopermalink" data-description="Item b"><a href="#fs-id1170571558882-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="fs-id1170571558882-3-3">
+<div class="para" id="p-derived-fs-id1170571558882-3-3"><span class="process-math">\(\displaystyle \limit_{x \to 2 }f(x)\)</span></div>
+<div class="autopermalink" data-description="Item c"><a href="#fs-id1170571558882-3-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Example 2.4.22: Evaluating a Two-Sided Limit Using the Limit Laws"><a href="#fs-id1170571558882" title="Copy heading and permalink for Example 2.4.22: Evaluating a Two-Sided Limit Using the Limit Laws" aria-label="Copy heading and permalink for Example 2.4.22: Evaluating a Two-Sided Limit Using the Limit Laws">🔗</a></div></article><details id="subsec-onesidedlimits-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-onesidedlimits-6-1">
+<a href="sec_Ch2Sec3.html#CNX_Calc_Figure_02_03_003" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_03_003.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.4.23">Figure 2.4.23</a> illustrates the function <span class="process-math">\(f(x)\)</span> and aids in our understanding of these limits.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-onesidedlimits-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_03_003"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_03_003.jpg" class="contained" alt='"The graph of a piecewise function with two segments. For x\lt 2, the function is linear with the equation 4x-3. There is an open circle at (2,5). The second segment is a parabola and exists for x\gt =2, with the equation (x-3)^2. There is a closed circle at (2,1). The vertex of the parabola is at (3,0)."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>This graph shows a function <span class="process-math">\(f(x).\)</span><div class="autopermalink" data-description="Figure 2.4.23"><a href="#CNX_Calc_Figure_02_03_003" title="Copy heading and permalink for Figure 2.4.23" aria-label="Copy heading and permalink for Figure 2.4.23">🔗</a></div></figcaption></figure><ol class="lower-alpha ol-marker-2" id="subsec-onesidedlimits-6-3">
+<li id="subsec-onesidedlimits-6-3-1">
+<div class="para" id="p-derived-subsec-onesidedlimits-6-3-1">Since <span class="process-math">\(f(x)=4x-3\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\((-\infty,2),\)</span> replace <span class="process-math">\(f(x)\)</span> in the limit with <span class="process-math">\(4x-3\)</span> and apply the limit laws:<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to 2^-}f(x)=\limit_{x \to 2^-}(4x-3)=5.
+\end{equation*}
+</div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#subsec-onesidedlimits-6-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="subsec-onesidedlimits-6-3-2">
+<div class="para" id="p-derived-subsec-onesidedlimits-6-3-2">Since <span class="process-math">\(f(x)=(x-3)^2\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\((2,+\infty),\)</span> replace <span class="process-math">\(f(x)\)</span> in the limit with <span class="process-math">\((x-3)^2\)</span> and apply the limit laws:<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to 2^+}f(x)=\limit_{x \to 2^+}(x-3)^2=1.
+\end{equation*}
+</div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#subsec-onesidedlimits-6-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="subsec-onesidedlimits-6-3-3">
+<div class="para" id="p-derived-subsec-onesidedlimits-6-3-3">Since <span class="process-math">\(\limit_{x \to 2^-}f(x)=5\)</span> and <span class="process-math">\(\limit_{x \to 2^+}f(x)=1,\)</span> we conclude that <span class="process-math">\(\limit_{x \to 2 }f(x)\)</span> does not exist.</div>
+<div class="autopermalink" data-description="Item c"><a href="#subsec-onesidedlimits-6-3-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 2.4.4.1"><a href="#subsec-onesidedlimits-6" title="Copy heading and permalink for Solution 2.4.4.1" aria-label="Copy heading and permalink for Solution 2.4.4.1">🔗</a></div>
+</div></details><details id="subsec-onesidedlimits-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-onesidedlimits-7-1-1">Graph <span class="process-math">\(f(x)=\begin{cases}-x-2 \amp \text{ if } x\lt -1 \\ 2 \amp \text{ if } x=-1 \\ x^3 \amp \text{ if } x\gt -1 \end{cases} \)</span> and evaluate <span class="process-math">\(\limit_{x\to -1^-}f(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-onesidedlimits-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-onesidedlimits-7-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-onesidedlimits-7-3-1">Use the method in <a href="sec_Ch2Sec3.html#fs-id1170571558882" class="xref" data-knowl="./knowl/xref/fs-id1170571558882.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.22: Evaluating a Two-Sided Limit Using the Limit Laws">Example 2.4.22</a> to evaluate the limit.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-onesidedlimits-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.24.1"><a href="#subsec-onesidedlimits-7-3" title="Copy heading and permalink for Hint 2.4.24.1" aria-label="Copy heading and permalink for Hint 2.4.24.1">🔗</a></div>
+</div></details><details id="subsec-onesidedlimits-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-onesidedlimits-7-2-1"> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_03_004.jpg" class="contained" alt='"The graph of a piecewise function with three segments. The first is a linear function, -x-2, for x\lt -1. The x intercept is at (-2,0), and there is an open circle at (-1,-1). The next segment is simply the point (-1, 2). The third segment is the function x^3 for x \gt  -1, which crossed the x axis and y axis at the origin."'></div> <span class="process-math">\(\limit_{x\to -1^-}f(x)=-1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-onesidedlimits-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.24.1"><a href="#subsec-onesidedlimits-7-2" title="Copy heading and permalink for Solution 2.4.24.1" aria-label="Copy heading and permalink for Solution 2.4.24.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.24"><a href="#subsec-onesidedlimits-7" title="Copy heading and permalink for Checkpoint 2.4.24" aria-label="Copy heading and permalink for Checkpoint 2.4.24">🔗</a></div></article></details><div class="para" id="subsec-onesidedlimits-8">Limits approaching the form <span class="process-math">\(\ds\frac{c}{x}\ (c \ne 0)\)</span> are omitted from this section and held until the section on infinite limits<div class="autopermalink" data-description="Paragraph"><a href="#subsec-onesidedlimits-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.4.4: One-Sided Limits"><a href="#subsec-onesidedlimits" title="Copy heading and permalink for Subsection 2.4.4: One-Sided Limits" aria-label="Copy heading and permalink for Subsection 2.4.4: One-Sided Limits">🔗</a></div></section><section class="subsection" id="sec_Ch2Sec3-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Squeeze Theorem</span>
+</h3>
+<div class="para" id="sec_Ch2Sec3-7-2">The techniques we have developed thus far work very well for algebraic functions, but we are still unable to evaluate limits of very basic trigonometric functions. The next theorem, called the <dfn class="terminology">squeeze theorem</dfn>, proves very useful for establishing basic trigonometric limits. This theorem allows us to calculate limits by “squeezing” a function, with a limit at a point <span class="process-math">\(a\)</span> that is unknown, between two functions having a common known limit at <span class="process-math">\(a\text{.}\)</span> <a href="sec_Ch2Sec3.html#CNX_Calc_Figure_02_03_005" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_03_005.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.4.25">Figure 2.4.25</a> illustrates this idea.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_03_005"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_03_005.jpg" class="contained" alt='"A graph of three functions over a small interval. All three functions curve. Over this interval, the function g(x) is trapped between the functions h(x), which gives greater y values for the same x values, and f(x), which gives smaller y values for the same x values. The functions all approach the same limit when x=a."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.25<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Squeeze Theorem applies when <span class="process-math">\(f(x)\leq g(x)\leq h(x)\)</span> and <span class="process-math">\(\limit_{x \to a }f(x)=\limit_{x \to a }h(x).\)</span><div class="autopermalink" data-description="Figure 2.4.25"><a href="#CNX_Calc_Figure_02_03_005" title="Copy heading and permalink for Figure 2.4.25" aria-label="Copy heading and permalink for Figure 2.4.25">🔗</a></div></figcaption></figure><article class="theorem theorem-like" id="sec_Ch2Sec3-7-4"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Squeeze Theorem.</span>
+</h4>
+<div class="para" id="sec_Ch2Sec3-7-4-2">Let <span class="process-math">\(f(x),g(x),\)</span> and <span class="process-math">\(h(x)\)</span> be defined for all <span class="process-math">\(x\neq a\)</span> over an open interval containing <span class="process-math">\(a\text{.}\)</span> If<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-7-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)\leq g(x)\leq h(x)
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch2Sec3-7-4-4">for all <span class="process-math">\(x\neq a\)</span> in an open interval containing <span class="process-math">\(a\)</span> and<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-7-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x \to a }f(x)=L=\limit_{x \to a }h(x)
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch2Sec3-7-4-6">where <span class="process-math">\(L\)</span> is a real number, then <span class="process-math">\(\limit_{x \to a }g(x)=L.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-7-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.4.26: The Squeeze Theorem"><a href="#sec_Ch2Sec3-7-4" title="Copy heading and permalink for Theorem 2.4.26: The Squeeze Theorem" aria-label="Copy heading and permalink for Theorem 2.4.26: The Squeeze Theorem">🔗</a></div></article><details id="sec_Ch2Sec3-7-4-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_Ch2Sec3-7-4-7-1">For <span class="process-math">\(\varepsilon\gt 0\)</span> there exist <span class="process-math">\(\delta_1\gt 0\text{ and }\delta_2\gt 0\)</span> such that <span class="process-math">\(|f(x)-L|\lt \varepsilon\)</span> whenever <span class="process-math">\(0\lt|x-a|\lt \delta_1\)</span> and <span class="process-math">\(|h(x)-L|\lt \varepsilon\)</span> whenever <span class="process-math">\(0\lt|x-a|\lt \delta_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-7-4-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec3-7-4-7-2">Let <span class="process-math">\(\delta\)</span> be the smaller of <span class="process-math">\(\delta_1\text{ and }\delta_2\text{.}\)</span>  For any <span class="process-math">\(x\)</span> satisfying <span class="process-math">\(0\lt|x-a|\lt \delta\text{,}\)</span> then <span class="process-math">\(|f(x)-L|\lt \varepsilon\)</span> (or <span class="process-math">\(-\varepsilon\lt f(x)-L\lt \varepsilon\)</span>) and <span class="process-math">\(|h(x)-L|\lt \varepsilon\)</span> (or <span class="process-math">\(-\varepsilon\lt h(x)-L\lt \varepsilon\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-7-4-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec_Ch2Sec3-7-4-7-3">
+<div class="para">Putting it all together,</div>
+<div class="displaymath process-math" id="sec_Ch2Sec3-7-4-7-3-1">
+\begin{align*}
+f(x)\le  g(x)\amp\le h(x) \\
+f(x)-L\le  g(x)-L\amp\le h(x)-L \\
+-\varepsilon\lt f(x)-L \le g(x)-L\amp\le h(x)-L\lt \varepsilon \\
+-\varepsilon\lt g(x)-L\amp\lt \varepsilon \\
+|g(x)-L| \amp\lt \varepsilon 
+\end{align*}
+</div>
+<div class="para">Therefore, <span class="process-math">\(\limit_{x\to a}g(x)=L\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-7-4-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.4.26.1"><a href="#sec_Ch2Sec3-7-4-7" title="Copy heading and permalink for Proof 2.4.26.1" aria-label="Copy heading and permalink for Proof 2.4.26.1">🔗</a></div></article></details><article class="example example-like" id="fs-id1170571654228"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Squeeze Theorem.</span>
+</h4>
+<div class="para" id="fs-id1170571654228-2-1">Apply the squeeze theorem to evaluate <span class="process-math">\(\limit_{x \to 0 }x\cos x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571654228-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170571654228-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170571654228-3-1">Because <span class="process-math">\(-1\leq \cos x\leq 1\)</span> for all <span class="process-math">\(x\text{,}\)</span> we have <span class="process-math">\(-|x|\leq x\cos x\leq |x|\text{.}\)</span> Since <span class="process-math">\(\limit_{x \to 0 }(-|x|)=0=\limit_{x \to 0 }|x|,\)</span> from the squeeze theorem, we obtain <span class="process-math">\(\limit_{x \to 0 }x\cos x=0.\)</span> The graphs of <span class="process-math">\(f(x)=-|x|,g(x)=x\cos x,\)</span> and <span class="process-math">\(h(x)=|x|\)</span> are shown in <a href="sec_Ch2Sec3.html#CNX_Calc_Figure_02_03_006" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_03_006.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.4.28">Figure 2.4.28</a>.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571654228-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_03_006"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_03_006.jpg" class="contained" alt='"The graph of three functions: h(x) = x, f(x) = -x, and g(x) = xcos(x). The first, h(x) = x, is a linear function with slope of 1 going through the origin. The second, f(x), is also a linear function with slope of -1; going through the origin. The third, g(x) = xcos(x), curves between the two and goes through the origin. It opens upward for x\gt 0 and downward for x\gt 0."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.28<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graphs of <span class="process-math">\(f(x),g(x),\)</span> and <span class="process-math">\(h(x)\)</span> are shown around the point <span class="process-math">\(x=0.\)</span><div class="autopermalink" data-description="Figure 2.4.28"><a href="#CNX_Calc_Figure_02_03_006" title="Copy heading and permalink for Figure 2.4.28" aria-label="Copy heading and permalink for Figure 2.4.28">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 2.4.27.1"><a href="#fs-id1170571654228-3" title="Copy heading and permalink for Solution 2.4.27.1" aria-label="Copy heading and permalink for Solution 2.4.27.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.4.27: Applying the Squeeze Theorem"><a href="#fs-id1170571654228" title="Copy heading and permalink for Example 2.4.27: Applying the Squeeze Theorem" aria-label="Copy heading and permalink for Example 2.4.27: Applying the Squeeze Theorem">🔗</a></div></article><details id="sec_Ch2Sec3-7-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.29</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec3-7-6-1-1">Use the squeeze theorem to evaluate <span class="process-math">\(\limit_{x \to 0 }x^2\sin\frac{1}{x}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-7-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec3-7-6-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-7-6-3-1">Use the fact that <span class="process-math">\(-x^2\leq x^2\sin (1/x)\leq x^2\)</span> to help you find two functions such that <span class="process-math">\(x^2\sin (1/x)\)</span> is squeezed between them.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-7-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.29.1"><a href="#sec_Ch2Sec3-7-6-3" title="Copy heading and permalink for Hint 2.4.29.1" aria-label="Copy heading and permalink for Hint 2.4.29.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec3-7-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec3-7-6-2-1">0<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec3-7-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.29.1"><a href="#sec_Ch2Sec3-7-6-2" title="Copy heading and permalink for Solution 2.4.29.1" aria-label="Copy heading and permalink for Solution 2.4.29.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.29"><a href="#sec_Ch2Sec3-7-6" title="Copy heading and permalink for Checkpoint 2.4.29" aria-label="Copy heading and permalink for Checkpoint 2.4.29">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.4.5: The Squeeze Theorem"><a href="#sec_Ch2Sec3-7" title="Copy heading and permalink for Subsection 2.4.5: The Squeeze Theorem" aria-label="Copy heading and permalink for Subsection 2.4.5: The Squeeze Theorem">🔗</a></div></section><section class="subsection" id="subsubsec-triglimits"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Few Important Trigonometric Limits</span>
+</h3>
+<div class="para" id="subsubsec-triglimits-2">We now use the squeeze theorem to tackle several very important limits. Although this discussion is somewhat lengthy, these limits prove invaluable for the development of the material in both the next section and the next chapter. The first of these limits is <span class="process-math">\(\limit_{\theta \to 0}\sin \theta.\)</span> Consider the unit circle shown in <a href="sec_Ch2Sec3.html#CNX_Calc_Figure_02_03_007" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_03_007.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.4.30">Figure 2.4.30</a>. In the figure, we see that <span class="process-math">\(\sin \theta\)</span> is the <span class="process-math">\(y\)</span>-coordinate on the unit circle and it corresponds to the line segment shown in blue. The radian measure of angle <span class="process-math">\(\theta\)</span> is the length of the arc it subtends on the unit circle. Therefore, we see that for <span class="process-math">\(0\lt \theta\lt \frac{\pi}{2},0\lt \sin \theta\lt \theta.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_03_007"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_03_007.jpg" class="contained" alt='"A diagram of the unit circle in the x,y plane – it is a circle with radius 1 and center at the origin. A specific point (cos(theta), sin(theta)) is labeled in quadrant 1 on the edge of the circle. This point is one vertex of a right triangle inside the circle, with other vertices at the origin and (cos(theta), 0).  As such, the lengths of the sides are cos(theta) for the base and sin(theta) for the height, where theta is the angle created by the hypotenuse and base. The radian measure of angle theta is the length of the arc it subtends on the unit circle. The diagram shows that for 0 \lt  theta \lt  pi/2,  0 \lt  sin(theta) \lt  theta."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.30<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The sine function is shown as a line on the unit circle.<div class="autopermalink" data-description="Figure 2.4.30"><a href="#CNX_Calc_Figure_02_03_007" title="Copy heading and permalink for Figure 2.4.30" aria-label="Copy heading and permalink for Figure 2.4.30">🔗</a></div></figcaption></figure><div class="para" id="subsubsec-triglimits-4">Because <span class="process-math">\(\limit_{\theta\to 0^+}0=0\)</span> and <span class="process-math">\(\limit_{\theta\to 0^+}\theta=0,\)</span> by using the squeeze theorem we conclude that<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_03_007.html ./knowl/xref/CNX_Calc_Figure_02_03_008.html ./knowl/xref/CNX_Calc_Figure_02_03_008.html ./knowl/xref/fs-id1170572243714.html ./knowl/xref/CNX_Calc_Figure_02_03_009.html">
+\begin{equation*}
+\limit_{\theta\to 0^+}\sin \theta=0.
+\end{equation*}
+</div>
+<div class="para" id="subsubsec-triglimits-6">To see that <span class="process-math">\(\limit_{\theta\to 0^-}\sin \theta=0\)</span> as well, observe that for <span class="process-math">\(-\frac{\pi }{2}\lt \theta\lt 0,0\lt -\theta\lt \frac{\pi }{2}\)</span> and hence, <span class="process-math">\(0\lt \sin (-\theta)\lt -\theta.\)</span> Consequently, <span class="process-math">\(0\lt -\sin \theta\lt -\theta.\)</span> It follows that <span class="process-math">\(0\gt \sin \theta\gt \theta.\)</span> An application of the squeeze theorem produces the desired limit. Thus, since <span class="process-math">\(\limit_{\theta\to 0^+}\sin \theta=0\)</span> and <span class="process-math">\(\limit_{\theta\to 0^-}\sin \theta=0,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_03_007.html ./knowl/xref/CNX_Calc_Figure_02_03_008.html ./knowl/xref/CNX_Calc_Figure_02_03_008.html ./knowl/xref/fs-id1170572243714.html ./knowl/xref/CNX_Calc_Figure_02_03_009.html" id="subsubsec-triglimits-7">
+\begin{equation}
+\limit_{\theta\to0}\sin \theta=0.\tag{2.4.1}
+\end{equation}
+</div>
+<div class="para" id="subsubsec-triglimits-8">Next, using the identity <span class="process-math">\(\cos \theta=\sqrt{1-\sin^2&gt;\theta}\)</span> for <span class="process-math">\(-\frac{\pi }{2}\lt \theta\lt \frac{\pi }{2},\)</span> we see that<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_03_007.html ./knowl/xref/CNX_Calc_Figure_02_03_008.html ./knowl/xref/CNX_Calc_Figure_02_03_008.html ./knowl/xref/fs-id1170572243714.html ./knowl/xref/CNX_Calc_Figure_02_03_009.html" id="subsubsec-triglimits-9">
+\begin{equation}
+\limit_{\theta\to0}\cos \theta=\limit_{\theta\to0}\sqrt{1-\sin^2&gt;\theta}=1.\tag{2.4.2}
+\end{equation}
+</div>
+<div class="para" id="subsubsec-triglimits-10">We now take a look at a limit that plays an important role in later chapters—namely, <span class="process-math">\(\limit_{\theta\to0}\frac{\sin \theta}{\theta}.\)</span> To evaluate this limit, we use the unit circle in <a href="sec_Ch2Sec3.html#CNX_Calc_Figure_02_03_008" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_03_008.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.4.31">Figure 2.4.31</a>. Notice that this figure adds one additional triangle to <a href="sec_Ch2Sec3.html#CNX_Calc_Figure_02_03_008" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_03_008.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.4.31">Figure 2.4.31</a>. We see that the length of the side opposite angle <span class="process-math">\(\theta \)</span> in this new triangle is <span class="process-math">\(\tan\theta.\)</span> Thus, we see that for <span class="process-math">\(0\lt \theta\lt \frac{\pi}{2},\sin \theta\lt \theta\lt \tan \theta.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_03_008"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_03_008.jpg" class="contained" alt='"The same diagram as the previous one. However, the triangle is expanded. The base is now from the origin to (1,0). The height goes from (1,0) to (1, tan(theta)). The hypotenuse goes from the origin to (1, tan(theta)). As such, the height is now tan(theta). It shows that for 0 \lt  theta \lt  pi/2, sin(theta) \lt  theta \lt  tan(theta)."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.31<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The sine and tangent functions are shown as lines on the unit circle.<div class="autopermalink" data-description="Figure 2.4.31"><a href="#CNX_Calc_Figure_02_03_008" title="Copy heading and permalink for Figure 2.4.31" aria-label="Copy heading and permalink for Figure 2.4.31">🔗</a></div></figcaption></figure><div class="para" id="subsubsec-triglimits-12">By dividing by <span class="process-math">\(\sin \theta\)</span> in all parts of the inequality, we obtain<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_03_007.html ./knowl/xref/CNX_Calc_Figure_02_03_008.html ./knowl/xref/CNX_Calc_Figure_02_03_008.html ./knowl/xref/fs-id1170572243714.html ./knowl/xref/CNX_Calc_Figure_02_03_009.html">
+\begin{equation*}
+1\lt \frac{\theta}{\sin \theta}\lt \frac{1}{\cos \theta}.
+\end{equation*}
+</div>
+<div class="para" id="subsubsec-triglimits-14">Equivalently, we have<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_03_007.html ./knowl/xref/CNX_Calc_Figure_02_03_008.html ./knowl/xref/CNX_Calc_Figure_02_03_008.html ./knowl/xref/fs-id1170572243714.html ./knowl/xref/CNX_Calc_Figure_02_03_009.html">
+\begin{equation*}
+1\gt \frac{\sin \theta}{\theta}\gt \cos \theta.
+\end{equation*}
+</div>
+<div class="para" id="subsubsec-triglimits-16">Since <span class="process-math">\(\limit_{\theta\to 0^+}1=1=\limit_{\theta\to 0^+}\cos \theta,\)</span> we conclude that <span class="process-math">\(\limit_{\theta\to 0^+}\frac{\sin \theta}{\theta}=1.\)</span> By applying a manipulation similar to that used in demonstrating that <span class="process-math">\(\limit_{\theta\to 0^-}\sin \theta=0,\)</span> we can show that <span class="process-math">\(\limit_{\theta\to 0^-}\frac{\sin \theta}{\theta}=1.\)</span> Thus,<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_03_007.html ./knowl/xref/CNX_Calc_Figure_02_03_008.html ./knowl/xref/CNX_Calc_Figure_02_03_008.html ./knowl/xref/fs-id1170572243714.html ./knowl/xref/CNX_Calc_Figure_02_03_009.html" id="subsubsec-triglimits-17">
+\begin{equation}
+\limit_{\theta\to0}\frac{\sin \theta}{\theta}=1.\tag{2.4.3}
+\end{equation}
+</div>
+<div class="para" id="subsubsec-triglimits-18">In <a href="sec_Ch2Sec3.html#fs-id1170572243714" class="xref" data-knowl="./knowl/xref/fs-id1170572243714.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4.32: Evaluating an Important Trigonometric Limit">Example 2.4.32</a> we use this limit to establish <span class="process-math">\(\limit_{\theta\to0}\frac{1-\cos \theta}{\theta}=0.\)</span> This limit also proves useful in later chapters.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170572243714"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating an Important Trigonometric Limit.</span>
+</h4>
+<div class="para" id="fs-id1170572243714-2-1">Evaluate <span class="process-math">\(\limit_{\theta\to0}\frac{1-\cos \theta}{\theta}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572243714-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170572243714-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170572243714-3-1">In the first step, we multiply by the conjugate so that we can use a trigonometric identity to convert the cosine in the numerator to a sine:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572243714-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1170572243714-3-2">
+\begin{align*}
+\limit_{\theta\to0}\frac{1-\cos \theta}{\theta}\amp=\limit_{\theta\to0}\frac{1-\cos \theta}{\theta}\cdot \frac{1+\cos \theta}{1+\cos \theta}\\
+\amp=\limit_{\theta\to0}\frac{1-\cos^2\theta}{\theta(1+\cos \theta)}\\
+\amp=\limit_{\theta\to0}\frac{\sin^2 \theta}{\theta(1+\cos \theta)}\\
+\amp=\limit_{\theta\to0}\frac{\sin \theta}{\theta}\cdot \frac{\sin \theta}{1+\cos \theta}\\
+\amp=1\cdot \frac{0}{2}=0.
+\end{align*}
+</div>
+<div class="para" id="fs-id1170572243714-3-3">Therefore,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170572243714-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{\theta\to0}\frac{1-\cos \theta}{\theta}=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 2.4.32.1"><a href="#fs-id1170572243714-3" title="Copy heading and permalink for Solution 2.4.32.1" aria-label="Copy heading and permalink for Solution 2.4.32.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.4.32: Evaluating an Important Trigonometric Limit"><a href="#fs-id1170572243714" title="Copy heading and permalink for Example 2.4.32: Evaluating an Important Trigonometric Limit" aria-label="Copy heading and permalink for Example 2.4.32: Evaluating an Important Trigonometric Limit">🔗</a></div></article><details id="subsubsec-triglimits-20" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsubsec-triglimits-20-1-1">Evaluate <span class="process-math">\(\limit_{\theta\to0}\frac{1-\cos \theta}{\sin \theta}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsubsec-triglimits-20-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsubsec-triglimits-20-3-1">Multiply numerator and denominator by <span class="process-math">\(1+\cos \theta.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-20-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.33.1"><a href="#subsubsec-triglimits-20-3" title="Copy heading and permalink for Hint 2.4.33.1" aria-label="Copy heading and permalink for Hint 2.4.33.1">🔗</a></div>
+</div></details><details id="subsubsec-triglimits-20-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsubsec-triglimits-20-2-1">0<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-20-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.33.1"><a href="#subsubsec-triglimits-20-2" title="Copy heading and permalink for Solution 2.4.33.1" aria-label="Copy heading and permalink for Solution 2.4.33.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.33"><a href="#subsubsec-triglimits-20" title="Copy heading and permalink for Checkpoint 2.4.33" aria-label="Copy heading and permalink for Checkpoint 2.4.33">🔗</a></div></article></details><article class="project project-like" id="subsubsec-triglimits-21"><h4 class="heading">
+<span class="type">Project</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Deriving the Formula for the Area of a Circle.</span>
+</h4>
+<div class="para" id="subsubsec-triglimits-21-2">Some of the geometric formulas we take for granted today were first derived by methods that anticipate some of the methods of calculus. The Greek mathematician <em class="emphasis">Archimedes</em> (ca. 287-212; BCE) was particularly inventive, using polygons inscribed within circles to approximate the area of the circle as the number of sides of the polygon increased. He never came up with the idea of a limit, but we can use this idea to see what his geometric constructions could have predicted about the limit.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-21-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-triglimits-21-3">We can estimate the area of a circle by computing the area of an inscribed regular polygon. Think of the regular polygon as being made up of <span class="process-math">\(n\)</span> triangles. By taking the limit as the vertex angle of these triangles goes to zero, you can obtain the area of the circle. To see this, carry out the following steps:<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-21-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-alpha ol-marker-2" id="subsubsec-triglimits-21-4">
+<li id="subsubsec-triglimits-21-4-1">Express the height <span class="process-math">\(h\)</span> and the base <span class="process-math">\(b\)</span> of the isosceles triangle in <a href="sec_Ch2Sec3.html#CNX_Calc_Figure_02_03_009" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_03_009.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.4.34">Figure 2.4.34</a> in terms of <span class="process-math">\(\theta\)</span> and <span class="process-math">\(r\text{.}\)</span> <figure class="figure figure-like" id="CNX_Calc_Figure_02_03_009"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_03_009.jpg" class="contained" alt='"A diagram of a circle with an inscribed polygon – namely, an octagon. An isosceles triangle is drawn with one of the sides of the octagon as the base and center of the circle/octagon as the top vertex. The height h goes from the center of the base b to the center, and each of the legs is also radii r of the circle. The angle created by the height h and one of the legs r is labeled as theta."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.34<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 2.4.34"><a href="#CNX_Calc_Figure_02_03_009" title="Copy heading and permalink for Figure 2.4.34" aria-label="Copy heading and permalink for Figure 2.4.34">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Item a"><a href="#subsubsec-triglimits-21-4-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="subsubsec-triglimits-21-4-2">
+<div class="para" id="p-derived-subsubsec-triglimits-21-4-2">Using the expressions that you obtained in step 1, express the area of the isosceles triangle in terms of <span class="process-math">\(\theta \)</span> and <span class="process-math">\(r\text{.}\)</span>(Substitute <span class="process-math">\((1/2) \sin \theta\)</span> for <span class="process-math">\(\sin(\theta / 2) \text{ cos }(\theta / 2)\)</span> in your expression.)</div>
+<div class="autopermalink" data-description="Item b"><a href="#subsubsec-triglimits-21-4-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="subsubsec-triglimits-21-4-3">
+<div class="para" id="p-derived-subsubsec-triglimits-21-4-3">If an <span class="process-math">\(n\)</span>-sided regular polygon is inscribed in a circle of radius <span class="process-math">\(r\text{,}\)</span> find a relationship between <span class="process-math">\(\theta \)</span> and <span class="process-math">\(n\text{.}\)</span> Solve this for <span class="process-math">\(n\text{.}\)</span> Keep in mind there are 2<span class="process-math">\(\pi \)</span> radians in a circle. (Use radians, not degrees.)</div>
+<div class="autopermalink" data-description="Item c"><a href="#subsubsec-triglimits-21-4-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+<li id="subsubsec-triglimits-21-4-4">
+<div class="para" id="p-derived-subsubsec-triglimits-21-4-4">Find an expression for the area of the <span class="process-math">\(n\)</span>-sided polygon in terms of <span class="process-math">\(r\)</span> and <span class="process-math">\(\theta \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item d"><a href="#subsubsec-triglimits-21-4-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
+</li>
+<li id="subsubsec-triglimits-21-4-5">
+<div class="para" id="p-derived-subsubsec-triglimits-21-4-5">To find a formula for the area of the circle, find the limit of the expression in step 4 as <span class="process-math">\(\theta \)</span> goes to zero. (Hint: <span class="process-math">\(\limit_{\theta\to 0}\frac{\sin \theta}{\theta}=1\text{ ). }\)</span>
+</div>
+<div class="autopermalink" data-description="Item e"><a href="#subsubsec-triglimits-21-4-5" title="Copy heading and permalink for Item e" aria-label="Copy heading and permalink for Item e">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="subsubsec-triglimits-21-5">The technique of estimating areas of regions by using polygons is revisited in Introduction to Integration .<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-triglimits-21-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Project 2.4.1: Deriving the Formula for the Area of a Circle"><a href="#subsubsec-triglimits-21" title="Copy heading and permalink for Project 2.4.1: Deriving the Formula for the Area of a Circle" aria-label="Copy heading and permalink for Project 2.4.1: Deriving the Formula for the Area of a Circle">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.4.6: A Few Important Trigonometric Limits"><a href="#subsubsec-triglimits" title="Copy heading and permalink for Subsection 2.4.6: A Few Important Trigonometric Limits" aria-label="Copy heading and permalink for Subsection 2.4.6: A Few Important Trigonometric Limits">🔗</a></div></section><section class="subsection" id="subsec-LimitLawProofs"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proofs of the Limit Laws (Optional)</span>
+</h3>
+<div class="para" id="subsec-LimitLawProofs-2">We now prove <a href="sec_Ch2Sec3.html#limitlaws" class="xref" data-knowl="./knowl/xref/limitlaws.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.4.3: Limit Laws">Theorem 2.4.3</a><div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-LimitLawProofs-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="subsec-LimitLawProofs-3-1">
+<div class="para">To start, we need the <dfn class="terminology">triangle inequality</dfn>, which says that for any real numbers <span class="process-math">\(x\text{ and }y\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|x+y|\lt |x|+|y|
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-LimitLawProofs-3-2">
+<dfn class="terminology">Sum law for limits</dfn>: For <span class="process-math">\(\varepsilon\gt 0\text{.}\)</span> Since the limit for <span class="process-math">\(f(x)\)</span> exists, then there exists <span class="process-math">\(\delta_1\gt 0\)</span> such that when <span class="process-math">\(0\lt |x-a|\lt \delta_1\)</span> then <span class="process-math">\(|f(x)-L|\lt \ds\frac{\varepsilon}{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-LimitLawProofs-3-3">Also, since the limit for <span class="process-math">\(g(x)\)</span> exists, there is some <span class="process-math">\(\delta_2\gt 0\)</span> such that when <span class="process-math">\(0\lt |x-a|\lt \delta_1\)</span> then <span class="process-math">\(|g(x)-M|\lt \ds\frac{\varepsilon}{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-LimitLawProofs-3-4">
+<div class="para">Let <span class="process-math">\(\delta\)</span> be the smaller of <span class="process-math">\(\delta_1\text{ and }\delta_2\)</span> (so <span class="process-math">\(\delta\le \delta_1\)</span> and <span class="process-math">\(\delta\le\delta_2\)</span>).  Whenever <span class="process-math">\(0\lt |x-a|\lt \delta\text{,}\)</span> then using the Triangle Inequality,</div>
+<div class="displaymath process-math" id="subsec-LimitLawProofs-3-4-6">
+\begin{align*}
+|\left(f(x)+g(x)\right)-\left(L+M\right)| \amp =|\left(f(x)-L\right)+\left(g(x)-M\right)|\\
+\amp \le|f(x)-L|+|g(x)-M|\\
+\amp \lt \frac{\varepsilon}{2}+\frac{\varepsilon}{2}\\
+\amp =\varepsilon
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-LimitLawProofs-3-5">
+<dfn class="terminology">Difference law for limits</dfn>: Choose <span class="process-math">\(\delta\)</span> the same way as in the sum law for limits.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-LimitLawProofs-3-6">
+<div class="para">Again using the Triangle Inequality, whenever <span class="process-math">\(0\lt |x-a|\lt \delta\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="subsec-LimitLawProofs-3-6-2">
+\begin{align*}
+|\left(f(x)-g(x)\right)-\left(L-M\right)| \amp =|\left(f(x)-L\right)-\left(g(x)-M\right)|\\
+\amp =|(f(x)-L)+\left(-(g(x)-M)\right)|\\
+\amp \lt|f(x)-L|+|-\left(g(x)-M\right)|\\
+\amp =|f(x)-L|+|g(x)-M|\\
+\amp \lt \frac{\varepsilon}{2}+\frac{\varepsilon}{2}\\
+\amp =\varepsilon
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-LimitLawProofs-3-7">
+<dfn class="terminology">Constant multiple law for limits</dfn>: If <span class="process-math">\(c=0\)</span> then this is just a case of <a href="sec_Ch2Sec3.html#fs-id1170572451153" class="xref" data-knowl="./knowl/xref/fs-id1170572451153.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.4.1: Basic Limit Results">Theorem 2.4.1</a><div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-LimitLawProofs-3-8">
+<div class="para">If <span class="process-math">\(c\ne 0\text{,}\)</span> let <span class="process-math">\(\varepsilon\gt 0\text{.}\)</span>  Since the limit for <span class="process-math">\(f(x)\)</span> exists, there is some <span class="process-math">\(\delta\gt 0\)</span> such that <span class="process-math">\(|f(x)-L|\lt \ds\frac{\varepsilon}{|c|}\)</span> whenever <span class="process-math">\(0\lt |x-a|\lt \delta\text{.}\)</span>  For such <span class="process-math">\(x\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-LimitLawProofs-3-8-8">
+\begin{align*}
+|cf(x)-cL|\amp =|c||f(x)-L|\\
+\amp \lt |c|\cdot \frac{\varepsilon}{|c|}\\
+\amp =\varepsilon
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-LimitLawProofs-3-9">
+<dfn class="terminology">Product law for limits</dfn>: Let <span class="process-math">\(\varepsilon\gt 0\text{.}\)</span>  First, consider the case if <span class="process-math">\(L=0\text{ or }M=0\)</span>Since the limits for <span class="process-math">\(f(x)\text{ and }g(x)\)</span> exist, there exists <span class="process-math">\(\delta_1\gt 0\)</span> and <span class="process-math">\(\delta_2\gt 0\)</span> such that <span class="process-math">\(|f(x)-L|\lt \sqrt{\varepsilon}\)</span> when <span class="process-math">\(|x-a|\lt \delta_1\)</span> and <span class="process-math">\(|g(x)-M|\lt \sqrt{\varepsilon}\)</span> when <span class="process-math">\(|x-a|\lt \delta_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-LimitLawProofs-3-10">
+<div class="para">Let <span class="process-math">\(\delta\)</span> be the smaller of <span class="process-math">\(\delta_1\text{ and }\delta_2\)</span> like we did in the sum law for limits.  For any <span class="process-math">\(|x-a|\lt \delta\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-LimitLawProofs-3-10-4">
+\begin{align*}
+|f(x)g(x)-LM| \amp =|f(x)g(x)-0|\\
+\amp =|f(x)g(x)|\\
+\amp =|f(x)||g(x)|\\
+\amp \lt\sqrt{\varepsilon}\sqrt{\varepsilon}\\
+\amp =\varepsilon
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-LimitLawProofs-3-11">
+<div class="para">Now, for the more general case, assume <span class="process-math">\(L\ne 0\text{ and }M\ne 0\text{.}\)</span> Since the limit for <span class="process-math">\(g(x)\)</span> exists, then there is some <span class="process-math">\(\delta_1\gt 0\)</span> such that whenever <span class="process-math">\(0\lt |x-a|\lt \delta_1\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="subsec-LimitLawProofs-3-11-5">
+\begin{align*}
+|g(x)-M|\amp\lt \varepsilon \\
+M-\varepsilon\lt \amp g(x)\lt M+\varepsilon \\
+|g(x)| \amp |M|+\varepsilon
+\end{align*}
+</div>
+<div class="para">(the last line is true regardless of whether <span class="process-math">\(M\)</span> is positive or negative)</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-LimitLawProofs-3-12">Since the limit for <span class="process-math">\(f(x)\)</span> exists, there is some <span class="process-math">\(\delta_2\gt 0\)</span> such that whenever <span class="process-math">\(0\lt |x-a|\lt \delta_2\text{,}\)</span> then <span class="process-math">\(|f(x)-L|\lt\ds\frac{\varepsilon}{2(|M|+\varepsilon)}\text{.}\)</span>  Also, there is some <span class="process-math">\(\delta_3\gt 0\)</span> such that <span class="process-math">\(|g(x)-M|\lt \ds\frac{\varepsilon}{2|L|}\)</span> whenever <span class="process-math">\(0\lt |x-a|\lt \delta_3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-LimitLawProofs-3-13">
+<div class="para">Let’s put the pieces altogether by letting <span class="process-math">\(\delta\)</span> be the minimum of <span class="process-math">\(\delta_1,\delta_2,\text{ and }\delta_3\text{.}\)</span>  For any x satisfying <span class="process-math">\(0\lt |x-a|\lt \delta\text{,}\)</span> again use the Triangle Inequality to show</div>
+<div class="displaymath process-math" id="subsec-LimitLawProofs-3-13-4">
+\begin{align*}
+|f(x)g(x)-LM| \amp =|f(x)g(x)+0-LM|\\
+\amp =|f(x)g(x)-Lg(x)+Lg(x)-LM|\\
+\amp \le |f(x)-Lg(x)|+|Lg(x)-LM|\\
+\amp =|g(x)||f(x)-L|+|L||g(x)-M|\\
+\amp \lt (|M|+\varepsilon)\frac{\varepsilon}{2(|M|+\varepsilon)}+|L|\frac{\varepsilon}{2|L|}\\
+\amp =\frac{\varepsilon}{2}+\frac{\varepsilon}{2}\\
+\amp =\varepsilon
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-LimitLawProofs-3-14">
+<div class="para">
+<dfn class="terminology">Quotient law for limits</dfn>: This limit law will follow quickly if we first show that <span class="process-math">\(\limit_{x\to a}\frac{1}{g(x)}=\frac{1}{M}\text{:}\)</span> Assume for simplicity that <span class="process-math">\(M\gt 0\text{.}\)</span>  Since the limit for <span class="process-math">\(g(x)\)</span> exists, then given <span class="process-math">\(\varepsilon\gt 0\)</span> there exists <span class="process-math">\(\delta\gt 0\)</span> such that <span class="process-math">\(\ds|g(x)-M|\lt \frac{M^2\varepsilon}{1+M\varepsilon}\)</span> whenever <span class="process-math">\(0\lt |x-a|\lt \delta\text{.}\)</span>  Note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ds 0\lt\frac{M^2\varepsilon}{1+M\varepsilon}=M-\frac{M}{1+M\varepsilon}\lt M\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-LimitLawProofs-3-15">
+<div class="para">Following the inequalities down the rabbit hole, for any <span class="process-math">\(x\)</span> satisfying <span class="process-math">\(0\lt |x-a|\lt \delta\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-LimitLawProofs-3-15-3">
+\begin{align*}
+|g(x)-M| \amp \lt \frac{M^2\varepsilon}{1+M\varepsilon}\\
+-\frac{M^2\varepsilon}{1+M\varepsilon}\lt \amp g(x)-M\lt \frac{M^2\varepsilon}{1+M\varepsilon} \\
+M-\frac{M^2\varepsilon}{1+M\varepsilon}\lt \amp g(x)-M\lt M+\frac{M^2\varepsilon}{1+M\varepsilon} \\
+\frac{M}{1+M\varepsilon}\lt \amp g(x)\lt \frac{M+2M^2\varepsilon}{1+M\varepsilon} \\
+\frac{1+M\varepsilon}{M+2M^2\varepsilon}\amp \lt \frac{1}{g(x)}\lt \frac{1+M\varepsilon}{M} \\
+\frac{1+M\varepsilon}{M+2M^2\varepsilon}-\frac{1}{M}\amp \lt \frac{1}{g(x)}-\frac{1}{M}\lt \frac{1+M\varepsilon}{M}-\frac{1}{M}\\
+-\frac{\varepsilon}{1+2M\varepsilon} \amp\lt \frac{1}{g(x)}-\frac{1}{M}\lt \varepsilon
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(\ds\frac{\varepsilon}{1+2M\varepsilon}\lt\varepsilon \text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left|\frac{1}{g(x)}-\frac{1}{M}\right|\lt\varepsilon\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-LimitLawProofs-3-16">Now, if <span class="process-math">\(M\lt 0\text{,}\)</span> define <span class="process-math">\(f(x)=-g(x)\text{.}\)</span>  The constant multiple law of limits shows that <span class="process-math">\(\ds\lim_{x\to a}\frac{1}{f(x)}=-\frac{1}{M}\gt 0\)</span> and so <span class="process-math">\(\ds\lim_{x\to a}\frac{1}{g(x)}=\frac{1}{M}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-LimitLawProofs-3-17">Finally, to prove the quotient law for limits, rewrite <span class="process-math">\(\ds\lim_{x\to a}\frac{f(x)}{g(x)}\)</span> as <span class="process-math">\(\limit_{x\to a}\left(f(x)\cdot\frac{1}{g(x)}\right)\)</span> and apply the product law for limits.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-LimitLawProofs-3-18">
+<dfn class="terminology">Power law for limits</dfn>: This is a repeated application of the product law for limits<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-LimitLawProofs-3-19">
+<div class="para">
+<dfn class="terminology">Root law for limits</dfn>: First start with the case when <span class="process-math">\(L=1\text{.}\)</span>  Let <span class="process-math">\(\varepsilon\gt 0\text{.}\)</span>  Without loss of generality, assume <span class="process-math">\(\varepsilon\lt 1\text{.}\)</span>  Then there exists <span class="process-math">\(\delta\gt 0\)</span> such that <span class="process-math">\(|f(x)-1|\lt \varepsilon\)</span> whenever <span class="process-math">\(0\lt|x-a|\lt \delta\)</span> (which makes <span class="process-math">\(f(x)\gt 0\)</span>). It can be verified that</div>
+<div class="displaymath process-math" id="subsec-LimitLawProofs-3-19-9">
+\begin{align*}
+f(x)-1 \amp =\left(\sqrt[n]{f(x)}-1\right)\left(\left(\sqrt[n]{f(x)}\right)^{n-1}+\left(\sqrt[n]{f(x)}\right)^{n-2}\right.\\
+\amp\left.+\cdots+\left(\sqrt[n]{f(x)}\right)+1\right)
+\end{align*}
+</div>
+<div class="para">So,</div>
+<div class="displaymath process-math" id="subsec-LimitLawProofs-3-19-10">
+\begin{align*}
+\left|\sqrt[n]{f(x)}-1\right|\amp=\left|\frac{f(x)-1}{1+f(x)^{1/n}+f(x)^{2/n}+\cdots+f(x)^{(n-1)/n}}\right| \\
+\amp \lt |f(x)-1|\\
+\amp \lt \varepsilon
+\end{align*}
+</div>
+<div class="para">Therefore, if <span class="process-math">\(\limit_{x\to a}f(x)=1\)</span> then <span class="process-math">\(\limit_{x\to a}\sqrt[n]{f(x)}=1.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-LimitLawProofs-3-20">
+<div class="para">Now suppose <span class="process-math">\(\limit_{x\to a}f(x)=L\)</span> where <span class="process-math">\(L\)</span> is any nonzero number.  Define <span class="process-math">\(\ds g(x)=\frac{1}{L}f(x)\text{.}\)</span>  Using the constant multiple law for limits, <span class="process-math">\(\limit_{x\to a}g(x)=1\text{.}\)</span>  Thus, by the work above, <span class="process-math">\(\limit_{x\to a}\sqrt[n]{g(x)}=1\text{.}\)</span>  Again using the constant multiple law for limits,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit_{x\to a}\sqrt[n]{f(x)}=\limit_{x\to a}\sqrt[n]{L\cdot g(x)}=\limit_{x\to a}\sqrt[n]{L}\sqrt[n]{g(x)}=\sqrt[n]{L}\cdot 1=\sqrt[n]{L} 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-LimitLawProofs-3-21">Finally, suppose <span class="process-math">\(L=0\)</span> with <span class="process-math">\(n\)</span> odd.  It can be shown that whenever <span class="process-math">\(|f(x)-0|\lt\varepsilon^n\text{,}\)</span> then <span class="process-math">\(|\sqrt[n]{f(x)}-0|\lt \varepsilon\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-LimitLawProofs-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.4.7.1"><a href="#subsec-LimitLawProofs-3" title="Copy heading and permalink for Proof 2.4.7.1" aria-label="Copy heading and permalink for Proof 2.4.7.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.4.7: Proofs of the Limit Laws (Optional)"><a href="#subsec-LimitLawProofs" title="Copy heading and permalink for Subsection 2.4.7: Proofs of the Limit Laws (Optional)" aria-label="Copy heading and permalink for Subsection 2.4.7: Proofs of the Limit Laws (Optional)">🔗</a></div></section><div class="autopermalink" data-description="Section 2.4: The Limit Laws"><a href="#sec_Ch2Sec3" title="Copy heading and permalink for Section 2.4: The Limit Laws" aria-label="Copy heading and permalink for Section 2.4: The Limit Laws">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="Ch2Sec3LimitDef.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
