@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -100,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.10.0';
+eBookConfig.runestone_version = '7.11.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c2757fc695bc848c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -134,6 +135,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
 \newcommand{\ds}{\displaystyle}
+\newcommand{\limit}{\ds\lim}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -250,20 +252,42 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="ch_second.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Limit of a Function</span></a></div>
+<div class="toc-title-box"><a href="sec_Ch2Sec1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">A Preview of Calculus</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.1.3</span> <span class="title">One-Sided Limits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Infinite Limits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2Exercises" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Section Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Tangent Problem and Differential Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Area Problem and Integral Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Other Aspects of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Key Equations</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Limit of a Function</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.2.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.2.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Infinite Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2Exercises" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Section Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.3.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec3.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Limit Laws</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Limit Laws</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Limits of Polynomial and Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-5" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Additional Limit Evaluation Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-onesidedlimits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-7" class="internal"><span class="codenumber">2.4.5</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsubsec-triglimits" class="internal"><span class="codenumber">2.4.6</span> <span class="title">A Few Important Trigonometric Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-LimitLawProofs" class="internal"><span class="codenumber">2.4.7</span> <span class="title">Proofs of the Limit Laws (Optional)</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -332,14 +356,14 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="subsec_Ch1Sec1Ss1-13">For the functions <span class="process-math">\(f(x)=x^2\)</span> and <span class="process-math">\(f(x)=\sqrt{x},\)</span> the domains are sets with an infinite number of elements. Clearly we cannot list all these elements. When describing a set with an infinite number of elements, it is often helpful to use set-builder or interval notation. When using set-builder notation to describe a subset of all real numbers, denoted <span class="process-math">\(\mathbb{R}],\)</span> we write<div class="autopermalink" data-description="Paragraph"><a href="#subsec_Ch1Sec1Ss1-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html" id="subsec_Ch1Sec1Ss1-14">
 \begin{equation*}
 \{x|x \text{ has some property} \}.
 \end{equation*}
 </div>
 <div class="para" id="subsec_Ch1Sec1Ss1-15">We read this as the set of real numbers <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\)</span> has some property. For example, if we were interested in the set of real numbers that are greater than one but less than five, we could denote this set using set-builder notation by writing<div class="autopermalink" data-description="Paragraph"><a href="#subsec_Ch1Sec1Ss1-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html" id="subsec_Ch1Sec1Ss1-16">
 \begin{equation*}
 \{x | 1 &lt; x &lt; 5 \}.
 \end{equation*}
@@ -348,35 +372,35 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <span class="process-math">\((1,5)=\{x| 1\leq x \leq 5\}.\)</span><div class="para" id="subsec_Ch1Sec1Ss1-19">The numbers <span class="process-math">\(1\)</span> and <span class="process-math">\(5\)</span> are called the <dfn class="terminology">endpoints</dfn> of this set. If we want to consider the set that includes the endpoints, we would denote this set by writing<div class="autopermalink" data-description="Paragraph"><a href="#subsec_Ch1Sec1Ss1-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html" id="subsec_Ch1Sec1Ss1-20">
 \begin{equation*}
 [1,5]=\{x|1\leq x\leq5\}.
 \end{equation*}
 </div>
 <div class="para" id="subsec_Ch1Sec1Ss1-21">We can use similar notation if we want to include one of the endpoints, but not the other. To denote the set of nonnegative real numbers, we would use the set-builder notation<div class="autopermalink" data-description="Paragraph"><a href="#subsec_Ch1Sec1Ss1-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html" id="subsec_Ch1Sec1Ss1-22">
 \begin{equation*}
 \{x|0\leq x\}.
 \end{equation*}
 </div>
 <div class="para" id="subsec_Ch1Sec1Ss1-23">The smallest number in this set is zero, but this set does not have a largest number. Using interval notation, we would use the symbol <span class="process-math">\(\infty ,\)</span> which refers to positive infinity, and we would write the set as<div class="autopermalink" data-description="Paragraph"><a href="#subsec_Ch1Sec1Ss1-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html" id="subsec_Ch1Sec1Ss1-24">
 \begin{equation*}
 [0,\infty)=\{x|0 \leq x\}.
 \end{equation*}
 </div>
 <div class="para" id="subsec_Ch1Sec1Ss1-25">It is important to note that <span class="process-math">\(\infty\)</span> is not a real number. It is used symbolically here to indicate that this set includes all real numbers greater than or equal to zero. Similarly, if we wanted to describe the set of all nonpositive numbers, we could write<div class="autopermalink" data-description="Paragraph"><a href="#subsec_Ch1Sec1Ss1-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html" id="subsec_Ch1Sec1Ss1-26">
 \begin{equation*}
 (-\infty,0]=\{x|x \leq 0\}.
 \end{equation*}
 </div>
 <div class="para" id="subsec_Ch1Sec1Ss1-27">Here, the notation <span class="process-math">\(-\infty\)</span> refers to negative infinity, and it indicates that we are including all numbers less than or equal to zero, no matter how small. The set<div class="autopermalink" data-description="Paragraph"><a href="#subsec_Ch1Sec1Ss1-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html" id="subsec_Ch1Sec1Ss1-28">
 \begin{equation*}
 (-\infty,\infty)=\{x|x \text{ is any real number }\}
 \end{equation*}
@@ -385,7 +409,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="subsec_Ch1Sec1Ss1-30">Some functions are defined using different equations for different parts of their domain. These types of functions are known as <dfn class="terminology">piecewise-defined functions</dfn>. For example, suppose we want to define a function <span class="process-math">\(f\)</span> with a domain that is the set of all real numbers such that <span class="process-math">\(f(x)=3x+1\)</span> for <span class="process-math">\(x \geq 2\)</span> and <span class="process-math">\(f(x)=x^2\)</span> for <span class="process-math">\(x &lt; 2.\)</span> We denote this function by writing<div class="autopermalink" data-description="Paragraph"><a href="#subsec_Ch1Sec1Ss1-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_001.html ./knowl/xref/CNX_Calc_Figure_01_01_002.html ./knowl/xref/CNX_Calc_Figure_01_01_003.html ./knowl/xref/CNX_Calc_Figure_01_01_004.html" id="subsec_Ch1Sec1Ss1-31">
 \begin{equation*}
 f(x)=\begin{cases} 3x+1 \amp x \geq 2 \\ x^2 \amp x &lt; 2 .\end{cases}
 \end{equation*}
@@ -480,11 +504,11 @@ f(a+h)=3(a+h)^2+2(a+h)-1 \amp =3(a^2+2ah+h^2)+2a+2h-1\\
 <div class="autopermalink" data-description="Item 1.a"><a href="#subsec_Ch1Sec1Ss1-35-3-1-1-2-1" title="Copy heading and permalink for Item 1.a" aria-label="Copy heading and permalink for Item 1.a">🔗</a></div>
 </li>
 <li id="subsec_Ch1Sec1Ss1-35-3-1-1-2-2">
-<div class="para" id="p-derived-subsec_Ch1Sec1Ss1-35-3-1-1-2-2">Since <span class="process-math">\((x-4)^2 \geq 0,\)</span> we know <span class="process-math">\(f(x)=(x-4)^2+5 \geq 5.\)</span> Therefore, the range must be a subset of <span class="process-math">\(\{y|y \geq 5\}.\)</span> To show that every element in this set is in the range, we need to show that for a given <span class="process-math">\(y\)</span> in that set, there is a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(f(x)=(x-4)^2+5=y.\)</span> Solving this equation for <span class="process-math">\(x,\)</span> we see that we need <span class="process-math">\(x\)</span> such that<div class="displaymath process-math">
+<div class="para" id="p-derived-subsec_Ch1Sec1Ss1-35-3-1-1-2-2">Since <span class="process-math">\((x-4)^2 \geq 0,\)</span> we know <span class="process-math">\(f(x)=(x-4)^2+5 \geq 5.\)</span> Therefore, the range must be a subset of <span class="process-math">\(\{y|y \geq 5\}.\)</span> To show that every element in this set is in the range, we need to show that for a given <span class="process-math">\(y\)</span> in that set, there is a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(f(x)=(x-4)^2+5=y.\)</span> Solving this equation for <span class="process-math">\(x,\)</span> we see that we need <span class="process-math">\(x\)</span> such that<div class="displaymath process-math" id="subsec_Ch1Sec1Ss1-35-3-1-1-2-2-9">
 \begin{equation*}
 (x-4)^2=y-5.
 \end{equation*}
-</div>This equation is satisfied as long as there exists a real number <span class="process-math">\(x\)</span> such that<div class="displaymath process-math">
+</div>This equation is satisfied as long as there exists a real number <span class="process-math">\(x\)</span> such that<div class="displaymath process-math" id="subsec_Ch1Sec1Ss1-35-3-1-1-2-2-11">
 \begin{equation*}
 x-4= \pm \sqrt{y-5}.
 \end{equation*}
@@ -507,37 +531,37 @@ x-4= \pm \sqrt{y-5}.
 <li id="subsec_Ch1Sec1Ss1-35-3-1-2-2-2">
 <div class="para logical" id="subsec_Ch1Sec1Ss1-35-3-1-2-2-2-1">
 <div class="para">To find the range of <span class="process-math">\(f,\)</span> we note that since <span class="process-math">\(\sqrt{3x+2}\geq 0,f(x)=\sqrt{3x+2}-1\geq -1.\)</span> Therefore, the range of <span class="process-math">\(f\)</span> must be a subset of the set <span class="process-math">\(\{y|y\geq-1\}.\)</span> To show that every element in this set is in the range of <span class="process-math">\(f,\)</span> we need to show that for all <span class="process-math">\(y\)</span> in this set, there exists a real number <span class="process-math">\(x\)</span> in the domain such that <span class="process-math">\(f(x)=y.\)</span> Let <span class="process-math">\(y\geq-1.\)</span> Then, <span class="process-math">\(f(x)=y\)</span> if and only if</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="subsec_Ch1Sec1Ss1-35-3-1-2-2-2-1-11">
 \begin{equation*}
 \sqrt{3x+2}-1=y.
 \end{equation*}
 </div>
 <div class="para">Solving this equation for <span class="process-math">\(x,\)</span> we see that <span class="process-math">\(x\)</span> must solve the equation</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="subsec_Ch1Sec1Ss1-35-3-1-2-2-2-1-14">
 \begin{equation*}
 \sqrt{3x+2}=y+1.
 \end{equation*}
 </div>
 <div class="para">Since <span class="process-math">\(y\geq-1,\)</span> such an <span class="process-math">\(x\)</span> could exist. Squaring both sides of this equation, we have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="subsec_Ch1Sec1Ss1-35-3-1-2-2-2-1-17">
 \begin{equation*}
 3x+2=(y+1)^2.
 \end{equation*}
 </div>
 <div class="para">Therefore, we need</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="subsec_Ch1Sec1Ss1-35-3-1-2-2-2-1-18">
 \begin{equation*}
 3x=(y+1)^2-2,
 \end{equation*}
 </div>
 <div class="para">which implies</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="subsec_Ch1Sec1Ss1-35-3-1-2-2-2-1-19">
 \begin{equation*}
 x=\frac{1}{3}(y+1)^2-\frac{2}{3}.
 \end{equation*}
 </div>
 <div class="para">We just need to verify that <span class="process-math">\(x\)</span> is in the domain of <span class="process-math">\(f.\)</span> Since the domain of <span class="process-math">\(f\)</span> consists of all real numbers greater than or equal to <span class="process-math">\(-2/3,\)</span> and</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="subsec_Ch1Sec1Ss1-35-3-1-2-2-2-1-24">
 \begin{equation*}
 \frac{1}{3}(y+1)^2-\frac{2}{3}\geq -\frac{2}{3},
 \end{equation*}
@@ -562,11 +586,11 @@ x=\frac{1}{3}(y+1)^2-\frac{2}{3}.
 <div class="autopermalink" data-description="Item 3.a"><a href="#subsec_Ch1Sec1Ss1-35-3-1-3-1-2-1" title="Copy heading and permalink for Item 3.a" aria-label="Copy heading and permalink for Item 3.a">🔗</a></div>
 </li>
 <li id="subsec_Ch1Sec1Ss1-35-3-1-3-1-2-2">
-<div class="para" id="p-derived-subsec_Ch1Sec1Ss1-35-3-1-3-1-2-2">To find the range of <span class="process-math">\(f,\)</span> we need to find the values of <span class="process-math">\(y\)</span> such that there exists a real number <span class="process-math">\(x\)</span> in the domain with the property that<div class="displaymath process-math">
+<div class="para" id="p-derived-subsec_Ch1Sec1Ss1-35-3-1-3-1-2-2">To find the range of <span class="process-math">\(f,\)</span> we need to find the values of <span class="process-math">\(y\)</span> such that there exists a real number <span class="process-math">\(x\)</span> in the domain with the property that<div class="displaymath process-math" id="subsec_Ch1Sec1Ss1-35-3-1-3-1-2-2-4">
 \begin{equation*}
 \frac{3}{x-2}=y.
 \end{equation*}
-</div>Solving this equation for <span class="process-math">\(x,\)</span> we find that<div class="displaymath process-math">
+</div>Solving this equation for <span class="process-math">\(x,\)</span> we find that<div class="displaymath process-math" id="subsec_Ch1Sec1Ss1-35-3-1-3-1-2-2-6">
 \begin{equation*}
 x=\frac{3}{y}+2.
 \end{equation*}
@@ -897,28 +921,28 @@ x=\frac{3}{y}+2.
 </h5>
 <div class="para" id="sec_Ch1Sec1-4-5-15-1">We say that a function <span class="process-math">\(f\)</span> is <dfn class="terminology">increasing on the interval <span class="process-math">\(I\)</span></dfn> if for all <span class="process-math">\(x_1,x_2\in I,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-4-5-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec1-4-5-15-2">
 \begin{equation*}
 f(x_1) \leq f(x_2) \text{ when } x_1 &lt; x_2.
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec1-4-5-15-3">We say <span class="process-math">\(f\)</span> is <dfn class="terminology">strictly increasing on the interval <span class="process-math">\(I\)</span></dfn> if for all <span class="process-math">\(x_1,x_2\in I,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-4-5-15-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec1-4-5-15-4">
 \begin{equation*}
 f(x_1) &lt; f(x_2) \text{ when } x_1 &lt; x_2.
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec1-4-5-15-5">We say that a function <span class="process-math">\(f\)</span> is <dfn class="terminology">decreasing on the interval <span class="process-math">\(I\)</span></dfn> if for all <span class="process-math">\(x_1,x_2\in I,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-4-5-15-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec1-4-5-15-6">
 \begin{equation*}
 f(x_1)\geq f(x_2) \text{ when }x_1 &lt; x_2.
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec1-4-5-15-7">We say that a function <span class="process-math">\(f\)</span> is <dfn class="terminology">strictly decreasing on the interval <span class="process-math">\(I\)</span></dfn> if for all <span class="process-math">\(x_1,x_2\in I,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-4-5-15-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec1-4-5-15-8">
 \begin{equation*}
 f(x_1) &gt; f(x_2) \text{ when }x_1 &lt; x_2.
 \end{equation*}
@@ -933,14 +957,14 @@ f(x_1) &gt; f(x_2) \text{ when }x_1 &lt; x_2.
 </div>
 <div class="para" id="sec_Ch1Sec1-5-2-2">Alternatively, we can create a new function by composing two functions. For example, given the functions <span class="process-math">\(f(x)=x^2\)</span> and <span class="process-math">\(g(x)=3x+1,\)</span> the composite function <span class="process-math">\(f\circ g\)</span> is defined such that<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec1-5-2-3">
 \begin{equation*}
 (f\circ g)(x)=f(g(x))=(g(x))^2=(3x+1)^2.
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec1-5-2-4">The composite function <span class="process-math">\(g\circ f\)</span> is defined such that<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-5-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec1-5-2-5">
 \begin{equation*}
 (g\circ f)(x)=g(f(x))=3f(x)+1=3x^2+1.
 \end{equation*}
@@ -1036,7 +1060,7 @@ f(x_1) &gt; f(x_2) \text{ when }x_1 &lt; x_2.
 </h5>
 <div class="para" id="sec_Ch1Sec1-5-4-3-1">Consider the function <span class="process-math">\(f\)</span> with domain <span class="process-math">\(A\)</span> and range <span class="process-math">\(B,\)</span> and the function <span class="process-math">\(g\)</span> with domain <span class="process-math">\(D\)</span> and range <span class="process-math">\(E.\)</span> If <span class="process-math">\(B\)</span> is a subset of <span class="process-math">\(D,\)</span> then the <dfn class="terminology">composite function</dfn> <span class="process-math">\((g\circ  f)(x)\)</span> is the function with domain <span class="process-math">\(A\)</span> such that<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-5-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec1-5-4-3-2">
 \begin{equation*}
 (g\circ f)(x)=g(f(x)).
 \end{equation*}
@@ -1071,15 +1095,15 @@ f(x_1) &gt; f(x_2) \text{ when }x_1 &lt; x_2.
 <div class="solutions"><details id="fs-id1170572222941" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <ol class="decimal" id="fs-id1170572222941-1">
 <li id="fs-id1170572222941-1-1">
-<div class="para" id="p-derived-fs-id1170572222941-1-1">We can find the formula for <span class="process-math">\((g\circ f)(x)\)</span> in two different ways. We could write<div class="displaymath process-math">
+<div class="para" id="p-derived-fs-id1170572222941-1-1">We can find the formula for <span class="process-math">\((g\circ f)(x)\)</span> in two different ways. We could write<div class="displaymath process-math" id="fs-id1170572222941-1-1-2">
 \begin{equation*}
 (g\circ f)(x)=g(f(x))=g(x^2+1)=\frac{1}{x^2+1}.
 \end{equation*}
-</div>Alternatively, we could write<div class="displaymath process-math">
+</div>Alternatively, we could write<div class="displaymath process-math" id="fs-id1170572222941-1-1-3">
 \begin{equation*}
 (g\circ f)(x)=g(f(x))=\frac{1}{f(x)}=\frac{1}{x^2+1}.
 \end{equation*}
-</div>Since <span class="process-math">\(x^2+1\neq 0\)</span> for all real numbers <span class="process-math">\(x,\)</span> the domain of <span class="process-math">\((g\circ f)(x)\)</span> is the set of all real numbers. Since <span class="process-math">\(0 \lt 1/(x^2+1) \leq 1,\)</span> the range is, at most, the interval <span class="process-math">\((0,1].\)</span> To show that the range is this entire interval, we let <span class="process-math">\(y=1/(x^2+1)\)</span> and solve this equation for <span class="process-math">\(x\)</span> to show that for all <span class="process-math">\(y\)</span> in the interval <span class="process-math">\((0,1],\)</span> there exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(y=1/(x^2+1).\)</span> Solving this equation for <span class="process-math">\(x,\)</span> we see that <span class="process-math">\(x^2+1=1/y,\)</span> which implies that<div class="displaymath process-math">
+</div>Since <span class="process-math">\(x^2+1\neq 0\)</span> for all real numbers <span class="process-math">\(x,\)</span> the domain of <span class="process-math">\((g\circ f)(x)\)</span> is the set of all real numbers. Since <span class="process-math">\(0 \lt 1/(x^2+1) \leq 1,\)</span> the range is, at most, the interval <span class="process-math">\((0,1].\)</span> To show that the range is this entire interval, we let <span class="process-math">\(y=1/(x^2+1)\)</span> and solve this equation for <span class="process-math">\(x\)</span> to show that for all <span class="process-math">\(y\)</span> in the interval <span class="process-math">\((0,1],\)</span> there exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(y=1/(x^2+1).\)</span> Solving this equation for <span class="process-math">\(x,\)</span> we see that <span class="process-math">\(x^2+1=1/y,\)</span> which implies that<div class="displaymath process-math" id="fs-id1170572222941-1-1-17">
 \begin{equation*}
 x=\pm\sqrt{\frac{1}{y}-1}.
 \end{equation*}
@@ -1094,27 +1118,27 @@ x=\pm\sqrt{\frac{1}{y}-1}.
 <div class="autopermalink" data-description="Item 2"><a href="#fs-id1170572222941-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 <li id="fs-id1170572222941-1-3">
-<div class="para" id="p-derived-fs-id1170572222941-1-3">We can find a formula for <span class="process-math">\((f\circ g)(x)\)</span> in two ways. First, we could write<div class="displaymath process-math">
+<div class="para" id="p-derived-fs-id1170572222941-1-3">We can find a formula for <span class="process-math">\((f\circ g)(x)\)</span> in two ways. First, we could write<div class="displaymath process-math" id="fs-id1170572222941-1-3-2">
 \begin{equation*}
 (f\circ g)(x)=f(g(x))=f\left(\frac{1}{x}\right)=\left(\frac{1}{x}\right)^2+1.
 \end{equation*}
-</div>Alternatively, we could write<div class="displaymath process-math">
+</div>Alternatively, we could write<div class="displaymath process-math" id="fs-id1170572222941-1-3-3">
 \begin{equation*}
 (f\circ g)(x)=f(g(x))=(g(x))^2+1=\left(\frac{1}{x}\right)^2+1.
 \end{equation*}
-</div>The domain of <span class="process-math">\(f\circ g\)</span> is the set of all real numbers <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\neq 0.\)</span> To find the range of <span class="process-math">\(f,\)</span> we need to find all values <span class="process-math">\(y\)</span> for which there exists a real number <span class="process-math">\(x\neq0\)</span> such that<div class="displaymath process-math">
+</div>The domain of <span class="process-math">\(f\circ g\)</span> is the set of all real numbers <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\neq 0.\)</span> To find the range of <span class="process-math">\(f,\)</span> we need to find all values <span class="process-math">\(y\)</span> for which there exists a real number <span class="process-math">\(x\neq0\)</span> such that<div class="displaymath process-math" id="fs-id1170572222941-1-3-10">
 \begin{equation*}
 \left(\frac{1}{x}\right)^2+1=y.
 \end{equation*}
-</div>Solving this equation for <span class="process-math">\(x,\)</span> we see that we need <span class="process-math">\(x\)</span> to satisfy<div class="displaymath process-math">
+</div>Solving this equation for <span class="process-math">\(x,\)</span> we see that we need <span class="process-math">\(x\)</span> to satisfy<div class="displaymath process-math" id="fs-id1170572222941-1-3-13">
 \begin{equation*}
 \left(\frac{1}{x}\right)^2=y-1,
 \end{equation*}
-</div>which simplifies to<div class="displaymath process-math">
+</div>which simplifies to<div class="displaymath process-math" id="fs-id1170572222941-1-3-14">
 \begin{equation*}
 \frac{1}{x}=\pm\sqrt{y-1}.
 \end{equation*}
-</div>Finally, we obtain<div class="displaymath process-math">
+</div>Finally, we obtain<div class="displaymath process-math" id="fs-id1170572222941-1-3-15">
 \begin{equation*}
 x=\pm\frac{1}{\sqrt{y-1}}.
 \end{equation*}
@@ -1271,14 +1295,14 @@ x=\pm\frac{1}{\sqrt{y-1}}.
 <figure class="figure figure-like" id="CNX_Calc_Figure_01_01_012"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/CNX_Calc_Figure_01_01_012.jpg" class="contained" alt='"An image of two graphs. The first graph is labeled “(a), symmetry about the y-axis” and is of the curved function “f(x) = (x to the 4th) - 2(x squared) - 3”. The x axis runs from -3 to 4 and the y axis runs from -4 to 5. This function decreases until it hits the point (-1, -4), which is minimum of the function. Then the graph increases to the point (0,3), which is a local maximum. Then the the graph decreases until it hits the point (1, -4), before it increases again. The second graph is labeled “(b), symmetry about the origin” and is of the curved function “f(x) = x cubed - 4x”. The x axis runs from -3 to 4 and the y axis runs from -4 to 5. The graph of the function starts at the x intercept at (-2, 0) and increases until the approximate point of (-1.2, 3.1). The function then decreases, passing through the origin, until it hits the approximate point of (1.2, -3.1). The function then begins to increase again and has another x intercept at (2, 0)."'></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.38<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>(a) A graph that is symmetric about the <span class="process-math">\(y\)</span>-axis. (b) A graph that is symmetric about the origin.<div class="autopermalink" data-description="Figure 1.1.38"><a href="#CNX_Calc_Figure_01_01_012" title="Copy heading and permalink for Figure 1.1.38" aria-label="Copy heading and permalink for Figure 1.1.38">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch1Sec1-6-4">If we are given the graph of a function, it is easy to see whether the graph has one of these symmetry properties. But without a graph, how can we determine algebraically whether a function <span class="process-math">\(f\)</span> has symmetry? Looking at <a href="sec_Ch1Sec1.html#CNX_Calc_Figure_01_01_012" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_01_012.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.38">Figure 1.1.38</a>(a) again, we see that since <span class="process-math">\(f\)</span> is symmetric about the <span class="process-math">\(y\)</span>-axis, if the point <span class="process-math">\((x,y)\)</span> is on the graph, the point <span class="process-math">\((-x,y)\)</span> is on the graph. In other words, <span class="process-math">\(f(-x)=f(x).\)</span> If a function <span class="process-math">\(f\)</span> has this property, we say <span class="process-math">\(f\)</span> is an even function, which has symmetry about the <span class="process-math">\(y\)</span>-axis. For example, <span class="process-math">\(f(x)=x^2\)</span> is even because<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_013.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_013.html" id="sec_Ch1Sec1-6-5">
 \begin{equation*}
 f(-x)=(-x)^2=x^2=f(x).
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec1-6-6">In contrast, looking at <a href="sec_Ch1Sec1.html#CNX_Calc_Figure_01_01_012" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_01_012.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.38">Figure 1.1.38</a>(b) again, if a function <span class="process-math">\(f\)</span> is symmetric about the origin, then whenever the point <span class="process-math">\((x,y)\)</span> is on the graph, the point <span class="process-math">\((-x,-y)\)</span> is also on the graph. In other words, <span class="process-math">\(f(-x)=-f(x).\)</span> If <span class="process-math">\(f\)</span> has this property, we say <span class="process-math">\(f\)</span> is an odd function, which has symmetry about the origin. For example, <span class="process-math">\(f(x)=x^3\)</span> is odd because<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-6-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_013.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_013.html" id="sec_Ch1Sec1-6-7">
 \begin{equation*}
 f(-x)=(-x)^3=-x^3=-f(x).
 \end{equation*}
@@ -1348,7 +1372,7 @@ f(-x)=(-x)^3=-x^3=-f(x).
 </div>
 <div class="autopermalink" data-description="Checkpoint 1.1.41"><a href="#sec_Ch1Sec1-6-10" title="Copy heading and permalink for Checkpoint 1.1.41" aria-label="Copy heading and permalink for Checkpoint 1.1.41">🔗</a></div></article></details><div class="para" id="sec_Ch1Sec1-6-11">One symmetric function that arises frequently is the <dfn class="terminology">absolute value function</dfn>, written as <span class="process-math">\(|x|.\)</span> The absolute value function is defined as<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-6-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_013.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_013.html" id="sec_Ch1Sec1-6-12">
 \begin{equation*}
 f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}\text{.}
 \end{equation*}
@@ -1364,28 +1388,28 @@ f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}\text{.}
 <div class="solutions"><details id="sec_Ch1Sec1-6-15-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec1-6-15-3-1">Since the absolute value function is defined for all real numbers, the domain of this function is <span class="process-math">\((-\infty,\infty).\)</span> Since <span class="process-math">\(|x-3|\geq 0\)</span> for all <span class="process-math">\(x,\)</span> the function <span class="process-math">\(f(x)=2|x-3|+4\geq 4.\)</span> Therefore, the range is, at most, the set <span class="process-math">\(\{y|y\geq 4\}.\)</span> To see that the range is, in fact, this whole set, we need to show that for <span class="process-math">\(y\geq 4\)</span> there exists a real number <span class="process-math">\(x\)</span> such that<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-6-15-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec1-6-15-3-2">
 \begin{equation*}
 2|x-3|+4=y.
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec1-6-15-3-3">A real number <span class="process-math">\(x\)</span> satisfies this equation as long as<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-6-15-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec1-6-15-3-4">
 \begin{equation*}
 |x-3|=\frac{1}{2}(y-4).
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec1-6-15-3-5">Since <span class="process-math">\(y\geq 4,\)</span> we know <span class="process-math">\(y-4\geq 0,\)</span> and thus the right-hand side of the equation is nonnegative, so it is possible that there is a solution. Furthermore,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-6-15-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec1-6-15-3-6">
 \begin{equation*}
 |x-3|=\begin{cases}-(x-3) \amp \text{ if } x\lt  3 \\x-3 \amp \text{ if }x \geq 3. \end{cases}
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec1-6-15-3-7">Therefore, we see there are two solutions:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-6-15-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec1-6-15-3-8">
 \begin{equation*}
 x=\pm\frac{1}{2}(y-4)+3.
 \end{equation*}
@@ -1450,7 +1474,7 @@ x=\pm\frac{1}{2}(y-4)+3.
 <div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec1-8-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="sec_Ch1Sec1-8-2-2">
-<div class="para" id="p-derived-sec_Ch1Sec1-8-2-2">Absolute value function<div class="displaymath process-math">
+<div class="para" id="p-derived-sec_Ch1Sec1-8-2-2">Absolute value function<div class="displaymath process-math" id="sec_Ch1Sec1-8-2-2-3">
 \begin{equation*}
 f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}\text{.}
 \end{equation*}

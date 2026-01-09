@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<section xml:id="sec_Ch2Sec1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>A Preview of Calculus</title>
+
+<introduction xml:id="sec_Ch2Sec0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Introduction</title>
+<p><alert> Don't forget the photo</alert> </p>
+
+<!-- <figure xml:id="CNX_Calc_Figure_02_00_001" class="splash">
+<image source="CNX_Calc_Figure_02_00_001.jpg" width="50%">
+<description>"A picture of a futuristic spaceship speeding through deep space."
+ </description></image> <caption>The vision of human exploration by the National Aeronautics and Space Administration (NASA) to distant parts of the universe illustrates the idea of space travel at high speeds. But, is there a limit to how fast a spacecraft can go? (credit: NASA)</caption>
+</figure> -->
+
+<p id="fs-id1170572287122">Science fiction writers often imagine spaceships that can travel to far-off planets in distant galaxies. However, back in 1905, Albert Einstein showed that a limit exists to how fast any object can travel. The problem is that the faster an object moves, the more mass it attains (in the form of energy), according to the equation</p>
+<me>m=\frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}},</me>
+<p id="fs-id1170571698984">where <m>m_0</m> is the object's mass at rest, <m>v</m> is its speed, and <m>c</m> is the speed of light. What is this speed limit?</p> 
+<p id="fs-id1170572419075">The idea of a limit is central to all of calculus. We begin this chapter by examining why limits are so important. Then, we go on to describe how to find the limit of a function at a given point. Not all functions have limits at all points, and we discuss what this means and how we can tell if a function does or does not have a limit at a particular value. </p>
+</introduction>
+
+<introduction>
+<title> Learning Objectives</title>
+<ol>
+<li>Describe the tangent problem and how it led to the idea of a derivative.</li>
+<li>Explain how the idea of a limit is involved in solving the tangent problem.</li>
+<li>Recognize a tangent to a curve at a point as the limit of secant lines.</li>
+<li>Identify instantaneous velocity as the limit of average velocity over a small time interval.</li>
+<li>Describe the area problem and how it was solved by the integral.</li>
+<li>Explain how the idea of a limit is involved in solving the area problem.</li>
+<li>Recognize how the ideas of limit, derivative, and integral led to the studies of infinite series and multivariable calculus.
+</li>
+</ol>
+
+<p id="fs-id1170571068193">As we embark on our study of calculus, we shall see how its development arose from common solutions to practical problems in areas such as engineering physics—like the space travel problem posed in the chapter opener. Two key problems led to the initial formulation of calculus: (1) the tangent problem, or how to determine the slope of a line tangent to a curve at a point; and (2) the area problem, or how to determine the area under a curve.</p>
+</introduction>
+
+
+<subsection id="fs-id1170573393290">
+<title>The Tangent Problem and Differential Calculus</title>
+<p id="fs-id1170573581969">Rate of change is one of the most critical concepts in calculus. We begin our investigation of rates of change by looking at the graphs of the three lines <m>f(x)=-2x-3,g(x)=\frac{1}{2}x+1,</m> and <m>h(x)=2,</m> shown in <xref ref="CNX_Calc_Figure_02_01_001"/>.</p>
+<figure xml:id="CNX_Calc_Figure_02_01_001">
+<image source="CNX_Calc_Figure_02_01_001.jpg" width="100%">
+<description>"Three graphs of different linear functions are shown. The first is f(x) = -2x &#x2013; 3, with slope of -2 and y intercept of -3. The second is g(x) = x / 2 + 1, with slope of 1/2 and y intercept of 1. The third is h(x) = 2, with slope of 0 and y intercept of 2. The rate of change of each is constant, as determined by the slope." </description></image> <caption>The rate of change of a linear function is constant in each of these three graphs, with the constant determined by the slope.</caption>
+</figure>
+<p id="fs-id1170573436660">As we move from left to right along the graph of <m>f(x)=-2x-3,</m> we see that the graph decreases at a constant rate. For every 1 unit we move to the right along the <m>x</m>-axis, the <m>y</m>-coordinate decreases by 2 units. This <term class="no-emphasis">rate of change</term> is determined by the slope (-2) of the line. Similarly, the slope of 1/2 in the function <m>g(x)</m> tells us that for every change in <m>x</m> of 1 unit there is a corresponding change in <m>y</m> of 1/2 unit. The function <m>h(x)=2</m> has a slope of zero, indicating that the values of the function remain constant. We see that the slope of each linear function indicates the rate of change of the function.</p>
+<p id="fs-id1170573403364">Compare the graphs of these three functions with the graph of <m>k(x)=x^2</m> (<xref ref="CNX_Calc_Figure_02_01_002"/>). The graph of <m>k(x)=x^2</m> starts from the left by decreasing rapidly, then begins to decrease more slowly and level off, and then finally begins to increase—slowly at first, followed by an increasing rate of increase as it moves toward the right. Unlike a linear function, no single number represents the rate of change for this function. We quite naturally ask: How do we measure the rate of change of a nonlinear function?</p>
+<figure xml:id="CNX_Calc_Figure_02_01_002">
+<image source="CNX_Calc_Figure_02_01_002.jpg" width="50%">
+<description>"A graph of the parabola k(x) = x^2, which opens up and has its vertex at the origin."  </description></image> <caption>The function <m>k(x)=x^2</m> does not have a constant rate of change.</caption>
+</figure>
+<p id="fs-id1170573328521">We can approximate the rate of change of a function <m>f(x)</m> at a point <m>(a,f(a))</m> on its graph by taking another point <m>(x,f(x))</m> on the graph of <m>f(x),</m> drawing a line through the two points, and calculating the slope of the resulting line. Such a line is called a <term>secant</term> line. <xref ref="CNX_Calc_Figure_02_01_003"/> shows a secant line to a function <m>f(x)</m> at a point <m>(a,f(a)).</m></p>
+<figure xml:id="CNX_Calc_Figure_02_01_003">
+<image source="CNX_Calc_Figure_02_01_003.jpg" width="50%">
+<description>"A graph showing a generic curved function going through the points (0,0), (a, fa.), and (x, f(x)). A straight line called the secant line is drawn through the points (a, fa.), and (x, f(x)), going below the curved function between a and x and going above the curved function at values greater than x or less than a. The curved function and the secant line cross once more at some point in the third quadrant. The slope of the secant line is ( f(x) &#x2013; fa. ) / (x &#x2013; a).">
+</description></image> <caption>The slope of a secant line through a point <m>(a,f(a))</m> estimates the rate of change of the function at the point <m>(a,f(a)).</m></caption>
+</figure>
+<p id="fs-id1170573399408">We formally define a secant line as follows:</p>
+<definition>
+<p id="fs-id1170571120822">The <emphasis effect="bold">secant</emphasis> to the function <m>f(x)</m> through the points <m>(a,f(a))</m> and <m>(x,f(x))</m> is the line passing through these points. Its slope is given by</p>
+<me>m_{\sec}=\frac{f(x)-f(a)}{x-a}.</me>
+</definition>
+<p id="fs-id1170573384217">The accuracy of approximating the rate of change of the function with a secant line depends on how close <m>x</m> is to <m>a</m>. As we see in <xref ref="CNX_Calc_Figure_02_01_004"/>, if <m>x</m> is closer to <m>a</m>, the slope of the secant line is a better measure of the rate of change of <m>f(x)</m> at <m>a</m>.</p>
+<figure xml:id="CNX_Calc_Figure_02_01_004">
+<image source="CNX_Calc_Figure_02_01_004.jpg" width="50%">
+<description>"This graph is the same as the previous secant line and generic curved function graph. However, another point x is added, this time plotted closer to a on the x-axis. As such, another secant line is drawn through the points (a, fa.) and the new, closer (x, f(x)). The line stays much closer to the generic curved function around (a, fa.). The slope of this secant line has become a better approximation of the rate of change of the generic function.">
+ </description></image> <caption>As <m>x</m> gets closer to <m>a</m>, the slope of the secant line becomes a better approximation to the rate of change of the function <m>f(x)</m> at <m>a</m>.</caption>
+</figure>
+<p id="fs-id1170573570406">The secant lines themselves approach a line that is called the <term>tangent</term> to the function <m>f(x)</m> at <m>a</m> (<xref ref="CNX_Calc_Figure_02_01_005"/>). The slope of the tangent line to the graph at <m>a</m> measures the rate of change of the function at <m>a</m>. This value also represents the derivative of the function <m>f(x)</m> at <m>a</m>, or the rate of change of the function at <m>a</m>. This derivative is denoted by <m>f'(a).</m> <term>Differential calculus</term> is the field of calculus concerned with the study of derivatives and their applications.</p>
+<note id="fs-id1170573582868" class="media-2">
+  <title> Media </title>
+<p xml:id="fs-id1170571137117">For an interactive demonstration of the slope of a secant line that you can manipulate yourself, visit this applet (<emphasis effect="italics">Note:</emphasis> this site requires a Java browser plugin): <url href="http://www.openstax.org/l/20_mathinsight" visual="openstax.org/l/20_mathinsight">Math Insight</url>.</p></note>
+<figure xml:id="CNX_Calc_Figure_02_01_005">
+<image source="CNX_Calc_Figure_02_01_005.jpg" width="50%">
+<description>"This graph is a continuation of the previous two. This time, the graph contains the curved function, the two secant lines, and a tangent line. As x approaches a, the secant lines approach the tangent line."
+</description></image> <caption>Solving the <term class="no-emphasis">Tangent Problem</term>: As <m>x</m> approaches <m>a</m>, the secant lines approach the tangent line.</caption>
+</figure>
+<p id="fs-id1170573360908"><xref ref="fs-id1170573387465"/> illustrates how to find slopes of secant lines. These slopes estimate the slope of the tangent line or, equivalently, the rate of change of the function at the point at which the slopes are calculated.</p>
+<example xml:id="fs-id1170573387465">
+<title>Finding Slopes of Secant Lines</title>
+ <statement id="fs-id1170573409161">
+<p id="fs-id1170573581550">Estimate the slope of the tangent line (rate of change) to <m>f(x)=x^2</m> at <m>x=1</m> by finding slopes of secant lines through <m>(1,1)</m> and each of the following points on the graph of <m>f(x)=x^2.</m></p>
+<ol>
+<li><m>(2,4)</m></li>
+<li><m>(\frac{3}{2},\frac{9}{4})</m></li>
+</ol>
+</statement>
+<solution id="fs-id1170573405502">
+<p id="fs-id1170573397397">Use the formula for the slope of a secant line from the definition.</p>
+<ol>
+<li><m>m_{\sec}= \frac{4-1}{2-1}=3</m></li>
+<li><m>m_{\sec}= \frac{\frac{9}{4}-1}{\frac{3}{2}-1}=\frac{5}{2}=2.5</m></li>
+</ol>
+<p id="fs-id1170573421632">The point in part b. is closer to the point <m>(1,1),</m> so the slope of 2.5 is closer to the slope of the tangent line. A good estimate for the slope of the tangent would be in the range of 2 to 2.5 (<xref ref="CNX_Calc_Figure_02_01_011"/>).</p>
+<figure xml:id="CNX_Calc_Figure_02_01_011">
+<image source="CNX_Calc_Figure_02_01_011.jpg" width="50%">
+<description>"Two graphs of the parabola f(x) = x^2 are shown. The first has a secant line drawn, intersecting the parabola at (1,1) and (2,4). The second has a secant line drawn, intersecting the parabola at (1,1) and (3/2, 9/4). These lines provide successively closer approximations to the tangent line to the function at (1,1)."
+ </description></image> <caption>The secant lines to <m>f(x)=x^2</m> at <m>(1,1)</m> through (a) <m>(2,4)</m> and (b) <m>(\frac{3}{2},\frac{9}{4})</m> provide successively closer approximations to the tangent line to <m>f(x)=x^2</m> at <m>(1,1).</m></caption>
+</figure>
+</solution>
+
+</example>
+<exercise>
+   <statement id="fs-id1170570995740">
+<p id="fs-id1170573289693">Estimate the slope of the tangent line (rate of change) to <m>f(x)=x^2</m> at <m>x=1</m> by finding slopes of secant lines through <m>(1,1)</m> and the point <m>(\frac{5}{4},\frac{25}{16})</m> on the graph of <m>f(x)=x^2.</m></p>
+</statement>
+<solution id="fs-id1170573425542">
+<p id="fs-id1170573369377">2.25</p>
+</solution>
+<hint>
+
+<p id="fs-id1170573426669">Use <xref ref="fs-id1170573387465"/> and <xref ref="CNX_Calc_Figure_02_01_011"/> as a solving guide.</p>
+</hint>
+
+</exercise>
+<p id="fs-id1170573414802">We continue our investigation by exploring a related question. Keeping in mind that velocity may be thought of as the rate of change of position, suppose that we have a function, <m>s(t),</m> that gives the position of an object along a coordinate axis at any given time <m> t </m>. Can we use these same ideas to create a reasonable definition of the instantaneous velocity at a given time <m>t=a?</m> We start by approximating the instantaneous velocity with an average velocity. First, recall that the speed of an object traveling at a constant rate is the ratio of the distance traveled to the length of time it has traveled. We define the <term>average velocity</term> of an object over a time period to be the change in its position divided by the length of the time period.</p>
+
+<definition>
+<p id="fs-id1170573360519">Let <m>s(t)</m> be the position of an object moving along a coordinate axis at time <m> t </m>. The <term>average velocity</term> of the object over a time interval <m>[a,t]</m> where <m>a\lt t</m> (or <m>[t,a]</m> if <m>t\lt a)</m> is</p>
+<me>v_{\text{ ave }}= \frac{s(t)-s(a)}{t-a}.</me>
+</definition>
+<p id="fs-id1170573309855">As <m> t </m> is chosen closer to <m>a</m>, the average velocity becomes closer to the instantaneous velocity. Note that finding the average velocity of a position function over a time interval is essentially the same as finding the slope of a secant line to a function. Furthermore, to find the slope of a tangent line at a point <m>a</m>, we let the <m>x</m>-values approach <m>a</m> in the slope of the secant line. Similarly, to find the instantaneous velocity at time <m>a</m>, we let the <m> t </m>-values approach <m>a</m> in the average velocity. This process of letting <m>x</m> or <m> t </m> approach <m>a</m> in an expression is called taking a <term>limit</term>. Thus, we may define the <term>instantaneous velocity</term> as follows.</p>
+<definition>
+<p id="fs-id1170573571261">For a position function <m>s(t),</m> the <emphasis effect="bold">instantaneous velocity</emphasis> at a time <m>t=a</m> is the value that the average velocities approach on intervals of the form <m>[a,t]</m> and <m>[t,a]</m> as the values of <m> t </m> become closer to <m>a</m>, provided such a value exists.</p>
+</definition>
+<p id="fs-id1170570997278"><xref ref="fs-id1170573397285"/> illustrates this concept of limits and average velocity.</p>
+<example xml:id="fs-id1170573397285">
+<title>Finding Average Velocity</title>
+<statement id="fs-id1170573366500">
+<p id="fs-id1170573405085">A rock is dropped from a height of 64 ft. It is determined that its height (in feet) above ground <m> t </m> seconds later (for <m>0\leq t\leq 2)</m> is given by <m>s(t)=-16t^2+64.</m> Find the average velocity of the rock over each of the given time intervals. Use this information to guess the instantaneous velocity of the rock at time <m>t=0.5.</m></p>
+<ol>
+<li><m>[0.49,0.5]</m></li>
+<li><m>[0.5,0.51]</m></li>
+</ol>
+</statement>
+<solution id="fs-id1170573406320">
+<p id="fs-id1170573428397">Substitute the data into the formula for the definition of average velocity.</p>
+<ol xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1170573271242" list-type="enumerated" number-style="lower-alpha"><li><m>v_{\text{ave}}= \frac{s(0.5)-s(0.49)}{0.5-0.49}=-15.84</m></li>
+<li><m>v_{\text{ave}}= \frac{s(0.51)-s(0.5)}{0.51-0.5}=-16.16</m></li>
+</ol><p id="fs-id1170573577674">The instantaneous velocity is somewhere between -15.84 and -16.16 ft/sec. A good guess might be -16 ft/sec.</p>
+</solution>
+
+</example>
+<exercise>  <statement id="fs-id1170573307243">
+<p id="fs-id1170573399707">An object moves along a coordinate axis so that its position at time <m> t </m> is given by <m>s(t)=t^3.</m> Estimate its instantaneous velocity at time <m>t=2</m> by computing its average velocity over the time interval <m>[2,2.001].</m></p>
+</statement>
+<solution id="fs-id1170573428105">
+<p id="fs-id1170573263102">12.006001</p>
+</solution>
+<hint>
+
+<p id="fs-id1170573431685">Use <m>v_{\text{ave}}= \frac{s(2.001)-s(2)}{2.001-2}.</m></p>
+</hint>
+
+</exercise>
+</subsection>
+<subsection id="fs-id1170573230979">
+<title>The Area Problem and Integral Calculus</title>
+<p id="fs-id1170571096292">We now turn our attention to a classic question from calculus. Many quantities in physics—for example, quantities of work—may be interpreted as the area under a curve. This leads us to ask the question: How can we find the area between the graph of a function and the <m>x</m>-axis over an interval (<xref ref="CNX_Calc_Figure_02_01_006"/>)?</p>
+<figure xml:id="CNX_Calc_Figure_02_01_006">
+<image source="CNX_Calc_Figure_02_01_006.jpg" width="50%">
+<description>"A graph is shown of a generic curved function f(x) shaped like a hill in quadrant one. An area under the function is shaded above the x-axis and between x=a and x=b."
+  </description></image> <caption>The <term class="no-emphasis">Area Problem</term>: How do we find the area of the shaded region?</caption>
+</figure>
+<p id="fs-id1170573290874">As in the answer to our previous questions on velocity, we first try to approximate the solution. We approximate the area by dividing up the interval <m>[a,b]</m> into smaller intervals in the shape of rectangles. The approximation of the area comes from adding up the areas of these rectangles (<xref ref="CNX_Calc_Figure_02_01_007"/>).</p>
+<figure xml:id="CNX_Calc_Figure_02_01_007">
+<image source="CNX_Calc_Figure_02_01_007.jpg" width="50%">
+<description>"The graph is the same as the previous image, with one difference. Instead of the area completely shaded under the curved function, the interval [a, b] is divided into smaller intervals in the shape of rectangles. The rectangles have the same small width. The height of each rectangle is the height of the function at the midpoint of the base of that specific rectangle."
+</description></image> <caption>The area of the region under the curve is approximated by summing the areas of thin rectangles.</caption>
+</figure>
+<p id="fs-id1170573402146">As the widths of the rectangles become smaller (approach zero), the sums of the areas of the rectangles approach the area between the graph of <m>f(x)</m> and the <m>x</m>-axis over the interval <m>[a,b].</m> Once again, we find ourselves taking a limit. Limits of this type serve as a basis for the definition of the definite integral. <term>Integral calculus</term> is the study of integrals and their applications.</p>
+<example xml:id="fs-id1170573406196">
+<title>Estimation Using Rectangles</title>
+ <statement id="fs-id1170573436687">
+<p id="fs-id1170573425705">Estimate the area between the <m>x</m>-axis and the graph of <m>f(x)=x^2+1</m> over the interval <m>[0,3]</m> by using the three rectangles shown in <xref ref="CNX_Calc_Figure_02_01_008"/>.</p>
+<figure xml:id="CNX_Calc_Figure_02_01_008">
+<image source="CNX_Calc_Figure_02_01_008.jpg" width="50%">
+<description>"A graph of the parabola f(x) &#x2013; x^2 + 1 drawn on graph paper with all units shown. The rectangles completely contained under the function and above the x-axis in the interval [0,3] are shaded. This strategy sets the heights of the rectangles as the smaller of the two corners that could intersect with the function. As such, the rectangles are shorter than the height of the function."
+ </description></image> <caption>The area of the region under the curve of <m>f(x)=x^2+1</m> can be estimated using rectangles.</caption>
+</figure>
+</statement>
+<solution id="fs-id1170573398981">
+<p id="fs-id1170573420317">The areas of the three rectangles are 1 unit<m>^2</m>, 2 unit<m>^2</m>, and 5 unit<m>^2</m>. Using these rectangles, our area estimate is 8 unit<m>^2</m>.</p>
+</solution>
+
+</example>
+<exercise>  <statement id="fs-id1170573442120">
+<p id="fs-id1170573310917">Estimate the area between the <m>x</m>-axis and the graph of <m>f(x)=x^2+1</m> over the interval <m>[0,3]</m> by using the three rectangles shown here:</p>
+<image source="CNX_Calc_Figure_02_01_009.jpg" width="50%">
+<description>"A graph of the same parabola f(x) = x^2 + 1, but with a different shading strategy over the interval [0,3]. This time, the shaded rectangles are given the height of the taller corner that could intersect with the function. As such, the rectangles go higher than the height of the function
+</description>
+</image>
+</statement>
+<solution id="fs-id1170573410427">
+<p id="fs-id1170573575235">16 unit<m>^2</m></p>
+</solution>
+<hint>
+
+<p id="fs-id1170573405358">Use <xref ref="fs-id1170573406196"/> as a guide.</p>
+</hint>
+
+</exercise>
+</subsection>
+<subsection id="fs-id1170573368474">
+<title>Other Aspects of Calculus</title>
+<p id="fs-id1170573406539">So far, we have studied functions of one variable only. Such functions can be represented visually using graphs in two dimensions; however, there is no good reason to restrict our investigation to two dimensions. Suppose, for example, that instead of determining the velocity of an object moving along a coordinate axis, we want to determine the velocity of a rock fired from a catapult at a given time, or of an airplane moving in three dimensions. We might want to graph real-value functions of two variables or determine volumes of solids of the type shown in <xref ref="CNX_Calc_Figure_02_01_010"/>. These are only a few of the types of questions that can be asked and answered using <term>multivariable calculus</term>. Informally, multivariable calculus can be characterized as the study of the calculus of functions of two or more variables. However, before exploring these and other ideas, we must first lay a foundation for the study of calculus in one variable by exploring the concept of a limit.</p>
+<figure xml:id="CNX_Calc_Figure_02_01_010">
+  <image source="CNX_Calc_Figure_02_01_010.jpg" width="50%">
+<description>"A diagram in three dimensional space, over the x, y, and z axis where z = f(x,y). The base is the x,y axis, and the height is the z axis. The base is a rectangle contained in the x,y axis plane. The top is a surface of changing height with corners located directly above those of the rectangle in the x,y plane.. The highest point is above the corner at x=0, y=0. The lowest point is at the corner somewhere in the first quadrant of the x, y plane. The other two points are roughly the same height and located above the corners on the x axis and y axis. Lines are drawn connecting the corners of the rectangle to those of the surface." </description></image> <caption>We can use multivariable calculus to find the volume between a surface defined by a function of two variables and a plane.</caption>
+</figure>
+</subsection>
+<subsection id="fs-id1170573367906" class="key-concepts">
+<title>Key Concepts</title>
+<ul id="fs-id1170573534245" list-type="bulleted" bullet-style="bullet">
+<li>Differential calculus arose from trying to solve the problem of determining the slope of a line tangent to a curve at a point. The slope of the tangent line indicates the rate of change of the function, also called the <emphasis effect="italics">derivative</emphasis>. Calculating a derivative requires finding a limit.</li>
+<li>Integral calculus arose from trying to solve the problem of finding the area of a region between the graph of a function and the <m>x</m>-axis. We can approximate the area by dividing it into thin rectangles and summing the areas of these rectangles. This summation leads to the value of a function called the <emphasis effect="italics">integral</emphasis>. The integral is also calculated by finding a limit and, in fact, is related to the derivative of a function.</li>
+<li>Multivariable calculus enables us to solve problems in three-dimensional space, including determining motion in space and finding volumes of solids.</li>
+</ul>
+</subsection>
+<subsection id="fs-id1170573400272" class="key-equations">
+<title>Key Equations</title>
+<ul id="fs-id1170573360352" list-type="bulleted" bullet-style="bullet">
+<li><emphasis effect="bold">Slope of a Secant Line</emphasis><newline/>
+<m>m_{\sec}= \frac{f(x)-f(a)}{x-a}</m></li>
+<li><emphasis effect="bold">Average Velocity over Interval</emphasis> <m>[a,t]</m><newline/>
+<m>v_{\text{ave}}=\frac{s(t)-s(a)}{t-a}</m></li>
+</ul>
+</subsection>
+</section>
+

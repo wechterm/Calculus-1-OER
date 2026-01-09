@@ -2,7 +2,9 @@
 
 <!-- The docinfo block is the analogue to the latex preamble -->
 <!-- This is where you can define macros and other book-wide -->
-<!--  settings.                                              -->
+<!--  settings.  
+  
+-->
 <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <!-- The next three lines are likely for mature projects only: -->
@@ -20,6 +22,7 @@
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
 \newcommand{\ds}{\displaystyle}
+\newcommand{\limit}{\ds\lim} 
 </macros>
 
 <!-- If you put any latex-image elements you can include preambles  -->

@@ -7,11 +7,11 @@
 <!-- Change title when you have one: -->
   <title>Limits</title>
   <!--xi:include href="./sec_Ch2Sec0.ptx" /-->
-  <!--xi:include href="./sec_Ch2Sec1.ptx" /-->
+  <xi:include href="./sec_Ch2Sec1.ptx" />
   <!--xi:include href="./sec_Ch2Sec2.ptx" /-->
   <xi:include href="./sec_Ch2Sec2v2.ptx" />
   <!-- <xi:include href="./sec-FigsTest.ptx" /> -->
   <xi:include href="./sec-Ch2Sec3LimitDef.ptx" />
-  <!-- <xi:include href="./sec_Ch2Sec3.ptx" /> -->
+  <xi:include href="./sec_Ch2Sec4LimitLaws.ptx" />
   <!--xi:include href="./sec_Ch2Sec4.ptx" /-->
 </chapter>
