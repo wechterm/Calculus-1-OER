@@ -806,8 +806,55 @@ We'll explore each of these in turn.
 <p id="fs-id1170571612943">Follow the procedures from <xref ref="fs-id1170571611150"/>.</p>
 </hint>
 </exercise>
+<p>In the examples above, as x approaches 0, the points on the graph of <m>f(x)</m> are getting closer to the line <m>x = 0</m>. The vertical line <m>x = 0</m> is called a vertical asymptote of the graph. We formally define a vertical asymptote as follows:
+</p>
+<definition>
+<p id="fs-id1170571656454">Let <m>f(x)</m> be a function. If any of the following conditions hold, then the line <m>x=a</m> is a <emphasis effect="bold">vertical asymptote</emphasis> of <m>f(x).</m></p>
+<md>
+    <mrow> \lim_{x\to a^{-}}f(x) \amp =+\infty\text{ or }-\infty</mrow>
+    <mrow> \lim_{x\to a^{+}}f(x) \amp =+\infty\text{ or }-\infty </mrow>
+    <mrow> \amp \text{ or } </mrow>
+    <mrow> \lim_{x \to a} f(x) \amp =+\infty\text{ or }-\infty </mrow>
+</md>
+</definition>
+<example id="fs-id1170571656614">
+<title>Finding a Vertical Asymptote</title>
+ <statement id="fs-id1170571656619">
+<p id="fs-id1170571656624">Evaluate each of the following limits using <xref ref="fs-id1170571654206"/>. Identify any vertical asymptotes of the function <m>f(x)=1/ (x+3)^4.</m></p>
+<ol>
+<li><m>\lim_{x\to -3^- } \frac{1}{ (x+3)^4}</m></li>
+<li><m>\lim_{x\to -3^+ } \frac{1}{ (x+3)^4}</m></li>
+<li><m>\lim_{x\to-3} \frac{1}{ (x+3)^4}</m></li>
+</ol>
+</statement>
+<solution id="fs-id1170572632996">
+<p id="fs-id1170572632998">We can use <xref ref="fs-id1170571654206"/> directly.</p>
+<ol>
+<li><m>\lim_{x\to -3^- } \frac{1}{ (x+3)^4}=+\infty</m></li>
+<li><m>\lim_{x\to -3^+ } \frac{1}{ (x+3)^4}=+\infty</m></li>
+<li><m>\lim_{x\to-3} \frac{1}{ (x+3)^4}=+\infty</m></li>
+</ol>
+<p id="fs-id1170571652076">The function <m>f(x)=1/ (x+3)^4</m> has a vertical asymptote of <m>x=-3.</m></p>
+</solution>
 
-<!-- 
+</example>
+<exercise>  <statement id="fs-id1170571652138">
+<p id="fs-id1170571652140">Evaluate each of the following limits. Identify any vertical asymptotes of the function <m>f(x)= \frac{1}{ (x-2)^3 }.</m></p>
+<ol>
+<li><m>\lim_{x\to 2^- } \frac{1}{ (x-2)^3 }</m></li>
+<li><m>\lim_{x\to 2^+ } \frac{1}{ (x-2)^3 }</m></li>
+<li><m>\lim_{x\to 2} \frac{1}{ (x-2)^3 }</m></li>
+</ol>
+</statement>
+<solution id="fs-id1170571545549">
+<p id="fs-id1170571545551">1. <m>\displaystyle{\lim_{x\to 2^- } \frac{1}{ (x-2)^3 }=-\infty;}</m> 2. <m>\displaystyle{\lim_{x\to 2^+ } \frac{1}{ (x-2)^3 }=+\infty;}</m> 3. <m>\displaystyle{\lim_{x\to 2} \frac{1}{ (x-2)^3 }}</m> DNE. The line <m>x=2</m> is the vertical asymptote of <m>f(x)=1/ (x-2)^3 .</m></p>
+</solution>
+<hint>
+<!-- <p id="fs-id1170571545540">Use <xref ref="fs-id1170571654206"/>.</p> -->
+</hint>
+</exercise>
+
+
 <p id="fs-id1170572611930">It is useful to point out that functions of the form <m>f(x)=1/ (x-a)^n ,</m> where <m> n </m> is a positive integer, have infinite limits as <m>x</m> approaches <m> a </m> from either the left or right (<xref ref="CNX_Calc_Figure_02_02_014"/>). These limits are summarized in <xref ref="fs-id1170571654206"/>.</p>
 <figure xml:id="CNX_Calc_Figure_02_02_014">
 <image source="CNX_Calc_Figure_02_02_014.jpg" width="67%">
@@ -826,10 +873,10 @@ We'll explore each of these in turn.
 <definition>
 <p id="fs-id1170571656454">Let <m>f(x)</m> be a function. If any of the following conditions hold, then the line <m>x=a</m> is a <emphasis effect="bold">vertical asymptote</emphasis> of <m>f(x).</m></p>
 <md>
-    <mrow> \lim_{x\to a^{-} }f(x) \amp = \amp +\infty \text{ or } "-\infty" </mrow>
-    <mrow> \lim_{x\to a^{+}}f(x) \amp = \amp +\infty \text{ or } "-\infty" </mrow>
+    <mrow> \lim_{x\to a^{-} }f(x) \amp = \amp +\infty \text{ or } -\infty </mrow>
+    <mrow> \lim_{x\to a^{+}}f(x) \amp = \amp +\infty \text{ or } -\infty </mrow>
     <mrow> \amp \text{ or } \amp </mrow>
-    <mrow> \lim_{x \to a} f(x) \amp =\amp +\infty \text{ or } "-\infty" </mrow>
+    <mrow> \lim_{x \to a} f(x) \amp =\amp +\infty \text{ or } -\infty </mrow>
 </md>
 </definition>
 <example id="fs-id1170571656614">
@@ -870,7 +917,7 @@ We'll explore each of these in turn.
 <p id="fs-id1170571545540">Use <xref ref="fs-id1170571654206"/>.</p>
 </hint>
 </exercise>
--->
+
 
 <p id="fs-id1170572642379">In the next example we put our knowledge of various types of limits to use to analyze the behavior of a function at several different points.</p>
 <example id="fs-id1170572642384">
@@ -910,146 +957,22 @@ We'll explore each of these in turn.
 <solution id="fs-id1170572624536">
 <p id="fs-id1170572624538">Does not exist.</p>
 </solution>
-<hint>
 
+<hint>
 <p id="fs-id1170572624532">Compare the limit from the right with the limit from the left.</p>
 </hint>
 </exercise>
 
-<!-- example id="fs-id1170572624544">
-<title>Chapter Opener: Einstein’s Equation</title>
- <statement id="fs-id1170572624549">
-<figure xml:id="CNX_Calc_Figure_02_02_018">
-<image source="CNX_Calc_Figure_02_02_018.jpg" width="50%">
-<description>"A picture of a futuristic spaceship speeding through deep space."
- </description></image> <caption>(credit: NASA)</caption>
-</figure>
-<p id="fs-id1170572624574">In the chapter opener we mentioned briefly how Albert Einstein showed that a limit exists to how fast any object can travel. Given Einstein’s equation for the mass of a moving object, what is the value of this bound?</p>
-</statement>
-<solution id="fs-id1170572624580">
-<p id="fs-id1170572624583">Our starting point is Einstein’s equation for the mass of a moving object,</p>
-<me>m=\frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}},</me>
-<p id="fs-id1170572597831">where <m>m_0</m> is the object’s mass at rest, <emphasis effect="italics">v</emphasis> is its speed, and <emphasis effect="italics">c</emphasis> is the speed of light. To see how the mass changes at high speeds, we can graph the ratio of masses <m>m/m_0</m> as a function of the ratio of speeds, <m>v/c</m> (<xref ref="CNX_Calc_Figure_02_02_017"/>).</p>
-<figure xml:id="CNX_Calc_Figure_02_02_017">
-<image source="CNX_Calc_Figure_02_02_017.jpg" width="50%">
-<description>"A graph showing the ratio of masses as a function of the ratio of speed in Einstein’s equation for the mass of a moving object. The x axis is the ratio of the speeds, v/c. The y axis is the ratio of the masses, m/m0. The equation of the function is m = m0 / sqrt(1 –  v2 / c2 ). The graph is only in quadrant 1. It starts at (0,1) and curves up gently until about 0.8, where it increases seemingly exponentially; there is a vertical asymptote at v/c (or x) = 1."
- </description></image> <caption>This graph shows the ratio of masses as a function of the ratio of speeds in Einstein’s equation for the mass of a moving object.</caption>
-</figure>
-<p id="fs-id1170572597910">We can see that as the ratio of speeds approaches 1—that is, as the speed of the object approaches the speed of light—the ratio of masses increases without bound. In other words, the function has a vertical asymptote at <m>v/c=1.</m> We can try a few values of this ratio to test this idea.</p>
-<table xml:id="fs-id1170572597937" summary="A table with three columns and four rows. The first row contains the headings v/c, sqrt(1 –  v2 / c2 ), and m / m0. The values of the first column under the header are 0.99, 0.999, and 0.9999. The values of the second column under the header are 0.1411, 0.0447, and 0.0141. The values of the third column under the header are 7.089, 22.37, and 70.71.">
-<title>Ratio of Masses and Speeds for a Moving Object</title>
-<tabular>
-<row valign="top" header="yes">
-<cell halign ="left"><m>\frac{v}{c}</m></cell>
-<cell halign ="left"><m>\sqrt{1-\frac{v^2}{c^2}}</m></cell>
-<cell halign ="left"><m> \frac{m}{m_0}</m></cell>
-</row>
-<row valign="top">
-<cell halign ="left">0.99</cell>
-<cell halign ="left">0.1411</cell>
-<cell halign ="left">7.089</cell>
-</row>
-<row valign="top">
-<cell halign ="left">0.999</cell>
-<cell halign ="left">0.0447</cell>
-<cell halign ="left">22.37</cell>
-</row>
-<row valign="top">
-<cell halign ="left">0.9999</cell>
-<cell halign ="left">0.0141</cell>
-<cell halign ="left">70.71</cell>
-</row>
-</tabular>
-</table>
-<p id="fs-id1170572347624">Thus, according to <xref ref="fs-id1170572597937"/>, if an object with mass 100 kg is traveling at 0.9999<emphasis effect="italics">c</emphasis>, its mass becomes 7071 kg. Since no object can have an infinite mass, we conclude that no object can travel at or more than the speed of light.</p>
-</solution>
-</example -->
+
 
 </subsection>
 
-<!-- <subsection id="fs-id1170572347643" class="key-concepts">
-<title>Key Concepts</title>
-<ul id="fs-id1170572347650" list-type="bulleted" bullet-style="bullet">
-<li>A table of values or graph may be used to estimate a limit.</li>
-<li>If the limit of a function at a point does not exist, it is still possible that the limits from the left and right at that point may exist.</li>
-<li>If the limits of a function from the left and right exist and are equal, then the limit of the function is that common value.</li>
-<li>We may use limits to describe infinite behavior of a function at a point.</li>
-</ul>
-</subsection>
-<subsection id="fs-id1170572347674" class="key-equations">
-<title>Key Equations</title>
-<ul id="fs-id1170572347681" list-type="bulleted" bullet-style="bullet">
-<li><emphasis effect="bold">Intuitive Definition of the Limit</emphasis><newline/>
-<m>\lim_{x \to a} f(x)=L</m></li>
-<li><emphasis effect="bold">Two Important Limits</emphasis><newline/>
-<m>\lim_{x \to a} x=a \lim_{x \to a} c=c</m></li>
-<li><emphasis effect="bold">One-Sided Limits</emphasis><newline/>
-<m>\lim_{x\to a^{-} }f(x)=L \lim_{x\to a^{+}}f(x)=L</m></li>
-<li><emphasis effect="bold">Infinite Limits from the Left</emphasis><newline/>
-<m>\lim_{x\to a^{-} }f(x)=+\infty \lim_{x\to a^{-} }f(x)=-\infty</m></li>
-<li><emphasis effect="bold">Infinite Limits from the Right</emphasis><newline/>
-<m>\lim_{x\to a^{+}}f(x)=+\infty \lim_{x\to a^{+}}f(x)=-\infty</m></li>
-<li><emphasis effect="bold">Two-Sided Infinite Limits</emphasis><newline/>
-<m>\lim_{x \to a} f(x)=+\infty:\lim_{x\to a^{-} }f(x)=+\infty</m> and <m>\lim_{x\to a^{+}}f(x)=+\infty</m><newline/>
-<m>\lim_{x \to a} f(x)=-\infty:\lim_{x\to a^{-} }f(x)=-\infty</m> and <m>\lim_{x\to a^{+}}f(x)=-\infty</m></li>
-</ul>
-</subsection> -->
 
 
 
 
 
-<subsection xml:id="sec_Ch2Sec2v2Exercises" id="fs-id1170572347374" class="section-exercises">
-  <title>Section Exercises</title>
-<p id="fs-id1170572347378">For the following exercises, consider the function <m>f(x)=<!-- Edit FRAC!--> \frac{x^2-1|x-1|}.</m></p>
 
-<!-- Move title outside statement --> <statement id="fs-id1170571655733">
-<p id="fs-id1170571655735"><emphasis effect="bold">[T]</emphasis> Complete the following table for the function. Round your solutions to four decimal places.</p>
-<table xml:id="fs-id1170571655743" class="unnumbered" summary="A table with four columns and five rows. The first row contains the headings x, f(x), x, and f(x). The values of the first column under the header are 0.9, .99, 0.999, and 0.9999. The values of the second column under the header are a, b, c, and d. The values of the third column under the header are 1.1, 1.01, 1.001, and 1.0001. The values of the fourth column under the header are e, f, g, and h.">
-<tgroup cols="4">
-<colspec colnum="1" colname="c1"/>
-<colspec colnum="2" colname="c2"/>
-<colspec colnum="3" colname="c3"/>
-<colspec colnum="4" colname="c4"/>
-<thead>
-<row valign="top">
-<cell halign ="left"><m>x</m></cell>
-<cell halign ="left"><m>f(x)</m></cell>
-<cell halign ="left"><m>x</m></cell>
-<cell halign ="left"><m>f(x)</m></cell>
-</row>
-</thead>
-<tbody>
-<row valign="top">
-<cell halign ="left">0.9</cell>
-<cell halign ="left">a.</cell>
-<cell halign ="left">1.1</cell>
-<cell halign ="left">e.</cell>
-</row>
-<row valign="top">
-<cell halign ="left">0.99</cell>
-<cell halign ="left">b.</cell>
-<cell halign ="left">1.01</cell>
-<cell halign ="left">f.</cell>
-</row>
-<row valign="top">
-<cell halign ="left">0.999</cell>
-<cell halign ="left">c.</cell>
-<cell halign ="left">1.001</cell>
-<cell halign ="left">g.</cell>
-</row>
-<row valign="top">
-<cell halign ="left">0.9999</cell>
-<cell halign ="left">d.</cell>
-<cell halign ="left">1.0001</cell>
-<cell halign ="left">h.</cell>
-</row>
-</tbody>
-</tgroup>
-</table>
-</statement>
-
-</subsection>
 </section>
 
 <!-- THE IGNORE TAG BELOW SHOULD BE MOVED ONE EXERCISE UP-->
