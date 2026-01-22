@@ -63,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -79,7 +79,7 @@ window.MathJax = {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="OpenStax Calculus">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -101,16 +101,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.7';
+eBookConfig.runestone_version = '7.11.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c2757fc695bc848c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -328,7 +328,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="sec_Ch2Sec2v2-2-4">We begin our exploration of limits by taking a look at the graphs of the functions<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_02_001.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_02_001.html" id="sec_Ch2Sec2v2-2-5">
 \begin{equation*}
 f(x)=\frac{x^2-4}{x-2}, g(x)= \frac{|x-2|}{x-2}, \text{ and } h(x)=\frac{1}{(x-2)^2},
 \end{equation*}
@@ -342,7 +342,7 @@ f(x)=\frac{x^2-4}{x-2}, g(x)= \frac{|x-2|}{x-2}, \text{ and } h(x)=\frac{1}{(x-2
 </h3>
 <div class="para" id="sec_Ch2Sec2v2-3-2">Let’s first take a closer look at how the function <span class="process-math">\(f(x)=(x^2-4)/(x-2)\)</span> behaves around <span class="process-math">\(x=2\)</span> in <a href="sec_Ch2Sec2v2.html#CNX_Calc_Figure_02_02_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_02_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.1">Figure 2.2.1</a>. As the values of <span class="process-math">\(x\)</span> approach 2 from either side of 2, the values of <span class="process-math">\(y=f(x)\)</span> approach 4. Mathematically, we say that the limit of <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(x\)</span> approaches 2 is 4. Symbolically, we express this limit as<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_02_001.html ./knowl/xref/fs-id1170572208852.html ./knowl/xref/CNX_Calc_Figure_02_02_003.html ./knowl/xref/fs-id1170572208852.html ./knowl/xref/fs-id1170572204940.html ./knowl/xref/fs-id1170571595483.html ./knowl/xref/CNX_Calc_Figure_02_02_004.html ./knowl/xref/fs-id1170571595483.html ./knowl/xref/fs-id1170572561451.html ./knowl/xref/fs-id1170571656691.html ./knowl/xref/fs-id1170572337207.html ./knowl/xref/CNX_Calc_Figure_02_02_006.html ./knowl/xref/fs-id1170572337207.html ./knowl/xref/CNX_Calc_Figure_02_02_007.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_02_001.html ./knowl/xref/fs-id1170572208852.html ./knowl/xref/CNX_Calc_Figure_02_02_003.html ./knowl/xref/fs-id1170572208852.html ./knowl/xref/fs-id1170572204940.html ./knowl/xref/fs-id1170571595483.html ./knowl/xref/CNX_Calc_Figure_02_02_004.html ./knowl/xref/fs-id1170571595483.html ./knowl/xref/fs-id1170572561451.html ./knowl/xref/fs-id1170571656691.html ./knowl/xref/fs-id1170572337207.html ./knowl/xref/CNX_Calc_Figure_02_02_006.html ./knowl/xref/fs-id1170572337207.html ./knowl/xref/CNX_Calc_Figure_02_02_007.html" id="sec_Ch2Sec2v2-3-3">
 \begin{equation*}
 \lim_{x\to2}f(x)=4.
 \end{equation*}
@@ -354,7 +354,7 @@ f(x)=\frac{x^2-4}{x-2}, g(x)= \frac{|x-2|}{x-2}, \text{ and } h(x)=\frac{1}{(x-2
 </h4>
 <div class="para" id="sec_Ch2Sec2v2-3-5-1">Let <span class="process-math">\(f(x)\)</span> be a function defined at all values in an open interval containing <span class="process-math">\(a \text{,}\)</span> with the possible exception of <span class="process-math">\(a \)</span> itself, and let <span class="process-math">\(L \)</span> be a real number. If all values of the function <span class="process-math">\(f(x)\)</span> approach the real number <span class="process-math">\(L \)</span> as the values of <span class="process-math">\(x(\neq a)\)</span> approach the number <span class="process-math">\(a \text{,}\)</span> then we say that the limit of <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a \)</span> is <span class="process-math">\(L \text{.}\)</span> (More succinct, as <span class="process-math">\(x\)</span> gets closer to <span class="process-math">\(a \text{,}\)</span> <span class="process-math">\(f(x)\)</span> gets closer and stays close to <span class="process-math">\(L \text{.}\)</span>) Symbolically, we express this idea as<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch2Sec2v2-3-5-2">
 \begin{equation*}
 \lim_{x \to a} f(x)=L.
 \end{equation*}
@@ -598,7 +598,7 @@ f(x)=\frac{x^2-4}{x-2}, g(x)= \frac{|x-2|}{x-2}, \text{ and } h(x)=\frac{1}{(x-2
 </h4>
 <div class="para logical" id="sec_Ch2Sec2v2-4-3-2">
 <div class="para">Explore why <span class="process-math">\(\ds\lim_{x\to 1}f(x)\)</span> does not exist where</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch2Sec2v2-4-3-2-2">
 \begin{equation*}
 f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 \end{equation*}
@@ -681,13 +681,13 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 </tr>
 </table></div></figure><div class="para logical" id="sec_Ch2Sec2v2-4-4-3-4">
 <div class="para">We can deduce this on our own with the aid of the graph and table.  If <span class="process-math">\(x\)</span> is near <span class="process-math">\(1\text{,}\)</span> then <span class="process-math">\((x-1)^2\)</span> is very small, and</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch2Sec2v2-4-4-3-4-4">
 \begin{equation*}
 \frac{1}{\text{very small number}}=\text{very large number}
 \end{equation*}
 </div>
 <div class="para">Since <span class="process-math">\(f(x)\)</span> is not approaching a single number, we conclude</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch2Sec2v2-4-4-3-4-6">
 \begin{equation*}
 \lim_{x\to 1}\frac{1}{(x-1)^2}
 \end{equation*}
@@ -755,14 +755,14 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 </tr>
 </table></div></figure><div class="para" id="sec_Ch2Sec2v2-4-5-3-5">After examining the table of functional values, we can see that the <span class="process-math">\(y\)</span>-values do not seem to approach any one single value. It appears the limit does not exist. Before drawing this conclusion, let’s take a more systematic approach. Take the following sequence of <span class="process-math">\(x\)</span>-values approaching <span class="process-math">\(0\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-4-5-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/APEX_fig1-3.html ./knowl/xref/fs-id1170572233784.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/APEX_fig1-3.html ./knowl/xref/fs-id1170572233784.html" id="sec_Ch2Sec2v2-4-5-3-6">
 \begin{equation*}
 \frac{2}{\pi}, \frac{2}{3\pi}, \frac{2}{5\pi}, \frac{2}{7\pi}, \frac{2}{9\pi},\frac{2}{11\pi}, \dots .
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch2Sec2v2-4-5-3-7">The corresponding <span class="process-math">\(y\)</span>-values are<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-4-5-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/APEX_fig1-3.html ./knowl/xref/fs-id1170572233784.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/APEX_fig1-3.html ./knowl/xref/fs-id1170572233784.html" id="sec_Ch2Sec2v2-4-5-3-8">
 \begin{equation*}
 1,-1,1,-1,1,-1, \dots .
 \end{equation*}
@@ -796,14 +796,14 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 </div>
 <div class="para" id="sec_Ch2Sec2v2-5-3">However, this statement alone does not give us a complete picture of the behavior of the function around the <span class="process-math">\(x\)</span>-value <span class="process-math">\(2\text{.}\)</span> To provide a more accurate description, we introduce the idea of a <dfn class="terminology">one-sided limit</dfn>. For all values to the left of <span class="process-math">\(2\)</span> (or <em class="emphasis">the negative side of</em> <span class="process-math">\(2\)</span>), <span class="process-math">\(g(x)=-1.\)</span> Thus, as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(2\)</span> from the left, <span class="process-math">\(g(x)\)</span> approaches -1. Mathematically, we say that the limit as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(2\)</span> from the left is <span class="process-math">\(-1\text{.}\)</span> Symbolically, we express this idea as<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_02_001.html ./knowl/xref/fs-id1170572347185.html ./knowl/xref/CNX_Calc_Figure_02_02_010.html ./knowl/xref/fs-id1170571598073.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_02_001.html ./knowl/xref/fs-id1170572347185.html ./knowl/xref/CNX_Calc_Figure_02_02_010.html ./knowl/xref/fs-id1170571598073.html" id="sec_Ch2Sec2v2-5-4">
 \begin{equation*}
 \lim_{x\to 2^- }g(x)=-1.
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch2Sec2v2-5-5">Similarly, as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(2\)</span> from the right (or <em class="emphasis">from the positive side</em>), <span class="process-math">\(g(x)\)</span> approaches <span class="process-math">\(1\text{.}\)</span> Symbolically, we express this idea as<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_02_001.html ./knowl/xref/fs-id1170572347185.html ./knowl/xref/CNX_Calc_Figure_02_02_010.html ./knowl/xref/fs-id1170571598073.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_02_001.html ./knowl/xref/fs-id1170572347185.html ./knowl/xref/CNX_Calc_Figure_02_02_010.html ./knowl/xref/fs-id1170571598073.html" id="sec_Ch2Sec2v2-5-6">
 \begin{equation*}
 \lim_{x\to 2^+ }g(x)=1.
 \end{equation*}
@@ -818,7 +818,7 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 <div class="para" id="sec_Ch2Sec2v2-5-8-2">
 <em class="emphasis">Limit from the left:</em> Let <span class="process-math">\(f(x)\)</span> be a function defined at all values in an open interval of the form <span class="process-math">\((c,a \)</span>), and let <span class="process-math">\(L \)</span> be a real number. If the values of the function <span class="process-math">\(f(x)\)</span> approach the real number <span class="process-math">\(L \)</span> as the values of <span class="process-math">\(x\)</span> (where <span class="process-math">\(x\lt a ).\)</span> approach the number <span class="process-math">\(a \text{,}\)</span> then we say that <span class="process-math">\(L \)</span> is the limit of <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(x\)</span> approaches a from the left. Symbolically, we express this idea as<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-5-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch2Sec2v2-5-8-3">
 \begin{equation*}
 \lim_{x\to a^{-} }f(x)=L.
 \end{equation*}
@@ -826,7 +826,7 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 <div class="para" id="sec_Ch2Sec2v2-5-8-4">
 <em class="emphasis">Limit from the right:</em> Let <span class="process-math">\(f(x)\)</span> be a function defined at all values in an open interval of the form <span class="process-math">\((a,c),\)</span> and let <span class="process-math">\(L \)</span> be a real number. If the values of the function <span class="process-math">\(f(x)\)</span> approach the real number L as the values of <span class="process-math">\(x\)</span> (where <span class="process-math">\(x\gt a .\)</span>) approach the number <span class="process-math">\(a \text{,}\)</span> then we say that <span class="process-math">\(L \)</span> is the limit of <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a \)</span> from the right. Symbolically, we express this idea as<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-5-8-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch2Sec2v2-5-8-5">
 \begin{equation*}
 \lim_{x\to a^{+}}f(x)=L.
 \end{equation*}
@@ -930,7 +930,7 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 </h4>
 <div class="para" id="fs-id1170571598073-2">Let <span class="process-math">\(f(x)\)</span> be a function defined at all values in an open interval containing <span class="process-math">\(a \text{,}\)</span> with the possible exception of <span class="process-math">\(a \)</span> itself, and let <span class="process-math">\(L \)</span> be a real number. Then,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571598073-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="fs-id1170571598073-3">
 \begin{equation*}
 \lim_{x \to a} f(x)=L \text{ if and only if } \lim_{x\to a^{-} }f(x)=L \text{ and } \lim_{x\to a^{+}}f(x)=L.
 \end{equation*}
@@ -942,7 +942,7 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 </div>
 <div class="para" id="sec_Ch2Sec2v2-6-3">We now turn our attention to <span class="process-math">\(h(x)=1/ (x-2)^2 ,\)</span> the third and final function introduced at the beginning of this section (see <a href="sec_Ch2Sec2v2.html#CNX_Calc_Figure_02_02_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_02_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.1">Figure 2.2.1</a>(c)). From its graph we see that as the values of <span class="process-math">\(x\)</span> approach <span class="process-math">\(2\text{,}\)</span> the values of <span class="process-math">\(h(x)=1/ (x-2)^2 \)</span> become larger and larger and, in fact, become infinite. Mathematically, we say that the limit of <span class="process-math">\(h(x)\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(2\)</span> is positive infinity. Symbolically, we express this idea as<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_02_001.html ./knowl/xref/CNX_Calc_Figure_02_02_012.html ./knowl/xref/fs-id1170571611150.html ./knowl/xref/CNX_Calc_Figure_02_02_015.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_02_001.html ./knowl/xref/CNX_Calc_Figure_02_02_012.html ./knowl/xref/fs-id1170571611150.html ./knowl/xref/CNX_Calc_Figure_02_02_015.html" id="sec_Ch2Sec2v2-6-4">
 \begin{equation*}
 \lim_{x\to 2}h(x)=+\infty.
 \end{equation*}
@@ -957,11 +957,11 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 <ul class="disc" id="sec_Ch2Sec2v2-6-6-2">
 <li id="sec_Ch2Sec2v2-6-6-2-1">
 <div class="para" id="p-derived-sec_Ch2Sec2v2-6-6-2-1">
-<dfn class="terminology">From the left:</dfn><div class="displaymath process-math">
+<dfn class="terminology">From the left:</dfn><div class="displaymath process-math" id="sec_Ch2Sec2v2-6-6-2-1-2">
 \begin{equation*}
 \ds\lim_{x\to a^-}f(x)=+\infty
 \end{equation*}
-</div>means <span class="process-math">\(f(x)\)</span> grows larger and larger as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> from the left.<div class="displaymath process-math">
+</div>means <span class="process-math">\(f(x)\)</span> grows larger and larger as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> from the left.<div class="displaymath process-math" id="sec_Ch2Sec2v2-6-6-2-1-6">
 \begin{equation*}
 \lim_{a\to a^-}f(x)=-\infty
 \end{equation*}
@@ -970,11 +970,11 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 </li>
 <li id="sec_Ch2Sec2v2-6-6-2-2">
 <div class="para" id="p-derived-sec_Ch2Sec2v2-6-6-2-2">
-<dfn class="terminology">From the right:</dfn><div class="displaymath process-math">
+<dfn class="terminology">From the right:</dfn><div class="displaymath process-math" id="sec_Ch2Sec2v2-6-6-2-2-2">
 \begin{equation*}
 \ds\lim_{x\to a^+}f(x)=+\infty
 \end{equation*}
-</div>means <span class="process-math">\(f(x)\)</span> grows larger and larger as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> from the right.<div class="displaymath process-math">
+</div>means <span class="process-math">\(f(x)\)</span> grows larger and larger as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> from the right.<div class="displaymath process-math" id="sec_Ch2Sec2v2-6-6-2-2-6">
 \begin{equation*}
 \lim_{a\to a^+}f(x)=-\infty
 \end{equation*}
@@ -983,7 +983,7 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 </li>
 <li id="sec_Ch2Sec2v2-6-6-2-3">
 <div class="para" id="p-derived-sec_Ch2Sec2v2-6-6-2-3">
-<dfn class="terminology">Two-sided:</dfn><div class="displaymath process-math">
+<dfn class="terminology">Two-sided:</dfn><div class="displaymath process-math" id="sec_Ch2Sec2v2-6-6-2-3-2">
 \begin{equation*}
 \ds\lim_{x\to a}f(x)=+\infty\quad\text{or}\quad \lim_{x\to a}f(x)=-\infty
 \end{equation*}
@@ -1066,7 +1066,7 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 </tr>
 </table></div></figure><ol class="decimal" id="fs-id1170571611150-3-3">
 <li id="fs-id1170571611150-3-3-1">
-<div class="para" id="p-derived-fs-id1170571611150-3-3-1">The values of <span class="process-math">\(1/x\)</span> decrease without bound as <span class="process-math">\(x\)</span> approaches 0 from the left. We conclude that<div class="displaymath process-math">
+<div class="para" id="p-derived-fs-id1170571611150-3-3-1">The values of <span class="process-math">\(1/x\)</span> decrease without bound as <span class="process-math">\(x\)</span> approaches 0 from the left. We conclude that<div class="displaymath process-math" id="fs-id1170571611150-3-3-1-4">
 \begin{equation*}
 \lim_{x\to 0^- }\frac{1}{x}=-\infty.
 \end{equation*}
@@ -1075,7 +1075,7 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 <div class="autopermalink" data-description="Item 1"><a href="#fs-id1170571611150-3-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="fs-id1170571611150-3-3-2">
-<div class="para" id="p-derived-fs-id1170571611150-3-3-2">The values of <span class="process-math">\(1/x\)</span> increase without bound as <span class="process-math">\(x\)</span> approaches 0 from the right. We conclude that<div class="displaymath process-math">
+<div class="para" id="p-derived-fs-id1170571611150-3-3-2">The values of <span class="process-math">\(1/x\)</span> increase without bound as <span class="process-math">\(x\)</span> approaches 0 from the right. We conclude that<div class="displaymath process-math" id="fs-id1170571611150-3-3-2-4">
 \begin{equation*}
 \lim_{x\to 0^+ }\frac{1}{x}=+\infty.
 \end{equation*}
@@ -1084,7 +1084,7 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 <div class="autopermalink" data-description="Item 2"><a href="#fs-id1170571611150-3-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 <li id="fs-id1170571611150-3-3-3">
-<div class="para" id="p-derived-fs-id1170571611150-3-3-3">Since <span class="process-math">\(\ds\lim_{x\to 0^- }\frac{1}{x}=-\infty\)</span> and <span class="process-math">\(\ds\lim_{x\to 0^+ }\frac{1}{x}=+\infty\)</span> have different values, we conclude that<div class="displaymath process-math">
+<div class="para" id="p-derived-fs-id1170571611150-3-3-3">Since <span class="process-math">\(\ds\lim_{x\to 0^- }\frac{1}{x}=-\infty\)</span> and <span class="process-math">\(\ds\lim_{x\to 0^+ }\frac{1}{x}=+\infty\)</span> have different values, we conclude that<div class="displaymath process-math" id="fs-id1170571611150-3-3-3-3">
 \begin{equation*}
 \lim_{x\to0}\frac{1}{x} \text{ DNE. }
 \end{equation*}
