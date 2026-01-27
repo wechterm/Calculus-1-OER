@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_Ch2Sec4" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Continuity</title>
+  <introduction>
+  <title> Learning Objectives</title>
+
+<ol>
+<li>Explain the three conditions for continuity at a point.</li>
+<li>Describe three kinds of discontinuities.</li>
+<li>Define continuity on an interval.</li>
+<li>State the theorem for limits of composite functions.</li>
+<li>Provide an example of the intermediate value theorem.</li>
+</ol>
+<p>We have seen that computing the limits of polynomial and rational functions at any point in their domains is easy because 
+<me>\ds\limit_{x\to a}f(x)=f(a) </me>
+  That is, the limit as <m>x</m> approaches <m>a</m> is just <m>f(a)</m>.  Roughly speaking, the reason we can compute the limit this way is because these functions do not have any jumps as near <m>a</m></p>
+  <p>
+    Many other functions have this property, <m>\sin{x}</m> for example. A function with this property is called "continuous" and there is a precise definition for it.
+  </p>
+</introduction>
+<subsection id="fs-id1170573262889">
+<title>Continuity at a Point</title>
+<p id="fs-id1170573324888">Before we look at a formal definition of what it means for a function to be continuous at a point, let’s consider various functions that fail to meet our intuitive notion of what it means to be continuous at a point. We then create a list of conditions that prevent such failures.</p>
+<p id="fs-id1170573390124">Our first function of interest is shown in <xref ref="CNX_Calc_Figure_02_04_001"/>. We see that the graph of <m>f(x)</m> has a hole at <m>a</m>. In fact, <m>f(a)</m> is undefined. At the very least, for <m>f(x)</m> to be continuous at <m>a</m>, we need the following condition:</p>
+<me>\text{ i. } f(a) \text{ is defined. }</me>
+<figure xml:id="CNX_Calc_Figure_02_04_001">
+<image source="CNX_Calc_Figure_02_04_001.jpg" width="50%">
+<description>"A graph of an increasing linear function f(x) which crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. A point a greater than zero is marked on the x axis. The point on the function f(x) above a is an open circle; the function is not defined at a." </description></image> <caption>The function <m>f(x)</m> is not continuous at <m>a</m> because <m>f(a)</m> is undefined.</caption>
+</figure>
+<p id="fs-id1170573750564">However, as we see in <xref ref="CNX_Calc_Figure_02_04_002"/>, this condition alone is insufficient to guarantee continuity at the point <m>a</m>. Although <m>f(a)</m> is defined, the function has a gap at <m>a</m>. In this example, the gap exists because <m>\limit_{x\to a}f(x)</m> does not exist. We must add another condition for continuity at <m>a</m>—namely,</p>
+<me>\text{ ii. } \limit_{x\to a}f(x) \text{ exists. }</me>
+<figure xml:id="CNX_Calc_Figure_02_04_002">
+<image source="CNX_Calc_Figure_02_04_002.jpg" width="50%">
+<description>"The graph of a piecewise function f(x) with two parts. The first part is an increasing linear function that crosses from quadrant three to quadrant one at the origin. A point a greater than zero is marked on the x axis. At fa. on this segment, there is a solid circle. The other segment is also an increasing linear function. It exists in quadrant one for values of x greater than a. At x=a, this segment has an open circle."  </description></image> <caption>The function <m>f(x)</m> is not continuous at <m>a</m> because <m>\limit_{x\to a}f(x)</m> does not exist.</caption>
+</figure>
+<p id="fs-id1170573493837">However, as we see in <xref ref="CNX_Calc_Figure_02_04_003"/>, these two conditions by themselves do not guarantee continuity at a point. The function in this figure satisfies both of our first two conditions, but is still not continuous at <m>a</m>. We must add a third condition to our list:</p>
+<me>\text{ iii. } \limit_{x\to a}f(x)=f(a).</me>
+<figure xml:id="CNX_Calc_Figure_02_04_003">
+<image source="CNX_Calc_Figure_02_04_003.jpg" width="50%">
+<description>"The graph of a piecewise function with two parts. The first part is an increasing linear function that crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. A point a greater than zero is marked on the x axis. At this point, there is an open circle on the linear function. The second part is a point at x=a above the line."  </description></image> <caption>The function <m>f(x)</m> is not continuous at <m>a</m> because <m>\limit_{x\to a}f(x)\neq f(a).</m></caption>
+</figure>
+<p id="fs-id1170573502301">Now we put our list of conditions together and form a definition of continuity at a point.</p>
+
+<definition>
+<p id="fs-id1170573381317">A function <m>f(x)</m> is <term>continuous at a point</term> <m>a</m> if and only if the following three conditions are satisfied:</p>
+<ol marker="(a)" id="fs-id1170571094915" list-type="enumerated" number-style="lower-roman">
+<li><m>f(a)</m> is defined</li>
+<li><m>\limit_{x\to a}f(x)</m> exists</li>
+<li><m>\limit_{x\to a}f(x)=f(a)</m></li>
+</ol>
+<p id="fs-id1170573370662">A function is <term>discontinuous at a point</term> <m>a</m> if it fails to be continuous at <m>a</m>.</p>
+</definition>
+<p id="fs-id1170573281579">The following procedure can be used to analyze the continuity of a function at a point using this definition.</p>
+<problem xml:id="fs-id1170573398041" class="problem-solving">
+<title>Determining Continuity at a Point</title>
+<ol id="fs-id1170571103215" list-type="enumerated" number-style="arabic">
+<li>Check to see if <m>f(a)</m> is defined. If <m>f(a)</m> is undefined, we need go no further. The function is not continuous at <m>a</m>. If <m>f(a)</m> is defined, continue to step 2.</li>
+<li>Compute <m>\limit_{x\to a}f(x).</m> In some cases, we may need to do this by first computing <m>\limit_{x\to a^-}f(x)</m> and <m>\limit_{x\to a^+}f(x).</m> If <m>\limit_{x\to a}f(x)</m> does not exist (that is, it is not a real number), then the function is not continuous at <m>a</m> and the problem is solved. If <m>\limit_{x\to a}f(x)</m> exists, then continue to step 3.</li>
+<li>Compare <m>f(a)</m> and <m>\limit_{x\to a}f(x).</m> If <m>\limit_{x\to a}f(x)\neq f(a),</m> then the function is not continuous at <m>a</m>. If <m>\limit_{x\to a}f(x)=f(a),</m> then the function is continuous at <m>a</m>.</li>
+</ol>
+</problem>
+<p id="fs-id1170573570770">The next three examples demonstrate how to apply this definition to determine whether a function is continuous at a given point. These examples illustrate situations in which each of the conditions for continuity in the definition succeed or fail.</p>
+<example xml:id="fs-id1170573442080">
+<title>Determining Continuity at a Point, Condition 1</title>
+<statement id="fs-id1170573411938">
+<p id="fs-id1170573258704">Using the definition, determine whether the function <m>f(x)=(x^2-4)/(x-2)</m> is continuous at <m>x=2.</m> Justify the conclusion.</p>
+</statement>
+<solution id="fs-id1170573396010">
+<p id="fs-id1170573331408">Let’s begin by trying to calculate <m>f(2).</m> We can see that <m>f(2)=0/0,</m> which is undefined. Therefore, <m>f(x)=\frac{x^2-4}{x-2}</m> is discontinuous at 2 because <m>f(2)</m> is undefined. The graph of <m>f(x)</m> is shown in <xref ref="CNX_Calc_Figure_02_04_004"/>.</p>
+<figure xml:id="CNX_Calc_Figure_02_04_004">
+<image source="CNX_Calc_Figure_02_04_004.jpg" width="50%">
+<description>"A graph of the given function. There is a line which crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. At a point in quadrant one, there is an open circle where the function is not defined."  </description></image> <caption>The function <m>f(x)</m> is discontinuous at 2 because <m>f(2)</m> is undefined.</caption>
+</figure>
+</solution>
+</example>
+<example xml:id="fs-id1170573389760">
+<title>Determining Continuity at a Point, Condition 2</title>
+<statement id="fs-id1170573426610">
+<p id="fs-id1170573370721">Using the definition, determine whether the function <me>f(x)=\begin{cases}-x^2+4\amp\text{ if } x\leq 3\\4x-8\amp\text{ if } x\gt 3 \end{cases}</me> is continuous at <m>x=3.</m> Justify the conclusion.</p>
+</statement>
+<solution id="fs-id1170573294900">
+<p id="fs-id1170573349668">Let’s begin by trying to calculate <m>f(3).</m></p>
+<me>f(3)=-(3^2)+4=-5.</me>
+<p id="fs-id1170573307347">Thus, <m>f(3)</m> is defined. Next, we calculate <m>\limit_{x\to 3}f(x).</m> To do this, we must compute <m>\limit_{x\to  3^-}f(x)</m> and <m>\limit_{x\to  3^+}f(x)\text{ : }</m></p>
+<me>\limit_{x\to  3^-}f(x)=-(3^2)+4=-5</me>
+<p id="fs-id1170573400834">and</p>
+<me>\limit_{x\to  3^+}f(x)=4(3)-8=4.</me>
+<p id="fs-id1170573414763">Therefore, <m>\limit_{x\to 3}f(x)</m> does not exist. Thus, <m>f(x)</m> is not continuous at 3. The graph of <m>f(x)</m> is shown in <xref ref="CNX_Calc_Figure_02_04_005"/>.</p>
+<figure xml:id="CNX_Calc_Figure_02_04_005">
+  <image source="CNX_Calc_Figure_02_04_005.jpg" width="50%">
+<description>"A graph of the given piecewise function, which has two parts. The first is a downward opening parabola which is symmetric about the y axis. Its vertex is on the y axis, greater than zero. There is a closed circle on the parabola for x=3. The second part is an increasing linear function in the first quadrant, which exists for values of x \gt  3. There is an open circle at the end of the line where x would be 3." </description></image> <caption>The function <m>f(x)</m> is not continuous at 3 because <m>\limit_{x\to 3}f(x)</m> does not exist.</caption>
+</figure>
+</solution>
+</example>
+<example xml:id="fs-id1170573429945">
+<title>Determining Continuity at a Point, Condition 3</title>
+<statement id="fs-id1170573268754">
+<p id="fs-id1170573502415">Using the definition, determine whether the function <me>f(x)=\begin{cases} \frac{\sin x}{x}\amp\text{ if } x\neq 0 \\ 1\amp\text{ if } x=0 \end{cases}</me> is continuous at <m>x=0.</m></p>
+</statement>
+<solution id="fs-id1170573239889">
+<p id="fs-id1170573382461">First, observe that</p>
+<me>f(0)=1.</me>
+<p id="fs-id1170573367184">Next,</p>
+<me>\limit_{x\to 0}f(x)=\limit_{x\to 0}\frac{\sin x}{x}=1.</me>
+<p id="fs-id1170573394612">Last, compare <m>f(0)</m> and <m>\limit_{x\to 1}f(x).</m> We see that</p>
+<me>f(0)=1=\limit_{x\to 0}f(x).</me>
+<p id="fs-id1170573394599">Since all three of the conditions in the definition of continuity are satisfied, <m>f(x)</m> is continuous at <m>x=0.</m></p>
+</solution>
+</example>
+<exercise>  <statement id="fs-id1170573435480">
+<p id="fs-id1170573406319">Using the definition, determine whether the function <me>f(x)=\begin{cases}2x+1\amp\text{ if } x\lt 1\\2\amp\text{ if } x=1\\-x+4\amp\text{ if } x\gt 1 \end{cases}</me> is continuous at <m>x=1.</m> If the function is not continuous at 1, indicate the condition for continuity at a point that fails to hold.</p>
+</statement>
+<solution id="fs-id1170573351122">
+<p id="fs-id1170573402451"><m>f</m> is not continuous at 1 because <m>f(1)=2\neq 3=\limit_{x\to 1}f(x).</m></p>
+</solution>
+ <hint>
+<p id="fs-id1170573418814">Check each condition of the definition.</p>
+</hint>
+</exercise>
+
+
+
+</subsection>
+<subsection id="fs-id1170573352138">
+<title>Types of Discontinuities</title>
+<p id="fs-id1170573435662">As we have seen in <xref ref="fs-id1170573442080"/> and <xref ref="fs-id1170573389760"/>, discontinuities take on several different appearances. We classify the types of discontinuities we have seen thus far as removable discontinuities, infinite discontinuities, or jump discontinuities. Intuitively, a <term>removable discontinuity</term> is a discontinuity for which there is a hole in the graph, a <term>jump discontinuity</term> is a noninfinite discontinuity for which the sections of the function do not meet up, and an <term>infinite discontinuity</term> is a discontinuity located at a vertical asymptote. <xref ref="CNX_Calc_Figure_02_04_006"/> illustrates the differences in these types of discontinuities. Although these terms provide a handy way of describing three common types of discontinuities, keep in mind that not all discontinuities fit neatly into these categories.</p>
+<figure xml:id="CNX_Calc_Figure_02_04_006">
+  <image source="CNX_Calc_Figure_02_04_006.jpg" width="100%">
+<description>"Three graphs, each showing a different discontinuity. The first is removable discontinuity. Here, the given function is a line with positive slope. At a point x=a, where a\gt 0, there is an open circle on the line and a closed circle a few units above the line. The second is a jump discontinuity. Here, there are two lines with positive slope. The first line exists for x\lt =a, and the second exists for x\gt a, where a\gt 0. The first line ends at a solid circle where x=a, and the second begins a few units up with an open circle at x=a. The third discontinuity type is infinite discontinuity. Here, the function has two parts separated by an asymptote x=a. The first segment is a curve stretching along the x axis to 0 as x goes to negative infinity and along the y axis to infinity as x goes to zero. The second segment is a curve stretching along the y axis to negative infinity as x goes to zero and along the x axis to 0 as x goes to infinity."  </description></image> <caption>Discontinuities are classified as (a) removable, (b) jump, or (c) infinite.</caption>
+</figure>
+<p id="fs-id1170573400557">These three discontinuities are formally defined as follows:</p>
+<definition>
+<p id="fs-id1170571259935">If <m>f(x)</m> is discontinuous at <m>a</m>, then</p>
+<ol id="fs-id1170573216342" list-type="enumerated" number-style="arabic">
+<li><m>f</m> has a <term effect="bold">removable discontinuity</term> at <m>a</m> if <m>\limit_{x\to a}f(x)</m> exists. (Note: When we state that <m>\limit_{x\to a}f(x)</m> exists, we mean that <m>\limit_{x\to a}f(x)=L,</m> where <m>L</m> is a real number.)</li>
+<li><m>f</m> has a <term effect="bold">jump discontinuity</term> at <m>a</m> if <m>\limit_{x\to a^-}f(x)</m> and <m>\limit_{x\to a^+}f(x)</m> both exist, but <m>\limit_{x\to a^-}f(x)\neq \limit_{x\to a^+}f(x).</m> (Note: When we state that <m>\limit_{x\to a^-}f(x)</m> and <m>\limit_{x\to a^+}f(x)</m> both exist, we mean that both are real-valued and that neither take on the values \pm\infty .)</li>
+<li><m>f</m> has an <term effect="bold">infinite discontinuity</term> at <m>a</m> if <m>\limit_{x\to a^-}f(x)=\pm \infty </m> or <m>\limit_{x\to a^+}f(x)=\pm \infty .</m></li>
+</ol>
+</definition>
+<example xml:id="fs-id1170570976348">
+<title>Classifying a Discontinuity</title>
+ <statement id="fs-id1170573399643">
+<p id="fs-id1170573424344">In <xref ref="fs-id1170573442080"/>, we showed that <m>\ds f(x)=\frac{x^2-4}{x-2}</m> is discontinuous at <m>x=2.</m> Classify this discontinuity as removable, jump, or infinite.</p>
+</statement>
+<solution id="fs-id1170571103961">
+<p id="fs-id1170573402024">To classify the discontinuity at 2 we must evaluate <m>\limit_{x\to 2}f(x)\text{ : }</m></p>
+<md><mrow>\limit_{x\to 2}f(x)\amp=\limit_{x\to 2}\frac{x^2-4}{x-2}</mrow>
+<mrow>\amp=\limit_{x\to 2}\frac{(x-2)(x+2)}{x-2}</mrow>
+<mrow>\amp=\limit_{x\to 2}(x+2)</mrow>
+<mrow>\amp=4.</mrow></md>
+<p id="fs-id1170571136107">Since <m>f</m> is discontinuous at 2 and <m>\limit_{x\to 2}f(x)</m> exists, <m>f</m> has a removable discontinuity at <m>x=2.</m></p>
+</solution>
+</example>
+<example xml:id="fs-id1170573426544">
+<title>Classifying a Discontinuity</title>
+ <statement id="fs-id1170573493638">
+<p id="fs-id1170573586256">In <xref ref="fs-id1170573389760"/>, we showed that <me>f(x)=\begin{cases}-x^2+4\amp\text{ if } x\leq 3\\4x-8\amp\text{ if } x\gt 3\end{cases}</me> is discontinuous at <m>x=3.</m> Classify this discontinuity as removable, jump, or infinite.</p>
+</statement>
+<solution id="fs-id1170573409417">
+<p id="fs-id1170571095481">Earlier, we showed that <m>f</m> is discontinuous at 3 because <m>\limit_{x\to 3}f(x)</m> does not exist. However, since <m>\limit_{x\to  3^-}f(x)=-5</m> and <m>\limit_{x\to  3^+}f(x)=4</m> both exist, we conclude that the function has a jump discontinuity at 3.</p>
+</solution>
+</example>
+<example xml:id="fs-id1170573355402">
+<title>Classifying a Discontinuity</title>
+<statement id="fs-id1170573570342">
+<p id="fs-id1170573732461">Determine whether <m>\ds f(x)=\frac{x+2}{x+1}</m> is continuous at -1. If the function is discontinuous at -1, classify the discontinuity as removable, jump, or infinite.</p>
+</statement>
+<solution id="fs-id1170573394499">
+<p id="fs-id1170571000111">The function value <m>f(-1)</m> is undefined. Therefore, the function is not continuous at -1. To determine the type of discontinuity, we must determine the limit at -1. We see that <m>\limit_{x\to  -1^-}\frac{x+2}{x+1}=-\infty </m> and <m>\limit_{x\to  -1^+}\frac{x+2}{x+1}=+\infty .</m> Therefore, the function has an infinite discontinuity at -1.</p>
+</solution>
+</example>
+<exercise>  <statement id="fs-id1170573351595">
+<p id="fs-id1170573361594">For <me>f(x)=\begin{cases}x^2\amp\text{ if } x\neq 1\\3\amp\text{ if } x=1 \end{cases},</me> decide whether <m>f</m> is continuous at 1. If <m>f</m> is not continuous at 1, classify the discontinuity as removable, jump, or infinite.</p>
+</statement>
+<solution id="fs-id1170573366140">
+<p id="fs-id1170573355512">Discontinuous at 1; removable</p>
+</solution>
+ <hint>
+<p id="fs-id1170573436674">Follow the steps in <xref ref="fs-id1170573398041"/>. If the function is discontinuous at 1, look at <m>\limit_{x\to 1}f(x)</m> and use the definition to determine the type of discontinuity.</p>
+</hint>
+</exercise>
+</subsection>
+<subsection id="fs-id1170573494299">
+<title>Continuity over an Interval</title>
+<p id="fs-id1170573612125">Now that we have explored the concept of continuity at a point, we extend that idea to <term>continuity over an interval</term>. As we develop this idea for different types of intervals, it may be useful to keep in mind the intuitive idea that a function is continuous over an interval if we can use a pencil to trace the function between any two points in the interval without lifting the pencil from the paper. In preparation for defining continuity on an interval, we begin by looking at the definition of what it means for a function to be continuous from the right at a point and continuous from the left at a point.</p>
+<definition id="fs-id1170573581958">
+<title>Continuity from the Right and from the Left</title>
+<p id="fs-id1170573352232">A function <m>f(x)</m> is said to be <term>continuous from the right</term> at <m>a</m> if <m>\limit_{x\to a^+}f(x)=f(a).</m></p>
+<p id="fs-id1170571120467">A function <m>f(x)</m> is said to be <term>continuous from the left</term> at <m>a</m> if <m>\limit_{x\to a^-}f(x)=f(a).</m></p>
+</definition>
+<p id="fs-id1170570967081">A function is continuous over an open interval if it is continuous at every point in the interval. A function <m>f(x)</m> is continuous over a closed interval of the form <m>[a,b]</m> if it is continuous at every point in <m>(a,b)</m> and is continuous from the right at <m>a</m> and is continuous from the left at <m>b</m>: </p>
+<p>
+  A function is continuous on the closed interval <m>[a,b]</m> when
+  <ul>
+    <li>
+      <p>
+        <m>f(x)</m> is continuous on <m>(a,b)</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>f(x)</m> is continuous from the right at <m>a</m>, and
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>f(x)</m> is continuous from the left at <m>b</m>.
+      </p>
+    </li>
+  </ul>
+  Note that the last two conditions are equivalent to
+  <me>\limit_{x\to a^+}f(x)=f(a)\quad\text{and}\quad \limit_{x\to b^-}f(x)=f(b) </me>
+</p>
+<p id="fs-id1170573533852">Requiring that <m>\limit_{x\to a^+}f(x)=f(a)</m> and <m>\limit_{x\to b^-}f(x)=f(b)</m> ensures that we can trace the graph of the function from the point <m>(a,f(a))</m> to the point <m>(b,f(b))</m> without lifting the pencil. If, for example, <m>\limit_{x\to a^+}f(x)\neq f(a),</m> we would need to lift our pencil to jump from <m>f(a)</m> to the graph of the rest of the function over <m>(a,b].</m></p>
+<example xml:id="fs-id1170573395559">
+<title>Continuity on an Interval</title>
+ <statement id="fs-id1170571096791">
+<p id="fs-id1170570990867">State the interval(s) over which the function <m>\ds f(x)=\frac{x-1}{x^2+2x}</m> is continuous.</p>
+</statement>
+<solution id="fs-id1170573426586">
+<p id="fs-id1170573426588">Since <m>f(x)=\frac{x-1}{x^2+2x}</m> is a rational function, it is continuous at every point in its domain. The domain of <m>f(x)</m> is the set <m>(-\infty ,-2)\cup (-2,0)\cup (0,+\infty ).</m> Thus, <m>f(x)</m> is continuous over each of the intervals <m>(-\infty ,-2),(-2,0),</m> and <m>(0,+\infty ).</m></p>
+</solution>
+</example>
+<example xml:id="fs-id1170573387892">
+<title>Continuity over an Interval</title>
+ <statement id="fs-id1170573404298">
+<p id="fs-id1170573406820">State the interval(s) over which the function <m>f(x)=\sqrt{4-x^2}</m> is continuous.</p>
+</statement>
+<solution id="fs-id1170573439418">
+<p id="fs-id1170573439420">From the limit laws, we know that <m>\limit_{x\to a}\sqrt{4-x^2}=\sqrt{4-a^2}</m> for all values of <m>a</m> in <m>(-2,2).</m> We also know that <m>\limit_{x\to  -2^+}\sqrt{4-x^2}=0</m> exists and <m>\limit_{x\to  2^-}\sqrt{4-x^2}=0</m> exists. Therefore, <m>f(x)</m> is continuous over the interval <m>[-2,2].</m></p>
+</solution>
+</example>
+<exercise> <statement id="fs-id1170573361462">
+<p id="fs-id1170571120474">State the interval(s) over which the function <m>f(x)=\sqrt{x+3}</m> is continuous.</p>
+</statement>
+<solution id="fs-id1170571287077">
+<p id="fs-id1170571287079"><m>[-3,+\infty )</m></p>
+</solution>
+ <hint>
+<p id="fs-id1170570999934">Use <xref ref="fs-id1170573387892"/> as a guide for solving.</p>
+</hint>
+</exercise>
+<theorem xml:id="thm-continuity">
+  <title>Algebra of Continuous Functions</title>
+  
+  <statement>
+    <p>
+      If the functions <m>f</m> and <m>g</m> are continuous at <m>x=a</m>, then the following algebraic combinations are continuous at <m>x=a</m>.    
+    </p>
+    <p>
+      <ol>
+        <li>
+          <p>
+            <m>\text{Sums}\quad f+g</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\text{Differences}\quad f-g</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\text{Constant Multiples}\quad k\cdot f,\text{ for any number }k</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\text{Products}\quad f\cdot g</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\text{Quotients}\quad f/g,\text{ provided }g(a)\ne 0</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\text{Powers}\quad f^n,\ n\text{ a positive integer}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\text{Roots}\quad \sqrt[n]{f},\text{ provided it is defined on an interval containing } a,\text{ where }n\text{ is a positive integer}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+  <proof>
+    <p>
+      We prove the sum property using the limit laws.
+      <md>
+        <mrow>\limit_{x\to a}(f+g)(x)\amp\limit_{x\to a}\left(f(x)+g(x)\right)</mrow>
+        <mrow> \amp =\limit_{x\to a}f(x)+\limit_{x\to a}g(x)</mrow>
+        <mrow> \amp =f(a)+g(a)</mrow>
+        <mrow> \amp =(f+g)(a)</mrow>
+      </md>
+      
+    </p>
+  </proof>
+</theorem>
+<p id="fs-id1170573513079">By applying the definition of continuity and previously established theorems concerning the evaluation of limits, we can state the following theorem.</p>
+
+<theorem xml:id="fs-id1170573430304">
+<title>Continuity of Polynomials and Rational Functions</title>
+<p id="fs-id1170573255225">Polynomials and rational functions are continuous at every point in their domains.</p>
+<proof>
+<p id="fs-id1170573326736">Previously, we showed that if <m>p(x)</m> and <m>q(x)</m> are polynomials, <m>\limit_{x\to a}p(x)=p(a)</m> for every polynomial <m>p(x)</m> and <m>\limit_{x\to a}\frac{p(x)}{q(x)}=\frac{p(a)}{q(a)}</m> as long as <m>q(a)\neq 0.</m> Therefore, polynomials and rational functions are continuous on their domains.</p>
+</proof></theorem>
+<p id="fs-id1170573335424">We now apply <xref ref="fs-id1170573430304"/> to determine the points at which a given rational function is continuous.</p>
+<example xml:id="fs-id1170573381194">
+<title>Continuity of a Rational Function</title>
+ <statement id="fs-id1170573307687">
+<p id="fs-id1170573365757">For what values of <m>x</m> is <m>\ds f(x)=\frac{x+1}{x-5}</m> continuous?</p>
+</statement>
+<solution id="fs-id1170573398980">
+<p id="fs-id1170573397031">The rational function <m>f(x)=\frac{x+1}{x-5}</m> is continuous for every value of <m>x</m> except <m>x=5.</m></p>
+</solution>
+</example>
+<exercise> <statement id="fs-id1170573400271">
+<p id="fs-id1170570999873">For what values of <m>x</m> is <m>f(x)=3x^4-4x^2</m> continuous?</p>
+</statement>
+<solution id="fs-id1170571262106">
+<p id="fs-id1170573246209"><m>f(x)</m> is continuous at every real number.</p>
+</solution>
+ <hint>
+<p id="fs-id1170573431750">Use <xref ref="fs-id1170573430304"/></p>
+</hint>
+</exercise>
+<p id="fs-id1170573361765"><xref ref="fs-id1170573352212"/> allows us to expand our ability to compute limits. In particular, this theorem ultimately allows us to demonstrate that trigonometric functions are continuous over their domains.</p>
+<theorem xml:id="fs-id1170573352212">
+<title>Composite Function Theorem</title>
+<p id="fs-id1170573762934">If <m>f(x)</m> is continuous at <m>L</m> and <m>\limit_{x\to a}g(x)=L,</m> then</p>
+<me>\limit_{x\to a}f(g(x))=f(\limit_{x\to a}g(x))=f(L).</me>
+</theorem>
+<p id="fs-id1170573573603">Before we move on to <xref ref="fs-id1170573718134"/>, recall that earlier, in the section on limit laws, we showed <m>\limit_{x\to 0}\cos  x=1=\cos  (0).</m> Consequently, we know that <m>f(x)=\cos  x</m> is continuous at 0. In <xref ref="fs-id1170573718134"/> we see how to combine this result with the composite function theorem.</p>
+<example xml:id="fs-id1170573718134">
+<title>Limit of a Composite Cosine Function</title>
+ <statement id="fs-id1170570998133">
+<p id="fs-id1170571071223">Evaluate <m>\limit_{x\to \pi/2}\cos  \left(x-\frac{\pi}{2}\right).</m></p>
+</statement>
+<solution id="fs-id1170573729374">
+<p id="fs-id1170573408578">The given function is a composite of <m>\cos  x</m> and <m>x-\frac{\pi}{2}.</m> Since <m>\limit_{x\to \pi/2}\left(x-\frac{\pi}{2}\right)=0</m> and <m>\cos  x</m> is continuous at 0, we may apply the composite function theorem. Thus,</p>
+<me>\limit_{x\to \pi/2}\cos  \left(x-\frac{\pi}{2}\right)=\cos  \left(\limit_{x\to \pi/2}\left(x-\frac{\pi}{2}\right)\right)=\cos  (0)=1.</me>
+</solution>
+</example>
+<exercise>  <statement id="fs-id1170571131879">
+<p id="fs-id1170571131881">Evaluate <m>\limit_{x\to \pi}\sin (x-\pi).</m></p>
+</statement>
+<solution id="fs-id1170573362580">
+<p id="fs-id1170573362583">0</p>
+</solution>
+ <hint>
+<p id="fs-id1170573359398"><m>f(x)=\sin x</m> is continuous at 0. Use <xref ref="fs-id1170573718134"/> as a guide.</p>
+</hint>
+</exercise>
+<p id="fs-id1170571101566">The proof of the next theorem uses the composite function theorem as well as the continuity of <m>f(x)=\sin x</m> and <m>g(x)=\cos  x</m> at the point 0 to show that trigonometric functions are continuous over their entire domains.</p>
+<theorem>
+<title>Continuity of Trigonometric Functions</title>
+<p id="fs-id1170573512311">Trigonometric functions are continuous over their entire domains.</p>
+<proof>
+<p id="fs-id1170573429466">We begin by demonstrating that <m>\cos  x</m> is continuous at every real number. To do this, we must show that <m>\limit_{x\to a}\cos  x=\cos  a</m> for all values of <m>a</m>.</p>
+<p id="fs-id1170571099777">
+  <md><mrow>\limit_{x\to a}\cos  x\amp=\limit_{x\to a}\cos  ((x-a)+a)\amp\amp\text{ rewrite } x=x-a+a</mrow>
+  <mrow>\amp=\limit_{x\to a}(\cos  (x-a) \cos  a-\sin (x-a) \sin a)\amp\amp \text{ apply the identity for the cosine of the sum of two angles }</mrow>
+  <mrow>\amp=\cos  (\limit_{x\to a}(x-a)) \cos  a-\sin (\limit_{x\to a}(x-a)) \sin a\amp \amp \limit_{x\to a}(x-a)=0, \text{ and } \sin x \text{ and } \cos  x \text{ are continuous at 0 }</mrow>
+  <mrow>\amp=\cos  (0) \cos  a-\sin (0) \sin a\amp\amp \text{ evaluate cos(0) and sin(0) and simplify }</mrow>
+  <mrow>\amp =1\cdot \cos  a-0\cdot \sin a=\cos  a.</mrow></md></p>
+<p id="fs-id1170571216459">The proof that <m>\sin x</m> is continuous at every real number is analogous. Because the remaining trigonometric functions may be expressed in terms of <m>\sin x</m> and <m>\cos  x,</m> their continuity follows from the quotient limit law.</p>
+</proof> </theorem>
+<p>
+  This theorem says that if <m>f(x)</m> is a continuous function on all of the interval <m>a\le x\le b</m> then as <m>x</m> moves from <m>a</m> to <m>b</m>, <m>f(x)</m> takes every value between <m>f(a)</m> and <m>f(b)</m> at least once.  To put this slightly differently, if <m>f</m> were to avoid a value between <m>f(a)</m> and <m>f(b)</m> then <m>f</m> cannot be continuous on <m>[a,b]</m>.
+</p>
+<p>
+  It is not hard to convince yourself that the continuity of <m>f</m> is crucial to the IVT.  Without it one can quickly construct examples of functions that contradict the theorem.  See the figure below for a few non-continuous examples:
+</p>
+
+
+
+</subsection>
+
+<subsection id="fs-id1170571100154">
+<title>The Intermediate Value Theorem</title>
+<p id="fs-id1170573717714">Functions that are continuous over intervals of the form <m>[a,b],</m> where <m>a</m> and <m>b</m> are real numbers, exhibit many useful properties. Throughout our study of calculus, we will encounter many powerful theorems concerning such functions. The first of these theorems is the <term>Intermediate Value Theorem</term>.</p>
+<theorem>
+<title>The Intermediate Value Theorem</title>
+<p id="fs-id1170573534418">Let <m>f</m> be continuous over a closed, bounded interval <m>[a,b].</m> If <m>z</m> is any real number between <m>f(a)</m> and <m>f(b),</m> then there is a number <m>c</m> in <m>[a,b]</m> satisfying <m>f(c)=z</m> in <xref ref="CNX_Calc_Figure_02_04_007"/>.</p>
+<figure xml:id="CNX_Calc_Figure_02_04_007">
+  <image source="CNX_Calc_Figure_02_04_007.jpg" width="50%">
+<description>"A diagram illustrating the intermediate value theorem. There is a generic continuous curved function shown over the interval [a,b]. The points fa. and fb. are marked, and dotted lines are drawn from a, b, fa., and fb. to the points (a, fa.) and (b, fb.).  A third point, c, is plotted between a and b. Since the function is continuous, there is a value for fc. along the curve, and a line is drawn from c to (c, fc.) and from (c, fc.) to fc., which is labeled as z on the y axis." </description></image> <caption>There is a number <m>c\in[a,b]</m> that satisfies <m>f(c)=z.</m></caption>
+</figure>
+</theorem>
+
+<figure xml:id="IVT-image">
+  <caption>Without continuity, there could be a <m>y</m>-value that is "missed" between two other <m>y</m>-values in the range of <m>f(x)</m> <alert>NEEDS ALT TEXT. Text below agrees with notation in the picture (Y instead of z)</alert></caption>
+  <image source="UBC_fig_2-5.svg" width="100%"/>
+</figure>
+
+<p>
+  In the left-hand example we see that a discontinuous function can "jump" over the <m>Y</m>-value we have chosen, so there is no <m>x</m>-value that makes <m>f(x)=Y</m>.  The right-hand example demonstrates why we need to be careful with the ends of the interval.  In particular, a function must be continuous over the whole interval <m>[a,b]</m> <em>including</em> the endpoints of the interval.  If we only required the function to be continuous on <m>(a,b)</m> (so strictly between <m>a</m>) and <m>b</m> then the function could "jump" over the <m>Y</m>-value at <m>a</m> or <m>b</m>.
+</p>
+
+
+<example xml:id="eg_1_6_4"><title>The IVT in the <q>real world</q></title>
+<p>
+You are climbing the Grouse-grind
+	<!-- <fn>If you don't know it then google it.</fn> -->
+with a friend <mdash/> call him Bob. Bob was eager and started at 9am. Bob,  while very eager, is also very clumsy; he sprained his ankle somewhere  along the path and has stopped moving at 9:21am and is just sitting
+ 	<!-- <fn>Hopefully he remembered to carry something warm.</fn> -->
+enjoying the  view. You get there late and start climbing at 10am and being quite fit you get to the  top at 11am. The IVT implies that at some time between 10am and 11am you  meet up with Bob.
+</p>
+
+<p>
+You can translate this situation into the form of the IVT as follows. Let <m>t</m>  be time and let <m>a = </m> 10am and <m>b=</m> 11am. Let <m>g(t)</m> be your distance along the trail. Hence
+	<!-- <fn>It's amazing what facts you can find on Wikipedia.</fn> -->
+<m>g(a) = 0</m> and  <m>g(b) = 2.9</m>km. Since you are a mortal, your position along the trail is a  continuous function <mdash/> no helicopters or teleportation or<ellipsis/> We have no idea  where Bob is sitting, except that he is somewhere between <m>g(a)</m> and  <m>g(b)</m>, call this point <m>Y</m>. The IVT guarantees that there is some time <m>c</m>  between <m>a</m> and <m>b</m> (so between 10am and 11am) with <m>g(c) = Y</m> (and your  position will be the same as Bob's).
+</p>
+</example>
+
+<p>
+Aside from finding Bob sitting by the side of the trail, one of the most  important applications of the IVT is determining where a function is zero. For  quadratics we know (or should know) that
+<md>
+<mrow>
+  ax^2+bx+c &amp;= 0 &amp; \text{ when } x &amp;= \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+</mrow>
+</md>
+While the Babylonians could (mostly, but not quite) do the above, the corresponding  formula for solving a cubic is uglier and that for a quartic is uglier still. One of  the most famous results in mathematics demonstrates that no such  formula exists for quintics or higher degree polynomials
+	<!-- <fn>		The similar  (but uglier) formula for solving cubics took until the 15th century and the  work of del<nbsp/>Ferro and Cardano (and Cardano's student Ferrari). A similar (but  even uglier) formula for quartics was also found by Ferrari. The extremely  famous  Abel-Ruffini Theorem (nearly by Ruffini in the late 18th century and  completely by Abel in early 19th century) demonstrates  that a similar formula  for the zeros of a quintic does not exist. Note that the theorem does  <em>not</em> say that quintics do not have zeros; rather it says that the zeros  cannot in general be expressed using a finite combination of addition,  multiplication, division, powers and roots. The interested student should also  look up Évariste Galois and his contributions to this area.	</fn>. -->
+</p>
+
+<p>
+So even for polynomials we cannot, in general, write down explicit  formulae for their zeros and have to make do with numerical approximations <mdash/>  i.e. write down the root as a decimal expansion to whatever precision we desire.  For more complicated functions we have no choice <mdash/> there is no reason that the  zeros should be expressible as nice neat little formulas. At the same time,  finding the zeros of a function:
+<md>
+<mrow>
+  f(x) &amp;= 0
+</mrow>
+</md>
+or solving equations of the form
+	<fn>
+		In fact both of these are the same because we  can write <m>f(x)=g(x)-h(x)</m> and then the zeros of <m>f(x)</m> are exactly when <m>g(x)=h(x)</m>.
+	</fn>
+<md>
+<mrow>
+  g(x) &amp;= h(x)
+</mrow>
+</md>
+can be a crucial step in many mathematical proofs and applications.
+</p>
+
+<example xml:id="fs-id1170571120881">
+<title>Application of the Intermediate Value Theorem</title>
+<statement id="fs-id1170570997452">
+<p id="fs-id1170570997458">Show that <m>f(x)=x-\cos  x</m> has at least one zero.</p>
+</statement>
+<solution id="fs-id1170571136340">
+<p id="fs-id1170571136342">Since <m>f(x)=x-\cos  x</m> is continuous over <m>(-\infty ,+\infty ),</m> it is continuous over any closed interval of the form <m>[a,b].</m> If you can find an interval <m>[a,b]</m> such that <m>f(a)</m> and <m>f(b)</m> have opposite signs, you can use the Intermediate Value Theorem to conclude there must be a real number <m>c</m> in <m>(a,b)</m> that satisfies <m>f(c)=0.</m> Note that</p>
+<me>f(0)=0-\cos  (0)=-1\lt 0</me>
+<p id="fs-id1170573424328">and</p>
+<me>f(\frac{\pi}{2})=\frac{\pi}{2}-\cos \frac{\pi}{2}=\frac{\pi}{2}\gt 0.</me>
+<p id="fs-id1170573753266">Using the Intermediate Value Theorem, we can see that there must be a real number <m>c</m> in <m>[0,\pi/2]</m> that satisfies <m>f(c)=0.</m> Therefore, <m>f(x)=x-\cos  x</m> has at least one zero.</p>
+</solution>
+</example>
+<example xml:id="fs-id1170573439386">
+<title>When Can You Apply the Intermediate Value Theorem?</title>
+> <statement id="fs-id1170573413593">
+<p id="fs-id1170573413598">If <m>f(x)</m> is continuous over <m>[0,2],f(0)\gt 0</m> and <m>f(2)\gt 0,</m> can we use the Intermediate Value Theorem to conclude that <m>f(x)</m> has no zeros in the interval <m>[0,2\text{ ]? }</m> Explain.</p>
+</statement>
+<solution id="fs-id1170571131081">
+<p id="fs-id1170571262087">No. The Intermediate Value Theorem only allows us to conclude that we can find a value between <m>f(0)</m> and <m>f(2);</m> it doesn’t allow us to conclude that we can’t find other values. To see this more clearly, consider the function <m>f(x)=(x-1)^2.</m> It satisfies <m>f(0)=1\gt 0,f(2)=1\gt 0,</m> and <m>f(1)=0.</m></p>
+</solution>
+</example>
+<example xml:id="fs-id1170570996536">
+<title>When Can You Apply the Intermediate Value Theorem?</title>
+ <statement id="fs-id1170573586872">
+<p id="fs-id1170573586819">For <m>f(x)=1/x,f(-1)=-1\lt 0</m> and <m>f(1)=1\gt 0.</m> Can we conclude that <m>f(x)</m> has a zero in the interval <m>[-1,1]?</m></p>
+</statement>
+<solution id="fs-id1170573407976">
+<p id="fs-id1170571138880">No. The function is not continuous over <m>[-1,1].</m> The Intermediate Value Theorem does not apply here.</p>
+</solution>
+</example>
+<exercise><statement id="fs-id1170571048764">
+<p id="fs-id1170571048766">Show that <m>f(x)=x^3-x^2-3x+1</m> has a zero over the interval <m>[0,1].</m></p>
+</statement>
+<solution id="fs-id1170573382708">
+<p id="fs-id1170573382710"><m>f(0)=1\gt 0,f(1)=-2\lt 0;f(x)</m> is continuous over <m>[0,1].</m> It must have a zero on this interval.</p>
+</solution>
+ <hint>
+<p id="fs-id1170573569887">Find <m>f(0)</m> and <m>f(1).</m> Apply the Intermediate Value Theorem.</p>
+</hint>
+</exercise>
+</subsection>
+<!-- <subsection id="fs-id1170573391172" class="key-concepts">
+<title>Key Concepts</title>
+<ul id="fs-id1170573574290" list-type="bulleted" bullet-style="bullet">
+<li>For a function to be continuous at a point, it must be defined at that point, its limit must exist at the point, and the value of the function at that point must equal the value of the limit at that point.</li>
+<li>Discontinuities may be classified as removable, jump, or infinite.</li>
+<li>A function is continuous over an open interval if it is continuous at every point in the interval. It is continuous over a closed interval if it is continuous at every point in its interior and is continuous at its endpoints.</li>
+<li>The composite function theorem states: If <m>f(x)</m> is continuous at <m>L</m> and <m>\limit_{x\to a}g(x)=L,</m> then <m>\limit_{x\to a}f(g(x))=f(\limit_{x\to a}g(x))=f(L).</m></li>
+<li>The Intermediate Value Theorem guarantees that if a function is continuous over a closed interval, then the function takes on every value between the values at its endpoints.</li>
+</ul>
+</subsection> -->
+</section>
