@@ -916,7 +916,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Mathematical Modeling",
-  "body": " Mathematical Modeling   Learning Objectives   Discuss linear mathematical models for cost, revenue, profit, supply, and demand functions.  Find and analyze the break-even quantity and equilibrium point.  Discuss quadratic mathematical models.  Find and analyze the vertex point of a quadratic function.  Optimize cost, revenue, and profit functions.   A large variety of real-world situations can be described using mathematical models . A mathematical model is a method of simulating real-life situations with mathematical equations. Physicists, engineers, economists, and other researchers develop models by combining observation with quantitative data to develop equations, functions, graphs, and other mathematical tools to describe the behavior of various systems accurately. Models are useful because they help predict future outcomes. Examples of mathematical models include the study of population dynamics, investigations of weather patterns, and predictions of product sales.    Mathematical Models of Cost, Revenue, and Profit  Given the number of units produced, the cost function outputs the amount a business or company must pay in order to produce units. There are typicically two types of costs: fixed and variable. In a linear cost model, the cost function is expressed as   where is the cost per unit also referred to as the variable or marginal cost . Here, the variable cost term depends on the number of units produced. Some examples of variable\/marginal costs are labor, material, or manufacturing costs. Additionally, are the fixed costs which is the amount one must pay to operate a business. The fixed cost is independent of the number of units produced. It often represents the amount one must pay if 0 units are produced since is the -intercept of the cost function. That is, . Some examples of fixed costs are rent, utility bills, or operating costs.  The revenue function outputs the payment received from selling units. In a linear model, the revenue is   where is the selling price per unit which is also called the marginal revenue .  The profit function outputs the net proceeds after paying off the expenses\/costs. That is,  . Notice that the above definition for the profit function holds if either of our revenue or cost functions are non-linear.  If profits are negative, this is considered a and if profits are positive, this is considered a .   Break-even Analysis  Companies often look for the point at which there is no or . This gives you the minimum number of units a company must produce in order to make a profit.  The break-even quantity is the number of units needed so that cost and revenue are equal, meaning the total profit is zero. That is, or .  Observe that and will yield the same break-even quantity solution since if and only if .     Peter's ice cream stand has an operating cost of $200 per week. The cost to make an ice cream sundae is $2 and they sell for $6. Compute the cost, revenue, and profit functions for one week. Then, find the break-even quantity. Let represent the number of ice cream sundaes sold.   Since our operating costs (fixed costs) are $200 per week and the marginal cost is $2 per ice cream sundae, then . Since the selling price is $6 per ice cream sundae, then . Using and , we can obtain the profit function.     To find the break-even quantity, we may proceed by using two different methods. Both yield the same solution.  Method 1:      Method 2:     Peter must sell at least 50 ice cream sundaes in one week in order to make a profit.     A suit department store has an operating cost of $1000 per week. The cost to supply a suit is $50 each and they sell for $150 each. Compute the cost, revenue, and profit functions for one week. Then, find the break-even quantity. Let represent the number of suits sold.    The cost and revenue functions are Profit function:  Break-even quantity:   The department store must sell at least 10 suits in one week in order to make a profit.  Recall that and to find the break-even quantity, we can solve either or .      Mathematical Models of Supply and Demand  The demand equation  gives you the price of one unit if units are sold. The supply equation  gives you the price needed to make units available to the market. If we supply more units than the market demanded, this is considered a . If we supply less units than the market demanded, this is considered a .    Suppose that 500 units of a certain item are sold per day by the entire industry at a price of $20 per item and that 1500 units can be sold per day by the same industry at a price of $15 per unit. Assuming a linear model, find the demand equation where is the number of units sold per day.    Observe that 500 units are sold at a price of $20 per unit gives us the ordered pair . Moreover, we also have that 1500 units are sold at a price of $15 per unit. That is, .  Since the demand equation is linear, we can compute the slope of the line by using the above ordered pairs.  Using point-slope form,  Hence, our demand equation is .    Suppose that when 100 units of a certain item are supplied, they are sold at a price of $1.25 per unit. When 80 more units of a certain item are supplied, the price per unit increased by $1. Assuming a linear model, find the supply equation where is the number of units sold.   Using the ordered pairs and ,  Supply equation:  .  Use point-slope form to construct the linear supply equation.    Equilibrium  Companies often look for the amount of units needed to guarantee there is neither a or of units. Meaning, we want supply and demand to be equal which brings us to the following definition.  The equilibrium point  is the number of units needed at a selling price where supply and demand are equal. The -coordinate is the equilibrium quantity and the -coordinate is the equilibrium price .    Suppose the supply and demand equations for Peter's ice cream stand are and respectively. Find the equilibrium price and quantity. Suppose is the number of ice cream sundaes sold and the price per sundae is in dollars.  In order to find the equilibrium point we must set Peter's supply and demand equations equal to one another.    The equilibrium quantity is 20 ice cream sundaes.  Next, we can use either the supply or demand equation to solve for the equilibrium price. Notice that both equations will yield the same result.  Method 1: Using the supply equation.  Method 2: Using the demand equation. The equilibrium price is $7.    The supply and demand equations for Lola's smoothie shop are and respectively. Find the equilibrium point. Suppose is the number of smoothies sold in one day and the price per smoothie is in dollars.  Setting Lola's supply and demand equations equal to one another,   The equilibrium quantity is 20 smoothies. Using the supply equation: The equilibrium price is $5.  Recall that we must set the supply and demand equations equal to one another to find the equilibrium quantity.      Quadratic Mathematical Models  As we saw in the previous section, a quadratic polynomial is typically of the form where if the graph of opens upward and if the graph of opens downward. (See (a).) The quadratic polynomial can also be written in standard form . The point is called the vertex point . The -coordinate of the vertex point can be found using the vertex formula : The -coordinate of the vertex point can be found by evaluating the quadratic function at . That is, . Notice here that if the parabola opens upward, then the vertex is a . Conversely, if the parabola opens downward, the vertex is a .   As an example, let’s consider a mathematical model that a company could use to describe its revenue for the sale of a particular item. Recall the revenue equation The company is interested in how the sales change as the price of the item changes. Suppose the data in show the number of units a company sells as a function of the price per item.   Number of Units Sold (in Thousands) as a Function of Price per Unit (in Dollars)                     In , we see the graph the number of units sold (in thousands) as a function of price (in dollars). We note from the shape of the graph that the number of units sold is likely a linear function of price per item, and the data can be closely approximated by the linear function for where predicts the number of units sold in thousands. Using this linear function, the revenue (in thousands of dollars) can be estimated by the quadratic function   for In , we use this quadratic function to predict the amount of revenue the company receives depending on the price the company charges per item. Note that we cannot conclude definitively the actual number of units sold for values of for which no data are collected. However, given the other data values and the graph shown, it seems reasonable that the number of units sold (in thousands) if the price charged is dollars may be close to the values predicted by the linear function    \"An image of a graph. The y axis runs from 0 to 28 and is labeled “n, units sold in thousands”. The x axis runs from 0 to 28 and is labeled “p, price in dollars”. The graph is of the function “x = -1.04p + 26”, which is a decreasing line function that starts at the y intercept point (0, 26). There are 5 points plotted on the graph at (6, 19.4), (8, 18.5), (10, 16.2), (12, 13.8), and (14, 12.2). The points are not on the graph of the function line, but are very close to it. The function has an x intercept at the point (25, 0).\"   The data collected for the number of items sold as a function of price is roughly linear. We use the linear function to estimate this function.    Maximizing Revenue   A company is interested in predicting the amount of revenue it will receive depending on the price it charges for a particular item. Using the data from , the company arrives at the following quadratic function to model revenue (in thousands of dollars) as a function of price per item   for   Predict the revenue if the company sells the item at a price of and  Find the zeros of this function and interpret the meaning of the zeros.  Sketch a graph of  Use the graph to determine the value of that maximizes revenue. Find the maximum revenue.      Evaluating the revenue function at and we can conclude that  The zeros of this function can be found by solving the equation When we factor the quadratic expression, we get The solutions to this equation are given by For these values of the revenue is zero. When the revenue is zero because the company is giving away its merchandise for free. When the revenue is zero because the price is too high, and no one will buy any items.  Knowing the fact that the function is quadratic, we also know the graph is a parabola. Since the leading coefficient is negative, the parabola opens downward. One property of parabolas is that they are symmetric about the axis, so since the zeros are at and the parabola must be symmetric about the line halfway between them, or   \"An image of a graph. The y axis runs from 0 to 170 and is labeled “R, revenue in thousands of dollars”. The x axis runs from 0 to 28 and is labeled “p, price in dollars”. The graph is of the function “n = -1.04(p squared) + 26p”, which is a parabola that starts at the origin. The function increases until the maximum point at (12.5, 162.5) and then begins decreasing. The function has x intercepts at the origin and the point (25, 0). The y intercept is at the origin.\">    The function is a parabola with zeros at and and it is symmetric about the line so the maximum revenue occurs at a price of per item. At that price, the revenue is     Recall that both the supply and demand equations give the price per unit given the number of units sold. This means that using either the supply or demand equation and that we can find the revenue equation:    Maximizing Profit and Minimizing Cost   A clothing store determines that its supply equation for dresses sold is and the cost for producing dresses is .   Find the revenue function .  Find the profit function .  How many dresses must be sold in order to maximize profits?  What is the maximum profit?  How many dresses must be sold in order to minimize costs?      We can find the revenue equation using the supply equation. Recall that, . . .           The demand equation for diamond rings sold at a jewelry store in one month is where is the number of diamond rings sold in one month and the price of each diamond ring is in hundreds of dollars.   Find the revenue function .  How many diamond rings must be sold in order to maximize revenue?  What is the maximum revenue?  What is the price per diamond ring that will maximize revenue?       Using we obtain    Since the graph of our revenue function opens downward, the vertex point will give us maximum revenue. Using the vertex formula, Furthermore, selling 32 diamond rings in one month will maximize revenue.    Since revenue is maximized when 32 diamond rings are sold, evaluating will give us the maximum revenue. Recalling that the price is in hundreds of dollars, revenue will also be in hundreds of dollars. As a result, the maximum revenue is .    In order to find the price per diamond ring that will maximize revenue we must evaluate the demand equation at . Again, since the price is in hundreds of dollars, the price per diamond ring that will maximize revenue is .          "
+  "body": " Mathematical Modeling   Learning Objectives   Discuss linear mathematical models for cost, revenue, profit, supply, and demand functions.  Find and analyze the break-even quantity and equilibrium point.  Discuss quadratic mathematical models.  Find and analyze the vertex point of a quadratic function.  Optimize cost, revenue, and profit functions.   A large variety of real-world situations can be described using mathematical models . A mathematical model is a method of simulating real-life situations with mathematical equations. Physicists, engineers, economists, and other researchers develop models by combining observation with quantitative data to develop equations, functions, graphs, and other mathematical tools to describe the behavior of various systems accurately. Models are useful because they help predict future outcomes. Examples of mathematical models include the study of population dynamics, investigations of weather patterns, and predictions of product sales.    Mathematical Models of Cost, Revenue, and Profit   Given the number of units produced, the cost function outputs the amount a business or company must pay in order to produce units. There are typicically two types of costs: fixed and variable. In a linear cost model, the cost function is expressed as   where is the cost per unit also referred to as the variable or marginal cost . Here, the variable cost term depends on the number of units produced. Some examples of variable\/marginal costs are labor, material, or manufacturing costs. Additionally, are the fixed costs which is the amount one must pay to operate a business. The fixed cost is independent of the number of units produced. It often represents the amount one must pay if 0 units are produced since is the -intercept of the cost function. That is, . Some examples of fixed costs are rent, utility bills, or operating costs.  The revenue function outputs the payment received from selling units. In a linear model, the revenue is   where is the selling price per unit which is also called the marginal revenue .  The profit function outputs the net proceeds after paying off the expenses\/costs. That is,  . Notice that the above definition for the profit function holds if either of our revenue or cost functions are non-linear.  If profits are negative, this is considered a and if profits are positive, this is considered a .    Break-even Analysis  Companies often look for the point at which there is no or . This gives you the minimum number of units a company must produce in order to make a profit.  The break-even quantity is the number of units needed so that cost and revenue are equal, meaning the total profit is zero. That is, or .  Observe that and will yield the same break-even quantity solution since if and only if .     Peter's ice cream stand has an operating cost of $200 per week. The cost to make an ice cream sundae is $2 and they sell for $6. Compute the cost, revenue, and profit functions for one week. Then, find the break-even quantity. Let represent the number of ice cream sundaes sold.   Since our operating costs (fixed costs) are $200 per week and the marginal cost is $2 per ice cream sundae, then . Since the selling price is $6 per ice cream sundae, then . Using and , we can obtain the profit function.     To find the break-even quantity, we may proceed by using two different methods. Both yield the same solution.  Method 1:      Method 2:     Peter must sell at least 50 ice cream sundaes in one week in order to make a profit.     A suit department store has an operating cost of $1000 per week. The cost to supply a suit is $50 each and they sell for $150 each. Compute the cost, revenue, and profit functions for one week. Then, find the break-even quantity. Let represent the number of suits sold.    The cost and revenue functions are Profit function:  Break-even quantity:   The department store must sell at least 10 suits in one week in order to make a profit.  Recall that and to find the break-even quantity, we can solve either or .      Mathematical Models of Supply and Demand  The demand equation  gives you the price of one unit if units are sold. The supply equation  gives you the price needed to make units available to the market. If we supply more units than the market demanded, this is considered a . If we supply less units than the market demanded, this is considered a .    Suppose that 500 units of a certain item are sold per day by the entire industry at a price of $20 per item and that 1500 units can be sold per day by the same industry at a price of $15 per unit. Assuming a linear model, find the demand equation where is the number of units sold per day.    Observe that 500 units are sold at a price of $20 per unit gives us the ordered pair . Moreover, we also have that 1500 units are sold at a price of $15 per unit. That is, .  Since the demand equation is linear, we can compute the slope of the line by using the above ordered pairs.  Using point-slope form,  Hence, our demand equation is .    Suppose that when 100 units of a certain item are supplied, they are sold at a price of $1.25 per unit. When 80 more units of a certain item are supplied, the price per unit increased by $1. Assuming a linear model, find the supply equation where is the number of units sold.   Using the ordered pairs and ,  Supply equation:  .  Use point-slope form to construct the linear supply equation.    Equilibrium  Companies often look for the amount of units needed to guarantee there is neither a or of units. Meaning, we want supply and demand to be equal which brings us to the following definition.  The equilibrium point  is the number of units needed at a selling price where supply and demand are equal. The -coordinate is the equilibrium quantity and the -coordinate is the equilibrium price .    Suppose the supply and demand equations for Peter's ice cream stand are and respectively. Find the equilibrium price and quantity. Suppose is the number of ice cream sundaes sold and the price per sundae is in dollars.  In order to find the equilibrium point we must set Peter's supply and demand equations equal to one another.    The equilibrium quantity is 20 ice cream sundaes.  Next, we can use either the supply or demand equation to solve for the equilibrium price. Notice that both equations will yield the same result.  Method 1: Using the supply equation.  Method 2: Using the demand equation. The equilibrium price is $7.    The supply and demand equations for Lola's smoothie shop are and respectively. Find the equilibrium point. Suppose is the number of smoothies sold in one day and the price per smoothie is in dollars.  Setting Lola's supply and demand equations equal to one another,   The equilibrium quantity is 20 smoothies. Using the supply equation: The equilibrium price is $5.  Recall that we must set the supply and demand equations equal to one another to find the equilibrium quantity.      Quadratic Mathematical Models  As we saw in the previous section, a quadratic polynomial is typically of the form where if the graph of opens upward and if the graph of opens downward. (See (a).) The quadratic polynomial can also be written in standard form . The point is called the vertex point . The -coordinate of the vertex point can be found using the vertex formula : The -coordinate of the vertex point can be found by evaluating the quadratic function at . That is, . Notice here that if the parabola opens upward, then the vertex is a . Conversely, if the parabola opens downward, the vertex is a .   As an example, let’s consider a mathematical model that a company could use to describe its revenue for the sale of a particular item. Recall the revenue equation The company is interested in how the sales change as the price of the item changes. Suppose the data in show the number of units a company sells as a function of the price per item.   Number of Units Sold (in Thousands) as a Function of Price per Unit (in Dollars)                     In , we see the graph the number of units sold (in thousands) as a function of price (in dollars). We note from the shape of the graph that the number of units sold is likely a linear function of price per item, and the data can be closely approximated by the linear function for where predicts the number of units sold in thousands. Using this linear function, the revenue (in thousands of dollars) can be estimated by the quadratic function   for In , we use this quadratic function to predict the amount of revenue the company receives depending on the price the company charges per item. Note that we cannot conclude definitively the actual number of units sold for values of for which no data are collected. However, given the other data values and the graph shown, it seems reasonable that the number of units sold (in thousands) if the price charged is dollars may be close to the values predicted by the linear function    \"An image of a graph. The y axis runs from 0 to 28 and is labeled “n, units sold in thousands”. The x axis runs from 0 to 28 and is labeled “p, price in dollars”. The graph is of the function “x = -1.04p + 26”, which is a decreasing line function that starts at the y intercept point (0, 26). There are 5 points plotted on the graph at (6, 19.4), (8, 18.5), (10, 16.2), (12, 13.8), and (14, 12.2). The points are not on the graph of the function line, but are very close to it. The function has an x intercept at the point (25, 0).\"   The data collected for the number of items sold as a function of price is roughly linear. We use the linear function to estimate this function.    Maximizing Revenue   A company is interested in predicting the amount of revenue it will receive depending on the price it charges for a particular item. Using the data from , the company arrives at the following quadratic function to model revenue (in thousands of dollars) as a function of price per item   for   Predict the revenue if the company sells the item at a price of and  Find the zeros of this function and interpret the meaning of the zeros.  Sketch a graph of  Use the graph to determine the value of that maximizes revenue. Find the maximum revenue.      Evaluating the revenue function at and we can conclude that  The zeros of this function can be found by solving the equation When we factor the quadratic expression, we get The solutions to this equation are given by For these values of the revenue is zero. When the revenue is zero because the company is giving away its merchandise for free. When the revenue is zero because the price is too high, and no one will buy any items.  Knowing the fact that the function is quadratic, we also know the graph is a parabola. Since the leading coefficient is negative, the parabola opens downward. One property of parabolas is that they are symmetric about the axis, so since the zeros are at and the parabola must be symmetric about the line halfway between them, or   \"An image of a graph. The y axis runs from 0 to 170 and is labeled “R, revenue in thousands of dollars”. The x axis runs from 0 to 28 and is labeled “p, price in dollars”. The graph is of the function “n = -1.04(p squared) + 26p”, which is a parabola that starts at the origin. The function increases until the maximum point at (12.5, 162.5) and then begins decreasing. The function has x intercepts at the origin and the point (25, 0). The y intercept is at the origin.\">    The function is a parabola with zeros at and and it is symmetric about the line so the maximum revenue occurs at a price of per item. At that price, the revenue is     Recall that both the supply and demand equations give the price per unit given the number of units sold. This means that using either the supply or demand equation and that we can find the revenue equation:    Maximizing Profit and Minimizing Cost   A clothing store determines that its supply equation for dresses sold is and the cost for producing dresses is .   Find the revenue function .  Find the profit function .  How many dresses must be sold in order to maximize profits?  What is the maximum profit?  How many dresses must be sold in order to minimize costs?      We can find the revenue equation using the supply equation. Recall that, . . .           The demand equation for diamond rings sold at a jewelry store in one month is where is the number of diamond rings sold in one month and the price of each diamond ring is in hundreds of dollars.   Find the revenue function .  How many diamond rings must be sold in order to maximize revenue?  What is the maximum revenue?  What is the price per diamond ring that will maximize revenue?       Using we obtain    Since the graph of our revenue function opens downward, the vertex point will give us maximum revenue. Using the vertex formula, Furthermore, selling 32 diamond rings in one month will maximize revenue.    Since revenue is maximized when 32 diamond rings are sold, evaluating will give us the maximum revenue. Recalling that the price is in hundreds of dollars, revenue will also be in hundreds of dollars. As a result, the maximum revenue is .    In order to find the price per diamond ring that will maximize revenue we must evaluate the demand equation at . Again, since the price is in hundreds of dollars, the price per diamond ring that will maximize revenue is .          "
 },
 {
   "id": "sec_Ch1Sec3-2-3",
@@ -928,72 +928,72 @@ var ptx_lunr_docs = [
   "body": "mathematical models "
 },
 {
-  "id": "sec_Ch1Sec3-3-2",
+  "id": "sec_Ch1Sec3-3-2-1",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-2",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-2-1",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "cost function "
 },
 {
-  "id": "sec_Ch1Sec3-3-4",
+  "id": "sec_Ch1Sec3-3-2-3",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-4",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-2-3",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "variable marginal cost fixed costs "
 },
 {
-  "id": "sec_Ch1Sec3-3-5",
+  "id": "sec_Ch1Sec3-3-2-4",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-5",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-2-4",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "revenue function "
 },
 {
-  "id": "sec_Ch1Sec3-3-7",
+  "id": "sec_Ch1Sec3-3-2-6",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-7",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-2-6",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "marginal revenue "
 },
 {
-  "id": "sec_Ch1Sec3-3-8",
+  "id": "sec_Ch1Sec3-3-2-7",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-8",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-2-7",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "profit function "
 },
 {
-  "id": "sec_Ch1Sec3-3-12-3",
+  "id": "sec_Ch1Sec3-3-3-3",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-12-3",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-3-3",
   "type": "Definition",
   "number": "1.3.1",
   "title": "",
   "body": "The break-even quantity is the number of units needed so that cost and revenue are equal, meaning the total profit is zero. That is, or . "
 },
 {
-  "id": "sec_Ch1Sec3-3-12-5",
+  "id": "sec_Ch1Sec3-3-3-5",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-12-5",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-3-5",
   "type": "Example",
   "number": "1.3.2",
   "title": "",
   "body": "  Peter's ice cream stand has an operating cost of $200 per week. The cost to make an ice cream sundae is $2 and they sell for $6. Compute the cost, revenue, and profit functions for one week. Then, find the break-even quantity. Let represent the number of ice cream sundaes sold.   Since our operating costs (fixed costs) are $200 per week and the marginal cost is $2 per ice cream sundae, then . Since the selling price is $6 per ice cream sundae, then . Using and , we can obtain the profit function.     To find the break-even quantity, we may proceed by using two different methods. Both yield the same solution.  Method 1:      Method 2:     Peter must sell at least 50 ice cream sundaes in one week in order to make a profit.  "
 },
 {
-  "id": "sec_Ch1Sec3-3-12-6",
+  "id": "sec_Ch1Sec3-3-3-6",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-12-6",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-3-6",
   "type": "Checkpoint",
   "number": "1.3.3",
   "title": "",
@@ -2753,6 +2753,348 @@ var ptx_lunr_docs = [
   "number": "2.4.7.1",
   "title": "",
   "body": " To start, we need the triangle inequality , which says that for any real numbers ,    Sum law for limits : For . Since the limit for exists, then there exists such that when then .  Also, since the limit for exists, there is some such that when then .  Let be the smaller of (so and ). Whenever , then using the Triangle Inequality,    Difference law for limits : Choose the same way as in the sum law for limits.  Again using the Triangle Inequality, whenever , then    Constant multiple law for limits : If then this is just a case of   If , let . Since the limit for exists, there is some such that whenever . For such ,    Product law for limits : Let . First, consider the case if Since the limits for exist, there exists and such that when and when .  Let be the smaller of like we did in the sum law for limits. For any ,   Now, for the more general case, assume . Since the limit for exists, then there is some such that whenever , then (the last line is true regardless of whether is positive or negative)  Since the limit for exists, there is some such that whenever , then . Also, there is some such that whenever .  Let's put the pieces altogether by letting be the minimum of . For any x satisfying , again use the Triangle Inequality to show    Quotient law for limits : This limit law will follow quickly if we first show that : Assume for simplicity that . Since the limit for exists, then given there exists such that whenever . Note that .  Following the inequalities down the rabbit hole, for any satisfying , Since , then .  Now, if , define . The constant multiple law of limits shows that and so   Finally, to prove the quotient law for limits, rewrite as and apply the product law for limits.   Power law for limits : This is a repeated application of the product law for limits   Root law for limits : First start with the case when . Let . Without loss of generality, assume . Then there exists such that whenever (which makes ). It can be verified that So, Therefore, if then   Now suppose where is any nonzero number. Define . Using the constant multiple law for limits, . Thus, by the work above, . Again using the constant multiple law for limits,   Finally, suppose with odd. It can be shown that whenever , then .  "
+},
+{
+  "id": "sec_Ch2Sec4",
+  "level": "1",
+  "url": "sec_Ch2Sec4.html",
+  "type": "Section",
+  "number": "2.5",
+  "title": "Continuity",
+  "body": " Continuity   Learning Objectives   Explain the three conditions for continuity at a point.  Describe three kinds of discontinuities.  Define continuity on an interval.  State the theorem for limits of composite functions.  Provide an example of the intermediate value theorem.   We have seen that computing the limits of polynomial and rational functions at any point in their domains is easy because That is, the limit as approaches is just . Roughly speaking, the reason we can compute the limit this way is because these functions do not have any jumps as near  Many other functions have this property, for example. A function with this property is called \"continuous\" and there is a precise definition for it.    Continuity at a Point  Before we look at a formal definition of what it means for a function to be continuous at a point, let’s consider various functions that fail to meet our intuitive notion of what it means to be continuous at a point. We then create a list of conditions that prevent such failures.  Our first function of interest is shown in . We see that the graph of has a hole at . In fact, is undefined. At the very least, for to be continuous at , we need the following condition:     \"A graph of an increasing linear function f(x) which crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. A point a greater than zero is marked on the x axis. The point on the function f(x) above a is an open circle; the function is not defined at a.\"  The function is not continuous at because is undefined.   However, as we see in , this condition alone is insufficient to guarantee continuity at the point . Although is defined, the function has a gap at . In this example, the gap exists because does not exist. We must add another condition for continuity at —namely,     \"The graph of a piecewise function f(x) with two parts. The first part is an increasing linear function that crosses from quadrant three to quadrant one at the origin. A point a greater than zero is marked on the x axis. At fa. on this segment, there is a solid circle. The other segment is also an increasing linear function. It exists in quadrant one for values of x greater than a. At x=a, this segment has an open circle.\"  The function is not continuous at because does not exist.   However, as we see in , these two conditions by themselves do not guarantee continuity at a point. The function in this figure satisfies both of our first two conditions, but is still not continuous at . We must add a third condition to our list:     \"The graph of a piecewise function with two parts. The first part is an increasing linear function that crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. A point a greater than zero is marked on the x axis. At this point, there is an open circle on the linear function. The second part is a point at x=a above the line.\"  The function is not continuous at because   Now we put our list of conditions together and form a definition of continuity at a point.   A function is continuous at a point  if and only if the following three conditions are satisfied:   is defined  exists    A function is discontinuous at a point  if it fails to be continuous at .   The following procedure can be used to analyze the continuity of a function at a point using this definition.   Determining Continuity at a Point   Check to see if is defined. If is undefined, we need go no further. The function is not continuous at . If is defined, continue to step 2.  Compute In some cases, we may need to do this by first computing and If does not exist (that is, it is not a real number), then the function is not continuous at and the problem is solved. If exists, then continue to step 3.  Compare and If then the function is not continuous at . If then the function is continuous at .    The next three examples demonstrate how to apply this definition to determine whether a function is continuous at a given point. These examples illustrate situations in which each of the conditions for continuity in the definition succeed or fail.   Determining Continuity at a Point, Condition 1   Using the definition, determine whether the function is continuous at Justify the conclusion.    Let’s begin by trying to calculate We can see that which is undefined. Therefore, is discontinuous at 2 because is undefined. The graph of is shown in .    \"A graph of the given function. There is a line which crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. At a point in quadrant one, there is an open circle where the function is not defined.\"  The function is discontinuous at 2 because is undefined.      Determining Continuity at a Point, Condition 2   Using the definition, determine whether the function is continuous at Justify the conclusion.    Let’s begin by trying to calculate   Thus, is defined. Next, we calculate To do this, we must compute and   and   Therefore, does not exist. Thus, is not continuous at 3. The graph of is shown in .    \"A graph of the given piecewise function, which has two parts. The first is a downward opening parabola which is symmetric about the y axis. Its vertex is on the y axis, greater than zero. There is a closed circle on the parabola for x=3. The second part is an increasing linear function in the first quadrant, which exists for values of x \\gt 3. There is an open circle at the end of the line where x would be 3.\"  The function is not continuous at 3 because does not exist.      Determining Continuity at a Point, Condition 3   Using the definition, determine whether the function is continuous at    First, observe that   Next,   Last, compare and We see that   Since all three of the conditions in the definition of continuity are satisfied, is continuous at      Using the definition, determine whether the function is continuous at If the function is not continuous at 1, indicate the condition for continuity at a point that fails to hold.    is not continuous at 1 because    Check each condition of the definition.      Types of Discontinuities  As we have seen in and , discontinuities take on several different appearances. We classify the types of discontinuities we have seen thus far as removable discontinuities, infinite discontinuities, or jump discontinuities. Intuitively, a removable discontinuity is a discontinuity for which there is a hole in the graph, a jump discontinuity is a noninfinite discontinuity for which the sections of the function do not meet up, and an infinite discontinuity is a discontinuity located at a vertical asymptote. illustrates the differences in these types of discontinuities. Although these terms provide a handy way of describing three common types of discontinuities, keep in mind that not all discontinuities fit neatly into these categories.    \"Three graphs, each showing a different discontinuity. The first is removable discontinuity. Here, the given function is a line with positive slope. At a point x=a, where a\\gt 0, there is an open circle on the line and a closed circle a few units above the line. The second is a jump discontinuity. Here, there are two lines with positive slope. The first line exists for x\\lt =a, and the second exists for x\\gt a, where a\\gt 0. The first line ends at a solid circle where x=a, and the second begins a few units up with an open circle at x=a. The third discontinuity type is infinite discontinuity. Here, the function has two parts separated by an asymptote x=a. The first segment is a curve stretching along the x axis to 0 as x goes to negative infinity and along the y axis to infinity as x goes to zero. The second segment is a curve stretching along the y axis to negative infinity as x goes to zero and along the x axis to 0 as x goes to infinity.\"  Discontinuities are classified as (a) removable, (b) jump, or (c) infinite.   These three discontinuities are formally defined as follows:   If is discontinuous at , then   has a removable discontinuity at if exists. (Note: When we state that exists, we mean that where is a real number.)  has a jump discontinuity at if and both exist, but (Note: When we state that and both exist, we mean that both are real-valued and that neither take on the values \\pm\\infty .)  has an infinite discontinuity at if or     Classifying a Discontinuity   In , we showed that is discontinuous at Classify this discontinuity as removable, jump, or infinite.    To classify the discontinuity at 2 we must evaluate   Since is discontinuous at 2 and exists, has a removable discontinuity at     Classifying a Discontinuity   In , we showed that is discontinuous at Classify this discontinuity as removable, jump, or infinite.    Earlier, we showed that is discontinuous at 3 because does not exist. However, since and both exist, we conclude that the function has a jump discontinuity at 3.     Classifying a Discontinuity   Determine whether is continuous at -1. If the function is discontinuous at -1, classify the discontinuity as removable, jump, or infinite.    The function value is undefined. Therefore, the function is not continuous at -1. To determine the type of discontinuity, we must determine the limit at -1. We see that and Therefore, the function has an infinite discontinuity at -1.      For decide whether is continuous at 1. If is not continuous at 1, classify the discontinuity as removable, jump, or infinite.    Discontinuous at 1; removable    Follow the steps in . If the function is discontinuous at 1, look at and use the definition to determine the type of discontinuity.      Continuity over an Interval  Now that we have explored the concept of continuity at a point, we extend that idea to continuity over an interval . As we develop this idea for different types of intervals, it may be useful to keep in mind the intuitive idea that a function is continuous over an interval if we can use a pencil to trace the function between any two points in the interval without lifting the pencil from the paper. In preparation for defining continuity on an interval, we begin by looking at the definition of what it means for a function to be continuous from the right at a point and continuous from the left at a point.   Continuity from the Right and from the Left  A function is said to be continuous from the right at if  A function is said to be continuous from the left at if   A function is continuous over an open interval if it is continuous at every point in the interval. A function is continuous over a closed interval of the form if it is continuous at every point in and is continuous from the right at and is continuous from the left at :  A function is continuous on the closed interval when    is continuous on      is continuous from the right at , and     is continuous from the left at .   Note that the last two conditions are equivalent to   Requiring that and ensures that we can trace the graph of the function from the point to the point without lifting the pencil. If, for example, we would need to lift our pencil to jump from to the graph of the rest of the function over   Continuity on an Interval   State the interval(s) over which the function is continuous.    Since is a rational function, it is continuous at every point in its domain. The domain of is the set Thus, is continuous over each of the intervals and     Continuity over an Interval   State the interval(s) over which the function is continuous.    From the limit laws, we know that for all values of in We also know that exists and exists. Therefore, is continuous over the interval      State the interval(s) over which the function is continuous.       Use as a guide for solving.     Algebra of Continuous Functions   If the functions and are continuous at , then the following algebraic combinations are continuous at .                                           We prove the sum property using the limit laws.     By applying the definition of continuity and previously established theorems concerning the evaluation of limits, we can state the following theorem.   Continuity of Polynomials and Rational Functions  Polynomials and rational functions are continuous at every point in their domains.   Previously, we showed that if and are polynomials, for every polynomial and as long as Therefore, polynomials and rational functions are continuous on their domains.   We now apply to determine the points at which a given rational function is continuous.   Continuity of a Rational Function   For what values of is continuous?    The rational function is continuous for every value of except      For what values of is continuous?    is continuous at every real number.    Use    allows us to expand our ability to compute limits. In particular, this theorem ultimately allows us to demonstrate that trigonometric functions are continuous over their domains.   Composite Function Theorem  If is continuous at and then    Before we move on to , recall that earlier, in the section on limit laws, we showed Consequently, we know that is continuous at 0. In we see how to combine this result with the composite function theorem.   Limit of a Composite Cosine Function   Evaluate    The given function is a composite of and Since and is continuous at 0, we may apply the composite function theorem. Thus,       Evaluate    0    is continuous at 0. Use as a guide.    The proof of the next theorem uses the composite function theorem as well as the continuity of and at the point 0 to show that trigonometric functions are continuous over their entire domains.   Continuity of Trigonometric Functions  Trigonometric functions are continuous over their entire domains.   We begin by demonstrating that is continuous at every real number. To do this, we must show that for all values of .    The proof that is continuous at every real number is analogous. Because the remaining trigonometric functions may be expressed in terms of and their continuity follows from the quotient limit law.    This theorem says that if is a continuous function on all of the interval then as moves from to , takes every value between and at least once. To put this slightly differently, if were to avoid a value between and then cannot be continuous on .  It is not hard to convince yourself that the continuity of is crucial to the IVT. Without it one can quickly construct examples of functions that contradict the theorem. See the figure below for a few non-continuous examples:    The Intermediate Value Theorem  Functions that are continuous over intervals of the form where and are real numbers, exhibit many useful properties. Throughout our study of calculus, we will encounter many powerful theorems concerning such functions. The first of these theorems is the Intermediate Value Theorem .   The Intermediate Value Theorem  Let be continuous over a closed, bounded interval If is any real number between and then there is a number in satisfying in .    \"A diagram illustrating the intermediate value theorem. There is a generic continuous curved function shown over the interval [a,b]. The points fa. and fb. are marked, and dotted lines are drawn from a, b, fa., and fb. to the points (a, fa.) and (b, fb.). A third point, c, is plotted between a and b. Since the function is continuous, there is a value for fc. along the curve, and a line is drawn from c to (c, fc.) and from (c, fc.) to fc., which is labeled as z on the y axis.\"  There is a number that satisfies     Without continuity, there could be a -value that is \"missed\" between two other -values in the range of  NEEDS ALT TEXT. Text below agrees with notation in the picture (Y instead of z)    In the left-hand example we see that a discontinuous function can \"jump\" over the -value we have chosen, so there is no -value that makes . The right-hand example demonstrates why we need to be careful with the ends of the interval. In particular, a function must be continuous over the whole interval  including the endpoints of the interval. If we only required the function to be continuous on (so strictly between ) and then the function could \"jump\" over the -value at or .  The IVT in the real world  You are climbing the Grouse-grind with a friend call him Bob. Bob was eager and started at 9am. Bob, while very eager, is also very clumsy; he sprained his ankle somewhere along the path and has stopped moving at 9:21am and is just sitting enjoying the view. You get there late and start climbing at 10am and being quite fit you get to the top at 11am. The IVT implies that at some time between 10am and 11am you meet up with Bob.  You can translate this situation into the form of the IVT as follows. Let be time and let 10am and 11am. Let be your distance along the trail. Hence  and km. Since you are a mortal, your position along the trail is a continuous function no helicopters or teleportation or We have no idea where Bob is sitting, except that he is somewhere between and , call this point . The IVT guarantees that there is some time between and (so between 10am and 11am) with (and your position will be the same as Bob's).   Aside from finding Bob sitting by the side of the trail, one of the most important applications of the IVT is determining where a function is zero. For quadratics we know (or should know) that While the Babylonians could (mostly, but not quite) do the above, the corresponding formula for solving a cubic is uglier and that for a quartic is uglier still. One of the most famous results in mathematics demonstrates that no such formula exists for quintics or higher degree polynomials   So even for polynomials we cannot, in general, write down explicit formulae for their zeros and have to make do with numerical approximations i.e. write down the root as a decimal expansion to whatever precision we desire. For more complicated functions we have no choice there is no reason that the zeros should be expressible as nice neat little formulas. At the same time, finding the zeros of a function: or solving equations of the form In fact both of these are the same because we can write and then the zeros of are exactly when .  can be a crucial step in many mathematical proofs and applications.   Application of the Intermediate Value Theorem   Show that has at least one zero.    Since is continuous over it is continuous over any closed interval of the form If you can find an interval such that and have opposite signs, you can use the Intermediate Value Theorem to conclude there must be a real number in that satisfies Note that   and   Using the Intermediate Value Theorem, we can see that there must be a real number in that satisfies Therefore, has at least one zero.     When Can You Apply the Intermediate Value Theorem? >  If is continuous over and can we use the Intermediate Value Theorem to conclude that has no zeros in the interval Explain.    No. The Intermediate Value Theorem only allows us to conclude that we can find a value between and it doesn’t allow us to conclude that we can’t find other values. To see this more clearly, consider the function It satisfies and     When Can You Apply the Intermediate Value Theorem?   For and Can we conclude that has a zero in the interval    No. The function is not continuous over The Intermediate Value Theorem does not apply here.     Show that has a zero over the interval    is continuous over It must have a zero on this interval.    Find and Apply the Intermediate Value Theorem.      "
+},
+{
+  "id": "CNX_Calc_Figure_02_04_001",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#CNX_Calc_Figure_02_04_001",
+  "type": "Figure",
+  "number": "2.5.1",
+  "title": "",
+  "body": "  \"A graph of an increasing linear function f(x) which crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. A point a greater than zero is marked on the x axis. The point on the function f(x) above a is an open circle; the function is not defined at a.\"  The function is not continuous at because is undefined.  "
+},
+{
+  "id": "CNX_Calc_Figure_02_04_002",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#CNX_Calc_Figure_02_04_002",
+  "type": "Figure",
+  "number": "2.5.2",
+  "title": "",
+  "body": "  \"The graph of a piecewise function f(x) with two parts. The first part is an increasing linear function that crosses from quadrant three to quadrant one at the origin. A point a greater than zero is marked on the x axis. At fa. on this segment, there is a solid circle. The other segment is also an increasing linear function. It exists in quadrant one for values of x greater than a. At x=a, this segment has an open circle.\"  The function is not continuous at because does not exist.  "
+},
+{
+  "id": "CNX_Calc_Figure_02_04_003",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#CNX_Calc_Figure_02_04_003",
+  "type": "Figure",
+  "number": "2.5.3",
+  "title": "",
+  "body": "  \"The graph of a piecewise function with two parts. The first part is an increasing linear function that crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. A point a greater than zero is marked on the x axis. At this point, there is an open circle on the linear function. The second part is a point at x=a above the line.\"  The function is not continuous at because  "
+},
+{
+  "id": "sec_Ch2Sec4-3-13",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-3-13",
+  "type": "Definition",
+  "number": "2.5.4",
+  "title": "",
+  "body": " A function is continuous at a point  if and only if the following three conditions are satisfied:   is defined  exists    A function is discontinuous at a point  if it fails to be continuous at .  "
+},
+{
+  "id": "fs-id1170573398041",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573398041",
+  "type": "Problem-Solving Strategy",
+  "number": "2.5.5",
+  "title": "Determining Continuity at a Point.",
+  "body": " Determining Continuity at a Point   Check to see if is defined. If is undefined, we need go no further. The function is not continuous at . If is defined, continue to step 2.  Compute In some cases, we may need to do this by first computing and If does not exist (that is, it is not a real number), then the function is not continuous at and the problem is solved. If exists, then continue to step 3.  Compare and If then the function is not continuous at . If then the function is continuous at .   "
+},
+{
+  "id": "fs-id1170573442080",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573442080",
+  "type": "Example",
+  "number": "2.5.6",
+  "title": "Determining Continuity at a Point, Condition 1.",
+  "body": " Determining Continuity at a Point, Condition 1   Using the definition, determine whether the function is continuous at Justify the conclusion.    Let’s begin by trying to calculate We can see that which is undefined. Therefore, is discontinuous at 2 because is undefined. The graph of is shown in .    \"A graph of the given function. There is a line which crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. At a point in quadrant one, there is an open circle where the function is not defined.\"  The function is discontinuous at 2 because is undefined.    "
+},
+{
+  "id": "fs-id1170573389760",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573389760",
+  "type": "Example",
+  "number": "2.5.8",
+  "title": "Determining Continuity at a Point, Condition 2.",
+  "body": " Determining Continuity at a Point, Condition 2   Using the definition, determine whether the function is continuous at Justify the conclusion.    Let’s begin by trying to calculate   Thus, is defined. Next, we calculate To do this, we must compute and   and   Therefore, does not exist. Thus, is not continuous at 3. The graph of is shown in .    \"A graph of the given piecewise function, which has two parts. The first is a downward opening parabola which is symmetric about the y axis. Its vertex is on the y axis, greater than zero. There is a closed circle on the parabola for x=3. The second part is an increasing linear function in the first quadrant, which exists for values of x \\gt 3. There is an open circle at the end of the line where x would be 3.\"  The function is not continuous at 3 because does not exist.    "
+},
+{
+  "id": "fs-id1170573429945",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573429945",
+  "type": "Example",
+  "number": "2.5.10",
+  "title": "Determining Continuity at a Point, Condition 3.",
+  "body": " Determining Continuity at a Point, Condition 3   Using the definition, determine whether the function is continuous at    First, observe that   Next,   Last, compare and We see that   Since all three of the conditions in the definition of continuity are satisfied, is continuous at   "
+},
+{
+  "id": "sec_Ch2Sec4-3-20",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-3-20",
+  "type": "Checkpoint",
+  "number": "2.5.11",
+  "title": "",
+  "body": "  Using the definition, determine whether the function is continuous at If the function is not continuous at 1, indicate the condition for continuity at a point that fails to hold.    is not continuous at 1 because    Check each condition of the definition.   "
+},
+{
+  "id": "sec_Ch2Sec4-4-2",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-4-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "removable discontinuity jump discontinuity infinite discontinuity "
+},
+{
+  "id": "CNX_Calc_Figure_02_04_006",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#CNX_Calc_Figure_02_04_006",
+  "type": "Figure",
+  "number": "2.5.12",
+  "title": "",
+  "body": "  \"Three graphs, each showing a different discontinuity. The first is removable discontinuity. Here, the given function is a line with positive slope. At a point x=a, where a\\gt 0, there is an open circle on the line and a closed circle a few units above the line. The second is a jump discontinuity. Here, there are two lines with positive slope. The first line exists for x\\lt =a, and the second exists for x\\gt a, where a\\gt 0. The first line ends at a solid circle where x=a, and the second begins a few units up with an open circle at x=a. The third discontinuity type is infinite discontinuity. Here, the function has two parts separated by an asymptote x=a. The first segment is a curve stretching along the x axis to 0 as x goes to negative infinity and along the y axis to infinity as x goes to zero. The second segment is a curve stretching along the y axis to negative infinity as x goes to zero and along the x axis to 0 as x goes to infinity.\"  Discontinuities are classified as (a) removable, (b) jump, or (c) infinite.  "
+},
+{
+  "id": "sec_Ch2Sec4-4-5",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-4-5",
+  "type": "Definition",
+  "number": "2.5.13",
+  "title": "",
+  "body": " If is discontinuous at , then   has a removable discontinuity at if exists. (Note: When we state that exists, we mean that where is a real number.)  has a jump discontinuity at if and both exist, but (Note: When we state that and both exist, we mean that both are real-valued and that neither take on the values \\pm\\infty .)  has an infinite discontinuity at if or   "
+},
+{
+  "id": "fs-id1170570976348",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170570976348",
+  "type": "Example",
+  "number": "2.5.14",
+  "title": "Classifying a Discontinuity.",
+  "body": " Classifying a Discontinuity   In , we showed that is discontinuous at Classify this discontinuity as removable, jump, or infinite.    To classify the discontinuity at 2 we must evaluate   Since is discontinuous at 2 and exists, has a removable discontinuity at   "
+},
+{
+  "id": "fs-id1170573426544",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573426544",
+  "type": "Example",
+  "number": "2.5.15",
+  "title": "Classifying a Discontinuity.",
+  "body": " Classifying a Discontinuity   In , we showed that is discontinuous at Classify this discontinuity as removable, jump, or infinite.    Earlier, we showed that is discontinuous at 3 because does not exist. However, since and both exist, we conclude that the function has a jump discontinuity at 3.   "
+},
+{
+  "id": "fs-id1170573355402",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573355402",
+  "type": "Example",
+  "number": "2.5.16",
+  "title": "Classifying a Discontinuity.",
+  "body": " Classifying a Discontinuity   Determine whether is continuous at -1. If the function is discontinuous at -1, classify the discontinuity as removable, jump, or infinite.    The function value is undefined. Therefore, the function is not continuous at -1. To determine the type of discontinuity, we must determine the limit at -1. We see that and Therefore, the function has an infinite discontinuity at -1.   "
+},
+{
+  "id": "sec_Ch2Sec4-4-9",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-4-9",
+  "type": "Checkpoint",
+  "number": "2.5.17",
+  "title": "",
+  "body": "  For decide whether is continuous at 1. If is not continuous at 1, classify the discontinuity as removable, jump, or infinite.    Discontinuous at 1; removable    Follow the steps in . If the function is discontinuous at 1, look at and use the definition to determine the type of discontinuity.   "
+},
+{
+  "id": "sec_Ch2Sec4-5-2",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-5-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "continuity over an interval "
+},
+{
+  "id": "sec_Ch2Sec4-5-3",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-5-3",
+  "type": "Definition",
+  "number": "2.5.18",
+  "title": "Continuity from the Right and from the Left.",
+  "body": " Continuity from the Right and from the Left  A function is said to be continuous from the right at if  A function is said to be continuous from the left at if  "
+},
+{
+  "id": "fs-id1170573395559",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573395559",
+  "type": "Example",
+  "number": "2.5.19",
+  "title": "Continuity on an Interval.",
+  "body": " Continuity on an Interval   State the interval(s) over which the function is continuous.    Since is a rational function, it is continuous at every point in its domain. The domain of is the set Thus, is continuous over each of the intervals and   "
+},
+{
+  "id": "fs-id1170573387892",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573387892",
+  "type": "Example",
+  "number": "2.5.20",
+  "title": "Continuity over an Interval.",
+  "body": " Continuity over an Interval   State the interval(s) over which the function is continuous.    From the limit laws, we know that for all values of in We also know that exists and exists. Therefore, is continuous over the interval   "
+},
+{
+  "id": "sec_Ch2Sec4-5-9",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-5-9",
+  "type": "Checkpoint",
+  "number": "2.5.21",
+  "title": "",
+  "body": "  State the interval(s) over which the function is continuous.       Use as a guide for solving.   "
+},
+{
+  "id": "thm-continuity",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#thm-continuity",
+  "type": "Theorem",
+  "number": "2.5.22",
+  "title": "Algebra of Continuous Functions.",
+  "body": " Algebra of Continuous Functions   If the functions and are continuous at , then the following algebraic combinations are continuous at .                                           We prove the sum property using the limit laws.    "
+},
+{
+  "id": "fs-id1170573430304",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573430304",
+  "type": "Theorem",
+  "number": "2.5.23",
+  "title": "Continuity of Polynomials and Rational Functions.",
+  "body": " Continuity of Polynomials and Rational Functions  Polynomials and rational functions are continuous at every point in their domains.   Previously, we showed that if and are polynomials, for every polynomial and as long as Therefore, polynomials and rational functions are continuous on their domains.  "
+},
+{
+  "id": "fs-id1170573381194",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573381194",
+  "type": "Example",
+  "number": "2.5.24",
+  "title": "Continuity of a Rational Function.",
+  "body": " Continuity of a Rational Function   For what values of is continuous?    The rational function is continuous for every value of except   "
+},
+{
+  "id": "sec_Ch2Sec4-5-15",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-5-15",
+  "type": "Checkpoint",
+  "number": "2.5.25",
+  "title": "",
+  "body": "  For what values of is continuous?    is continuous at every real number.    Use   "
+},
+{
+  "id": "fs-id1170573352212",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573352212",
+  "type": "Theorem",
+  "number": "2.5.26",
+  "title": "Composite Function Theorem.",
+  "body": " Composite Function Theorem  If is continuous at and then   "
+},
+{
+  "id": "fs-id1170573718134",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573718134",
+  "type": "Example",
+  "number": "2.5.27",
+  "title": "Limit of a Composite Cosine Function.",
+  "body": " Limit of a Composite Cosine Function   Evaluate    The given function is a composite of and Since and is continuous at 0, we may apply the composite function theorem. Thus,    "
+},
+{
+  "id": "sec_Ch2Sec4-5-20",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-5-20",
+  "type": "Checkpoint",
+  "number": "2.5.28",
+  "title": "",
+  "body": "  Evaluate    0    is continuous at 0. Use as a guide.   "
+},
+{
+  "id": "sec_Ch2Sec4-5-22",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-5-22",
+  "type": "Theorem",
+  "number": "2.5.29",
+  "title": "Continuity of Trigonometric Functions.",
+  "body": " Continuity of Trigonometric Functions  Trigonometric functions are continuous over their entire domains.   We begin by demonstrating that is continuous at every real number. To do this, we must show that for all values of .    The proof that is continuous at every real number is analogous. Because the remaining trigonometric functions may be expressed in terms of and their continuity follows from the quotient limit law.   "
+},
+{
+  "id": "sec_Ch2Sec4-6-2",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-6-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Intermediate Value Theorem "
+},
+{
+  "id": "sec_Ch2Sec4-6-3",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-6-3",
+  "type": "Theorem",
+  "number": "2.5.30",
+  "title": "The Intermediate Value Theorem.",
+  "body": " The Intermediate Value Theorem  Let be continuous over a closed, bounded interval If is any real number between and then there is a number in satisfying in .    \"A diagram illustrating the intermediate value theorem. There is a generic continuous curved function shown over the interval [a,b]. The points fa. and fb. are marked, and dotted lines are drawn from a, b, fa., and fb. to the points (a, fa.) and (b, fb.). A third point, c, is plotted between a and b. Since the function is continuous, there is a value for fc. along the curve, and a line is drawn from c to (c, fc.) and from (c, fc.) to fc., which is labeled as z on the y axis.\"  There is a number that satisfies   "
+},
+{
+  "id": "IVT-image",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#IVT-image",
+  "type": "Figure",
+  "number": "2.5.32",
+  "title": "",
+  "body": " Without continuity, there could be a -value that is \"missed\" between two other -values in the range of  NEEDS ALT TEXT. Text below agrees with notation in the picture (Y instead of z)   "
+},
+{
+  "id": "eg_1_6_4",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#eg_1_6_4",
+  "type": "Example",
+  "number": "2.5.33",
+  "title": "The IVT in the “real world”.",
+  "body": "The IVT in the real world  You are climbing the Grouse-grind with a friend call him Bob. Bob was eager and started at 9am. Bob, while very eager, is also very clumsy; he sprained his ankle somewhere along the path and has stopped moving at 9:21am and is just sitting enjoying the view. You get there late and start climbing at 10am and being quite fit you get to the top at 11am. The IVT implies that at some time between 10am and 11am you meet up with Bob.  You can translate this situation into the form of the IVT as follows. Let be time and let 10am and 11am. Let be your distance along the trail. Hence  and km. Since you are a mortal, your position along the trail is a continuous function no helicopters or teleportation or We have no idea where Bob is sitting, except that he is somewhere between and , call this point . The IVT guarantees that there is some time between and (so between 10am and 11am) with (and your position will be the same as Bob's).  "
+},
+{
+  "id": "fs-id1170571120881",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170571120881",
+  "type": "Example",
+  "number": "2.5.34",
+  "title": "Application of the Intermediate Value Theorem.",
+  "body": " Application of the Intermediate Value Theorem   Show that has at least one zero.    Since is continuous over it is continuous over any closed interval of the form If you can find an interval such that and have opposite signs, you can use the Intermediate Value Theorem to conclude there must be a real number in that satisfies Note that   and   Using the Intermediate Value Theorem, we can see that there must be a real number in that satisfies Therefore, has at least one zero.   "
+},
+{
+  "id": "fs-id1170573439386",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170573439386",
+  "type": "Example",
+  "number": "2.5.35",
+  "title": "When Can You Apply the Intermediate Value Theorem?",
+  "body": " When Can You Apply the Intermediate Value Theorem? >  If is continuous over and can we use the Intermediate Value Theorem to conclude that has no zeros in the interval Explain.    No. The Intermediate Value Theorem only allows us to conclude that we can find a value between and it doesn’t allow us to conclude that we can’t find other values. To see this more clearly, consider the function It satisfies and   "
+},
+{
+  "id": "fs-id1170570996536",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#fs-id1170570996536",
+  "type": "Example",
+  "number": "2.5.36",
+  "title": "When Can You Apply the Intermediate Value Theorem?",
+  "body": " When Can You Apply the Intermediate Value Theorem?   For and Can we conclude that has a zero in the interval    No. The function is not continuous over The Intermediate Value Theorem does not apply here.   "
+},
+{
+  "id": "sec_Ch2Sec4-6-12",
+  "level": "2",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-6-12",
+  "type": "Checkpoint",
+  "number": "2.5.37",
+  "title": "",
+  "body": " Show that has a zero over the interval    is continuous over It must have a zero on this interval.    Find and Apply the Intermediate Value Theorem.   "
 }
 ]
 

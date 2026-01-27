@@ -15,6 +15,7 @@
 </introduction>
 <subsection>
 <title>Mathematical Models of Cost, Revenue, and Profit</title>
+<introduction>
 <p>Given <m>x</m> the number of units produced, the <term>cost function</term> outputs the amount a business or company must pay in order to produce <m>x</m> units. There are typicically two types of costs: fixed and variable. In a linear cost model, the cost function is expressed as</p>
 <me>C(x)=mx+b</me>
 <p>where <m>m</m> is the cost per unit also referred to as the <term>variable</term> or <term>marginal cost</term>. Here, the variable cost term <m>mx</m> depends on the number of units produced. Some examples of variable/marginal costs are labor, material, or manufacturing costs. Additionally, <m>b</m> are the <term>fixed costs</term> which is the amount one must pay to operate a business. The fixed cost is independent of the number of units produced. It often represents the amount one must pay if 0 units are produced since <m>b</m> is the <m>y</m>-intercept of the cost function. That is, <m>C(0)=b</m>. Some examples of fixed costs are rent, utility bills, or operating costs.</p>
@@ -25,6 +26,7 @@
 <me>P(x)=R(x)-C(x)</me>.
 <p>Notice that the above definition for the profit function holds if either of our revenue or cost functions are non-linear.</p>
 <p>If profits are negative, this is considered a <m>loss</m> and if profits are positive, this is considered a <m>gain</m>.</p>
+</introduction>
 
 <subsubsection>
 <title>Break-even Analysis</title>
