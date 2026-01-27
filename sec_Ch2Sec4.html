@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Continuity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="OpenStax Calculus">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.11';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.fc0e080e84d54281.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">OpenStax Calculus</span> <span class="subtitle">Volume 1</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_Ch2Sec3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_second.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\limit}{\ds\lim}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_first.html" class="internal"><span class="codenumber">1</span> <span class="title">Functions and Graphs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Review of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#subsec_Ch1Sec1Ss1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Representing Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-3" class="internal"><span class="codenumber">1.1.2.1</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-4" class="internal"><span class="codenumber">1.1.2.2</span> <span class="title">Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-5" class="internal"><span class="codenumber">1.1.2.3</span> <span class="title">Algebraic Formulas</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Combining Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-3" class="internal"><span class="codenumber">1.1.3.1</span> <span class="title">Combining Functions with Mathematical Operators</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-4" class="internal"><span class="codenumber">1.1.3.2</span> <span class="title">Function Composition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetry of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Basic Classes of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear Functions and Slope</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-3" class="internal"><span class="codenumber">1.2.2.1</span> <span class="title">Power Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-4" class="internal"><span class="codenumber">1.2.2.2</span> <span class="title">Behavior at Infinity</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-5" class="internal"><span class="codenumber">1.2.2.3</span> <span class="title">Zeros of Polynomial Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-6" class="internal"><span class="codenumber">1.2.2.4</span> <span class="title">Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Algebraic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Transcendental Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Piecewise-Defined Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Transformations of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-9" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-10" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Mathematical Modeling</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3-3" class="internal"><span class="codenumber">1.3.1.1</span> <span class="title">Break-even Analysis</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4-5" class="internal"><span class="codenumber">1.3.2.1</span> <span class="title">Equilibrium</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Quadratic Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Inverse Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Existence of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding a Function’s Inverse</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-2" class="internal"><span class="codenumber">1.4.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-3" class="internal"><span class="codenumber">1.4.2.2</span> <span class="title">Graphing Inverse Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-4" class="internal"><span class="codenumber">1.4.2.3</span> <span class="title">Restricting Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Inverse Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-7" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exponential Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-3" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Evaluating Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-4" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">Graphing Exponential Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-4" class="internal"><span class="codenumber">1.5.2</span> <span class="title">The Number <span class="process-math">\(e \)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-5" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Hyperbolic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-3" class="internal"><span class="codenumber">1.5.4.1</span> <span class="title">Graphs of Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-4" class="internal"><span class="codenumber">1.5.4.2</span> <span class="title">Identities Involving Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-5" class="internal"><span class="codenumber">1.5.4.3</span> <span class="title">Inverse Hyperbolic Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-7" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Key Concepts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_second.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">A Preview of Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Tangent Problem and Differential Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Area Problem and Integral Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Other Aspects of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Limit of a Function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Infinite Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.3.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec3.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Limit Laws</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Limit Laws</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Limits of Polynomial and Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-5" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Additional Limit Evaluation Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-onesidedlimits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-7" class="internal"><span class="codenumber">2.4.5</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsubsec-triglimits" class="internal"><span class="codenumber">2.4.6</span> <span class="title">A Few Important Trigonometric Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-LimitLawProofs" class="internal"><span class="codenumber">2.4.7</span> <span class="title">Proofs of the Limit Laws (Optional)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec_Ch2Sec4.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Continuity</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Continuity at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-4" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Types of Discontinuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-5" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Continuity over an Interval</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-6" class="internal"><span class="codenumber">2.5.4</span> <span class="title">The Intermediate Value Theorem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_Ch2Sec4"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity</span>
+</h2>
+<section class="introduction" id="sec_Ch2Sec4-2"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ol class="decimal" id="sec_Ch2Sec4-2-2">
+<li id="sec_Ch2Sec4-2-2-1">
+<div class="para" id="p-derived-sec_Ch2Sec4-2-2-1">Explain the three conditions for continuity at a point.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch2Sec4-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec4-2-2-2">
+<div class="para" id="p-derived-sec_Ch2Sec4-2-2-2">Describe three kinds of discontinuities.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch2Sec4-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec4-2-2-3">
+<div class="para" id="p-derived-sec_Ch2Sec4-2-2-3">Define continuity on an interval.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_Ch2Sec4-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec4-2-2-4">
+<div class="para" id="p-derived-sec_Ch2Sec4-2-2-4">State the theorem for limits of composite functions.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec_Ch2Sec4-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec4-2-2-5">
+<div class="para" id="p-derived-sec_Ch2Sec4-2-2-5">Provide an example of the intermediate value theorem.</div>
+<div class="autopermalink" data-description="Item 5"><a href="#sec_Ch2Sec4-2-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="para logical" id="sec_Ch2Sec4-2-3">
+<div class="para">We have seen that computing the limits of polynomial and rational functions at any point in their domains is easy because</div>
+<div class="displaymath process-math" id="sec_Ch2Sec4-2-3-1">
+\begin{equation*}
+\ds\limit_{x\to a}f(x)=f(a) 
+\end{equation*}
+</div>
+<div class="para">That is, the limit as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> is just <span class="process-math">\(f(a)\text{.}\)</span>  Roughly speaking, the reason we can compute the limit this way is because these functions do not have any jumps as near <span class="process-math">\(a\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec4-2-4">Many other functions have this property, <span class="process-math">\(\sin{x}\)</span> for example. A function with this property is called "continuous" and there is a precise definition for it.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="sec_Ch2Sec4-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity at a Point</span>
+</h3>
+<div class="para" id="sec_Ch2Sec4-3-2">Before we look at a formal definition of what it means for a function to be continuous at a point, let’s consider various functions that fail to meet our intuitive notion of what it means to be continuous at a point. We then create a list of conditions that prevent such failures.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec4-3-3">Our first function of interest is shown in <a href="sec_Ch2Sec4.html#CNX_Calc_Figure_02_04_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_04_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.5.1">Figure 2.5.1</a>. We see that the graph of <span class="process-math">\(f(x)\)</span> has a hole at <span class="process-math">\(a\text{.}\)</span> In fact, <span class="process-math">\(f(a)\)</span> is undefined. At the very least, for <span class="process-math">\(f(x)\)</span> to be continuous at <span class="process-math">\(a\text{,}\)</span> we need the following condition:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_04_001.html ./knowl/xref/CNX_Calc_Figure_02_04_002.html ./knowl/xref/CNX_Calc_Figure_02_04_003.html ./knowl/xref/CNX_Calc_Figure_02_04_004.html ./knowl/xref/CNX_Calc_Figure_02_04_005.html" id="sec_Ch2Sec4-3-4">
+\begin{equation*}
+\text{ i. } f(a) \text{ is defined. }
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_04_001"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_04_001.jpg" class="contained" alt='"A graph of an increasing linear function f(x) which crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. A point a greater than zero is marked on the x axis. The point on the function f(x) above a is an open circle; the function is not defined at a."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The function <span class="process-math">\(f(x)\)</span> is not continuous at <span class="process-math">\(a\)</span> because <span class="process-math">\(f(a)\)</span> is undefined.<div class="autopermalink" data-description="Figure 2.5.1"><a href="#CNX_Calc_Figure_02_04_001" title="Copy heading and permalink for Figure 2.5.1" aria-label="Copy heading and permalink for Figure 2.5.1">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec4-3-6">However, as we see in <a href="sec_Ch2Sec4.html#CNX_Calc_Figure_02_04_002" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_04_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.5.2">Figure 2.5.2</a>, this condition alone is insufficient to guarantee continuity at the point <span class="process-math">\(a\text{.}\)</span> Although <span class="process-math">\(f(a)\)</span> is defined, the function has a gap at <span class="process-math">\(a\text{.}\)</span> In this example, the gap exists because <span class="process-math">\(\limit_{x\to a}f(x)\)</span> does not exist. We must add another condition for continuity at <span class="process-math">\(a\)</span>—namely,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_04_001.html ./knowl/xref/CNX_Calc_Figure_02_04_002.html ./knowl/xref/CNX_Calc_Figure_02_04_003.html ./knowl/xref/CNX_Calc_Figure_02_04_004.html ./knowl/xref/CNX_Calc_Figure_02_04_005.html" id="sec_Ch2Sec4-3-7">
+\begin{equation*}
+\text{ ii. } \limit_{x\to a}f(x) \text{ exists. }
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_04_002"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_04_002.jpg" class="contained" alt='"The graph of a piecewise function f(x) with two parts. The first part is an increasing linear function that crosses from quadrant three to quadrant one at the origin. A point a greater than zero is marked on the x axis. At fa. on this segment, there is a solid circle. The other segment is also an increasing linear function. It exists in quadrant one for values of x greater than a. At x=a, this segment has an open circle."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The function <span class="process-math">\(f(x)\)</span> is not continuous at <span class="process-math">\(a\)</span> because <span class="process-math">\(\limit_{x\to a}f(x)\)</span> does not exist.<div class="autopermalink" data-description="Figure 2.5.2"><a href="#CNX_Calc_Figure_02_04_002" title="Copy heading and permalink for Figure 2.5.2" aria-label="Copy heading and permalink for Figure 2.5.2">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec4-3-9">However, as we see in <a href="sec_Ch2Sec4.html#CNX_Calc_Figure_02_04_003" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_04_003.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.5.3">Figure 2.5.3</a>, these two conditions by themselves do not guarantee continuity at a point. The function in this figure satisfies both of our first two conditions, but is still not continuous at <span class="process-math">\(a\text{.}\)</span> We must add a third condition to our list:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_04_001.html ./knowl/xref/CNX_Calc_Figure_02_04_002.html ./knowl/xref/CNX_Calc_Figure_02_04_003.html ./knowl/xref/CNX_Calc_Figure_02_04_004.html ./knowl/xref/CNX_Calc_Figure_02_04_005.html" id="sec_Ch2Sec4-3-10">
+\begin{equation*}
+\text{ iii. } \limit_{x\to a}f(x)=f(a).
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_04_003"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_04_003.jpg" class="contained" alt='"The graph of a piecewise function with two parts. The first part is an increasing linear function that crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. A point a greater than zero is marked on the x axis. At this point, there is an open circle on the linear function. The second part is a point at x=a above the line."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The function <span class="process-math">\(f(x)\)</span> is not continuous at <span class="process-math">\(a\)</span> because <span class="process-math">\(\limit_{x\to a}f(x)\neq f(a).\)</span><div class="autopermalink" data-description="Figure 2.5.3"><a href="#CNX_Calc_Figure_02_04_003" title="Copy heading and permalink for Figure 2.5.3" aria-label="Copy heading and permalink for Figure 2.5.3">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec4-3-12">Now we put our list of conditions together and form a definition of continuity at a point.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="sec_Ch2Sec4-3-13"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec_Ch2Sec4-3-13-1">A function <span class="process-math">\(f(x)\)</span> is <dfn class="terminology">continuous at a point</dfn> <span class="process-math">\(a\)</span> if and only if the following three conditions are satisfied:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-3-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-alpha ol-marker-2" id="sec_Ch2Sec4-3-13-2">
+<li id="sec_Ch2Sec4-3-13-2-1">
+<div class="para" id="p-derived-sec_Ch2Sec4-3-13-2-1">
+<span class="process-math">\(f(a)\)</span> is defined</div>
+<div class="autopermalink" data-description="Item a"><a href="#sec_Ch2Sec4-3-13-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec4-3-13-2-2">
+<div class="para" id="p-derived-sec_Ch2Sec4-3-13-2-2">
+<span class="process-math">\(\limit_{x\to a}f(x)\)</span> exists</div>
+<div class="autopermalink" data-description="Item b"><a href="#sec_Ch2Sec4-3-13-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec4-3-13-2-3">
+<div class="para" id="p-derived-sec_Ch2Sec4-3-13-2-3"><span class="process-math">\(\displaystyle \limit_{x\to a}f(x)=f(a)\)</span></div>
+<div class="autopermalink" data-description="Item c"><a href="#sec_Ch2Sec4-3-13-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="sec_Ch2Sec4-3-13-3">A function is <dfn class="terminology">discontinuous at a point</dfn> <span class="process-math">\(a\)</span> if it fails to be continuous at <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-3-13-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.5.4"><a href="#sec_Ch2Sec4-3-13" title="Copy heading and permalink for Definition 2.5.4" aria-label="Copy heading and permalink for Definition 2.5.4">🔗</a></div></article><div class="para" id="sec_Ch2Sec4-3-14">The following procedure can be used to analyze the continuity of a function at a point using this definition.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="fs-id1170573398041"><h4 class="heading">
+<span class="type">Problem-Solving Strategy</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Determining Continuity at a Point.</span>
+</h4>
+<ol class="decimal" id="fs-id1170573398041-2">
+<li id="fs-id1170573398041-2-1">
+<div class="para" id="p-derived-fs-id1170573398041-2-1">Check to see if <span class="process-math">\(f(a)\)</span> is defined. If <span class="process-math">\(f(a)\)</span> is undefined, we need go no further. The function is not continuous at <span class="process-math">\(a\text{.}\)</span> If <span class="process-math">\(f(a)\)</span> is defined, continue to step 2.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#fs-id1170573398041-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="fs-id1170573398041-2-2">
+<div class="para" id="p-derived-fs-id1170573398041-2-2">Compute <span class="process-math">\(\limit_{x\to a}f(x).\)</span> In some cases, we may need to do this by first computing <span class="process-math">\(\limit_{x\to a^-}f(x)\)</span> and <span class="process-math">\(\limit_{x\to a^+}f(x).\)</span> If <span class="process-math">\(\limit_{x\to a}f(x)\)</span> does not exist (that is, it is not a real number), then the function is not continuous at <span class="process-math">\(a\)</span> and the problem is solved. If <span class="process-math">\(\limit_{x\to a}f(x)\)</span> exists, then continue to step 3.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#fs-id1170573398041-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="fs-id1170573398041-2-3">
+<div class="para" id="p-derived-fs-id1170573398041-2-3">Compare <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(\limit_{x\to a}f(x).\)</span> If <span class="process-math">\(\limit_{x\to a}f(x)\neq f(a),\)</span> then the function is not continuous at <span class="process-math">\(a\text{.}\)</span> If <span class="process-math">\(\limit_{x\to a}f(x)=f(a),\)</span> then the function is continuous at <span class="process-math">\(a\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#fs-id1170573398041-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Problem-Solving Strategy 2.5.5: Determining Continuity at a Point"><a href="#fs-id1170573398041" title="Copy heading and permalink for Problem-Solving Strategy 2.5.5: Determining Continuity at a Point" aria-label="Copy heading and permalink for Problem-Solving Strategy 2.5.5: Determining Continuity at a Point">🔗</a></div></article><div class="para" id="sec_Ch2Sec4-3-16">The next three examples demonstrate how to apply this definition to determine whether a function is continuous at a given point. These examples illustrate situations in which each of the conditions for continuity in the definition succeed or fail.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170573442080"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Determining Continuity at a Point, Condition 1.</span>
+</h4>
+<div class="para" id="fs-id1170573442080-2-1">Using the definition, determine whether the function <span class="process-math">\(f(x)=(x^2-4)/(x-2)\)</span> is continuous at <span class="process-math">\(x=2.\)</span> Justify the conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573442080-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170573442080-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573442080-3-1">Let’s begin by trying to calculate <span class="process-math">\(f(2).\)</span> We can see that <span class="process-math">\(f(2)=0/0,\)</span> which is undefined. Therefore, <span class="process-math">\(f(x)=\frac{x^2-4}{x-2}\)</span> is discontinuous at 2 because <span class="process-math">\(f(2)\)</span> is undefined. The graph of <span class="process-math">\(f(x)\)</span> is shown in <a href="sec_Ch2Sec4.html#CNX_Calc_Figure_02_04_004" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_04_004.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.5.7">Figure 2.5.7</a>.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573442080-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_04_004"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_04_004.jpg" class="contained" alt='"A graph of the given function. There is a line which crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. At a point in quadrant one, there is an open circle where the function is not defined."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The function <span class="process-math">\(f(x)\)</span> is discontinuous at 2 because <span class="process-math">\(f(2)\)</span> is undefined.<div class="autopermalink" data-description="Figure 2.5.7"><a href="#CNX_Calc_Figure_02_04_004" title="Copy heading and permalink for Figure 2.5.7" aria-label="Copy heading and permalink for Figure 2.5.7">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 2.5.6.1"><a href="#fs-id1170573442080-3" title="Copy heading and permalink for Solution 2.5.6.1" aria-label="Copy heading and permalink for Solution 2.5.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.6: Determining Continuity at a Point, Condition 1"><a href="#fs-id1170573442080" title="Copy heading and permalink for Example 2.5.6: Determining Continuity at a Point, Condition 1" aria-label="Copy heading and permalink for Example 2.5.6: Determining Continuity at a Point, Condition 1">🔗</a></div></article><article class="example example-like" id="fs-id1170573389760"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Determining Continuity at a Point, Condition 2.</span>
+</h4>
+<div class="para logical" id="fs-id1170573389760-2-1">
+<div class="para">Using the definition, determine whether the function</div>
+<div class="displaymath process-math" id="fs-id1170573389760-2-1-1">
+\begin{equation*}
+f(x)=\begin{cases}-x^2+4\amp\text{ if } x\leq 3\\4x-8\amp\text{ if } x\gt 3 \end{cases}
+\end{equation*}
+</div>
+<div class="para">is continuous at <span class="process-math">\(x=3.\)</span> Justify the conclusion.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573389760-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170573389760-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573389760-3-1">Let’s begin by trying to calculate <span class="process-math">\(f(3).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573389760-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_04_005.html" id="fs-id1170573389760-3-2">
+\begin{equation*}
+f(3)=-(3^2)+4=-5.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1170573389760-3-3">Thus, <span class="process-math">\(f(3)\)</span> is defined. Next, we calculate <span class="process-math">\(\limit_{x\to 3}f(x).\)</span> To do this, we must compute <span class="process-math">\(\limit_{x\to  3^-}f(x)\)</span> and <span class="process-math">\(\limit_{x\to  3^+}f(x)\text{ : }\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573389760-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_04_005.html" id="fs-id1170573389760-3-4">
+\begin{equation*}
+\limit_{x\to  3^-}f(x)=-(3^2)+4=-5
+\end{equation*}
+</div>
+<div class="para" id="fs-id1170573389760-3-5">and<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573389760-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_02_04_005.html" id="fs-id1170573389760-3-6">
+\begin{equation*}
+\limit_{x\to  3^+}f(x)=4(3)-8=4.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1170573389760-3-7">Therefore, <span class="process-math">\(\limit_{x\to 3}f(x)\)</span> does not exist. Thus, <span class="process-math">\(f(x)\)</span> is not continuous at 3. The graph of <span class="process-math">\(f(x)\)</span> is shown in <a href="sec_Ch2Sec4.html#CNX_Calc_Figure_02_04_005" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_04_005.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.5.9">Figure 2.5.9</a>.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573389760-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_04_005"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_04_005.jpg" class="contained" alt='"A graph of the given piecewise function, which has two parts. The first is a downward opening parabola which is symmetric about the y axis. Its vertex is on the y axis, greater than zero. There is a closed circle on the parabola for x=3. The second part is an increasing linear function in the first quadrant, which exists for values of x \gt  3. There is an open circle at the end of the line where x would be 3."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The function <span class="process-math">\(f(x)\)</span> is not continuous at 3 because <span class="process-math">\(\limit_{x\to 3}f(x)\)</span> does not exist.<div class="autopermalink" data-description="Figure 2.5.9"><a href="#CNX_Calc_Figure_02_04_005" title="Copy heading and permalink for Figure 2.5.9" aria-label="Copy heading and permalink for Figure 2.5.9">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 2.5.8.1"><a href="#fs-id1170573389760-3" title="Copy heading and permalink for Solution 2.5.8.1" aria-label="Copy heading and permalink for Solution 2.5.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.8: Determining Continuity at a Point, Condition 2"><a href="#fs-id1170573389760" title="Copy heading and permalink for Example 2.5.8: Determining Continuity at a Point, Condition 2" aria-label="Copy heading and permalink for Example 2.5.8: Determining Continuity at a Point, Condition 2">🔗</a></div></article><article class="example example-like" id="fs-id1170573429945"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Determining Continuity at a Point, Condition 3.</span>
+</h4>
+<div class="para logical" id="fs-id1170573429945-2-1">
+<div class="para">Using the definition, determine whether the function</div>
+<div class="displaymath process-math" id="fs-id1170573429945-2-1-1">
+\begin{equation*}
+f(x)=\begin{cases} \frac{\sin x}{x}\amp\text{ if } x\neq 0 \\ 1\amp\text{ if } x=0 \end{cases}
+\end{equation*}
+</div>
+<div class="para">is continuous at <span class="process-math">\(x=0.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573429945-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170573429945-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573429945-3-1">First, observe that<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573429945-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1170573429945-3-2">
+\begin{equation*}
+f(0)=1.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1170573429945-3-3">Next,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573429945-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1170573429945-3-4">
+\begin{equation*}
+\limit_{x\to 0}f(x)=\limit_{x\to 0}\frac{\sin x}{x}=1.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1170573429945-3-5">Last, compare <span class="process-math">\(f(0)\)</span> and <span class="process-math">\(\limit_{x\to 1}f(x).\)</span> We see that<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573429945-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1170573429945-3-6">
+\begin{equation*}
+f(0)=1=\limit_{x\to 0}f(x).
+\end{equation*}
+</div>
+<div class="para" id="fs-id1170573429945-3-7">Since all three of the conditions in the definition of continuity are satisfied, <span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(x=0.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573429945-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.10.1"><a href="#fs-id1170573429945-3" title="Copy heading and permalink for Solution 2.5.10.1" aria-label="Copy heading and permalink for Solution 2.5.10.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.10: Determining Continuity at a Point, Condition 3"><a href="#fs-id1170573429945" title="Copy heading and permalink for Example 2.5.10: Determining Continuity at a Point, Condition 3" aria-label="Copy heading and permalink for Example 2.5.10: Determining Continuity at a Point, Condition 3">🔗</a></div></article><details id="sec_Ch2Sec4-3-20" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="sec_Ch2Sec4-3-20-1-1">
+<div class="para">Using the definition, determine whether the function</div>
+<div class="displaymath process-math" id="sec_Ch2Sec4-3-20-1-1-1">
+\begin{equation*}
+f(x)=\begin{cases}2x+1\amp\text{ if } x\lt 1\\2\amp\text{ if } x=1\\-x+4\amp\text{ if } x\gt 1 \end{cases}
+\end{equation*}
+</div>
+<div class="para">is continuous at <span class="process-math">\(x=1.\)</span> If the function is not continuous at 1, indicate the condition for continuity at a point that fails to hold.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-3-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec4-3-20-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec4-3-20-3-1">Check each condition of the definition.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-3-20-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.5.11.1"><a href="#sec_Ch2Sec4-3-20-3" title="Copy heading and permalink for Hint 2.5.11.1" aria-label="Copy heading and permalink for Hint 2.5.11.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec4-3-20-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec4-3-20-2-1">
+<span class="process-math">\(f\)</span> is not continuous at 1 because <span class="process-math">\(f(1)=2\neq 3=\limit_{x\to 1}f(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-3-20-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.11.1"><a href="#sec_Ch2Sec4-3-20-2" title="Copy heading and permalink for Solution 2.5.11.1" aria-label="Copy heading and permalink for Solution 2.5.11.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.5.11"><a href="#sec_Ch2Sec4-3-20" title="Copy heading and permalink for Checkpoint 2.5.11" aria-label="Copy heading and permalink for Checkpoint 2.5.11">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.5.1: Continuity at a Point"><a href="#sec_Ch2Sec4-3" title="Copy heading and permalink for Subsection 2.5.1: Continuity at a Point" aria-label="Copy heading and permalink for Subsection 2.5.1: Continuity at a Point">🔗</a></div></section><section class="subsection" id="sec_Ch2Sec4-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Types of Discontinuities</span>
+</h3>
+<div class="para" id="sec_Ch2Sec4-4-2">As we have seen in <a href="sec_Ch2Sec4.html#fs-id1170573442080" class="xref" data-knowl="./knowl/xref/fs-id1170573442080.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.5.6: Determining Continuity at a Point, Condition 1">Example 2.5.6</a> and <a href="sec_Ch2Sec4.html#fs-id1170573389760" class="xref" data-knowl="./knowl/xref/fs-id1170573389760.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.5.8: Determining Continuity at a Point, Condition 2">Example 2.5.8</a>, discontinuities take on several different appearances. We classify the types of discontinuities we have seen thus far as removable discontinuities, infinite discontinuities, or jump discontinuities. Intuitively, a <dfn class="terminology">removable discontinuity</dfn> is a discontinuity for which there is a hole in the graph, a <dfn class="terminology">jump discontinuity</dfn> is a noninfinite discontinuity for which the sections of the function do not meet up, and an <dfn class="terminology">infinite discontinuity</dfn> is a discontinuity located at a vertical asymptote. <a href="sec_Ch2Sec4.html#CNX_Calc_Figure_02_04_006" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_04_006.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.5.12">Figure 2.5.12</a> illustrates the differences in these types of discontinuities. Although these terms provide a handy way of describing three common types of discontinuities, keep in mind that not all discontinuities fit neatly into these categories.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_04_006"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/CNX_Calc_Figure_02_04_006.jpg" class="contained" alt='"Three graphs, each showing a different discontinuity. The first is removable discontinuity. Here, the given function is a line with positive slope. At a point x=a, where a\gt 0, there is an open circle on the line and a closed circle a few units above the line. The second is a jump discontinuity. Here, there are two lines with positive slope. The first line exists for x\lt =a, and the second exists for x\gt a, where a\gt 0. The first line ends at a solid circle where x=a, and the second begins a few units up with an open circle at x=a. The third discontinuity type is infinite discontinuity. Here, the function has two parts separated by an asymptote x=a. The first segment is a curve stretching along the x axis to 0 as x goes to negative infinity and along the y axis to infinity as x goes to zero. The second segment is a curve stretching along the y axis to negative infinity as x goes to zero and along the x axis to 0 as x goes to infinity."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Discontinuities are classified as (a) removable, (b) jump, or (c) infinite.<div class="autopermalink" data-description="Figure 2.5.12"><a href="#CNX_Calc_Figure_02_04_006" title="Copy heading and permalink for Figure 2.5.12" aria-label="Copy heading and permalink for Figure 2.5.12">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec4-4-4">These three discontinuities are formally defined as follows:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="sec_Ch2Sec4-4-5"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec_Ch2Sec4-4-5-1">If <span class="process-math">\(f(x)\)</span> is discontinuous at <span class="process-math">\(a\text{,}\)</span> then<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="sec_Ch2Sec4-4-5-2">
+<li id="sec_Ch2Sec4-4-5-2-1">
+<div class="para" id="p-derived-sec_Ch2Sec4-4-5-2-1">
+<span class="process-math">\(f\)</span> has a <dfn class="terminology">removable discontinuity</dfn> at <span class="process-math">\(a\)</span> if <span class="process-math">\(\limit_{x\to a}f(x)\)</span> exists. (Note: When we state that <span class="process-math">\(\limit_{x\to a}f(x)\)</span> exists, we mean that <span class="process-math">\(\limit_{x\to a}f(x)=L,\)</span> where <span class="process-math">\(L\)</span> is a real number.)</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch2Sec4-4-5-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec4-4-5-2-2">
+<div class="para" id="p-derived-sec_Ch2Sec4-4-5-2-2">
+<span class="process-math">\(f\)</span> has a <dfn class="terminology">jump discontinuity</dfn> at <span class="process-math">\(a\)</span> if <span class="process-math">\(\limit_{x\to a^-}f(x)\)</span> and <span class="process-math">\(\limit_{x\to a^+}f(x)\)</span> both exist, but <span class="process-math">\(\limit_{x\to a^-}f(x)\neq \limit_{x\to a^+}f(x).\)</span> (Note: When we state that <span class="process-math">\(\limit_{x\to a^-}f(x)\)</span> and <span class="process-math">\(\limit_{x\to a^+}f(x)\)</span> both exist, we mean that both are real-valued and that neither take on the values \pm\infty .)</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch2Sec4-4-5-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec4-4-5-2-3">
+<div class="para" id="p-derived-sec_Ch2Sec4-4-5-2-3">
+<span class="process-math">\(f\)</span> has an <dfn class="terminology">infinite discontinuity</dfn> at <span class="process-math">\(a\)</span> if <span class="process-math">\(\limit_{x\to a^-}f(x)=\pm \infty \)</span> or <span class="process-math">\(\limit_{x\to a^+}f(x)=\pm \infty .\)</span>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_Ch2Sec4-4-5-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Definition 2.5.13"><a href="#sec_Ch2Sec4-4-5" title="Copy heading and permalink for Definition 2.5.13" aria-label="Copy heading and permalink for Definition 2.5.13">🔗</a></div></article><article class="example example-like" id="fs-id1170570976348"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Classifying a Discontinuity.</span>
+</h4>
+<div class="para" id="fs-id1170570976348-2-1">In <a href="sec_Ch2Sec4.html#fs-id1170573442080" class="xref" data-knowl="./knowl/xref/fs-id1170573442080.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.5.6: Determining Continuity at a Point, Condition 1">Example 2.5.6</a>, we showed that <span class="process-math">\(\ds f(x)=\frac{x^2-4}{x-2}\)</span> is discontinuous at <span class="process-math">\(x=2.\)</span> Classify this discontinuity as removable, jump, or infinite.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170570976348-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170570976348-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170570976348-3-1">To classify the discontinuity at 2 we must evaluate <span class="process-math">\(\limit_{x\to 2}f(x)\text{ : }\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170570976348-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1170570976348-3-2">
+\begin{align*}
+\limit_{x\to 2}f(x)\amp=\limit_{x\to 2}\frac{x^2-4}{x-2}\\
+\amp=\limit_{x\to 2}\frac{(x-2)(x+2)}{x-2}\\
+\amp=\limit_{x\to 2}(x+2)\\
+\amp=4.
+\end{align*}
+</div>
+<div class="para" id="fs-id1170570976348-3-3">Since <span class="process-math">\(f\)</span> is discontinuous at 2 and <span class="process-math">\(\limit_{x\to 2}f(x)\)</span> exists, <span class="process-math">\(f\)</span> has a removable discontinuity at <span class="process-math">\(x=2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170570976348-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.14.1"><a href="#fs-id1170570976348-3" title="Copy heading and permalink for Solution 2.5.14.1" aria-label="Copy heading and permalink for Solution 2.5.14.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.14: Classifying a Discontinuity"><a href="#fs-id1170570976348" title="Copy heading and permalink for Example 2.5.14: Classifying a Discontinuity" aria-label="Copy heading and permalink for Example 2.5.14: Classifying a Discontinuity">🔗</a></div></article><article class="example example-like" id="fs-id1170573426544"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Classifying a Discontinuity.</span>
+</h4>
+<div class="para logical" id="fs-id1170573426544-2-1">
+<div class="para">In <a href="sec_Ch2Sec4.html#fs-id1170573389760" class="xref" data-knowl="./knowl/xref/fs-id1170573389760.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.5.8: Determining Continuity at a Point, Condition 2">Example 2.5.8</a>, we showed that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1170573389760.html" id="fs-id1170573426544-2-1-2">
+\begin{equation*}
+f(x)=\begin{cases}-x^2+4\amp\text{ if } x\leq 3\\4x-8\amp\text{ if } x\gt 3\end{cases}
+\end{equation*}
+</div>
+<div class="para">is discontinuous at <span class="process-math">\(x=3.\)</span> Classify this discontinuity as removable, jump, or infinite.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573426544-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170573426544-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573426544-3-1">Earlier, we showed that <span class="process-math">\(f\)</span> is discontinuous at 3 because <span class="process-math">\(\limit_{x\to 3}f(x)\)</span> does not exist. However, since <span class="process-math">\(\limit_{x\to  3^-}f(x)=-5\)</span> and <span class="process-math">\(\limit_{x\to  3^+}f(x)=4\)</span> both exist, we conclude that the function has a jump discontinuity at 3.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573426544-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.15.1"><a href="#fs-id1170573426544-3" title="Copy heading and permalink for Solution 2.5.15.1" aria-label="Copy heading and permalink for Solution 2.5.15.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.15: Classifying a Discontinuity"><a href="#fs-id1170573426544" title="Copy heading and permalink for Example 2.5.15: Classifying a Discontinuity" aria-label="Copy heading and permalink for Example 2.5.15: Classifying a Discontinuity">🔗</a></div></article><article class="example example-like" id="fs-id1170573355402"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Classifying a Discontinuity.</span>
+</h4>
+<div class="para" id="fs-id1170573355402-2-1">Determine whether <span class="process-math">\(\ds f(x)=\frac{x+2}{x+1}\)</span> is continuous at -1. If the function is discontinuous at -1, classify the discontinuity as removable, jump, or infinite.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573355402-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170573355402-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573355402-3-1">The function value <span class="process-math">\(f(-1)\)</span> is undefined. Therefore, the function is not continuous at -1. To determine the type of discontinuity, we must determine the limit at -1. We see that <span class="process-math">\(\limit_{x\to  -1^-}\frac{x+2}{x+1}=-\infty \)</span> and <span class="process-math">\(\limit_{x\to  -1^+}\frac{x+2}{x+1}=+\infty .\)</span> Therefore, the function has an infinite discontinuity at -1.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573355402-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.16.1"><a href="#fs-id1170573355402-3" title="Copy heading and permalink for Solution 2.5.16.1" aria-label="Copy heading and permalink for Solution 2.5.16.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.16: Classifying a Discontinuity"><a href="#fs-id1170573355402" title="Copy heading and permalink for Example 2.5.16: Classifying a Discontinuity" aria-label="Copy heading and permalink for Example 2.5.16: Classifying a Discontinuity">🔗</a></div></article><details id="sec_Ch2Sec4-4-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="sec_Ch2Sec4-4-9-1-1">
+<div class="para">For</div>
+<div class="displaymath process-math" id="sec_Ch2Sec4-4-9-1-1-1">
+\begin{equation*}
+f(x)=\begin{cases}x^2\amp\text{ if } x\neq 1\\3\amp\text{ if } x=1 \end{cases},
+\end{equation*}
+</div>
+<div class="para">decide whether <span class="process-math">\(f\)</span> is continuous at 1. If <span class="process-math">\(f\)</span> is not continuous at 1, classify the discontinuity as removable, jump, or infinite.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-4-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec4-4-9-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec4-4-9-3-1">Follow the steps in <a href="sec_Ch2Sec4.html#fs-id1170573398041" class="xref" data-knowl="./knowl/xref/fs-id1170573398041.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem-Solving Strategy 2.5.5: Determining Continuity at a Point">Problem-Solving Strategy 2.5.5</a>. If the function is discontinuous at 1, look at <span class="process-math">\(\limit_{x\to 1}f(x)\)</span> and use the definition to determine the type of discontinuity.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-4-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.5.17.1"><a href="#sec_Ch2Sec4-4-9-3" title="Copy heading and permalink for Hint 2.5.17.1" aria-label="Copy heading and permalink for Hint 2.5.17.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec4-4-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec4-4-9-2-1">Discontinuous at 1; removable<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-4-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.17.1"><a href="#sec_Ch2Sec4-4-9-2" title="Copy heading and permalink for Solution 2.5.17.1" aria-label="Copy heading and permalink for Solution 2.5.17.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.5.17"><a href="#sec_Ch2Sec4-4-9" title="Copy heading and permalink for Checkpoint 2.5.17" aria-label="Copy heading and permalink for Checkpoint 2.5.17">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.5.2: Types of Discontinuities"><a href="#sec_Ch2Sec4-4" title="Copy heading and permalink for Subsection 2.5.2: Types of Discontinuities" aria-label="Copy heading and permalink for Subsection 2.5.2: Types of Discontinuities">🔗</a></div></section><section class="subsection" id="sec_Ch2Sec4-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity over an Interval</span>
+</h3>
+<div class="para" id="sec_Ch2Sec4-5-2">Now that we have explored the concept of continuity at a point, we extend that idea to <dfn class="terminology">continuity over an interval</dfn>. As we develop this idea for different types of intervals, it may be useful to keep in mind the intuitive idea that a function is continuous over an interval if we can use a pencil to trace the function between any two points in the interval without lifting the pencil from the paper. In preparation for defining continuity on an interval, we begin by looking at the definition of what it means for a function to be continuous from the right at a point and continuous from the left at a point.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="sec_Ch2Sec4-5-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity from the Right and from the Left.</span>
+</h4>
+<div class="para" id="sec_Ch2Sec4-5-3-2">A function <span class="process-math">\(f(x)\)</span> is said to be <dfn class="terminology">continuous from the right</dfn> at <span class="process-math">\(a\)</span> if <span class="process-math">\(\limit_{x\to a^+}f(x)=f(a).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec4-5-3-3">A function <span class="process-math">\(f(x)\)</span> is said to be <dfn class="terminology">continuous from the left</dfn> at <span class="process-math">\(a\)</span> if <span class="process-math">\(\limit_{x\to a^-}f(x)=f(a).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.5.18: Continuity from the Right and from the Left"><a href="#sec_Ch2Sec4-5-3" title="Copy heading and permalink for Definition 2.5.18: Continuity from the Right and from the Left" aria-label="Copy heading and permalink for Definition 2.5.18: Continuity from the Right and from the Left">🔗</a></div></article><div class="para" id="sec_Ch2Sec4-5-4">A function is continuous over an open interval if it is continuous at every point in the interval. A function <span class="process-math">\(f(x)\)</span> is continuous over a closed interval of the form <span class="process-math">\([a,b]\)</span> if it is continuous at every point in <span class="process-math">\((a,b)\)</span> and is continuous from the right at <span class="process-math">\(a\)</span> and is continuous from the left at <span class="process-math">\(b\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec_Ch2Sec4-5-5">
+<div class="para">A function is continuous on the closed interval <span class="process-math">\([a,b]\)</span> when</div>
+<ul class="disc" id="sec_Ch2Sec4-5-5-2">
+<li id="sec_Ch2Sec4-5-5-2-1">
+<div class="para" id="sec_Ch2Sec4-5-5-2-1-1">
+<span class="process-math">\(f(x)\)</span> is continuous on <span class="process-math">\((a,b)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch2Sec4-5-5-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec4-5-5-2-2">
+<div class="para" id="sec_Ch2Sec4-5-5-2-2-1">
+<span class="process-math">\(f(x)\)</span> is continuous from the right at <span class="process-math">\(a\text{,}\)</span> and<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch2Sec4-5-5-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch2Sec4-5-5-2-3">
+<div class="para" id="sec_Ch2Sec4-5-5-2-3-1">
+<span class="process-math">\(f(x)\)</span> is continuous from the left at <span class="process-math">\(b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-5-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch2Sec4-5-5-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Note that the last two conditions are equivalent to</div>
+<div class="displaymath process-math" id="sec_Ch2Sec4-5-5-3">
+\begin{equation*}
+\limit_{x\to a^+}f(x)=f(a)\quad\text{and}\quad \limit_{x\to b^-}f(x)=f(b) 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec4-5-6">Requiring that <span class="process-math">\(\limit_{x\to a^+}f(x)=f(a)\)</span> and <span class="process-math">\(\limit_{x\to b^-}f(x)=f(b)\)</span> ensures that we can trace the graph of the function from the point <span class="process-math">\((a,f(a))\)</span> to the point <span class="process-math">\((b,f(b))\)</span> without lifting the pencil. If, for example, <span class="process-math">\(\limit_{x\to a^+}f(x)\neq f(a),\)</span> we would need to lift our pencil to jump from <span class="process-math">\(f(a)\)</span> to the graph of the rest of the function over <span class="process-math">\((a,b].\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170573395559"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity on an Interval.</span>
+</h4>
+<div class="para" id="fs-id1170573395559-2-1">State the interval(s) over which the function <span class="process-math">\(\ds f(x)=\frac{x-1}{x^2+2x}\)</span> is continuous.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573395559-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170573395559-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573395559-3-1">Since <span class="process-math">\(f(x)=\frac{x-1}{x^2+2x}\)</span> is a rational function, it is continuous at every point in its domain. The domain of <span class="process-math">\(f(x)\)</span> is the set <span class="process-math">\((-\infty ,-2)\cup (-2,0)\cup (0,+\infty ).\)</span> Thus, <span class="process-math">\(f(x)\)</span> is continuous over each of the intervals <span class="process-math">\((-\infty ,-2),(-2,0),\)</span> and <span class="process-math">\((0,+\infty ).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573395559-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.19.1"><a href="#fs-id1170573395559-3" title="Copy heading and permalink for Solution 2.5.19.1" aria-label="Copy heading and permalink for Solution 2.5.19.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.19: Continuity on an Interval"><a href="#fs-id1170573395559" title="Copy heading and permalink for Example 2.5.19: Continuity on an Interval" aria-label="Copy heading and permalink for Example 2.5.19: Continuity on an Interval">🔗</a></div></article><article class="example example-like" id="fs-id1170573387892"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity over an Interval.</span>
+</h4>
+<div class="para" id="fs-id1170573387892-2-1">State the interval(s) over which the function <span class="process-math">\(f(x)=\sqrt{4-x^2}\)</span> is continuous.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573387892-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170573387892-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573387892-3-1">From the limit laws, we know that <span class="process-math">\(\limit_{x\to a}\sqrt{4-x^2}=\sqrt{4-a^2}\)</span> for all values of <span class="process-math">\(a\)</span> in <span class="process-math">\((-2,2).\)</span> We also know that <span class="process-math">\(\limit_{x\to  -2^+}\sqrt{4-x^2}=0\)</span> exists and <span class="process-math">\(\limit_{x\to  2^-}\sqrt{4-x^2}=0\)</span> exists. Therefore, <span class="process-math">\(f(x)\)</span> is continuous over the interval <span class="process-math">\([-2,2].\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573387892-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.20.1"><a href="#fs-id1170573387892-3" title="Copy heading and permalink for Solution 2.5.20.1" aria-label="Copy heading and permalink for Solution 2.5.20.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.20: Continuity over an Interval"><a href="#fs-id1170573387892" title="Copy heading and permalink for Example 2.5.20: Continuity over an Interval" aria-label="Copy heading and permalink for Example 2.5.20: Continuity over an Interval">🔗</a></div></article><details id="sec_Ch2Sec4-5-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec4-5-9-1-1">State the interval(s) over which the function <span class="process-math">\(f(x)=\sqrt{x+3}\)</span> is continuous.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec4-5-9-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec4-5-9-3-1">Use <a href="sec_Ch2Sec4.html#fs-id1170573387892" class="xref" data-knowl="./knowl/xref/fs-id1170573387892.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.5.20: Continuity over an Interval">Example 2.5.20</a> as a guide for solving.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.5.21.1"><a href="#sec_Ch2Sec4-5-9-3" title="Copy heading and permalink for Hint 2.5.21.1" aria-label="Copy heading and permalink for Hint 2.5.21.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec4-5-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec4-5-9-2-1">
+<span class="process-math">\([-3,+\infty )\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.21.1"><a href="#sec_Ch2Sec4-5-9-2" title="Copy heading and permalink for Solution 2.5.21.1" aria-label="Copy heading and permalink for Solution 2.5.21.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.5.21"><a href="#sec_Ch2Sec4-5-9" title="Copy heading and permalink for Checkpoint 2.5.21" aria-label="Copy heading and permalink for Checkpoint 2.5.21">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-continuity"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Algebra of Continuous Functions.</span>
+</h4>
+<div class="para" id="thm-continuity-2-1">If the functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous at <span class="process-math">\(x=a\text{,}\)</span> then the following algebraic combinations are continuous at <span class="process-math">\(x=a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-continuity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="thm-continuity-2-2">
+<ol class="decimal" id="thm-continuity-2-2-1">
+<li id="thm-continuity-2-2-1-1">
+<div class="para" id="thm-continuity-2-2-1-1-1">
+<span class="process-math">\(\displaystyle \text{Sums}\quad f+g\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-continuity-2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#thm-continuity-2-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="thm-continuity-2-2-1-2">
+<div class="para" id="thm-continuity-2-2-1-2-1">
+<span class="process-math">\(\displaystyle \text{Differences}\quad f-g\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-continuity-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#thm-continuity-2-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="thm-continuity-2-2-1-3">
+<div class="para" id="thm-continuity-2-2-1-3-1">
+<span class="process-math">\(\displaystyle \text{Constant Multiples}\quad k\cdot f,\text{ for any number }k\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-continuity-2-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#thm-continuity-2-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="thm-continuity-2-2-1-4">
+<div class="para" id="thm-continuity-2-2-1-4-1">
+<span class="process-math">\(\displaystyle \text{Products}\quad f\cdot g\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-continuity-2-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#thm-continuity-2-2-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="thm-continuity-2-2-1-5">
+<div class="para" id="thm-continuity-2-2-1-5-1">
+<span class="process-math">\(\displaystyle \text{Quotients}\quad f/g,\text{ provided }g(a)\ne 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-continuity-2-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#thm-continuity-2-2-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="thm-continuity-2-2-1-6">
+<div class="para" id="thm-continuity-2-2-1-6-1">
+<span class="process-math">\(\displaystyle \text{Powers}\quad f^n,\ n\text{ a positive integer}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-continuity-2-2-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#thm-continuity-2-2-1-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="thm-continuity-2-2-1-7">
+<div class="para" id="thm-continuity-2-2-1-7-1">
+<span class="process-math">\(\displaystyle \text{Roots}\quad \sqrt[n]{f},\text{ provided it is defined on an interval containing } a,\text{ where }n\text{ is a positive integer}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-continuity-2-2-1-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7"><a href="#thm-continuity-2-2-1-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-continuity-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.5.22: Algebra of Continuous Functions"><a href="#thm-continuity" title="Copy heading and permalink for Theorem 2.5.22: Algebra of Continuous Functions" aria-label="Copy heading and permalink for Theorem 2.5.22: Algebra of Continuous Functions">🔗</a></div></article><details id="thm-continuity-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-continuity-3-1">
+<div class="para">We prove the sum property using the limit laws.</div>
+<div class="displaymath process-math" id="thm-continuity-3-1-1">
+\begin{align*}
+\limit_{x\to a}(f+g)(x)\amp\limit_{x\to a}\left(f(x)+g(x)\right)\\
+\amp =\limit_{x\to a}f(x)+\limit_{x\to a}g(x)\\
+\amp =f(a)+g(a)\\
+\amp =(f+g)(a)
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-continuity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.5.22.1"><a href="#thm-continuity-3" title="Copy heading and permalink for Proof 2.5.22.1" aria-label="Copy heading and permalink for Proof 2.5.22.1">🔗</a></div></article></details><div class="para" id="sec_Ch2Sec4-5-11">By applying the definition of continuity and previously established theorems concerning the evaluation of limits, we can state the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="fs-id1170573430304"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity of Polynomials and Rational Functions.</span>
+</h4>
+<div class="para" id="fs-id1170573430304-2">Polynomials and rational functions are continuous at every point in their domains.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573430304-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.5.23: Continuity of Polynomials and Rational Functions"><a href="#fs-id1170573430304" title="Copy heading and permalink for Theorem 2.5.23: Continuity of Polynomials and Rational Functions" aria-label="Copy heading and permalink for Theorem 2.5.23: Continuity of Polynomials and Rational Functions">🔗</a></div></article><details id="fs-id1170573430304-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="fs-id1170573430304-3-1">Previously, we showed that if <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> are polynomials, <span class="process-math">\(\limit_{x\to a}p(x)=p(a)\)</span> for every polynomial <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(\limit_{x\to a}\frac{p(x)}{q(x)}=\frac{p(a)}{q(a)}\)</span> as long as <span class="process-math">\(q(a)\neq 0.\)</span> Therefore, polynomials and rational functions are continuous on their domains.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573430304-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.5.23.1"><a href="#fs-id1170573430304-3" title="Copy heading and permalink for Proof 2.5.23.1" aria-label="Copy heading and permalink for Proof 2.5.23.1">🔗</a></div></article></details><div class="para" id="sec_Ch2Sec4-5-13">We now apply <a href="sec_Ch2Sec4.html#fs-id1170573430304" class="xref" data-knowl="./knowl/xref/fs-id1170573430304.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.23: Continuity of Polynomials and Rational Functions">Theorem 2.5.23</a> to determine the points at which a given rational function is continuous.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170573381194"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity of a Rational Function.</span>
+</h4>
+<div class="para" id="fs-id1170573381194-2-1">For what values of <span class="process-math">\(x\)</span> is <span class="process-math">\(\ds f(x)=\frac{x+1}{x-5}\)</span> continuous?<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573381194-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170573381194-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573381194-3-1">The rational function <span class="process-math">\(f(x)=\frac{x+1}{x-5}\)</span> is continuous for every value of <span class="process-math">\(x\)</span> except <span class="process-math">\(x=5.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573381194-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.24.1"><a href="#fs-id1170573381194-3" title="Copy heading and permalink for Solution 2.5.24.1" aria-label="Copy heading and permalink for Solution 2.5.24.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.24: Continuity of a Rational Function"><a href="#fs-id1170573381194" title="Copy heading and permalink for Example 2.5.24: Continuity of a Rational Function" aria-label="Copy heading and permalink for Example 2.5.24: Continuity of a Rational Function">🔗</a></div></article><details id="sec_Ch2Sec4-5-15" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec4-5-15-1-1">For what values of <span class="process-math">\(x\)</span> is <span class="process-math">\(f(x)=3x^4-4x^2\)</span> continuous?<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec4-5-15-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec4-5-15-3-1">Use <a href="sec_Ch2Sec4.html#fs-id1170573430304" class="xref" data-knowl="./knowl/xref/fs-id1170573430304.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.23: Continuity of Polynomials and Rational Functions">Theorem 2.5.23</a><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-15-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.5.25.1"><a href="#sec_Ch2Sec4-5-15-3" title="Copy heading and permalink for Hint 2.5.25.1" aria-label="Copy heading and permalink for Hint 2.5.25.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec4-5-15-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec4-5-15-2-1">
+<span class="process-math">\(f(x)\)</span> is continuous at every real number.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-15-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.25.1"><a href="#sec_Ch2Sec4-5-15-2" title="Copy heading and permalink for Solution 2.5.25.1" aria-label="Copy heading and permalink for Solution 2.5.25.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.5.25"><a href="#sec_Ch2Sec4-5-15" title="Copy heading and permalink for Checkpoint 2.5.25" aria-label="Copy heading and permalink for Checkpoint 2.5.25">🔗</a></div></article></details><div class="para" id="sec_Ch2Sec4-5-16">
+<a href="sec_Ch2Sec4.html#fs-id1170573352212" class="xref" data-knowl="./knowl/xref/fs-id1170573352212.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.26: Composite Function Theorem">Theorem 2.5.26</a> allows us to expand our ability to compute limits. In particular, this theorem ultimately allows us to demonstrate that trigonometric functions are continuous over their domains.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="fs-id1170573352212"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Composite Function Theorem.</span>
+</h4>
+<div class="para" id="fs-id1170573352212-2">If <span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(L\)</span> and <span class="process-math">\(\limit_{x\to a}g(x)=L,\)</span> then<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573352212-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1170573352212-3">
+\begin{equation*}
+\limit_{x\to a}f(g(x))=f(\limit_{x\to a}g(x))=f(L).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Theorem 2.5.26: Composite Function Theorem"><a href="#fs-id1170573352212" title="Copy heading and permalink for Theorem 2.5.26: Composite Function Theorem" aria-label="Copy heading and permalink for Theorem 2.5.26: Composite Function Theorem">🔗</a></div></article><div class="para" id="sec_Ch2Sec4-5-18">Before we move on to <a href="sec_Ch2Sec4.html#fs-id1170573718134" class="xref" data-knowl="./knowl/xref/fs-id1170573718134.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.5.27: Limit of a Composite Cosine Function">Example 2.5.27</a>, recall that earlier, in the section on limit laws, we showed <span class="process-math">\(\limit_{x\to 0}\cos  x=1=\cos  (0).\)</span> Consequently, we know that <span class="process-math">\(f(x)=\cos  x\)</span> is continuous at 0. In <a href="sec_Ch2Sec4.html#fs-id1170573718134" class="xref" data-knowl="./knowl/xref/fs-id1170573718134.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.5.27: Limit of a Composite Cosine Function">Example 2.5.27</a> we see how to combine this result with the composite function theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170573718134"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limit of a Composite Cosine Function.</span>
+</h4>
+<div class="para" id="fs-id1170573718134-2-1">Evaluate <span class="process-math">\(\limit_{x\to \pi/2}\cos  \left(x-\frac{\pi}{2}\right).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573718134-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170573718134-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573718134-3-1">The given function is a composite of <span class="process-math">\(\cos  x\)</span> and <span class="process-math">\(x-\frac{\pi}{2}.\)</span> Since <span class="process-math">\(\limit_{x\to \pi/2}\left(x-\frac{\pi}{2}\right)=0\)</span> and <span class="process-math">\(\cos  x\)</span> is continuous at 0, we may apply the composite function theorem. Thus,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573718134-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1170573718134-3-2">
+\begin{equation*}
+\limit_{x\to \pi/2}\cos  \left(x-\frac{\pi}{2}\right)=\cos  \left(\limit_{x\to \pi/2}\left(x-\frac{\pi}{2}\right)\right)=\cos  (0)=1.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 2.5.27.1"><a href="#fs-id1170573718134-3" title="Copy heading and permalink for Solution 2.5.27.1" aria-label="Copy heading and permalink for Solution 2.5.27.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.27: Limit of a Composite Cosine Function"><a href="#fs-id1170573718134" title="Copy heading and permalink for Example 2.5.27: Limit of a Composite Cosine Function" aria-label="Copy heading and permalink for Example 2.5.27: Limit of a Composite Cosine Function">🔗</a></div></article><details id="sec_Ch2Sec4-5-20" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.28</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec4-5-20-1-1">Evaluate <span class="process-math">\(\limit_{x\to \pi}\sin (x-\pi).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec4-5-20-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec4-5-20-3-1">
+<span class="process-math">\(f(x)=\sin x\)</span> is continuous at 0. Use <a href="sec_Ch2Sec4.html#fs-id1170573718134" class="xref" data-knowl="./knowl/xref/fs-id1170573718134.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.5.27: Limit of a Composite Cosine Function">Example 2.5.27</a> as a guide.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-20-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.5.28.1"><a href="#sec_Ch2Sec4-5-20-3" title="Copy heading and permalink for Hint 2.5.28.1" aria-label="Copy heading and permalink for Hint 2.5.28.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec4-5-20-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec4-5-20-2-1">0<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-20-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.28.1"><a href="#sec_Ch2Sec4-5-20-2" title="Copy heading and permalink for Solution 2.5.28.1" aria-label="Copy heading and permalink for Solution 2.5.28.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.5.28"><a href="#sec_Ch2Sec4-5-20" title="Copy heading and permalink for Checkpoint 2.5.28" aria-label="Copy heading and permalink for Checkpoint 2.5.28">🔗</a></div></article></details><div class="para" id="sec_Ch2Sec4-5-21">The proof of the next theorem uses the composite function theorem as well as the continuity of <span class="process-math">\(f(x)=\sin x\)</span> and <span class="process-math">\(g(x)=\cos  x\)</span> at the point 0 to show that trigonometric functions are continuous over their entire domains.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="sec_Ch2Sec4-5-22"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.29</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuity of Trigonometric Functions.</span>
+</h4>
+<div class="para" id="sec_Ch2Sec4-5-22-2">Trigonometric functions are continuous over their entire domains.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-22-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.5.29: Continuity of Trigonometric Functions"><a href="#sec_Ch2Sec4-5-22" title="Copy heading and permalink for Theorem 2.5.29: Continuity of Trigonometric Functions" aria-label="Copy heading and permalink for Theorem 2.5.29: Continuity of Trigonometric Functions">🔗</a></div></article><details id="sec_Ch2Sec4-5-22-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_Ch2Sec4-5-22-3-1">We begin by demonstrating that <span class="process-math">\(\cos  x\)</span> is continuous at every real number. To do this, we must show that <span class="process-math">\(\limit_{x\to a}\cos  x=\cos  a\)</span> for all values of <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-22-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec_Ch2Sec4-5-22-3-2">
+<div class="displaymath process-math" id="sec_Ch2Sec4-5-22-3-2-1">
+\begin{align*}
+\limit_{x\to a}\cos  x\amp=\limit_{x\to a}\cos  ((x-a)+a)\amp\amp\text{ rewrite } x=x-a+a\\
+\amp=\limit_{x\to a}(\cos  (x-a) \cos  a-\sin (x-a) \sin a)\amp\amp \text{ apply the identity for the cosine of the sum of two angles }\\
+\amp=\cos  (\limit_{x\to a}(x-a)) \cos  a-\sin (\limit_{x\to a}(x-a)) \sin a\amp \amp \limit_{x\to a}(x-a)=0, \text{ and } \sin x \text{ and } \cos  x \text{ are continuous at 0 }\\
+\amp=\cos  (0) \cos  a-\sin (0) \sin a\amp\amp \text{ evaluate cos(0) and sin(0) and simplify }\\
+\amp =1\cdot \cos  a-0\cdot \sin a=\cos  a.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-22-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec4-5-22-3-3">The proof that <span class="process-math">\(\sin x\)</span> is continuous at every real number is analogous. Because the remaining trigonometric functions may be expressed in terms of <span class="process-math">\(\sin x\)</span> and <span class="process-math">\(\cos  x,\)</span> their continuity follows from the quotient limit law.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-22-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.5.29.1"><a href="#sec_Ch2Sec4-5-22-3" title="Copy heading and permalink for Proof 2.5.29.1" aria-label="Copy heading and permalink for Proof 2.5.29.1">🔗</a></div></article></details><div class="para" id="sec_Ch2Sec4-5-23">This theorem says that if <span class="process-math">\(f(x)\)</span> is a continuous function on all of the interval <span class="process-math">\(a\le x\le b\)</span> then as <span class="process-math">\(x\)</span> moves from <span class="process-math">\(a\)</span> to <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(f(x)\)</span> takes every value between <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\)</span> at least once.  To put this slightly differently, if <span class="process-math">\(f\)</span> were to avoid a value between <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\)</span> then <span class="process-math">\(f\)</span> cannot be continuous on <span class="process-math">\([a,b]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch2Sec4-5-24">It is not hard to convince yourself that the continuity of <span class="process-math">\(f\)</span> is crucial to the IVT.  Without it one can quickly construct examples of functions that contradict the theorem.  See the figure below for a few non-continuous examples:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-5-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.5.3: Continuity over an Interval"><a href="#sec_Ch2Sec4-5" title="Copy heading and permalink for Subsection 2.5.3: Continuity over an Interval" aria-label="Copy heading and permalink for Subsection 2.5.3: Continuity over an Interval">🔗</a></div></section><section class="subsection" id="sec_Ch2Sec4-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Intermediate Value Theorem</span>
+</h3>
+<div class="para" id="sec_Ch2Sec4-6-2">Functions that are continuous over intervals of the form <span class="process-math">\([a,b],\)</span> where <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are real numbers, exhibit many useful properties. Throughout our study of calculus, we will encounter many powerful theorems concerning such functions. The first of these theorems is the <dfn class="terminology">Intermediate Value Theorem</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="sec_Ch2Sec4-6-3"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.30</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Intermediate Value Theorem.</span>
+</h4>
+<div class="para" id="sec_Ch2Sec4-6-3-2">Let <span class="process-math">\(f\)</span> be continuous over a closed, bounded interval <span class="process-math">\([a,b].\)</span> If <span class="process-math">\(z\)</span> is any real number between <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b),\)</span> then there is a number <span class="process-math">\(c\)</span> in <span class="process-math">\([a,b]\)</span> satisfying <span class="process-math">\(f(c)=z\)</span> in <a href="sec_Ch2Sec4.html#CNX_Calc_Figure_02_04_007" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_04_007.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.5.31">Figure 2.5.31</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-6-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_02_04_007"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_04_007.jpg" class="contained" alt='"A diagram illustrating the intermediate value theorem. There is a generic continuous curved function shown over the interval [a,b]. The points fa. and fb. are marked, and dotted lines are drawn from a, b, fa., and fb. to the points (a, fa.) and (b, fb.).  A third point, c, is plotted between a and b. Since the function is continuous, there is a value for fc. along the curve, and a line is drawn from c to (c, fc.) and from (c, fc.) to fc., which is labeled as z on the y axis."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.31<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>There is a number <span class="process-math">\(c\in[a,b]\)</span> that satisfies <span class="process-math">\(f(c)=z.\)</span><div class="autopermalink" data-description="Figure 2.5.31"><a href="#CNX_Calc_Figure_02_04_007" title="Copy heading and permalink for Figure 2.5.31" aria-label="Copy heading and permalink for Figure 2.5.31">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Theorem 2.5.30: The Intermediate Value Theorem"><a href="#sec_Ch2Sec4-6-3" title="Copy heading and permalink for Theorem 2.5.30: The Intermediate Value Theorem" aria-label="Copy heading and permalink for Theorem 2.5.30: The Intermediate Value Theorem">🔗</a></div></article><figure class="figure figure-like" id="IVT-image"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/UBC_fig_2-5.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.32<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Without continuity, there could be a <span class="process-math">\(y\)</span>-value that is "missed" between two other <span class="process-math">\(y\)</span>-values in the range of <span class="process-math">\(f(x)\)</span> <em class="alert">NEEDS ALT TEXT. Text below agrees with notation in the picture (Y instead of z)</em><div class="autopermalink" data-description="Figure 2.5.32"><a href="#IVT-image" title="Copy heading and permalink for Figure 2.5.32" aria-label="Copy heading and permalink for Figure 2.5.32">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch2Sec4-6-5">In the left-hand example we see that a discontinuous function can "jump" over the <span class="process-math">\(Y\)</span>-value we have chosen, so there is no <span class="process-math">\(x\)</span>-value that makes <span class="process-math">\(f(x)=Y\text{.}\)</span>  The right-hand example demonstrates why we need to be careful with the ends of the interval.  In particular, a function must be continuous over the whole interval <span class="process-math">\([a,b]\)</span> <em class="emphasis">including</em> the endpoints of the interval.  If we only required the function to be continuous on <span class="process-math">\((a,b)\)</span> (so strictly between <span class="process-math">\(a\)</span>) and <span class="process-math">\(b\)</span> then the function could "jump" over the <span class="process-math">\(Y\)</span>-value at <span class="process-math">\(a\)</span> or <span class="process-math">\(b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="eg_1_6_4"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The IVT in the “real world”.</span>
+</h4>
+<div class="para" id="eg_1_6_4-2">You are climbing the Grouse-grind  with a friend — call him Bob. Bob was eager and started at 9am. Bob,  while very eager, is also very clumsy; he sprained his ankle somewhere  along the path and has stopped moving at 9:21am and is just sitting  enjoying the  view. You get there late and start climbing at 10am and being quite fit you get to the  top at 11am. The IVT implies that at some time between 10am and 11am you  meet up with Bob.<div class="autopermalink" data-description="Paragraph"><a href="#eg_1_6_4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="eg_1_6_4-3">You can translate this situation into the form of the IVT as follows. Let <span class="process-math">\(t\)</span>  be time and let <span class="process-math">\(a = \)</span> 10am and <span class="process-math">\(b=\)</span> 11am. Let <span class="process-math">\(g(t)\)</span> be your distance along the trail. Hence  <span class="process-math">\(g(a) = 0\)</span> and  <span class="process-math">\(g(b) = 2.9\)</span>km. Since you are a mortal, your position along the trail is a  continuous function — no helicopters or teleportation or… We have no idea  where Bob is sitting, except that he is somewhere between <span class="process-math">\(g(a)\)</span> and  <span class="process-math">\(g(b)\text{,}\)</span> call this point <span class="process-math">\(Y\text{.}\)</span> The IVT guarantees that there is some time <span class="process-math">\(c\)</span>  between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> (so between 10am and 11am) with <span class="process-math">\(g(c) = Y\)</span> (and your  position will be the same as Bob’s).<div class="autopermalink" data-description="Paragraph"><a href="#eg_1_6_4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description='Example 2.5.33: The IVT in the "real world"'><a href="#eg_1_6_4" title='Copy heading and permalink for Example 2.5.33: The IVT in the "real world"' aria-label='Copy heading and permalink for Example 2.5.33: The IVT in the "real world"'>🔗</a></div></article><div class="para logical" id="sec_Ch2Sec4-6-7">
+<div class="para">Aside from finding Bob sitting by the side of the trail, one of the most  important applications of the IVT is determining where a function is zero. For  quadratics we know (or should know) that</div>
+<div class="displaymath process-math" id="sec_Ch2Sec4-6-7-1">
+\begin{align*}
+ax^2+bx+c &amp;= 0 &amp; \text{ when } x &amp;= \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+\end{align*}
+</div>
+<div class="para">While the Babylonians could (mostly, but not quite) do the above, the corresponding  formula for solving a cubic is uglier and that for a quartic is uglier still. One of  the most famous results in mathematics demonstrates that no such  formula exists for quintics or higher degree polynomials </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec_Ch2Sec4-6-8">
+<div class="para">So even for polynomials we cannot, in general, write down explicit  formulae for their zeros and have to make do with numerical approximations —  i.e. write down the root as a decimal expansion to whatever precision we desire.  For more complicated functions we have no choice — there is no reason that the  zeros should be expressible as nice neat little formulas. At the same time,  finding the zeros of a function:</div>
+<div class="displaymath process-math" id="sec_Ch2Sec4-6-8-3">
+\begin{align*}
+f(x) &amp;= 0
+\end{align*}
+</div>
+<div class="para">or solving equations of the form <details class="ptx-footnote" aria-live="polite" id="sec_Ch2Sec4-6-8-4"><summary class="ptx-footnote__number" title="Footnote 2.5.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec_Ch2Sec4-6-8-4">In fact both of these are the same because we  can write <span class="process-math">\(f(x)=g(x)-h(x)\)</span> and then the zeros of <span class="process-math">\(f(x)\)</span> are exactly when <span class="process-math">\(g(x)=h(x)\text{.}\)</span>
+</div></details>
+</div>
+<div class="displaymath process-math" id="sec_Ch2Sec4-6-8-5">
+\begin{align*}
+g(x) &amp;= h(x)
+\end{align*}
+</div>
+<div class="para">can be a crucial step in many mathematical proofs and applications.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1170571120881"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Application of the Intermediate Value Theorem.</span>
+</h4>
+<div class="para" id="fs-id1170571120881-2-1">Show that <span class="process-math">\(f(x)=x-\cos  x\)</span> has at least one zero.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571120881-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170571120881-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170571120881-3-1">Since <span class="process-math">\(f(x)=x-\cos  x\)</span> is continuous over <span class="process-math">\((-\infty ,+\infty ),\)</span> it is continuous over any closed interval of the form <span class="process-math">\([a,b].\)</span> If you can find an interval <span class="process-math">\([a,b]\)</span> such that <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\)</span> have opposite signs, you can use the Intermediate Value Theorem to conclude there must be a real number <span class="process-math">\(c\)</span> in <span class="process-math">\((a,b)\)</span> that satisfies <span class="process-math">\(f(c)=0.\)</span> Note that<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571120881-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1170571120881-3-2">
+\begin{equation*}
+f(0)=0-\cos  (0)=-1\lt 0
+\end{equation*}
+</div>
+<div class="para" id="fs-id1170571120881-3-3">and<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571120881-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1170571120881-3-4">
+\begin{equation*}
+f(\frac{\pi}{2})=\frac{\pi}{2}-\cos \frac{\pi}{2}=\frac{\pi}{2}\gt 0.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1170571120881-3-5">Using the Intermediate Value Theorem, we can see that there must be a real number <span class="process-math">\(c\)</span> in <span class="process-math">\([0,\pi/2]\)</span> that satisfies <span class="process-math">\(f(c)=0.\)</span> Therefore, <span class="process-math">\(f(x)=x-\cos  x\)</span> has at least one zero.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170571120881-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.34.1"><a href="#fs-id1170571120881-3" title="Copy heading and permalink for Solution 2.5.34.1" aria-label="Copy heading and permalink for Solution 2.5.34.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.34: Application of the Intermediate Value Theorem"><a href="#fs-id1170571120881" title="Copy heading and permalink for Example 2.5.34: Application of the Intermediate Value Theorem" aria-label="Copy heading and permalink for Example 2.5.34: Application of the Intermediate Value Theorem">🔗</a></div></article><article class="example example-like" id="fs-id1170573439386"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">When Can You Apply the Intermediate Value Theorem?</span>
+</h4>
+<div class="para" id="fs-id1170573439386-2-1">If <span class="process-math">\(f(x)\)</span> is continuous over <span class="process-math">\([0,2],f(0)\gt 0\)</span> and <span class="process-math">\(f(2)\gt 0,\)</span> can we use the Intermediate Value Theorem to conclude that <span class="process-math">\(f(x)\)</span> has no zeros in the interval <span class="process-math">\([0,2\text{ ]? }\)</span> Explain.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573439386-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170573439386-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170573439386-3-1">No. The Intermediate Value Theorem only allows us to conclude that we can find a value between <span class="process-math">\(f(0)\)</span> and <span class="process-math">\(f(2);\)</span> it doesn’t allow us to conclude that we can’t find other values. To see this more clearly, consider the function <span class="process-math">\(f(x)=(x-1)^2.\)</span> It satisfies <span class="process-math">\(f(0)=1\gt 0,f(2)=1\gt 0,\)</span> and <span class="process-math">\(f(1)=0.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170573439386-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.35.1"><a href="#fs-id1170573439386-3" title="Copy heading and permalink for Solution 2.5.35.1" aria-label="Copy heading and permalink for Solution 2.5.35.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.35: When Can You Apply the Intermediate Value Theorem?"><a href="#fs-id1170573439386" title="Copy heading and permalink for Example 2.5.35: When Can You Apply the Intermediate Value Theorem?" aria-label="Copy heading and permalink for Example 2.5.35: When Can You Apply the Intermediate Value Theorem?">🔗</a></div></article><article class="example example-like" id="fs-id1170570996536"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.36</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">When Can You Apply the Intermediate Value Theorem?</span>
+</h4>
+<div class="para" id="fs-id1170570996536-2-1">For <span class="process-math">\(f(x)=1/x,f(-1)=-1\lt 0\)</span> and <span class="process-math">\(f(1)=1\gt 0.\)</span> Can we conclude that <span class="process-math">\(f(x)\)</span> has a zero in the interval <span class="process-math">\([-1,1]?\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170570996536-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1170570996536-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1170570996536-3-1">No. The function is not continuous over <span class="process-math">\([-1,1].\)</span> The Intermediate Value Theorem does not apply here.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1170570996536-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.36.1"><a href="#fs-id1170570996536-3" title="Copy heading and permalink for Solution 2.5.36.1" aria-label="Copy heading and permalink for Solution 2.5.36.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5.36: When Can You Apply the Intermediate Value Theorem?"><a href="#fs-id1170570996536" title="Copy heading and permalink for Example 2.5.36: When Can You Apply the Intermediate Value Theorem?" aria-label="Copy heading and permalink for Example 2.5.36: When Can You Apply the Intermediate Value Theorem?">🔗</a></div></article><details id="sec_Ch2Sec4-6-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.37</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch2Sec4-6-12-1-1">Show that <span class="process-math">\(f(x)=x^3-x^2-3x+1\)</span> has a zero over the interval <span class="process-math">\([0,1].\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-6-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch2Sec4-6-12-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec4-6-12-3-1">Find <span class="process-math">\(f(0)\)</span> and <span class="process-math">\(f(1).\)</span> Apply the Intermediate Value Theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-6-12-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.5.37.1"><a href="#sec_Ch2Sec4-6-12-3" title="Copy heading and permalink for Hint 2.5.37.1" aria-label="Copy heading and permalink for Hint 2.5.37.1">🔗</a></div>
+</div></details><details id="sec_Ch2Sec4-6-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch2Sec4-6-12-2-1">
+<span class="process-math">\(f(0)=1\gt 0,f(1)=-2\lt 0;f(x)\)</span> is continuous over <span class="process-math">\([0,1].\)</span> It must have a zero on this interval.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec4-6-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.5.37.1"><a href="#sec_Ch2Sec4-6-12-2" title="Copy heading and permalink for Solution 2.5.37.1" aria-label="Copy heading and permalink for Solution 2.5.37.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.5.37"><a href="#sec_Ch2Sec4-6-12" title="Copy heading and permalink for Checkpoint 2.5.37" aria-label="Copy heading and permalink for Checkpoint 2.5.37">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.5.4: The Intermediate Value Theorem"><a href="#sec_Ch2Sec4-6" title="Copy heading and permalink for Subsection 2.5.4: The Intermediate Value Theorem" aria-label="Copy heading and permalink for Subsection 2.5.4: The Intermediate Value Theorem">🔗</a></div></section><div class="autopermalink" data-description="Section 2.5: Continuity"><a href="#sec_Ch2Sec4" title="Copy heading and permalink for Section 2.5: Continuity" aria-label="Copy heading and permalink for Section 2.5: Continuity">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec_Ch2Sec3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
