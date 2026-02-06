@@ -1,3 +1,4 @@
 logs/
 output/**
 **/output
+output/web/index.html
