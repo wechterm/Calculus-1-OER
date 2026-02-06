@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -62,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -78,7 +79,7 @@ window.MathJax = {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="OpenStax Calculus">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -100,16 +101,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.10.0';
+eBookConfig.runestone_version = '7.11.13';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.0d5f811896ddeac1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -134,6 +135,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
 \newcommand{\ds}{\displaystyle}
+\newcommand{\limit}{\ds\lim}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -195,7 +197,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3-12" class="internal"><span class="codenumber">1.3.1.1</span> <span class="title">Break-even Analysis</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3-3" class="internal"><span class="codenumber">1.3.1.1</span> <span class="title">Break-even Analysis</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div>
@@ -250,20 +252,60 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="ch_second.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Limit of a Function</span></a></div>
+<div class="toc-title-box"><a href="sec_Ch2Sec1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">A Preview of Calculus</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.1.3</span> <span class="title">One-Sided Limits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Infinite Limits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2Exercises" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Section Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Tangent Problem and Differential Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Area Problem and Integral Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Other Aspects of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Key Equations</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Limit of a Function</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.2.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.2.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Infinite Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.3.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec3.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Limit Laws</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Limit Laws</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Limits of Polynomial and Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-5" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Additional Limit Evaluation Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-onesidedlimits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-7" class="internal"><span class="codenumber">2.4.5</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsubsec-triglimits" class="internal"><span class="codenumber">2.4.6</span> <span class="title">A Few Important Trigonometric Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-LimitLawProofs" class="internal"><span class="codenumber">2.4.7</span> <span class="title">Proofs of the Limit Laws (Optional)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec4.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Continuity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Continuity at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-4" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Types of Discontinuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-5" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Continuity over an Interval</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-6" class="internal"><span class="codenumber">2.5.4</span> <span class="title">The Intermediate Value Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec6.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Limits at Infinity and Asymptotes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Limits at Infinity and Horizontal Asymptotes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Infinite Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-5" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Formal Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-6" class="internal"><span class="codenumber">2.6.4</span> <span class="title">End Behavior for Polynomials Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-7" class="internal"><span class="codenumber">2.6.5</span> <span class="title">End Behavior for Algebraic Functions</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -327,21 +369,21 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para" id="sec_Ch1Sec2-3-6-1">Consider line <span class="process-math">\(L\)</span> passing through points <span class="process-math">\((x_1,y_1)\)</span> and <span class="process-math">\((x_2,y_2).\)</span> Let <span class="process-math">\(\Delta y=y_2-y_1\)</span> and <span class="process-math">\(\Delta x=x_2-x_1\)</span> denote the changes in <span class="process-math">\(y\)</span> and <span class="process-math">\(x,\)</span> respectively. The <dfn class="terminology">slope</dfn> of the line is<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-3-6-2">
 \begin{equation*}
 m= \frac{y_2-y_1}{x_2-x_1}= \frac{\Delta y}{\Delta x}.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Definition 1.2.3"><a href="#sec_Ch1Sec2-3-6" title="Copy heading and permalink for Definition 1.2.3" aria-label="Copy heading and permalink for Definition 1.2.3">🔗</a></div></article><div class="para" id="sec_Ch1Sec2-3-7">We now examine the relationship between slope and the formula for a linear function. Consider the linear function given by the formula <span class="process-math">\(f(x)=ax+b.\)</span> As discussed earlier, we know the graph of a linear function is given by a line. We can use our definition of slope to calculate the slope of this line. As shown, we can determine the slope by calculating <span class="process-math">\((y_2-y_1) /(x_2-x_1)\)</span> for any points <span class="process-math">\((x_1,y_1)\)</span> and <span class="process-math">\((x_2,y_2)\)</span> on the line. Evaluating the function <span class="process-math">\(f\)</span> at <span class="process-math">\(x= 0 ,\)</span> we see that <span class="process-math">\(( 0 ,b)\)</span> is a point on this line. Evaluating this function at <span class="process-math">\(x= 1 ,\)</span> we see that <span class="process-math">\(( 1 ,a+b)\)</span> is also a point on this line. Therefore, the slope of this line is<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_002.html ./knowl/xref/CNX_Calc_Figure_01_02_003.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_002.html ./knowl/xref/CNX_Calc_Figure_01_02_003.html" id="sec_Ch1Sec2-3-8">
 \begin{equation*}
 \frac{(a+b)-b}{1 - 0}=a.
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec2-3-9">We have shown that the coefficient <span class="process-math">\(a\)</span> is the slope of the line. We can conclude that the formula <span class="process-math">\(f(x)=ax+b\)</span> describes a line with slope <span class="process-math">\(a.\)</span> Furthermore, because this line intersects the <span class="process-math">\(y\)</span>-axis at the point <span class="process-math">\(( 0 ,b),\)</span> we see that the <span class="process-math">\(y\)</span>-intercept for this linear function is <span class="process-math">\(( 0 ,b).\)</span> We conclude that the formula <span class="process-math">\(f(x)=ax+b\)</span> tells us the slope, <span class="process-math">\(a,\)</span> and the <span class="process-math">\(y\)</span>-intercept, <span class="process-math">\(( 0 ,b),\)</span> for this line. Since we often use the symbol <span class="process-math">\(m \)</span> to denote the slope of a line, we can write<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_002.html ./knowl/xref/CNX_Calc_Figure_01_02_003.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_002.html ./knowl/xref/CNX_Calc_Figure_01_02_003.html" id="sec_Ch1Sec2-3-10">
 \begin{equation*}
 f(x)=mx+b
 \end{equation*}
@@ -350,14 +392,14 @@ f(x)=mx+b
 </div>
 <div class="para" id="sec_Ch1Sec2-3-12">Sometimes it is convenient to express a linear function in different ways. For example, suppose the graph of a linear function passes through the point <span class="process-math">\((x_1,y_1)\)</span> and the slope of the line is <span class="process-math">\(m.\)</span> Since any other point <span class="process-math">\((x,f(x))\)</span> on the graph of <span class="process-math">\(f\)</span> must satisfy the equation<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_002.html ./knowl/xref/CNX_Calc_Figure_01_02_003.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_002.html ./knowl/xref/CNX_Calc_Figure_01_02_003.html" id="sec_Ch1Sec2-3-13">
 \begin{equation*}
 m= \frac{f(x)-y_1}{x-x_1},
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec2-3-14">this linear function can be expressed by writing<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_002.html ./knowl/xref/CNX_Calc_Figure_01_02_003.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_002.html ./knowl/xref/CNX_Calc_Figure_01_02_003.html" id="sec_Ch1Sec2-3-15">
 \begin{equation*}
 f(x)-y_1=m(x-x_1).
 \end{equation*}
@@ -366,7 +408,7 @@ f(x)-y_1=m(x-x_1).
 </div>
 <div class="para" id="sec_Ch1Sec2-3-17">Since every nonvertical line is the graph of a linear function, the points on a nonvertical line can be described using the slope-intercept or point-slope equations. However, a vertical line does not represent the graph of a function and cannot be expressed in either of these forms. Instead, a vertical line is described by the equation <span class="process-math">\(x=k\)</span> for some constant <span class="process-math">\(k.\)</span> Since neither the slope-intercept form nor the point-slope form allows for vertical lines, we use the notation<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_002.html ./knowl/xref/CNX_Calc_Figure_01_02_003.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_001.html ./knowl/xref/CNX_Calc_Figure_01_02_002.html ./knowl/xref/CNX_Calc_Figure_01_02_003.html" id="sec_Ch1Sec2-3-18">
 \begin{equation*}
 ax+by=c,
 \end{equation*}
@@ -378,7 +420,7 @@ ax+by=c,
 </h4>
 <div class="para" id="sec_Ch1Sec2-3-20-1">Consider a line passing through the point <span class="process-math">\((x_1,y_1)\)</span> with slope <span class="process-math">\(m.\)</span> The equation<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-3-20-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-3-20-2">
 \begin{equation*}
 y-y_1=m(x-x_1)
 \end{equation*}
@@ -387,7 +429,7 @@ y-y_1=m(x-x_1)
 </div>
 <div class="para" id="sec_Ch1Sec2-3-20-4">Consider a line with slope <span class="process-math">\(m\)</span> and <span class="process-math">\(y\)</span>-intercept <span class="process-math">\(( 0 ,b).\)</span> The equation<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-3-20-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-3-20-5">
 \begin{equation*}
 y=mx+b
 \end{equation*}
@@ -396,7 +438,7 @@ y=mx+b
 </div>
 <div class="para" id="sec_Ch1Sec2-3-20-7">The <dfn class="terminology">standard form of a line</dfn> is given by the equation<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-3-20-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-3-20-8">
 \begin{equation*}
 ax+by=c,
 \end{equation*}
@@ -425,7 +467,7 @@ ax+by=c,
 <div class="solutions"><details id="sec_Ch1Sec2-3-21-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <ol class="decimal" id="sec_Ch1Sec2-3-21-3-1">
 <li id="sec_Ch1Sec2-3-21-3-1-1">
-<div class="para" id="p-derived-sec_Ch1Sec2-3-21-3-1-1">The slope of the line is<div class="displaymath process-math">
+<div class="para" id="p-derived-sec_Ch1Sec2-3-21-3-1-1">The slope of the line is<div class="displaymath process-math" id="sec_Ch1Sec2-3-21-3-1-1-1">
 \begin{equation*}
 m=\frac{y_2-y_1}{x_2-x_1}=\frac{ 5 -( -4 )}{-4 - 11}= \frac{ 9 }{-15 }=- \frac{ 3 }{ 5 }.
 \end{equation*}
@@ -434,7 +476,7 @@ m=\frac{y_2-y_1}{x_2-x_1}=\frac{ 5 -( -4 )}{-4 - 11}= \frac{ 9 }{-15 }=- \frac{ 
 <div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec2-3-21-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="sec_Ch1Sec2-3-21-3-1-2">
-<div class="para" id="p-derived-sec_Ch1Sec2-3-21-3-1-2">To find an equation for the linear function in point-slope form, use the slope <span class="process-math">\(m= -3  / 5 \)</span> and choose any point on the line. If we choose the point <span class="process-math">\(( 11 , -4 ),\)</span> we get the equation<div class="displaymath process-math">
+<div class="para" id="p-derived-sec_Ch1Sec2-3-21-3-1-2">To find an equation for the linear function in point-slope form, use the slope <span class="process-math">\(m= -3  / 5 \)</span> and choose any point on the line. If we choose the point <span class="process-math">\(( 11 , -4 ),\)</span> we get the equation<div class="displaymath process-math" id="sec_Ch1Sec2-3-21-3-1-2-3">
 \begin{equation*}
 f(x)+ 4 =- \frac{ 3 }{ 5 }(x- 11 ).
 \end{equation*}
@@ -443,7 +485,7 @@ f(x)+ 4 =- \frac{ 3 }{ 5 }(x- 11 ).
 <div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec2-3-21-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 <li id="sec_Ch1Sec2-3-21-3-1-3">
-<div class="para" id="p-derived-sec_Ch1Sec2-3-21-3-1-3">To find an equation for the linear function in slope-intercept form, solve the equation in part b. for <span class="process-math">\(f(x).\)</span> When we do this, we get the equation<div class="displaymath process-math">
+<div class="para" id="p-derived-sec_Ch1Sec2-3-21-3-1-3">To find an equation for the linear function in slope-intercept form, solve the equation in part b. for <span class="process-math">\(f(x).\)</span> When we do this, we get the equation<div class="displaymath process-math" id="sec_Ch1Sec2-3-21-3-1-3-2">
 \begin{equation*}
 f(x)=- \frac{ 3}{ 5 }x+ \frac{ 13}{ 5 }.
 \end{equation*}
@@ -501,11 +543,11 @@ f(x)=- \frac{ 3}{ 5 }x+ \frac{ 13}{ 5 }.
 <div class="solutions"><details id="sec_Ch1Sec2-3-23-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <ol class="decimal" id="sec_Ch1Sec2-3-23-3-1">
 <li id="sec_Ch1Sec2-3-23-3-1-1">
-<div class="para" id="p-derived-sec_Ch1Sec2-3-23-3-1-1">At time <span class="process-math">\(t= 0 ,\)</span> Jessica is at her house, so <span class="process-math">\(D( 0 )= 0 .\)</span> At time <span class="process-math">\(t= 78 \)</span> minutes, Jessica has finished running <span class="process-math">\(9 \)</span> mi, so <span class="process-math">\(D( 78 )= 9 .\)</span> The slope of the linear function is<div class="displaymath process-math">
+<div class="para" id="p-derived-sec_Ch1Sec2-3-23-3-1-1">At time <span class="process-math">\(t= 0 ,\)</span> Jessica is at her house, so <span class="process-math">\(D( 0 )= 0 .\)</span> At time <span class="process-math">\(t= 78 \)</span> minutes, Jessica has finished running <span class="process-math">\(9 \)</span> mi, so <span class="process-math">\(D( 78 )= 9 .\)</span> The slope of the linear function is<div class="displaymath process-math" id="sec_Ch1Sec2-3-23-3-1-1-6">
 \begin{equation*}
 m= \frac{ 9 - 0 }{ 78 - 0 }=\frac{ 3 }{ 26 }.
 \end{equation*}
-</div> The <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(( 0 , 0 ),\)</span> so the equation for this linear function is<div class="displaymath process-math">
+</div> The <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(( 0 , 0 ),\)</span> so the equation for this linear function is<div class="displaymath process-math" id="sec_Ch1Sec2-3-23-3-1-1-10">
 \begin{equation*}
 D(t)=\frac{ 3 }{ 26 }t.
 \end{equation*}
@@ -528,7 +570,7 @@ D(t)=\frac{ 3 }{ 26 }t.
 </h3>
 <section class="introduction" id="sec_Ch1Sec2-4-2"><div class="para" id="sec_Ch1Sec2-4-2-1">A linear function is a special type of a more general class of functions: polynomials. A <dfn class="terminology">polynomial function</dfn> is any function that can be written in the form<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-4-2-2">
 \begin{equation*}
 f(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0
 \end{equation*}
@@ -562,14 +604,14 @@ f(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0
 </h5>
 <div class="para" id="sec_Ch1Sec2-4-5-3-2">Consider the quadratic equation<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-4-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-4-5-3-3">
 \begin{equation*}
 ax^2 +bx+c= 0 ,
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec2-4-5-3-4">where <span class="process-math">\(a\neq  0 .\)</span> The solutions of this equation are given by the quadratic formula<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-4-5-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-4-5-3-5">
 \begin{equation*}
 x=\frac{-b\pm \sqrt{b^2- 4 ac}}{ 2 a}.
 \end{equation*}
@@ -606,7 +648,7 @@ x=\frac{-b\pm \sqrt{b^2- 4 ac}}{ 2 a}.
 <li id="sec_Ch1Sec2-4-5-5-3-1-1-2-2">
 <div class="para logical" id="sec_Ch1Sec2-4-5-5-3-1-1-2-2-1">
 <div class="para">To find the zeros of <span class="process-math">\(f,\)</span> use the quadratic formula. The zeros are</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-4-5-5-3-1-1-2-2-1-2">
 \begin{equation*}
 x= \frac{ -4 \pm \sqrt{ 4^2- 4 ( -2 )( -1 )}}{ 2 ( -2 )}= \frac{ -4 \pm \sqrt{ 8 }}{ -4 }= \frac{ -4 \pm  2 \sqrt{ 2 }}{ -4 }=\frac{ 2 \pm \sqrt{ 2 }}{ 2 }.
 \end{equation*}
@@ -636,13 +678,13 @@ x= \frac{ -4 \pm \sqrt{ 4^2- 4 ( -2 )( -1 )}}{ 2 ( -2 )}= \frac{ -4 \pm \sqrt{ 8
 <li id="sec_Ch1Sec2-4-5-5-3-1-2-2-2">
 <div class="para logical" id="sec_Ch1Sec2-4-5-5-3-1-2-2-2-1">
 <div class="para">To find the zeros of <span class="process-math">\(f,\)</span> we need to factor the polynomial. First, when we factor <span class="process-math">\(x\)</span> out of all the terms, we find</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-4-5-5-3-1-2-2-2-1-3">
 \begin{equation*}
 f(x)=x(x^2 - 3 x- 4 ).
 \end{equation*}
 </div>
 <div class="para"> Then, when we factor the quadratic function <span class="process-math">\(x^2 - 3 x- 4 ,\)</span> we find</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-4-5-5-3-1-2-2-2-1-6">
 \begin{equation*}
 f(x)=x(x- 4 )(x+ 1 ).
 \end{equation*}
@@ -706,7 +748,7 @@ f(x)=x(x- 4 )(x+ 1 ).
 </tr>
 </table></div></figure><div class="para" id="sec_Ch1Sec2-4-6-5">In <a href="sec_Ch1Sec3.html#CNX_Calc_Figure_01_02_008" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_02_008.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.3.10">Figure 1.3.10</a>, we see the graph the number of units sold (in thousands) as a function of price (in dollars). We note from the shape of the graph that the number of units sold is likely a linear function of price per item, and the data can be closely approximated by the linear function <span class="process-math">\(n= -1.04 p+ 26 \)</span> for <span class="process-math">\(0 \leq p\leq  25 ,\)</span> where <span class="process-math">\(n\)</span> predicts the number of units sold in thousands. Using this linear function, the revenue (in thousands of dollars) can be estimated by the quadratic function<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-4-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1170573493744.html ./knowl/xref/CNX_Calc_Figure_01_02_008.html ./knowl/xref/fs-id1170573569241.html ./knowl/xref/fs-id1170573493744.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1170573493744.html ./knowl/xref/CNX_Calc_Figure_01_02_008.html ./knowl/xref/fs-id1170573569241.html ./knowl/xref/fs-id1170573493744.html" id="sec_Ch1Sec2-4-6-6">
 \begin{equation*}
 R(p)=p\cdot( -1.04 p+ 26 )= -1.04p^2+ 26 p
 \end{equation*}
@@ -719,7 +761,7 @@ R(p)=p\cdot( -1.04 p+ 26 )= -1.04p^2+ 26 p
 </h5>
 <div class="para" id="sec_Ch1Sec2-4-6-9-2-1">A company is interested in predicting the amount of revenue it will receive depending on the price it charges for a particular item. Using the data from <a href="sec_Ch1Sec3.html#fs-id1170573493744" class="xref" data-knowl="./knowl/xref/fs-id1170573493744.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.3.9: Number of Units Sold x (in Thousands) as a Function of Price per Unit p (in Dollars)">Table 1.3.9</a>, the company arrives at the following quadratic function to model revenue <span class="process-math">\(R\)</span> (in thousands of dollars) as a function of price per item <span class="process-math">\(p:\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-4-6-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1170573493744.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1170573493744.html" id="sec_Ch1Sec2-4-6-9-2-2">
 \begin{equation*}
 R(p)=p\cdot( -1.04 p+ 26 )= -1.04p^2+ 26 p
 \end{equation*}
@@ -779,7 +821,7 @@ R( 17 )= -1.04( 17 )^2+ 26 ( 17 )= 141.44 , \text{ so revenue } =\$144,440.
 </div>
 <div class="para" id="sec_Ch1Sec2-5-3">Just as rational numbers are quotients of integers, rational functions are quotients of polynomials. In particular, a <dfn class="terminology">rational function</dfn> is any function of the form <span class="process-math">\(f(x)=p(x) /q(x),\)</span> where <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> are polynomials. For example,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_02_022.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_02_022.html" id="sec_Ch1Sec2-5-4">
 \begin{equation*}
 f(x)= \frac{ 3 x- 1}{  5 x+ 2 } \text{ and } g(x)=\frac{ 4}{x^2 + 1 }
 \end{equation*}
@@ -807,27 +849,27 @@ f(x)= \frac{ 3 x- 1}{  5 x+ 2 } \text{ and } g(x)=\frac{ 4}{x^2 + 1 }
 <li id="sec_Ch1Sec2-5-6-3-1-1">
 <div class="para logical" id="sec_Ch1Sec2-5-6-3-1-1-1">
 <div class="para">It is not possible to divide by zero, so the domain is the set of real numbers <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\neq - 2  / 5 .\)</span> To find the range, we need to find the values <span class="process-math">\(y\)</span> for which there exists a real number <span class="process-math">\(x\)</span> such that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-5-6-3-1-1-1-5">
 \begin{equation*}
 y=\frac{ 3 x- 1}{ 5 x+ 2 }.
 \end{equation*}
 </div>
 <div class="para">When we multiply both sides of this equation by <span class="process-math">\(5 x+ 2 ,\)</span> we see that <span class="process-math">\(x\)</span> must satisfy the equation</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-5-6-3-1-1-1-8">
 \begin{equation*}
 5 xy+ 2 y= 3 x- 1 .
 \end{equation*}
 </div>
 <div class="para"><div class="para" id="sec_Ch1Sec2-5-6-3-1-1-1-9">From this equation, we can see that <span class="process-math">\(x\)</span> must satisfy<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-5-6-3-1-1-1-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-5-6-3-1-1-1-10">
 \begin{equation*}
 2 y+ 1 =x( 3 - 5 y).
 \end{equation*}
 </div>
 <div class="para">If <span class="process-math">\(y= 3  / 5 ,\)</span> this equation has no solution. On the other hand, as long as <span class="process-math">\(y\neq  3  / 5 ,\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-5-6-3-1-1-1-13">
 \begin{equation*}
 x=\frac{ 2 y+ 1 }{ 3 - 5 y}
 \end{equation*}
@@ -841,13 +883,13 @@ x=\frac{ 2 y+ 1 }{ 3 - 5 y}
 <li id="sec_Ch1Sec2-5-6-3-1-2">
 <div class="para logical" id="sec_Ch1Sec2-5-6-3-1-2-1">
 <div class="para">To find the domain of <span class="process-math">\(f,\)</span> we need <span class="process-math">\(4 -x^2 \geq  0 .\)</span> When we factor, we write <span class="process-math">\(4 -x^2 =( 2 -x)( 2 +x)\geq  0 .\)</span> This inequality holds if and only if both terms are positive or both terms are negative. For both terms to be positive, we need to find <span class="process-math">\(x\)</span> such that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-5-6-3-1-2-1-5">
 \begin{equation*}
 2 -x\geq  0  \text{ and }  2 +x\geq  0 .
 \end{equation*}
 </div>
 <div class="para">These two inequalities reduce to <span class="process-math">\(2 \geq x\)</span> and <span class="process-math">\(x\geq  -2 .\)</span> Therefore, the set <span class="process-math">\({x|- 2 \leq x\leq  2 }\)</span> must be part of the domain. For both terms to be negative, we need</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-5-6-3-1-2-1-9">
 \begin{equation*}
 2 -x\leq  0  \text{ and }  2 +x\geq  0 .
 \end{equation*}
@@ -995,9 +1037,9 @@ x=\frac{ 2 y+ 1 }{ 3 - 5 y}
 </h3>
 <div class="para" id="sec_Ch1Sec2-7-2">Sometimes a function is defined by different formulas on different parts of its domain. A function with this property is known as a <dfn class="terminology">piecewise-defined function</dfn>. The absolute value function is an example of a piecewise-defined function because the formula changes with the sign of <span class="process-math">\(x\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-7-3">
 \begin{equation*}
-f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}\text{.}
+f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\text{.}\end{cases}
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec2-7-4">Other piecewise-defined functions may be represented by completely different formulas, depending on the part of the domain in which a point falls. To graph a piecewise-defined function, we graph each part of the function in its respective domain, on the same coordinate system. If the formula for a function is different for <span class="process-math">\(x\lt a\)</span> and <span class="process-math">\(x\gt a,\)</span> we need to pay special attention to what happens at <span class="process-math">\(x=a\)</span> when we graph the function. Sometimes the graph needs to include an open or closed circle to indicate the value of the function at <span class="process-math">\(x=a.\)</span> We examine this in the next example.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1007,7 +1049,7 @@ f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}\text{.}
 </h4>
 <div class="para" id="sec_Ch1Sec2-7-5-2-1">Sketch a graph of the following piecewise-defined function:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-7-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-7-5-2-2">
 \begin{equation*}
 f(x)=\begin{cases}x+ 3 \amp x\lt  1 \\(x- 2 )^2 \amp x\geq  1 \end{cases}.
 \end{equation*}
@@ -1022,7 +1064,7 @@ f(x)=\begin{cases}x+ 3 \amp x\lt  1 \\(x- 2 )^2 \amp x\geq  1 \end{cases}.
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec2-7-6-1-1">Sketch a graph of the function<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec2-7-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec_Ch1Sec2-7-6-1-2">
 \begin{equation*}
 f(x)=\begin{cases}2 -x \amp x\leq  2 \\ x+ 2  \amp x\gt  2 .\end{cases}
 \end{equation*}
@@ -1059,7 +1101,7 @@ f(x)=\begin{cases}2 -x \amp x\leq  2 \\ x+ 2  \amp x\gt  2 .\end{cases}
 <div class="solutions"><details id="sec_Ch1Sec2-7-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <ol class="decimal" id="sec_Ch1Sec2-7-7-3-1">
 <li id="sec_Ch1Sec2-7-7-3-1-1">
-<div class="para" id="p-derived-sec_Ch1Sec2-7-7-3-1-1">Since the parking garage is open 18 hours each day, the domain for this function is <span class="process-math">\(\{x| 0 \lt x\leq  18 \}.\)</span> The cost to park a car at this parking garage can be described piecewise by the function<div class="displaymath process-math">
+<div class="para" id="p-derived-sec_Ch1Sec2-7-7-3-1-1">Since the parking garage is open 18 hours each day, the domain for this function is <span class="process-math">\(\{x| 0 \lt x\leq  18 \}.\)</span> The cost to park a car at this parking garage can be described piecewise by the function<div class="displaymath process-math" id="sec_Ch1Sec2-7-7-3-1-1-2">
 \begin{equation*}
 C(x)=\begin{cases} 10 \amp 0 \lt x\leq  1 \\ 12 \amp 1 \lt x\leq  2 \\ 14 \amp 2 \lt x\leq  3 \\ 16 \amp 3 \lt x\leq  4 \\ \vdots \\ 30 \amp 10 \lt x\leq  18 \end{cases}.
 \end{equation*}
