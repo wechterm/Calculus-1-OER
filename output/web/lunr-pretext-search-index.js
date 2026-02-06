@@ -3095,6 +3095,348 @@ var ptx_lunr_docs = [
   "number": "2.5.37",
   "title": "",
   "body": " Show that has a zero over the interval    is continuous over It must have a zero on this interval.    Find and Apply the Intermediate Value Theorem.   "
+},
+{
+  "id": "sec_Ch4Sec6",
+  "level": "1",
+  "url": "sec_Ch4Sec6.html",
+  "type": "Section",
+  "number": "2.6",
+  "title": "Limits at Infinity and Asymptotes",
+  "body": " Limits at Infinity and Asymptotes   Learning Objectives   Calculate the limit of a function as increases or decreases without bound.  Recognize a horizontal asymptote on the graph of a function.  Estimate the end behavior of a function as increases or decreases without bound.  Recognize an oblique asymptote on the graph of a function.  Analyze a function and its derivatives to draw its graph.   Up until this point we have discussed what happens to a function as we move its input closer and closer to a particular point . For a great many applications of limits we need to understand what happens to a function when its input becomes extremely large for example what happens to a population at a time far in the future.  The definition of a limit at infinity has a similar flavour to the definition of limits at finite points that we saw above, but the details are a little different. We also need to distinguish between positive and negative infinity. As becomes very large and positive it moves off towards but when it becomes very large and negative it moves off towards .       Limits at Infinity and Horizontal Asymptotes  Recall that means becomes arbitrarily close to as long as is sufficiently close to We can extend this idea to limits at infinity. For example, consider the function As can be seen graphically in and numerically in , as the values of get larger, the values of approach We say the limit as approaches of is and write Similarly, for as the values get larger, the values of approaches We say the limit as approaches of is and write    \"The function f(x) 2 + 1\/x is graphed. The function starts negative near y = 2 but then decreases to −∞ near x = 0. The function then decreases from ∞ near x = 0 and gets nearer to y = 2 as x increases. There is a horizontal line denoting the asymptote y = 2.\"  The function approaches the asymptote as approaches    Values of a function as                                 More generally, for any function we say the limit as of is if becomes arbitrarily close to as long as is sufficiently large. In that case, we write Similarly, we say the limit as of is if becomes arbitrarily close to as long as and is sufficiently large. In that case, we write We now look at the definition of a function having a limit at infinity.   (Informal) If the values of become arbitrarily close to as becomes sufficiently large, we say the function has a limit at infinity and write   If the values of becomes arbitrarily close to for as becomes sufficiently large, we say that the function has a limit at negative infinity and write   If the values are getting arbitrarily close to some finite value as or the graph of approaches the line In that case, the line is a horizontal asymptote of ( ). For example, for the function since the line is a horizontal asymptote of   If or we say the line is a horizontal asymptote of     \"The figure is broken up into two figures labeled a and b. Figure a shows a function f(x) approaching but never touching a horizontal dashed line labeled L from above. Figure b shows a function f(x) approaching but never a horizontal dashed line labeled M from below.\"  (a) As the values of are getting arbitrarily close to The line is a horizontal asymptote of (b) As the values of are getting arbitrarily close to The line is a horizontal asymptote of   A function cannot cross a vertical asymptote because the graph must approach infinity (or from at least one direction as approaches the vertical asymptote. However, a function may cross a horizontal asymptote. In fact, a function may cross a horizontal asymptote an unlimited number of times. For example, the function shown in intersects the horizontal asymptote an infinite number of times as it oscillates around the asymptote with ever-decreasing amplitude.   \"The function f(x) = (cos x)\/x + 1 is shown. It decreases from (0, ∞) and then proceeds to oscillate around y = 1 with decreasing amplitude.\"  The graph of crosses its horizontal asymptote an infinite number of times.   The algebraic limit laws and squeeze theorem we introduced in also apply to limits at infinity. We illustrate how to use these laws to compute several limits at infinity.   Computing Limits at Infinity   For each of the following functions evaluate and Determine the horizontal asymptote(s) for         Using the algebraic limit laws, we have Similarly, Therefore, has a horizontal asymptote of and approaches this horizontal asymptote as as shown in the following graph.   \"The function f(x) = 5 – 2\/x2 is graphed. The function approaches the horizontal asymptote y = 5 as x approaches ±∞.\"  This function approaches a horizontal asymptote as   Since for all we have for all Also, since we can apply the squeeze theorem to conclude that Similarly, Thus, has a horizontal asymptote of and approaches this horizontal asymptote as as shown in the following graph.   \"The function f(x) = (sin x)\/x is shown. It has a global maximum at (0, 1) and then proceeds to oscillate around y = 0 with decreasing amplitude.\"  This function crosses its horizontal asymptote multiple times.   To evaluate and we first consider the graph of over the interval as shown in the following graph.   \"The function f(x) = tan x is shown. It increases from (−π\/2, −∞), passes through the origin, and then increases toward (π\/2, ∞). There are vertical dashed lines marking x = ±π\/2.\"  The graph of has vertical asymptotes at   Since   it follows that   Similarly, since   it follows that   As a result, and are horizontal asymptotes of as shown in the following graph.    \"The function f(x) = tan−1 x is shown. It increases from (−∞, −π\/2), passes through the origin, and then increases toward (∞, π\/2). There are horizontal dashed lines marking y = ±π\/2.\"  This function has two horizontal asymptotes.       Evaluate and Determine the horizontal asymptotes of if any.    Both limits are The line is a horizontal asymptote.        Infinite Limits at Infinity  Sometimes the values of a function become arbitrarily large as (or as In this case, we write (or On the other hand, if the values of are negative but become arbitrarily large in magnitude as (or as we write (or  For example, consider the function As seen in and , as the values become arbitrarily large. Therefore, On the other hand, as the values of are negative but become arbitrarily large in magnitude. Consequently,   Values of a power function as                                       \"The function f(x) = x3 is graphed. It is apparent that this function rapidly approaches infinity as x approaches infinity.\"  For this function, the functional values approach infinity as    (Informal) We say a function has an infinite limit at infinity and write   if becomes arbitrarily large for sufficiently large. We say a function has a negative infinite limit at infinity and write   if and becomes arbitrarily large for sufficiently large. Similarly, we can define infinite limits as   Do not try to add and subtract infinity   Compute the following limit:    In this case we cannot use the arithmetic of limits to write this as because the limits do not exist. We can only use the limit laws when the limits exist. So we should go back and think some more.  When is very large, will be much larger than , so the term will dominate the term. So factor out and rewrite it as Consider what happens to each of the factors as   For large , (this is actually true for any ). In the limit as , becomes arbitrarily large and positive, and must be bigger still, so it follows that   On the other hand, becomes closer and closer to  we can use the arithmetic of limits to write this as   So the product of these two factors will be come larger and larger (and positive) as moves off to infinity. Hence we have      Formal Definitions  Earlier, we used the terms arbitrarily close , arbitrarily large , and sufficiently large to define limits at infinity informally. Although these terms provide accurate descriptions of limits at infinity, they are not precise mathematically. Here are more formal definitions of limits at infinity. We then look at how to use these definitions to prove results involving limits at infinity.   (Formal) We say a function has a limit at infinity , if there exists a real number such that for all there exists such that   for all In that case, we write   (see ).  We say a function has a limit at negative infinity if there exists a real number such that for all there exists such that   for all In that case, we write      \"The function f(x) is graphed, and it has a horizontal asymptote at L. L is marked on the y axis, as is L + ॉ and L – ॉ. On the x axis, N is marked as the value of x such that f(x) = L + ॉ.\"  For a function with a limit at infinity, for all    Earlier in this section, we used graphical evidence in and numerical evidence in to conclude that Here we use the formal definition of limit at infinity to prove this result rigorously.   A Finite Limit at Infinity Example   Use the formal definition of limit at infinity to prove that   Let Let Therefore, for all we have      Use the formal definition of limit at infinity to prove that   Let Let Therefore, for all we have   Therefore,    Let   We now turn our attention to a more precise definition for an infinite limit at infinity.   (Formal) We say a function has an infinite limit at infinity and write   if for all there exists an such that   for all (see ).  We say a function has a negative infinite limit at infinity and write   if for all there exists an such that   for all  Similarly we can define limits as     \"The function f(x) is graphed. It continues to increase rapidly after x = N, and f(N) = M.\"  For a function with an infinite limit at infinity, for all    Earlier, we used graphical evidence ( ) and numerical evidence ( ) to conclude that Here we use the formal definition of infinite limit at infinity to prove that result.   An Infinite Limit at Infinity   Use the formal definition of infinite limit at infinity to prove that    Let Let Then, for all we have   Therefore,     Use the formal definition of infinite limit at infinity to prove that    Let Let Then, for all we have     Let     End Behavior for Polynomials Functions   The behavior of a function as is called the function's end behavior . At each of the function's ends, the function could exhibit one of the following types of behavior:   The function approaches a horizontal asymptote  The function or  The function does not approach a finite limit, nor does it approach or In this case, the function may have some oscillatory behavior.   Let's consider several classes of functions here and look at the different types of end behaviors for these functions.    Consider the power function where is a positive integer. From and , we see that   and     \"The functions x2, x4, and x6 are graphed, and it is apparent that as the exponent grows the functions increase more quickly.\"  For power functions with an even power of      \"The functions x, x3, and x5 are graphed, and it is apparent that as the exponent grows the functions increase more quickly.\"  For power functions with an odd power of  and   Using these facts, it is not difficult to evaluate and where is any constant and is a positive integer. If the graph of is a vertical stretch or compression of and therefore   If the graph of is a vertical stretch or compression combined with a reflection about the -axis, and therefore   If in which case   Limits at Infinity for Power Functions   For each function evaluate and         Since the coefficient of is the graph of involves a vertical stretch and reflection of the graph of about the -axis. Therefore, and  Since the coefficient of is the graph of is a vertical stretch of the graph of Therefore, and       Let Find       The coefficient is negative.   We now look at how the limits at infinity for power functions can be used to determine for any polynomial function Consider a polynomial function   of degree so that Factoring, we see that   As all the terms inside the parentheses approach zero except the first term. We conclude that   For example, the function behaves like as as shown in and .    \"Both functions f(x) = 5x3 – 3x2 + 4 and g(x) = 5x3 are plotted. Their behavior for large positive and large negative numbers converges.\"  The end behavior of a polynomial is determined by the behavior of the term with the largest exponent.    A polynomial's end behavior is determined by the term with the largest exponent.                                           End Behavior for Algebraic Functions  The end behavior for rational functions and functions involving radicals is a little more complicated than for polynomials. In , we show that the limits at infinity of a rational function depend on the relationship between the degree of the numerator and the degree of the denominator. To evaluate the limits at infinity for a rational function, we divide the numerator and denominator by the highest power of appearing in the denominator. This determines which term in the overall expression dominates the behavior of the function at large values of   Determining End Behavior for Rational Functions   For each of the following functions, determine the limits as and Then, use this information to describe the end behavior of the function.  ( Note: The degree of the numerator and the denominator are the same.)  ( Note: The degree of numerator is less than the degree of the denominator.)  ( Note: The degree of numerator is greater than the degree of the denominator.)     The highest power of in the denominator is Therefore, dividing the numerator and denominator by and applying the algebraic limit laws, we see that Since we know that is a horizontal asymptote for this function as shown in the following graph.   \"The function f(x) = (3x + 1)\/(2x + 5) is plotted as is its horizontal asymptote at y = 3\/2.\">   The graph of this rational function approaches a horizontal asymptote as   Since the largest power of appearing in the denominator is divide the numerator and denominator by After doing so and applying algebraic limit laws, we obtain Therefore has a horizontal asymptote of as shown in the following graph.   \"The function f(x) = (3x2 + 2x)\/(4x2 – 5x + 7) is plotted as is its horizontal asymptote at y = 0.\"  The graph of this rational function approaches the horizontal asymptote as   Dividing the numerator and denominator by we have As the denominator approaches As the numerator approaches As the numerator approaches Therefore whereas as shown in the following figure.   \"The function f(x) = (3x2 + 4x)\/(x + 2) is plotted. It appears to have a diagonal asymptote as well as a vertical asymptote at x = −2.\"  As the values As the values       Evaluate and use these limits to determine the end behavior of      Divide the numerator and denominator by   Before proceeding, consider the graph of shown in . As and the graph of appears almost linear. Although is certainly not a linear function, we now investigate why the graph of seems to be approaching a linear function. First, using long division of polynomials, we can write   Since as we conclude that   Therefore, the graph of approaches the line as This line is known as an oblique asymptote for ( ).    \"The function f(x) = (3x2 + 4x)\/(x + 2) is plotted as is its diagonal asymptote y = 3x – 2.\"  The graph of the rational function approaches the oblique asymptote   We can summarize the results of to make the following conclusion regarding end behavior for rational functions. Consider a rational function   where   If the degree of the numerator is the same as the degree of the denominator then has a horizontal asymptote of as  If the degree of the numerator is less than the degree of the denominator then has a horizontal asymptote of as  If the degree of the numerator is greater than the degree of the denominator then does not have a horizontal asymptote. The limits at infinity are either positive or negative infinity, depending on the signs of the leading terms. In addition, using long division, the function can be rewritten as where the degree of is less than the degree of As a result, Therefore, the values of approach zero as If the degree of is exactly one more than the degree of  the function is a linear function. In this case, we call an oblique asymptote. Now let's consider the end behavior for functions involving a radical.   Be careful of limits involving roots  Find the limit as of     We use the same trick try to work out what is the biggest term in the numerator and denominator and pull it to one side.  The denominator is dominated by .  The biggest contribution to the numerator comes from the inside the square-root. When we pull outside the square-root it becomes , so the numerator is dominated by   To see this more explicitly rewrite the numerator   Thus the limit as is      Now let us also think about the limit of the same function, , as . There is something subtle going on because of the square-root. First consider the function    Evaluating this at gives We'll get much the same thing for any . For any , returns exactly . However now consider the function at  that is the function is returning times the input.  This is because when we defined , we defined it to be the positive square-root. i.e. the function can never return a negative number. So being more careful Where the is the absolute value of . You are perhaps used to thinking of absolute value as remove the minus sign , but this is not quite correct. Let's sketch the function    A graph of the absolute value function NEEDS A DESCRIPTION    It is a piecewise function defined by    Hence our function is really So that when we evaluate it is We are now ready to examine the limit as in our previous example. Mostly it is copy and paste from above.  Be careful of limits involving roots continued  Find the limit as of    We use the same trick try to work out what is the biggest term in the numerator and denominator and pull it to one side. Since we are taking the limit as we should think of as a large negative number.  The denominator is dominated by .  The biggest contribution to the numerator comes from the inside the square-root. When we pull the outside a square-root it becomes (since we are taking the limit as ), so the numerator is dominated by   To see this more explicitly rewrite the numerator   Thus the limit as is     So the limit as is almost the same but we gain a minus sign. This is definitely not the case in general you have to think about each example separately.  Here is a sketch of the function in question.    A sketch of the graph of NEEDS DESCRIPTION       Evaluate the limits of as approaches and       Divide the numerator and denominator by       "
+},
+{
+  "id": "CNX_Calc_Figure_04_06_001",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_001",
+  "type": "Figure",
+  "number": "2.6.1",
+  "title": "",
+  "body": "  \"The function f(x) 2 + 1\/x is graphed. The function starts negative near y = 2 but then decreases to −∞ near x = 0. The function then decreases from ∞ near x = 0 and gets nearer to y = 2 as x increases. There is a horizontal line denoting the asymptote y = 2.\"  The function approaches the asymptote as approaches  "
+},
+{
+  "id": "fs-id1165043428402",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#fs-id1165043428402",
+  "type": "Table",
+  "number": "2.6.2",
+  "title": "Values of a function <span class=\"process-math\">\\(f\\)<\/span> as <span class=\"process-math\">\\(x\\to\\pm\\infty\\)<\/span>",
+  "body": " Values of a function as                                "
+},
+{
+  "id": "sec_Ch4Sec6-3-6",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-3-6",
+  "type": "Definition",
+  "number": "2.6.3",
+  "title": "",
+  "body": " (Informal) If the values of become arbitrarily close to as becomes sufficiently large, we say the function has a limit at infinity and write   If the values of becomes arbitrarily close to for as becomes sufficiently large, we say that the function has a limit at negative infinity and write  "
+},
+{
+  "id": "sec_Ch4Sec6-3-8",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-3-8",
+  "type": "Definition",
+  "number": "2.6.4",
+  "title": "",
+  "body": " If or we say the line is a horizontal asymptote of  "
+},
+{
+  "id": "CNX_Calc_Figure_04_06_002",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_002",
+  "type": "Figure",
+  "number": "2.6.5",
+  "title": "",
+  "body": "  \"The figure is broken up into two figures labeled a and b. Figure a shows a function f(x) approaching but never touching a horizontal dashed line labeled L from above. Figure b shows a function f(x) approaching but never a horizontal dashed line labeled M from below.\"  (a) As the values of are getting arbitrarily close to The line is a horizontal asymptote of (b) As the values of are getting arbitrarily close to The line is a horizontal asymptote of  "
+},
+{
+  "id": "CNX_Calc_Figure_04_06_003",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_003",
+  "type": "Figure",
+  "number": "2.6.6",
+  "title": "",
+  "body": "  \"The function f(x) = (cos x)\/x + 1 is shown. It decreases from (0, ∞) and then proceeds to oscillate around y = 1 with decreasing amplitude.\"  The graph of crosses its horizontal asymptote an infinite number of times.  "
+},
+{
+  "id": "fs-id1165042962649",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#fs-id1165042962649",
+  "type": "Example",
+  "number": "2.6.7",
+  "title": "Computing Limits at Infinity.",
+  "body": " Computing Limits at Infinity   For each of the following functions evaluate and Determine the horizontal asymptote(s) for         Using the algebraic limit laws, we have Similarly, Therefore, has a horizontal asymptote of and approaches this horizontal asymptote as as shown in the following graph.   \"The function f(x) = 5 – 2\/x2 is graphed. The function approaches the horizontal asymptote y = 5 as x approaches ±∞.\"  This function approaches a horizontal asymptote as   Since for all we have for all Also, since we can apply the squeeze theorem to conclude that Similarly, Thus, has a horizontal asymptote of and approaches this horizontal asymptote as as shown in the following graph.   \"The function f(x) = (sin x)\/x is shown. It has a global maximum at (0, 1) and then proceeds to oscillate around y = 0 with decreasing amplitude.\"  This function crosses its horizontal asymptote multiple times.   To evaluate and we first consider the graph of over the interval as shown in the following graph.   \"The function f(x) = tan x is shown. It increases from (−π\/2, −∞), passes through the origin, and then increases toward (π\/2, ∞). There are vertical dashed lines marking x = ±π\/2.\"  The graph of has vertical asymptotes at   Since   it follows that   Similarly, since   it follows that   As a result, and are horizontal asymptotes of as shown in the following graph.    \"The function f(x) = tan−1 x is shown. It increases from (−∞, −π\/2), passes through the origin, and then increases toward (∞, π\/2). There are horizontal dashed lines marking y = ±π\/2.\"  This function has two horizontal asymptotes.    "
+},
+{
+  "id": "sec_Ch4Sec6-3-14",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-3-14",
+  "type": "Checkpoint",
+  "number": "2.6.12",
+  "title": "",
+  "body": "  Evaluate and Determine the horizontal asymptotes of if any.    Both limits are The line is a horizontal asymptote.     "
+},
+{
+  "id": "fs-id1165042406634",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#fs-id1165042406634",
+  "type": "Table",
+  "number": "2.6.13",
+  "title": "Values of a power function as <span class=\"process-math\">\\(x\\to\\pm\\infty\\)<\/span>",
+  "body": " Values of a power function as                                    "
+},
+{
+  "id": "CNX_Calc_Figure_04_06_008",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_008",
+  "type": "Figure",
+  "number": "2.6.14",
+  "title": "",
+  "body": "  \"The function f(x) = x3 is graphed. It is apparent that this function rapidly approaches infinity as x approaches infinity.\"  For this function, the functional values approach infinity as  "
+},
+{
+  "id": "sec_Ch4Sec6-4-6",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-4-6",
+  "type": "Definition",
+  "number": "2.6.15",
+  "title": "",
+  "body": " (Informal) We say a function has an infinite limit at infinity and write   if becomes arbitrarily large for sufficiently large. We say a function has a negative infinite limit at infinity and write   if and becomes arbitrarily large for sufficiently large. Similarly, we can define infinite limits as  "
+},
+{
+  "id": "eg_1_5_3",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#eg_1_5_3",
+  "type": "Example",
+  "number": "2.6.16",
+  "title": "Do not try to add and subtract infinity.",
+  "body": "Do not try to add and subtract infinity   Compute the following limit:    In this case we cannot use the arithmetic of limits to write this as because the limits do not exist. We can only use the limit laws when the limits exist. So we should go back and think some more.  When is very large, will be much larger than , so the term will dominate the term. So factor out and rewrite it as Consider what happens to each of the factors as   For large , (this is actually true for any ). In the limit as , becomes arbitrarily large and positive, and must be bigger still, so it follows that   On the other hand, becomes closer and closer to  we can use the arithmetic of limits to write this as   So the product of these two factors will be come larger and larger (and positive) as moves off to infinity. Hence we have   "
+},
+{
+  "id": "sec_Ch4Sec6-5-2",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-5-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "arbitrarily close arbitrarily large sufficiently large "
+},
+{
+  "id": "sec_Ch4Sec6-5-3",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-5-3",
+  "type": "Definition",
+  "number": "2.6.17",
+  "title": "",
+  "body": " (Formal) We say a function has a limit at infinity , if there exists a real number such that for all there exists such that   for all In that case, we write   (see ).  We say a function has a limit at negative infinity if there exists a real number such that for all there exists such that   for all In that case, we write   "
+},
+{
+  "id": "CNX_Calc_Figure_04_06_009",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_009",
+  "type": "Figure",
+  "number": "2.6.18",
+  "title": "",
+  "body": "  \"The function f(x) is graphed, and it has a horizontal asymptote at L. L is marked on the y axis, as is L + ॉ and L – ॉ. On the x axis, N is marked as the value of x such that f(x) = L + ॉ.\"  For a function with a limit at infinity, for all   "
+},
+{
+  "id": "fs-id1165042970473",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#fs-id1165042970473",
+  "type": "Example",
+  "number": "2.6.19",
+  "title": "A Finite Limit at Infinity Example.",
+  "body": " A Finite Limit at Infinity Example   Use the formal definition of limit at infinity to prove that   Let Let Therefore, for all we have    "
+},
+{
+  "id": "sec_Ch4Sec6-5-7",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-5-7",
+  "type": "Checkpoint",
+  "number": "2.6.20",
+  "title": "",
+  "body": "  Use the formal definition of limit at infinity to prove that   Let Let Therefore, for all we have   Therefore,    Let  "
+},
+{
+  "id": "sec_Ch4Sec6-5-9",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-5-9",
+  "type": "Definition",
+  "number": "2.6.21",
+  "title": "",
+  "body": " (Formal) We say a function has an infinite limit at infinity and write   if for all there exists an such that   for all (see ).  We say a function has a negative infinite limit at infinity and write   if for all there exists an such that   for all  Similarly we can define limits as  "
+},
+{
+  "id": "CNX_Calc_Figure_04_06_010",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_010",
+  "type": "Figure",
+  "number": "2.6.22",
+  "title": "",
+  "body": "  \"The function f(x) is graphed. It continues to increase rapidly after x = N, and f(N) = M.\"  For a function with an infinite limit at infinity, for all   "
+},
+{
+  "id": "fs-id1165042323534",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#fs-id1165042323534",
+  "type": "Example",
+  "number": "2.6.23",
+  "title": "An Infinite Limit at Infinity.",
+  "body": " An Infinite Limit at Infinity   Use the formal definition of infinite limit at infinity to prove that    Let Let Then, for all we have   Therefore,   "
+},
+{
+  "id": "sec_Ch4Sec6-5-13",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-5-13",
+  "type": "Checkpoint",
+  "number": "2.6.24",
+  "title": "",
+  "body": "  Use the formal definition of infinite limit at infinity to prove that    Let Let Then, for all we have     Let  "
+},
+{
+  "id": "sec_Ch4Sec6-6-2-1",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-6-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "end behavior "
+},
+{
+  "id": "CNX_Calc_Figure_04_06_011",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_011",
+  "type": "Figure",
+  "number": "2.6.25",
+  "title": "",
+  "body": "  \"The functions x2, x4, and x6 are graphed, and it is apparent that as the exponent grows the functions increase more quickly.\"  For power functions with an even power of   "
+},
+{
+  "id": "CNX_Calc_Figure_04_06_012",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_012",
+  "type": "Figure",
+  "number": "2.6.26",
+  "title": "",
+  "body": "  \"The functions x, x3, and x5 are graphed, and it is apparent that as the exponent grows the functions increase more quickly.\"  For power functions with an odd power of  and  "
+},
+{
+  "id": "fs-id1165043219126",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#fs-id1165043219126",
+  "type": "Example",
+  "number": "2.6.27",
+  "title": "Limits at Infinity for Power Functions.",
+  "body": " Limits at Infinity for Power Functions   For each function evaluate and         Since the coefficient of is the graph of involves a vertical stretch and reflection of the graph of about the -axis. Therefore, and  Since the coefficient of is the graph of is a vertical stretch of the graph of Therefore, and    "
+},
+{
+  "id": "sec_Ch4Sec6-6-15",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-6-15",
+  "type": "Checkpoint",
+  "number": "2.6.28",
+  "title": "",
+  "body": "  Let Find       The coefficient is negative.  "
+},
+{
+  "id": "CNX_Calc_Figure_04_06_013",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_013",
+  "type": "Figure",
+  "number": "2.6.29",
+  "title": "",
+  "body": "  \"Both functions f(x) = 5x3 – 3x2 + 4 and g(x) = 5x3 are plotted. Their behavior for large positive and large negative numbers converges.\"  The end behavior of a polynomial is determined by the behavior of the term with the largest exponent.  "
+},
+{
+  "id": "fs-id1165043250976",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#fs-id1165043250976",
+  "type": "Table",
+  "number": "2.6.30",
+  "title": "A polynomial’s end behavior is determined by the term with the largest exponent.",
+  "body": " A polynomial's end behavior is determined by the term with the largest exponent.                                        "
+},
+{
+  "id": "fs-id1165042638553",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#fs-id1165042638553",
+  "type": "Example",
+  "number": "2.6.31",
+  "title": "Determining End Behavior for Rational Functions.",
+  "body": " Determining End Behavior for Rational Functions   For each of the following functions, determine the limits as and Then, use this information to describe the end behavior of the function.  ( Note: The degree of the numerator and the denominator are the same.)  ( Note: The degree of numerator is less than the degree of the denominator.)  ( Note: The degree of numerator is greater than the degree of the denominator.)     The highest power of in the denominator is Therefore, dividing the numerator and denominator by and applying the algebraic limit laws, we see that Since we know that is a horizontal asymptote for this function as shown in the following graph.   \"The function f(x) = (3x + 1)\/(2x + 5) is plotted as is its horizontal asymptote at y = 3\/2.\">   The graph of this rational function approaches a horizontal asymptote as   Since the largest power of appearing in the denominator is divide the numerator and denominator by After doing so and applying algebraic limit laws, we obtain Therefore has a horizontal asymptote of as shown in the following graph.   \"The function f(x) = (3x2 + 2x)\/(4x2 – 5x + 7) is plotted as is its horizontal asymptote at y = 0.\"  The graph of this rational function approaches the horizontal asymptote as   Dividing the numerator and denominator by we have As the denominator approaches As the numerator approaches As the numerator approaches Therefore whereas as shown in the following figure.   \"The function f(x) = (3x2 + 4x)\/(x + 2) is plotted. It appears to have a diagonal asymptote as well as a vertical asymptote at x = −2.\"  As the values As the values     "
+},
+{
+  "id": "sec_Ch4Sec6-7-4",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-7-4",
+  "type": "Checkpoint",
+  "number": "2.6.35",
+  "title": "",
+  "body": " Evaluate and use these limits to determine the end behavior of      Divide the numerator and denominator by  "
+},
+{
+  "id": "sec_Ch4Sec6-7-9",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-7-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "oblique asymptote "
+},
+{
+  "id": "CNX_Calc_Figure_04_06_017",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_017",
+  "type": "Figure",
+  "number": "2.6.36",
+  "title": "",
+  "body": "  \"The function f(x) = (3x2 + 4x)\/(x + 2) is plotted as is its diagonal asymptote y = 3x – 2.\"  The graph of the rational function approaches the oblique asymptote  "
+},
+{
+  "id": "eg_lim_tricky",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#eg_lim_tricky",
+  "type": "Example",
+  "number": "2.6.37",
+  "title": "Be careful of limits involving roots.",
+  "body": "Be careful of limits involving roots  Find the limit as of     We use the same trick try to work out what is the biggest term in the numerator and denominator and pull it to one side.  The denominator is dominated by .  The biggest contribution to the numerator comes from the inside the square-root. When we pull outside the square-root it becomes , so the numerator is dominated by   To see this more explicitly rewrite the numerator   Thus the limit as is     "
+},
+{
+  "id": "absolutevalue",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#absolutevalue",
+  "type": "Figure",
+  "number": "2.6.38",
+  "title": "",
+  "body": " A graph of the absolute value function NEEDS A DESCRIPTION   "
+},
+{
+  "id": "eg_lim_tricky_part2",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#eg_lim_tricky_part2",
+  "type": "Example",
+  "number": "2.6.39",
+  "title": "Be careful of limits involving roots — continued.",
+  "body": "Be careful of limits involving roots continued  Find the limit as of    We use the same trick try to work out what is the biggest term in the numerator and denominator and pull it to one side. Since we are taking the limit as we should think of as a large negative number.  The denominator is dominated by .  The biggest contribution to the numerator comes from the inside the square-root. When we pull the outside a square-root it becomes (since we are taking the limit as ), so the numerator is dominated by   To see this more explicitly rewrite the numerator   Thus the limit as is    "
+},
+{
+  "id": "limitsatnegativeinf",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#limitsatnegativeinf",
+  "type": "Figure",
+  "number": "2.6.40",
+  "title": "",
+  "body": " A sketch of the graph of NEEDS DESCRIPTION   "
+},
+{
+  "id": "sec_Ch4Sec6-7-25",
+  "level": "2",
+  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-7-25",
+  "type": "Checkpoint",
+  "number": "2.6.41",
+  "title": "",
+  "body": "  Evaluate the limits of as approaches and       Divide the numerator and denominator by   "
 }
 ]
 

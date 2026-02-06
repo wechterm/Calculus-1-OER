@@ -395,7 +395,7 @@
 
 <figure xml:id="IVT-image">
   <caption>Without continuity, there could be a <m>y</m>-value that is "missed" between two other <m>y</m>-values in the range of <m>f(x)</m> <alert>NEEDS ALT TEXT. Text below agrees with notation in the picture (Y instead of z)</alert></caption>
-  <image source="UBC_fig_2-5.svg" width="100%"/>
+  <image source="UBC_fig_2_5_1.svg" width="100%"/>
 </figure>
 
 <p>

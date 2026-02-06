@@ -14,5 +14,5 @@
   <xi:include href="./sec-Ch2Sec3LimitDef.ptx" />
   <xi:include href="./sec_Ch2Sec4LimitLaws.ptx" />
   <xi:include href="./sec_Ch2Sec5.ptx" />
-  <!--xi:include href="./sec_Ch2Sec4.ptx" /-->
+  <xi:include href="./sec_Ch2Sec6.ptx"/>
 </chapter>
