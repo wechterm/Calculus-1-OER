@@ -63,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -79,7 +79,7 @@ window.MathJax = {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="OpenStax Calculus">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -110,7 +110,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.0d5f811896ddeac1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -1392,7 +1392,7 @@ f(-x)=(-x)^3=-x^3=-f(x).
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_012.html ./knowl/xref/CNX_Calc_Figure_01_01_013.html" id="sec_Ch1Sec1-6-12">
 \begin{equation*}
-f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}\text{.}
+f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\text{.}\end{cases}
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec1-6-13">Some students describe this function by stating that it “makes everything positive.” By the definition of the absolute value function, we see that if <span class="process-math">\(x \lt 0,\)</span> then <span class="process-math">\(|x|=-x \gt 0,\)</span> and if <span class="process-math">\(x\gt 0,\)</span> then <span class="process-math">\(|x|=x\gt 0.\)</span> However, for <span class="process-math">\(x=0,|x|=0.\)</span> Therefore, it is more accurate to say that for all nonzero inputs, the output is positive, but if <span class="process-math">\(x=0,\)</span> the output <span class="process-math">\(|x|=0.\)</span> We conclude that the range of the absolute value function is <span class="process-math">\(\{y|y \geq 0\}.\)</span> In <a href="sec_Ch1Sec1.html#CNX_Calc_Figure_01_01_013" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_01_013.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.42">Figure 1.1.42</a>, we see that the absolute value function is symmetric about the <span class="process-math">\(y\)</span>-axis and is therefore an even function.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec1-6-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1494,7 +1494,7 @@ x=\pm\frac{1}{2}(y-4)+3.
 <li id="sec_Ch1Sec1-8-2-2">
 <div class="para" id="p-derived-sec_Ch1Sec1-8-2-2">Absolute value function<div class="displaymath process-math" id="sec_Ch1Sec1-8-2-2-3">
 \begin{equation*}
-f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}\text{.}
+f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\text{.}\end{cases}
 \end{equation*}
 </div>
 </div>

@@ -62,3 +62,30 @@ Just open the command palette (`Ctrl+Shift+P` of `F1`) and search for "PreTeXt: 
 
 ### Link to Kathy's Edits
 https://dupageedu-my.sharepoint.com/:f:/g/personal/kosrowl_cod_edu/EhARkHyWcw5EiVA9J8XHsvEBBk3_VhTFKORFegU-iqwaRw?e=0AFCGd
+
+### Link to UBC Calculus
+https://personal.math.ubc.ca/~CLP/CLP1/
+https://github.com/arechnitzer/CLP1/tree/master/pretext
+
+### To Change Project With Git
+- Open the codespace on the main branch
+
+- Update your local repository first 
+    ```
+    git pull
+    ```
+
+- Make changes to the project
+- Add files to be updated in the main repository
+    ```
+    git add .
+    ```
+- Commit the changes you made
+    ```
+    git commit -m "short messages on changes made"
+    ```
+- Push the committed changes to the main repository
+    ```
+    git push origin master
+    ```
+- Once pushed, the owner of the repository (Matt) has to approve them and then deploy to the common site
