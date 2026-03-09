@@ -398,6 +398,13 @@
   <image source="UBC_fig_2_5_1.svg" width="100%"/>
 </figure>
 
+
+<image>
+<prefigure xmlns="https://prefigure.org" label="prefigure-IVT" >
+<xi:include href="prefigure/IVT.xml"/>
+</prefigure>
+</image>
+
 <p>
   In the left-hand example we see that a discontinuous function can "jump" over the <m>Y</m>-value we have chosen, so there is no <m>x</m>-value that makes <m>f(x)=Y</m>.  The right-hand example demonstrates why we need to be careful with the ends of the interval.  In particular, a function must be continuous over the whole interval <m>[a,b]</m> <em>including</em> the endpoints of the interval.  If we only required the function to be continuous on <m>(a,b)</m> (so strictly between <m>a</m>) and <m>b</m> then the function could "jump" over the <m>Y</m>-value at <m>a</m> or <m>b</m>.
 </p>
