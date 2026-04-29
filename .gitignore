@@ -1,5 +1,5 @@
 logs/
 output/
 output/**
-**/output
+**/output/**
 output/web/index.html
