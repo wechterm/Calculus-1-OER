@@ -23,6 +23,9 @@
 \newcommand{\R}{\mathbb R}
 \newcommand{\ds}{\displaystyle}
 \newcommand{\limit}{\ds\lim} 
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
 </macros>
 
 <!-- If you put any latex-image elements you can include preambles  -->
