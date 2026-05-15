@@ -63,6 +63,9 @@ Just open the command palette (`Ctrl+Shift+P` of `F1`) and search for "PreTeXt: 
 ### Link to Kathy's Edits
 https://dupageedu-my.sharepoint.com/:f:/g/personal/kosrowl_cod_edu/EhARkHyWcw5EiVA9J8XHsvEBBk3_VhTFKORFegU-iqwaRw?e=0AFCGd
 
+### Link to OpenStax Calculus 1
+https://openstax.org/books/calculus-volume-1/pages/1-introduction
+
 ### Link to UBC Calculus
 https://personal.math.ubc.ca/~CLP/CLP1/
 https://github.com/arechnitzer/CLP1/tree/master/pretext

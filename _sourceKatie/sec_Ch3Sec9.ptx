@@ -184,8 +184,9 @@ As we develop these formulas, we need to make certain basic assumptions. The pro
 <mrow>\amp =\frac{e^{x^2}(2x^2- 1)}{x^2}\amp \amp\text{ Simplify. }</mrow></md>
 </solution>
 </example>
-<exercise>  <statement id="fs-id1169737923849">
-<p id="fs-id1169737923851">Find the derivative of <m>h(x)=xe^{2x}.</m></p>
+<exercise>  
+  <statement id="fs-id1169737923849">
+  <p id="fs-id1169737923851">Find the derivative of <m>h(x)=xe^{2x}.</m></p>
 </statement>
 <solution id="fs-id1169737948360">
 <p id="fs-id1169737948362"><m>h'(x)=e^{2x}+2xe^{2x}</m></p>

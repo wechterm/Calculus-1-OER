@@ -28,10 +28,9 @@
 <p>If profits are negative, this is considered a <m>loss</m> and if profits are positive, this is considered a <m>gain</m>.</p>
 </introduction>
 
-<subsubsection>
-<title>Break-even Analysis</title>
+<definition>
 <p>Companies often look for the point at which there is no <m>loss</m> or <m>gain</m>. This gives you the minimum number of units a company must produce in order to make a profit.</p>
-<definition>The <term>break-even quantity</term> is the number of units <m>x</m> needed so that cost and revenue are equal, meaning the total profit is zero. That is, <m>C(x)=R(x)</m> or <m>P(x)=0</m>.
+The <term>break-even quantity</term> is the number of units <m>x</m> needed so that cost and revenue are equal, meaning the total profit is zero. That is, <m>C(x)=R(x)</m> or <m>P(x)=0</m>.
 </definition>
 <p> Observe that <m>C(x)=R(x)</m> and <m>P(x)=0</m> will yield the same break-even quantity solution since <m>R=C</m> if and only if <m>P=0</m>.</p>
 <!--insert break even, gain and loss figure here-->
@@ -79,11 +78,12 @@
   Recall that <m>P=R-C</m> and to find the break-even quantity, we can solve either <m>R=C</m> or <m>P=0</m>.
   </hint>
   </exercise>
-</subsubsection>
+
 </subsection>
 
 <subsection>
 <title>Mathematical Models of Supply and Demand</title>
+
 <p>The <term>demand equation</term> <m>p(x)</m> gives you the price <m>p</m> of one unit if <m>x</m> units are sold. The <term>supply equation</term> <m>p(x)</m> gives you the price <m>p</m> needed to make <m>x</m> units available to the market. If we supply more units than the market demanded, this is considered a <m>surplus</m>. If we supply less units than the market demanded, this is considered a <m>shortage</m>.</p>
 <example>
    <statement>
@@ -114,10 +114,10 @@
   Use point-slope form to construct the linear supply equation.
   </hint>
   </exercise>
-  <subsubsection>
-  <title>Equilibrium</title>
+
+<definition>
   <p>Companies often look for the amount of units needed to guarantee there is neither a <m>surplus</m> or <m>shortage</m> of units. Meaning, we want supply and demand to be equal which brings us to the following definition.</p>
-<definition>The <term>equilibrium point</term> <m>\;(x,p)</m> is the number of units <m>x</m> needed at a selling price <m>p</m> where supply and demand are equal. The <m>x</m>-coordinate is the <term>equilibrium quantity</term> and the <m>y</m>-coordinate is the <term>equilibrium price</term>.
+The <term>equilibrium point</term> <m>\;(x,p)</m> is the number of units <m>x</m> needed at a selling price <m>p</m> where supply and demand are equal. The <m>x</m>-coordinate is the <term>equilibrium quantity</term> and the <m>y</m>-coordinate is the <term>equilibrium price</term>.
 </definition>
 <!--insert equilibrium, surplus, shortage figure here-->
   <example>
@@ -153,7 +153,7 @@
   Recall that we must set the supply and demand equations equal to one another to find the equilibrium quantity.
   </hint>
   </exercise>
-  </subsubsection>
+
 </subsection>
   <subsection>
   <title>Quadratic Mathematical Models</title>
