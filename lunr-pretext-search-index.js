@@ -916,7 +916,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Mathematical Modeling",
-  "body": " Mathematical Modeling   Learning Objectives   Discuss linear mathematical models for cost, revenue, profit, supply, and demand functions.  Find and analyze the break-even quantity and equilibrium point.  Discuss quadratic mathematical models.  Find and analyze the vertex point of a quadratic function.  Optimize cost, revenue, and profit functions.   A large variety of real-world situations can be described using mathematical models . A mathematical model is a method of simulating real-life situations with mathematical equations. Physicists, engineers, economists, and other researchers develop models by combining observation with quantitative data to develop equations, functions, graphs, and other mathematical tools to describe the behavior of various systems accurately. Models are useful because they help predict future outcomes. Examples of mathematical models include the study of population dynamics, investigations of weather patterns, and predictions of product sales.    Mathematical Models of Cost, Revenue, and Profit   Given the number of units produced, the cost function outputs the amount a business or company must pay in order to produce units. There are typicically two types of costs: fixed and variable. In a linear cost model, the cost function is expressed as   where is the cost per unit also referred to as the variable or marginal cost . Here, the variable cost term depends on the number of units produced. Some examples of variable\/marginal costs are labor, material, or manufacturing costs. Additionally, are the fixed costs which is the amount one must pay to operate a business. The fixed cost is independent of the number of units produced. It often represents the amount one must pay if 0 units are produced since is the -intercept of the cost function. That is, . Some examples of fixed costs are rent, utility bills, or operating costs.  The revenue function outputs the payment received from selling units. In a linear model, the revenue is   where is the selling price per unit which is also called the marginal revenue .  The profit function outputs the net proceeds after paying off the expenses\/costs. That is,  . Notice that the above definition for the profit function holds if either of our revenue or cost functions are non-linear.  If profits are negative, this is considered a and if profits are positive, this is considered a .    Break-even Analysis  Companies often look for the point at which there is no or . This gives you the minimum number of units a company must produce in order to make a profit.  The break-even quantity is the number of units needed so that cost and revenue are equal, meaning the total profit is zero. That is, or .  Observe that and will yield the same break-even quantity solution since if and only if .     Peter's ice cream stand has an operating cost of $200 per week. The cost to make an ice cream sundae is $2 and they sell for $6. Compute the cost, revenue, and profit functions for one week. Then, find the break-even quantity. Let represent the number of ice cream sundaes sold.   Since our operating costs (fixed costs) are $200 per week and the marginal cost is $2 per ice cream sundae, then . Since the selling price is $6 per ice cream sundae, then . Using and , we can obtain the profit function.     To find the break-even quantity, we may proceed by using two different methods. Both yield the same solution.  Method 1:      Method 2:     Peter must sell at least 50 ice cream sundaes in one week in order to make a profit.     A suit department store has an operating cost of $1000 per week. The cost to supply a suit is $50 each and they sell for $150 each. Compute the cost, revenue, and profit functions for one week. Then, find the break-even quantity. Let represent the number of suits sold.    The cost and revenue functions are Profit function:  Break-even quantity:   The department store must sell at least 10 suits in one week in order to make a profit.  Recall that and to find the break-even quantity, we can solve either or .      Mathematical Models of Supply and Demand  The demand equation  gives you the price of one unit if units are sold. The supply equation  gives you the price needed to make units available to the market. If we supply more units than the market demanded, this is considered a . If we supply less units than the market demanded, this is considered a .    Suppose that 500 units of a certain item are sold per day by the entire industry at a price of $20 per item and that 1500 units can be sold per day by the same industry at a price of $15 per unit. Assuming a linear model, find the demand equation where is the number of units sold per day.    Observe that 500 units are sold at a price of $20 per unit gives us the ordered pair . Moreover, we also have that 1500 units are sold at a price of $15 per unit. That is, .  Since the demand equation is linear, we can compute the slope of the line by using the above ordered pairs.  Using point-slope form,  Hence, our demand equation is .    Suppose that when 100 units of a certain item are supplied, they are sold at a price of $1.25 per unit. When 80 more units of a certain item are supplied, the price per unit increased by $1. Assuming a linear model, find the supply equation where is the number of units sold.   Using the ordered pairs and ,  Supply equation:  .  Use point-slope form to construct the linear supply equation.    Equilibrium  Companies often look for the amount of units needed to guarantee there is neither a or of units. Meaning, we want supply and demand to be equal which brings us to the following definition.  The equilibrium point  is the number of units needed at a selling price where supply and demand are equal. The -coordinate is the equilibrium quantity and the -coordinate is the equilibrium price .    Suppose the supply and demand equations for Peter's ice cream stand are and respectively. Find the equilibrium price and quantity. Suppose is the number of ice cream sundaes sold and the price per sundae is in dollars.  In order to find the equilibrium point we must set Peter's supply and demand equations equal to one another.    The equilibrium quantity is 20 ice cream sundaes.  Next, we can use either the supply or demand equation to solve for the equilibrium price. Notice that both equations will yield the same result.  Method 1: Using the supply equation.  Method 2: Using the demand equation. The equilibrium price is $7.    The supply and demand equations for Lola's smoothie shop are and respectively. Find the equilibrium point. Suppose is the number of smoothies sold in one day and the price per smoothie is in dollars.  Setting Lola's supply and demand equations equal to one another,   The equilibrium quantity is 20 smoothies. Using the supply equation: The equilibrium price is $5.  Recall that we must set the supply and demand equations equal to one another to find the equilibrium quantity.      Quadratic Mathematical Models  As we saw in the previous section, a quadratic polynomial is typically of the form where if the graph of opens upward and if the graph of opens downward. (See (a).) The quadratic polynomial can also be written in standard form . The point is called the vertex point . The -coordinate of the vertex point can be found using the vertex formula : The -coordinate of the vertex point can be found by evaluating the quadratic function at . That is, . Notice here that if the parabola opens upward, then the vertex is a . Conversely, if the parabola opens downward, the vertex is a .   As an example, let’s consider a mathematical model that a company could use to describe its revenue for the sale of a particular item. Recall the revenue equation The company is interested in how the sales change as the price of the item changes. Suppose the data in show the number of units a company sells as a function of the price per item.   Number of Units Sold (in Thousands) as a Function of Price per Unit (in Dollars)                     In , we see the graph the number of units sold (in thousands) as a function of price (in dollars). We note from the shape of the graph that the number of units sold is likely a linear function of price per item, and the data can be closely approximated by the linear function for where predicts the number of units sold in thousands. Using this linear function, the revenue (in thousands of dollars) can be estimated by the quadratic function   for In , we use this quadratic function to predict the amount of revenue the company receives depending on the price the company charges per item. Note that we cannot conclude definitively the actual number of units sold for values of for which no data are collected. However, given the other data values and the graph shown, it seems reasonable that the number of units sold (in thousands) if the price charged is dollars may be close to the values predicted by the linear function    \"An image of a graph. The y axis runs from 0 to 28 and is labeled “n, units sold in thousands”. The x axis runs from 0 to 28 and is labeled “p, price in dollars”. The graph is of the function “x = -1.04p + 26”, which is a decreasing line function that starts at the y intercept point (0, 26). There are 5 points plotted on the graph at (6, 19.4), (8, 18.5), (10, 16.2), (12, 13.8), and (14, 12.2). The points are not on the graph of the function line, but are very close to it. The function has an x intercept at the point (25, 0).\"   The data collected for the number of items sold as a function of price is roughly linear. We use the linear function to estimate this function.    Maximizing Revenue   A company is interested in predicting the amount of revenue it will receive depending on the price it charges for a particular item. Using the data from , the company arrives at the following quadratic function to model revenue (in thousands of dollars) as a function of price per item   for   Predict the revenue if the company sells the item at a price of and  Find the zeros of this function and interpret the meaning of the zeros.  Sketch a graph of  Use the graph to determine the value of that maximizes revenue. Find the maximum revenue.      Evaluating the revenue function at and we can conclude that  The zeros of this function can be found by solving the equation When we factor the quadratic expression, we get The solutions to this equation are given by For these values of the revenue is zero. When the revenue is zero because the company is giving away its merchandise for free. When the revenue is zero because the price is too high, and no one will buy any items.  Knowing the fact that the function is quadratic, we also know the graph is a parabola. Since the leading coefficient is negative, the parabola opens downward. One property of parabolas is that they are symmetric about the axis, so since the zeros are at and the parabola must be symmetric about the line halfway between them, or   \"An image of a graph. The y axis runs from 0 to 170 and is labeled “R, revenue in thousands of dollars”. The x axis runs from 0 to 28 and is labeled “p, price in dollars”. The graph is of the function “n = -1.04(p squared) + 26p”, which is a parabola that starts at the origin. The function increases until the maximum point at (12.5, 162.5) and then begins decreasing. The function has x intercepts at the origin and the point (25, 0). The y intercept is at the origin.\">    The function is a parabola with zeros at and and it is symmetric about the line so the maximum revenue occurs at a price of per item. At that price, the revenue is     Recall that both the supply and demand equations give the price per unit given the number of units sold. This means that using either the supply or demand equation and that we can find the revenue equation:    Maximizing Profit and Minimizing Cost   A clothing store determines that its supply equation for dresses sold is and the cost for producing dresses is .   Find the revenue function .  Find the profit function .  How many dresses must be sold in order to maximize profits?  What is the maximum profit?  How many dresses must be sold in order to minimize costs?      We can find the revenue equation using the supply equation. Recall that, . . .           The demand equation for diamond rings sold at a jewelry store in one month is where is the number of diamond rings sold in one month and the price of each diamond ring is in hundreds of dollars.   Find the revenue function .  How many diamond rings must be sold in order to maximize revenue?  What is the maximum revenue?  What is the price per diamond ring that will maximize revenue?       Using we obtain    Since the graph of our revenue function opens downward, the vertex point will give us maximum revenue. Using the vertex formula, Furthermore, selling 32 diamond rings in one month will maximize revenue.    Since revenue is maximized when 32 diamond rings are sold, evaluating will give us the maximum revenue. Recalling that the price is in hundreds of dollars, revenue will also be in hundreds of dollars. As a result, the maximum revenue is .    In order to find the price per diamond ring that will maximize revenue we must evaluate the demand equation at . Again, since the price is in hundreds of dollars, the price per diamond ring that will maximize revenue is .          "
+  "body": " Mathematical Modeling   Learning Objectives   Discuss linear mathematical models for cost, revenue, profit, supply, and demand functions.  Find and analyze the break-even quantity and equilibrium point.  Discuss quadratic mathematical models.  Find and analyze the vertex point of a quadratic function.  Optimize cost, revenue, and profit functions.   A large variety of real-world situations can be described using mathematical models . A mathematical model is a method of simulating real-life situations with mathematical equations. Physicists, engineers, economists, and other researchers develop models by combining observation with quantitative data to develop equations, functions, graphs, and other mathematical tools to describe the behavior of various systems accurately. Models are useful because they help predict future outcomes. Examples of mathematical models include the study of population dynamics, investigations of weather patterns, and predictions of product sales.    Mathematical Models of Cost, Revenue, and Profit   Given the number of units produced, the cost function outputs the amount a business or company must pay in order to produce units. There are typicically two types of costs: fixed and variable. In a linear cost model, the cost function is expressed as   where is the cost per unit also referred to as the variable or marginal cost . Here, the variable cost term depends on the number of units produced. Some examples of variable\/marginal costs are labor, material, or manufacturing costs. Additionally, are the fixed costs which is the amount one must pay to operate a business. The fixed cost is independent of the number of units produced. It often represents the amount one must pay if 0 units are produced since is the -intercept of the cost function. That is, . Some examples of fixed costs are rent, utility bills, or operating costs.  The revenue function outputs the payment received from selling units. In a linear model, the revenue is   where is the selling price per unit which is also called the marginal revenue .  The profit function outputs the net proceeds after paying off the expenses\/costs. That is,  . Notice that the above definition for the profit function holds if either of our revenue or cost functions are non-linear.  If profits are negative, this is considered a and if profits are positive, this is considered a .    Companies often look for the point at which there is no or . This gives you the minimum number of units a company must produce in order to make a profit. The break-even quantity is the number of units needed so that cost and revenue are equal, meaning the total profit is zero. That is, or .  Observe that and will yield the same break-even quantity solution since if and only if .     Peter's ice cream stand has an operating cost of $200 per week. The cost to make an ice cream sundae is $2 and they sell for $6. Compute the cost, revenue, and profit functions for one week. Then, find the break-even quantity. Let represent the number of ice cream sundaes sold.   Since our operating costs (fixed costs) are $200 per week and the marginal cost is $2 per ice cream sundae, then . Since the selling price is $6 per ice cream sundae, then . Using and , we can obtain the profit function.     To find the break-even quantity, we may proceed by using two different methods. Both yield the same solution.  Method 1:      Method 2:     Peter must sell at least 50 ice cream sundaes in one week in order to make a profit.     A suit department store has an operating cost of $1000 per week. The cost to supply a suit is $50 each and they sell for $150 each. Compute the cost, revenue, and profit functions for one week. Then, find the break-even quantity. Let represent the number of suits sold.    The cost and revenue functions are Profit function:  Break-even quantity:   The department store must sell at least 10 suits in one week in order to make a profit.  Recall that and to find the break-even quantity, we can solve either or .     Mathematical Models of Supply and Demand  The demand equation  gives you the price of one unit if units are sold. The supply equation  gives you the price needed to make units available to the market. If we supply more units than the market demanded, this is considered a . If we supply less units than the market demanded, this is considered a .    Suppose that 500 units of a certain item are sold per day by the entire industry at a price of $20 per item and that 1500 units can be sold per day by the same industry at a price of $15 per unit. Assuming a linear model, find the demand equation where is the number of units sold per day.    Observe that 500 units are sold at a price of $20 per unit gives us the ordered pair . Moreover, we also have that 1500 units are sold at a price of $15 per unit. That is, .  Since the demand equation is linear, we can compute the slope of the line by using the above ordered pairs.  Using point-slope form,  Hence, our demand equation is .    Suppose that when 100 units of a certain item are supplied, they are sold at a price of $1.25 per unit. When 80 more units of a certain item are supplied, the price per unit increased by $1. Assuming a linear model, find the supply equation where is the number of units sold.   Using the ordered pairs and ,  Supply equation:  .  Use point-slope form to construct the linear supply equation.    Companies often look for the amount of units needed to guarantee there is neither a or of units. Meaning, we want supply and demand to be equal which brings us to the following definition. The equilibrium point  is the number of units needed at a selling price where supply and demand are equal. The -coordinate is the equilibrium quantity and the -coordinate is the equilibrium price .    Suppose the supply and demand equations for Peter's ice cream stand are and respectively. Find the equilibrium price and quantity. Suppose is the number of ice cream sundaes sold and the price per sundae is in dollars.  In order to find the equilibrium point we must set Peter's supply and demand equations equal to one another.    The equilibrium quantity is 20 ice cream sundaes.  Next, we can use either the supply or demand equation to solve for the equilibrium price. Notice that both equations will yield the same result.  Method 1: Using the supply equation.  Method 2: Using the demand equation. The equilibrium price is $7.    The supply and demand equations for Lola's smoothie shop are and respectively. Find the equilibrium point. Suppose is the number of smoothies sold in one day and the price per smoothie is in dollars.  Setting Lola's supply and demand equations equal to one another,   The equilibrium quantity is 20 smoothies. Using the supply equation: The equilibrium price is $5.  Recall that we must set the supply and demand equations equal to one another to find the equilibrium quantity.     Quadratic Mathematical Models  As we saw in the previous section, a quadratic polynomial is typically of the form where if the graph of opens upward and if the graph of opens downward. (See (a).) The quadratic polynomial can also be written in standard form . The point is called the vertex point . The -coordinate of the vertex point can be found using the vertex formula : The -coordinate of the vertex point can be found by evaluating the quadratic function at . That is, . Notice here that if the parabola opens upward, then the vertex is a . Conversely, if the parabola opens downward, the vertex is a .   As an example, let’s consider a mathematical model that a company could use to describe its revenue for the sale of a particular item. Recall the revenue equation The company is interested in how the sales change as the price of the item changes. Suppose the data in show the number of units a company sells as a function of the price per item.   Number of Units Sold (in Thousands) as a Function of Price per Unit (in Dollars)                     In , we see the graph the number of units sold (in thousands) as a function of price (in dollars). We note from the shape of the graph that the number of units sold is likely a linear function of price per item, and the data can be closely approximated by the linear function for where predicts the number of units sold in thousands. Using this linear function, the revenue (in thousands of dollars) can be estimated by the quadratic function   for In , we use this quadratic function to predict the amount of revenue the company receives depending on the price the company charges per item. Note that we cannot conclude definitively the actual number of units sold for values of for which no data are collected. However, given the other data values and the graph shown, it seems reasonable that the number of units sold (in thousands) if the price charged is dollars may be close to the values predicted by the linear function    \"An image of a graph. The y axis runs from 0 to 28 and is labeled “n, units sold in thousands”. The x axis runs from 0 to 28 and is labeled “p, price in dollars”. The graph is of the function “x = -1.04p + 26”, which is a decreasing line function that starts at the y intercept point (0, 26). There are 5 points plotted on the graph at (6, 19.4), (8, 18.5), (10, 16.2), (12, 13.8), and (14, 12.2). The points are not on the graph of the function line, but are very close to it. The function has an x intercept at the point (25, 0).\"   The data collected for the number of items sold as a function of price is roughly linear. We use the linear function to estimate this function.    Maximizing Revenue   A company is interested in predicting the amount of revenue it will receive depending on the price it charges for a particular item. Using the data from , the company arrives at the following quadratic function to model revenue (in thousands of dollars) as a function of price per item   for   Predict the revenue if the company sells the item at a price of and  Find the zeros of this function and interpret the meaning of the zeros.  Sketch a graph of  Use the graph to determine the value of that maximizes revenue. Find the maximum revenue.      Evaluating the revenue function at and we can conclude that  The zeros of this function can be found by solving the equation When we factor the quadratic expression, we get The solutions to this equation are given by For these values of the revenue is zero. When the revenue is zero because the company is giving away its merchandise for free. When the revenue is zero because the price is too high, and no one will buy any items.  Knowing the fact that the function is quadratic, we also know the graph is a parabola. Since the leading coefficient is negative, the parabola opens downward. One property of parabolas is that they are symmetric about the axis, so since the zeros are at and the parabola must be symmetric about the line halfway between them, or   \"An image of a graph. The y axis runs from 0 to 170 and is labeled “R, revenue in thousands of dollars”. The x axis runs from 0 to 28 and is labeled “p, price in dollars”. The graph is of the function “n = -1.04(p squared) + 26p”, which is a parabola that starts at the origin. The function increases until the maximum point at (12.5, 162.5) and then begins decreasing. The function has x intercepts at the origin and the point (25, 0). The y intercept is at the origin.\">    The function is a parabola with zeros at and and it is symmetric about the line so the maximum revenue occurs at a price of per item. At that price, the revenue is     Recall that both the supply and demand equations give the price per unit given the number of units sold. This means that using either the supply or demand equation and that we can find the revenue equation:    Maximizing Profit and Minimizing Cost   A clothing store determines that its supply equation for dresses sold is and the cost for producing dresses is .   Find the revenue function .  Find the profit function .  How many dresses must be sold in order to maximize profits?  What is the maximum profit?  How many dresses must be sold in order to minimize costs?      We can find the revenue equation using the supply equation. Recall that, . . .           The demand equation for diamond rings sold at a jewelry store in one month is where is the number of diamond rings sold in one month and the price of each diamond ring is in hundreds of dollars.   Find the revenue function .  How many diamond rings must be sold in order to maximize revenue?  What is the maximum revenue?  What is the price per diamond ring that will maximize revenue?       Using we obtain    Since the graph of our revenue function opens downward, the vertex point will give us maximum revenue. Using the vertex formula, Furthermore, selling 32 diamond rings in one month will maximize revenue.    Since revenue is maximized when 32 diamond rings are sold, evaluating will give us the maximum revenue. Recalling that the price is in hundreds of dollars, revenue will also be in hundreds of dollars. As a result, the maximum revenue is .    In order to find the price per diamond ring that will maximize revenue we must evaluate the demand equation at . Again, since the price is in hundreds of dollars, the price per diamond ring that will maximize revenue is .          "
 },
 {
   "id": "sec_Ch1Sec3-2-3",
@@ -973,27 +973,27 @@ var ptx_lunr_docs = [
   "body": "profit function "
 },
 {
-  "id": "sec_Ch1Sec3-3-3-3",
+  "id": "sec_Ch1Sec3-3-3",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-3-3",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-3",
   "type": "Definition",
   "number": "1.3.1",
   "title": "",
-  "body": "The break-even quantity is the number of units needed so that cost and revenue are equal, meaning the total profit is zero. That is, or . "
+  "body": " Companies often look for the point at which there is no or . This gives you the minimum number of units a company must produce in order to make a profit. The break-even quantity is the number of units needed so that cost and revenue are equal, meaning the total profit is zero. That is, or . "
 },
 {
-  "id": "sec_Ch1Sec3-3-3-5",
+  "id": "sec_Ch1Sec3-3-5",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-3-5",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-5",
   "type": "Example",
   "number": "1.3.2",
   "title": "",
   "body": "  Peter's ice cream stand has an operating cost of $200 per week. The cost to make an ice cream sundae is $2 and they sell for $6. Compute the cost, revenue, and profit functions for one week. Then, find the break-even quantity. Let represent the number of ice cream sundaes sold.   Since our operating costs (fixed costs) are $200 per week and the marginal cost is $2 per ice cream sundae, then . Since the selling price is $6 per ice cream sundae, then . Using and , we can obtain the profit function.     To find the break-even quantity, we may proceed by using two different methods. Both yield the same solution.  Method 1:      Method 2:     Peter must sell at least 50 ice cream sundaes in one week in order to make a profit.  "
 },
 {
-  "id": "sec_Ch1Sec3-3-3-6",
+  "id": "sec_Ch1Sec3-3-6",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-3-6",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-3-6",
   "type": "Checkpoint",
   "number": "1.3.3",
   "title": "",
@@ -1027,27 +1027,27 @@ var ptx_lunr_docs = [
   "body": " Suppose that when 100 units of a certain item are supplied, they are sold at a price of $1.25 per unit. When 80 more units of a certain item are supplied, the price per unit increased by $1. Assuming a linear model, find the supply equation where is the number of units sold.   Using the ordered pairs and ,  Supply equation:  .  Use point-slope form to construct the linear supply equation.  "
 },
 {
-  "id": "sec_Ch1Sec3-4-5-3",
+  "id": "sec_Ch1Sec3-4-5",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-4-5-3",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-4-5",
   "type": "Definition",
   "number": "1.3.6",
   "title": "",
-  "body": "The equilibrium point  is the number of units needed at a selling price where supply and demand are equal. The -coordinate is the equilibrium quantity and the -coordinate is the equilibrium price . "
+  "body": " Companies often look for the amount of units needed to guarantee there is neither a or of units. Meaning, we want supply and demand to be equal which brings us to the following definition. The equilibrium point  is the number of units needed at a selling price where supply and demand are equal. The -coordinate is the equilibrium quantity and the -coordinate is the equilibrium price . "
 },
 {
-  "id": "sec_Ch1Sec3-4-5-4",
+  "id": "sec_Ch1Sec3-4-6",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-4-5-4",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-4-6",
   "type": "Example",
   "number": "1.3.7",
   "title": "",
   "body": " Suppose the supply and demand equations for Peter's ice cream stand are and respectively. Find the equilibrium price and quantity. Suppose is the number of ice cream sundaes sold and the price per sundae is in dollars.  In order to find the equilibrium point we must set Peter's supply and demand equations equal to one another.    The equilibrium quantity is 20 ice cream sundaes.  Next, we can use either the supply or demand equation to solve for the equilibrium price. Notice that both equations will yield the same result.  Method 1: Using the supply equation.  Method 2: Using the demand equation. The equilibrium price is $7.  "
 },
 {
-  "id": "sec_Ch1Sec3-4-5-5",
+  "id": "sec_Ch1Sec3-4-7",
   "level": "2",
-  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-4-5-5",
+  "url": "sec_Ch1Sec3.html#sec_Ch1Sec3-4-7",
   "type": "Checkpoint",
   "number": "1.3.8",
   "title": "",
@@ -2761,7 +2761,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.5",
   "title": "Continuity",
-  "body": " Continuity   Learning Objectives   Explain the three conditions for continuity at a point.  Describe three kinds of discontinuities.  Define continuity on an interval.  State the theorem for limits of composite functions.  Provide an example of the intermediate value theorem.   We have seen that computing the limits of polynomial and rational functions at any point in their domains is easy because That is, the limit as approaches is just . Roughly speaking, the reason we can compute the limit this way is because these functions do not have any jumps as near  Many other functions have this property, for example. A function with this property is called \"continuous\" and there is a precise definition for it.    Continuity at a Point  Before we look at a formal definition of what it means for a function to be continuous at a point, let’s consider various functions that fail to meet our intuitive notion of what it means to be continuous at a point. We then create a list of conditions that prevent such failures.  Our first function of interest is shown in . We see that the graph of has a hole at . In fact, is undefined. At the very least, for to be continuous at , we need the following condition:     \"A graph of an increasing linear function f(x) which crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. A point a greater than zero is marked on the x axis. The point on the function f(x) above a is an open circle; the function is not defined at a.\"  The function is not continuous at because is undefined.   However, as we see in , this condition alone is insufficient to guarantee continuity at the point . Although is defined, the function has a gap at . In this example, the gap exists because does not exist. We must add another condition for continuity at —namely,     \"The graph of a piecewise function f(x) with two parts. The first part is an increasing linear function that crosses from quadrant three to quadrant one at the origin. A point a greater than zero is marked on the x axis. At fa. on this segment, there is a solid circle. The other segment is also an increasing linear function. It exists in quadrant one for values of x greater than a. At x=a, this segment has an open circle.\"  The function is not continuous at because does not exist.   However, as we see in , these two conditions by themselves do not guarantee continuity at a point. The function in this figure satisfies both of our first two conditions, but is still not continuous at . We must add a third condition to our list:     \"The graph of a piecewise function with two parts. The first part is an increasing linear function that crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. A point a greater than zero is marked on the x axis. At this point, there is an open circle on the linear function. The second part is a point at x=a above the line.\"  The function is not continuous at because   Now we put our list of conditions together and form a definition of continuity at a point.   A function is continuous at a point  if and only if the following three conditions are satisfied:   is defined  exists    A function is discontinuous at a point  if it fails to be continuous at .   The following procedure can be used to analyze the continuity of a function at a point using this definition.   Determining Continuity at a Point   Check to see if is defined. If is undefined, we need go no further. The function is not continuous at . If is defined, continue to step 2.  Compute In some cases, we may need to do this by first computing and If does not exist (that is, it is not a real number), then the function is not continuous at and the problem is solved. If exists, then continue to step 3.  Compare and If then the function is not continuous at . If then the function is continuous at .    The next three examples demonstrate how to apply this definition to determine whether a function is continuous at a given point. These examples illustrate situations in which each of the conditions for continuity in the definition succeed or fail.   Determining Continuity at a Point, Condition 1   Using the definition, determine whether the function is continuous at Justify the conclusion.    Let’s begin by trying to calculate We can see that which is undefined. Therefore, is discontinuous at 2 because is undefined. The graph of is shown in .    \"A graph of the given function. There is a line which crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. At a point in quadrant one, there is an open circle where the function is not defined.\"  The function is discontinuous at 2 because is undefined.      Determining Continuity at a Point, Condition 2   Using the definition, determine whether the function is continuous at Justify the conclusion.    Let’s begin by trying to calculate   Thus, is defined. Next, we calculate To do this, we must compute and   and   Therefore, does not exist. Thus, is not continuous at 3. The graph of is shown in .    \"A graph of the given piecewise function, which has two parts. The first is a downward opening parabola which is symmetric about the y axis. Its vertex is on the y axis, greater than zero. There is a closed circle on the parabola for x=3. The second part is an increasing linear function in the first quadrant, which exists for values of x \\gt 3. There is an open circle at the end of the line where x would be 3.\"  The function is not continuous at 3 because does not exist.      Determining Continuity at a Point, Condition 3   Using the definition, determine whether the function is continuous at    First, observe that   Next,   Last, compare and We see that   Since all three of the conditions in the definition of continuity are satisfied, is continuous at      Using the definition, determine whether the function is continuous at If the function is not continuous at 1, indicate the condition for continuity at a point that fails to hold.    is not continuous at 1 because    Check each condition of the definition.      Types of Discontinuities  As we have seen in and , discontinuities take on several different appearances. We classify the types of discontinuities we have seen thus far as removable discontinuities, infinite discontinuities, or jump discontinuities. Intuitively, a removable discontinuity is a discontinuity for which there is a hole in the graph, a jump discontinuity is a noninfinite discontinuity for which the sections of the function do not meet up, and an infinite discontinuity is a discontinuity located at a vertical asymptote. illustrates the differences in these types of discontinuities. Although these terms provide a handy way of describing three common types of discontinuities, keep in mind that not all discontinuities fit neatly into these categories.    \"Three graphs, each showing a different discontinuity. The first is removable discontinuity. Here, the given function is a line with positive slope. At a point x=a, where a\\gt 0, there is an open circle on the line and a closed circle a few units above the line. The second is a jump discontinuity. Here, there are two lines with positive slope. The first line exists for x\\lt =a, and the second exists for x\\gt a, where a\\gt 0. The first line ends at a solid circle where x=a, and the second begins a few units up with an open circle at x=a. The third discontinuity type is infinite discontinuity. Here, the function has two parts separated by an asymptote x=a. The first segment is a curve stretching along the x axis to 0 as x goes to negative infinity and along the y axis to infinity as x goes to zero. The second segment is a curve stretching along the y axis to negative infinity as x goes to zero and along the x axis to 0 as x goes to infinity.\"  Discontinuities are classified as (a) removable, (b) jump, or (c) infinite.   These three discontinuities are formally defined as follows:   If is discontinuous at , then   has a removable discontinuity at if exists. (Note: When we state that exists, we mean that where is a real number.)  has a jump discontinuity at if and both exist, but (Note: When we state that and both exist, we mean that both are real-valued and that neither take on the values \\pm\\infty .)  has an infinite discontinuity at if or     Classifying a Discontinuity   In , we showed that is discontinuous at Classify this discontinuity as removable, jump, or infinite.    To classify the discontinuity at 2 we must evaluate   Since is discontinuous at 2 and exists, has a removable discontinuity at     Classifying a Discontinuity   In , we showed that is discontinuous at Classify this discontinuity as removable, jump, or infinite.    Earlier, we showed that is discontinuous at 3 because does not exist. However, since and both exist, we conclude that the function has a jump discontinuity at 3.     Classifying a Discontinuity   Determine whether is continuous at -1. If the function is discontinuous at -1, classify the discontinuity as removable, jump, or infinite.    The function value is undefined. Therefore, the function is not continuous at -1. To determine the type of discontinuity, we must determine the limit at -1. We see that and Therefore, the function has an infinite discontinuity at -1.      For decide whether is continuous at 1. If is not continuous at 1, classify the discontinuity as removable, jump, or infinite.    Discontinuous at 1; removable    Follow the steps in . If the function is discontinuous at 1, look at and use the definition to determine the type of discontinuity.      Continuity over an Interval  Now that we have explored the concept of continuity at a point, we extend that idea to continuity over an interval . As we develop this idea for different types of intervals, it may be useful to keep in mind the intuitive idea that a function is continuous over an interval if we can use a pencil to trace the function between any two points in the interval without lifting the pencil from the paper. In preparation for defining continuity on an interval, we begin by looking at the definition of what it means for a function to be continuous from the right at a point and continuous from the left at a point.   Continuity from the Right and from the Left  A function is said to be continuous from the right at if  A function is said to be continuous from the left at if   A function is continuous over an open interval if it is continuous at every point in the interval. A function is continuous over a closed interval of the form if it is continuous at every point in and is continuous from the right at and is continuous from the left at :  A function is continuous on the closed interval when    is continuous on      is continuous from the right at , and     is continuous from the left at .   Note that the last two conditions are equivalent to   Requiring that and ensures that we can trace the graph of the function from the point to the point without lifting the pencil. If, for example, we would need to lift our pencil to jump from to the graph of the rest of the function over   Continuity on an Interval   State the interval(s) over which the function is continuous.    Since is a rational function, it is continuous at every point in its domain. The domain of is the set Thus, is continuous over each of the intervals and     Continuity over an Interval   State the interval(s) over which the function is continuous.    From the limit laws, we know that for all values of in We also know that exists and exists. Therefore, is continuous over the interval      State the interval(s) over which the function is continuous.       Use as a guide for solving.     Algebra of Continuous Functions   If the functions and are continuous at , then the following algebraic combinations are continuous at .                                           We prove the sum property using the limit laws.     By applying the definition of continuity and previously established theorems concerning the evaluation of limits, we can state the following theorem.   Continuity of Polynomials and Rational Functions  Polynomials and rational functions are continuous at every point in their domains.   Previously, we showed that if and are polynomials, for every polynomial and as long as Therefore, polynomials and rational functions are continuous on their domains.   We now apply to determine the points at which a given rational function is continuous.   Continuity of a Rational Function   For what values of is continuous?    The rational function is continuous for every value of except      For what values of is continuous?    is continuous at every real number.    Use    allows us to expand our ability to compute limits. In particular, this theorem ultimately allows us to demonstrate that trigonometric functions are continuous over their domains.   Composite Function Theorem  If is continuous at and then    Before we move on to , recall that earlier, in the section on limit laws, we showed Consequently, we know that is continuous at 0. In we see how to combine this result with the composite function theorem.   Limit of a Composite Cosine Function   Evaluate    The given function is a composite of and Since and is continuous at 0, we may apply the composite function theorem. Thus,       Evaluate    0    is continuous at 0. Use as a guide.    The proof of the next theorem uses the composite function theorem as well as the continuity of and at the point 0 to show that trigonometric functions are continuous over their entire domains.   Continuity of Trigonometric Functions  Trigonometric functions are continuous over their entire domains.   We begin by demonstrating that is continuous at every real number. To do this, we must show that for all values of .    The proof that is continuous at every real number is analogous. Because the remaining trigonometric functions may be expressed in terms of and their continuity follows from the quotient limit law.    This theorem says that if is a continuous function on all of the interval then as moves from to , takes every value between and at least once. To put this slightly differently, if were to avoid a value between and then cannot be continuous on .  It is not hard to convince yourself that the continuity of is crucial to the IVT. Without it one can quickly construct examples of functions that contradict the theorem. See the figure below for a few non-continuous examples:    The Intermediate Value Theorem  Functions that are continuous over intervals of the form where and are real numbers, exhibit many useful properties. Throughout our study of calculus, we will encounter many powerful theorems concerning such functions. The first of these theorems is the Intermediate Value Theorem .   The Intermediate Value Theorem  Let be continuous over a closed, bounded interval If is any real number between and then there is a number in satisfying in .    \"A diagram illustrating the intermediate value theorem. There is a generic continuous curved function shown over the interval [a,b]. The points fa. and fb. are marked, and dotted lines are drawn from a, b, fa., and fb. to the points (a, fa.) and (b, fb.). A third point, c, is plotted between a and b. Since the function is continuous, there is a value for fc. along the curve, and a line is drawn from c to (c, fc.) and from (c, fc.) to fc., which is labeled as z on the y axis.\"  There is a number that satisfies     Without continuity, there could be a -value that is \"missed\" between two other -values in the range of  NEEDS ALT TEXT. Text below agrees with notation in the picture (Y instead of z)    In the left-hand example we see that a discontinuous function can \"jump\" over the -value we have chosen, so there is no -value that makes . The right-hand example demonstrates why we need to be careful with the ends of the interval. In particular, a function must be continuous over the whole interval  including the endpoints of the interval. If we only required the function to be continuous on (so strictly between ) and then the function could \"jump\" over the -value at or .  The IVT in the real world  You are climbing the Grouse-grind with a friend call him Bob. Bob was eager and started at 9am. Bob, while very eager, is also very clumsy; he sprained his ankle somewhere along the path and has stopped moving at 9:21am and is just sitting enjoying the view. You get there late and start climbing at 10am and being quite fit you get to the top at 11am. The IVT implies that at some time between 10am and 11am you meet up with Bob.  You can translate this situation into the form of the IVT as follows. Let be time and let 10am and 11am. Let be your distance along the trail. Hence  and km. Since you are a mortal, your position along the trail is a continuous function no helicopters or teleportation or We have no idea where Bob is sitting, except that he is somewhere between and , call this point . The IVT guarantees that there is some time between and (so between 10am and 11am) with (and your position will be the same as Bob's).   Aside from finding Bob sitting by the side of the trail, one of the most important applications of the IVT is determining where a function is zero. For quadratics we know (or should know) that While the Babylonians could (mostly, but not quite) do the above, the corresponding formula for solving a cubic is uglier and that for a quartic is uglier still. One of the most famous results in mathematics demonstrates that no such formula exists for quintics or higher degree polynomials   So even for polynomials we cannot, in general, write down explicit formulae for their zeros and have to make do with numerical approximations i.e. write down the root as a decimal expansion to whatever precision we desire. For more complicated functions we have no choice there is no reason that the zeros should be expressible as nice neat little formulas. At the same time, finding the zeros of a function: or solving equations of the form In fact both of these are the same because we can write and then the zeros of are exactly when .  can be a crucial step in many mathematical proofs and applications.   Application of the Intermediate Value Theorem   Show that has at least one zero.    Since is continuous over it is continuous over any closed interval of the form If you can find an interval such that and have opposite signs, you can use the Intermediate Value Theorem to conclude there must be a real number in that satisfies Note that   and   Using the Intermediate Value Theorem, we can see that there must be a real number in that satisfies Therefore, has at least one zero.     When Can You Apply the Intermediate Value Theorem? >  If is continuous over and can we use the Intermediate Value Theorem to conclude that has no zeros in the interval Explain.    No. The Intermediate Value Theorem only allows us to conclude that we can find a value between and it doesn’t allow us to conclude that we can’t find other values. To see this more clearly, consider the function It satisfies and     When Can You Apply the Intermediate Value Theorem?   For and Can we conclude that has a zero in the interval    No. The function is not continuous over The Intermediate Value Theorem does not apply here.     Show that has a zero over the interval    is continuous over It must have a zero on this interval.    Find and Apply the Intermediate Value Theorem.      "
+  "body": " Continuity   Learning Objectives   Explain the three conditions for continuity at a point.  Describe three kinds of discontinuities.  Define continuity on an interval.  State the theorem for limits of composite functions.  Provide an example of the intermediate value theorem.   We have seen that computing the limits of polynomial and rational functions at any point in their domains is easy because That is, the limit as approaches is just . Roughly speaking, the reason we can compute the limit this way is because these functions do not have any jumps as near  Many other functions have this property, for example. A function with this property is called \"continuous\" and there is a precise definition for it.    Continuity at a Point  Before we look at a formal definition of what it means for a function to be continuous at a point, let’s consider various functions that fail to meet our intuitive notion of what it means to be continuous at a point. We then create a list of conditions that prevent such failures.  Our first function of interest is shown in . We see that the graph of has a hole at . In fact, is undefined. At the very least, for to be continuous at , we need the following condition:     \"A graph of an increasing linear function f(x) which crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. A point a greater than zero is marked on the x axis. The point on the function f(x) above a is an open circle; the function is not defined at a.\"  The function is not continuous at because is undefined.   However, as we see in , this condition alone is insufficient to guarantee continuity at the point . Although is defined, the function has a gap at . In this example, the gap exists because does not exist. We must add another condition for continuity at —namely,     \"The graph of a piecewise function f(x) with two parts. The first part is an increasing linear function that crosses from quadrant three to quadrant one at the origin. A point a greater than zero is marked on the x axis. At fa. on this segment, there is a solid circle. The other segment is also an increasing linear function. It exists in quadrant one for values of x greater than a. At x=a, this segment has an open circle.\"  The function is not continuous at because does not exist.   However, as we see in , these two conditions by themselves do not guarantee continuity at a point. The function in this figure satisfies both of our first two conditions, but is still not continuous at . We must add a third condition to our list:     \"The graph of a piecewise function with two parts. The first part is an increasing linear function that crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. A point a greater than zero is marked on the x axis. At this point, there is an open circle on the linear function. The second part is a point at x=a above the line.\"  The function is not continuous at because   Now we put our list of conditions together and form a definition of continuity at a point.   A function is continuous at a point  if and only if the following three conditions are satisfied:   is defined  exists    A function is discontinuous at a point  if it fails to be continuous at .   The following procedure can be used to analyze the continuity of a function at a point using this definition.   Determining Continuity at a Point   Check to see if is defined. If is undefined, we need go no further. The function is not continuous at . If is defined, continue to step 2.  Compute In some cases, we may need to do this by first computing and If does not exist (that is, it is not a real number), then the function is not continuous at and the problem is solved. If exists, then continue to step 3.  Compare and If then the function is not continuous at . If then the function is continuous at .    The next three examples demonstrate how to apply this definition to determine whether a function is continuous at a given point. These examples illustrate situations in which each of the conditions for continuity in the definition succeed or fail.   Determining Continuity at a Point, Condition 1   Using the definition, determine whether the function is continuous at Justify the conclusion.    Let’s begin by trying to calculate We can see that which is undefined. Therefore, is discontinuous at 2 because is undefined. The graph of is shown in .    \"A graph of the given function. There is a line which crosses the x axis from quadrant three to quadrant two and which crosses the y axis from quadrant two to quadrant one. At a point in quadrant one, there is an open circle where the function is not defined.\"  The function is discontinuous at 2 because is undefined.      Determining Continuity at a Point, Condition 2   Using the definition, determine whether the function is continuous at Justify the conclusion.    Let’s begin by trying to calculate   Thus, is defined. Next, we calculate To do this, we must compute and   and   Therefore, does not exist. Thus, is not continuous at 3. The graph of is shown in .    \"A graph of the given piecewise function, which has two parts. The first is a downward opening parabola which is symmetric about the y axis. Its vertex is on the y axis, greater than zero. There is a closed circle on the parabola for x=3. The second part is an increasing linear function in the first quadrant, which exists for values of x \\gt 3. There is an open circle at the end of the line where x would be 3.\"  The function is not continuous at 3 because does not exist.      Determining Continuity at a Point, Condition 3   Using the definition, determine whether the function is continuous at    First, observe that   Next,   Last, compare and We see that   Since all three of the conditions in the definition of continuity are satisfied, is continuous at      Using the definition, determine whether the function is continuous at If the function is not continuous at 1, indicate the condition for continuity at a point that fails to hold.    is not continuous at 1 because    Check each condition of the definition.      Types of Discontinuities  As we have seen in and , discontinuities take on several different appearances. We classify the types of discontinuities we have seen thus far as removable discontinuities, infinite discontinuities, or jump discontinuities. Intuitively, a removable discontinuity is a discontinuity for which there is a hole in the graph, a jump discontinuity is a noninfinite discontinuity for which the sections of the function do not meet up, and an infinite discontinuity is a discontinuity located at a vertical asymptote. illustrates the differences in these types of discontinuities. Although these terms provide a handy way of describing three common types of discontinuities, keep in mind that not all discontinuities fit neatly into these categories.    \"Three graphs, each showing a different discontinuity. The first is removable discontinuity. Here, the given function is a line with positive slope. At a point x=a, where a\\gt 0, there is an open circle on the line and a closed circle a few units above the line. The second is a jump discontinuity. Here, there are two lines with positive slope. The first line exists for x\\lt =a, and the second exists for x\\gt a, where a\\gt 0. The first line ends at a solid circle where x=a, and the second begins a few units up with an open circle at x=a. The third discontinuity type is infinite discontinuity. Here, the function has two parts separated by an asymptote x=a. The first segment is a curve stretching along the x axis to 0 as x goes to negative infinity and along the y axis to infinity as x goes to zero. The second segment is a curve stretching along the y axis to negative infinity as x goes to zero and along the x axis to 0 as x goes to infinity.\"  Discontinuities are classified as (a) removable, (b) jump, or (c) infinite.   These three discontinuities are formally defined as follows:   If is discontinuous at , then   has a removable discontinuity at if exists. (Note: When we state that exists, we mean that where is a real number.)  has a jump discontinuity at if and both exist, but (Note: When we state that and both exist, we mean that both are real-valued and that neither take on the values \\pm\\infty .)  has an infinite discontinuity at if or     Classifying a Discontinuity   In , we showed that is discontinuous at Classify this discontinuity as removable, jump, or infinite.    To classify the discontinuity at 2 we must evaluate   Since is discontinuous at 2 and exists, has a removable discontinuity at     Classifying a Discontinuity   In , we showed that is discontinuous at Classify this discontinuity as removable, jump, or infinite.    Earlier, we showed that is discontinuous at 3 because does not exist. However, since and both exist, we conclude that the function has a jump discontinuity at 3.     Classifying a Discontinuity   Determine whether is continuous at -1. If the function is discontinuous at -1, classify the discontinuity as removable, jump, or infinite.    The function value is undefined. Therefore, the function is not continuous at -1. To determine the type of discontinuity, we must determine the limit at -1. We see that and Therefore, the function has an infinite discontinuity at -1.      For decide whether is continuous at 1. If is not continuous at 1, classify the discontinuity as removable, jump, or infinite.    Discontinuous at 1; removable    Follow the steps in . If the function is discontinuous at 1, look at and use the definition to determine the type of discontinuity.      Continuity over an Interval  Now that we have explored the concept of continuity at a point, we extend that idea to continuity over an interval . As we develop this idea for different types of intervals, it may be useful to keep in mind the intuitive idea that a function is continuous over an interval if we can use a pencil to trace the function between any two points in the interval without lifting the pencil from the paper. In preparation for defining continuity on an interval, we begin by looking at the definition of what it means for a function to be continuous from the right at a point and continuous from the left at a point.   Continuity from the Right and from the Left  A function is said to be continuous from the right at if  A function is said to be continuous from the left at if   A function is continuous over an open interval if it is continuous at every point in the interval. A function is continuous over a closed interval of the form if it is continuous at every point in and is continuous from the right at and is continuous from the left at :  A function is continuous on the closed interval when    is continuous on      is continuous from the right at , and     is continuous from the left at .   Note that the last two conditions are equivalent to   Requiring that and ensures that we can trace the graph of the function from the point to the point without lifting the pencil. If, for example, we would need to lift our pencil to jump from to the graph of the rest of the function over   Continuity on an Interval   State the interval(s) over which the function is continuous.    Since is a rational function, it is continuous at every point in its domain. The domain of is the set Thus, is continuous over each of the intervals and     Continuity over an Interval   State the interval(s) over which the function is continuous.    From the limit laws, we know that for all values of in We also know that exists and exists. Therefore, is continuous over the interval      State the interval(s) over which the function is continuous.       Use as a guide for solving.     Algebra of Continuous Functions   If the functions and are continuous at , then the following algebraic combinations are continuous at .                                           We prove the sum property using the limit laws.     By applying the definition of continuity and previously established theorems concerning the evaluation of limits, we can state the following theorem.   Continuity of Polynomials and Rational Functions  Polynomials and rational functions are continuous at every point in their domains.   Previously, we showed that if and are polynomials, for every polynomial and as long as Therefore, polynomials and rational functions are continuous on their domains.   We now apply to determine the points at which a given rational function is continuous.   Continuity of a Rational Function   For what values of is continuous?    The rational function is continuous for every value of except      For what values of is continuous?    is continuous at every real number.    Use    allows us to expand our ability to compute limits. In particular, this theorem ultimately allows us to demonstrate that trigonometric functions are continuous over their domains.   Composite Function Theorem  If is continuous at and then    Before we move on to , recall that earlier, in the section on limit laws, we showed Consequently, we know that is continuous at 0. In we see how to combine this result with the composite function theorem.   Limit of a Composite Cosine Function   Evaluate    The given function is a composite of and Since and is continuous at 0, we may apply the composite function theorem. Thus,       Evaluate    0    is continuous at 0. Use as a guide.    The proof of the next theorem uses the composite function theorem as well as the continuity of and at the point 0 to show that trigonometric functions are continuous over their entire domains.   Continuity of Trigonometric Functions  Trigonometric functions are continuous over their entire domains.   We begin by demonstrating that is continuous at every real number. To do this, we must show that for all values of .    The proof that is continuous at every real number is analogous. Because the remaining trigonometric functions may be expressed in terms of and their continuity follows from the quotient limit law.    This theorem says that if is a continuous function on all of the interval then as moves from to , takes every value between and at least once. To put this slightly differently, if were to avoid a value between and then cannot be continuous on .  It is not hard to convince yourself that the continuity of is crucial to the IVT. Without it one can quickly construct examples of functions that contradict the theorem. See the figure below for a few non-continuous examples:    The Intermediate Value Theorem  Functions that are continuous over intervals of the form where and are real numbers, exhibit many useful properties. Throughout our study of calculus, we will encounter many powerful theorems concerning such functions. The first of these theorems is the Intermediate Value Theorem .   The Intermediate Value Theorem  Let be continuous over a closed, bounded interval If is any real number between and then there is a number in satisfying in .    \"A diagram illustrating the intermediate value theorem. There is a generic continuous curved function shown over the interval [a,b]. The points fa. and fb. are marked, and dotted lines are drawn from a, b, fa., and fb. to the points (a, fa.) and (b, fb.). A third point, c, is plotted between a and b. Since the function is continuous, there is a value for fc. along the curve, and a line is drawn from c to (c, fc.) and from (c, fc.) to fc., which is labeled as z on the y axis.\"  There is a number that satisfies     Without continuity, there could be a -value that is \"missed\" between two other -values in the range of  NEEDS ALT TEXT. Text below agrees with notation in the picture (Y instead of z)          a  b  f(a)  f(b)  z             a  b  f(a)  f(b)  z              In the left-hand example we see that a discontinuous function can \"jump\" over the -value we have chosen, so there is no -value that makes . The right-hand example demonstrates why we need to be careful with the ends of the interval. In particular, a function must be continuous over the whole interval  including the endpoints of the interval. If we only required the function to be continuous on (so strictly between ) and then the function could \"jump\" over the -value at or .  The IVT in the real world  You are climbing the Grouse-grind with a friend call him Bob. Bob was eager and started at 9am. Bob, while very eager, is also very clumsy; he sprained his ankle somewhere along the path and has stopped moving at 9:21am and is just sitting enjoying the view. You get there late and start climbing at 10am and being quite fit you get to the top at 11am. The IVT implies that at some time between 10am and 11am you meet up with Bob.  You can translate this situation into the form of the IVT as follows. Let be time and let 10am and 11am. Let be your distance along the trail. Hence  and km. Since you are a mortal, your position along the trail is a continuous function no helicopters or teleportation or We have no idea where Bob is sitting, except that he is somewhere between and , call this point . The IVT guarantees that there is some time between and (so between 10am and 11am) with (and your position will be the same as Bob's).   Aside from finding Bob sitting by the side of the trail, one of the most important applications of the IVT is determining where a function is zero. For quadratics we know (or should know) that While the Babylonians could (mostly, but not quite) do the above, the corresponding formula for solving a cubic is uglier and that for a quartic is uglier still. One of the most famous results in mathematics demonstrates that no such formula exists for quintics or higher degree polynomials   So even for polynomials we cannot, in general, write down explicit formulae for their zeros and have to make do with numerical approximations i.e. write down the root as a decimal expansion to whatever precision we desire. For more complicated functions we have no choice there is no reason that the zeros should be expressible as nice neat little formulas. At the same time, finding the zeros of a function: or solving equations of the form In fact both of these are the same because we can write and then the zeros of are exactly when .  can be a crucial step in many mathematical proofs and applications.   Application of the Intermediate Value Theorem   Show that has at least one zero.    Since is continuous over it is continuous over any closed interval of the form If you can find an interval such that and have opposite signs, you can use the Intermediate Value Theorem to conclude there must be a real number in that satisfies Note that   and   Using the Intermediate Value Theorem, we can see that there must be a real number in that satisfies Therefore, has at least one zero.     When Can You Apply the Intermediate Value Theorem? >  If is continuous over and can we use the Intermediate Value Theorem to conclude that has no zeros in the interval Explain.    No. The Intermediate Value Theorem only allows us to conclude that we can find a value between and it doesn’t allow us to conclude that we can’t find other values. To see this more clearly, consider the function It satisfies and     When Can You Apply the Intermediate Value Theorem?   For and Can we conclude that has a zero in the interval    No. The function is not continuous over The Intermediate Value Theorem does not apply here.     Show that has a zero over the interval    is continuous over It must have a zero on this interval.    Find and Apply the Intermediate Value Theorem.      "
 },
 {
   "id": "CNX_Calc_Figure_02_04_001",
@@ -3088,9 +3088,9 @@ var ptx_lunr_docs = [
   "body": " When Can You Apply the Intermediate Value Theorem?   For and Can we conclude that has a zero in the interval    No. The function is not continuous over The Intermediate Value Theorem does not apply here.   "
 },
 {
-  "id": "sec_Ch2Sec4-6-12",
+  "id": "sec_Ch2Sec4-6-13",
   "level": "2",
-  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-6-12",
+  "url": "sec_Ch2Sec4.html#sec_Ch2Sec4-6-13",
   "type": "Checkpoint",
   "number": "2.5.37",
   "title": "",
@@ -3437,6 +3437,924 @@ var ptx_lunr_docs = [
   "number": "2.6.41",
   "title": "",
   "body": "  Evaluate the limits of as approaches and       Divide the numerator and denominator by   "
+},
+{
+  "id": "sec_Ch3Sec1",
+  "level": "1",
+  "url": "sec_Ch3Sec1.html",
+  "type": "Section",
+  "number": "3.1",
+  "title": "Defining the Derivative (not edited)",
+  "body": " Defining the Derivative (not edited)   Learning Objectives   Recognize the meaning of the tangent to a curve at a point.  Calculate the slope of a tangent line.  Identify the derivative as the limit of a difference quotient.  Calculate the derivative of a given function at a point.  Describe the velocity as a rate of change.  Explain the difference between average velocity and instantaneous velocity.  Estimate the derivative from a table of values.   Now that we have both a conceptual understanding of a limit and the practical ability to compute limits, we have established the foundation for our study of calculus, the branch of mathematics in which we compute derivatives and integrals. Most mathematicians and historians agree that calculus was developed independently by the Englishman Isaac Newton  and the German Gottfried Leibniz  whose images appear in . When we credit Newton and Leibniz with developing calculus, we are really referring to the fact that Newton and Leibniz were the first to understand the relationship between the derivative and the integral. Both mathematicians benefited from the work of predecessors, such as Barrow, Fermat, and Cavalieri. The initial relationship between the two mathematicians appears to have been amicable; however, in later years a bitter controversy erupted over whose work took precedence. Although it seems likely that Newton did, indeed, arrive at the ideas behind calculus first, we are indebted to Leibniz for the notation that we commonly use today.    \"Photos of Newton and Leibniz.\"  Newton and Leibniz are credited with developing calculus independently.     Tangent Lines  We begin our study of calculus by revisiting the notion of secant lines and tangent lines. Recall that we used the slope of a secant line to a function at a point to estimate the rate of change, or the rate at which one variable changes in relation to another variable. We can obtain the slope of the secant by choosing a value of near and drawing a line through the points and as shown in . The slope of this line is given by an equation in the form of a difference quotient:   We can also calculate the slope of a secant line to a function at a value by using this equation and replacing with where is a value close to 0. We can then calculate the slope of the line through the points and In this case, we find the secant line has a slope given by the following difference quotient with increment    Let be a function defined on an interval containing If is in then   is a difference quotient .  Also, if is chosen so that is in then   is a difference quotient with increment    View the development of the derivative with this applet.  These two expressions for calculating the slope of a secant line are illustrated in . We will see that each of these two methods for finding the slope of a secant line is of value. Depending on the setting, we can choose one or the other. The primary consideration in our choice usually depends on ease of calculation.    \"This figure consists of two graphs labeled a and b. Figure a shows the Cartesian coordinate plane with 0, a, and x marked on the x-axis. There is a curve labeled y = f(x) with points marked (a, f(a)) and (x, f(x)). There is also a straight line that crosses these two points (a, f(a)) and (x, f(x)). At the bottom of the graph, the equation msec = (f(x) - f(a))\/(x - a) is given. Figure b shows a similar graph, but this time a + h is marked on the x-axis instead of x. Consequently, the curve labeled y = f(x) passes through (a, f(a)) and (a + h, f(a + h)) as does the straight line. At the bottom of the graph, the equation msec = (f(a + h) - f(a))\/h is given.\"  We can calculate the slope of a secant line in either of two ways.   In (a) we see that, as the values of approach the slopes of the secant lines provide better estimates of the rate of change of the function at Furthermore, the secant lines themselves approach the tangent line to the function at which represents the limit of the secant lines. Similarly, (b) shows that as the values of get closer to the secant lines also approach the tangent line. The slope of the tangent line at is the rate of change of the function at as shown in (c).    \"This figure consists of three graphs labeled a, b, and c. Figure a shows the Cartesian coordinate plane with 0, a, x2, and x1 marked in order on the x-axis. There is a curve labeled y = f(x) with points marked (a, f(a)), (x2, f(x2)), and (x1, f(x1)). There are three straight lines: the first crosses (a, f(a)) and (x1, f(x1)); the second crosses (a, f(a)) and (x2, f(x2)); and the third only touches (a, f(a)), making it the tangent. At the bottom of the graph, the equation mtan = limx \\to a (f(x) - f(a))\/(x - a) is given. Figure b shows a similar graph, but this time a + h2 and a + h1 are marked on the x-axis instead of x2 and x1. Consequently, the curve labeled y = f(x) passes through (a, f(a)), (a + h2, f(a + h2)), and (a + h1, f(a + h1)) and the straight lines similarly cross the graph as in Figure a. At the bottom of the graph, the equation mtan = limh \\to 0 (f(a + h) - f(a))\/h is given. Figure c shows only the curve labeled y = f(x) and its tangent at point (a, f(a)).\"  The secant lines approach the tangent line (shown in green) as the second point approaches the first.    You can use this site to explore graphs to see if they have a tangent line at a point.   In we show the graph of and its tangent line at in a series of tighter intervals about As the intervals become narrower, the graph of the function and its tangent line appear to coincide, making the values on the tangent line a good approximation to the values of the function for choices of close to In fact, the graph of itself appears to be locally linear in the immediate vicinity of    \"This figure consists of four graphs labeled a, b, c, and d. Figure a shows the graphs of the square root of x and the equation y = (x + 1)\/2 with the x-axis going from 0 to 4 and the y-axis going from 0 to 2.5. The graphs of these two functions look very close near 1; there is a box around where these graphs look close. Figure b shows a close up of these same two functions in the area of the box from Figure a, specifically x going from 0 to 2 and y going from 0 to 1.4. Figure c is the same graph as Figure b, but this one has a box from 0 to 1.1 in the x coordinate and 0.8 and 1 on the y coordinate. There is an arrow indicating that this is blown up in Figure d. Figure d shows a very close picture of the box from Figure c, and the two functions appear to be touching for almost the entire length of the graph.\"  For values of close to the graph of and its tangent line appear to coincide.   Formally we may define the tangent line to the graph of a function as follows.    Let be a function defined in an open interval containing The tangent line to at is the line passing through the point having slope   provided this limit exists.  Equivalently, we may define the tangent line to at to be the line passing through the point having slope   provided this limit exists.   Just as we have used two different expressions to define the slope of a secant line, we use two different forms to define the slope of the tangent line. In this text we use both forms of the definition. As before, the choice of definition will depend on the setting. Now that we have formally defined a tangent line to a function at a point, we can use this definition to find equations of tangent lines.    Finding a Tangent Line  Find the equation of the line tangent to the graph of at    First find the slope of the tangent line. In this example, use .   Next, find a point on the tangent line. Since the line is tangent to the graph of at it passes through the point We have so the tangent line passes through the point  Using the point-slope equation of the line with the slope and the point we obtain the line Simplifying, we have The graph of and its tangent line at are shown in .    \"This figure consists of the graphs of f(x) = x squared and y = 6x - 9. The graphs of these functions appear to touch at x = 3.\"  The tangent line to at      The Slope of a Tangent Line Revisited   Use to find the slope of the line tangent to the graph of at    The steps are very similar to . See for the definition.   We obtained the same value for the slope of the tangent line by using the other definition, demonstrating that the formulas can be interchanged.     Finding the Equation of a Tangent Line   Find the equation of the line tangent to the graph of at    We can use , but as we have seen, the results are the same if we use .   We now know that the slope of the tangent line is To find the equation of the tangent line, we also need a point on the line. We know that Since the tangent line passes through the point we can use the point-slope equation of a line to find the equation of the tangent line. Thus the tangent line has the equation The graphs of and are shown in .    \"This figure consists of the graphs of f(x) = 1\/x and y = -x\/4 + 1. The part of the graph f(x) = 1\/x in the first quadrant appears to touch the other function’s graph at x = 2.\"  The line is tangent to at       Find the slope of the line tangent to the graph of at       Use either or . Multiply the numerator and the denominator by a conjugate.      The Derivative of a Function at a Point  The type of limit we compute in order to find the slope of the line tangent to a function at a point occurs in many applications across many disciplines. These applications include velocity and acceleration in physics, marginal profit functions in business, and growth rates in biology. This limit occurs so frequently that we give this value a special name: the derivative . The process of finding a derivative is called differentiation .   Let be a function defined in an open interval containing The derivative of the function at denoted by is defined by   provided this limit exists.  Alternatively, we may also define the derivative of at as     Estimating a Derivative   For use a table to estimate using .    Create a table using values of just below and just above                                  After examining the table, we see that a good estimate is        For use a table to estimate using .       Evaluate at     Finding a Derivative   For find by using .    Substitute the given function and value directly into the equation.      Revisiting the Derivative   For find by using .    Using this equation, we can substitute two values of the function into the equation, and we should get the same value as in .   The results are the same whether we use or .      For find       Use either , , or try both. Use either or as a guide.      Velocities and Rates of Change  Now that we can evaluate a derivative, we can use it in velocity applications. Recall that if is the position of an object moving along a coordinate axis, the average velocity of the object over a time interval if or if is given by the difference quotient   As the values of approach the values of approach the value we call the instantaneous velocity at That is, instantaneous velocity at denoted is given by   To better understand the relationship between average velocity and instantaneous velocity, see . In this figure, the slope of the tangent line (shown in red) is the instantaneous velocity of the object at time whose position at time is given by the function The slope of the secant line (shown in green) is the average velocity of the object over the time interval    \"This figure consists of the Cartesian coordinate plane with 0, a, and t1 marked on the t-axis. The function y = s(t) is graphed in the first quadrant along with two lines marked tangent and secant. The tangent line touches y = s(t) at only one point, (a, s(a)). The secant line touches y = s(t) at two points: (a, s(a)) and (t1, s(t1)).\"  The slope of the secant line is the average velocity over the interval The slope of the tangent line is the instantaneous velocity.   We can use to calculate the instantaneous velocity, or we can estimate the velocity of a moving object by using a table of values. We can then confirm the estimate by using .    Estimating Marginal Cost   The cost function for coffee is given by where is the number of thousand items made. Use a table to estimate the marginal cost of producing 1000 items and interpret.    Using , we can estimate the marginal cost at by computing a table of the slopes of the secant line using values of approaching . This is shown in .   Slopes of the secant lines using values of approaching 1                                 From the table we see that the slope of the secant line over the interval is the slope of the secant line over the interval is and so forth. Using this table of values, it appears that a good estimate is  When items are produced, the cost is decreasing at a rate of per thousand items made. So if we produce more items, we can expect costs to drop by .      A rock is dropped from a height of feet. Its height above ground at time seconds later is given by Find its instantaneous velocity second after it is dropped, using .    ft\/s    Follow the earlier examples of the derivative using .    As we have seen throughout this section, the slope of a tangent line to a function and instantaneous velocity are related concepts. Each is calculated by computing a derivative and each measures the instantaneous rate of change of a function, or the rate of change of a function at any point along the function.   The instantaneous rate of change of a function at a value is its derivative    Chapter Opener: Estimating Rate of Change of Velocity     \"The same sports car speeding along a winding road from the beginning of the chapter.\"  (credit: modification of work by Codex41, Flickr)   Reaching a top speed of mph, the Hennessey Venom GT is one of the fastest cars in the world. In tests it went from to mph in seconds, from mph in seconds, from mph in seconds, and from mph in seconds. Use this data to draw a conclusion about the rate of change of velocity (that is, its acceleration ) as it approaches mph. Does the rate at which the car is accelerating appear to be increasing, decreasing, or constant?    First observe that mph = ft\/s, mph ft\/s, mph ft\/s, and mph ft\/s. We can summarize the information in a table.   at different values of                             Now compute the average acceleration of the car in feet per second on intervals of the form as approaches as shown in the following table.   Average acceleration                         The rate at which the car is accelerating is decreasing as its velocity approaches mph ft\/s).     Rate of Change of Temperature   A homeowner sets the thermostat so that the temperature in the house begins to drop from at p.m., reaches a low of during the night, and rises back to by a.m. the next morning. Suppose that the temperature in the house is given by for where is the number of hours past p.m. Find the instantaneous rate of change of the temperature at midnight.    Since midnight is hours past p.m., we want to compute Refer to .   The instantaneous rate of change of the temperature at midnight is per hour.     Rate of Change of Profit   A toy company can sell electronic gaming systems at a price of dollars per gaming system. The cost of manufacturing systems is given by dollars. Find the rate of change of profit when games are produced. Should the toy company increase or decrease production?    The profit earned by producing gaming systems is where is the revenue obtained from the sale of games. Since the company can sell games at per game,   Consequently,   Therefore, evaluating the rate of change of profit gives   Since the rate of change of profit and the company should increase production.      A coffee shop determines that the daily profit on scones obtained by charging dollars per scone is The coffee shop currently charges per scone. Find the rate of change of profit when the price is and decide whether or not the coffee shop should consider raising or lowering its prices on scones.    raise prices    Use for a guide.      Key Concepts   The slope of the tangent line to a curve measures the instantaneous rate of change of a curve. We can calculate it by finding the limit of the difference quotient or the difference quotient with increment  The derivative of a function at a value is found using either of the definitions for the slope of the tangent line.  Velocity is the rate of change of position. As such, the velocity at time is the derivative of the position at time Average velocity is given by  Instantaneous velocity is given by   We may estimate a derivative by using a table of values.     Key Equations   Difference quotient   Difference quotient with increment    Slope of tangent line   Derivative of   at    Average velocity   Instantaneous velocity      "
+},
+{
+  "id": "sec_Ch3Sec1-2-3",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-2-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Newton Leibniz "
+},
+{
+  "id": "CNX_Calc_Figure_03_01_001",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#CNX_Calc_Figure_03_01_001",
+  "type": "Figure",
+  "number": "3.1.1",
+  "title": "",
+  "body": "  \"Photos of Newton and Leibniz.\"  Newton and Leibniz are credited with developing calculus independently.  "
+},
+{
+  "id": "sec_Ch3Sec1-3-6",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-3-6",
+  "type": "Definition",
+  "number": "3.1.2",
+  "title": "",
+  "body": "  Let be a function defined on an interval containing If is in then   is a difference quotient .  Also, if is chosen so that is in then   is a difference quotient with increment  "
+},
+{
+  "id": "sec_Ch3Sec1-3-7",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-3-7",
+  "type": "Note",
+  "number": "3.1.3",
+  "title": "",
+  "body": " View the development of the derivative with this applet. "
+},
+{
+  "id": "CNX_Calc_Figure_03_01_002",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#CNX_Calc_Figure_03_01_002",
+  "type": "Figure",
+  "number": "3.1.4",
+  "title": "",
+  "body": "  \"This figure consists of two graphs labeled a and b. Figure a shows the Cartesian coordinate plane with 0, a, and x marked on the x-axis. There is a curve labeled y = f(x) with points marked (a, f(a)) and (x, f(x)). There is also a straight line that crosses these two points (a, f(a)) and (x, f(x)). At the bottom of the graph, the equation msec = (f(x) - f(a))\/(x - a) is given. Figure b shows a similar graph, but this time a + h is marked on the x-axis instead of x. Consequently, the curve labeled y = f(x) passes through (a, f(a)) and (a + h, f(a + h)) as does the straight line. At the bottom of the graph, the equation msec = (f(a + h) - f(a))\/h is given.\"  We can calculate the slope of a secant line in either of two ways.  "
+},
+{
+  "id": "CNX_Calc_Figure_03_01_003",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#CNX_Calc_Figure_03_01_003",
+  "type": "Figure",
+  "number": "3.1.5",
+  "title": "",
+  "body": "  \"This figure consists of three graphs labeled a, b, and c. Figure a shows the Cartesian coordinate plane with 0, a, x2, and x1 marked in order on the x-axis. There is a curve labeled y = f(x) with points marked (a, f(a)), (x2, f(x2)), and (x1, f(x1)). There are three straight lines: the first crosses (a, f(a)) and (x1, f(x1)); the second crosses (a, f(a)) and (x2, f(x2)); and the third only touches (a, f(a)), making it the tangent. At the bottom of the graph, the equation mtan = limx \\to a (f(x) - f(a))\/(x - a) is given. Figure b shows a similar graph, but this time a + h2 and a + h1 are marked on the x-axis instead of x2 and x1. Consequently, the curve labeled y = f(x) passes through (a, f(a)), (a + h2, f(a + h2)), and (a + h1, f(a + h1)) and the straight lines similarly cross the graph as in Figure a. At the bottom of the graph, the equation mtan = limh \\to 0 (f(a + h) - f(a))\/h is given. Figure c shows only the curve labeled y = f(x) and its tangent at point (a, f(a)).\"  The secant lines approach the tangent line (shown in green) as the second point approaches the first.  "
+},
+{
+  "id": "sec_Ch3Sec1-3-12",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-3-12",
+  "type": "Note",
+  "number": "3.1.6",
+  "title": "",
+  "body": " You can use this site to explore graphs to see if they have a tangent line at a point.  "
+},
+{
+  "id": "CNX_Calc_Figure_03_01_008",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#CNX_Calc_Figure_03_01_008",
+  "type": "Figure",
+  "number": "3.1.7",
+  "title": "",
+  "body": "  \"This figure consists of four graphs labeled a, b, c, and d. Figure a shows the graphs of the square root of x and the equation y = (x + 1)\/2 with the x-axis going from 0 to 4 and the y-axis going from 0 to 2.5. The graphs of these two functions look very close near 1; there is a box around where these graphs look close. Figure b shows a close up of these same two functions in the area of the box from Figure a, specifically x going from 0 to 2 and y going from 0 to 1.4. Figure c is the same graph as Figure b, but this one has a box from 0 to 1.1 in the x coordinate and 0.8 and 1 on the y coordinate. There is an arrow indicating that this is blown up in Figure d. Figure d shows a very close picture of the box from Figure c, and the two functions appear to be touching for almost the entire length of the graph.\"  For values of close to the graph of and its tangent line appear to coincide.  "
+},
+{
+  "id": "sec_Ch3Sec1-3-16",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-3-16",
+  "type": "Definition",
+  "number": "3.1.8",
+  "title": "",
+  "body": "  Let be a function defined in an open interval containing The tangent line to at is the line passing through the point having slope   provided this limit exists.  Equivalently, we may define the tangent line to at to be the line passing through the point having slope   provided this limit exists.  "
+},
+{
+  "id": "fs-id1169739298611",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#fs-id1169739298611",
+  "type": "Example",
+  "number": "3.1.9",
+  "title": "",
+  "body": "  Finding a Tangent Line  Find the equation of the line tangent to the graph of at    First find the slope of the tangent line. In this example, use .   Next, find a point on the tangent line. Since the line is tangent to the graph of at it passes through the point We have so the tangent line passes through the point  Using the point-slope equation of the line with the slope and the point we obtain the line Simplifying, we have The graph of and its tangent line at are shown in .    \"This figure consists of the graphs of f(x) = x squared and y = 6x - 9. The graphs of these functions appear to touch at x = 3.\"  The tangent line to at    "
+},
+{
+  "id": "fs-id1169739223534",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#fs-id1169739223534",
+  "type": "Example",
+  "number": "3.1.11",
+  "title": "The Slope of a Tangent Line Revisited.",
+  "body": " The Slope of a Tangent Line Revisited   Use to find the slope of the line tangent to the graph of at    The steps are very similar to . See for the definition.   We obtained the same value for the slope of the tangent line by using the other definition, demonstrating that the formulas can be interchanged.   "
+},
+{
+  "id": "fs-id1169738966727",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#fs-id1169738966727",
+  "type": "Example",
+  "number": "3.1.12",
+  "title": "Finding the Equation of a Tangent Line.",
+  "body": " Finding the Equation of a Tangent Line   Find the equation of the line tangent to the graph of at    We can use , but as we have seen, the results are the same if we use .   We now know that the slope of the tangent line is To find the equation of the tangent line, we also need a point on the line. We know that Since the tangent line passes through the point we can use the point-slope equation of a line to find the equation of the tangent line. Thus the tangent line has the equation The graphs of and are shown in .    \"This figure consists of the graphs of f(x) = 1\/x and y = -x\/4 + 1. The part of the graph f(x) = 1\/x in the first quadrant appears to touch the other function’s graph at x = 2.\"  The line is tangent to at    "
+},
+{
+  "id": "sec_Ch3Sec1-3-21",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-3-21",
+  "type": "Checkpoint",
+  "number": "3.1.14",
+  "title": "",
+  "body": "  Find the slope of the line tangent to the graph of at       Use either or . Multiply the numerator and the denominator by a conjugate.   "
+},
+{
+  "id": "sec_Ch3Sec1-4-2",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-4-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "derivative differentiation "
+},
+{
+  "id": "sec_Ch3Sec1-4-3",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-4-3",
+  "type": "Definition",
+  "number": "3.1.15",
+  "title": "",
+  "body": " Let be a function defined in an open interval containing The derivative of the function at denoted by is defined by   provided this limit exists.  Alternatively, we may also define the derivative of at as   "
+},
+{
+  "id": "fs-id1169739198956",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#fs-id1169739198956",
+  "type": "Example",
+  "number": "3.1.16",
+  "title": "Estimating a Derivative.",
+  "body": " Estimating a Derivative   For use a table to estimate using .    Create a table using values of just below and just above                                  After examining the table, we see that a good estimate is   "
+},
+{
+  "id": "sec_Ch3Sec1-4-5",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-4-5",
+  "type": "Checkpoint",
+  "number": "3.1.18",
+  "title": "",
+  "body": "    For use a table to estimate using .       Evaluate at   "
+},
+{
+  "id": "fs-id1169739044032",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#fs-id1169739044032",
+  "type": "Example",
+  "number": "3.1.19",
+  "title": "Finding a Derivative.",
+  "body": " Finding a Derivative   For find by using .    Substitute the given function and value directly into the equation.    "
+},
+{
+  "id": "fs-id1169739093789",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#fs-id1169739093789",
+  "type": "Example",
+  "number": "3.1.20",
+  "title": "Revisiting the Derivative.",
+  "body": " Revisiting the Derivative   For find by using .    Using this equation, we can substitute two values of the function into the equation, and we should get the same value as in .   The results are the same whether we use or .   "
+},
+{
+  "id": "sec_Ch3Sec1-4-8",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-4-8",
+  "type": "Checkpoint",
+  "number": "3.1.21",
+  "title": "",
+  "body": "  For find       Use either , , or try both. Use either or as a guide.   "
+},
+{
+  "id": "sec_Ch3Sec1-5-2",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-5-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "average velocity "
+},
+{
+  "id": "sec_Ch3Sec1-5-4",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-5-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "instantaneous velocity "
+},
+{
+  "id": "CNX_Calc_Figure_03_01_007",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#CNX_Calc_Figure_03_01_007",
+  "type": "Figure",
+  "number": "3.1.22",
+  "title": "",
+  "body": "  \"This figure consists of the Cartesian coordinate plane with 0, a, and t1 marked on the t-axis. The function y = s(t) is graphed in the first quadrant along with two lines marked tangent and secant. The tangent line touches y = s(t) at only one point, (a, s(a)). The secant line touches y = s(t) at two points: (a, s(a)) and (t1, s(t1)).\"  The slope of the secant line is the average velocity over the interval The slope of the tangent line is the instantaneous velocity.  "
+},
+{
+  "id": "fs-id1169739179204",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#fs-id1169739179204",
+  "type": "Example",
+  "number": "3.1.23",
+  "title": "Estimating Marginal Cost.",
+  "body": "  Estimating Marginal Cost   The cost function for coffee is given by where is the number of thousand items made. Use a table to estimate the marginal cost of producing 1000 items and interpret.    Using , we can estimate the marginal cost at by computing a table of the slopes of the secant line using values of approaching . This is shown in .   Slopes of the secant lines using values of approaching 1                                 From the table we see that the slope of the secant line over the interval is the slope of the secant line over the interval is and so forth. Using this table of values, it appears that a good estimate is  When items are produced, the cost is decreasing at a rate of per thousand items made. So if we produce more items, we can expect costs to drop by .   "
+},
+{
+  "id": "sec_Ch3Sec1-5-10",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-5-10",
+  "type": "Checkpoint",
+  "number": "3.1.25",
+  "title": "",
+  "body": "  A rock is dropped from a height of feet. Its height above ground at time seconds later is given by Find its instantaneous velocity second after it is dropped, using .    ft\/s    Follow the earlier examples of the derivative using .   "
+},
+{
+  "id": "sec_Ch3Sec1-5-12",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-5-12",
+  "type": "Definition",
+  "number": "3.1.26",
+  "title": "",
+  "body": " The instantaneous rate of change of a function at a value is its derivative  "
+},
+{
+  "id": "fs-id1169739204154",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#fs-id1169739204154",
+  "type": "Example",
+  "number": "3.1.27",
+  "title": "Chapter Opener: Estimating Rate of Change of Velocity.",
+  "body": " Chapter Opener: Estimating Rate of Change of Velocity     \"The same sports car speeding along a winding road from the beginning of the chapter.\"  (credit: modification of work by Codex41, Flickr)   Reaching a top speed of mph, the Hennessey Venom GT is one of the fastest cars in the world. In tests it went from to mph in seconds, from mph in seconds, from mph in seconds, and from mph in seconds. Use this data to draw a conclusion about the rate of change of velocity (that is, its acceleration ) as it approaches mph. Does the rate at which the car is accelerating appear to be increasing, decreasing, or constant?    First observe that mph = ft\/s, mph ft\/s, mph ft\/s, and mph ft\/s. We can summarize the information in a table.   at different values of                             Now compute the average acceleration of the car in feet per second on intervals of the form as approaches as shown in the following table.   Average acceleration                         The rate at which the car is accelerating is decreasing as its velocity approaches mph ft\/s).   "
+},
+{
+  "id": "fs-id1169739187343",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#fs-id1169739187343",
+  "type": "Example",
+  "number": "3.1.31",
+  "title": "Rate of Change of Temperature.",
+  "body": " Rate of Change of Temperature   A homeowner sets the thermostat so that the temperature in the house begins to drop from at p.m., reaches a low of during the night, and rises back to by a.m. the next morning. Suppose that the temperature in the house is given by for where is the number of hours past p.m. Find the instantaneous rate of change of the temperature at midnight.    Since midnight is hours past p.m., we want to compute Refer to .   The instantaneous rate of change of the temperature at midnight is per hour.   "
+},
+{
+  "id": "fs-id1169739253544",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#fs-id1169739253544",
+  "type": "Example",
+  "number": "3.1.32",
+  "title": "Rate of Change of Profit.",
+  "body": " Rate of Change of Profit   A toy company can sell electronic gaming systems at a price of dollars per gaming system. The cost of manufacturing systems is given by dollars. Find the rate of change of profit when games are produced. Should the toy company increase or decrease production?    The profit earned by producing gaming systems is where is the revenue obtained from the sale of games. Since the company can sell games at per game,   Consequently,   Therefore, evaluating the rate of change of profit gives   Since the rate of change of profit and the company should increase production.   "
+},
+{
+  "id": "sec_Ch3Sec1-5-16",
+  "level": "2",
+  "url": "sec_Ch3Sec1.html#sec_Ch3Sec1-5-16",
+  "type": "Checkpoint",
+  "number": "3.1.33",
+  "title": "",
+  "body": "  A coffee shop determines that the daily profit on scones obtained by charging dollars per scone is The coffee shop currently charges per scone. Find the rate of change of profit when the price is and decide whether or not the coffee shop should consider raising or lowering its prices on scones.    raise prices    Use for a guide.   "
+},
+{
+  "id": "sec_Ch3Sec2",
+  "level": "1",
+  "url": "sec_Ch3Sec2.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "The Derivative as a Function (not edited)",
+  "body": " The Derivative as a Function (not edited)   Learning Objectives   Define the derivative function of a given function.  Graph a derivative function from the graph of a given function.  State the connection between derivatives and continuity.  Describe three conditions for when a function does not have a derivative.  Explain the meaning of a higher-order derivative.   As we have seen, the derivative of a function at a given point gives us the rate of change or slope of the tangent line to the function at that point. If we differentiate a position function at a given time, we obtain the velocity at that time. It seems reasonable to conclude that knowing the derivative of the function at every point would produce valuable information about the behavior of the function. However, the process of finding the derivative at even a handful of values using the techniques of the preceding section would quickly become quite tedious. In this section we define the derivative function and learn a process for finding it.    Derivative Functions  The derivative function gives the derivative of a function at each point in the domain of the original function for which the derivative is defined. We can formally define a derivative function as follows.    Let be a function. The derivative function , denoted by is the function whose domain consists of those values of such that the following limit exists:    A function is said to be differentiable at if exists. More generally, a function is said to be differentiable on if it is differentiable at every point in an open set and a differentiable function is one in which exists on its domain. In the next few examples we use to find the derivative of a function.   Finding the Derivative of a Square-Root Function   Find the derivative of    Start directly with the definition of the derivative function. Use .      Finding the Derivative of a Quadratic Function   Find the derivative of the function    Follow the same procedure here, but without having to multiply by the conjugate.       Find the derivative of       Use and follow the example.    We use a variety of different notations to express the derivative of a function. In we showed that if then If we had expressed this function in the form we could have expressed the derivative as or We could have conveyed the same information by writing Thus, for the function each of the following notations represents the derivative of   In place of we may also use Use of the notation (called Leibniz notation) is quite common in engineering and physics. To understand this notation better, recall that the derivative of a function at a point is the limit of the slopes of secant lines as the secant lines approach the tangent line. The slopes of these secant lines are often expressed in the form where is the difference in the values corresponding to the difference in the values, which are expressed as ( ). Thus the derivative, which can be thought of as the instantaneous rate of change of with respect to is expressed as     \"The function y = f(x) is graphed and it shows up as a curve in the first quadrant. The x-axis is marked with 0, a, and a + Δx. The y-axis is marked with 0, f(a), and f(a) + Δy. There is a straight line crossing y = f(x) at (a, f(a)) and (a + Δx, f(a) + Δy). From the point (a, f(a)), a horizontal line is drawn; from the point (a + Δx, f(a) + Δy), a vertical line is drawn. The distance from (a, f(a)) to (a + Δx, f(a)) is denoted Δx; the distance from (a + Δx, f(a) + Δy) to (a + Δx, f(a)) is denoted Δy.\"  The derivative is expressed as     Graphing a Derivative  We have already discussed how to graph a function, so given the equation of a function or the equation of a derivative function, we could graph it. Given both, we would expect to see a correspondence between the graphs of these two functions, since gives the rate of change of a function (or slope of the tangent line to  In we found that for If we graph these functions on the same axes, as in , we can use the graphs to understand the relationship between these two functions. First, we notice that is increasing over its entire domain, which means that the slopes of its tangent lines at all points are positive. Consequently, we expect for all values of in its domain. Furthermore, as increases, the slopes of the tangent lines to are decreasing and we expect to see a corresponding decrease in We also observe that is undefined and that corresponding to a vertical tangent to at    \"The function f(x) = the square root of x is graphed as is its derivative f’(x) = 1\/(2 times the square root of x).\"  The derivative is positive everywhere because the function is increasing.   In we found that for The graphs of these functions are shown in . Observe that is decreasing for For these same values of For values of is increasing and Also, has a horizontal tangent at and    \"The function f(x) = x squared – 2x is graphed as is its derivative f’(x) = 2x − 2.\"  The derivative where the function is decreasing and where is increasing. The derivative is zero where the function has a horizontal tangent.    Sketching a Derivative Using a Function   Use the following graph of to sketch a graph of   \"The function f(x) is roughly sinusoidal, starting at (−4, 3), decreasing to a local minimum at (−2, 2), then increasing to a local maximum at (3, 6), and getting cut off at (7, 2).\"     The solution is shown in the following graph. Observe that is increasing and on Also, is decreasing and on and on Also note that has horizontal tangents at and and and   \"Two functions are graphed here: f(x) and f’(x). The function f(x) is the same as the above graph, that is, roughly sinusoidal, starting at (−4, 3), decreasing to a local minimum at (−2, 2), then increasing to a local maximum at (3, 6), and getting cut off at (7, 2). The function f’(x) is an downward-facing parabola with vertex near (0.5, 1.75), y-intercept (0, 1.5), and x-intercepts (−1.9, 0) and (3, 0).\"     >  Sketch the graph of On what interval is the graph of above the -axis?       The graph of is positive where is increasing.      Derivatives and Continuity  Now that we can graph a derivative, let’s examine the behavior of the graphs. First, we consider the relationship between differentiability and continuity. We will see that if a function is differentiable at a point, it must be continuous there; however, a function that is continuous at a point need not be differentiable at that point. In fact, a function may be continuous at a point and fail to be differentiable at the point for one of several reasons.    Differentiability Implies Continuity  Let be a function and be in its domain. If is differentiable at then is continuous at    We have that differentiability implies continuity, but now we consider whether continuity implies differentiability. To determine an answer to this question, we examine the function This function is continuous everywhere; however, is undefined. This observation leads us to believe that continuity does not imply differentiability. Let’s explore further. For   This limit does not exist because   See .    \"The function f(x) = the absolute value of x is graphed. It consists of two straight line segments: the first follows the equation y = −x and ends at the origin; the second follows the equation y = x and starts at the origin.\"  The function is continuous at but is not differentiable at   Let’s consider some additional situations in which a continuous function fails to be differentiable. Consider the function   Thus does not exist. A quick look at the graph of clarifies the situation. The function has a vertical tangent line at ( ).    \"The function f(x) = the cube root of x is graphed. It has a vertical tangent at x = 0.\"  The function has a vertical tangent at It is continuous at but is not differentiable at    The function also has a derivative that exhibits interesting behavior at We see that   This limit does not exist, mainly because the slopes of the secant lines are positive if we approach 0 from the right yet the slopes of the secant lines are negative if we approach 0 from the left. That is, and We say that has cusp at . This behavior is displayed below in . Note that the function is approaching a vertical tangent line on each side of .    \"This figure shows the graph of near . On each side of 0, the function is approaching a vertical tangent, making a cusp at \"  The function has a cusp at   In summary:   We observe that if a function is not continuous, it cannot be differentiable, since every differentiable function must be continuous. However, if a function is continuous, it may still fail to be differentiable.  We saw that failed to be differentiable at because the limit of the slopes of the tangent lines on the left and right were not the same. Visually, this resulted in a sharp corner on the graph of the function at From this we conclude that in order to be differentiable at a point, a function must be “smooth” at that point.  As we saw in the example of a function fails to be differentiable at a point where there is a vertical tangent line.  As we saw with  a functions may fail to differentiable at a point where there is a cusp.    A Piecewise Function that is Continuous and Differentiable   A toy company wants to design a track for a toy car that starts out along a parabolic curve and then converts to a straight line ( ). The function that describes the track is to have the form where and are in inches. For the car to move smoothly along the track, the function must be both continuous and differentiable at Find values of and that make both continuous and differentiable.    \"A cart is drawn on a line that curves through (−10, 5) to (10, 0) with y-intercept roughly (0, 2).\"  For the car to move smoothly along the track, the function must be both continuous and differentiable.     For the function to be continuous at Thus, since   and we must have Equivalently, we have  For the function to be differentiable at   must exist. Since is defined using different rules on the right and the left, we must evaluate this limit from the right and the left and then set them equal to each other:   We also have   This gives us Thus and      Find values of and that make both continuous and differentiable at    and    Use as a guide.      Higher-Order Derivatives  The derivative of a function is itself a function, so we can find the derivative of a derivative. For example, the derivative of a position function is the rate of change of position, or velocity. The derivative of velocity is the rate of change of velocity, which is acceleration. The new function obtained by differentiating the derivative is called the second derivative. Furthermore, we can continue to take derivatives to obtain the third derivative, fourth derivative, and so on. Collectively, these are referred to as higher-order derivatives . The notation for the higher-order derivatives of can be expressed in any of the following forms:    It is interesting to note that the notation for may be viewed as an attempt to express more compactly. Analogously,   Finding a Second Derivative   For find    First find   Next, find by taking the derivative of       Find for       We found in a previous checkpoint. Use to find the derivative of     Finding Acceleration   The position of a particle along a coordinate axis at time (in seconds) is given by (in meters). Find the function that describes its acceleration at time    Since and we begin by finding the derivative of   Next,   Thus,      For find       Use as a guide.      Key Concepts   The derivative of a function is the function whose value at is  The graph of a derivative of a function is related to the graph of Where has a tangent line with positive slope, Where has a tangent line with negative slope, Where has a horizontal tangent line,  If a function is differentiable at a point, then it is continuous at that point. A function is not differentiable at a point if it is not continuous at the point, if it has a vertical tangent line at the point, or if the graph has a sharp corner or cusp.  Higher-order derivatives are derivatives of derivatives, from the second derivative to the derivative.     Key Equations   The derivative function      "
+},
+{
+  "id": "sec_Ch3Sec2-3-3",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#sec_Ch3Sec2-3-3",
+  "type": "Definition",
+  "number": "3.2.1",
+  "title": "",
+  "body": "  Let be a function. The derivative function , denoted by is the function whose domain consists of those values of such that the following limit exists:   "
+},
+{
+  "id": "sec_Ch3Sec2-3-4",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#sec_Ch3Sec2-3-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "differentiable at differentiable on differentiable function "
+},
+{
+  "id": "fs-id1169737770972",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#fs-id1169737770972",
+  "type": "Example",
+  "number": "3.2.2",
+  "title": "Finding the Derivative of a Square-Root Function.",
+  "body": " Finding the Derivative of a Square-Root Function   Find the derivative of    Start directly with the definition of the derivative function. Use .    "
+},
+{
+  "id": "fs-id1169737774001",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#fs-id1169737774001",
+  "type": "Example",
+  "number": "3.2.3",
+  "title": "Finding the Derivative of a Quadratic Function.",
+  "body": " Finding the Derivative of a Quadratic Function   Find the derivative of the function    Follow the same procedure here, but without having to multiply by the conjugate.    "
+},
+{
+  "id": "sec_Ch3Sec2-3-8",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#sec_Ch3Sec2-3-8",
+  "type": "Checkpoint",
+  "number": "3.2.4",
+  "title": "",
+  "body": "  Find the derivative of       Use and follow the example.   "
+},
+{
+  "id": "CNX_Calc_Figure_03_02_001",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#CNX_Calc_Figure_03_02_001",
+  "type": "Figure",
+  "number": "3.2.5",
+  "title": "",
+  "body": "  \"The function y = f(x) is graphed and it shows up as a curve in the first quadrant. The x-axis is marked with 0, a, and a + Δx. The y-axis is marked with 0, f(a), and f(a) + Δy. There is a straight line crossing y = f(x) at (a, f(a)) and (a + Δx, f(a) + Δy). From the point (a, f(a)), a horizontal line is drawn; from the point (a + Δx, f(a) + Δy), a vertical line is drawn. The distance from (a, f(a)) to (a + Δx, f(a)) is denoted Δx; the distance from (a + Δx, f(a) + Δy) to (a + Δx, f(a)) is denoted Δy.\"  The derivative is expressed as  "
+},
+{
+  "id": "CNX_Calc_Figure_03_02_002",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#CNX_Calc_Figure_03_02_002",
+  "type": "Figure",
+  "number": "3.2.6",
+  "title": "",
+  "body": "  \"The function f(x) = the square root of x is graphed as is its derivative f’(x) = 1\/(2 times the square root of x).\"  The derivative is positive everywhere because the function is increasing.  "
+},
+{
+  "id": "CNX_Calc_Figure_03_02_003",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#CNX_Calc_Figure_03_02_003",
+  "type": "Figure",
+  "number": "3.2.7",
+  "title": "",
+  "body": "  \"The function f(x) = x squared – 2x is graphed as is its derivative f’(x) = 2x − 2.\"  The derivative where the function is decreasing and where is increasing. The derivative is zero where the function has a horizontal tangent.  "
+},
+{
+  "id": "fs-id1169737966982",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#fs-id1169737966982",
+  "type": "Example",
+  "number": "3.2.8",
+  "title": "Sketching a Derivative Using a Function.",
+  "body": " Sketching a Derivative Using a Function   Use the following graph of to sketch a graph of   \"The function f(x) is roughly sinusoidal, starting at (−4, 3), decreasing to a local minimum at (−2, 2), then increasing to a local maximum at (3, 6), and getting cut off at (7, 2).\"     The solution is shown in the following graph. Observe that is increasing and on Also, is decreasing and on and on Also note that has horizontal tangents at and and and   \"Two functions are graphed here: f(x) and f’(x). The function f(x) is the same as the above graph, that is, roughly sinusoidal, starting at (−4, 3), decreasing to a local minimum at (−2, 2), then increasing to a local maximum at (3, 6), and getting cut off at (7, 2). The function f’(x) is an downward-facing parabola with vertex near (0.5, 1.75), y-intercept (0, 1.5), and x-intercepts (−1.9, 0) and (3, 0).\"    "
+},
+{
+  "id": "sec_Ch3Sec2-4-8",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#sec_Ch3Sec2-4-8",
+  "type": "Checkpoint",
+  "number": "3.2.9",
+  "title": "",
+  "body": ">  Sketch the graph of On what interval is the graph of above the -axis?       The graph of is positive where is increasing.   "
+},
+{
+  "id": "sec_Ch3Sec2-5-3",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#sec_Ch3Sec2-5-3",
+  "type": "Theorem",
+  "number": "3.2.10",
+  "title": "Differentiability Implies Continuity.",
+  "body": "  Differentiability Implies Continuity  Let be a function and be in its domain. If is differentiable at then is continuous at   "
+},
+{
+  "id": "CNX_Calc_Figure_03_02_006",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#CNX_Calc_Figure_03_02_006",
+  "type": "Figure",
+  "number": "3.2.11",
+  "title": "",
+  "body": "  \"The function f(x) = the absolute value of x is graphed. It consists of two straight line segments: the first follows the equation y = −x and ends at the origin; the second follows the equation y = x and starts at the origin.\"  The function is continuous at but is not differentiable at  "
+},
+{
+  "id": "CNX_Calc_Figure_03_02_007",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#CNX_Calc_Figure_03_02_007",
+  "type": "Figure",
+  "number": "3.2.12",
+  "title": "",
+  "body": "  \"The function f(x) = the cube root of x is graphed. It has a vertical tangent at x = 0.\"  The function has a vertical tangent at It is continuous at but is not differentiable at  "
+},
+{
+  "id": "Busi_Calc_Figure_03_02_002",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#Busi_Calc_Figure_03_02_002",
+  "type": "Figure",
+  "number": "3.2.13",
+  "title": "",
+  "body": "  \"This figure shows the graph of near . On each side of 0, the function is approaching a vertical tangent, making a cusp at \"  The function has a cusp at  "
+},
+{
+  "id": "fs-id1169738218186",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#fs-id1169738218186",
+  "type": "Example",
+  "number": "3.2.14",
+  "title": "A Piecewise Function that is Continuous and Differentiable.",
+  "body": " A Piecewise Function that is Continuous and Differentiable   A toy company wants to design a track for a toy car that starts out along a parabolic curve and then converts to a straight line ( ). The function that describes the track is to have the form where and are in inches. For the car to move smoothly along the track, the function must be both continuous and differentiable at Find values of and that make both continuous and differentiable.    \"A cart is drawn on a line that curves through (−10, 5) to (10, 0) with y-intercept roughly (0, 2).\"  For the car to move smoothly along the track, the function must be both continuous and differentiable.     For the function to be continuous at Thus, since   and we must have Equivalently, we have  For the function to be differentiable at   must exist. Since is defined using different rules on the right and the left, we must evaluate this limit from the right and the left and then set them equal to each other:   We also have   This gives us Thus and   "
+},
+{
+  "id": "sec_Ch3Sec2-5-21",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#sec_Ch3Sec2-5-21",
+  "type": "Checkpoint",
+  "number": "3.2.16",
+  "title": "",
+  "body": "  Find values of and that make both continuous and differentiable at    and    Use as a guide.   "
+},
+{
+  "id": "sec_Ch3Sec2-6-2",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#sec_Ch3Sec2-6-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "higher-order derivatives "
+},
+{
+  "id": "fs-id1169738217346",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#fs-id1169738217346",
+  "type": "Example",
+  "number": "3.2.17",
+  "title": "Finding a Second Derivative.",
+  "body": " Finding a Second Derivative   For find    First find   Next, find by taking the derivative of    "
+},
+{
+  "id": "sec_Ch3Sec2-6-8",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#sec_Ch3Sec2-6-8",
+  "type": "Checkpoint",
+  "number": "3.2.18",
+  "title": "",
+  "body": "  Find for       We found in a previous checkpoint. Use to find the derivative of   "
+},
+{
+  "id": "fs-id1169738099443",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#fs-id1169738099443",
+  "type": "Example",
+  "number": "3.2.19",
+  "title": "Finding Acceleration.",
+  "body": " Finding Acceleration   The position of a particle along a coordinate axis at time (in seconds) is given by (in meters). Find the function that describes its acceleration at time    Since and we begin by finding the derivative of   Next,   Thus,   "
+},
+{
+  "id": "sec_Ch3Sec2-6-10",
+  "level": "2",
+  "url": "sec_Ch3Sec2.html#sec_Ch3Sec2-6-10",
+  "type": "Checkpoint",
+  "number": "3.2.20",
+  "title": "",
+  "body": "  For find       Use as a guide.   "
+},
+{
+  "id": "sec_Ch3Sec3",
+  "level": "1",
+  "url": "sec_Ch3Sec3.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "Differentiation Rules (3.3.31-2 Need Chain Rule)",
+  "body": " Differentiation Rules (3.3.31-2 Need Chain Rule)   Learning Objectives   State the constant, constant multiple, and power rules.  Apply the sum and difference rules to combine derivatives.  Use the product rule for finding the derivative of a product of functions.  Use the quotient rule for finding the derivative of a quotient of functions.  Extend the power rule to functions with negative exponents.  Combine the differentiation rules to find the derivative of a polynomial or rational function.   Finding derivatives of functions by using the definition of the derivative can be a lengthy and, for certain functions, a rather challenging process. For example, previously we found that by using a process that involved multiplying an expression by a conjugate prior to evaluating a limit. The process that we could use to evaluate using the definition, while similar, is more complicated. In this section, we develop rules for finding derivatives that allow us to bypass this process. We begin with the basics.    The Basic Rules   The functions and where is a positive integer are the building blocks from which all polynomials and rational functions are constructed. To find derivatives of polynomials and rational functions efficiently without resorting to the limit definition of the derivative, we must first develop formulas for differentiating these basic functions.    The Constant Rule  We first apply the limit definition of the derivative to find the derivative of the constant function, For this function, both and so we obtain the following result:   The rule for differentiating constant functions is called the constant rule . It states that the derivative of a constant function is zero; that is, since a constant function is a horizontal line, the slope, or the rate of change, of a constant function is We restate this rule in the following theorem.   The Constant Rule  Let be a constant.  If then  Alternatively, we may express this rule as     Applying the Constant Rule   Find the derivative of    This is just a one-step application of the rule:       Find the derivative of    0    Use the preceding example as a guide.      The Power Rule  We have shown that   At this point, you might see a pattern beginning to develop for derivatives of the form We continue our examination of derivative formulas by differentiating power functions of the form where is a positive integer. We develop formulas for derivatives of this type of function in stages, beginning with positive integer powers. Before stating and proving the general rule for derivatives of functions of this form, we take a look at a specific case, As we go through this derivation, pay special attention to the portion of the expression in boldface, as the technique used in this case is essentially the same as the technique used to prove the general case.   Differentiating   Find       >  Find       Use and follow the procedure outlined in the preceding example.    As we shall see, the procedure for finding the derivative of the general form is very similar. Although it is often unwise to draw general conclusions from specific examples, we note that when we differentiate the power on becomes the coefficient of in the derivative and the power on in the derivative decreases by 1. The following theorem states that the power rule holds for all positive integer powers of We will eventually extend this result to negative integer powers. Later, we will see that this rule may also be extended first to rational powers of and then to arbitrary powers of Be aware, however, that this rule does not apply to functions in which a constant is raised to a variable power, such as   The Power Rule   Let be a positive integer. If then   Alternatively, we may express this rule as    For where is a positive integer, we have  Since  using the Binomial Theorem we see that   Next, divide both sides by :   Thus,   Finally,      Applying the Power Rule   Find the derivative of the function by applying the power rule.    Using the power rule with we obtain       Find the derivative of       Use the power rule with     The Power Rule (General Version)   If is any real number, then for all where the powers and are defined.    The proof of will have to wait until we explore the derivatives of exponential and logarithmic functions.   Differentiate the following powers of .                                                              The Sum, Difference, and Constant Multiple Rules  We find our next differentiation rules by looking at derivatives of sums, differences, and constant multiples of functions. Just as when we work with functions, there are rules that make it easier to find derivatives of functions that we add, subtract, or multiply by a constant. These rules are summarized in the following theorem.   Sum, Difference, and Constant Multiple Rules  Let and be differentiable functions and be a constant. Then each of the following equations holds.  Sum Rule . The derivative of the sum of a function and a function is the same as the sum of the derivative of and the derivative of   that is,   Difference Rule . The derivative of the difference of a function and a function is the same as the difference of the derivative of and the derivative of   that is,   Constant Multiple Rule . The derivative of a constant multiplied by a function is the same as the constant multiplied by the derivative:   that is,    We provide only the proof of the sum rule here. The rest follow in a similar manner.  For differentiable functions and we set Using the limit definition of the derivative we have   By substituting and we obtain   Rearranging and regrouping the terms, we have   We now apply the sum law for limits and the definition of the derivative to obtain     Applying the Constant Multiple Rule   Find the derivative of and compare it to the derivative of    We use the power rule directly:   Since has derivative we see that the derivative of is 3 times the derivative of This relationship is illustrated in .    \"Two graphs are shown. The first graph shows g(x) = 3x2 and f(x) = x squared. The second graph shows g’(x) = 6x and f’(x) = 2x. In the first graph, g(x) increases three times more quickly than f(x). In the second graph, g’(x) increases three times more quickly than f’(x).\"  The derivative of is 3 times the derivative of      Applying Basic Derivative Rules   Find the derivative of    We begin by applying the rule for differentiating the sum of two functions, followed by the rules for differentiating constant multiples of functions and the rule for differentiating powers. To better understand the sequence in which the differentiation rules are applied, we use Leibniz notation throughout the solution:       Find the derivative of       Use the preceding example as a guide.     Finding the Equation of a Tangent Line   Find the equation of the line tangent to the graph of at    To find the equation of the tangent line, we need a point and a slope. To find the point, compute   This gives us the point Since the slope of the tangent line at 1 is we must first find Using the definition of a derivative, we have   so the slope of the tangent line is Using the point-slope formula, we see that the equation of the tangent line is   Putting the equation of the line in slope-intercept form, we obtain       Find the equation of the line tangent to the graph of at Use the point-slope form.       Use the preceding example as a guide.      Derivatives of Exponential Functions  In order to study the derivatives of a wider variety of functions, we state here the derivative of exponential functions. The proof of how these formulas are valid will be given in the   Assume the function is differentiable for all (this is a big assumption we will have to verify at a later time).   Since the limit is over variable , can be factored outside. Again, assuming the derivative exists, we find it is just some multiple of . When , the derivative of is just multiplied by this constant . In other words, the slope of the tangent line to when is the value .  The following theorem provides the value of this limit, and the proof will be given in the appendix.    The constant is the real number that satisfies the limit Further,       The Product Rule  Now that we have examined the basic rules, we can begin looking at some of the more advanced rules. The first one examines the derivative of the product of two functions. Although it might be tempting to assume that the derivative of the product is the product of the derivatives, similar to the sum and difference rules, the product rule does not follow this pattern. To see why we cannot use this pattern, consider the function whose derivative is and not   Product Rule  Let and be differentiable functions. Then   That is,   This means that the derivative of a product of two functions is the derivative of the first function times the second function plus the derivative of the second function times the first function.     Applying the Product Rule to Functions at a Point   For use the product rule to find if and    Since and hence      Applying the Product Rule to Binomials   For find by applying the product rule. Check the result by first finding the product and then differentiating.    If we set and then and Thus,   Simplifying, we have   To check, we see that and, consequently,      Use the product rule to obtain the derivative of       Set and and use the preceding example as a guide.      The Quotient Rule  Having developed and practiced the product rule, we now consider differentiating quotients of functions. As we see in the following theorem, the derivative of the quotient is not the quotient of the derivatives; rather, it is the derivative of the function in the numerator times the function in the denominator minus the derivative of the function in the denominator times the function in the numerator, all divided by the square of the function in the denominator. In order to better grasp why we cannot simply take the quotient of the derivatives, keep in mind that    The Quotient Rule  Let and be differentiable functions. Then   That is,    The proof of the quotient rule is very similar to the proof of the product rule, so it is omitted here. Instead, we apply this new rule for finding derivatives in the next example.   Applying the Quotient Rule   Use the quotient rule to find the derivative of    Let and Thus, and Substituting into the quotient rule, we have   Simplifying, we obtain       Find the derivative of       Apply the quotient rule with and      Using the Power Rule   Find    By applying the power rule with we obtain      Using the Power Rule and the Constant Multiple Rule   Use the power rule and the constant multiple rule to find    It may seem tempting to use the quotient rule to find this derivative, and it would certainly not be incorrect to do so. However, it is far easier to differentiate this function by first rewriting it as       Find the derivative of using the power rule.       Rewrite Use the power rule with      Combining Differentiation Rules  As we have seen throughout the examples in this section, it seldom happens that we are called on to apply just one differentiation rule to find the derivative of a given function. At this point, by combining the differentiation rules, we may find the derivatives of any polynomial or rational function. Later on we will encounter more complex combinations of differentiation rules. A good rule of thumb to use when applying several rules is to apply the rules in reverse of the order in which we would evaluate the function.   Combining Differentiation Rules   For find    Finding this derivative requires the sum rule, the constant multiple rule, and the product rule.      Extending the Product Rule   For express in terms of and their derivatives.    We can think of the function as the product of the function and the function That is, Thus,      Combining Differentiation Rules   Find the derivative of    Use the derivative of the natural exponential function, the quotient rule, and the chain rule.       Find the derivative of       Don’t forget to use the product rule.     Combining the Quotient Rule and the Product Rule   For find    This procedure is typical for finding the derivative of a rational function.       Find       Apply the difference rule and the constant multiple rule.     Determining Where a Function Has a Horizontal Tangent   Determine the values of for which has a horizontal tangent line.    To find the values of for which has a horizontal tangent line, we must solve Since   we must solve Thus we see that the function has horizontal tangent lines at and as shown in the following graph.    \"The graph shows f(x) = x3 – 7x2 + 8x + 1, and the tangent lines are shown as x = 2\/3 and x = 4.\"  This function has horizontal tangent lines at = 2\/3 and = 4.       Cost, Revenue, and Profit   Michael finds his cost and revenue in dollars when units are sold to be , respectively.   Find the profit function,  Find and interpret.     Recall that Using the power rule,   When 4 units are sold, the profit is decreasing (dropping) at a rate of per unit sold. So if 1 more unit is sold, we would expect profit to decrease by .      Find the values of for which the line tangent to the graph of has a tangent line parallel to the line       Solve     Project: Formula One Grandstands  Formula One car races can be very exciting to watch and attract a lot of spectators. Formula One track designers have to ensure sufficient grandstand space is available around the track to accommodate these viewers. However, car racing can be dangerous, and safety considerations are paramount. The grandstands must be placed where spectators will not be in danger should a driver lose control of a car ( ).    \"A photo of a grandstand next to a straightaway of a race track.\"  The grandstand next to a straightaway of the Circuit de Barcelona-Catalunya race track, located where the spectators are not in danger.  ********** Safety is especially a concern on turns. If a driver does not slow down enough before entering the turn, the car may slide off the racetrack. Normally, this just results in a wider turn, which slows the driver down. But if the driver loses control completely, the car may fly off the track entirely, on a path tangent to the curve of the racetrack.  Suppose you are designing a new Formula One track. One section of the track can be modeled by the function ( ). The current plan calls for grandstands to be built along the first straightaway and around a portion of the first curve. The plans call for the front corner of the grandstand to be located at the point We want to determine whether this location puts the spectators in danger if a driver loses control of the car.   \"This figure has two parts labeled a and b. Figure a shows the graph of f(x) = x3 + 3x2 + x. Figure b shows the same graph but this time with two boxes on it. The first box appears along the left-hand side of the graph straddling the x-axis roughly parallel to f(x). The second box appears a little higher, also roughly parallel to f(x), with its front corner located at (-1.9, 2.8). Note that this corner is roughly in line with the direct path of the track before it started to turn.\"  (a) One section of the racetrack can be modeled by the function (b) The front corner of the grandstand is located at  Physicists have determined that drivers are most likely to lose control of their cars as they are coming into a turn, at the point where the slope of the tangent line is 1. Find the coordinates of this point near the turn.  Find the equation of the tangent line to the curve at this point.  To determine whether the spectators are in danger in this scenario, find the -coordinate of the point where the tangent line crosses the line Is this point safely to the right of the grandstand? Or are the spectators in danger?  What if a driver loses control earlier than the physicists project? Suppose a driver loses control at the point What is the slope of the tangent line at this point?  If a driver loses control as described in part 4, are the spectators safe?  Should you proceed with the current design for the grandstand, or should the grandstands be moved?      Key Concepts   The derivative of a constant function is zero.  The derivative of a power function is a function in which the power on becomes the coefficient of the term and the power on in the derivative decreases by 1.  The derivative of a constant multiplied by a function is the same as the constant multiplied by the derivative.  The derivative of the sum of a function and a function is the same as the sum of the derivative of and the derivative of g.  The derivative of the difference of a function and a function is the same as the difference of the derivative of and the derivative of g.  The derivative of a product of two functions is the derivative of the first function times the second function plus the derivative of the second function times the first function.  The derivative of the quotient of two functions is the derivative of the first function times the second function minus the derivative of the second function times the first function, all divided by the square of the second function.  We used the limit definition of the derivative to develop formulas that allow us to find derivatives without resorting to the definition of the derivative. These formulas can be used singly or in combination with each other.     "
+},
+{
+  "id": "sec_Ch3Sec3-3-3-4",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-3-3-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "constant rule "
+},
+{
+  "id": "sec_Ch3Sec3-3-3-5",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-3-3-5",
+  "type": "Theorem",
+  "number": "3.3.1",
+  "title": "The Constant Rule.",
+  "body": " The Constant Rule  Let be a constant.  If then  Alternatively, we may express this rule as   "
+},
+{
+  "id": "fs-id1169739274547",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169739274547",
+  "type": "Example",
+  "number": "3.3.2",
+  "title": "Applying the Constant Rule.",
+  "body": " Applying the Constant Rule   Find the derivative of    This is just a one-step application of the rule:    "
+},
+{
+  "id": "sec_Ch3Sec3-3-3-7",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-3-3-7",
+  "type": "Checkpoint",
+  "number": "3.3.3",
+  "title": "",
+  "body": "  Find the derivative of    0    Use the preceding example as a guide.   "
+},
+{
+  "id": "fs-id1169738993994",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169738993994",
+  "type": "Example",
+  "number": "3.3.4",
+  "title": "Differentiating <span class=\"process-math\">\\(x^3\\)<\/span>.",
+  "body": " Differentiating   Find      "
+},
+{
+  "id": "sec_Ch3Sec3-3-4-6",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-3-4-6",
+  "type": "Checkpoint",
+  "number": "3.3.5",
+  "title": "",
+  "body": ">  Find       Use and follow the procedure outlined in the preceding example.   "
+},
+{
+  "id": "sec_Ch3Sec3-3-4-7",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-3-4-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "power rule "
+},
+{
+  "id": "sec_Ch3Sec3-3-4-8",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-3-4-8",
+  "type": "Theorem",
+  "number": "3.3.6",
+  "title": "The Power Rule.",
+  "body": " The Power Rule   Let be a positive integer. If then   Alternatively, we may express this rule as    For where is a positive integer, we have  Since  using the Binomial Theorem we see that   Next, divide both sides by :   Thus,   Finally,    "
+},
+{
+  "id": "fs-id1169739190555",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169739190555",
+  "type": "Example",
+  "number": "3.3.7",
+  "title": "Applying the Power Rule.",
+  "body": " Applying the Power Rule   Find the derivative of the function by applying the power rule.    Using the power rule with we obtain    "
+},
+{
+  "id": "sec_Ch3Sec3-3-4-10",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-3-4-10",
+  "type": "Checkpoint",
+  "number": "3.3.8",
+  "title": "",
+  "body": "  Find the derivative of       Use the power rule with   "
+},
+{
+  "id": "thm-generalpowerrule",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#thm-generalpowerrule",
+  "type": "Theorem",
+  "number": "3.3.9",
+  "title": "The Power Rule (General Version).",
+  "body": " The Power Rule (General Version)   If is any real number, then for all where the powers and are defined.   "
+},
+{
+  "id": "sec_Ch3Sec3-3-4-13",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-3-4-13",
+  "type": "Example",
+  "number": "3.3.10",
+  "title": "",
+  "body": " Differentiate the following powers of .                                                          "
+},
+{
+  "id": "sec_Ch3Sec3-4-3",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-4-3",
+  "type": "Theorem",
+  "number": "3.3.11",
+  "title": "Sum, Difference, and Constant Multiple Rules.",
+  "body": " Sum, Difference, and Constant Multiple Rules  Let and be differentiable functions and be a constant. Then each of the following equations holds.  Sum Rule . The derivative of the sum of a function and a function is the same as the sum of the derivative of and the derivative of   that is,   Difference Rule . The derivative of the difference of a function and a function is the same as the difference of the derivative of and the derivative of   that is,   Constant Multiple Rule . The derivative of a constant multiplied by a function is the same as the constant multiplied by the derivative:   that is,    We provide only the proof of the sum rule here. The rest follow in a similar manner.  For differentiable functions and we set Using the limit definition of the derivative we have   By substituting and we obtain   Rearranging and regrouping the terms, we have   We now apply the sum law for limits and the definition of the derivative to obtain   "
+},
+{
+  "id": "fs-id1169739269764",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169739269764",
+  "type": "Example",
+  "number": "3.3.12",
+  "title": "Applying the Constant Multiple Rule.",
+  "body": " Applying the Constant Multiple Rule   Find the derivative of and compare it to the derivative of    We use the power rule directly:   Since has derivative we see that the derivative of is 3 times the derivative of This relationship is illustrated in .    \"Two graphs are shown. The first graph shows g(x) = 3x2 and f(x) = x squared. The second graph shows g’(x) = 6x and f’(x) = 2x. In the first graph, g(x) increases three times more quickly than f(x). In the second graph, g’(x) increases three times more quickly than f’(x).\"  The derivative of is 3 times the derivative of    "
+},
+{
+  "id": "fs-id1169739300387",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169739300387",
+  "type": "Example",
+  "number": "3.3.14",
+  "title": "Applying Basic Derivative Rules.",
+  "body": " Applying Basic Derivative Rules   Find the derivative of    We begin by applying the rule for differentiating the sum of two functions, followed by the rules for differentiating constant multiples of functions and the rule for differentiating powers. To better understand the sequence in which the differentiation rules are applied, we use Leibniz notation throughout the solution:    "
+},
+{
+  "id": "sec_Ch3Sec3-4-6",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-4-6",
+  "type": "Checkpoint",
+  "number": "3.3.15",
+  "title": "",
+  "body": "  Find the derivative of       Use the preceding example as a guide.   "
+},
+{
+  "id": "fs-id1169739301889",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169739301889",
+  "type": "Example",
+  "number": "3.3.16",
+  "title": "Finding the Equation of a Tangent Line.",
+  "body": " Finding the Equation of a Tangent Line   Find the equation of the line tangent to the graph of at    To find the equation of the tangent line, we need a point and a slope. To find the point, compute   This gives us the point Since the slope of the tangent line at 1 is we must first find Using the definition of a derivative, we have   so the slope of the tangent line is Using the point-slope formula, we see that the equation of the tangent line is   Putting the equation of the line in slope-intercept form, we obtain    "
+},
+{
+  "id": "sec_Ch3Sec3-4-8",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-4-8",
+  "type": "Checkpoint",
+  "number": "3.3.17",
+  "title": "",
+  "body": "  Find the equation of the line tangent to the graph of at Use the point-slope form.       Use the preceding example as a guide.   "
+},
+{
+  "id": "thm-eulernumberlimit",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#thm-eulernumberlimit",
+  "type": "Theorem",
+  "number": "3.3.18",
+  "title": "",
+  "body": "  The constant is the real number that satisfies the limit Further,    "
+},
+{
+  "id": "sec_Ch3Sec3-6-2",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-6-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "product rule "
+},
+{
+  "id": "sec_Ch3Sec3-6-3",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-6-3",
+  "type": "Theorem",
+  "number": "3.3.19",
+  "title": "Product Rule.",
+  "body": " Product Rule  Let and be differentiable functions. Then   That is,   This means that the derivative of a product of two functions is the derivative of the first function times the second function plus the derivative of the second function times the first function.   "
+},
+{
+  "id": "fs-id1169736659557",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169736659557",
+  "type": "Example",
+  "number": "3.3.20",
+  "title": "Applying the Product Rule to Functions at a Point.",
+  "body": " Applying the Product Rule to Functions at a Point   For use the product rule to find if and    Since and hence    "
+},
+{
+  "id": "fs-id1169739273812",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169739273812",
+  "type": "Example",
+  "number": "3.3.21",
+  "title": "Applying the Product Rule to Binomials.",
+  "body": " Applying the Product Rule to Binomials   For find by applying the product rule. Check the result by first finding the product and then differentiating.    If we set and then and Thus,   Simplifying, we have   To check, we see that and, consequently,   "
+},
+{
+  "id": "sec_Ch3Sec3-6-6",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-6-6",
+  "type": "Checkpoint",
+  "number": "3.3.22",
+  "title": "",
+  "body": "  Use the product rule to obtain the derivative of       Set and and use the preceding example as a guide.   "
+},
+{
+  "id": "sec_Ch3Sec3-7-4",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-7-4",
+  "type": "Theorem",
+  "number": "3.3.23",
+  "title": "The Quotient Rule.",
+  "body": " The Quotient Rule  Let and be differentiable functions. Then   That is,   "
+},
+{
+  "id": "sec_Ch3Sec3-7-5",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-7-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "quotient rule "
+},
+{
+  "id": "fs-id1169739305225",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169739305225",
+  "type": "Example",
+  "number": "3.3.24",
+  "title": "Applying the Quotient Rule.",
+  "body": " Applying the Quotient Rule   Use the quotient rule to find the derivative of    Let and Thus, and Substituting into the quotient rule, we have   Simplifying, we obtain    "
+},
+{
+  "id": "sec_Ch3Sec3-7-7",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-7-7",
+  "type": "Checkpoint",
+  "number": "3.3.25",
+  "title": "",
+  "body": "  Find the derivative of       Apply the quotient rule with and   "
+},
+{
+  "id": "fs-id1169736614308",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169736614308",
+  "type": "Example",
+  "number": "3.3.26",
+  "title": "Using the  Power Rule.",
+  "body": " Using the Power Rule   Find    By applying the power rule with we obtain    "
+},
+{
+  "id": "fs-id1169739300101",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169739300101",
+  "type": "Example",
+  "number": "3.3.27",
+  "title": "Using the  Power Rule and the Constant Multiple Rule.",
+  "body": " Using the Power Rule and the Constant Multiple Rule   Use the power rule and the constant multiple rule to find    It may seem tempting to use the quotient rule to find this derivative, and it would certainly not be incorrect to do so. However, it is far easier to differentiate this function by first rewriting it as    "
+},
+{
+  "id": "sec_Ch3Sec3-7-10",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-7-10",
+  "type": "Checkpoint",
+  "number": "3.3.28",
+  "title": "",
+  "body": "  Find the derivative of using the power rule.       Rewrite Use the power rule with   "
+},
+{
+  "id": "fs-id1169739347062",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169739347062",
+  "type": "Example",
+  "number": "3.3.29",
+  "title": "Combining Differentiation Rules.",
+  "body": " Combining Differentiation Rules   For find    Finding this derivative requires the sum rule, the constant multiple rule, and the product rule.    "
+},
+{
+  "id": "fs-id1169739325719",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169739325719",
+  "type": "Example",
+  "number": "3.3.30",
+  "title": "Extending the Product Rule.",
+  "body": " Extending the Product Rule   For express in terms of and their derivatives.    We can think of the function as the product of the function and the function That is, Thus,    "
+},
+{
+  "id": "fs-id1169737140879",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169737140879",
+  "type": "Example",
+  "number": "3.3.31",
+  "title": "Combining Differentiation Rules.",
+  "body": " Combining Differentiation Rules   Find the derivative of    Use the derivative of the natural exponential function, the quotient rule, and the chain rule.    "
+},
+{
+  "id": "sec_Ch3Sec3-8-6",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-8-6",
+  "type": "Checkpoint",
+  "number": "3.3.32",
+  "title": "",
+  "body": "  Find the derivative of       Don’t forget to use the product rule.   "
+},
+{
+  "id": "fs-id1169736658392",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169736658392",
+  "type": "Example",
+  "number": "3.3.33",
+  "title": "Combining the Quotient Rule and the Product Rule.",
+  "body": " Combining the Quotient Rule and the Product Rule   For find    This procedure is typical for finding the derivative of a rational function.    "
+},
+{
+  "id": "sec_Ch3Sec3-8-8",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-8-8",
+  "type": "Checkpoint",
+  "number": "3.3.34",
+  "title": "",
+  "body": "  Find       Apply the difference rule and the constant multiple rule.   "
+},
+{
+  "id": "fs-id1169736589236",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169736589236",
+  "type": "Example",
+  "number": "3.3.35",
+  "title": "Determining Where a Function Has a Horizontal Tangent.",
+  "body": " Determining Where a Function Has a Horizontal Tangent   Determine the values of for which has a horizontal tangent line.    To find the values of for which has a horizontal tangent line, we must solve Since   we must solve Thus we see that the function has horizontal tangent lines at and as shown in the following graph.    \"The graph shows f(x) = x3 – 7x2 + 8x + 1, and the tangent lines are shown as x = 2\/3 and x = 4.\"  This function has horizontal tangent lines at = 2\/3 and = 4.    "
+},
+{
+  "id": "fs-id1169739281977",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#fs-id1169739281977",
+  "type": "Example",
+  "number": "3.3.37",
+  "title": "Cost, Revenue, and Profit.",
+  "body": "  Cost, Revenue, and Profit   Michael finds his cost and revenue in dollars when units are sold to be , respectively.   Find the profit function,  Find and interpret.     Recall that Using the power rule,   When 4 units are sold, the profit is decreasing (dropping) at a rate of per unit sold. So if 1 more unit is sold, we would expect profit to decrease by .   "
+},
+{
+  "id": "sec_Ch3Sec3-8-11",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-8-11",
+  "type": "Checkpoint",
+  "number": "3.3.38",
+  "title": "",
+  "body": "  Find the values of for which the line tangent to the graph of has a tangent line parallel to the line       Solve   "
+},
+{
+  "id": "sec_Ch3Sec3-8-12",
+  "level": "2",
+  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-8-12",
+  "type": "Note",
+  "number": "3.3.39",
+  "title": "Project: Formula One Grandstands.",
+  "body": " Project: Formula One Grandstands  Formula One car races can be very exciting to watch and attract a lot of spectators. Formula One track designers have to ensure sufficient grandstand space is available around the track to accommodate these viewers. However, car racing can be dangerous, and safety considerations are paramount. The grandstands must be placed where spectators will not be in danger should a driver lose control of a car ( ).    \"A photo of a grandstand next to a straightaway of a race track.\"  The grandstand next to a straightaway of the Circuit de Barcelona-Catalunya race track, located where the spectators are not in danger.  ********** Safety is especially a concern on turns. If a driver does not slow down enough before entering the turn, the car may slide off the racetrack. Normally, this just results in a wider turn, which slows the driver down. But if the driver loses control completely, the car may fly off the track entirely, on a path tangent to the curve of the racetrack.  Suppose you are designing a new Formula One track. One section of the track can be modeled by the function ( ). The current plan calls for grandstands to be built along the first straightaway and around a portion of the first curve. The plans call for the front corner of the grandstand to be located at the point We want to determine whether this location puts the spectators in danger if a driver loses control of the car.   \"This figure has two parts labeled a and b. Figure a shows the graph of f(x) = x3 + 3x2 + x. Figure b shows the same graph but this time with two boxes on it. The first box appears along the left-hand side of the graph straddling the x-axis roughly parallel to f(x). The second box appears a little higher, also roughly parallel to f(x), with its front corner located at (-1.9, 2.8). Note that this corner is roughly in line with the direct path of the track before it started to turn.\"  (a) One section of the racetrack can be modeled by the function (b) The front corner of the grandstand is located at  Physicists have determined that drivers are most likely to lose control of their cars as they are coming into a turn, at the point where the slope of the tangent line is 1. Find the coordinates of this point near the turn.  Find the equation of the tangent line to the curve at this point.  To determine whether the spectators are in danger in this scenario, find the -coordinate of the point where the tangent line crosses the line Is this point safely to the right of the grandstand? Or are the spectators in danger?  What if a driver loses control earlier than the physicists project? Suppose a driver loses control at the point What is the slope of the tangent line at this point?  If a driver loses control as described in part 4, are the spectators safe?  Should you proceed with the current design for the grandstand, or should the grandstands be moved?   "
+},
+{
+  "id": "sec_Ch3Sec6",
+  "level": "1",
+  "url": "sec_Ch3Sec6.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Chapter 3 Section 6 Placeholder",
+  "body": " Chapter 3 Section 6 Placeholder  "
+},
+{
+  "id": "sec_exp_func",
+  "level": "1",
+  "url": "sec_exp_func.html",
+  "type": "Section",
+  "number": "4.1",
+  "title": "Derivatives of Exponential Functions (check if table headers needed)",
+  "body": " Derivatives of Exponential Functions (check if table headers needed)   Now that we understand how derivatives interact with products and quotients, we are able to compute derivatives of  polynomials,  rational functions, and  powers and roots of rational functions.  Notice that all of the above come from knowing Differentiating powers and roots of functions is actually quite a bit easier once one knows the chain rule which we will discuss soon. the derivative of and applying linearity of derivatives and the product rule.  There is still one more rule that we need to complete our toolbox and that is the chain rule. However before we get there, we will add a few functions to our list of things we can differentiate One reason we add these functions is that they interact very nicely with the derivative. Another reason is that they turn up in many real world examples. . The first of these is the exponential function.  Let and set  this is what is known as an exponential function. Let's see what happens when we try to compute the derivative of this function just using the definition of the derivative. Unfortunately we cannot complete this computation because we cannot evaluate the last limit directly. For the moment, let us assume this limit exists and name it It depends only on and is completely independent of . Using this notation (which we will quickly improve upon below), our desired derivative is now Thus the derivative of is multiplied by some constant i.e. the function is nearly unchanged by differentiating. If we can tune so that then the derivative would just be the original function! This turns out to be very useful.  To try finding an that obeys , let us investigate how changes with . Unfortunately (though this fact is not at all obvious) there is no way to write as a finite combination of any of the functions we have examined so far To a bit more be precise, we say that a number is algebraic if we can write as the zero of a polynomial with integer coefficients. When is any positive algebraic number other than , is not algebraic. A number that is not algebraic is called transcendental. The best known example of a transcendental number is (which follows from the Lindemann-Weierstrass Theorem way beyond the scope of this course). . To get started, we'll try to guess , for a few values of , by plugging in some small values of .  Estimates of  Let then . This is not surprising since is constant, and so its derivative must be zero everywhere. Let then . Setting to smaller and smaller numbers gives      0.1 0.01 0.001 0.0001 0.00001 0.000001 0.0000001    0.7177 0.6956 0.6934 0.6932 0.6931 0.6931 0.6931     Similarly when we get      0.1 0.01 0.001 0.0001 0.00001 0.000001 0.0000001    1.1612 1.1047 1.0992 1.0987 1.0986 1.0986 1.0986     and      0.1 0.01 0.001 0.0001 0.00001 0.000001 0.0000001    2.5893 2.3293 2.3052 2.3028 2.3026 2.3026 2.3026     From this example it appears that increases as we increase , and that for some value of between and .   We can learn a lot more about , and, in particular, confirm the guesses that we made in the last example, by making use of logarithms this would be a good time for you to review them.   Whirlwind Review of Logarithms   Before you read much further into this little review on logarithms, you should first go back and take a look at the review of inverse functions in Section .   Logarithmic Functions  We are about to define the logarithm with base . In principle, is allowed to be any strictly positive real number, except . However we shall restrict our attention to , because, in practice, the only 's that are ever used are (a number that we shall define in the next few pages), and, if you are a computer scientist, . So, fix any (if you like, pretend that ). The function   increases as increases (for example if , then since )  obeys (for example is really small) and  obeys (for example is really big).  Consequently, for any , the horizontal straight line crosses the graph of at exactly one point, as illustrated in the figure below.     The coordinate of that intersection point, denoted in the figure, is . So is the power to which you have to raise to get . It is the inverse function of . Of course we are free to rename the dummy variables and . If, for example, we wish to graph our logarithm function, it is natural to rename and , giving   Let . Then the logarithm with base is defined We can also define logarithms with base but doing so is not necessary. To see this, set . Then it is reasonable to define since as required. by    Obviously the power to which we have to raise to get is , so we have both From the exponential properties we have     Can we convert from logarithms in one base to logarithms in another? For example, if our calculator computes logarithms base 10 for us (which it very likely does), can we also use it to compute a logarithm base ? Yes, using How did we get this? Well, let's start with a number and suppose that we want to compute We can rearrange this by exponentiating both sides Now take log base 10 of both sides But recall that , so     Back to that Limit  Recall that we are trying to choose so that We can estimate the correct value of by using our numerical estimate of above. The way to do this is to first rewrite in terms of logarithms. Using this we rewrite as Now set , and notice that as we also have Below is a sketch of against .      Remember that we are trying to find an with . We can do so by recognising that has the following properties.  When , so that . Of course, we should have expected this, because when we have which is just the constant function and .   increases as increases, and hence increases as increases.   tends to as , and hence tends to as .  Hence the graph of passes through , is always increasing as increases and goes off to as goes off to . See Figure . Consequently We are applying the Intermediate Value Theorem here, but we have neglected to verify the hypothesis that is a continuous function. Please forgive us we could do this if we really had to, but it would make a big mess without adding much understanding, if we were to do so here in the text. Better to just trust us on this. there is exactly one value of for which .  The value of for which is given the name . It is called Euler's constant Unfortunately there is another Euler's constant, , which is more properly called the Euler Mascheroni constant. Anyway like many mathematical discoveries, was first found by someone else Napier used the constant in order to compute logarithms but only implicitly. Bernoulli was probably the first to approximate it when examining continuous compound interest. It first appeared explicitly in work of Leibniz, though he denoted it . It was Euler, though, who established the notation we now use and who showed how important the constant is to mathematics. . In Example , we estimated . So if we assume then the above equation becomes This gives us the estimate which is not too bad. In fact Recall factorial, written is the product .   Euler's constant     We will be able to explain this last formula once we develop Taylor polynomials later in the course.  To summarize   The constant is the unique real number that satisfies Further,    We plot in the graph below     And just a reminder of some of its The function is of course the special case of the function with . So it inherits all the usual algebraic properties of . properties                ,     Now consider again the problem of differentiating . We saw above that We can eliminate the term with a little care. Since we know that , we have . This allows us to express Putting things back together gives There is more than one way to get to this result. For example, let , then So if we write then we are really attempting to differentiate the function In order to compute this derivative we need to know how to differentiate where is a constant. We'll hold off on learning this for the moment until we have introduced the chain rule (see Section . Similarly we'd like to know how to differentiate logarithms again this has to wait until we have learned the chain rule.  Notice that the derivatives are either nearly unchanged or actually unchanged by differentiating. It turns out that some of the trigonometric functions also have this property of being nearly unchanged by differentiation. That brings us to the next section.    "
+},
+{
+  "id": "eg_log_est",
+  "level": "2",
+  "url": "sec_exp_func.html#eg_log_est",
+  "type": "Example",
+  "number": "4.1.1",
+  "title": "Estimates of <span class=\"process-math\">\\(C(a)\\)<\/span>.",
+  "body": "Estimates of  Let then . This is not surprising since is constant, and so its derivative must be zero everywhere. Let then . Setting to smaller and smaller numbers gives      0.1 0.01 0.001 0.0001 0.00001 0.000001 0.0000001    0.7177 0.6956 0.6934 0.6932 0.6931 0.6931 0.6931     Similarly when we get      0.1 0.01 0.001 0.0001 0.00001 0.000001 0.0000001    1.1612 1.1047 1.0992 1.0987 1.0986 1.0986 1.0986     and      0.1 0.01 0.001 0.0001 0.00001 0.000001 0.0000001    2.5893 2.3293 2.3052 2.3028 2.3026 2.3026 2.3026     From this example it appears that increases as we increase , and that for some value of between and .  "
+},
+{
+  "id": "def_2_7_1",
+  "level": "2",
+  "url": "sec_exp_func.html#def_2_7_1",
+  "type": "Definition",
+  "number": "4.1.2",
+  "title": "",
+  "body": " Let . Then the logarithm with base is defined We can also define logarithms with base but doing so is not necessary. To see this, set . Then it is reasonable to define since as required. by   "
+},
+{
+  "id": "fig_CofA2",
+  "level": "2",
+  "url": "sec_exp_func.html#fig_CofA2",
+  "type": "Figure",
+  "number": "4.1.3",
+  "title": "",
+  "body": "   "
+},
+{
+  "id": "eq_eulerconst",
+  "level": "2",
+  "url": "sec_exp_func.html#eq_eulerconst",
+  "type": "Fact",
+  "number": "4.1.4",
+  "title": "Euler’s constant.",
+  "body": "Euler's constant    "
+},
+{
+  "id": "sec_exp_func-4-9",
+  "level": "2",
+  "url": "sec_exp_func.html#sec_exp_func-4-9",
+  "type": "Theorem",
+  "number": "4.1.5",
+  "title": "",
+  "body": " The constant is the unique real number that satisfies Further,   "
 }
 ]
 

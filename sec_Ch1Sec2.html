@@ -101,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.13';
+eBookConfig.runestone_version = '8.0.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.0d5f811896ddeac1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -135,7 +135,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
 \newcommand{\ds}{\displaystyle}
-\newcommand{\limit}{\ds\lim}
+\newcommand{\limit}{\ds\lim} 
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -195,14 +198,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec_Ch1Sec3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Mathematical Modeling</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3-3" class="internal"><span class="codenumber">1.3.1.1</span> <span class="title">Break-even Analysis</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4-5" class="internal"><span class="codenumber">1.3.2.1</span> <span class="title">Equilibrium</span></a></div></li></ul>
-</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Quadratic Mathematical Models</span></a></div></li>
 </ul>
 </li>
@@ -309,6 +306,64 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_third.html" class="internal"><span class="codenumber">3</span> <span class="title">Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Defining the Derivative (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Tangent Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The Derivative of a Function at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Velocities and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-6" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-7" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">The Derivative as a Function (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivative Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Graphing a Derivative</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Derivatives and Continuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-6" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Higher-Order Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-7" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-8" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Differentiation Rules (3.3.31-2 Need Chain Rule)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The Basic Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-3" class="internal"><span class="codenumber">3.3.1.1</span> <span class="title">The Constant Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-4" class="internal"><span class="codenumber">3.3.1.2</span> <span class="title">The Power Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">The Sum, Difference, and Constant Multiple Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#subsec-exponentialderivative" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-6" class="internal"><span class="codenumber">3.3.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-7" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The Quotient Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-8" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Combining Differentiation Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-9" class="internal"><span class="codenumber">3.3.7</span> <span class="title">Key Concepts</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Chapter 3 Section 6 Placeholder</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_appendix.html" class="internal"><span class="codenumber">4</span> <span class="title">Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_exp_func.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Derivatives of Exponential Functions (check if table headers needed)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Whirlwind Review of Logarithms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3-3" class="internal"><span class="codenumber">4.1.1.1</span> <span class="title">Logarithmic Functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-4" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Back to that Limit</span></a></div></li>
+</ul>
+</li></ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_Ch1Sec2"><h2 class="heading hide-type">

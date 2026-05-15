@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Derivative as a Function (not edited)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="OpenStax Calculus">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.0.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">OpenStax Calculus</span> <span class="subtitle">Volume 1</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_Ch3Sec1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_third.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_Ch3Sec3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\limit}{\ds\lim} 
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_first.html" class="internal"><span class="codenumber">1</span> <span class="title">Functions and Graphs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Review of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#subsec_Ch1Sec1Ss1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Representing Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-3" class="internal"><span class="codenumber">1.1.2.1</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-4" class="internal"><span class="codenumber">1.1.2.2</span> <span class="title">Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-5" class="internal"><span class="codenumber">1.1.2.3</span> <span class="title">Algebraic Formulas</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Combining Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-3" class="internal"><span class="codenumber">1.1.3.1</span> <span class="title">Combining Functions with Mathematical Operators</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-4" class="internal"><span class="codenumber">1.1.3.2</span> <span class="title">Function Composition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetry of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Basic Classes of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear Functions and Slope</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-3" class="internal"><span class="codenumber">1.2.2.1</span> <span class="title">Power Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-4" class="internal"><span class="codenumber">1.2.2.2</span> <span class="title">Behavior at Infinity</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-5" class="internal"><span class="codenumber">1.2.2.3</span> <span class="title">Zeros of Polynomial Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-6" class="internal"><span class="codenumber">1.2.2.4</span> <span class="title">Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Algebraic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Transcendental Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Piecewise-Defined Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Transformations of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-9" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-10" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Mathematical Modeling</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Quadratic Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Inverse Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Existence of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding a Function’s Inverse</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-2" class="internal"><span class="codenumber">1.4.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-3" class="internal"><span class="codenumber">1.4.2.2</span> <span class="title">Graphing Inverse Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-4" class="internal"><span class="codenumber">1.4.2.3</span> <span class="title">Restricting Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Inverse Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-7" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exponential Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-3" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Evaluating Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-4" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">Graphing Exponential Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-4" class="internal"><span class="codenumber">1.5.2</span> <span class="title">The Number <span class="process-math">\(e \)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-5" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Hyperbolic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-3" class="internal"><span class="codenumber">1.5.4.1</span> <span class="title">Graphs of Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-4" class="internal"><span class="codenumber">1.5.4.2</span> <span class="title">Identities Involving Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-5" class="internal"><span class="codenumber">1.5.4.3</span> <span class="title">Inverse Hyperbolic Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-7" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Key Concepts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_second.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">A Preview of Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Tangent Problem and Differential Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Area Problem and Integral Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Other Aspects of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Limit of a Function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Infinite Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.3.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec3.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Limit Laws</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Limit Laws</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Limits of Polynomial and Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-5" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Additional Limit Evaluation Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-onesidedlimits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-7" class="internal"><span class="codenumber">2.4.5</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsubsec-triglimits" class="internal"><span class="codenumber">2.4.6</span> <span class="title">A Few Important Trigonometric Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-LimitLawProofs" class="internal"><span class="codenumber">2.4.7</span> <span class="title">Proofs of the Limit Laws (Optional)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec4.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Continuity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Continuity at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-4" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Types of Discontinuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-5" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Continuity over an Interval</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-6" class="internal"><span class="codenumber">2.5.4</span> <span class="title">The Intermediate Value Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec6.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Limits at Infinity and Asymptotes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Limits at Infinity and Horizontal Asymptotes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Infinite Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-5" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Formal Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-6" class="internal"><span class="codenumber">2.6.4</span> <span class="title">End Behavior for Polynomials Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-7" class="internal"><span class="codenumber">2.6.5</span> <span class="title">End Behavior for Algebraic Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_third.html" class="internal"><span class="codenumber">3</span> <span class="title">Derivatives</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Defining the Derivative (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Tangent Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The Derivative of a Function at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Velocities and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-6" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-7" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec_Ch3Sec2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">The Derivative as a Function (not edited)</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivative Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Graphing a Derivative</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Derivatives and Continuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-6" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Higher-Order Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-7" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-8" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Differentiation Rules (3.3.31-2 Need Chain Rule)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The Basic Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-3" class="internal"><span class="codenumber">3.3.1.1</span> <span class="title">The Constant Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-4" class="internal"><span class="codenumber">3.3.1.2</span> <span class="title">The Power Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">The Sum, Difference, and Constant Multiple Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#subsec-exponentialderivative" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-6" class="internal"><span class="codenumber">3.3.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-7" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The Quotient Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-8" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Combining Differentiation Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-9" class="internal"><span class="codenumber">3.3.7</span> <span class="title">Key Concepts</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Chapter 3 Section 6 Placeholder</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_appendix.html" class="internal"><span class="codenumber">4</span> <span class="title">Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_exp_func.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Derivatives of Exponential Functions (check if table headers needed)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Whirlwind Review of Logarithms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3-3" class="internal"><span class="codenumber">4.1.1.1</span> <span class="title">Logarithmic Functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-4" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Back to that Limit</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_Ch3Sec2"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Derivative as a Function (not edited)</span>
+</h2>
+<section class="introduction" id="sec_Ch3Sec2-2"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ul class="disc" id="sec_Ch3Sec2-2-2">
+<li id="sec_Ch3Sec2-2-2-1">
+<div class="para" id="p-derived-sec_Ch3Sec2-2-2-1">Define the derivative function of a given function.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec2-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec2-2-2-2">
+<div class="para" id="p-derived-sec_Ch3Sec2-2-2-2">Graph a derivative function from the graph of a given function.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec2-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec2-2-2-3">
+<div class="para" id="p-derived-sec_Ch3Sec2-2-2-3">State the connection between derivatives and continuity.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec2-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec2-2-2-4">
+<div class="para" id="p-derived-sec_Ch3Sec2-2-2-4">Describe three conditions for when a function does not have a derivative.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec2-2-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec2-2-2-5">
+<div class="para" id="p-derived-sec_Ch3Sec2-2-2-5">Explain the meaning of a higher-order derivative.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec2-2-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para" id="sec_Ch3Sec2-2-3">As we have seen, the derivative of a function at a given point gives us the rate of change or slope of the tangent line to the function at that point. If we differentiate a position function at a given time, we obtain the velocity at that time. It seems reasonable to conclude that knowing the derivative of the function at every point would produce valuable information about the behavior of the function. However, the process of finding the derivative at even a handful of values using the techniques of the preceding section would quickly become quite tedious. In this section we define the derivative function and learn a process for finding it.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="sec_Ch3Sec2-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivative Functions</span>
+</h3>
+<div class="para" id="sec_Ch3Sec2-3-2">The derivative function gives the derivative of a function at each point in the domain of the original function for which the derivative is defined. We can formally define a derivative function as follows.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="sec_Ch3Sec2-3-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec_Ch3Sec2-3-3-1">Let <span class="process-math">\(f\)</span> be a function. The <dfn class="terminology">derivative function</dfn>, denoted by <span class="process-math">\(f',\)</span> is the function whose domain consists of those values of <span class="process-math">\(x\)</span> such that the following limit exists:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169738143059">
+\begin{equation}
+f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.\tag{3.2.1}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Definition 3.2.1"><a href="#sec_Ch3Sec2-3-3" title="Copy heading and permalink for Definition 3.2.1" aria-label="Copy heading and permalink for Definition 3.2.1">🔗</a></div></article><div class="para" id="sec_Ch3Sec2-3-4">A function <span class="process-math">\(f(x)\)</span> is said to be <dfn class="terminology">differentiable at <span class="process-math">\(a\)</span></dfn> if <span class="process-math">\(f'(a)\)</span> exists. More generally, a function is said to be <dfn class="terminology">differentiable on <span class="process-math">\(S\)</span></dfn> if it is differentiable at every point in an open set <span class="process-math">\(S,\)</span> and a <dfn class="terminology">differentiable function</dfn> is one in which <span class="process-math">\(f'(x)\)</span> exists on its domain.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch3Sec2-3-5">In the next few examples we use <a href="sec_Ch3Sec2.html#fs-id1169738143059" class="xref" data-knowl="./knowl/xref/fs-id1169738143059.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.1">(3.2.1)</a> to find the derivative of a function.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1169737770972"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding the Derivative of a Square-Root Function.</span>
+</h4>
+<div class="para" id="fs-id1169737770972-2-1">Find the derivative of <span class="process-math">\(f(x)=\sqrt{x}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737770972-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1169737770972-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169737770972-3-1">Start directly with the definition of the derivative function. Use <a href="sec_Ch3Sec1.html#fs-id1169738970614" class="xref" data-knowl="./knowl/xref/fs-id1169738970614.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.1.2">(3.1.2)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737770972-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1169738970614.html" id="fs-id1169737770972-3-2">
+\begin{align*}
+f'(x)\amp=\lim_{h\to 0}\frac{\sqrt{x+h}-\sqrt{x}}{h}\amp \amp \text{ Substitute } f(x+h)=\sqrt{x+h} \text{ and } f(x)=\sqrt{x}\\
+\amp \amp \amp \text{ into } f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.\\
+\amp=\lim_{h\to 0}\frac{\sqrt{x+h}-\sqrt{x}}{h}\cdot \frac{\sqrt{x+h}+\sqrt{x}}{\sqrt{x+h}+\sqrt{x}}\amp \amp\text{ Multiply numerator and denominator by }\sqrt{x+h}+\sqrt{x} \\
+\amp \amp \amp \text{ without distributing in the }\text{ denominator. }\\
+\amp =\lim_{h\to 0}\frac{h}{h(\sqrt{x+h}+\sqrt{x})}\amp \amp \text{ Multiply the numerators and simplify. }\\
+\amp =\lim_{h\to 0}\frac{1}{(\sqrt{x+h}+\sqrt{x})}\amp \amp\text{ Cancel the } h.\\
+\amp =\frac{1}{2\sqrt{x}}\amp\amp\text{ Evaluate the limit. }
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Solution 3.2.2.1"><a href="#fs-id1169737770972-3" title="Copy heading and permalink for Solution 3.2.2.1" aria-label="Copy heading and permalink for Solution 3.2.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.2: Finding the Derivative of a Square-Root Function"><a href="#fs-id1169737770972" title="Copy heading and permalink for Example 3.2.2: Finding the Derivative of a Square-Root Function" aria-label="Copy heading and permalink for Example 3.2.2: Finding the Derivative of a Square-Root Function">🔗</a></div></article><article class="example example-like" id="fs-id1169737774001"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding the Derivative of a Quadratic Function.</span>
+</h4>
+<div class="para" id="fs-id1169737774001-2-1">Find the derivative of the function <span class="process-math">\(f(x)=x^2-2x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737774001-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1169737774001-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169737774001-3-1">Follow the same procedure here, but without having to multiply by the conjugate.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737774001-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169737774001-3-2">
+\begin{align*}
+f'(x)\amp=\lim_{h\to 0}\frac{((x+h)^2-2(x+h))-(x^2-2x)}{h}\amp \amp\text{ Substitute } f(x+h)=(x+h)^2-2(x+h) \\
+\amp \amp \amp \text{ and }f(x)=x^2-2x \text{ into }\\
+\amp \amp \amp f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.\\
+\amp=\lim_{h\to 0}\frac{x^2+2xh+h^2-2x-2h-x^2+2x}{h}\amp \amp\text{ Expand } (x+h)^2-2(x+h).\\
+\amp=\lim_{h\to 0}\frac{2xh-2h+h^2}{h}\amp\amp\text{ Simplify. }\\
+\amp=\lim_{h\to 0}\frac{h(2x-2+h)}{h}\amp\amp\text{ Factor out } h \text{ from the numerator. }\\
+\amp=\lim_{h\to 0}(2x-2+h)\amp\amp\text{ Cancel the common factor of } h.\\
+\amp=2x-2\amp\amp\text{ Evaluate the limit. }
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Solution 3.2.3.1"><a href="#fs-id1169737774001-3" title="Copy heading and permalink for Solution 3.2.3.1" aria-label="Copy heading and permalink for Solution 3.2.3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.3: Finding the Derivative of a Quadratic Function"><a href="#fs-id1169737774001" title="Copy heading and permalink for Example 3.2.3: Finding the Derivative of a Quadratic Function" aria-label="Copy heading and permalink for Example 3.2.3: Finding the Derivative of a Quadratic Function">🔗</a></div></article><details id="sec_Ch3Sec2-3-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec2-3-8-1-1">Find the derivative of <span class="process-math">\(f(x)=x^2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-3-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch3Sec2-3-8-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec2-3-8-3-1">Use <a href="sec_Ch3Sec2.html#fs-id1169738143059" class="xref" data-knowl="./knowl/xref/fs-id1169738143059.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.1">(3.2.1)</a> and follow the example.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-3-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.2.4.1"><a href="#sec_Ch3Sec2-3-8-3" title="Copy heading and permalink for Hint 3.2.4.1" aria-label="Copy heading and permalink for Hint 3.2.4.1">🔗</a></div>
+</div></details><details id="sec_Ch3Sec2-3-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec2-3-8-2-1">
+<span class="process-math">\(f'(x)=2x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-3-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.4.1"><a href="#sec_Ch3Sec2-3-8-2" title="Copy heading and permalink for Solution 3.2.4.1" aria-label="Copy heading and permalink for Solution 3.2.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.2.4"><a href="#sec_Ch3Sec2-3-8" title="Copy heading and permalink for Checkpoint 3.2.4" aria-label="Copy heading and permalink for Checkpoint 3.2.4">🔗</a></div></article></details><div class="para" id="sec_Ch3Sec2-3-9">We use a variety of different notations to express the derivative of a function. In <a href="sec_Ch3Sec2.html#fs-id1169737774001" class="xref" data-knowl="./knowl/xref/fs-id1169737774001.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.3: Finding the Derivative of a Quadratic Function">Example 3.2.3</a> we showed that if <span class="process-math">\(f(x)=x^2-2x,\)</span> then <span class="process-math">\(f'(x)=2x-2.\)</span> If we had expressed this function in the form <span class="process-math">\(y=x^2-2x,\)</span> we could have expressed the derivative as <span class="process-math">\(y'=2x-2\)</span> or <span class="process-math">\(\frac{dy}{dx}=2x-2.\)</span> We could have conveyed the same information by writing <span class="process-math">\(\frac{d}{dx}(x^2-2x)=2x-2.\)</span> Thus, for the function <span class="process-math">\(y=f(x),\)</span> each of the following notations represents the derivative of <span class="process-math">\(f(x)\text{ : }\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1169738143059.html ./knowl/xref/fs-id1169738970614.html ./knowl/xref/fs-id1169738143059.html ./knowl/xref/fs-id1169737774001.html ./knowl/xref/CNX_Calc_Figure_03_02_001.html" id="sec_Ch3Sec2-3-10">
+\begin{equation*}
+f'(x), \frac{dy}{dx}, y', \frac{d}{dx}(f(x)).
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch3Sec2-3-11">In place of <span class="process-math">\(f'(a)\)</span> we may also use <span class="process-math">\(\frac{dy}{dx}|_{x=a}\)</span> Use of the <span class="process-math">\(\frac{dy}{dx}\)</span> notation (called Leibniz notation) is quite common in engineering and physics. To understand this notation better, recall that the derivative of a function at a point is the limit of the slopes of secant lines as the secant lines approach the tangent line. The slopes of these secant lines are often expressed in the form <span class="process-math">\(\frac{\Delta y}{\Delta x}\)</span> where <span class="process-math">\(\Delta y\)</span> is the difference in the <span class="process-math">\(y\)</span> values corresponding to the difference in the <span class="process-math">\(x\)</span> values, which are expressed as <span class="process-math">\(\Delta x\)</span> (<a href="sec_Ch3Sec2.html#CNX_Calc_Figure_03_02_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_02_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.5">Figure 3.2.5</a>). Thus the derivative, which can be thought of as the instantaneous rate of change of <span class="process-math">\(y\)</span> with respect to <span class="process-math">\(x,\)</span> is expressed as<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1169738143059.html ./knowl/xref/fs-id1169738970614.html ./knowl/xref/fs-id1169738143059.html ./knowl/xref/fs-id1169737774001.html ./knowl/xref/CNX_Calc_Figure_03_02_001.html" id="sec_Ch3Sec2-3-12">
+\begin{equation*}
+\frac{dy}{dx}=\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}.
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_03_02_001"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_03_02_001.jpg" class="contained" alt='"The function y = f(x) is graphed and it shows up as a curve in the first quadrant. The x-axis is marked with 0, a, and a + Δx. The y-axis is marked with 0, f(a), and f(a) + Δy. There is a straight line crossing y = f(x) at (a, f(a)) and (a + Δx, f(a) + Δy). From the point (a, f(a)), a horizontal line is drawn; from the point (a + Δx, f(a) + Δy), a vertical line is drawn. The distance from (a, f(a)) to (a + Δx, f(a)) is denoted Δx; the distance from (a + Δx, f(a) + Δy) to (a + Δx, f(a)) is denoted Δy."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The derivative is expressed as <span class="process-math">\(\displaystyle{\frac{dy}{dx}=\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}.}\)</span><div class="autopermalink" data-description="Figure 3.2.5"><a href="#CNX_Calc_Figure_03_02_001" title="Copy heading and permalink for Figure 3.2.5" aria-label="Copy heading and permalink for Figure 3.2.5">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Subsection 3.2.1: Derivative Functions"><a href="#sec_Ch3Sec2-3" title="Copy heading and permalink for Subsection 3.2.1: Derivative Functions" aria-label="Copy heading and permalink for Subsection 3.2.1: Derivative Functions">🔗</a></div></section><section class="subsection" id="sec_Ch3Sec2-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Graphing a Derivative</span>
+</h3>
+<div class="para" id="sec_Ch3Sec2-4-2">We have already discussed how to graph a function, so given the equation of a function or the equation of a derivative function, we could graph it. Given both, we would expect to see a correspondence between the graphs of these two functions, since <span class="process-math">\(f'(x)\)</span> gives the rate of change of a function <span class="process-math">\(f(x)\)</span> (or slope of the tangent line to <span class="process-math">\(f(x)).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch3Sec2-4-3">In <a href="sec_Ch3Sec2.html#fs-id1169737770972" class="xref" data-knowl="./knowl/xref/fs-id1169737770972.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.2: Finding the Derivative of a Square-Root Function">Example 3.2.2</a> we found that for <span class="process-math">\(f(x)=\sqrt{x},f'(x)=1\text{ / }2\sqrt{x}.\)</span> If we graph these functions on the same axes, as in <a href="sec_Ch3Sec2.html#CNX_Calc_Figure_03_02_002" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_02_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.6">Figure 3.2.6</a>, we can use the graphs to understand the relationship between these two functions. First, we notice that <span class="process-math">\(f(x)\)</span> is increasing over its entire domain, which means that the slopes of its tangent lines at all points are positive. Consequently, we expect <span class="process-math">\(f'(x)\gt 0\)</span> for all values of <span class="process-math">\(x\)</span> in its domain. Furthermore, as <span class="process-math">\(x\)</span> increases, the slopes of the tangent lines to <span class="process-math">\(f(x)\)</span> are decreasing and we expect to see a corresponding decrease in <span class="process-math">\(f'(x).\)</span> We also observe that <span class="process-math">\(f(0)\)</span> is undefined and that <span class="process-math">\(\displaystyle{\lim_{x\to 0^+}f'(x)=\text{ + }\infty} ,\)</span> corresponding to a vertical tangent to <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(0.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_03_02_002"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_03_02_002.jpg" class="contained" alt='"The function f(x) = the square root of x is graphed as is its derivative f’(x) = 1/(2 times the square root of x)."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The derivative <span class="process-math">\(f'(x)\)</span> is positive everywhere because the function <span class="process-math">\(f(x)\)</span> is increasing.<div class="autopermalink" data-description="Figure 3.2.6"><a href="#CNX_Calc_Figure_03_02_002" title="Copy heading and permalink for Figure 3.2.6" aria-label="Copy heading and permalink for Figure 3.2.6">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch3Sec2-4-5">In <a href="sec_Ch3Sec2.html#fs-id1169737774001" class="xref" data-knowl="./knowl/xref/fs-id1169737774001.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.3: Finding the Derivative of a Quadratic Function">Example 3.2.3</a> we found that for <span class="process-math">\(f(x)=x^2-2x,f'(x)=2x-2.\)</span> The graphs of these functions are shown in <a href="sec_Ch3Sec2.html#CNX_Calc_Figure_03_02_003" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_02_003.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.7">Figure 3.2.7</a>. Observe that <span class="process-math">\(f(x)\)</span> is decreasing for <span class="process-math">\(x\lt 1.\)</span> For these same values of <span class="process-math">\(x,f'(x)\lt 0.\)</span> For values of <span class="process-math">\(x\gt 1,f(x)\)</span> is increasing and <span class="process-math">\(f'(x)\gt 0.\)</span> Also, <span class="process-math">\(f(x)\)</span> has a horizontal tangent at <span class="process-math">\(x=1\)</span> and <span class="process-math">\(f'(1)=0.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_03_02_003"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_03_02_003.jpg" class="contained" alt='"The function f(x) = x squared – 2x is graphed as is its derivative f’(x) = 2x − 2."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The derivative <span class="process-math">\(f'(x)\lt 0\)</span> where the function <span class="process-math">\(f(x)\)</span> is decreasing and <span class="process-math">\(f'(x)\gt 0\)</span> where <span class="process-math">\(f(x)\)</span> is increasing. The derivative is zero where the function has a horizontal tangent.<div class="autopermalink" data-description="Figure 3.2.7"><a href="#CNX_Calc_Figure_03_02_003" title="Copy heading and permalink for Figure 3.2.7" aria-label="Copy heading and permalink for Figure 3.2.7">🔗</a></div></figcaption></figure><article class="example example-like" id="fs-id1169737966982"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sketching a Derivative Using a Function.</span>
+</h4>
+<div class="para" id="fs-id1169737966982-2-1">Use the following graph of <span class="process-math">\(f(x)\)</span> to sketch a graph of <span class="process-math">\(f'(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737966982-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_03_02_004.jpg" class="contained" alt='"The function f(x) is roughly sinusoidal, starting at (−4, 3), decreasing to a local minimum at (−2, 2), then increasing to a local maximum at (3, 6), and getting cut off at (7, 2)."'></div>
+<div class="solutions"><details id="fs-id1169737966982-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169737966982-3-1">The solution is shown in the following graph. Observe that <span class="process-math">\(f(x)\)</span> is increasing and <span class="process-math">\(f'(x)\gt 0\)</span> on <span class="process-math">\((–2,3).\)</span> Also, <span class="process-math">\(f(x)\)</span> is decreasing and <span class="process-math">\(f'(x)\lt 0\)</span> on <span class="process-math">\((\text{ - }\infty ,-2)\)</span> and on <span class="process-math">\((3,\text{ + }\infty ).\)</span> Also note that <span class="process-math">\(f(x)\)</span> has horizontal tangents at <span class="process-math">\(–2\)</span> and <span class="process-math">\(3,\)</span> and <span class="process-math">\(f'(-2)=0\)</span> and <span class="process-math">\(f'(3)=0.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737966982-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_03_02_005.jpg" class="contained" alt='"Two functions are graphed here: f(x) and f’(x). The function f(x) is the same as the above graph, that is, roughly sinusoidal, starting at (−4, 3), decreasing to a local minimum at (−2, 2), then increasing to a local maximum at (3, 6), and getting cut off at (7, 2). The function f’(x) is an downward-facing parabola with vertex near (0.5, 1.75), y-intercept (0, 1.5), and x-intercepts (−1.9, 0) and (3, 0)."'></div>
+<div class="autopermalink" data-description="Solution 3.2.8.1"><a href="#fs-id1169737966982-3" title="Copy heading and permalink for Solution 3.2.8.1" aria-label="Copy heading and permalink for Solution 3.2.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.8: Sketching a Derivative Using a Function"><a href="#fs-id1169737966982" title="Copy heading and permalink for Example 3.2.8: Sketching a Derivative Using a Function" aria-label="Copy heading and permalink for Example 3.2.8: Sketching a Derivative Using a Function">🔗</a></div></article><details id="sec_Ch3Sec2-4-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec2-4-8-1-1">Sketch the graph of <span class="process-math">\(f(x)=x^2-4.\)</span> On what interval is the graph of <span class="process-math">\(f'(x)\)</span> above the <span class="process-math">\(x\)</span>-axis?<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-4-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch3Sec2-4-8-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec2-4-8-3-1">The graph of <span class="process-math">\(f'(x)\)</span> is positive where <span class="process-math">\(f(x)\)</span> is increasing.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-4-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.2.9.1"><a href="#sec_Ch3Sec2-4-8-3" title="Copy heading and permalink for Hint 3.2.9.1" aria-label="Copy heading and permalink for Hint 3.2.9.1">🔗</a></div>
+</div></details><details id="sec_Ch3Sec2-4-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec2-4-8-2-1">
+<span class="process-math">\((0,\text{ + }\infty )\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-4-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.9.1"><a href="#sec_Ch3Sec2-4-8-2" title="Copy heading and permalink for Solution 3.2.9.1" aria-label="Copy heading and permalink for Solution 3.2.9.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.2.9"><a href="#sec_Ch3Sec2-4-8" title="Copy heading and permalink for Checkpoint 3.2.9" aria-label="Copy heading and permalink for Checkpoint 3.2.9">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.2.2: Graphing a Derivative"><a href="#sec_Ch3Sec2-4" title="Copy heading and permalink for Subsection 3.2.2: Graphing a Derivative" aria-label="Copy heading and permalink for Subsection 3.2.2: Graphing a Derivative">🔗</a></div></section><section class="subsection" id="sec_Ch3Sec2-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives and Continuity</span>
+</h3>
+<div class="para" id="sec_Ch3Sec2-5-2">Now that we can graph a derivative, let’s examine the behavior of the graphs. First, we consider the relationship between differentiability and continuity. We will see that if a function is differentiable at a point, it must be continuous there; however, a function that is continuous at a point need not be differentiable at that point. In fact, a function may be continuous at a point and fail to be differentiable at the point for one of several reasons.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="sec_Ch3Sec2-5-3"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiability Implies Continuity.</span>
+</h4>
+<div class="para" id="sec_Ch3Sec2-5-3-2">Let <span class="process-math">\(f(x)\)</span> be a function and <span class="process-math">\(a\)</span> be in its domain. If <span class="process-math">\(f(x)\)</span> is differentiable at <span class="process-math">\(a,\)</span> then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.10: Differentiability Implies Continuity"><a href="#sec_Ch3Sec2-5-3" title="Copy heading and permalink for Theorem 3.2.10: Differentiability Implies Continuity" aria-label="Copy heading and permalink for Theorem 3.2.10: Differentiability Implies Continuity">🔗</a></div></article><div class="para" id="sec_Ch3Sec2-5-4">We have that differentiability implies continuity, but now we consider whether continuity implies differentiability. To determine an answer to this question, we examine the function <span class="process-math">\(f(x)=|x|.\)</span> This function is continuous everywhere; however, <span class="process-math">\(f'(0)\)</span> is undefined. This observation leads us to believe that continuity does not imply differentiability. Let’s explore further. For <span class="process-math">\(f(x)=|x|,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_03_02_006.html ./knowl/xref/CNX_Calc_Figure_03_02_007.html ./knowl/xref/Busi_Calc_Figure_03_02_002.html ./knowl/xref/CNX_Calc_Figure_03_02_009.html ./knowl/xref/fs-id1169738218186.html" id="sec_Ch3Sec2-5-5">
+\begin{equation*}
+f'(0)=\lim_{x\to 0}\frac{f(x)-f(0)}{x-0}=\lim_{x\to 0}\frac{|x|-|0|}{x-0}=\lim_{x\to 0}\frac{|x|}{x}.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch3Sec2-5-6">This limit does not exist because<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_03_02_006.html ./knowl/xref/CNX_Calc_Figure_03_02_007.html ./knowl/xref/Busi_Calc_Figure_03_02_002.html ./knowl/xref/CNX_Calc_Figure_03_02_009.html ./knowl/xref/fs-id1169738218186.html" id="sec_Ch3Sec2-5-7">
+\begin{align*}
+\lim_{x\to 0^-}\frac{|x|}{x}=-1 \amp  \text{ and } \amp \lim_{x\to 0^+}\frac{|x|}{x}=1.
+\end{align*}
+</div>
+<div class="para" id="sec_Ch3Sec2-5-8">See <a href="sec_Ch3Sec2.html#CNX_Calc_Figure_03_02_006" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_02_006.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.11">Figure 3.2.11</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_03_02_006"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_03_02_006.jpg" class="contained" alt='"The function f(x) = the absolute value of x is graphed. It consists of two straight line segments: the first follows the equation y = −x and ends at the origin; the second follows the equation y = x and starts at the origin."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The function <span class="process-math">\(f(x)=|x|\)</span> is continuous at <span class="process-math">\(0\)</span> but is not differentiable at <span class="process-math">\(0.\)</span><div class="autopermalink" data-description="Figure 3.2.11"><a href="#CNX_Calc_Figure_03_02_006" title="Copy heading and permalink for Figure 3.2.11" aria-label="Copy heading and permalink for Figure 3.2.11">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch3Sec2-5-10">Let’s consider some additional situations in which a continuous function fails to be differentiable. Consider the function <span class="process-math">\(f(x)=\sqrt[3]{x} \text{ : }\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_03_02_006.html ./knowl/xref/CNX_Calc_Figure_03_02_007.html ./knowl/xref/Busi_Calc_Figure_03_02_002.html ./knowl/xref/CNX_Calc_Figure_03_02_009.html ./knowl/xref/fs-id1169738218186.html" id="sec_Ch3Sec2-5-11">
+\begin{equation*}
+f'(0)=\lim_{x\to 0}\frac{\sqrt[3]{x} -0}{x-0}=\lim_{x\to 0}\frac{1}{\sqrt[3]{x^2}} =\text{ + }\infty .
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch3Sec2-5-12">Thus <span class="process-math">\(f'(0)\)</span> does not exist. A quick look at the graph of <span class="process-math">\(f(x)=\sqrt[3]{x} \)</span> clarifies the situation. The function has a vertical tangent line at <span class="process-math">\(0\)</span> (<a href="sec_Ch3Sec2.html#CNX_Calc_Figure_03_02_007" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_02_007.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.12">Figure 3.2.12</a>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_03_02_007"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_03_02_007.jpg" class="contained" alt='"The function f(x) = the cube root of x is graphed. It has a vertical tangent at x = 0."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The function <span class="process-math">\(f(x)=\sqrt[3]{x} \)</span> has a vertical tangent at <span class="process-math">\(x=0.\)</span> It is continuous at <span class="process-math">\(0\)</span> but is not differentiable at <span class="process-math">\(0.\)</span><div class="autopermalink" data-description="Figure 3.2.12"><a href="#CNX_Calc_Figure_03_02_007" title="Copy heading and permalink for Figure 3.2.12" aria-label="Copy heading and permalink for Figure 3.2.12">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch3Sec2-5-14">The function <span class="process-math">\(f(x)=x^{2/3}\)</span> also has a derivative that exhibits interesting behavior at <span class="process-math">\(0.\)</span> We see that<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_03_02_006.html ./knowl/xref/CNX_Calc_Figure_03_02_007.html ./knowl/xref/Busi_Calc_Figure_03_02_002.html ./knowl/xref/CNX_Calc_Figure_03_02_009.html ./knowl/xref/fs-id1169738218186.html" id="sec_Ch3Sec2-5-15">
+\begin{equation*}
+f'(0)=\lim_{x\to 0}\frac{x^{2/3}-0}{x-0}=\lim_{x\to 0}\frac{1}{x^{1/3}}.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch3Sec2-5-16">This limit does not exist, mainly because the slopes of the secant lines are positive if we approach 0 from the right yet the slopes of the secant lines are negative if we approach 0 from the left. That is, <span class="process-math">\(\displaystyle{\lim_{x\to 0^+}\frac{1}{x^{1/3}}\gt 0}\)</span> and <span class="process-math">\(\displaystyle{\lim_{x\to 0^-}\frac{1}{x^{1/3}}\lt 0}.\)</span> We say that <span class="process-math">\(f(x)\)</span> has <em class="emphasis">cusp</em> at <span class="process-math">\(x=0\text{.}\)</span> This behavior is displayed below in <a href="sec_Ch3Sec2.html#Busi_Calc_Figure_03_02_002" class="xref" data-knowl="./knowl/xref/Busi_Calc_Figure_03_02_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.13">Figure 3.2.13</a> . Note that the function is approaching a vertical tangent line on each side of <span class="process-math">\(x=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="Busi_Calc_Figure_03_02_002"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<img src="external/Busi_Calc_Figure_03_02_002.png" class="contained" alt="described in detail following the image" aria-describedby="Busi_Calc_Figure_03_02_002-1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="Busi_Calc_Figure_03_02_002-1-description">"This figure shows the graph of <span class="process-math">\(f(x)=x^{2/3}\)</span> near <span class="process-math">\(x=0\text{.}\)</span> On each side of 0, the function is approaching a vertical tangent, making a cusp at <span class="process-math">\(x=0.\)</span>"</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The function <span class="process-math">\(f(x)=x^{2/3}\)</span> has a cusp at <span class="process-math">\(x=0.\)</span><div class="autopermalink" data-description="Figure 3.2.13"><a href="#Busi_Calc_Figure_03_02_002" title="Copy heading and permalink for Figure 3.2.13" aria-label="Copy heading and permalink for Figure 3.2.13">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch3Sec2-5-18">In summary:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="sec_Ch3Sec2-5-19">
+<li id="sec_Ch3Sec2-5-19-1">
+<div class="para" id="p-derived-sec_Ch3Sec2-5-19-1">We observe that if a function is not continuous, it cannot be differentiable, since every differentiable function must be continuous. However, if a function is continuous, it may still fail to be differentiable.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch3Sec2-5-19-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec2-5-19-2">
+<div class="para" id="p-derived-sec_Ch3Sec2-5-19-2">We saw that <span class="process-math">\(f(x)=|x|\)</span> failed to be differentiable at <span class="process-math">\(0\)</span> because the limit of the slopes of the tangent lines on the left and right were not the same. Visually, this resulted in a sharp corner on the graph of the function at <span class="process-math">\(0.\)</span> From this we conclude that in order to be differentiable at a point, a function must be “smooth” at that point.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch3Sec2-5-19-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec2-5-19-3">
+<div class="para" id="p-derived-sec_Ch3Sec2-5-19-3">As we saw in the example of <span class="process-math">\(f(x)=\sqrt[3]{x} ,\)</span> a function fails to be differentiable at a point where there is a vertical tangent line.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_Ch3Sec2-5-19-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec2-5-19-4">
+<div class="para" id="p-derived-sec_Ch3Sec2-5-19-4">As we saw with  <span class="process-math">\(f(x)=x^{2/3}\)</span> a functions may fail to differentiable at a point where there is a cusp.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec_Ch3Sec2-5-19-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<article class="example example-like" id="fs-id1169738218186"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Piecewise Function that is Continuous and Differentiable.</span>
+</h4>
+<div class="para" id="fs-id1169738218186-2-1">A toy company wants to design a track for a toy car that starts out along a parabolic curve and then converts to a straight line (<a href="sec_Ch3Sec2.html#CNX_Calc_Figure_03_02_009" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_02_009.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.15">Figure 3.2.15</a>). The function that describes the track is to have the form <span class="process-math">\(f(x)=\begin{cases} \frac{1}{10}x^2+bx+c  \amp \text{ if } x\lt -10 \\ -\frac{1}{4}x+\frac{5}{2} \amp \text{ if } x\geq -10 \end{cases} \)</span> where <span class="process-math">\(x\)</span> and <span class="process-math">\(f(x)\)</span> are in inches. For the car to move smoothly along the track, the function <span class="process-math">\(f(x)\)</span> must be both continuous and differentiable at <span class="process-math">\(-10.\)</span> Find values of <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> that make <span class="process-math">\(f(x)\)</span> both continuous and differentiable.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738218186-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="CNX_Calc_Figure_03_02_009"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_03_02_009.jpg" class="contained" alt='"A cart is drawn on a line that curves through (−10, 5) to (10, 0) with y-intercept roughly (0, 2)."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>For the car to move smoothly along the track, the function must be both continuous and differentiable.<div class="autopermalink" data-description="Figure 3.2.15"><a href="#CNX_Calc_Figure_03_02_009" title="Copy heading and permalink for Figure 3.2.15" aria-label="Copy heading and permalink for Figure 3.2.15">🔗</a></div></figcaption></figure><div class="solutions"><details id="fs-id1169738218186-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169738218186-3-1">For the function to be continuous at <span class="process-math">\(x=-10,\displaystyle{\lim_{x \to 10^-} f(x)=f(-10)}.\)</span> Thus, since<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738218186-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169738218186-3-2">
+\begin{equation*}
+\lim_{x\to -10^-} f(x)=\frac{1}{10}(-10)^2-10b+c=10-10b+c
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169738218186-3-3">and <span class="process-math">\(f(-10)=5,\)</span> we must have <span class="process-math">\(10-10b+c=5.\)</span> Equivalently, we have <span class="process-math">\(c=10b-5.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738218186-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1169738218186-3-4">For the function to be differentiable at <span class="process-math">\(-10,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738218186-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169738218186-3-5">
+\begin{equation*}
+f'(10)=\lim_{x\to -10}\frac{f(x)-f(-10)}{x+10}
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169738218186-3-6">must exist. Since <span class="process-math">\(f(x)\)</span> is defined using different rules on the right and the left, we must evaluate this limit from the right and the left and then set them equal to each other:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738218186-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169738218186-3-7">
+\begin{align*}
+\lim_{x\to \text{ - }10^-}\frac{f(x)-f(-10)}{x+10}\amp=\lim_{x\to \text{ - }10^-}\frac{\frac{1}{10}x^2+bx+c-5}{x+10}\\
+\amp=\lim_{x\to \text{ - }10^-}\frac{\frac{1}{10}x^2+bx+(10b-5)-5}{x+10}\amp\text{ Substitute } c=10b-5.\\
+\amp=\lim_{x\to \text{ - }10^-}\frac{x^2-100+10bx+100b}{10(x+10)}\\
+\amp=\lim_{x\to \text{ - }10^-}\frac{(x+10)(x-10+10b)}{10(x+10)}\amp\text{ Factor by grouping. }\\
+\amp=b-2.
+\end{align*}
+</div>
+<div class="para" id="fs-id1169738218186-3-8">We also have<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738218186-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169738218186-3-9">
+\begin{align*}
+\lim_{x\to \text{ - }10^+}\frac{f(x)-f(-10)}{x+10}\amp=\lim_{x\to \text{ - }10^+}\frac{-\frac{1}{4}x+\frac{5}{2}-5}{x+10}\\
+=\lim_{x\to \text{ - }10^+}\frac{\text{ - }(x+10)}{4(x+10)}\\
+=-\frac{1}{4}.
+\end{align*}
+</div>
+<div class="para" id="fs-id1169738218186-3-10">This gives us <span class="process-math">\(b-2=-\frac{1}{4}.\)</span> Thus <span class="process-math">\(b=\frac{7}{4}\)</span> and <span class="process-math">\(c=10(\frac{7}{4})-5=\frac{25}{2}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738218186-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.14.1"><a href="#fs-id1169738218186-3" title="Copy heading and permalink for Solution 3.2.14.1" aria-label="Copy heading and permalink for Solution 3.2.14.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.14: A Piecewise Function that is Continuous and Differentiable"><a href="#fs-id1169738218186" title="Copy heading and permalink for Example 3.2.14: A Piecewise Function that is Continuous and Differentiable" aria-label="Copy heading and permalink for Example 3.2.14: A Piecewise Function that is Continuous and Differentiable">🔗</a></div></article><details id="sec_Ch3Sec2-5-21" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec2-5-21-1-1">Find values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> that make <span class="process-math">\(f(x)=\begin{cases} ax+b  \amp \text{ if } x\lt 3 \\ x^2  \amp \text{ if } x\geq 3 \end{cases} \)</span> both continuous and differentiable at <span class="process-math">\(3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch3Sec2-5-21-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec2-5-21-3-1">Use <a href="sec_Ch3Sec2.html#fs-id1169738218186" class="xref" data-knowl="./knowl/xref/fs-id1169738218186.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.14: A Piecewise Function that is Continuous and Differentiable">Example 3.2.14</a> as a guide.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-21-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.2.16.1"><a href="#sec_Ch3Sec2-5-21-3" title="Copy heading and permalink for Hint 3.2.16.1" aria-label="Copy heading and permalink for Hint 3.2.16.1">🔗</a></div>
+</div></details><details id="sec_Ch3Sec2-5-21-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec2-5-21-2-1">
+<span class="process-math">\(a=6\)</span> and <span class="process-math">\(b=-9\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-5-21-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.16.1"><a href="#sec_Ch3Sec2-5-21-2" title="Copy heading and permalink for Solution 3.2.16.1" aria-label="Copy heading and permalink for Solution 3.2.16.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.2.16"><a href="#sec_Ch3Sec2-5-21" title="Copy heading and permalink for Checkpoint 3.2.16" aria-label="Copy heading and permalink for Checkpoint 3.2.16">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.2.3: Derivatives and Continuity"><a href="#sec_Ch3Sec2-5" title="Copy heading and permalink for Subsection 3.2.3: Derivatives and Continuity" aria-label="Copy heading and permalink for Subsection 3.2.3: Derivatives and Continuity">🔗</a></div></section><section class="subsection" id="sec_Ch3Sec2-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Higher-Order Derivatives</span>
+</h3>
+<div class="para" id="sec_Ch3Sec2-6-2">The derivative of a function is itself a function, so we can find the derivative of a derivative. For example, the derivative of a position function is the rate of change of position, or velocity. The derivative of velocity is the rate of change of velocity, which is acceleration. The new function obtained by differentiating the derivative is called the second derivative. Furthermore, we can continue to take derivatives to obtain the third derivative, fourth derivative, and so on. Collectively, these are referred to as <dfn class="terminology">higher-order derivatives</dfn>. The notation for the higher-order derivatives of <span class="process-math">\(y=f(x)\)</span> can be expressed in any of the following forms:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1169738143059.html ./knowl/xref/fs-id1169737966982.html" id="sec_Ch3Sec2-6-3">
+\begin{equation*}
+f''(x), f'''(x),f^{(4))}(x),\dots,f^{(n)}(x)
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1169738143059.html ./knowl/xref/fs-id1169737966982.html" id="sec_Ch3Sec2-6-4">
+\begin{equation*}
+y''(x),y'''(x),y^{(4)}(x), \dots ,y^{(n)}(x)
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1169738143059.html ./knowl/xref/fs-id1169737966982.html" id="sec_Ch3Sec2-6-5">
+\begin{equation*}
+\frac{d^2y}{dx^2},\frac{d^3y}{dx^3},\frac{d^4y}{dx^4},\dots,\frac{d^ny}{dx^n}.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch3Sec2-6-6">It is interesting to note that the notation for <span class="process-math">\(\frac{d^2y}{dx^2}\)</span> may be viewed as an attempt to express <span class="process-math">\(\frac{d}{dx}(\frac{dy}{dx})\)</span> more compactly. Analogously, <span class="process-math">\(\frac{d}{dx}(\frac{d}{dx}(\frac{dy}{dx}))=\frac{d}{dx}(\frac{d^2y}{dx^2})=\frac{d^3y}{dx^3}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-6-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1169738217346"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding a Second Derivative.</span>
+</h4>
+<div class="para" id="fs-id1169738217346-2-1">For <span class="process-math">\(f(x)=2x^2-3x+1,\)</span> find <span class="process-math">\(f''(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738217346-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1169738217346-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169738217346-3-1">First find <span class="process-math">\(f'(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738217346-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169738217346-3-2">
+\begin{align*}
+f'(x)\amp=\lim_{h\to 0}\frac{(2(x+h)^2-3(x+h)+1)-(2x^2-3x+1)}{h}\amp\amp\text{ Substitute } f(x)=2x^2-3x+1\\
+\amp \amp \amp \text{ and }\\
+\amp \amp \amp f(x+h)=2(x+h)^2-3(x+h)+1\\
+\amp \amp \amp \text{ into } f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.\\
+\amp =\lim_{h\to 0}\frac{4xh+h^2-3h}{h}\amp\amp\text{ Simplify the numerator. }\\
+\amp=\lim_{h\to 0}(4x+h-3)\amp \amp\text{ Factor out the } h \text{ in the numerator }\\
+\amp \amp \amp \text{ and cancel with the } h \text{ in the }\\
+\amp \amp \amp \text{ denominator. }\\
+\amp =4x-3\amp \amp\text{ Take the limit. }
+\end{align*}
+</div>
+<div class="para" id="fs-id1169738217346-3-3">Next, find <span class="process-math">\(f''(x)\)</span> by taking the derivative of <span class="process-math">\(f'(x)=4x-3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738217346-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169738217346-3-4">
+\begin{align*}
+f''(x)\amp=\lim_{h\to 0}\frac{f'(x+h)-f'(x)}{h}\amp \amp \text{ Use } f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h} \text{ with } f'(x) \text{ in }\\
+\amp \amp \amp \text{ place of } f(x).\\
+\amp =\lim_{h\to 0}\frac{(4(x+h)-3)-(4x-3)}{h}\amp \amp\text{ Substitute } f'(x+h)=4(x+h)-3 \text{ and }\\
+\amp \amp \amp f'(x)=4x-3.\\
+\amp=\lim_{h\to 0}4\amp\amp \text{ Simplify. }\\
+\amp =4\amp \amp\text{ Take the limit. }
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Solution 3.2.17.1"><a href="#fs-id1169738217346-3" title="Copy heading and permalink for Solution 3.2.17.1" aria-label="Copy heading and permalink for Solution 3.2.17.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.17: Finding a Second Derivative"><a href="#fs-id1169738217346" title="Copy heading and permalink for Example 3.2.17: Finding a Second Derivative" aria-label="Copy heading and permalink for Example 3.2.17: Finding a Second Derivative">🔗</a></div></article><details id="sec_Ch3Sec2-6-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec2-6-8-1-1">Find <span class="process-math">\(f''(x)\)</span> for <span class="process-math">\(f(x)=x^2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-6-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch3Sec2-6-8-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec2-6-8-3-1">We found <span class="process-math">\(f'(x)=2x\)</span> in a previous checkpoint. Use <a href="sec_Ch3Sec2.html#fs-id1169738143059" class="xref" data-knowl="./knowl/xref/fs-id1169738143059.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.1">(3.2.1)</a> to find the derivative of <span class="process-math">\(f'(x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-6-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.2.18.1"><a href="#sec_Ch3Sec2-6-8-3" title="Copy heading and permalink for Hint 3.2.18.1" aria-label="Copy heading and permalink for Hint 3.2.18.1">🔗</a></div>
+</div></details><details id="sec_Ch3Sec2-6-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec2-6-8-2-1">
+<span class="process-math">\(f''(x)=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-6-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.18.1"><a href="#sec_Ch3Sec2-6-8-2" title="Copy heading and permalink for Solution 3.2.18.1" aria-label="Copy heading and permalink for Solution 3.2.18.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.2.18"><a href="#sec_Ch3Sec2-6-8" title="Copy heading and permalink for Checkpoint 3.2.18" aria-label="Copy heading and permalink for Checkpoint 3.2.18">🔗</a></div></article></details><article class="example example-like" id="fs-id1169738099443"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Acceleration.</span>
+</h4>
+<div class="para" id="fs-id1169738099443-2-1">The position of a particle along a coordinate axis at time <span class="process-math">\(t\)</span> (in seconds) is given by <span class="process-math">\(s(t)=3t^2-4t+1\)</span> (in meters). Find the function that describes its acceleration at time <span class="process-math">\(t.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738099443-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="fs-id1169738099443-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169738099443-3-1">Since <span class="process-math">\(v(t)=s'(t)\)</span> and <span class="process-math">\(a(t)=v'(t)=s''(t),\)</span> we begin by finding the derivative of <span class="process-math">\(s(t):\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738099443-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169738099443-3-2">
+\begin{align*}
+s'(t)\amp=\lim_{h\to 0}\frac{s(t+h)-s(t)}{h}\\
+\amp=\lim_{h\to 0}\frac{3(t+h)^2-4(t+h)+1-(3t^2-4t+1)}{h}\\
+\amp=6t-4.
+\end{align*}
+</div>
+<div class="para" id="fs-id1169738099443-3-3">Next,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738099443-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169738099443-3-4">
+\begin{align*}
+s''(t)\amp=\lim_{h\to 0}\frac{s'(t+h)-s'(t)}{h}\\
+\amp=\lim_{h\to 0}\frac{6(t+h)-4-(6t-4)}{h}\\
+\amp=6.
+\end{align*}
+</div>
+<div class="para" id="fs-id1169738099443-3-5">Thus, <span class="process-math">\(a=6 \text{ m/s }^2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738099443-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.19.1"><a href="#fs-id1169738099443-3" title="Copy heading and permalink for Solution 3.2.19.1" aria-label="Copy heading and permalink for Solution 3.2.19.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.19: Finding Acceleration"><a href="#fs-id1169738099443" title="Copy heading and permalink for Example 3.2.19: Finding Acceleration" aria-label="Copy heading and permalink for Example 3.2.19: Finding Acceleration">🔗</a></div></article><details id="sec_Ch3Sec2-6-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec2-6-10-1-1">For <span class="process-math">\(s(t)=t^3,\)</span> find <span class="process-math">\(a(t).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-6-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch3Sec2-6-10-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec2-6-10-3-1">Use <a href="sec_Ch3Sec2.html#fs-id1169737966982" class="xref" data-knowl="./knowl/xref/fs-id1169737966982.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2.8: Sketching a Derivative Using a Function">Example 3.2.8</a> as a guide.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-6-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.2.20.1"><a href="#sec_Ch3Sec2-6-10-3" title="Copy heading and permalink for Hint 3.2.20.1" aria-label="Copy heading and permalink for Hint 3.2.20.1">🔗</a></div>
+</div></details><details id="sec_Ch3Sec2-6-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec2-6-10-2-1">
+<span class="process-math">\(a(t)=6t\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec2-6-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.20.1"><a href="#sec_Ch3Sec2-6-10-2" title="Copy heading and permalink for Solution 3.2.20.1" aria-label="Copy heading and permalink for Solution 3.2.20.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.2.20"><a href="#sec_Ch3Sec2-6-10" title="Copy heading and permalink for Checkpoint 3.2.20" aria-label="Copy heading and permalink for Checkpoint 3.2.20">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.2.4: Higher-Order Derivatives"><a href="#sec_Ch3Sec2-6" title="Copy heading and permalink for Subsection 3.2.4: Higher-Order Derivatives" aria-label="Copy heading and permalink for Subsection 3.2.4: Higher-Order Derivatives">🔗</a></div></section><section class="subsection" id="sec_Ch3Sec2-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Key Concepts</span>
+</h3>
+<ul class="disc" id="sec_Ch3Sec2-7-2">
+<li id="sec_Ch3Sec2-7-2-1">
+<div class="para" id="p-derived-sec_Ch3Sec2-7-2-1">The derivative of a function <span class="process-math">\(f(x)\)</span> is the function whose value at <span class="process-math">\(x\)</span> is <span class="process-math">\(f'(x).\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec2-7-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec2-7-2-2">
+<div class="para" id="p-derived-sec_Ch3Sec2-7-2-2">The graph of a derivative of a function <span class="process-math">\(f(x)\)</span> is related to the graph of <span class="process-math">\(f(x).\)</span> Where <span class="process-math">\(f(x)\)</span> has a tangent line with positive slope, <span class="process-math">\(f'(x)\gt 0.\)</span> Where <span class="process-math">\(f(x)\)</span> has a tangent line with negative slope, <span class="process-math">\(f'(x)\lt 0.\)</span> Where <span class="process-math">\(f(x)\)</span> has a horizontal tangent line, <span class="process-math">\(f'(x)=0.\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec2-7-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec2-7-2-3">
+<div class="para" id="p-derived-sec_Ch3Sec2-7-2-3">If a function is differentiable at a point, then it is continuous at that point. A function is not differentiable at a point if it is not continuous at the point, if it has a vertical tangent line at the point, or if the graph has a sharp corner or cusp.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec2-7-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec2-7-2-4">
+<div class="para" id="p-derived-sec_Ch3Sec2-7-2-4">Higher-order derivatives are derivatives of derivatives, from the second derivative to the <span class="process-math">\(n\text{ th }\)</span> derivative.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec2-7-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Subsection 3.2.5: Key Concepts"><a href="#sec_Ch3Sec2-7" title="Copy heading and permalink for Subsection 3.2.5: Key Concepts" aria-label="Copy heading and permalink for Subsection 3.2.5: Key Concepts">🔗</a></div></section><section class="subsection" id="sec_Ch3Sec2-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Key Equations</span>
+</h3>
+<ul class="disc" id="sec_Ch3Sec2-8-2"><li id="sec_Ch3Sec2-8-2-1">
+<div class="para" id="p-derived-sec_Ch3Sec2-8-2-1">The derivative function <span class="process-math">\(\displaystyle{f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec2-8-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li></ul>
+<div class="autopermalink" data-description="Subsection 3.2.6: Key Equations"><a href="#sec_Ch3Sec2-8" title="Copy heading and permalink for Subsection 3.2.6: Key Equations" aria-label="Copy heading and permalink for Subsection 3.2.6: Key Equations">🔗</a></div></section><div class="autopermalink" data-description="Section 3.2: The Derivative as a Function (not edited)"><a href="#sec_Ch3Sec2" title="Copy heading and permalink for Section 3.2: The Derivative as a Function (not edited)" aria-label="Copy heading and permalink for Section 3.2: The Derivative as a Function (not edited)">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec_Ch3Sec1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_Ch3Sec3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
