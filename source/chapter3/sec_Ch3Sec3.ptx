@@ -601,7 +601,7 @@ Since
 <me>f'(x)=3x^2-14x+8=(3x-2)(x-4),</me>
 <p id="fs-id1169739111144">we must solve <m>(3x-2)(x-4)=0.</m> Thus we see that the function has horizontal tangent lines at <m>x=\frac{2}{3}</m> and <m>x=4</m> as shown in the following graph.</p>
 <figure xml:id="CNX_Calc_Figure_03_03_002">
-  <image source="CNX_Calc_Figure_03_03_002.jpg" width="50%">
+  <image source="ch3/CNX_Calc_Figure_03_03_002.jpg" width="50%">
 <description>"The graph shows f(x) = x3 – 7x2 + 8x + 1, and the tangent lines are shown as x = 2/3 and x = 4." </description></image> <caption>This function has horizontal tangent lines at <m>x</m> = 2/3 and <m>x</m> = 4.</caption>
 </figure>
 </solution>
