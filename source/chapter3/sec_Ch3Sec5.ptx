@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_Ch3Sec5" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Derivatives of Trigonometric Functions</title>
+<introduction>
+  <title> Learning Objectives</title>
+  <ul>
+<li>Find the derivatives of the sine and cosine function.</li>
+<li>Describe how harmonic motion can be modeled by sine and cosine functions.</li>
+<li>Find the derivatives of the standard trigonometric functions.</li>
+<li>Calculate the higher-order derivatives of the sine and cosine.</li>
+</ul>
+
+<p>One of the most important types of motion in physics is simple harmonic motion, which is associated with such systems as an object with mass oscillating on a spring. Simple harmonic motion can be described by using either sine or cosine functions. In this section we expand our knowledge of derivative formulas to include derivatives of these and other trigonometric functions. We begin with the derivatives of the sine and cosine functions and then use them to obtain formulas for the derivatives of the remaining four trigonometric functions. Being able to calculate the derivatives of the sine and cosine functions will enable us to find the velocity and acceleration of simple harmonic motion.</p>
+</introduction>
+
+<subsection xml:id="subsec-derivs-sine-cosine">
+<title>Derivatives of the Sine and Cosine Functions</title>
+<p>
+We begin our exploration of the derivative for the sine function by using the formula to make a reasonable guess at its derivative.  Recall that for a function <m>f(x)</m>,
+<me>
+f'(x)=\lim_{h\to 0}\frac{f(x+h_f(x)}{h}
+</me>
+</p>
+<p>
+Consequently, for values of <m>h</m> very close to <m>0</m>, <m>f'(x)\displaystyle\approx\frac{f(x+h)-f(x)}{h}</m>.  We see that by using <m>h=0.01</m>, 
+<me>
+\frac{d}{dx}(\sin{x})\approx\frac{sin\left(x+0.01\right)-\sin{x}}{0.01}
+</me>
+By setting <m>D(x)=\displaystyle\frac{sin\left(x+0.01\right)-\sin{x}}{0.01}</m> and using a graphing utility, we can get a graph of an appoximation to the derivative of <m>\sin{x}</m> (<xref ref="CNX_Calc_Figure_03_05_001"/>).
+</p>
+<figure xml:id="CNX_Calc_Figure_03_05_001">
+<image source="ch3/CNX_Calc_Figure_03_05_001.jpg" width="50%">
+<description>"A graph of D(x) between -2 pi and 2 pi.  The graph is periodic with period 2 pi and range from -1 to 1.  The y intercept is at (0,1) and there are x-intercepts at -3pi/2, -pi/2, pi/2, and 3pi/2"
+ </description>
+ </image> 
+ <caption>
+ The graph of the function <m>D(x)</m> looks a lot like a cosine curve.
+ </caption>
+</figure>
+<p>
+Upon inspection, the graph of <m>D(x)</m> appears to be very close to the graph of the cosine function.  Indeed, we will show that 
+<me>
+\frac{d}{dx}(\sin{x})=\cos{x}
+</me>.
+If we were to follow the same steps to approximate the derivative of the cosine function, we would find that 
+<me>
+\frac{d}{dx}(\cos{x})=-\sin{x}
+</me>
+</p>
+<theorem>
+<title>The Derivatives of <m>\sin{x}</m> and <m>\cos{x}</m></title>
+<statement>
+The derivative of the sine function is the cosine and the derivative of the cosine function is the negative sine.
+<men>
+\frac{d}{dx}(\sin{x})=\cos{x}
+</men>
+<men>
+\frac{d}{dx}(\cos{x})=-\sin{x}
+</men>
+</statement>
+<proof>
+<p>
+Because the proofs for <m>\frac{d}{dx}(\sin{x}=\cos{x}</m> and <m>\frac{d}{dx}(\cos{x}=-\sin{x}</m> use similar techniques, we provide only the proof the for former.  Before beginning, recall two important trigonometric limits from <xref ref="subsubsec-triglimits"/>:
+<me>
+\lim_{h\to 0}\frac{\sin{h}}{h}=1\quad\text{and}\quad\lim_{h\to 0}\frac{\cos{h}-1}{h}=0
+</me>
+The graphs of <m>\displaystyle y=\frac{\sin{h}}{h}</m> and <m>\displaystyle y=\frac{cos{h}-1}{h}</m> are shown in <xref ref="CNX_Calc_Figure_03_05_002"/>
+</p>
+<figure xml:id="CNX_Calc_Figure_03_05_002">
+<image source="ch3/CNX_Calc_Figure_03_05_002.jpg" width="100%">
+<description>Two graphs side by side.  The first is a graph of y=sin(h)/h ad the second is a graph of y=(cos(h)-1)/h
+ </description>
+ </image> 
+ <caption>
+ These graphs show two important limits needed to establish the derivative formulas for the sine and cosine functions.
+ </caption>
+</figure>
+<p>
+We also recall the following trigonometric identity for the sine of the sum of two angles:
+<me>
+\sin(x+h)=\sin{x}\cos{h}+\cos{x}\sin{h}
+</me>
+<md>
+<mrow>
+\frac{d}{dx}\sin{x}\amp =\lim_{h\to 0}\frac{\sin(x+h)-\sin{x}}{h}\amp\amp \text{Apply the definition of the derivative}
+</mrow>
+<mrow>
+\amp =\lim_{h\to 0}\frac{\sin{x}\cos{h}+\cos{x}\sin{h}-\sin{x}}{h}\amp \amp\text{Use trig identity for the sine of the sum of two angles}
+</mrow>
+<mrow>
+\amp =\lim_{h\to 0}\left(\frac{\sin{x}\cos{h}-\sin{x}}{h}+\frac{\cos{x}\sin{h}}{h}\right)\amp\amp\text{Regroup}
+</mrow>
+<mrow>
+\amp =\lim_{h\to 0}\left(\sin{x}\left(\frac{\cos{h}-1}{h}\right)+\cos{x}\left(\frac{\sin{h}}{h}\right)\right)\amp\amp\text{Factor out }<m>\sin{x}</m>\text{ and }<m>\cos{x}</m> 
+</mrow>
+<mrow>
+\amp =\sin{x}\cdot 0+\cos{x}\cdot 1\amp\amp\text{Apply trig limit formulas}
+</mrow>
+<mrow>
+\amp =\cos{x}\amp\amp\text{Simplify}
+</mrow>
+</md>
+</p>
+</proof>
+</theorem>
+<p>
+<xref ref="CNX_Calc_Figure_03_05_003"/> shows the relationship between the graph of <m>f(x)=\sin{x}</m> and its derivative <m>f'(x)=\cos{x}</m>.  Notice that at the points where <m>f(x)=\sin{x}</m> has a horizontal tangent, its derivative <m>f'(x)=\cos{x}</m> takes on the value zero.  We also see that where <m>f(x)=\sin{x}</m> is increasing, <m>f'(x)=\cos{x}\gt 0</m> and where <m>f(x)=\sin{x}</m> is decreasing, <m>f'(x)=\cos{x}\lt 0</m>.
+</p>
+<figure xml:id="CNX_Calc_Figure_03_05_003">
+<image source="ch3/CNX_Calc_Figure_03_05_003.jpg" width="70%">
+<description>A graph of sine of x and cosine of x on the interval from 0 to 2 pi.
+ </description>
+ </image> 
+ <caption>
+Where <m>f(x)</m> has a maximum or a minimum, <m>f'(x)=0</m>.  That is, <m>f'(x)=0</m> where <m>f(x)</m> has a horizontal tangent.  These points are noted with dots on the graph.
+ </caption>
+</figure>
+
+<example>
+<title>Differentiating a Function Containing <m>\sin{x}</m></title>
+<statement>
+<p>
+Find the derivative of <m>f(x)=5x^3\sin{x}</m>.
+</p>
+</statement>
+<solution>
+<p>
+Using the product rule, we have 
+<md>
+<mrow>f'(x)\amp =\frac{d}{dx}(5x^3)\cdot\sin{x}+\frac{d}{dx}(\sin{x})\cdot 5x^3</mrow>
+<mrow>\amp =15x^2\cdot\sin{x}+\cos{x}\cdot 5x^3</mrow>
+</md>
+After simplifying, we obtain
+<md>
+f'(x)=15x^2\sin{x}+5x^3\cos{x}
+</md>
+</p>
+</solution>
+</example>
+<exercise>
+<statement>
+Find the derivative of <m>f(x)=\sin{x}\cos{x}</m>
+</statement>
+<solution>
+<m>\cos^2{x}-\sin^2{x}=\cos(2x)</m>
+</solution>
+<hint><p>Use the product rule</p></hint>
+</exercise>
+
+<example>
+<title>Finding the Derivative of a Function Containing <m>\cos{x}</m></title>
+<statement>
+<p>
+Find the derivative of <m>g(x)=\displaystyle \frac{\cos{x}}{4x^2}</m>.
+</p>
+</statement>
+<solution>
+<p>
+By applying the quotient rule, we have 
+<me>
+g'(x)=\frac{\left(-\sin{x}\right)4x^2-8x\left(\cos{x}\right)}{(4x^2)^2}
+</me>
+Simplifying, we obtain
+<md>
+<mrow> 
+g'(x)\amp =\displaystyle \frac{-4x^2\sin{x}-8x\cos{x}}{16x^4}
+</mrow>
+<mrow>
+\amp =\frac{-x\sin{x}-2\cos{x}}{4x^3}
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+
+<exercise>
+<statement>
+Find the derivative of <m>f(x)=\displaystyle\frac{x}{\cos{x}}</m>
+</statement>
+<solution>
+<m>\displaystyle\frac{\cos{x}+x\sin{x}}{\cos^2{x}</m>
+</solution>
+<hint><p>Use the quotient rule</p></hint>
+</exercise>
+
+<example>
+<title>An Application to Velocity</title>
+<statement>
+<p>
+A particle moves along a coordinate axis in such a way that its position at time <m>t</m> is given by <m>s(t)=2\sin{t}-t</m> for <m>0\le t\le 2\pi</m>.  At what times is the particle at rest?
+</p>
+</statement>
+<solution>
+<p>
+To determine when the particle is at rest, set <m>s'(t)=v(t)=0</m>.  Begin by finding <m>s'(t)</m>.  We obtain
+<me>
+s'(t)=2\cos{t}-1,
+</me>
+so we must solve
+<me>
+2\cos{t}-1=0\text{ for } 0\le t\le 2\pi
+</me>
+</p>
+<p>
+The solutions to this equation are <m>t=\ds\frac{\pi}{3}</m> and <m>\ds t=\frac{5\pi}{3}</m>.  Thus the particle is at rest at times <m>t=\ds\frac{\pi}{3}</m> and <m>\ds t=\frac{5\pi}{3}</m>.
+</p>
+</solution>
+</example>
+
+<exercise>
+<statement>
+A particle moves along a coordinate axis.  Its position at time <m>t</m> is given by <m>s(t)=\sqrt{3}t+2\cos{t}</m> for <m>0\le t\le 2\pi</m>.  At what times is the particle at rest?
+</statement>
+<solution>
+<p><m>\displaystyle t=\frac{\pi}{3}</m> and <m>t=\ds \frac{2\pi}{3}</m>.</p>
+</solution>
+<hint><p>Determine when the velocity is <m>0</m>.</p></hint>
+</exercise>
+</subsection>
+
+<subsection xml:id="subsec-harmonicmotion">
+<p>
+Many physical systems move in a regular, repeating way. One of the simplest examples is a mass attached to a spring. If the mass is pulled away from its resting position and released, it moves back and forth, slowing down as it reaches the ends of its motion and speeding up as it passes through the center. This type of motion is called <term>harmonic motion</term>. 
+</p>
+
+<p>
+We can describe the position of the mass at time <m>t</m> using a sine or cosine function, such as 
+<me>
+s(t)=A\cos{t}
+</me>
+where <m>A</m> is the amplitude (the maximum distance from the equilibrium position).  
+</p>
+
+<p>
+Using derivatives, we can understand how the motion changes over time.  The velocity is 
+<me>
+v(t)=s'(t)=-A\sin{t},
+</me>
+and the acceleration is
+<me>
+a(t)=s''(t_=-A\cos{t}
+</me>
+These formulas reveal an important feature of harmonic motion.  The acceleration satisifes
+<me>
+a(t)=-s(t)
+</me>
+This means the acceleration is always directed opposite the position. When the mass is above the equilibrium position, the acceleration pulls it downward; when it is below, the acceleration pulls it upward. In other words, the spring exerts a <term>restoring force</term> that continually pulls the mass back toward equilibrium. 
+</p>
+
+<p>
+This connection between position, velocity, and acceleration explains the motion: the mass speeds up as it moves toward the center, slows down as it moves away, and repeats this pattern over time. Because sine and cosine functions naturally capture this behavior—and their derivatives cycle between each other—they provide an ideal mathematical model for harmonic motion. 
+</p>
+
+<example>
+<title>
+Interpreting the graph
+</title>
+<p>
+Suppose the position is given by 
+<me>
+s(t)=A\cos{t}
+</me>.
+</p>
+
+<p>
+<ul>
+<li>The maximum and minimum values (<m>s=\pm A</m>) occur at the endpoints of the motion.  At these points, the object momentarily stops so the velocity is zero.</li>
+<li>The speed <m>\vert v(t)\vert =\vert A\sin{t}\vert</m> is greatest when <m>A\cos{t}=0</m>, which occurs when the graph crosses <m>s=0</m>, the equilibrium position.</li>
+<li>Where the graph is increasing, the velocity is positive (the object is moving upward or forward).  Where the graph is decreasing, the velocity is negative.</li>
+<li>The steepness of the graph reflects the magnitude of the velocity: steeper means faster motion.</li>
+</ul>
+</p>
+
+<figure xml:id="fig-harmonicmotion">
+<image source="ch3/temp_velocity.jpg" width="50%"/>
+<caption>
+This needs to be created.
+</caption>
+</figure>
+</example>
+</subsection>
+
+<subsection xml:id="subsec-derivatives-other-trig">
+<title>
+Derivatives of Other Trigonometric Functions
+</title>
+<p>
+Since the remaining four trigonometric functions may be expressed as quotients involving sine, cosine, or both, we can use the quotient rule to find the formulas for their derivatives.
+</p>
+
+<example>
+<title>The Derivative of the Tangent Function</title>
+<statement>
+<p>
+Find the derivative of <m>f(x)=\tan{x}</m>.
+</p>
+</statement>
+<solution>
+<p>
+Start by expressing <m>\tan{x}</m> as the quotient of <m>\sin{x}</m> and <m>\cos{x}</m>:
+<me>
+f(x)=\tan{x}=\frac{\sin{x}}{\cos{x}}
+</me>.
+Now apply the quotient rule to obtain
+<me>
+f'(x)=\frac{\cos{x}\cos{x}-(-\sin{x})\sin{x}}{(\cos{x})^2}
+</me>.
+Simplifying, we obtain
+<me>
+f'(x)=\frac{\cos^2{x}+\sin^2{x}}{\cos^2{x}}
+</me>.
+Recognizing that <m>\cos^2{x}+\sin^2{x}=1</m>, by the Pythagorean theorem, we now have 
+<me>
+f'(x)=\frac{1}{\cos^2{x}}
+</me>.
+Finally, use the identity <m>\ds\sec{x}=\frac{1}{\cos{x}}</m> to obtain
+<me> 
+f'(x)=\sec^2{x}
+</me>.
+</p>
+</solution>
+</example>
+
+<exercise>
+<statement>
+Find the derivative of <m>f(x)=\cot{x}</m>
+</statement>
+<solution>
+<p><m>\displaystyle -\csc^2{x}</m>.</p>
+</solution>
+<hint><p>Use the quotient rule.</p></hint>
+</exercise>
+
+<p>
+The derivatives of the remaining trigonometric functions may be obtained by using similar techniques. We provide these formulas in the following theorem.
+</p>
+
+<theorem>
+<title>
+Derivatives of <m>\tan{x},\,\cot{x},\,\sec{x},\,\csc{x}</m>
+</title>
+<statement>
+<p>
+The derivatives of the remaining trigonometric functions are as follows.
+
+
+<md>
+<mrow number="yes">\frac{d}{dx}(\tan{x})\amp =\sec^2{x}</mrow>
+<mrow number="yes">\frac{d}{dx}(\cot{x})\amp =-\csc^2{x}</mrow>
+<mrow number="yes">\frac{d}{dx}(\sec{x})\amp =\sec{x}\tan{x}</mrow>
+<mrow number="yes">\frac{d}{dx}(\csc{x})\amp =-\csc{x}\cot{x}</mrow>
+</md>
+</p>
+</statement>
+</theorem>
+
+<example>
+<title>Finding the Equation of a Tangent Line</title>
+<statement>
+<p>
+Find the equation of a line tangent to the graph of <m>f(x)=\cot{x}</m> at <m>\ds x=\frac{\pi}{4}</m>.
+</p>
+</statement>
+<solution>
+<p>
+To find an equation of the tangent line, we need a point and a slope at that point. To find the point, compute
+<me>
+f\left(\frac{\pi}{4}\right)=\cot\frac{\pi}{4}=1
+</me>
+Thus the tangent line passes through the point <m>\ds\left(\frac{\pi}{4},1\right)</m>. Next, find the slope by finding the derivative of <m>f(x)=\cot{x}</m> by evaluating it at <m>\ds\frac{\pi}{4}</m>:
+<me>
+f'(x)=-\csc^2{x}\text{ and } f'\left(\frac{\pi}{4}\right)=-\csc^2\left(\frac{\pi}{4}\right)=-2
+</me> 
+Using the point-slope equation of the line, we obtain
+<me>
+y-1=-2\left(x-\frac{\pi}{4}\right)
+</me>
+or equivalently,
+<me>
+y=-2x+1+\frac{pi}{2}
+</me>
+</p>
+</solution>
+</example>
+
+<example>
+<title>Finding the Derivative of Trigonometric Functions</title>
+<statement>
+<p>
+Find the derivative of <m>f(x)=\csc{x}+x\tan{x}</m>
+</p>
+</statement>
+<solution>
+<p>
+To find this derivative, we must use both the sum rule and the product rule. Using the sum rule, we find
+<me>
+f'(x)=\frac{d}{dx}(\csc{x})+\frac{d}{dx}(x\tan{x})
+</me>
+In the first term, <m>\ds\frac{d}{dx}(\csc{x})=-\csc{x}\cot{x}</m>, and by applying the product rule to the second term we obtain
+<me>
+\frac{d}{dx}(x\tan{x})=(1)(\tan{x})+(\sec^2{x})(x)
+</me>
+Therefore, we have
+<me>
+f'(x)=-\csc{x}\cot{x}+\tan{x}+x\sec^2{x}
+</me>
+</p>
+</solution>
+</example>
+
+<exercise>
+<statement>
+Find the derivative of <m>f(x)=2\tan{x}-3\cot{x}</m>
+</statement>
+<solution>
+<p><m>\displaystyle 2\sec^2{x}+3\csc^2{x}</m>.</p>
+</solution>
+<hint><p>Use the formulas.</p></hint>
+</exercise>
+
+<exercise>
+<statement>
+Find the slope of the line tangent to the graph of <m>f(x)=\tan{x}</m> at <m>\ds x=\frac{\pi}{6}</m>
+</statement>
+<solution>
+<p><m>\displaystyle y-\frac{\sqrt{3}}{3}=\frac{4}{3}\left(x-\frac{\pi}{6}\right)</m>.</p>
+</solution>
+<hint><p>The slope of the tangent line is the derivative of the function..</p></hint>
+</exercise>
+
+</subsection>
+
+<subsection xml:id="subsec-higher-trig-derivatives">
+<title>
+Higher-Order Derivatives
+</title>
+
+<p>
+The higher-order derivatives of <m>\sin{x}</m> and <m>\cos{x}</m> follow a repeating pattern. By following the pattern, we can find any higher-order derivative of <m>\sin{⁡x}</m> and <m>\cos{x}</m>.
+</p>
+
+<example>
+<title>Finding Higher-Order Derivatives of <m>y=\sin{x}</m></title>
+<statement>
+<p>
+Find the first four derivatives of <m>f(x)=\sin{x}</m>. 
+</p>
+</statement>
+<solution>
+<p>
+Each step in the chain is straightforward:
+<md>
+<mrow>y\amp =\sin{x}</mrow>
+<mrow> \frac{dy}{dx}\amp =\cos{x}</mrow>
+<mrow>\frac{d^2y}{dx^2}\amp =-\sin{x}</mrow>
+<mrow>\frac{d^3y}{dx^3}\amp =-\cos{x}</mrow>
+<mrow> \frac{d^4y}{dx^4}\amp =\sin{x}</mrow>
+</md>
+</p>
+
+
+<p>
+In fact, once we recognize the pattern of derivatives, we can find any higher-order derivative by determining the step in the pattern to which it corresponds. For example, every fourth derivative of <m>\sin{x}</m> equals <m>\sin{x}</m>, so for any positive integer <m>n</m>,
+<md>
+<mrow>
+\frac{d^4}{dx^4}(\sin{x})\amp =\frac{d^8}{dx^8}(\sin{x})=\frac{d^{12}}{dx^{12}}(\sin{x})=\cdots=\frac{d^{4n}}{dx^{4n}}(\sin{x})=\sin{x}
+</mrow>
+<mrow>
+\frac{d^5}{dx^5}(\sin{x})\amp =\frac{d^9}{dx^9}(\sin{x})=\frac{d^{13}}{dx^{13}}(\sin{x})=\cdots=\frac{d^{4n+1}}{dx^{4n+1}}(\sin{x})=\cos{x}
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+
+<exercise>
+<statement>
+<p>
+For <m>y=\cos{x}</m>, find <m>\ds\frac{d^4y}{dx^4}</m>.
+</p>
+</statement>
+<solution>
+<m>\cos{x}</m>
+</solution>
+<hint>
+<p>
+Take four consecutive derivatives of the cosine function,
+</p>
+</hint>
+</exercise>
+
+<example>
+<title>Using the Pattern for Higher-Order Derivatives of <m>y=\sin{x}</m></title>
+<statement>
+<p>
+Find <m>\ds \frac{d^{74}}{dx^{74}}(\sin{x})</m>. 
+</p>
+</statement>
+<solution>
+<p>
+We can see right away that for the 74th derivative of <m>\sin{x}</m>, <m>74=4(18)+2</m>, so
+<me>
+\frac{d^{74}}{dx^{74}}(\sin{x})=\frac{d^{72+2}}{dx^{72+2}}(\sin{x})=\frac{d^2}{dx^2}(\sin{x})=-\sin{x}
+</me>
+</p>
+</solution>
+</example>
+
+<exercise>
+<statement>
+<p>
+For <m>y=\sin{x}</m>, find <m>\ds\frac{d^{59}y}{dx^{59}}</m>.
+</p>
+</statement>
+<solution>
+<m>-\cos{x}</m>
+</solution>
+<hint>
+<p>
+<m>59=4(14)+3</m>
+</p>
+</hint>
+</exercise>
+
+<example>
+<title>An Application to Acceleration</title>
+<statement>
+<p>
+A particle moves along a coordinate axis in such a way that its position at time <m>t</m> is given by <m>s(t)=2-\sin{t}</m>.  Find <m>v\left(\pi/4\right)</m> and <m>a\left(\pi/4\right)</m>.  Compare these values and decide whether the particle is speeding up or slowing down.
+</p>
+</statement>
+<solution>
+<p>
+First find <m>v(t)=s'(t)</m>:
+<me>
+v(t)=s'(t)=-\cos{t}
+</me>
+Thus,
+<me>
+v\left(\frac{\pi}{4}\right)=-\frac{1}{\sqrt{2}}
+</me>
+Next, find <m>a(t)=v'(t)</m>.  Thus, <m>a(t)=v'(t)=\sin{t}</m> and we have 
+<me>
+a\left(\frac{\pi}{4}\right)=\frac{1}{\sqrt{2}}
+</me>
+Since <m>\ds v\left(\frac{\pi}{4}\right)=-\frac{1}{\sqrt{2}}\lt 0</m> and <m>\ds a\left(\frac{\pi}{4}\right)=\frac{1}{\sqrt{2}}\gt 0</m>, we see that velocity and acceleration are acting in opposite directions; that is, the object is being accelerated in the direction opposite to the direction in which it is travelling. Consequently, the particle is slowing down.
+</p>
+</solution>
+</example>
+
+<exercise>
+<statement>
+A block attached to a spring is moving vertically.  Its position at time <m>t</m> is given by <m>s(t)=2\sin{t}</m>.  Find <m>\ds v\left(\frac{5\pi}{6}\right)</m> and <m>\ds a\left(\frac{5\pi}{6}\right)</m>.  Compare these values and decide whether the block is speeding up or slowing down.
+</statement>
+<solution>
+<p>
+<m>\ds v\left(\frac{5\pi}{6}\right)=-\sqrt{3}</m> and <m>\ds a\left(\frac{5\pi}{6}\right)=-1</m>. The block is speeding up.
+</p>
+</solution>
+
+<hint>
+<p>
+Find the first and second derivative of <m>s(t)</m> when <m>\ds t=\frac{5\pi}{6}</m>.
+</p>
+</hint>
+</exercise>
+
+</subsection>
+
+</section>

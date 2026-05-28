@@ -6,3 +6,5 @@
 - solution to example 3.4.2 requires the Chain rule
 
 - image like Thomas' Figure 3.17 after Definition 3.4.4
+
+- image for Figure 3.5.12

@@ -11,7 +11,7 @@
   <xi:include href="./sec_Ch3Sec2.ptx" />
   <xi:include href="./sec_Ch3Sec3.ptx" />
   <xi:include href="./sec_Ch3Sec4.ptx" />
-  <!-- <xi:include href="./sec_Ch3Sec5.ptx" /> -->
+  <xi:include href="./sec_Ch3Sec5.ptx" />
   <xi:include href="./sec_Ch3Sec6Placeholder.ptx" />
   <!-- <xi:include href="./sec_Ch3Sec7.ptx" /> -->
   <!-- <xi:include href="./sec_Ch3Sec8.ptx" /> -->
