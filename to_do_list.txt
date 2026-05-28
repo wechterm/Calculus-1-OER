@@ -1,0 +1,8 @@
+- italicized versus boldface commands
+
+
+- example 3.3.31 and checkpoint 3.3.32 require Chain rule before Chain rule introduced 
+
+- solution to example 3.4.2 requires the Chain rule
+
+- image like Thomas' Figure 3.17 after Definition 3.4.4
