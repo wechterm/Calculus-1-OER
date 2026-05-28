@@ -4438,11 +4438,245 @@ var ptx_lunr_docs = [
   "body": "  Suppose that the profit obtained from the sale of fish-fry dinners is given by Use the marginal profit function to estimate the profit from the sale of the 101st fish-fry dinner.    \\$2    Use to approximate   "
 },
 {
+  "id": "sec_Ch3Sec5",
+  "level": "1",
+  "url": "sec_Ch3Sec5.html",
+  "type": "Section",
+  "number": "3.5",
+  "title": "Derivatives of Trigonometric Functions",
+  "body": " Derivatives of Trigonometric Functions   Learning Objectives   Find the derivatives of the sine and cosine function.  Describe how harmonic motion can be modeled by sine and cosine functions.  Find the derivatives of the standard trigonometric functions.  Calculate the higher-order derivatives of the sine and cosine.   One of the most important types of motion in physics is simple harmonic motion, which is associated with such systems as an object with mass oscillating on a spring. Simple harmonic motion can be described by using either sine or cosine functions. In this section we expand our knowledge of derivative formulas to include derivatives of these and other trigonometric functions. We begin with the derivatives of the sine and cosine functions and then use them to obtain formulas for the derivatives of the remaining four trigonometric functions. Being able to calculate the derivatives of the sine and cosine functions will enable us to find the velocity and acceleration of simple harmonic motion.    Derivatives of the Sine and Cosine Functions  We begin our exploration of the derivative for the sine function by using the formula to make a reasonable guess at its derivative. Recall that for a function ,   Consequently, for values of very close to , . We see that by using , By setting and using a graphing utility, we can get a graph of an appoximation to the derivative of ( ).    \"A graph of D(x) between -2 pi and 2 pi. The graph is periodic with period 2 pi and range from -1 to 1. The y intercept is at (0,1) and there are x-intercepts at -3pi\/2, -pi\/2, pi\/2, and 3pi\/2\"   The graph of the function looks a lot like a cosine curve.   Upon inspection, the graph of appears to be very close to the graph of the cosine function. Indeed, we will show that . If we were to follow the same steps to approximate the derivative of the cosine function, we would find that    The Derivatives of and  The derivative of the sine function is the cosine and the derivative of the cosine function is the negative sine.     Because the proofs for and use similar techniques, we provide only the proof the for former. Before beginning, recall two important trigonometric limits from : The graphs of and are shown in     Two graphs side by side. The first is a graph of y=sin(h)\/h ad the second is a graph of y=(cos(h)-1)\/h   These graphs show two important limits needed to establish the derivative formulas for the sine and cosine functions.   We also recall the following trigonometric identity for the sine of the sum of two angles:       shows the relationship between the graph of and its derivative . Notice that at the points where has a horizontal tangent, its derivative takes on the value zero. We also see that where is increasing, and where is decreasing, .    A graph of sine of x and cosine of x on the interval from 0 to 2 pi.   Where has a maximum or a minimum, . That is, where has a horizontal tangent. These points are noted with dots on the graph.    Differentiating a Function Containing   Find the derivative of .    Using the product rule, we have After simplifying, we obtain      Find the derivative of      Use the product rule    Finding the Derivative of a Function Containing   Find the derivative of .    By applying the quotient rule, we have Simplifying, we obtain      Find the derivative of      Use the quotient rule    An Application to Velocity   A particle moves along a coordinate axis in such a way that its position at time is given by for . At what times is the particle at rest?    To determine when the particle is at rest, set . Begin by finding . We obtain so we must solve   The solutions to this equation are and . Thus the particle is at rest at times and .     A particle moves along a coordinate axis. Its position at time is given by for . At what times is the particle at rest?   and .   Determine when the velocity is .     Many physical systems move in a regular, repeating way. One of the simplest examples is a mass attached to a spring. If the mass is pulled away from its resting position and released, it moves back and forth, slowing down as it reaches the ends of its motion and speeding up as it passes through the center. This type of motion is called harmonic motion .  We can describe the position of the mass at time using a sine or cosine function, such as where is the amplitude (the maximum distance from the equilibrium position).  Using derivatives, we can understand how the motion changes over time. The velocity is and the acceleration is These formulas reveal an important feature of harmonic motion. The acceleration satisifes This means the acceleration is always directed opposite the position. When the mass is above the equilibrium position, the acceleration pulls it downward; when it is below, the acceleration pulls it upward. In other words, the spring exerts a restoring force that continually pulls the mass back toward equilibrium.  This connection between position, velocity, and acceleration explains the motion: the mass speeds up as it moves toward the center, slows down as it moves away, and repeats this pattern over time. Because sine and cosine functions naturally capture this behavior—and their derivatives cycle between each other—they provide an ideal mathematical model for harmonic motion.   Interpreting the graph  Suppose the position is given by .    The maximum and minimum values ( ) occur at the endpoints of the motion. At these points, the object momentarily stops so the velocity is zero.  The speed is greatest when , which occurs when the graph crosses , the equilibrium position.  Where the graph is increasing, the velocity is positive (the object is moving upward or forward). Where the graph is decreasing, the velocity is negative.  The steepness of the graph reflects the magnitude of the velocity: steeper means faster motion.      This needs to be created.      Derivatives of Other Trigonometric Functions  Since the remaining four trigonometric functions may be expressed as quotients involving sine, cosine, or both, we can use the quotient rule to find the formulas for their derivatives.   The Derivative of the Tangent Function   Find the derivative of .    Start by expressing as the quotient of and : . Now apply the quotient rule to obtain . Simplifying, we obtain . Recognizing that , by the Pythagorean theorem, we now have . Finally, use the identity to obtain .     Find the derivative of    .   Use the quotient rule.   The derivatives of the remaining trigonometric functions may be obtained by using similar techniques. We provide these formulas in the following theorem.   Derivatives of    The derivatives of the remaining trigonometric functions are as follows.      Finding the Equation of a Tangent Line   Find the equation of a line tangent to the graph of at .    To find an equation of the tangent line, we need a point and a slope at that point. To find the point, compute Thus the tangent line passes through the point . Next, find the slope by finding the derivative of by evaluating it at : Using the point-slope equation of the line, we obtain or equivalently,      Finding the Derivative of Trigonometric Functions   Find the derivative of     To find this derivative, we must use both the sum rule and the product rule. Using the sum rule, we find In the first term, , and by applying the product rule to the second term we obtain Therefore, we have      Find the derivative of    .   Use the formulas.    Find the slope of the line tangent to the graph of at    .   The slope of the tangent line is the derivative of the function..     Higher-Order Derivatives  The higher-order derivatives of and follow a repeating pattern. By following the pattern, we can find any higher-order derivative of and .   Finding Higher-Order Derivatives of   Find the first four derivatives of .    Each step in the chain is straightforward:   In fact, once we recognize the pattern of derivatives, we can find any higher-order derivative by determining the step in the pattern to which it corresponds. For example, every fourth derivative of equals , so for any positive integer ,       For , find .       Take four consecutive derivatives of the cosine function,     Using the Pattern for Higher-Order Derivatives of   Find .    We can see right away that for the 74th derivative of , , so       For , find .             An Application to Acceleration   A particle moves along a coordinate axis in such a way that its position at time is given by . Find and . Compare these values and decide whether the particle is speeding up or slowing down.    First find : Thus, Next, find . Thus, and we have Since and , we see that velocity and acceleration are acting in opposite directions; that is, the object is being accelerated in the direction opposite to the direction in which it is travelling. Consequently, the particle is slowing down.     A block attached to a spring is moving vertically. Its position at time is given by . Find and . Compare these values and decide whether the block is speeding up or slowing down.    and . The block is speeding up.    Find the first and second derivative of when .     "
+},
+{
+  "id": "CNX_Calc_Figure_03_05_001",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#CNX_Calc_Figure_03_05_001",
+  "type": "Figure",
+  "number": "3.5.1",
+  "title": "",
+  "body": "  \"A graph of D(x) between -2 pi and 2 pi. The graph is periodic with period 2 pi and range from -1 to 1. The y intercept is at (0,1) and there are x-intercepts at -3pi\/2, -pi\/2, pi\/2, and 3pi\/2\"   The graph of the function looks a lot like a cosine curve.  "
+},
+{
+  "id": "subsec-derivs-sine-cosine-6",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-6",
+  "type": "Theorem",
+  "number": "3.5.2",
+  "title": "The Derivatives of <span class=\"process-math\">\\(\\sin{x}\\)<\/span> and <span class=\"process-math\">\\(\\cos{x}\\)<\/span>.",
+  "body": " The Derivatives of and  The derivative of the sine function is the cosine and the derivative of the cosine function is the negative sine.     Because the proofs for and use similar techniques, we provide only the proof the for former. Before beginning, recall two important trigonometric limits from : The graphs of and are shown in     Two graphs side by side. The first is a graph of y=sin(h)\/h ad the second is a graph of y=(cos(h)-1)\/h   These graphs show two important limits needed to establish the derivative formulas for the sine and cosine functions.   We also recall the following trigonometric identity for the sine of the sum of two angles:     "
+},
+{
+  "id": "CNX_Calc_Figure_03_05_003",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#CNX_Calc_Figure_03_05_003",
+  "type": "Figure",
+  "number": "3.5.4",
+  "title": "",
+  "body": "  A graph of sine of x and cosine of x on the interval from 0 to 2 pi.   Where has a maximum or a minimum, . That is, where has a horizontal tangent. These points are noted with dots on the graph.  "
+},
+{
+  "id": "subsec-derivs-sine-cosine-9",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-9",
+  "type": "Example",
+  "number": "3.5.5",
+  "title": "Differentiating a Function Containing <span class=\"process-math\">\\(\\sin{x}\\)<\/span>.",
+  "body": " Differentiating a Function Containing   Find the derivative of .    Using the product rule, we have After simplifying, we obtain    "
+},
+{
+  "id": "subsec-derivs-sine-cosine-10",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-10",
+  "type": "Checkpoint",
+  "number": "3.5.6",
+  "title": "",
+  "body": " Find the derivative of      Use the product rule  "
+},
+{
+  "id": "subsec-derivs-sine-cosine-11",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-11",
+  "type": "Example",
+  "number": "3.5.7",
+  "title": "Finding the Derivative of a Function Containing <span class=\"process-math\">\\(\\cos{x}\\)<\/span>.",
+  "body": " Finding the Derivative of a Function Containing   Find the derivative of .    By applying the quotient rule, we have Simplifying, we obtain    "
+},
+{
+  "id": "subsec-derivs-sine-cosine-12",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-12",
+  "type": "Checkpoint",
+  "number": "3.5.8",
+  "title": "",
+  "body": " Find the derivative of      Use the quotient rule  "
+},
+{
+  "id": "subsec-derivs-sine-cosine-13",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-13",
+  "type": "Example",
+  "number": "3.5.9",
+  "title": "An Application to Velocity.",
+  "body": " An Application to Velocity   A particle moves along a coordinate axis in such a way that its position at time is given by for . At what times is the particle at rest?    To determine when the particle is at rest, set . Begin by finding . We obtain so we must solve   The solutions to this equation are and . Thus the particle is at rest at times and .   "
+},
+{
+  "id": "subsec-derivs-sine-cosine-14",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-14",
+  "type": "Checkpoint",
+  "number": "3.5.10",
+  "title": "",
+  "body": " A particle moves along a coordinate axis. Its position at time is given by for . At what times is the particle at rest?   and .   Determine when the velocity is .  "
+},
+{
+  "id": "subsec-harmonicmotion-1",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-harmonicmotion-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "harmonic motion "
+},
+{
+  "id": "subsec-harmonicmotion-3",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-harmonicmotion-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "restoring force "
+},
+{
+  "id": "subsec-harmonicmotion-5",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-harmonicmotion-5",
+  "type": "Example",
+  "number": "3.5.11",
+  "title": "Interpreting the graph.",
+  "body": " Interpreting the graph  Suppose the position is given by .    The maximum and minimum values ( ) occur at the endpoints of the motion. At these points, the object momentarily stops so the velocity is zero.  The speed is greatest when , which occurs when the graph crosses , the equilibrium position.  Where the graph is increasing, the velocity is positive (the object is moving upward or forward). Where the graph is decreasing, the velocity is negative.  The steepness of the graph reflects the magnitude of the velocity: steeper means faster motion.      This needs to be created.   "
+},
+{
+  "id": "subsec-derivatives-other-trig-3",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-3",
+  "type": "Example",
+  "number": "3.5.13",
+  "title": "The Derivative of the Tangent Function.",
+  "body": " The Derivative of the Tangent Function   Find the derivative of .    Start by expressing as the quotient of and : . Now apply the quotient rule to obtain . Simplifying, we obtain . Recognizing that , by the Pythagorean theorem, we now have . Finally, use the identity to obtain .   "
+},
+{
+  "id": "subsec-derivatives-other-trig-4",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-4",
+  "type": "Checkpoint",
+  "number": "3.5.14",
+  "title": "",
+  "body": " Find the derivative of    .   Use the quotient rule.  "
+},
+{
+  "id": "subsec-derivatives-other-trig-6",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-6",
+  "type": "Theorem",
+  "number": "3.5.15",
+  "title": "Derivatives of <span class=\"process-math\">\\(\\tan{x},\\,\\cot{x},\\,\\sec{x},\\,\\csc{x}\\)<\/span>.",
+  "body": " Derivatives of    The derivatives of the remaining trigonometric functions are as follows.    "
+},
+{
+  "id": "subsec-derivatives-other-trig-7",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-7",
+  "type": "Example",
+  "number": "3.5.16",
+  "title": "Finding the Equation of a Tangent Line.",
+  "body": " Finding the Equation of a Tangent Line   Find the equation of a line tangent to the graph of at .    To find an equation of the tangent line, we need a point and a slope at that point. To find the point, compute Thus the tangent line passes through the point . Next, find the slope by finding the derivative of by evaluating it at : Using the point-slope equation of the line, we obtain or equivalently,    "
+},
+{
+  "id": "subsec-derivatives-other-trig-8",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-8",
+  "type": "Example",
+  "number": "3.5.17",
+  "title": "Finding the Derivative of Trigonometric Functions.",
+  "body": " Finding the Derivative of Trigonometric Functions   Find the derivative of     To find this derivative, we must use both the sum rule and the product rule. Using the sum rule, we find In the first term, , and by applying the product rule to the second term we obtain Therefore, we have    "
+},
+{
+  "id": "subsec-derivatives-other-trig-9",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-9",
+  "type": "Checkpoint",
+  "number": "3.5.18",
+  "title": "",
+  "body": " Find the derivative of    .   Use the formulas.  "
+},
+{
+  "id": "subsec-derivatives-other-trig-10",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-10",
+  "type": "Checkpoint",
+  "number": "3.5.19",
+  "title": "",
+  "body": " Find the slope of the line tangent to the graph of at    .   The slope of the tangent line is the derivative of the function..  "
+},
+{
+  "id": "subsec-higher-trig-derivatives-3",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-higher-trig-derivatives-3",
+  "type": "Example",
+  "number": "3.5.20",
+  "title": "Finding Higher-Order Derivatives of <span class=\"process-math\">\\(y=\\sin{x}\\)<\/span>.",
+  "body": " Finding Higher-Order Derivatives of   Find the first four derivatives of .    Each step in the chain is straightforward:   In fact, once we recognize the pattern of derivatives, we can find any higher-order derivative by determining the step in the pattern to which it corresponds. For example, every fourth derivative of equals , so for any positive integer ,    "
+},
+{
+  "id": "subsec-higher-trig-derivatives-4",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-higher-trig-derivatives-4",
+  "type": "Checkpoint",
+  "number": "3.5.21",
+  "title": "",
+  "body": "  For , find .       Take four consecutive derivatives of the cosine function,   "
+},
+{
+  "id": "subsec-higher-trig-derivatives-5",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-higher-trig-derivatives-5",
+  "type": "Example",
+  "number": "3.5.22",
+  "title": "Using the Pattern for Higher-Order Derivatives of <span class=\"process-math\">\\(y=\\sin{x}\\)<\/span>.",
+  "body": " Using the Pattern for Higher-Order Derivatives of   Find .    We can see right away that for the 74th derivative of , , so    "
+},
+{
+  "id": "subsec-higher-trig-derivatives-6",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-higher-trig-derivatives-6",
+  "type": "Checkpoint",
+  "number": "3.5.23",
+  "title": "",
+  "body": "  For , find .           "
+},
+{
+  "id": "subsec-higher-trig-derivatives-7",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-higher-trig-derivatives-7",
+  "type": "Example",
+  "number": "3.5.24",
+  "title": "An Application to Acceleration.",
+  "body": " An Application to Acceleration   A particle moves along a coordinate axis in such a way that its position at time is given by . Find and . Compare these values and decide whether the particle is speeding up or slowing down.    First find : Thus, Next, find . Thus, and we have Since and , we see that velocity and acceleration are acting in opposite directions; that is, the object is being accelerated in the direction opposite to the direction in which it is travelling. Consequently, the particle is slowing down.   "
+},
+{
+  "id": "subsec-higher-trig-derivatives-8",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#subsec-higher-trig-derivatives-8",
+  "type": "Checkpoint",
+  "number": "3.5.25",
+  "title": "",
+  "body": " A block attached to a spring is moving vertically. Its position at time is given by . Find and . Compare these values and decide whether the block is speeding up or slowing down.    and . The block is speeding up.    Find the first and second derivative of when .   "
+},
+{
   "id": "sec_Ch3Sec6",
   "level": "1",
   "url": "sec_Ch3Sec6.html",
   "type": "Section",
-  "number": "3.5",
+  "number": "3.6",
   "title": "Chapter 3 Section 6 Placeholder",
   "body": " Chapter 3 Section 6 Placeholder  "
 },

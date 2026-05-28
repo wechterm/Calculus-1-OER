@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Derivatives of Trigonometric Functions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="OpenStax Calculus">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">OpenStax Calculus</span> <span class="subtitle">Volume 1</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_Ch3Sec4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_third.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_Ch3Sec6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\limit}{\ds\lim} 
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_first.html" class="internal"><span class="codenumber">1</span> <span class="title">Functions and Graphs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Review of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#subsec_Ch1Sec1Ss1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Representing Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-3" class="internal"><span class="codenumber">1.1.2.1</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-4" class="internal"><span class="codenumber">1.1.2.2</span> <span class="title">Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-5" class="internal"><span class="codenumber">1.1.2.3</span> <span class="title">Algebraic Formulas</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Combining Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-3" class="internal"><span class="codenumber">1.1.3.1</span> <span class="title">Combining Functions with Mathematical Operators</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-4" class="internal"><span class="codenumber">1.1.3.2</span> <span class="title">Function Composition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetry of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Basic Classes of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear Functions and Slope</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-3" class="internal"><span class="codenumber">1.2.2.1</span> <span class="title">Power Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-4" class="internal"><span class="codenumber">1.2.2.2</span> <span class="title">Behavior at Infinity</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-5" class="internal"><span class="codenumber">1.2.2.3</span> <span class="title">Zeros of Polynomial Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-6" class="internal"><span class="codenumber">1.2.2.4</span> <span class="title">Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Algebraic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Transcendental Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Piecewise-Defined Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Transformations of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-9" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-10" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Mathematical Modeling</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Quadratic Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Inverse Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Existence of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding a Function’s Inverse</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-2" class="internal"><span class="codenumber">1.4.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-3" class="internal"><span class="codenumber">1.4.2.2</span> <span class="title">Graphing Inverse Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-4" class="internal"><span class="codenumber">1.4.2.3</span> <span class="title">Restricting Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Inverse Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-7" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exponential Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-3" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Evaluating Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-4" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">Graphing Exponential Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-4" class="internal"><span class="codenumber">1.5.2</span> <span class="title">The Number <span class="process-math">\(e \)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-5" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Hyperbolic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-3" class="internal"><span class="codenumber">1.5.4.1</span> <span class="title">Graphs of Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-4" class="internal"><span class="codenumber">1.5.4.2</span> <span class="title">Identities Involving Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-5" class="internal"><span class="codenumber">1.5.4.3</span> <span class="title">Inverse Hyperbolic Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-7" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Key Concepts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_second.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">A Preview of Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Tangent Problem and Differential Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Area Problem and Integral Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Other Aspects of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Limit of a Function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Infinite Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.3.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec3.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Limit Laws</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Limit Laws</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Limits of Polynomial and Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-5" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Additional Limit Evaluation Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-onesidedlimits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-7" class="internal"><span class="codenumber">2.4.5</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsubsec-triglimits" class="internal"><span class="codenumber">2.4.6</span> <span class="title">A Few Important Trigonometric Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-LimitLawProofs" class="internal"><span class="codenumber">2.4.7</span> <span class="title">Proofs of the Limit Laws (Optional)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec4.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Continuity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Continuity at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-4" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Types of Discontinuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-5" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Continuity over an Interval</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-6" class="internal"><span class="codenumber">2.5.4</span> <span class="title">The Intermediate Value Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec6.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Limits at Infinity and Asymptotes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Limits at Infinity and Horizontal Asymptotes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Infinite Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-5" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Formal Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-6" class="internal"><span class="codenumber">2.6.4</span> <span class="title">End Behavior for Polynomials Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-7" class="internal"><span class="codenumber">2.6.5</span> <span class="title">End Behavior for Algebraic Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_third.html" class="internal"><span class="codenumber">3</span> <span class="title">Derivatives</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Defining the Derivative (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Tangent Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The Derivative of a Function at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Velocities and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-6" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-7" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">The Derivative as a Function (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivative Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Graphing a Derivative</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Derivatives and Continuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-6" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Higher-Order Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-7" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-8" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Differentiation Rules (3.3.31-2 Need Chain Rule)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The Basic Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-3" class="internal"><span class="codenumber">3.3.1.1</span> <span class="title">The Constant Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-4" class="internal"><span class="codenumber">3.3.1.2</span> <span class="title">The Power Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">The Sum, Difference, and Constant Multiple Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#subsec-exponentialderivative" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-6" class="internal"><span class="codenumber">3.3.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-7" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The Quotient Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-8" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Combining Differentiation Rules</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Derivatives as Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#subsec-instantaneousrateofchange" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Motion along a Line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Population Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-6" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Changes in Cost and Revenue</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec_Ch3Sec5.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Derivatives of Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-derivs-sine-cosine" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Derivatives of the Sine and Cosine Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-harmonicmotion" class="internal"><span class="codenumber">3.5.2</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-derivatives-other-trig" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Derivatives of Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-higher-trig-derivatives" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Higher-Order Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Chapter 3 Section 6 Placeholder</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_appendix.html" class="internal"><span class="codenumber">4</span> <span class="title">Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_exp_func.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Derivatives of Exponential Functions (check if table headers needed)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Whirlwind Review of Logarithms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3-3" class="internal"><span class="codenumber">4.1.1.1</span> <span class="title">Logarithmic Functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-4" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Back to that Limit</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec_Ch3Sec5">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of Trigonometric Functions</span>
+</h2>
+<section class="introduction" id="sec_Ch3Sec5-2"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ul class="disc" id="sec_Ch3Sec5-2-2">
+<li id="sec_Ch3Sec5-2-2-1">
+<div class="para" id="p-derived-sec_Ch3Sec5-2-2-1">Find the derivatives of the sine and cosine function.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec5-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec5-2-2-2">
+<div class="para" id="p-derived-sec_Ch3Sec5-2-2-2">Describe how harmonic motion can be modeled by sine and cosine functions.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec5-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec5-2-2-3">
+<div class="para" id="p-derived-sec_Ch3Sec5-2-2-3">Find the derivatives of the standard trigonometric functions.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec5-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec5-2-2-4">
+<div class="para" id="p-derived-sec_Ch3Sec5-2-2-4">Calculate the higher-order derivatives of the sine and cosine.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec5-2-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para" id="sec_Ch3Sec5-2-3">One of the most important types of motion in physics is simple harmonic motion, which is associated with such systems as an object with mass oscillating on a spring. Simple harmonic motion can be described by using either sine or cosine functions. In this section we expand our knowledge of derivative formulas to include derivatives of these and other trigonometric functions. We begin with the derivatives of the sine and cosine functions and then use them to obtain formulas for the derivatives of the remaining four trigonometric functions. Being able to calculate the derivatives of the sine and cosine functions will enable us to find the velocity and acceleration of simple harmonic motion.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="subsec-derivs-sine-cosine">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of the Sine and Cosine Functions</span>
+</h3>
+<div class="para logical" id="subsec-derivs-sine-cosine-2">
+<div class="para">We begin our exploration of the derivative for the sine function by using the formula to make a reasonable guess at its derivative.  Recall that for a function <span class="process-math">\(f(x)\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-derivs-sine-cosine-2-2">
+\begin{equation*}
+f'(x)=\lim_{h\to 0}\frac{f(x+h_f(x)}{h}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-derivs-sine-cosine-3">
+<div class="para">Consequently, for values of <span class="process-math">\(h\)</span> very close to <span class="process-math">\(0\text{,}\)</span> <span class="process-math">\(f'(x)\displaystyle\approx\frac{f(x+h)-f(x)}{h}\text{.}\)</span>  We see that by using <span class="process-math">\(h=0.01\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_03_05_001.html" id="subsec-derivs-sine-cosine-3-5">
+\begin{equation*}
+\frac{d}{dx}(\sin{x})\approx\frac{sin\left(x+0.01\right)-\sin{x}}{0.01}
+\end{equation*}
+</div>
+<div class="para">By setting <span class="process-math">\(D(x)=\displaystyle\frac{sin\left(x+0.01\right)-\sin{x}}{0.01}\)</span> and using a graphing utility, we can get a graph of an appoximation to the derivative of <span class="process-math">\(\sin{x}\)</span> (<a href="sec_Ch3Sec5.html#CNX_Calc_Figure_03_05_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_05_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_03_05_001"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch3/CNX_Calc_Figure_03_05_001.jpg" class="contained" alt='"A graph of D(x) between -2 pi and 2 pi.  The graph is periodic with period 2 pi and range from -1 to 1.  The y intercept is at (0,1) and there are x-intercepts at -3pi/2, -pi/2, pi/2, and 3pi/2"'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of the function <span class="process-math">\(D(x)\)</span> looks a lot like a cosine curve.<div class="autopermalink" data-description="Figure 3.5.1"><a href="#CNX_Calc_Figure_03_05_001" title="Copy heading and permalink for Figure 3.5.1" aria-label="Copy heading and permalink for Figure 3.5.1">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="subsec-derivs-sine-cosine-5">
+<div class="para">Upon inspection, the graph of <span class="process-math">\(D(x)\)</span> appears to be very close to the graph of the cosine function.  Indeed, we will show that</div>
+<div class="displaymath process-math" id="subsec-derivs-sine-cosine-5-2">
+\begin{equation*}
+\frac{d}{dx}(\sin{x})=\cos{x}\text{.}
+\end{equation*}
+</div>
+<div class="para">If we were to follow the same steps to approximate the derivative of the cosine function, we would find that</div>
+<div class="displaymath process-math" id="subsec-derivs-sine-cosine-5-3">
+\begin{equation*}
+\frac{d}{dx}(\cos{x})=-\sin{x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="subsec-derivs-sine-cosine-6"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Derivatives of <span class="process-math">\(\sin{x}\)</span> and <span class="process-math">\(\cos{x}\)</span>.</span>
+</h4>The derivative of the sine function is the cosine and the derivative of the cosine function is the negative sine.<div class="displaymath process-math" id="subsec-derivs-sine-cosine-6-2-1">
+\begin{equation}
+\frac{d}{dx}(\sin{x})=\cos{x}\tag{3.5.1}
+\end{equation}
+</div>
+<div class="displaymath process-math" id="subsec-derivs-sine-cosine-6-2-2">
+\begin{equation}
+\frac{d}{dx}(\cos{x})=-\sin{x}\tag{3.5.2}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Theorem 3.5.2: The Derivatives of \sin{x} and \cos{x}"><a href="#subsec-derivs-sine-cosine-6" title="Copy heading and permalink for Theorem 3.5.2: The Derivatives of \sin{x} and \cos{x}" aria-label="Copy heading and permalink for Theorem 3.5.2: The Derivatives of \sin{x} and \cos{x}">🔗</a></div>
+</article>
+<details id="subsec-derivs-sine-cosine-6-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="subsec-derivs-sine-cosine-6-3-1">
+<div class="para">Because the proofs for <span class="process-math">\(\frac{d}{dx}(\sin{x}=\cos{x}\)</span> and <span class="process-math">\(\frac{d}{dx}(\cos{x}=-\sin{x}\)</span> use similar techniques, we provide only the proof the for former.  Before beginning, recall two important trigonometric limits from <a href="sec_Ch2Sec3.html#subsubsec-triglimits" class="internal" title="Subsection 2.4.6: A Few Important Trigonometric Limits">Subsection 2.4.6</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/subsubsec-triglimits.html ./knowl/xref/CNX_Calc_Figure_03_05_002.html" id="subsec-derivs-sine-cosine-6-3-1-4">
+\begin{equation*}
+\lim_{h\to 0}\frac{\sin{h}}{h}=1\quad\text{and}\quad\lim_{h\to 0}\frac{\cos{h}-1}{h}=0
+\end{equation*}
+</div>
+<div class="para">The graphs of <span class="process-math">\(\displaystyle y=\frac{\sin{h}}{h}\)</span> and <span class="process-math">\(\displaystyle y=\frac{cos{h}-1}{h}\)</span> are shown in <a href="sec_Ch3Sec5.html#CNX_Calc_Figure_03_05_002" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_05_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_03_05_002"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch3/CNX_Calc_Figure_03_05_002.jpg" class="contained" alt="Two graphs side by side.  The first is a graph of y=sin(h)/h ad the second is a graph of y=(cos(h)-1)/h"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>These graphs show two important limits needed to establish the derivative formulas for the sine and cosine functions.<div class="autopermalink" data-description="Figure 3.5.3"><a href="#CNX_Calc_Figure_03_05_002" title="Copy heading and permalink for Figure 3.5.3" aria-label="Copy heading and permalink for Figure 3.5.3">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="subsec-derivs-sine-cosine-6-3-3">
+<div class="para">We also recall the following trigonometric identity for the sine of the sum of two angles:</div>
+<div class="displaymath process-math" id="subsec-derivs-sine-cosine-6-3-3-1">
+\begin{equation*}
+\sin(x+h)=\sin{x}\cos{h}+\cos{x}\sin{h}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="subsec-derivs-sine-cosine-6-3-3-2">
+\begin{align*}
+\frac{d}{dx}\sin{x}\amp =\lim_{h\to 0}\frac{\sin(x+h)-\sin{x}}{h}\amp\amp \text{Apply the definition of the derivative}\\
+\amp =\lim_{h\to 0}\frac{\sin{x}\cos{h}+\cos{x}\sin{h}-\sin{x}}{h}\amp \amp\text{Use trig identity for the sine of the sum of two angles}\\
+\amp =\lim_{h\to 0}\left(\frac{\sin{x}\cos{h}-\sin{x}}{h}+\frac{\cos{x}\sin{h}}{h}\right)\amp\amp\text{Regroup}\\
+\amp =\lim_{h\to 0}\left(\sin{x}\left(\frac{\cos{h}-1}{h}\right)+\cos{x}\left(\frac{\sin{h}}{h}\right)\right)\amp\amp\text{Factor out }\text{ and } \\
+\amp =\sin{x}\cdot 0+\cos{x}\cdot 1\amp\amp\text{Apply trig limit formulas}\\
+\amp =\cos{x}\amp\amp\text{Simplify}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-6-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.5.2.1"><a href="#subsec-derivs-sine-cosine-6-3" title="Copy heading and permalink for Proof 3.5.2.1" aria-label="Copy heading and permalink for Proof 3.5.2.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsec-derivs-sine-cosine-7">
+<a href="sec_Ch3Sec5.html#CNX_Calc_Figure_03_05_003" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_05_003.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.4">Figure 3.5.4</a> shows the relationship between the graph of <span class="process-math">\(f(x)=\sin{x}\)</span> and its derivative <span class="process-math">\(f'(x)=\cos{x}\text{.}\)</span>  Notice that at the points where <span class="process-math">\(f(x)=\sin{x}\)</span> has a horizontal tangent, its derivative <span class="process-math">\(f'(x)=\cos{x}\)</span> takes on the value zero.  We also see that where <span class="process-math">\(f(x)=\sin{x}\)</span> is increasing, <span class="process-math">\(f'(x)=\cos{x}\gt 0\)</span> and where <span class="process-math">\(f(x)=\sin{x}\)</span> is decreasing, <span class="process-math">\(f'(x)=\cos{x}\lt 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_03_05_003"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch3/CNX_Calc_Figure_03_05_003.jpg" class="contained" alt="A graph of sine of x and cosine of x on the interval from 0 to 2 pi."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Where <span class="process-math">\(f(x)\)</span> has a maximum or a minimum, <span class="process-math">\(f'(x)=0\text{.}\)</span>  That is, <span class="process-math">\(f'(x)=0\)</span> where <span class="process-math">\(f(x)\)</span> has a horizontal tangent.  These points are noted with dots on the graph.<div class="autopermalink" data-description="Figure 3.5.4"><a href="#CNX_Calc_Figure_03_05_003" title="Copy heading and permalink for Figure 3.5.4" aria-label="Copy heading and permalink for Figure 3.5.4">🔗</a></div></figcaption>
+</figure>
+<article class="example example-like" id="subsec-derivs-sine-cosine-9"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiating a Function Containing <span class="process-math">\(\sin{x}\)</span>.</span>
+</h4>
+<div class="para" id="subsec-derivs-sine-cosine-9-2-1">Find the derivative of <span class="process-math">\(f(x)=5x^3\sin{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-derivs-sine-cosine-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-derivs-sine-cosine-9-3-1">
+<div class="para">Using the product rule, we have</div>
+<div class="displaymath process-math" id="subsec-derivs-sine-cosine-9-3-1-1">
+\begin{align*}
+f'(x)\amp =\frac{d}{dx}(5x^3)\cdot\sin{x}+\frac{d}{dx}(\sin{x})\cdot 5x^3\\
+\amp =15x^2\cdot\sin{x}+\cos{x}\cdot 5x^3
+\end{align*}
+</div>
+<div class="para">After simplifying, we obtain</div>
+<div class="displaymath process-math" id="subsec-derivs-sine-cosine-9-3-1-2">
+\begin{equation*}
+f'(x)=15x^2\sin{x}+5x^3\cos{x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.5.1"><a href="#subsec-derivs-sine-cosine-9-3" title="Copy heading and permalink for Solution 3.5.5.1" aria-label="Copy heading and permalink for Solution 3.5.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.5.5: Differentiating a Function Containing \sin{x}"><a href="#subsec-derivs-sine-cosine-9" title="Copy heading and permalink for Example 3.5.5: Differentiating a Function Containing \sin{x}" aria-label="Copy heading and permalink for Example 3.5.5: Differentiating a Function Containing \sin{x}">🔗</a></div>
+</article>
+<details id="subsec-derivs-sine-cosine-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">Find the derivative of <span class="process-math">\(f(x)=\sin{x}\cos{x}\)</span><div class="solutions">
+<details id="subsec-derivs-sine-cosine-10-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="subsec-derivs-sine-cosine-10-3-1">Use the product rule<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.6.1"><a href="#subsec-derivs-sine-cosine-10-3" title="Copy heading and permalink for Hint 3.5.6.1" aria-label="Copy heading and permalink for Hint 3.5.6.1">🔗</a></div>
+</div></details>
+<details id="subsec-derivs-sine-cosine-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<span class="process-math">\(\cos^2{x}-\sin^2{x}=\cos(2x)\)</span><div class="autopermalink" data-description="Solution 3.5.6.1"><a href="#subsec-derivs-sine-cosine-10-2" title="Copy heading and permalink for Solution 3.5.6.1" aria-label="Copy heading and permalink for Solution 3.5.6.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.5.6"><a href="#subsec-derivs-sine-cosine-10" title="Copy heading and permalink for Checkpoint 3.5.6" aria-label="Copy heading and permalink for Checkpoint 3.5.6">🔗</a></div>
+</article></details>
+<article class="example example-like" id="subsec-derivs-sine-cosine-11"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding the Derivative of a Function Containing <span class="process-math">\(\cos{x}\)</span>.</span>
+</h4>
+<div class="para" id="subsec-derivs-sine-cosine-11-2-1">Find the derivative of <span class="process-math">\(g(x)=\displaystyle \frac{\cos{x}}{4x^2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-derivs-sine-cosine-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-derivs-sine-cosine-11-3-1">
+<div class="para">By applying the quotient rule, we have</div>
+<div class="displaymath process-math" id="subsec-derivs-sine-cosine-11-3-1-1">
+\begin{equation*}
+g'(x)=\frac{\left(-\sin{x}\right)4x^2-8x\left(\cos{x}\right)}{(4x^2)^2}
+\end{equation*}
+</div>
+<div class="para">Simplifying, we obtain</div>
+<div class="displaymath process-math" id="subsec-derivs-sine-cosine-11-3-1-2">
+\begin{align*}
+g'(x)\amp =\displaystyle \frac{-4x^2\sin{x}-8x\cos{x}}{16x^4}\\
+\amp =\frac{-x\sin{x}-2\cos{x}}{4x^3}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-11-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.7.1"><a href="#subsec-derivs-sine-cosine-11-3" title="Copy heading and permalink for Solution 3.5.7.1" aria-label="Copy heading and permalink for Solution 3.5.7.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.5.7: Finding the Derivative of a Function Containing \cos{x}"><a href="#subsec-derivs-sine-cosine-11" title="Copy heading and permalink for Example 3.5.7: Finding the Derivative of a Function Containing \cos{x}" aria-label="Copy heading and permalink for Example 3.5.7: Finding the Derivative of a Function Containing \cos{x}">🔗</a></div>
+</article>
+<details id="subsec-derivs-sine-cosine-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">Find the derivative of <span class="process-math">\(f(x)=\displaystyle\frac{x}{\cos{x}}\)</span><div class="solutions">
+<details id="subsec-derivs-sine-cosine-12-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="subsec-derivs-sine-cosine-12-3-1">Use the quotient rule<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-12-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.8.1"><a href="#subsec-derivs-sine-cosine-12-3" title="Copy heading and permalink for Hint 3.5.8.1" aria-label="Copy heading and permalink for Hint 3.5.8.1">🔗</a></div>
+</div></details>
+<details id="subsec-derivs-sine-cosine-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<span class="process-math">\(\displaystyle\frac{\cos{x}+x\sin{x}}{\cos^2{x}\)</span><div class="autopermalink" data-description="Solution 3.5.8.1"><a href="#subsec-derivs-sine-cosine-12-2" title="Copy heading and permalink for Solution 3.5.8.1" aria-label="Copy heading and permalink for Solution 3.5.8.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.5.8"><a href="#subsec-derivs-sine-cosine-12" title="Copy heading and permalink for Checkpoint 3.5.8" aria-label="Copy heading and permalink for Checkpoint 3.5.8">🔗</a></div>
+</article></details>
+<article class="example example-like" id="subsec-derivs-sine-cosine-13"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An Application to Velocity.</span>
+</h4>
+<div class="para" id="subsec-derivs-sine-cosine-13-2-1">A particle moves along a coordinate axis in such a way that its position at time <span class="process-math">\(t\)</span> is given by <span class="process-math">\(s(t)=2\sin{t}-t\)</span> for <span class="process-math">\(0\le t\le 2\pi\text{.}\)</span>  At what times is the particle at rest?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-derivs-sine-cosine-13-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-derivs-sine-cosine-13-3-1">
+<div class="para">To determine when the particle is at rest, set <span class="process-math">\(s'(t)=v(t)=0\text{.}\)</span>  Begin by finding <span class="process-math">\(s'(t)\text{.}\)</span>  We obtain</div>
+<div class="displaymath process-math" id="subsec-derivs-sine-cosine-13-3-1-3">
+\begin{equation*}
+s'(t)=2\cos{t}-1,
+\end{equation*}
+</div>
+<div class="para">so we must solve</div>
+<div class="displaymath process-math" id="subsec-derivs-sine-cosine-13-3-1-4">
+\begin{equation*}
+2\cos{t}-1=0\text{ for } 0\le t\le 2\pi
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-13-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-derivs-sine-cosine-13-3-2">The solutions to this equation are <span class="process-math">\(t=\ds\frac{\pi}{3}\)</span> and <span class="process-math">\(\ds t=\frac{5\pi}{3}\text{.}\)</span>  Thus the particle is at rest at times <span class="process-math">\(t=\ds\frac{\pi}{3}\)</span> and <span class="process-math">\(\ds t=\frac{5\pi}{3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-13-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.9.1"><a href="#subsec-derivs-sine-cosine-13-3" title="Copy heading and permalink for Solution 3.5.9.1" aria-label="Copy heading and permalink for Solution 3.5.9.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.5.9: An Application to Velocity"><a href="#subsec-derivs-sine-cosine-13" title="Copy heading and permalink for Example 3.5.9: An Application to Velocity" aria-label="Copy heading and permalink for Example 3.5.9: An Application to Velocity">🔗</a></div>
+</article>
+<details id="subsec-derivs-sine-cosine-14" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">A particle moves along a coordinate axis.  Its position at time <span class="process-math">\(t\)</span> is given by <span class="process-math">\(s(t)=\sqrt{3}t+2\cos{t}\)</span> for <span class="process-math">\(0\le t\le 2\pi\text{.}\)</span>  At what times is the particle at rest?<div class="solutions">
+<details id="subsec-derivs-sine-cosine-14-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="subsec-derivs-sine-cosine-14-3-1">Determine when the velocity is <span class="process-math">\(0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-14-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.10.1"><a href="#subsec-derivs-sine-cosine-14-3" title="Copy heading and permalink for Hint 3.5.10.1" aria-label="Copy heading and permalink for Hint 3.5.10.1">🔗</a></div>
+</div></details>
+<details id="subsec-derivs-sine-cosine-14-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="subsec-derivs-sine-cosine-14-2-1">
+<span class="process-math">\(\displaystyle t=\frac{\pi}{3}\)</span> and <span class="process-math">\(t=\ds \frac{2\pi}{3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivs-sine-cosine-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.10.1"><a href="#subsec-derivs-sine-cosine-14-2" title="Copy heading and permalink for Solution 3.5.10.1" aria-label="Copy heading and permalink for Solution 3.5.10.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.5.10"><a href="#subsec-derivs-sine-cosine-14" title="Copy heading and permalink for Checkpoint 3.5.10" aria-label="Copy heading and permalink for Checkpoint 3.5.10">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 3.5.1: Derivatives of the Sine and Cosine Functions"><a href="#subsec-derivs-sine-cosine" title="Copy heading and permalink for Subsection 3.5.1: Derivatives of the Sine and Cosine Functions" aria-label="Copy heading and permalink for Subsection 3.5.1: Derivatives of the Sine and Cosine Functions">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-harmonicmotion">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"></span>
+</h3>
+<div class="para" id="subsec-harmonicmotion-1">Many physical systems move in a regular, repeating way. One of the simplest examples is a mass attached to a spring. If the mass is pulled away from its resting position and released, it moves back and forth, slowing down as it reaches the ends of its motion and speeding up as it passes through the center. This type of motion is called <dfn class="terminology">harmonic motion</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-harmonicmotion-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-harmonicmotion-2">
+<div class="para">We can describe the position of the mass at time <span class="process-math">\(t\)</span> using a sine or cosine function, such as</div>
+<div class="displaymath process-math" id="subsec-harmonicmotion-2-2">
+\begin{equation*}
+s(t)=A\cos{t}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(A\)</span> is the amplitude (the maximum distance from the equilibrium position).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-harmonicmotion-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-harmonicmotion-3">
+<div class="para">Using derivatives, we can understand how the motion changes over time.  The velocity is</div>
+<div class="displaymath process-math" id="subsec-harmonicmotion-3-1">
+\begin{equation*}
+v(t)=s'(t)=-A\sin{t},
+\end{equation*}
+</div>
+<div class="para">and the acceleration is</div>
+<div class="displaymath process-math" id="subsec-harmonicmotion-3-2">
+\begin{equation*}
+a(t)=s''(t_=-A\cos{t}
+\end{equation*}
+</div>
+<div class="para">These formulas reveal an important feature of harmonic motion.  The acceleration satisifes</div>
+<div class="displaymath process-math" id="subsec-harmonicmotion-3-3">
+\begin{equation*}
+a(t)=-s(t)
+\end{equation*}
+</div>
+<div class="para">This means the acceleration is always directed opposite the position. When the mass is above the equilibrium position, the acceleration pulls it downward; when it is below, the acceleration pulls it upward. In other words, the spring exerts a <dfn class="terminology">restoring force</dfn> that continually pulls the mass back toward equilibrium.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-harmonicmotion-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-harmonicmotion-4">This connection between position, velocity, and acceleration explains the motion: the mass speeds up as it moves toward the center, slows down as it moves away, and repeats this pattern over time. Because sine and cosine functions naturally capture this behavior—and their derivatives cycle between each other—they provide an ideal mathematical model for harmonic motion.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-harmonicmotion-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-harmonicmotion-5"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interpreting the graph.</span>
+</h4>
+<div class="para logical" id="subsec-harmonicmotion-5-2">
+<div class="para">Suppose the position is given by</div>
+<div class="displaymath process-math" id="subsec-harmonicmotion-5-2-1">
+\begin{equation*}
+s(t)=A\cos{t}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-harmonicmotion-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-harmonicmotion-5-3">
+<ul class="disc" id="subsec-harmonicmotion-5-3-1">
+<li id="subsec-harmonicmotion-5-3-1-1">
+<div class="para" id="p-derived-subsec-harmonicmotion-5-3-1-1">The maximum and minimum values (<span class="process-math">\(s=\pm A\)</span>) occur at the endpoints of the motion.  At these points, the object momentarily stops so the velocity is zero.</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-harmonicmotion-5-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-harmonicmotion-5-3-1-2">
+<div class="para" id="p-derived-subsec-harmonicmotion-5-3-1-2">The speed <span class="process-math">\(\vert v(t)\vert =\vert A\sin{t}\vert\)</span> is greatest when <span class="process-math">\(A\cos{t}=0\text{,}\)</span> which occurs when the graph crosses <span class="process-math">\(s=0\text{,}\)</span> the equilibrium position.</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-harmonicmotion-5-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-harmonicmotion-5-3-1-3">
+<div class="para" id="p-derived-subsec-harmonicmotion-5-3-1-3">Where the graph is increasing, the velocity is positive (the object is moving upward or forward).  Where the graph is decreasing, the velocity is negative.</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-harmonicmotion-5-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-harmonicmotion-5-3-1-4">
+<div class="para" id="p-derived-subsec-harmonicmotion-5-3-1-4">The steepness of the graph reflects the magnitude of the velocity: steeper means faster motion.</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-harmonicmotion-5-3-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-harmonicmotion-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-harmonicmotion"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch3/temp_velocity.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>This needs to be created.<div class="autopermalink" data-description="Figure 3.5.12"><a href="#fig-harmonicmotion" title="Copy heading and permalink for Figure 3.5.12" aria-label="Copy heading and permalink for Figure 3.5.12">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Example 3.5.11: Interpreting the graph"><a href="#subsec-harmonicmotion-5" title="Copy heading and permalink for Example 3.5.11: Interpreting the graph" aria-label="Copy heading and permalink for Example 3.5.11: Interpreting the graph">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 3.5.2"><a href="#subsec-harmonicmotion" title="Copy heading and permalink for Subsection 3.5.2" aria-label="Copy heading and permalink for Subsection 3.5.2">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-derivatives-other-trig">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of Other Trigonometric Functions</span>
+</h3>
+<div class="para" id="subsec-derivatives-other-trig-2">Since the remaining four trigonometric functions may be expressed as quotients involving sine, cosine, or both, we can use the quotient rule to find the formulas for their derivatives.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-derivatives-other-trig-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Derivative of the Tangent Function.</span>
+</h4>
+<div class="para" id="subsec-derivatives-other-trig-3-2-1">Find the derivative of <span class="process-math">\(f(x)=\tan{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-derivatives-other-trig-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-derivatives-other-trig-3-3-1">
+<div class="para">Start by expressing <span class="process-math">\(\tan{x}\)</span> as the quotient of <span class="process-math">\(\sin{x}\)</span> and <span class="process-math">\(\cos{x}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-3-3-1-4">
+\begin{equation*}
+f(x)=\tan{x}=\frac{\sin{x}}{\cos{x}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Now apply the quotient rule to obtain</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-3-3-1-5">
+\begin{equation*}
+f'(x)=\frac{\cos{x}\cos{x}-(-\sin{x})\sin{x}}{(\cos{x})^2}\text{.}
+\end{equation*}
+</div>
+<div class="para">Simplifying, we obtain</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-3-3-1-6">
+\begin{equation*}
+f'(x)=\frac{\cos^2{x}+\sin^2{x}}{\cos^2{x}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Recognizing that <span class="process-math">\(\cos^2{x}+\sin^2{x}=1\text{,}\)</span> by the Pythagorean theorem, we now have</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-3-3-1-8">
+\begin{equation*}
+f'(x)=\frac{1}{\cos^2{x}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Finally, use the identity <span class="process-math">\(\ds\sec{x}=\frac{1}{\cos{x}}\)</span> to obtain</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-3-3-1-10">
+\begin{equation*}
+f'(x)=\sec^2{x}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.13.1"><a href="#subsec-derivatives-other-trig-3-3" title="Copy heading and permalink for Solution 3.5.13.1" aria-label="Copy heading and permalink for Solution 3.5.13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.5.13: The Derivative of the Tangent Function"><a href="#subsec-derivatives-other-trig-3" title="Copy heading and permalink for Example 3.5.13: The Derivative of the Tangent Function" aria-label="Copy heading and permalink for Example 3.5.13: The Derivative of the Tangent Function">🔗</a></div>
+</article>
+<details id="subsec-derivatives-other-trig-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">Find the derivative of <span class="process-math">\(f(x)=\cot{x}\)</span><div class="solutions">
+<details id="subsec-derivatives-other-trig-4-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="subsec-derivatives-other-trig-4-3-1">Use the quotient rule.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.14.1"><a href="#subsec-derivatives-other-trig-4-3" title="Copy heading and permalink for Hint 3.5.14.1" aria-label="Copy heading and permalink for Hint 3.5.14.1">🔗</a></div>
+</div></details>
+<details id="subsec-derivatives-other-trig-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="subsec-derivatives-other-trig-4-2-1">
+<span class="process-math">\(\displaystyle -\csc^2{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.14.1"><a href="#subsec-derivatives-other-trig-4-2" title="Copy heading and permalink for Solution 3.5.14.1" aria-label="Copy heading and permalink for Solution 3.5.14.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.5.14"><a href="#subsec-derivatives-other-trig-4" title="Copy heading and permalink for Checkpoint 3.5.14" aria-label="Copy heading and permalink for Checkpoint 3.5.14">🔗</a></div>
+</article></details>
+<div class="para" id="subsec-derivatives-other-trig-5">The derivatives of the remaining trigonometric functions may be obtained by using similar techniques. We provide these formulas in the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="subsec-derivatives-other-trig-6"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of <span class="process-math">\(\tan{x},\,\cot{x},\,\sec{x},\,\csc{x}\)</span>.</span>
+</h4>
+<div class="para logical" id="subsec-derivatives-other-trig-6-2-1">
+<div class="para">The derivatives of the remaining trigonometric functions are as follows.</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-6-2-1-1">
+\begin{align}
+\frac{d}{dx}(\tan{x})\amp =\sec^2{x}\tag{3.5.3}\\
+\frac{d}{dx}(\cot{x})\amp =-\csc^2{x}\tag{3.5.4}\\
+\frac{d}{dx}(\sec{x})\amp =\sec{x}\tan{x}\tag{3.5.5}\\
+\frac{d}{dx}(\csc{x})\amp =-\csc{x}\cot{x}\tag{3.5.6}
+\end{align}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.5.15: Derivatives of \tan{x},\,\cot{x},\,\sec{x},\,\csc{x}"><a href="#subsec-derivatives-other-trig-6" title="Copy heading and permalink for Theorem 3.5.15: Derivatives of \tan{x},\,\cot{x},\,\sec{x},\,\csc{x}" aria-label="Copy heading and permalink for Theorem 3.5.15: Derivatives of \tan{x},\,\cot{x},\,\sec{x},\,\csc{x}">🔗</a></div>
+</article>
+<article class="example example-like" id="subsec-derivatives-other-trig-7"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding the Equation of a Tangent Line.</span>
+</h4>
+<div class="para" id="subsec-derivatives-other-trig-7-2-1">Find the equation of a line tangent to the graph of <span class="process-math">\(f(x)=\cot{x}\)</span> at <span class="process-math">\(\ds x=\frac{\pi}{4}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-derivatives-other-trig-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-derivatives-other-trig-7-3-1">
+<div class="para">To find an equation of the tangent line, we need a point and a slope at that point. To find the point, compute</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-7-3-1-1">
+\begin{equation*}
+f\left(\frac{\pi}{4}\right)=\cot\frac{\pi}{4}=1
+\end{equation*}
+</div>
+<div class="para">Thus the tangent line passes through the point <span class="process-math">\(\ds\left(\frac{\pi}{4},1\right)\text{.}\)</span> Next, find the slope by finding the derivative of <span class="process-math">\(f(x)=\cot{x}\)</span> by evaluating it at <span class="process-math">\(\ds\frac{\pi}{4}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-7-3-1-5">
+\begin{equation*}
+f'(x)=-\csc^2{x}\text{ and } f'\left(\frac{\pi}{4}\right)=-\csc^2\left(\frac{\pi}{4}\right)=-2
+\end{equation*}
+</div>
+<div class="para">Using the point-slope equation of the line, we obtain</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-7-3-1-6">
+\begin{equation*}
+y-1=-2\left(x-\frac{\pi}{4}\right)
+\end{equation*}
+</div>
+<div class="para">or equivalently,</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-7-3-1-7">
+\begin{equation*}
+y=-2x+1+\frac{pi}{2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.16.1"><a href="#subsec-derivatives-other-trig-7-3" title="Copy heading and permalink for Solution 3.5.16.1" aria-label="Copy heading and permalink for Solution 3.5.16.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.5.16: Finding the Equation of a Tangent Line"><a href="#subsec-derivatives-other-trig-7" title="Copy heading and permalink for Example 3.5.16: Finding the Equation of a Tangent Line" aria-label="Copy heading and permalink for Example 3.5.16: Finding the Equation of a Tangent Line">🔗</a></div>
+</article>
+<article class="example example-like" id="subsec-derivatives-other-trig-8"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding the Derivative of Trigonometric Functions.</span>
+</h4>
+<div class="para" id="subsec-derivatives-other-trig-8-2-1">Find the derivative of <span class="process-math">\(f(x)=\csc{x}+x\tan{x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-derivatives-other-trig-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-derivatives-other-trig-8-3-1">
+<div class="para">To find this derivative, we must use both the sum rule and the product rule. Using the sum rule, we find</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-8-3-1-1">
+\begin{equation*}
+f'(x)=\frac{d}{dx}(\csc{x})+\frac{d}{dx}(x\tan{x})
+\end{equation*}
+</div>
+<div class="para">In the first term, <span class="process-math">\(\ds\frac{d}{dx}(\csc{x})=-\csc{x}\cot{x}\text{,}\)</span> and by applying the product rule to the second term we obtain</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-8-3-1-3">
+\begin{equation*}
+\frac{d}{dx}(x\tan{x})=(1)(\tan{x})+(\sec^2{x})(x)
+\end{equation*}
+</div>
+<div class="para">Therefore, we have</div>
+<div class="displaymath process-math" id="subsec-derivatives-other-trig-8-3-1-4">
+\begin{equation*}
+f'(x)=-\csc{x}\cot{x}+\tan{x}+x\sec^2{x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.17.1"><a href="#subsec-derivatives-other-trig-8-3" title="Copy heading and permalink for Solution 3.5.17.1" aria-label="Copy heading and permalink for Solution 3.5.17.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.5.17: Finding the Derivative of Trigonometric Functions"><a href="#subsec-derivatives-other-trig-8" title="Copy heading and permalink for Example 3.5.17: Finding the Derivative of Trigonometric Functions" aria-label="Copy heading and permalink for Example 3.5.17: Finding the Derivative of Trigonometric Functions">🔗</a></div>
+</article>
+<details id="subsec-derivatives-other-trig-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">Find the derivative of <span class="process-math">\(f(x)=2\tan{x}-3\cot{x}\)</span><div class="solutions">
+<details id="subsec-derivatives-other-trig-9-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="subsec-derivatives-other-trig-9-3-1">Use the formulas.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.18.1"><a href="#subsec-derivatives-other-trig-9-3" title="Copy heading and permalink for Hint 3.5.18.1" aria-label="Copy heading and permalink for Hint 3.5.18.1">🔗</a></div>
+</div></details>
+<details id="subsec-derivatives-other-trig-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="subsec-derivatives-other-trig-9-2-1">
+<span class="process-math">\(\displaystyle 2\sec^2{x}+3\csc^2{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.18.1"><a href="#subsec-derivatives-other-trig-9-2" title="Copy heading and permalink for Solution 3.5.18.1" aria-label="Copy heading and permalink for Solution 3.5.18.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.5.18"><a href="#subsec-derivatives-other-trig-9" title="Copy heading and permalink for Checkpoint 3.5.18" aria-label="Copy heading and permalink for Checkpoint 3.5.18">🔗</a></div>
+</article></details>
+<details id="subsec-derivatives-other-trig-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">Find the slope of the line tangent to the graph of <span class="process-math">\(f(x)=\tan{x}\)</span> at <span class="process-math">\(\ds x=\frac{\pi}{6}\)</span><div class="solutions">
+<details id="subsec-derivatives-other-trig-10-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="subsec-derivatives-other-trig-10-3-1">The slope of the tangent line is the derivative of the function..<div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.19.1"><a href="#subsec-derivatives-other-trig-10-3" title="Copy heading and permalink for Hint 3.5.19.1" aria-label="Copy heading and permalink for Hint 3.5.19.1">🔗</a></div>
+</div></details>
+<details id="subsec-derivatives-other-trig-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="subsec-derivatives-other-trig-10-2-1">
+<span class="process-math">\(\displaystyle y-\frac{\sqrt{3}}{3}=\frac{4}{3}\left(x-\frac{\pi}{6}\right)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-derivatives-other-trig-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.19.1"><a href="#subsec-derivatives-other-trig-10-2" title="Copy heading and permalink for Solution 3.5.19.1" aria-label="Copy heading and permalink for Solution 3.5.19.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.5.19"><a href="#subsec-derivatives-other-trig-10" title="Copy heading and permalink for Checkpoint 3.5.19" aria-label="Copy heading and permalink for Checkpoint 3.5.19">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 3.5.3: Derivatives of Other Trigonometric Functions"><a href="#subsec-derivatives-other-trig" title="Copy heading and permalink for Subsection 3.5.3: Derivatives of Other Trigonometric Functions" aria-label="Copy heading and permalink for Subsection 3.5.3: Derivatives of Other Trigonometric Functions">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-higher-trig-derivatives">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Higher-Order Derivatives</span>
+</h3>
+<div class="para" id="subsec-higher-trig-derivatives-2">The higher-order derivatives of <span class="process-math">\(\sin{x}\)</span> and <span class="process-math">\(\cos{x}\)</span> follow a repeating pattern. By following the pattern, we can find any higher-order derivative of <span class="process-math">\(\sin{⁡x}\)</span> and <span class="process-math">\(\cos{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-higher-trig-derivatives-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Higher-Order Derivatives of <span class="process-math">\(y=\sin{x}\)</span>.</span>
+</h4>
+<div class="para" id="subsec-higher-trig-derivatives-3-2-1">Find the first four derivatives of <span class="process-math">\(f(x)=\sin{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-higher-trig-derivatives-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-higher-trig-derivatives-3-3-1">
+<div class="para">Each step in the chain is straightforward:</div>
+<div class="displaymath process-math" id="subsec-higher-trig-derivatives-3-3-1-1">
+\begin{align*}
+y\amp =\sin{x}\\
+\frac{dy}{dx}\amp =\cos{x}\\
+\frac{d^2y}{dx^2}\amp =-\sin{x}\\
+\frac{d^3y}{dx^3}\amp =-\cos{x}\\
+\frac{d^4y}{dx^4}\amp =\sin{x}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-higher-trig-derivatives-3-3-2">
+<div class="para">In fact, once we recognize the pattern of derivatives, we can find any higher-order derivative by determining the step in the pattern to which it corresponds. For example, every fourth derivative of <span class="process-math">\(\sin{x}\)</span> equals <span class="process-math">\(\sin{x}\text{,}\)</span> so for any positive integer <span class="process-math">\(n\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-higher-trig-derivatives-3-3-2-4">
+\begin{align*}
+\frac{d^4}{dx^4}(\sin{x})\amp =\frac{d^8}{dx^8}(\sin{x})=\frac{d^{12}}{dx^{12}}(\sin{x})=\cdots=\frac{d^{4n}}{dx^{4n}}(\sin{x})=\sin{x}\\
+\frac{d^5}{dx^5}(\sin{x})\amp =\frac{d^9}{dx^9}(\sin{x})=\frac{d^{13}}{dx^{13}}(\sin{x})=\cdots=\frac{d^{4n+1}}{dx^{4n+1}}(\sin{x})=\cos{x}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.20.1"><a href="#subsec-higher-trig-derivatives-3-3" title="Copy heading and permalink for Solution 3.5.20.1" aria-label="Copy heading and permalink for Solution 3.5.20.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.5.20: Finding Higher-Order Derivatives of y=\sin{x}"><a href="#subsec-higher-trig-derivatives-3" title="Copy heading and permalink for Example 3.5.20: Finding Higher-Order Derivatives of y=\sin{x}" aria-label="Copy heading and permalink for Example 3.5.20: Finding Higher-Order Derivatives of y=\sin{x}">🔗</a></div>
+</article>
+<details id="subsec-higher-trig-derivatives-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="subsec-higher-trig-derivatives-4-1-1">For <span class="process-math">\(y=\cos{x}\text{,}\)</span> find <span class="process-math">\(\ds\frac{d^4y}{dx^4}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-higher-trig-derivatives-4-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="subsec-higher-trig-derivatives-4-3-1">Take four consecutive derivatives of the cosine function,<div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.21.1"><a href="#subsec-higher-trig-derivatives-4-3" title="Copy heading and permalink for Hint 3.5.21.1" aria-label="Copy heading and permalink for Hint 3.5.21.1">🔗</a></div>
+</div></details>
+<details id="subsec-higher-trig-derivatives-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<span class="process-math">\(\cos{x}\)</span><div class="autopermalink" data-description="Solution 3.5.21.1"><a href="#subsec-higher-trig-derivatives-4-2" title="Copy heading and permalink for Solution 3.5.21.1" aria-label="Copy heading and permalink for Solution 3.5.21.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.5.21"><a href="#subsec-higher-trig-derivatives-4" title="Copy heading and permalink for Checkpoint 3.5.21" aria-label="Copy heading and permalink for Checkpoint 3.5.21">🔗</a></div>
+</article></details>
+<article class="example example-like" id="subsec-higher-trig-derivatives-5"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using the Pattern for Higher-Order Derivatives of <span class="process-math">\(y=\sin{x}\)</span>.</span>
+</h4>
+<div class="para" id="subsec-higher-trig-derivatives-5-2-1">Find <span class="process-math">\(\ds \frac{d^{74}}{dx^{74}}(\sin{x})\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-higher-trig-derivatives-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-higher-trig-derivatives-5-3-1">
+<div class="para">We can see right away that for the 74th derivative of <span class="process-math">\(\sin{x}\text{,}\)</span> <span class="process-math">\(74=4(18)+2\text{,}\)</span> so</div>
+<div class="displaymath process-math" id="subsec-higher-trig-derivatives-5-3-1-3">
+\begin{equation*}
+\frac{d^{74}}{dx^{74}}(\sin{x})=\frac{d^{72+2}}{dx^{72+2}}(\sin{x})=\frac{d^2}{dx^2}(\sin{x})=-\sin{x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.22.1"><a href="#subsec-higher-trig-derivatives-5-3" title="Copy heading and permalink for Solution 3.5.22.1" aria-label="Copy heading and permalink for Solution 3.5.22.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.5.22: Using the Pattern for Higher-Order Derivatives of y=\sin{x}"><a href="#subsec-higher-trig-derivatives-5" title="Copy heading and permalink for Example 3.5.22: Using the Pattern for Higher-Order Derivatives of y=\sin{x}" aria-label="Copy heading and permalink for Example 3.5.22: Using the Pattern for Higher-Order Derivatives of y=\sin{x}">🔗</a></div>
+</article>
+<details id="subsec-higher-trig-derivatives-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="subsec-higher-trig-derivatives-6-1-1">For <span class="process-math">\(y=\sin{x}\text{,}\)</span> find <span class="process-math">\(\ds\frac{d^{59}y}{dx^{59}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-higher-trig-derivatives-6-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="subsec-higher-trig-derivatives-6-3-1">
+<span class="process-math">\(59=4(14)+3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.23.1"><a href="#subsec-higher-trig-derivatives-6-3" title="Copy heading and permalink for Hint 3.5.23.1" aria-label="Copy heading and permalink for Hint 3.5.23.1">🔗</a></div>
+</div></details>
+<details id="subsec-higher-trig-derivatives-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<span class="process-math">\(-\cos{x}\)</span><div class="autopermalink" data-description="Solution 3.5.23.1"><a href="#subsec-higher-trig-derivatives-6-2" title="Copy heading and permalink for Solution 3.5.23.1" aria-label="Copy heading and permalink for Solution 3.5.23.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.5.23"><a href="#subsec-higher-trig-derivatives-6" title="Copy heading and permalink for Checkpoint 3.5.23" aria-label="Copy heading and permalink for Checkpoint 3.5.23">🔗</a></div>
+</article></details>
+<article class="example example-like" id="subsec-higher-trig-derivatives-7"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An Application to Acceleration.</span>
+</h4>
+<div class="para" id="subsec-higher-trig-derivatives-7-2-1">A particle moves along a coordinate axis in such a way that its position at time <span class="process-math">\(t\)</span> is given by <span class="process-math">\(s(t)=2-\sin{t}\text{.}\)</span>  Find <span class="process-math">\(v\left(\pi/4\right)\)</span> and <span class="process-math">\(a\left(\pi/4\right)\text{.}\)</span>  Compare these values and decide whether the particle is speeding up or slowing down.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-higher-trig-derivatives-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-higher-trig-derivatives-7-3-1">
+<div class="para">First find <span class="process-math">\(v(t)=s'(t)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-higher-trig-derivatives-7-3-1-2">
+\begin{equation*}
+v(t)=s'(t)=-\cos{t}
+\end{equation*}
+</div>
+<div class="para">Thus,</div>
+<div class="displaymath process-math" id="subsec-higher-trig-derivatives-7-3-1-3">
+\begin{equation*}
+v\left(\frac{\pi}{4}\right)=-\frac{1}{\sqrt{2}}
+\end{equation*}
+</div>
+<div class="para">Next, find <span class="process-math">\(a(t)=v'(t)\text{.}\)</span>  Thus, <span class="process-math">\(a(t)=v'(t)=\sin{t}\)</span> and we have</div>
+<div class="displaymath process-math" id="subsec-higher-trig-derivatives-7-3-1-6">
+\begin{equation*}
+a\left(\frac{\pi}{4}\right)=\frac{1}{\sqrt{2}}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\ds v\left(\frac{\pi}{4}\right)=-\frac{1}{\sqrt{2}}\lt 0\)</span> and <span class="process-math">\(\ds a\left(\frac{\pi}{4}\right)=\frac{1}{\sqrt{2}}\gt 0\text{,}\)</span> we see that velocity and acceleration are acting in opposite directions; that is, the object is being accelerated in the direction opposite to the direction in which it is travelling. Consequently, the particle is slowing down.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.24.1"><a href="#subsec-higher-trig-derivatives-7-3" title="Copy heading and permalink for Solution 3.5.24.1" aria-label="Copy heading and permalink for Solution 3.5.24.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.5.24: An Application to Acceleration"><a href="#subsec-higher-trig-derivatives-7" title="Copy heading and permalink for Example 3.5.24: An Application to Acceleration" aria-label="Copy heading and permalink for Example 3.5.24: An Application to Acceleration">🔗</a></div>
+</article>
+<details id="subsec-higher-trig-derivatives-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">A block attached to a spring is moving vertically.  Its position at time <span class="process-math">\(t\)</span> is given by <span class="process-math">\(s(t)=2\sin{t}\text{.}\)</span>  Find <span class="process-math">\(\ds v\left(\frac{5\pi}{6}\right)\)</span> and <span class="process-math">\(\ds a\left(\frac{5\pi}{6}\right)\text{.}\)</span>  Compare these values and decide whether the block is speeding up or slowing down.<div class="solutions">
+<details id="subsec-higher-trig-derivatives-8-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="subsec-higher-trig-derivatives-8-3-1">Find the first and second derivative of <span class="process-math">\(s(t)\)</span> when <span class="process-math">\(\ds t=\frac{5\pi}{6}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.25.1"><a href="#subsec-higher-trig-derivatives-8-3" title="Copy heading and permalink for Hint 3.5.25.1" aria-label="Copy heading and permalink for Hint 3.5.25.1">🔗</a></div>
+</div></details>
+<details id="subsec-higher-trig-derivatives-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="subsec-higher-trig-derivatives-8-2-1">
+<span class="process-math">\(\ds v\left(\frac{5\pi}{6}\right)=-\sqrt{3}\)</span> and <span class="process-math">\(\ds a\left(\frac{5\pi}{6}\right)=-1\text{.}\)</span> The block is speeding up.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-trig-derivatives-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.5.25.1"><a href="#subsec-higher-trig-derivatives-8-2" title="Copy heading and permalink for Solution 3.5.25.1" aria-label="Copy heading and permalink for Solution 3.5.25.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.5.25"><a href="#subsec-higher-trig-derivatives-8" title="Copy heading and permalink for Checkpoint 3.5.25" aria-label="Copy heading and permalink for Checkpoint 3.5.25">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 3.5.4: Higher-Order Derivatives"><a href="#subsec-higher-trig-derivatives" title="Copy heading and permalink for Subsection 3.5.4: Higher-Order Derivatives" aria-label="Copy heading and permalink for Subsection 3.5.4: Higher-Order Derivatives">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 3.5: Derivatives of Trigonometric Functions"><a href="#sec_Ch3Sec5" title="Copy heading and permalink for Section 3.5: Derivatives of Trigonometric Functions" aria-label="Copy heading and permalink for Section 3.5: Derivatives of Trigonometric Functions">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec_Ch3Sec4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_Ch3Sec6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
