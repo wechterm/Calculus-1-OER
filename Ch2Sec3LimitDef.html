@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="OpenStax Calculus">
@@ -101,14 +53,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.0.0';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -348,7 +300,16 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-8" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Combining Differentiation Rules</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Chapter 3 Section 6 Placeholder</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Derivatives as Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#subsec-instantaneousrateofchange" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Motion along a Line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Population Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-6" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Changes in Cost and Revenue</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Chapter 3 Section 6 Placeholder</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -365,7 +326,9 @@ eBookConfig.enable_chatcodes =  false;
 </li></ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="Ch2Sec3LimitDef"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="Ch2Sec3LimitDef">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span>
 </h2>
 <section class="introduction" id="Ch2Sec3LimitDef-2"><h3 class="heading">Learning Objectives.<span></span>
@@ -385,7 +348,9 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ol>
 <div class="para" id="Ch2Sec3LimitDef-2-3">So far, you’ve built an intuitive understanding of limits using tables, graphs, one-sided behavior, and examples of when limits fail to exist. Now we turn to the formal, precise, mathematical definition of a limit: the <dfn class="terminology"><span class="process-math">\(\delta-\varepsilon\)</span> (“delta epsilon”) definition</dfn>. This is often one of the most challenging definitions in early calculus but learning it pays off. Understanding this definition is the key that opens the door to a better understanding of calculus.<div class="autopermalink" data-description="Paragraph"><a href="#Ch2Sec3LimitDef-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="subsec-coreidea"><h3 class="heading hide-type">
+</div></section>
+<section class="subsection" id="subsec-coreidea">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Core Idea: Quantifying Closeness</span>
 </h3>
 <div class="para logical" id="subsec-coreidea-2">
@@ -422,7 +387,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraphs: Describing closeness in x"><a href="#subsec-coreidea-4" title="Copy heading and permalink for Paragraphs: Describing closeness in x" aria-label="Copy heading and permalink for Paragraphs: Describing closeness in x">🔗</a></div></section><section class="paragraphs" id="subsec-coreidea-5"><h4 class="heading"><span class="title">Describing closeness in <span class="process-math">\(y\)</span>.</span></h4>
+<div class="autopermalink" data-description="Paragraphs: Describing closeness in x"><a href="#subsec-coreidea-4" title="Copy heading and permalink for Paragraphs: Describing closeness in x" aria-label="Copy heading and permalink for Paragraphs: Describing closeness in x">🔗</a></div>
+</section>
+<section class="paragraphs" id="subsec-coreidea-5"><h4 class="heading"><span class="title">Describing closeness in <span class="process-math">\(y\)</span>.</span></h4>
 <div class="para logical" id="subsec-coreidea-5-2">
 <div class="para">Similarly, "<span class="process-math">\(f(x)\)</span> is within <span class="process-math">\(\varepsilon\)</span> units of <span class="process-math">\(L\)</span>" can be written</div>
 <div class="displaymath process-math" id="subsec-coreidea-5-2-4">
@@ -434,7 +401,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraphs: Describing closeness in y"><a href="#subsec-coreidea-5" title="Copy heading and permalink for Paragraphs: Describing closeness in y" aria-label="Copy heading and permalink for Paragraphs: Describing closeness in y">🔗</a></div></section><section class="paragraphs" id="subsec-coreidea-6"><h4 class="heading"><span class="title">Putting these ideas together.</span></h4>
+<div class="autopermalink" data-description="Paragraphs: Describing closeness in y"><a href="#subsec-coreidea-5" title="Copy heading and permalink for Paragraphs: Describing closeness in y" aria-label="Copy heading and permalink for Paragraphs: Describing closeness in y">🔗</a></div>
+</section>
+<section class="paragraphs" id="subsec-coreidea-6"><h4 class="heading"><span class="title">Putting these ideas together.</span></h4>
 <div class="para logical" id="subsec-coreidea-6-2">
 <div class="para">The formal definition rewrites the informal statement</div>
 <div class="displaymath process-math" id="subsec-coreidea-6-2-1">
@@ -451,7 +420,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">This is the heart of the <span class="process-math">\(\delta-\varepsilon\)</span> definition.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraphs: Putting these ideas together"><a href="#subsec-coreidea-6" title="Copy heading and permalink for Paragraphs: Putting these ideas together" aria-label="Copy heading and permalink for Paragraphs: Putting these ideas together">🔗</a></div></section><article class="definition definition-like" id="def-limit"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraphs: Putting these ideas together"><a href="#subsec-coreidea-6" title="Copy heading and permalink for Paragraphs: Putting these ideas together" aria-label="Copy heading and permalink for Paragraphs: Putting these ideas together">🔗</a></div>
+</section>
+<article class="definition definition-like" id="def-limit"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="def-limit-1-1">
@@ -465,7 +436,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-limit-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.3.1"><a href="#def-limit" title="Copy heading and permalink for Definition 2.3.1" aria-label="Copy heading and permalink for Definition 2.3.1">🔗</a></div></article><div class="para" id="subsec-coreidea-8">Let’s look at <a href="Ch2Sec3LimitDef.html#deltaepsilondeftable" class="xref" data-knowl="./knowl/xref/deltaepsilondeftable.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.3.2: Translation of the \delta-\varepsilon Definition of a Limit">Table 2.3.2</a>, which breaks down the definition and translates each part.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.3.1"><a href="#def-limit" title="Copy heading and permalink for Definition 2.3.1" aria-label="Copy heading and permalink for Definition 2.3.1">🔗</a></div>
+</article>
+<div class="para" id="subsec-coreidea-8">Let’s look at <a href="Ch2Sec3LimitDef.html#deltaepsilondeftable" class="xref" data-knowl="./knowl/xref/deltaepsilondeftable.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.3.2: Translation of the \delta-\varepsilon Definition of a Limit">Table 2.3.2</a>, which breaks down the definition and translates each part.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="table table-like" id="deltaepsilondeftable"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Translation of the <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit<div class="autopermalink" data-description="Table 2.3.2: Translation of the \delta-\varepsilon Definition of a Limit"><a href="#deltaepsilondeftable" title="Copy heading and permalink for Table 2.3.2: Translation of the \delta-\varepsilon Definition of a Limit" aria-label="Copy heading and permalink for Table 2.3.2: Translation of the \delta-\varepsilon Definition of a Limit">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
@@ -494,29 +467,38 @@ eBookConfig.enable_chatcodes =  false;
 <td class="l m b0 r0 l0 t0 lines">if <span class="process-math">\(x\)</span> is closer than <span class="process-math">\(\delta\)</span> to <span class="process-math">\(a\)</span> and <span class="process-math">\(x\ne a\text{,}\)</span> then <span class="process-math">\(f(x)\)</span> is closer than <span class="process-math">\(\varepsilon\)</span> to <span class="process-math">\(L\)</span>
 </td>
 </tr>
-</table></div></figure><div class="para" id="subsec-coreidea-10">We can get a better handle on this definition by looking at the definition geometrically. <a href="Ch2Sec3LimitDef.html#CNX_Calc_Figure_02_05_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_05_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.3">Figure 2.3.3</a> shows possible values of <span class="process-math">\(\delta\)</span> for various choices of <span class="process-math">\(\varepsilon\)</span> for a given function <span class="process-math">\(f(x)\text{,}\)</span> a number <span class="process-math">\(a\text{,}\)</span> and a limit <span class="process-math">\(L\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</table></div>
+</figure>
+<div class="para" id="subsec-coreidea-10">We can get a better handle on this definition by looking at the definition geometrically. <a href="Ch2Sec3LimitDef.html#CNX_Calc_Figure_02_05_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_05_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.3">Figure 2.3.3</a> shows possible values of <span class="process-math">\(\delta\)</span> for various choices of <span class="process-math">\(\varepsilon\)</span> for a given function <span class="process-math">\(f(x)\text{,}\)</span> a number <span class="process-math">\(a\text{,}\)</span> and a limit <span class="process-math">\(L\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-coreidea-11">Notice that as we choose smaller values of <span class="process-math">\(\varepsilon\)</span> (the distance between the function and the limit), we can always find a <span class="process-math">\(\delta\)</span> small enough so that we have chosen an <span class="process-math">\(x\)</span> value within <span class="process-math">\(\delta\)</span> of <span class="process-math">\(a\text{,}\)</span> then the value of <span class="process-math">\(f(x)\)</span> is within <span class="process-math">\(\varepsilon\)</span> of the limit <span class="process-math">\(L\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_02_05_001"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/CNX_Calc_Figure_02_05_001.jpg" class="contained" alt='"Three zoomed in images of a function f(x) over the interval "'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>These graphs show possible values of <span class="process-math">\(\delta\)</span> given successively smaller values of <span class="process-math">\(\varepsilon\text{.}\)</span><em class="alert">FIX THE IMAGE DESCRIPTION</em><div class="autopermalink" data-description="Figure 2.3.3"><a href="#CNX_Calc_Figure_02_05_001" title="Copy heading and permalink for Figure 2.3.3" aria-label="Copy heading and permalink for Figure 2.3.3">🔗</a></div></figcaption></figure><article class="insight remark-like" id="subsec-coreidea-13"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>These graphs show possible values of <span class="process-math">\(\delta\)</span> given successively smaller values of <span class="process-math">\(\varepsilon\text{.}\)</span><em class="alert">FIX THE IMAGE DESCRIPTION</em><div class="autopermalink" data-description="Figure 2.3.3"><a href="#CNX_Calc_Figure_02_05_001" title="Copy heading and permalink for Figure 2.3.3" aria-label="Copy heading and permalink for Figure 2.3.3">🔗</a></div></figcaption>
+</figure>
+<article class="insight remark-like" id="subsec-coreidea-13"><h4 class="heading">
 <span class="type">Insight</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="subsec-coreidea-13-1">Visit the following site to experiment with finding values of <span class="process-math">\(\delta\)</span> for selected values of <span class="process-math">\(\varepsilon\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="subsec-coreidea-13-2"><li id="subsec-coreidea-13-2-1">
+<ul class="disc" id="subsec-coreidea-13-2">
+<li id="subsec-coreidea-13-2-1">
 <div class="para" id="subsec-coreidea-13-2-1-1">
 <a class="external" href="https://www.geogebra.org/m/mj2bXA5y" target="_blank"><span class="process-math">\(\delta-\varepsilon\)</span> Visualizer</a><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-13-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item"><a href="#subsec-coreidea-13-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li></ul>
-<div class="autopermalink" data-description="Insight 2.3.4"><a href="#subsec-coreidea-13" title="Copy heading and permalink for Insight 2.3.4" aria-label="Copy heading and permalink for Insight 2.3.4">🔗</a></div></article><article class="example example-like" id="subsec-coreidea-14"><h4 class="heading">
+</li>
+</ul>
+<div class="autopermalink" data-description="Insight 2.3.4"><a href="#subsec-coreidea-13" title="Copy heading and permalink for Insight 2.3.4" aria-label="Copy heading and permalink for Insight 2.3.4">🔗</a></div>
+</article>
+<article class="example example-like" id="subsec-coreidea-14"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proving a Statement About the Limit of a Specific Function.</span>
 </h4>
 <div class="para" id="subsec-coreidea-14-2-1">Prove that <span class="process-math">\(\ds\lim_{x\to 1}(2x+1)=3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="subsec-coreidea-14-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<details id="subsec-coreidea-14-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="subsec-coreidea-14-3-1">Let <span class="process-math">\(\varepsilon\gt 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-14-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-coreidea-14-3-2">Choose <span class="process-math">\(\delta=\varepsilon/2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-14-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -541,7 +523,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="subsec-coreidea-14-3-5">Therefore, <span class="process-math">\(\ds\lim_{x\to 1}(2x+1)=3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-14-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Answer 2.3.5.1"><a href="#subsec-coreidea-14-3" title="Copy heading and permalink for Answer 2.3.5.1" aria-label="Copy heading and permalink for Answer 2.3.5.1">🔗</a></div>
-</div></details><details id="subsec-coreidea-14-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="subsec-coreidea-14-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="subsec-coreidea-14-4-1">We started with <span class="process-math">\(|(2x+1)-3|\)</span> and used our assumption <span class="process-math">\(0\lt|x-1|\lt\delta\)</span> in a key part of the chain of inequalities to get <span class="process-math">\(|(2x+1)-3|\)</span> to be less than <span class="process-math">\(\varepsilon\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-14-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-coreidea-14-4-2">
@@ -563,7 +547,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Solution 2.3.5.1"><a href="#subsec-coreidea-14-4" title="Copy heading and permalink for Solution 2.3.5.1" aria-label="Copy heading and permalink for Solution 2.3.5.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Example 2.3.5: Proving a Statement About the Limit of a Specific Function"><a href="#subsec-coreidea-14" title="Copy heading and permalink for Example 2.3.5: Proving a Statement About the Limit of a Specific Function" aria-label="Copy heading and permalink for Example 2.3.5: Proving a Statement About the Limit of a Specific Function">🔗</a></div></article><article class="note remark-like" id="subsec-coreidea-15"><h4 class="heading">
+<div class="autopermalink" data-description="Example 2.3.5: Proving a Statement About the Limit of a Specific Function"><a href="#subsec-coreidea-14" title="Copy heading and permalink for Example 2.3.5: Proving a Statement About the Limit of a Specific Function" aria-label="Copy heading and permalink for Example 2.3.5: Proving a Statement About the Limit of a Specific Function">🔗</a></div>
+</article>
+<article class="note remark-like" id="subsec-coreidea-15"><h4 class="heading">
 <span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problem-Solving Strategy: Proving that <span class="process-math">\(\ds \lim_{x\to a}f(x)=L\)</span> for a Specific Function <span class="process-math">\(f(x)\)</span>.</span>
 </h4>
 <ol class="decimal" id="subsec-coreidea-15-2">
@@ -593,16 +579,24 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Item 5"><a href="#subsec-coreidea-15-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Note 2.3.6: Problem-Solving Strategy: Proving that \ds \lim_{x\to a}f(x)=L for a Specific Function f(x)"><a href="#subsec-coreidea-15" title="Copy heading and permalink for Note 2.3.6: Problem-Solving Strategy: Proving that \ds \lim_{x\to a}f(x)=L for a Specific Function f(x)" aria-label="Copy heading and permalink for Note 2.3.6: Problem-Solving Strategy: Proving that \ds \lim_{x\to a}f(x)=L for a Specific Function f(x)">🔗</a></div></article><article class="example example-like" id="subsec-coreidea-16"><h4 class="heading">
+<div class="autopermalink" data-description="Note 2.3.6: Problem-Solving Strategy: Proving that \ds \lim_{x\to a}f(x)=L for a Specific Function f(x)"><a href="#subsec-coreidea-15" title="Copy heading and permalink for Note 2.3.6: Problem-Solving Strategy: Proving that \ds \lim_{x\to a}f(x)=L for a Specific Function f(x)" aria-label="Copy heading and permalink for Note 2.3.6: Problem-Solving Strategy: Proving that \ds \lim_{x\to a}f(x)=L for a Specific Function f(x)">🔗</a></div>
+</article>
+<article class="example example-like" id="subsec-coreidea-16"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proving a Statement about a Limit.</span>
 </h4>
 <div class="para" id="subsec-coreidea-16-2-1">Complete the proof that <span class="process-math">\(\ds\lim_{x\to -1}(4x+1)=-3\)</span> by filling in the blanks.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="subsec-coreidea-16-2-2">Let <span class="process-math">\(\rule{20pt}{.5pt}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-16-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="subsec-coreidea-16-2-3">Choose <span class="process-math">\(\delta=\rule{20pt}{.5pt}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-16-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="subsec-coreidea-16-2-4">Assume <span class="process-math">\(0\lt |x-\rule{20pt}{.5pt}|\lt \delta\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-16-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="subsec-coreidea-16-2-5">Thus, <span class="process-math">\(|\rule{20pt}{.5pt}-\rule{20pt}{.5pt}|\lt\rule{20pt}{.5pt}=\varepsilon\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-16-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="subsec-coreidea-16-2-2">Let <span class="process-math">\(\rule{20pt}{.5pt}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-16-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="subsec-coreidea-16-2-3">Choose <span class="process-math">\(\delta=\rule{20pt}{.5pt}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-16-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="subsec-coreidea-16-2-4">Assume <span class="process-math">\(0\lt |x-\rule{20pt}{.5pt}|\lt \delta\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-16-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="subsec-coreidea-16-2-5">Thus, <span class="process-math">\(|\rule{20pt}{.5pt}-\rule{20pt}{.5pt}|\lt\rule{20pt}{.5pt}=\varepsilon\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-16-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="subsec-coreidea-16-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="subsec-coreidea-16-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="subsec-coreidea-16-3-1">We begin by filling in the blanks where the choices are specified by the definition.  Thus we have<div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-16-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-coreidea-16-3-2">Let <span class="process-math">\(\varepsilon\gt 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-16-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -626,13 +620,18 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="subsec-coreidea-16-3-11">Thus, <span class="process-math">\(|(4x+1)-(-3)|=|4x+4|=|4||x+1|\lt 4\delta=4(\varepsilon/4)=\varepsilon\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-16-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.3.7.1"><a href="#subsec-coreidea-16-3" title="Copy heading and permalink for Solution 2.3.7.1" aria-label="Copy heading and permalink for Solution 2.3.7.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.3.7: Proving a Statement about a Limit"><a href="#subsec-coreidea-16" title="Copy heading and permalink for Example 2.3.7: Proving a Statement about a Limit" aria-label="Copy heading and permalink for Example 2.3.7: Proving a Statement about a Limit">🔗</a></div></article><article class="example example-like" id="geometriclimitproof"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.3.7: Proving a Statement about a Limit"><a href="#subsec-coreidea-16" title="Copy heading and permalink for Example 2.3.7: Proving a Statement about a Limit" aria-label="Copy heading and permalink for Example 2.3.7: Proving a Statement about a Limit">🔗</a></div>
+</article>
+<article class="example example-like" id="geometriclimitproof"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proving a Statement about the Limit of a Specific Function (Geometric Approach).</span>
 </h4>
 <div class="para" id="geometriclimitproof-2-1">Prove that <span class="process-math">\(\ds\lim_{x\to 2}x^2=4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#geometriclimitproof-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="geometriclimitproof-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="geometriclimitproof-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <ol class="decimal" id="geometriclimitproof-3-1">
 <li id="geometriclimitproof-3-1-1">
 <div class="para" id="geometriclimitproof-3-1-1-1">Let <span class="process-math">\(\varepsilon\gt 0\text{.}\)</span> The first part of the definition begins “For every <span class="process-math">\(\varepsilon\gt 0\text{,}\)</span>” so we must prove that whatever follows is true no matter what positive value of <span class="process-math">\(\varepsilon\)</span> is chosen.  By stating “Let <span class="process-math">\(\varepsilon\gt 0\text{,}\)</span>” we signal our intent to do so.<div class="autopermalink" data-description="Paragraph"><a href="#geometriclimitproof-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -652,7 +651,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="geometriclimitproof-3-1-3-1">Choose <span class="process-math">\(\delta=\min\left\{2-\sqrt{4-\varepsilon}, \sqrt{4+\varepsilon}-2\right\}\text{.}\)</span> <a href="Ch2Sec3LimitDef.html#CNX_Calc_Figure_02_05_003" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_05_003.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.9">Figure 2.3.9</a> shows how we made this choice of <span class="process-math">\(\delta\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#geometriclimitproof-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_02_05_003"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/CNX_Calc_Figure_02_05_003.jpg" class="contained" alt='"Three zoomed in images of a function f(x) over the interval"'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>This graph shows how we find <span class="process-math">\(\delta\)</span> geometrically for a given <span class="process-math">\(\varepsilon\)</span> for the proof in <a href="Ch2Sec3LimitDef.html#geometriclimitproof" class="xref" data-knowl="./knowl/xref/geometriclimitproof.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.3.8: Proving a Statement about the Limit of a Specific Function (Geometric Approach)">Example 2.3.8</a>.<em class="alert">FIX THE IMAGE DESCRIPTION</em><div class="autopermalink" data-description="Figure 2.3.9"><a href="#CNX_Calc_Figure_02_05_003" title="Copy heading and permalink for Figure 2.3.9" aria-label="Copy heading and permalink for Figure 2.3.9">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Item 3"><a href="#geometriclimitproof-3-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>This graph shows how we find <span class="process-math">\(\delta\)</span> geometrically for a given <span class="process-math">\(\varepsilon\)</span> for the proof in <a href="Ch2Sec3LimitDef.html#geometriclimitproof" class="xref" data-knowl="./knowl/xref/geometriclimitproof.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.3.8: Proving a Statement about the Limit of a Specific Function (Geometric Approach)">Example 2.3.8</a>.<em class="alert">FIX THE IMAGE DESCRIPTION</em><div class="autopermalink" data-description="Figure 2.3.9"><a href="#CNX_Calc_Figure_02_05_003" title="Copy heading and permalink for Figure 2.3.9" aria-label="Copy heading and permalink for Figure 2.3.9">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Item 3"><a href="#geometriclimitproof-3-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 <li id="geometriclimitproof-3-1-4">
 <div class="para logical" id="geometriclimitproof-3-1-4-1">
@@ -737,8 +737,11 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ol>
 <div class="autopermalink" data-description="Solution 2.3.8.1"><a href="#geometriclimitproof-3" title="Copy heading and permalink for Solution 2.3.8.1" aria-label="Copy heading and permalink for Solution 2.3.8.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.3.8: Proving a Statement about the Limit of a Specific Function (Geometric Approach)"><a href="#geometriclimitproof" title="Copy heading and permalink for Example 2.3.8: Proving a Statement about the Limit of a Specific Function (Geometric Approach)" aria-label="Copy heading and permalink for Example 2.3.8: Proving a Statement about the Limit of a Specific Function (Geometric Approach)">🔗</a></div></article><article class="example example-like" id="subsec-coreidea-18"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.3.8: Proving a Statement about the Limit of a Specific Function (Geometric Approach)"><a href="#geometriclimitproof" title="Copy heading and permalink for Example 2.3.8: Proving a Statement about the Limit of a Specific Function (Geometric Approach)" aria-label="Copy heading and permalink for Example 2.3.8: Proving a Statement about the Limit of a Specific Function (Geometric Approach)">🔗</a></div>
+</article>
+<article class="example example-like" id="subsec-coreidea-18"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proving a Statement about the Nonexistence of a Limit.</span>
 </h4>
 <div class="para logical" id="subsec-coreidea-18-2-1">
@@ -751,7 +754,9 @@ f(x)=\begin{cases}-1,&amp; x\lt 0\\1,&amp;x\ge 0\end{cases}
 <div class="para">Prove that <span class="process-math">\(\ds\lim_{x\to 0}f(x)\)</span> does not exist.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-18-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="subsec-coreidea-18-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="subsec-coreidea-18-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="subsec-coreidea-18-3-1">One way to prove that a limit does not exist is to show that, for any possible value <span class="process-math">\(L\)</span> one might think the limit equals, one can find an <span class="process-math">\(\varepsilon\gt 0\)</span> such that no possible <span class="process-math">\(\delta\gt 0\)</span> works in the <span class="process-math">\(\varepsilon-\delta\)</span> definition.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-18-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-coreidea-18-3-2">Suppose a person think the limit exists, and <span class="process-math">\(\ds\lim_{x\to 0}f(x)=L\)</span> (some common values of <span class="process-math">\(L\)</span> might be <span class="process-math">\(1\)</span> or <span class="process-math">\(-1\text{,}\)</span> but we’ll stick with a generic real number). Let <span class="process-math">\(\varepsilon=0.5\text{.}\)</span>  We show that there is no possible <span class="process-math">\(\delta\gt 0\)</span> that would satisfy <a href="Ch2Sec3LimitDef.html#def-limit" class="xref" data-knowl="./knowl/xref/def-limit.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.1">Definition 2.3.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-18-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -784,8 +789,13 @@ L-0.5\lt 1\lt L+0.5,
 <div class="autopermalink" data-description="Paragraph"><a href="#subsec-coreidea-18-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.3.10.1"><a href="#subsec-coreidea-18-3" title="Copy heading and permalink for Solution 2.3.10.1" aria-label="Copy heading and permalink for Solution 2.3.10.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.3.10: Proving a Statement about the Nonexistence of a Limit"><a href="#subsec-coreidea-18" title="Copy heading and permalink for Example 2.3.10: Proving a Statement about the Nonexistence of a Limit" aria-label="Copy heading and permalink for Example 2.3.10: Proving a Statement about the Nonexistence of a Limit">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.3.1: The Core Idea: Quantifying Closeness"><a href="#subsec-coreidea" title="Copy heading and permalink for Subsection 2.3.1: The Core Idea: Quantifying Closeness" aria-label="Copy heading and permalink for Subsection 2.3.1: The Core Idea: Quantifying Closeness">🔗</a></div></section><section class="subsection" id="subsec-onesidedlimit"><h3 class="heading hide-type">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.3.10: Proving a Statement about the Nonexistence of a Limit"><a href="#subsec-coreidea-18" title="Copy heading and permalink for Example 2.3.10: Proving a Statement about the Nonexistence of a Limit" aria-label="Copy heading and permalink for Example 2.3.10: Proving a Statement about the Nonexistence of a Limit">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 2.3.1: The Core Idea: Quantifying Closeness"><a href="#subsec-coreidea" title="Copy heading and permalink for Subsection 2.3.1: The Core Idea: Quantifying Closeness" aria-label="Copy heading and permalink for Subsection 2.3.1: The Core Idea: Quantifying Closeness">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-onesidedlimit">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">One-Sided Limits</span>
 </h3>
 <div class="para" id="subsec-onesidedlimit-2">Just as we first gained an intuitive understanding of limits and then moved on to a more rigorous definition of limits, we now revisit one-sided limits through that same lens.  To do this, we modify the <span class="process-math">\(\delta-\varepsilon\)</span> definition of a limit to give formal <span class="process-math">\(\delta-\varepsilon\)</span> definitions for limits from the left and from the right at a point.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-onesidedlimit-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -809,7 +819,9 @@ L-0.5\lt 1\lt L+0.5,
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-onesidedlimitdef-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraphs: Limit from the Right:"><a href="#def-onesidedlimitdef-1-1" title="Copy heading and permalink for Paragraphs: Limit from the Right:" aria-label="Copy heading and permalink for Paragraphs: Limit from the Right:">🔗</a></div></section> <section class="paragraphs" id="def-onesidedlimitdef-1-2"><h5 class="heading"><span class="title">Limit from the Left.</span></h5>
+<div class="autopermalink" data-description="Paragraphs: Limit from the Right:"><a href="#def-onesidedlimitdef-1-1" title="Copy heading and permalink for Paragraphs: Limit from the Right:" aria-label="Copy heading and permalink for Paragraphs: Limit from the Right:">🔗</a></div>
+</section> 
+<section class="paragraphs" id="def-onesidedlimitdef-1-2"><h5 class="heading"><span class="title">Limit from the Left.</span></h5>
 <div class="para logical" id="def-onesidedlimitdef-1-2-2">
 <div class="para">Let <span class="process-math">\(f(x)\)</span> be defined over an open interval of the form <span class="process-math">\((b,a)\)</span> where <span class="process-math">\(b\lt a\text{.}\)</span>  Then,</div>
 <div class="displaymath process-math" id="def-onesidedlimitdef-1-2-2-4">
@@ -821,12 +833,17 @@ L-0.5\lt 1\lt L+0.5,
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-onesidedlimitdef-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraphs: Limit from the Left"><a href="#def-onesidedlimitdef-1-2" title="Copy heading and permalink for Paragraphs: Limit from the Left" aria-label="Copy heading and permalink for Paragraphs: Limit from the Left">🔗</a></div></section><div class="autopermalink" data-description="Definition 2.3.11"><a href="#def-onesidedlimitdef" title="Copy heading and permalink for Definition 2.3.11" aria-label="Copy heading and permalink for Definition 2.3.11">🔗</a></div></article><article class="example example-like" id="ex-onesidedproof"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraphs: Limit from the Left"><a href="#def-onesidedlimitdef-1-2" title="Copy heading and permalink for Paragraphs: Limit from the Left" aria-label="Copy heading and permalink for Paragraphs: Limit from the Left">🔗</a></div>
+</section><div class="autopermalink" data-description="Definition 2.3.11"><a href="#def-onesidedlimitdef" title="Copy heading and permalink for Definition 2.3.11" aria-label="Copy heading and permalink for Definition 2.3.11">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-onesidedproof"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proving a Statement about a Limit From the Right.</span>
 </h4>
 <div class="para" id="ex-onesidedproof-2-1">Prove that <span class="process-math">\(\ds\lim_{x\to 4^+}\sqrt{x-4}=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-onesidedproof-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-onesidedproof-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="ex-onesidedproof-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="ex-onesidedproof-3-1">Let <span class="process-math">\(\varepsilon\gt 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-onesidedproof-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-onesidedproof-3-2">Choose <span class="process-math">\(\delta=\varepsilon^2\text{.}\)</span>  Since we ultimately want <span class="process-math">\(|\sqrt{x-4}-0|\lt \varepsilon\text{,}\)</span> we manipulate this inequality to get <span class="process-math">\(\sqrt{x-4}\lt \varepsilon\text{,}\)</span> or equivalently, <span class="process-math">\(0\lt x-4\lt \varepsilon^2\text{,}\)</span> making <span class="process-math">\(\delta=\varepsilon^2\)</span> a clear choice.<div class="autopermalink" data-description="Paragraph"><a href="#ex-onesidedproof-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -834,15 +851,23 @@ L-0.5\lt 1\lt L+0.5,
 <div class="para" id="ex-onesidedproof-3-3">We may also determine <span class="process-math">\(\delta\)</span> geometrically as shown in <a href="Ch2Sec3LimitDef.html#CNX_Calc_Figure_02_05_004" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_02_05_004.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.13">Figure 2.3.13</a><div class="autopermalink" data-description="Paragraph"><a href="#ex-onesidedproof-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_02_05_004"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/CNX_Calc_Figure_02_05_004.jpg" class="contained" alt='"Three zoomed in images of a function f(x) over the interval" &gt;'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>This graph shows how we find <span class="process-math">\(\delta\)</span>  for the proof in <a href="Ch2Sec3LimitDef.html#ex-onesidedproof" class="xref" data-knowl="./knowl/xref/ex-onesidedproof.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.3.12: Proving a Statement about a Limit From the Right">Example 2.3.12</a>.<em class="alert">FIX THE IMAGE DESCRIPTION</em><div class="autopermalink" data-description="Figure 2.3.13"><a href="#CNX_Calc_Figure_02_05_004" title="Copy heading and permalink for Figure 2.3.13" aria-label="Copy heading and permalink for Figure 2.3.13">🔗</a></div></figcaption></figure><div class="para" id="ex-onesidedproof-3-5">Assume <span class="process-math">\(0\lt x-4\lt \delta\text{.}\)</span>  Thus, <span class="process-math">\(0\lt x-4\lt \varepsilon^2\text{.}\)</span>  Hence, <span class="process-math">\(0\lt \sqrt{x-4}\lt \varepsilon\text{.}\)</span>  Finally, <span class="process-math">\(|\sqrt{x-4}-0|\lt \varepsilon\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-onesidedproof-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>This graph shows how we find <span class="process-math">\(\delta\)</span>  for the proof in <a href="Ch2Sec3LimitDef.html#ex-onesidedproof" class="xref" data-knowl="./knowl/xref/ex-onesidedproof.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.3.12: Proving a Statement about a Limit From the Right">Example 2.3.12</a>.<em class="alert">FIX THE IMAGE DESCRIPTION</em><div class="autopermalink" data-description="Figure 2.3.13"><a href="#CNX_Calc_Figure_02_05_004" title="Copy heading and permalink for Figure 2.3.13" aria-label="Copy heading and permalink for Figure 2.3.13">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ex-onesidedproof-3-5">Assume <span class="process-math">\(0\lt x-4\lt \delta\text{.}\)</span>  Thus, <span class="process-math">\(0\lt x-4\lt \varepsilon^2\text{.}\)</span>  Hence, <span class="process-math">\(0\lt \sqrt{x-4}\lt \varepsilon\text{.}\)</span>  Finally, <span class="process-math">\(|\sqrt{x-4}-0|\lt \varepsilon\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-onesidedproof-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-onesidedproof-3-6">Therefore, <span class="process-math">\(\ds\lim_{x\to 4^+}\sqrt{x-4}=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-onesidedproof-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.3.12.1"><a href="#ex-onesidedproof-3" title="Copy heading and permalink for Solution 2.3.12.1" aria-label="Copy heading and permalink for Solution 2.3.12.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.3.12: Proving a Statement about a Limit From the Right"><a href="#ex-onesidedproof" title="Copy heading and permalink for Example 2.3.12: Proving a Statement about a Limit From the Right" aria-label="Copy heading and permalink for Example 2.3.12: Proving a Statement about a Limit From the Right">🔗</a></div></article><div class="para" id="subsec-onesidedlimit-7">We do not normally use the <span class="process-math">\(\delta-\varepsilon\)</span> definition to compute everyday limits like the ones you’ve seen earlier.  Instead, the definition is used to prove the limit laws you’ll see in the next section.  Once these theorems are proven, you can use them freely—without going back to <span class="process-math">\(\delta\)</span> and <span class="process-math">\(\varepsilon\)</span> each time.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-onesidedlimit-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details>
 </div>
-<div class="autopermalink" data-description="Subsection 2.3.2: One-Sided Limits"><a href="#subsec-onesidedlimit" title="Copy heading and permalink for Subsection 2.3.2: One-Sided Limits" aria-label="Copy heading and permalink for Subsection 2.3.2: One-Sided Limits">🔗</a></div></section><div class="autopermalink" data-description="Section 2.3: Formal \delta-\varepsilon Definition of a Limit"><a href="#Ch2Sec3LimitDef" title="Copy heading and permalink for Section 2.3: Formal \delta-\varepsilon Definition of a Limit" aria-label="Copy heading and permalink for Section 2.3: Formal \delta-\varepsilon Definition of a Limit">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 2.3.12: Proving a Statement about a Limit From the Right"><a href="#ex-onesidedproof" title="Copy heading and permalink for Example 2.3.12: Proving a Statement about a Limit From the Right" aria-label="Copy heading and permalink for Example 2.3.12: Proving a Statement about a Limit From the Right">🔗</a></div>
+</article>
+<div class="para" id="subsec-onesidedlimit-7">We do not normally use the <span class="process-math">\(\delta-\varepsilon\)</span> definition to compute everyday limits like the ones you’ve seen earlier.  Instead, the definition is used to prove the limit laws you’ll see in the next section.  Once these theorems are proven, you can use them freely—without going back to <span class="process-math">\(\delta\)</span> and <span class="process-math">\(\varepsilon\)</span> each time.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-onesidedlimit-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.3.2: One-Sided Limits"><a href="#subsec-onesidedlimit" title="Copy heading and permalink for Subsection 2.3.2: One-Sided Limits" aria-label="Copy heading and permalink for Subsection 2.3.2: One-Sided Limits">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 2.3: Formal \delta-\varepsilon Definition of a Limit"><a href="#Ch2Sec3LimitDef" title="Copy heading and permalink for Section 2.3: Formal \delta-\varepsilon Definition of a Limit" aria-label="Copy heading and permalink for Section 2.3: Formal \delta-\varepsilon Definition of a Limit">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec_Ch2Sec2v2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_Ch2Sec3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

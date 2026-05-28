@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="OpenStax Calculus">
@@ -101,14 +53,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.0.0';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -129,7 +81,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_Ch3Sec2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_third.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_Ch3Sec6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_Ch3Sec2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_third.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_Ch3Sec4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -348,7 +300,16 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-8" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Combining Differentiation Rules</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Chapter 3 Section 6 Placeholder</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Derivatives as Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#subsec-instantaneousrateofchange" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Motion along a Line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Population Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-6" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Changes in Cost and Revenue</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Chapter 3 Section 6 Placeholder</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -365,7 +326,9 @@ eBookConfig.enable_chatcodes =  false;
 </li></ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_Ch3Sec3"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec_Ch3Sec3">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentiation Rules (3.3.31-2 Need Chain Rule)</span>
 </h2>
 <section class="introduction" id="sec_Ch3Sec3-2"><h3 class="heading">Learning Objectives.<span></span>
@@ -397,11 +360,16 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul>
 <div class="para" id="sec_Ch3Sec3-2-3">Finding derivatives of functions by using the definition of the derivative can be a lengthy and, for certain functions, a rather challenging process. For example, previously we found that <span class="process-math">\(\frac{d}{dx}(\sqrt{x})=\frac{1}{2\sqrt{x}}\)</span> by using a process that involved multiplying an expression by a conjugate prior to evaluating a limit. The process that we could use to evaluate <span class="process-math">\(\frac{d}{dx}(\sqrt[3]{x})\)</span> using the definition, while similar, is more complicated. In this section, we develop rules for finding derivatives that allow us to bypass this process. We begin with the basics.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="sec_Ch3Sec3-3"><h3 class="heading hide-type">
+</div></section>
+<section class="subsection" id="sec_Ch3Sec3-3">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Basic Rules</span>
 </h3>
-<section class="introduction" id="sec_Ch3Sec3-3-2"><div class="para" id="sec_Ch3Sec3-3-2-1">The functions <span class="process-math">\(f(x)=c\)</span> and <span class="process-math">\(g(x)=x^n\)</span> where <span class="process-math">\(n\)</span> is a positive integer are the building blocks from which all polynomials and rational functions are constructed. To find derivatives of polynomials and rational functions efficiently without resorting to the limit definition of the derivative, we must first develop formulas for differentiating these basic functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsubsection" id="sec_Ch3Sec3-3-3"><h4 class="heading hide-type">
+<section class="introduction" id="sec_Ch3Sec3-3-2">
+<div class="para" id="sec_Ch3Sec3-3-2-1">The functions <span class="process-math">\(f(x)=c\)</span> and <span class="process-math">\(g(x)=x^n\)</span> where <span class="process-math">\(n\)</span> is a positive integer are the building blocks from which all polynomials and rational functions are constructed. To find derivatives of polynomials and rational functions efficiently without resorting to the limit definition of the derivative, we must first develop formulas for differentiating these basic functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsubsection" id="sec_Ch3Sec3-3-3">
+<h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Constant Rule</span>
 </h4>
 <div class="para" id="sec_Ch3Sec3-3-3-2">We first apply the limit definition of the derivative to find the derivative of the constant function, <span class="process-math">\(f(x)=c.\)</span> For this function, both <span class="process-math">\(f(x)=c\)</span> and <span class="process-math">\(f(x+h)=c,\)</span> so we obtain the following result:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -430,12 +398,16 @@ f'(x)\amp=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\\
 \frac{d}{dx}(c)=0.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Theorem 3.3.1: The Constant Rule"><a href="#sec_Ch3Sec3-3-3-5" title="Copy heading and permalink for Theorem 3.3.1: The Constant Rule" aria-label="Copy heading and permalink for Theorem 3.3.1: The Constant Rule">🔗</a></div></article><article class="example example-like" id="fs-id1169739274547"><h5 class="heading">
+<div class="autopermalink" data-description="Theorem 3.3.1: The Constant Rule"><a href="#sec_Ch3Sec3-3-3-5" title="Copy heading and permalink for Theorem 3.3.1: The Constant Rule" aria-label="Copy heading and permalink for Theorem 3.3.1: The Constant Rule">🔗</a></div>
+</article>
+<article class="example example-like" id="fs-id1169739274547"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Constant Rule.</span>
 </h5>
 <div class="para" id="fs-id1169739274547-2-1">Find the derivative of <span class="process-math">\(f(x)=8.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739274547-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169739274547-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169739274547-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169739274547-3-1">This is just a one-step application of the rule:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739274547-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169739274547-3-2">
@@ -444,23 +416,35 @@ f'(8)=0.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.2.1"><a href="#fs-id1169739274547-3" title="Copy heading and permalink for Solution 3.3.2.1" aria-label="Copy heading and permalink for Solution 3.3.2.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.2: Applying the Constant Rule"><a href="#fs-id1169739274547" title="Copy heading and permalink for Example 3.3.2: Applying the Constant Rule" aria-label="Copy heading and permalink for Example 3.3.2: Applying the Constant Rule">🔗</a></div></article><details id="sec_Ch3Sec3-3-3-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.2: Applying the Constant Rule"><a href="#fs-id1169739274547" title="Copy heading and permalink for Example 3.3.2: Applying the Constant Rule" aria-label="Copy heading and permalink for Example 3.3.2: Applying the Constant Rule">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-3-3-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec3-3-3-7-1-1">Find the derivative of <span class="process-math">\(g(x)=-3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-3-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec3-3-3-7-1-1">Find the derivative of <span class="process-math">\(g(x)=-3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-3-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch3Sec3-3-3-7-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch3Sec3-3-3-7-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-3-3-7-3-1">Use the preceding example as a guide.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-3-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.3.3.1"><a href="#sec_Ch3Sec3-3-3-7-3" title="Copy heading and permalink for Hint 3.3.3.1" aria-label="Copy heading and permalink for Hint 3.3.3.1">🔗</a></div>
-</div></details><details id="sec_Ch3Sec3-3-3-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch3Sec3-3-3-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-3-3-7-2-1">0<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-3-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.3.3.1"><a href="#sec_Ch3Sec3-3-3-7-2" title="Copy heading and permalink for Solution 3.3.3.1" aria-label="Copy heading and permalink for Solution 3.3.3.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.3.3"><a href="#sec_Ch3Sec3-3-3-7" title="Copy heading and permalink for Checkpoint 3.3.3" aria-label="Copy heading and permalink for Checkpoint 3.3.3">🔗</a></div></article></details><div class="autopermalink" data-description="Subsubsection 3.3.1.1: The Constant Rule"><a href="#sec_Ch3Sec3-3-3" title="Copy heading and permalink for Subsubsection 3.3.1.1: The Constant Rule" aria-label="Copy heading and permalink for Subsubsection 3.3.1.1: The Constant Rule">🔗</a></div></section><section class="subsubsection" id="sec_Ch3Sec3-3-4"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Checkpoint 3.3.3"><a href="#sec_Ch3Sec3-3-3-7" title="Copy heading and permalink for Checkpoint 3.3.3" aria-label="Copy heading and permalink for Checkpoint 3.3.3">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsubsection 3.3.1.1: The Constant Rule"><a href="#sec_Ch3Sec3-3-3" title="Copy heading and permalink for Subsubsection 3.3.1.1: The Constant Rule" aria-label="Copy heading and permalink for Subsubsection 3.3.1.1: The Constant Rule">🔗</a></div>
+</section>
+<section class="subsubsection" id="sec_Ch3Sec3-3-4">
+<h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Power Rule</span>
 </h4>
 <div class="para" id="sec_Ch3Sec3-3-4-2">We have shown that<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -477,7 +461,9 @@ f'(8)=0.
 </h5>
 <div class="para" id="fs-id1169738993994-2-1">Find <span class="process-math">\(\frac{d}{dx}(x^3).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738993994-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169738993994-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169738993994-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="displaymath process-math" id="fs-id1169738993994-3-1">
 \begin{align*}
 \frac{d}{dx}(x^3)\amp=\lim_{h\to 0}\frac{(x+h)^3-x^3}{h}\\
@@ -494,24 +480,34 @@ f'(8)=0.
 \end{align*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.4.1"><a href="#fs-id1169738993994-3" title="Copy heading and permalink for Solution 3.3.4.1" aria-label="Copy heading and permalink for Solution 3.3.4.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.4: Differentiating x^3"><a href="#fs-id1169738993994" title="Copy heading and permalink for Example 3.3.4: Differentiating x^3" aria-label="Copy heading and permalink for Example 3.3.4: Differentiating x^3">🔗</a></div></article><details id="sec_Ch3Sec3-3-4-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.4: Differentiating x^3"><a href="#fs-id1169738993994" title="Copy heading and permalink for Example 3.3.4: Differentiating x^3" aria-label="Copy heading and permalink for Example 3.3.4: Differentiating x^3">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-3-4-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec3-3-4-6-1-1">Find <span class="process-math">\(\frac{d}{dx}(x^4).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec3-3-4-6-1-1">Find <span class="process-math">\(\frac{d}{dx}(x^4).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch3Sec3-3-4-6-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch3Sec3-3-4-6-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-3-4-6-3-1">Use <span class="process-math">\((x+h)^4=x^4+4x^3h+6x^2h^2+4xh^3+h^4\)</span> and follow the procedure outlined in the preceding example.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.3.5.1"><a href="#sec_Ch3Sec3-3-4-6-3" title="Copy heading and permalink for Hint 3.3.5.1" aria-label="Copy heading and permalink for Hint 3.3.5.1">🔗</a></div>
-</div></details><details id="sec_Ch3Sec3-3-4-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch3Sec3-3-4-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-3-4-6-2-1">
 <span class="process-math">\(4x^3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.3.5.1"><a href="#sec_Ch3Sec3-3-4-6-2" title="Copy heading and permalink for Solution 3.3.5.1" aria-label="Copy heading and permalink for Solution 3.3.5.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.3.5"><a href="#sec_Ch3Sec3-3-4-6" title="Copy heading and permalink for Checkpoint 3.3.5" aria-label="Copy heading and permalink for Checkpoint 3.3.5">🔗</a></div></article></details><div class="para" id="sec_Ch3Sec3-3-4-7">As we shall see, the procedure for finding the derivative of the general form <span class="process-math">\(f(x)=x^n\)</span> is very similar. Although it is often unwise to draw general conclusions from specific examples, we note that when we differentiate <span class="process-math">\(f(x)=x^3,\)</span> the power on <span class="process-math">\(x\)</span> becomes the coefficient of <span class="process-math">\(x^2\)</span> in the derivative and the power on <span class="process-math">\(x\)</span> in the derivative decreases by 1. The following theorem states that the <dfn class="terminology">power rule</dfn> holds for all positive integer powers of <span class="process-math">\(x.\)</span> We will eventually extend this result to negative integer powers. Later, we will see that this rule may also be extended first to rational powers of <span class="process-math">\(x\)</span> and then to arbitrary powers of <span class="process-math">\(x.\)</span> Be aware, however, that this rule does not apply to functions in which a constant is raised to a variable power, such as <span class="process-math">\(f(x)=3^x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Checkpoint 3.3.5"><a href="#sec_Ch3Sec3-3-4-6" title="Copy heading and permalink for Checkpoint 3.3.5" aria-label="Copy heading and permalink for Checkpoint 3.3.5">🔗</a></div>
+</article></details>
+<div class="para" id="sec_Ch3Sec3-3-4-7">As we shall see, the procedure for finding the derivative of the general form <span class="process-math">\(f(x)=x^n\)</span> is very similar. Although it is often unwise to draw general conclusions from specific examples, we note that when we differentiate <span class="process-math">\(f(x)=x^3,\)</span> the power on <span class="process-math">\(x\)</span> becomes the coefficient of <span class="process-math">\(x^2\)</span> in the derivative and the power on <span class="process-math">\(x\)</span> in the derivative decreases by 1. The following theorem states that the <dfn class="terminology">power rule</dfn> holds for all positive integer powers of <span class="process-math">\(x.\)</span> We will eventually extend this result to negative integer powers. Later, we will see that this rule may also be extended first to rational powers of <span class="process-math">\(x\)</span> and then to arbitrary powers of <span class="process-math">\(x.\)</span> Be aware, however, that this rule does not apply to functions in which a constant is raised to a variable power, such as <span class="process-math">\(f(x)=3^x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="sec_Ch3Sec3-3-4-8"><h5 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Power Rule.</span>
@@ -530,7 +526,11 @@ f'(x)=nx^{n-1}.
 \frac{d}{dx}x^n=nx^{n-1}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Theorem 3.3.6: The Power Rule"><a href="#sec_Ch3Sec3-3-4-8" title="Copy heading and permalink for Theorem 3.3.6: The Power Rule" aria-label="Copy heading and permalink for Theorem 3.3.6: The Power Rule">🔗</a></div></article><details id="sec_Ch3Sec3-3-4-8-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_Ch3Sec3-3-4-8-6-1">For <span class="process-math">\(f(x)=x^n\)</span> where <span class="process-math">\(n\)</span> is a positive integer, we have<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-8-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 3.3.6: The Power Rule"><a href="#sec_Ch3Sec3-3-4-8" title="Copy heading and permalink for Theorem 3.3.6: The Power Rule" aria-label="Copy heading and permalink for Theorem 3.3.6: The Power Rule">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-3-4-8-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="sec_Ch3Sec3-3-4-8-6-1">For <span class="process-math">\(f(x)=x^n\)</span> where <span class="process-math">\(n\)</span> is a positive integer, we have<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-8-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="sec_Ch3Sec3-3-4-8-6-2">
 \begin{equation*}
@@ -571,12 +571,16 @@ f'(x)\amp=\lim_{h\to 0}(nx^{n-1}+{n \choose 2} x^{n-2}h+{n \choose 3} x^{n-3}h^2
 \amp=nx^{n-1}.
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Proof 3.3.6.1"><a href="#sec_Ch3Sec3-3-4-8-6" title="Copy heading and permalink for Proof 3.3.6.1" aria-label="Copy heading and permalink for Proof 3.3.6.1">🔗</a></div></article></details><article class="example example-like" id="fs-id1169739190555"><h5 class="heading">
+<div class="autopermalink" data-description="Proof 3.3.6.1"><a href="#sec_Ch3Sec3-3-4-8-6" title="Copy heading and permalink for Proof 3.3.6.1" aria-label="Copy heading and permalink for Proof 3.3.6.1">🔗</a></div>
+</article></details>
+<article class="example example-like" id="fs-id1169739190555"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Power Rule.</span>
 </h5>
 <div class="para" id="fs-id1169739190555-2-1">Find the derivative of the function <span class="process-math">\(f(x)=x^{10}\)</span> by applying the power rule.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739190555-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169739190555-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169739190555-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169739190555-3-1">Using the power rule with <span class="process-math">\(n=10,\)</span> we obtain<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739190555-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169739190555-3-2">
@@ -585,24 +589,34 @@ f'(x)=10x^{10-1}=10x^9.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.7.1"><a href="#fs-id1169739190555-3" title="Copy heading and permalink for Solution 3.3.7.1" aria-label="Copy heading and permalink for Solution 3.3.7.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.7: Applying the Power Rule"><a href="#fs-id1169739190555" title="Copy heading and permalink for Example 3.3.7: Applying the Power Rule" aria-label="Copy heading and permalink for Example 3.3.7: Applying the Power Rule">🔗</a></div></article><details id="sec_Ch3Sec3-3-4-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.7: Applying the Power Rule"><a href="#fs-id1169739190555" title="Copy heading and permalink for Example 3.3.7: Applying the Power Rule" aria-label="Copy heading and permalink for Example 3.3.7: Applying the Power Rule">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-3-4-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec3-3-4-10-1-1">Find the derivative of <span class="process-math">\(f(x)=x^7.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec3-3-4-10-1-1">Find the derivative of <span class="process-math">\(f(x)=x^7.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch3Sec3-3-4-10-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch3Sec3-3-4-10-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-3-4-10-3-1">Use the power rule with <span class="process-math">\(n=7.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.3.8.1"><a href="#sec_Ch3Sec3-3-4-10-3" title="Copy heading and permalink for Hint 3.3.8.1" aria-label="Copy heading and permalink for Hint 3.3.8.1">🔗</a></div>
-</div></details><details id="sec_Ch3Sec3-3-4-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch3Sec3-3-4-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-3-4-10-2-1">
 <span class="process-math">\(f'(x)=7x^6\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.3.8.1"><a href="#sec_Ch3Sec3-3-4-10-2" title="Copy heading and permalink for Solution 3.3.8.1" aria-label="Copy heading and permalink for Solution 3.3.8.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.3.8"><a href="#sec_Ch3Sec3-3-4-10" title="Copy heading and permalink for Checkpoint 3.3.8" aria-label="Copy heading and permalink for Checkpoint 3.3.8">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-generalpowerrule"><h5 class="heading">
+<div class="autopermalink" data-description="Checkpoint 3.3.8"><a href="#sec_Ch3Sec3-3-4-10" title="Copy heading and permalink for Checkpoint 3.3.8" aria-label="Copy heading and permalink for Checkpoint 3.3.8">🔗</a></div>
+</article></details>
+<article class="theorem theorem-like" id="thm-generalpowerrule"><h5 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Power Rule (General Version).</span>
 </h5>
 <div class="para logical" id="thm-generalpowerrule-2-1">
@@ -615,7 +629,9 @@ f'(x)=10x^{10-1}=10x^9.
 <div class="para">for all <span class="process-math">\(x\)</span> where the powers <span class="process-math">\(x^n\)</span> and <span class="process-math">\(x^{n-1}\)</span> are defined.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-generalpowerrule-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.3.9: The Power Rule (General Version)"><a href="#thm-generalpowerrule" title="Copy heading and permalink for Theorem 3.3.9: The Power Rule (General Version)" aria-label="Copy heading and permalink for Theorem 3.3.9: The Power Rule (General Version)">🔗</a></div></article><div class="para" id="sec_Ch3Sec3-3-4-12">The proof of <a href="sec_Ch3Sec3.html#thm-generalpowerrule" class="xref" data-knowl="./knowl/xref/thm-generalpowerrule.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.9: The Power Rule (General Version)">Theorem 3.3.9</a> will have to wait until we explore the derivatives of exponential and logarithmic functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 3.3.9: The Power Rule (General Version)"><a href="#thm-generalpowerrule" title="Copy heading and permalink for Theorem 3.3.9: The Power Rule (General Version)" aria-label="Copy heading and permalink for Theorem 3.3.9: The Power Rule (General Version)">🔗</a></div>
+</article>
+<div class="para" id="sec_Ch3Sec3-3-4-12">The proof of <a href="sec_Ch3Sec3.html#thm-generalpowerrule" class="xref" data-knowl="./knowl/xref/thm-generalpowerrule.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.9: The Power Rule (General Version)">Theorem 3.3.9</a> will have to wait until we explore the derivatives of exponential and logarithmic functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="sec_Ch3Sec3-3-4-13"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -654,7 +670,8 @@ f'(x)=10x^{10-1}=10x^9.
 <div class="autopermalink" data-description="Item 5"><a href="#sec_Ch3Sec3-3-4-13-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
 </li>
 </ol>
-<details id="sec_Ch3Sec3-3-4-13-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="sec_Ch3Sec3-3-4-13-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <ol class="decimal" id="sec_Ch3Sec3-3-4-13-3-1">
 <li id="sec_Ch3Sec3-3-4-13-3-1-1">
 <div class="para logical" id="sec_Ch3Sec3-3-4-13-3-1-1-1">
@@ -717,7 +734,12 @@ f'(x)=10x^{10-1}=10x^9.
 </li>
 </ol>
 <div class="autopermalink" data-description="Solution 3.3.10.1"><a href="#sec_Ch3Sec3-3-4-13-3" title="Copy heading and permalink for Solution 3.3.10.1" aria-label="Copy heading and permalink for Solution 3.3.10.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Example 3.3.10"><a href="#sec_Ch3Sec3-3-4-13" title="Copy heading and permalink for Example 3.3.10" aria-label="Copy heading and permalink for Example 3.3.10">🔗</a></div></article><div class="autopermalink" data-description="Subsubsection 3.3.1.2: The Power Rule"><a href="#sec_Ch3Sec3-3-4" title="Copy heading and permalink for Subsubsection 3.3.1.2: The Power Rule" aria-label="Copy heading and permalink for Subsubsection 3.3.1.2: The Power Rule">🔗</a></div></section><div class="autopermalink" data-description="Subsection 3.3.1: The Basic Rules"><a href="#sec_Ch3Sec3-3" title="Copy heading and permalink for Subsection 3.3.1: The Basic Rules" aria-label="Copy heading and permalink for Subsection 3.3.1: The Basic Rules">🔗</a></div></section><section class="subsection" id="sec_Ch3Sec3-4"><h3 class="heading hide-type">
+</div></details><div class="autopermalink" data-description="Example 3.3.10"><a href="#sec_Ch3Sec3-3-4-13" title="Copy heading and permalink for Example 3.3.10" aria-label="Copy heading and permalink for Example 3.3.10">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsubsection 3.3.1.2: The Power Rule"><a href="#sec_Ch3Sec3-3-4" title="Copy heading and permalink for Subsubsection 3.3.1.2: The Power Rule" aria-label="Copy heading and permalink for Subsubsection 3.3.1.2: The Power Rule">🔗</a></div>
+</section><div class="autopermalink" data-description="Subsection 3.3.1: The Basic Rules"><a href="#sec_Ch3Sec3-3" title="Copy heading and permalink for Subsection 3.3.1: The Basic Rules" aria-label="Copy heading and permalink for Subsection 3.3.1: The Basic Rules">🔗</a></div>
+</section>
+<section class="subsection" id="sec_Ch3Sec3-4">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Sum, Difference, and Constant Multiple Rules</span>
 </h3>
 <div class="para" id="sec_Ch3Sec3-4-2">We find our next differentiation rules by looking at derivatives of sums, differences, and constant multiples of functions. Just as when we work with functions, there are rules that make it easier to find derivatives of functions that we add, subtract, or multiply by a constant. These rules are summarized in the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -772,7 +794,11 @@ f'(x)=10x^{10-1}=10x^9.
 \text{ for } j(x)=kf(x),j'(x)=kf'(x).
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Theorem 3.3.11: Sum, Difference, and Constant Multiple Rules"><a href="#sec_Ch3Sec3-4-3" title="Copy heading and permalink for Theorem 3.3.11: Sum, Difference, and Constant Multiple Rules" aria-label="Copy heading and permalink for Theorem 3.3.11: Sum, Difference, and Constant Multiple Rules">🔗</a></div></article><details id="sec_Ch3Sec3-4-3-15" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec_Ch3Sec3-4-3-15-1">We provide only the proof of the sum rule here. The rest follow in a similar manner.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-4-3-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 3.3.11: Sum, Difference, and Constant Multiple Rules"><a href="#sec_Ch3Sec3-4-3" title="Copy heading and permalink for Theorem 3.3.11: Sum, Difference, and Constant Multiple Rules" aria-label="Copy heading and permalink for Theorem 3.3.11: Sum, Difference, and Constant Multiple Rules">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-4-3-15" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="sec_Ch3Sec3-4-3-15-1">We provide only the proof of the sum rule here. The rest follow in a similar manner.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-4-3-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec_Ch3Sec3-4-3-15-2">For differentiable functions <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x),\)</span> we set <span class="process-math">\(j(x)=f(x)+g(x).\)</span> Using the limit definition of the derivative we have<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-4-3-15-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -802,12 +828,16 @@ j'(x)=\lim_{h\to 0}(\frac{f(x+h)-f(x)h}+\frac{g(x+h)-g(x)}{h}).
 j'(x)=\lim_{h\to 0}(\frac{f(x+h)-f(x)}{h})+\lim_{h\to 0}(\frac{g(x+h)-g(x)}{h})=f'(x)+g'(x).
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Proof 3.3.11.1"><a href="#sec_Ch3Sec3-4-3-15" title="Copy heading and permalink for Proof 3.3.11.1" aria-label="Copy heading and permalink for Proof 3.3.11.1">🔗</a></div></article></details><article class="example example-like" id="fs-id1169739269764"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 3.3.11.1"><a href="#sec_Ch3Sec3-4-3-15" title="Copy heading and permalink for Proof 3.3.11.1" aria-label="Copy heading and permalink for Proof 3.3.11.1">🔗</a></div>
+</article></details>
+<article class="example example-like" id="fs-id1169739269764"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Constant Multiple Rule.</span>
 </h4>
 <div class="para" id="fs-id1169739269764-2-1">Find the derivative of <span class="process-math">\(g(x)=3x^2\)</span> and compare it to the derivative of <span class="process-math">\(f(x)=x^2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739269764-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169739269764-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169739269764-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169739269764-3-1">We use the power rule directly:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739269764-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_03_03_001.html" id="fs-id1169739269764-3-2">
@@ -818,14 +848,20 @@ g'(x)=\frac{d}{dx}(3x^2)=3\frac{d}{dx}(x^2)=3(2x)=6x.
 <div class="para" id="fs-id1169739269764-3-3">Since <span class="process-math">\(f(x)=x^2\)</span> has derivative <span class="process-math">\(f'(x)=2x,\)</span> we see that the derivative of <span class="process-math">\(g(x)\)</span> is 3 times the derivative of <span class="process-math">\(f(x).\)</span> This relationship is illustrated in <a href="sec_Ch3Sec3.html#CNX_Calc_Figure_03_03_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_03_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.3.13">Figure 3.3.13</a>.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739269764-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_03_03_001"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_03_03_001.jpg" class="contained" alt='"Two graphs are shown. The first graph shows g(x) = 3x2 and f(x) = x squared. The second graph shows g’(x) = 6x and f’(x) = 2x. In the first graph, g(x) increases three times more quickly than f(x). In the second graph, g’(x) increases three times more quickly than f’(x)."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The derivative of <span class="process-math">\(g(x)\)</span> is 3 times the derivative of <span class="process-math">\(f(x).\)</span><div class="autopermalink" data-description="Figure 3.3.13"><a href="#CNX_Calc_Figure_03_03_001" title="Copy heading and permalink for Figure 3.3.13" aria-label="Copy heading and permalink for Figure 3.3.13">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 3.3.12.1"><a href="#fs-id1169739269764-3" title="Copy heading and permalink for Solution 3.3.12.1" aria-label="Copy heading and permalink for Solution 3.3.12.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.12: Applying the Constant Multiple Rule"><a href="#fs-id1169739269764" title="Copy heading and permalink for Example 3.3.12: Applying the Constant Multiple Rule" aria-label="Copy heading and permalink for Example 3.3.12: Applying the Constant Multiple Rule">🔗</a></div></article><article class="example example-like" id="fs-id1169739300387"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The derivative of <span class="process-math">\(g(x)\)</span> is 3 times the derivative of <span class="process-math">\(f(x).\)</span><div class="autopermalink" data-description="Figure 3.3.13"><a href="#CNX_Calc_Figure_03_03_001" title="Copy heading and permalink for Figure 3.3.13" aria-label="Copy heading and permalink for Figure 3.3.13">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 3.3.12.1"><a href="#fs-id1169739269764-3" title="Copy heading and permalink for Solution 3.3.12.1" aria-label="Copy heading and permalink for Solution 3.3.12.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.12: Applying the Constant Multiple Rule"><a href="#fs-id1169739269764" title="Copy heading and permalink for Example 3.3.12: Applying the Constant Multiple Rule" aria-label="Copy heading and permalink for Example 3.3.12: Applying the Constant Multiple Rule">🔗</a></div>
+</article>
+<article class="example example-like" id="fs-id1169739300387"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying Basic Derivative Rules.</span>
 </h4>
 <div class="para" id="fs-id1169739300387-2-1">Find the derivative of <span class="process-math">\(f(x)=2x^5+7.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739300387-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169739300387-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169739300387-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169739300387-3-1">We begin by applying the rule for differentiating the sum of two functions, followed by the rules for differentiating constant multiples of functions and the rule for differentiating powers. To better understand the sequence in which the differentiation rules are applied, we use Leibniz notation throughout the solution:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739300387-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169739300387-3-2">
@@ -838,29 +874,41 @@ f'(x)\amp=\frac{d}{dx}(2x^5+7)\\
 \end{align*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.14.1"><a href="#fs-id1169739300387-3" title="Copy heading and permalink for Solution 3.3.14.1" aria-label="Copy heading and permalink for Solution 3.3.14.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.14: Applying Basic Derivative Rules"><a href="#fs-id1169739300387" title="Copy heading and permalink for Example 3.3.14: Applying Basic Derivative Rules" aria-label="Copy heading and permalink for Example 3.3.14: Applying Basic Derivative Rules">🔗</a></div></article><details id="sec_Ch3Sec3-4-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.14: Applying Basic Derivative Rules"><a href="#fs-id1169739300387" title="Copy heading and permalink for Example 3.3.14: Applying Basic Derivative Rules" aria-label="Copy heading and permalink for Example 3.3.14: Applying Basic Derivative Rules">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-4-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec3-4-6-1-1">Find the derivative of <span class="process-math">\(f(x)=2x^3-6x^2+3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-4-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec3-4-6-1-1">Find the derivative of <span class="process-math">\(f(x)=2x^3-6x^2+3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-4-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch3Sec3-4-6-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch3Sec3-4-6-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-4-6-3-1">Use the preceding example as a guide.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-4-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.3.15.1"><a href="#sec_Ch3Sec3-4-6-3" title="Copy heading and permalink for Hint 3.3.15.1" aria-label="Copy heading and permalink for Hint 3.3.15.1">🔗</a></div>
-</div></details><details id="sec_Ch3Sec3-4-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch3Sec3-4-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-4-6-2-1">
 <span class="process-math">\(f'(x)=6x^2-12x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-4-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.3.15.1"><a href="#sec_Ch3Sec3-4-6-2" title="Copy heading and permalink for Solution 3.3.15.1" aria-label="Copy heading and permalink for Solution 3.3.15.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.3.15"><a href="#sec_Ch3Sec3-4-6" title="Copy heading and permalink for Checkpoint 3.3.15" aria-label="Copy heading and permalink for Checkpoint 3.3.15">🔗</a></div></article></details><article class="example example-like" id="fs-id1169739301889"><h4 class="heading">
+<div class="autopermalink" data-description="Checkpoint 3.3.15"><a href="#sec_Ch3Sec3-4-6" title="Copy heading and permalink for Checkpoint 3.3.15" aria-label="Copy heading and permalink for Checkpoint 3.3.15">🔗</a></div>
+</article></details>
+<article class="example example-like" id="fs-id1169739301889"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding the Equation of a Tangent Line.</span>
 </h4>
 <div class="para" id="fs-id1169739301889-2-1">Find the equation of the line tangent to the graph of <span class="process-math">\(f(x)=x^2-4x+6\)</span> at <span class="process-math">\(x=1.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739301889-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169739301889-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169739301889-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169739301889-3-1">To find the equation of the tangent line, we need a point and a slope. To find the point, compute<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739301889-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169739301889-3-2">
@@ -890,24 +938,36 @@ y=-2x+5.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.16.1"><a href="#fs-id1169739301889-3" title="Copy heading and permalink for Solution 3.3.16.1" aria-label="Copy heading and permalink for Solution 3.3.16.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.16: Finding the Equation of a Tangent Line"><a href="#fs-id1169739301889" title="Copy heading and permalink for Example 3.3.16: Finding the Equation of a Tangent Line" aria-label="Copy heading and permalink for Example 3.3.16: Finding the Equation of a Tangent Line">🔗</a></div></article><details id="sec_Ch3Sec3-4-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.16: Finding the Equation of a Tangent Line"><a href="#fs-id1169739301889" title="Copy heading and permalink for Example 3.3.16: Finding the Equation of a Tangent Line" aria-label="Copy heading and permalink for Example 3.3.16: Finding the Equation of a Tangent Line">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-4-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec3-4-8-1-1">Find the equation of the line tangent to the graph of <span class="process-math">\(f(x)=3x^2-11\)</span> at <span class="process-math">\(x=2.\)</span> Use the point-slope form.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-4-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec3-4-8-1-1">Find the equation of the line tangent to the graph of <span class="process-math">\(f(x)=3x^2-11\)</span> at <span class="process-math">\(x=2.\)</span> Use the point-slope form.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-4-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch3Sec3-4-8-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch3Sec3-4-8-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-4-8-3-1">Use the preceding example as a guide.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-4-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.3.17.1"><a href="#sec_Ch3Sec3-4-8-3" title="Copy heading and permalink for Hint 3.3.17.1" aria-label="Copy heading and permalink for Hint 3.3.17.1">🔗</a></div>
-</div></details><details id="sec_Ch3Sec3-4-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch3Sec3-4-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-4-8-2-1">
 <span class="process-math">\(y=12x-23\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-4-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.3.17.1"><a href="#sec_Ch3Sec3-4-8-2" title="Copy heading and permalink for Solution 3.3.17.1" aria-label="Copy heading and permalink for Solution 3.3.17.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.3.17"><a href="#sec_Ch3Sec3-4-8" title="Copy heading and permalink for Checkpoint 3.3.17" aria-label="Copy heading and permalink for Checkpoint 3.3.17">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.3.2: The Sum, Difference, and Constant Multiple Rules"><a href="#sec_Ch3Sec3-4" title="Copy heading and permalink for Subsection 3.3.2: The Sum, Difference, and Constant Multiple Rules" aria-label="Copy heading and permalink for Subsection 3.3.2: The Sum, Difference, and Constant Multiple Rules">🔗</a></div></section><section class="subsection" id="subsec-exponentialderivative"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Checkpoint 3.3.17"><a href="#sec_Ch3Sec3-4-8" title="Copy heading and permalink for Checkpoint 3.3.17" aria-label="Copy heading and permalink for Checkpoint 3.3.17">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 3.3.2: The Sum, Difference, and Constant Multiple Rules"><a href="#sec_Ch3Sec3-4" title="Copy heading and permalink for Subsection 3.3.2: The Sum, Difference, and Constant Multiple Rules" aria-label="Copy heading and permalink for Subsection 3.3.2: The Sum, Difference, and Constant Multiple Rules">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-exponentialderivative">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of Exponential Functions</span>
 </h3>
 <div class="para" id="subsec-exponentialderivative-2">In order to study the derivatives of a wider variety of functions, we state here the derivative of exponential functions.  The proof of how these formulas are valid will be given in the <a href="ch_appendix.html" class="internal" title="Chapter 4: Appendix">Appendix</a><div class="autopermalink" data-description="Paragraph"><a href="#subsec-exponentialderivative-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -954,7 +1014,11 @@ y=-2x+5.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-eulernumberlimit-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.3.18"><a href="#thm-eulernumberlimit" title="Copy heading and permalink for Theorem 3.3.18" aria-label="Copy heading and permalink for Theorem 3.3.18">🔗</a></div></article><div class="autopermalink" data-description="Subsection 3.3.3: Derivatives of Exponential Functions"><a href="#subsec-exponentialderivative" title="Copy heading and permalink for Subsection 3.3.3: Derivatives of Exponential Functions" aria-label="Copy heading and permalink for Subsection 3.3.3: Derivatives of Exponential Functions">🔗</a></div></section><section class="subsection" id="sec_Ch3Sec3-6"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Theorem 3.3.18"><a href="#thm-eulernumberlimit" title="Copy heading and permalink for Theorem 3.3.18" aria-label="Copy heading and permalink for Theorem 3.3.18">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 3.3.3: Derivatives of Exponential Functions"><a href="#subsec-exponentialderivative" title="Copy heading and permalink for Subsection 3.3.3: Derivatives of Exponential Functions" aria-label="Copy heading and permalink for Subsection 3.3.3: Derivatives of Exponential Functions">🔗</a></div>
+</section>
+<section class="subsection" id="sec_Ch3Sec3-6">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Product Rule</span>
 </h3>
 <div class="para" id="sec_Ch3Sec3-6-2">Now that we have examined the basic rules, we can begin looking at some of the more advanced rules. The first one examines the derivative of the product of two functions. Although it might be tempting to assume that the derivative of the product is the product of the derivatives, similar to the sum and difference rules, the <dfn class="terminology">product rule</dfn> does not follow this pattern. To see why we cannot use this pattern, consider the function <span class="process-math">\(f(x)=x^2,\)</span> whose derivative is <span class="process-math">\(f'(x)=2x\)</span> and not <span class="process-math">\(\frac{d}{dx}(x)\cdot \frac{d}{dx}(x)=1\cdot 1=1.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -978,12 +1042,16 @@ y=-2x+5.
 </div>
 <div class="para" id="sec_Ch3Sec3-6-3-6">This means that the derivative of a product of two functions is the derivative of the first function times the second function plus the derivative of the second function times the first function.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-6-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.3.19: Product Rule"><a href="#sec_Ch3Sec3-6-3" title="Copy heading and permalink for Theorem 3.3.19: Product Rule" aria-label="Copy heading and permalink for Theorem 3.3.19: Product Rule">🔗</a></div></article><article class="example example-like" id="fs-id1169736659557"><h4 class="heading">
+<div class="autopermalink" data-description="Theorem 3.3.19: Product Rule"><a href="#sec_Ch3Sec3-6-3" title="Copy heading and permalink for Theorem 3.3.19: Product Rule" aria-label="Copy heading and permalink for Theorem 3.3.19: Product Rule">🔗</a></div>
+</article>
+<article class="example example-like" id="fs-id1169736659557"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Product Rule to Functions at a Point.</span>
 </h4>
 <div class="para" id="fs-id1169736659557-2-1">For <span class="process-math">\(j(x)=f(x)g(x),\)</span> use the product rule to find <span class="process-math">\(j'(2)\)</span> if <span class="process-math">\(f(2)=3,f'(2)=-4,g(2)=1,\)</span> and <span class="process-math">\(g'(2)=6.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736659557-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169736659557-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169736659557-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169736659557-3-1">Since <span class="process-math">\(j(x)=f(x)g(x),j'(x)=f'(x)g(x)+g'(x)f(x),\)</span> and hence<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736659557-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169736659557-3-2">
@@ -992,13 +1060,18 @@ j'(2)=f'(2)g(2)+g'(2)f(2)=(-4)(1)+(6)(3)=14.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.20.1"><a href="#fs-id1169736659557-3" title="Copy heading and permalink for Solution 3.3.20.1" aria-label="Copy heading and permalink for Solution 3.3.20.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.20: Applying the Product Rule to Functions at a Point"><a href="#fs-id1169736659557" title="Copy heading and permalink for Example 3.3.20: Applying the Product Rule to Functions at a Point" aria-label="Copy heading and permalink for Example 3.3.20: Applying the Product Rule to Functions at a Point">🔗</a></div></article><article class="example example-like" id="fs-id1169739273812"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.20: Applying the Product Rule to Functions at a Point"><a href="#fs-id1169736659557" title="Copy heading and permalink for Example 3.3.20: Applying the Product Rule to Functions at a Point" aria-label="Copy heading and permalink for Example 3.3.20: Applying the Product Rule to Functions at a Point">🔗</a></div>
+</article>
+<article class="example example-like" id="fs-id1169739273812"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Product Rule to Binomials.</span>
 </h4>
 <div class="para" id="fs-id1169739273812-2-1">For <span class="process-math">\(j(x)=(x^2+2)(3x^3-5x),\)</span> find <span class="process-math">\(j'(x)\)</span> by applying the product rule. Check the result by first finding the product and then differentiating.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739273812-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169739273812-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169739273812-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169739273812-3-1">If we set <span class="process-math">\(f(x)=x^2+2\)</span> and <span class="process-math">\(g(x)=3x^3-5x,\)</span> then <span class="process-math">\(f'(x)=2x\)</span> and <span class="process-math">\(g'(x)=9x^2-5.\)</span> Thus,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739273812-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169739273812-3-2">
@@ -1016,24 +1089,36 @@ j'(x)=15x^4+3x^2-10.
 <div class="para" id="fs-id1169739273812-3-5">To check, we see that <span class="process-math">\(j(x)=3x^5+x^3-10x\)</span> and, consequently, <span class="process-math">\(j'(x)=15x^4+3x^2-10.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739273812-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.3.21.1"><a href="#fs-id1169739273812-3" title="Copy heading and permalink for Solution 3.3.21.1" aria-label="Copy heading and permalink for Solution 3.3.21.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.21: Applying the Product Rule to Binomials"><a href="#fs-id1169739273812" title="Copy heading and permalink for Example 3.3.21: Applying the Product Rule to Binomials" aria-label="Copy heading and permalink for Example 3.3.21: Applying the Product Rule to Binomials">🔗</a></div></article><details id="sec_Ch3Sec3-6-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.21: Applying the Product Rule to Binomials"><a href="#fs-id1169739273812" title="Copy heading and permalink for Example 3.3.21: Applying the Product Rule to Binomials" aria-label="Copy heading and permalink for Example 3.3.21: Applying the Product Rule to Binomials">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-6-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec3-6-6-1-1">Use the product rule to obtain the derivative of <span class="process-math">\(j(x)=2x^5(4x^2+x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-6-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec3-6-6-1-1">Use the product rule to obtain the derivative of <span class="process-math">\(j(x)=2x^5(4x^2+x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-6-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch3Sec3-6-6-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch3Sec3-6-6-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-6-6-3-1">Set <span class="process-math">\(f(x)=2x^5\)</span> and <span class="process-math">\(g(x)=4x^2+x\)</span> and use the preceding example as a guide.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-6-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.3.22.1"><a href="#sec_Ch3Sec3-6-6-3" title="Copy heading and permalink for Hint 3.3.22.1" aria-label="Copy heading and permalink for Hint 3.3.22.1">🔗</a></div>
-</div></details><details id="sec_Ch3Sec3-6-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch3Sec3-6-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-6-6-2-1">
 <span class="process-math">\(j'(x)=10x^4(4x^2+x)+(8x+1)(2x^5)=56x^6+12x^5.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-6-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.3.22.1"><a href="#sec_Ch3Sec3-6-6-2" title="Copy heading and permalink for Solution 3.3.22.1" aria-label="Copy heading and permalink for Solution 3.3.22.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.3.22"><a href="#sec_Ch3Sec3-6-6" title="Copy heading and permalink for Checkpoint 3.3.22" aria-label="Copy heading and permalink for Checkpoint 3.3.22">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.3.4: The Product Rule"><a href="#sec_Ch3Sec3-6" title="Copy heading and permalink for Subsection 3.3.4: The Product Rule" aria-label="Copy heading and permalink for Subsection 3.3.4: The Product Rule">🔗</a></div></section><section class="subsection" id="sec_Ch3Sec3-7"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Checkpoint 3.3.22"><a href="#sec_Ch3Sec3-6-6" title="Copy heading and permalink for Checkpoint 3.3.22" aria-label="Copy heading and permalink for Checkpoint 3.3.22">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 3.3.4: The Product Rule"><a href="#sec_Ch3Sec3-6" title="Copy heading and permalink for Subsection 3.3.4: The Product Rule" aria-label="Copy heading and permalink for Subsection 3.3.4: The Product Rule">🔗</a></div>
+</section>
+<section class="subsection" id="sec_Ch3Sec3-7">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Quotient Rule</span>
 </h3>
 <div class="para" id="sec_Ch3Sec3-7-2">Having developed and practiced the product rule, we now consider differentiating quotients of functions. As we see in the following theorem, the derivative of the quotient is not the quotient of the derivatives; rather, it is the derivative of the function in the numerator times the function in the denominator minus the derivative of the function in the denominator times the function in the numerator, all divided by the square of the function in the denominator. In order to better grasp why we cannot simply take the quotient of the derivatives, keep in mind that<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1060,14 +1145,18 @@ j'(x)=15x^4+3x^2-10.
 \text{ if } j(x)=\frac{f(x)}{g(x)},\text{ then } j'(x)=\frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^2}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Theorem 3.3.23: The Quotient Rule"><a href="#sec_Ch3Sec3-7-4" title="Copy heading and permalink for Theorem 3.3.23: The Quotient Rule" aria-label="Copy heading and permalink for Theorem 3.3.23: The Quotient Rule">🔗</a></div></article><div class="para" id="sec_Ch3Sec3-7-5">The proof of the <dfn class="terminology">quotient rule</dfn> is very similar to the proof of the product rule, so it is omitted here. Instead, we apply this new rule for finding derivatives in the next example.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 3.3.23: The Quotient Rule"><a href="#sec_Ch3Sec3-7-4" title="Copy heading and permalink for Theorem 3.3.23: The Quotient Rule" aria-label="Copy heading and permalink for Theorem 3.3.23: The Quotient Rule">🔗</a></div>
+</article>
+<div class="para" id="sec_Ch3Sec3-7-5">The proof of the <dfn class="terminology">quotient rule</dfn> is very similar to the proof of the product rule, so it is omitted here. Instead, we apply this new rule for finding derivatives in the next example.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="fs-id1169739305225"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Quotient Rule.</span>
 </h4>
 <div class="para" id="fs-id1169739305225-2-1">Use the quotient rule to find the derivative of <span class="process-math">\(k(x)=\frac{5x^2}{4x+3}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739305225-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169739305225-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169739305225-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169739305225-3-1">Let <span class="process-math">\(f(x)=5x^2\)</span> and <span class="process-math">\(g(x)=4x+3.\)</span> Thus, <span class="process-math">\(f'(x)=10x\)</span> and <span class="process-math">\(g'(x)=4.\)</span> Substituting into the quotient rule, we have<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739305225-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169739305225-3-2">
@@ -1083,29 +1172,41 @@ k'(x)=\frac{20x^2+30x}{(4x+3)^2}.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.24.1"><a href="#fs-id1169739305225-3" title="Copy heading and permalink for Solution 3.3.24.1" aria-label="Copy heading and permalink for Solution 3.3.24.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.24: Applying the Quotient Rule"><a href="#fs-id1169739305225" title="Copy heading and permalink for Example 3.3.24: Applying the Quotient Rule" aria-label="Copy heading and permalink for Example 3.3.24: Applying the Quotient Rule">🔗</a></div></article><details id="sec_Ch3Sec3-7-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.24: Applying the Quotient Rule"><a href="#fs-id1169739305225" title="Copy heading and permalink for Example 3.3.24: Applying the Quotient Rule" aria-label="Copy heading and permalink for Example 3.3.24: Applying the Quotient Rule">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-7-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec3-7-7-1-1">Find the derivative of <span class="process-math">\(h(x)=\frac{3x+1}{4x-3}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec3-7-7-1-1">Find the derivative of <span class="process-math">\(h(x)=\frac{3x+1}{4x-3}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch3Sec3-7-7-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch3Sec3-7-7-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-7-7-3-1">Apply the quotient rule with <span class="process-math">\(f(x)=3x+1\)</span> and <span class="process-math">\(g(x)=4x-3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.3.25.1"><a href="#sec_Ch3Sec3-7-7-3" title="Copy heading and permalink for Hint 3.3.25.1" aria-label="Copy heading and permalink for Hint 3.3.25.1">🔗</a></div>
-</div></details><details id="sec_Ch3Sec3-7-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch3Sec3-7-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-7-7-2-1">
 <span class="process-math">\(k'(x)=-\frac{1}{3}{(4x-3)^2}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.3.25.1"><a href="#sec_Ch3Sec3-7-7-2" title="Copy heading and permalink for Solution 3.3.25.1" aria-label="Copy heading and permalink for Solution 3.3.25.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.3.25"><a href="#sec_Ch3Sec3-7-7" title="Copy heading and permalink for Checkpoint 3.3.25" aria-label="Copy heading and permalink for Checkpoint 3.3.25">🔗</a></div></article></details><article class="example example-like" id="fs-id1169736614308"><h4 class="heading">
+<div class="autopermalink" data-description="Checkpoint 3.3.25"><a href="#sec_Ch3Sec3-7-7" title="Copy heading and permalink for Checkpoint 3.3.25" aria-label="Copy heading and permalink for Checkpoint 3.3.25">🔗</a></div>
+</article></details>
+<article class="example example-like" id="fs-id1169736614308"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using the  Power Rule.</span>
 </h4>
 <div class="para" id="fs-id1169736614308-2-1">Find <span class="process-math">\(\frac{d}{dx}(x^{-4}).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736614308-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169736614308-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169736614308-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169736614308-3-1">By applying the  power rule with <span class="process-math">\(k=-4,\)</span> we obtain<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736614308-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169736614308-3-2">
@@ -1114,13 +1215,18 @@ k'(x)=\frac{20x^2+30x}{(4x+3)^2}.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.26.1"><a href="#fs-id1169736614308-3" title="Copy heading and permalink for Solution 3.3.26.1" aria-label="Copy heading and permalink for Solution 3.3.26.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.26: Using the  Power Rule"><a href="#fs-id1169736614308" title="Copy heading and permalink for Example 3.3.26: Using the  Power Rule" aria-label="Copy heading and permalink for Example 3.3.26: Using the  Power Rule">🔗</a></div></article><article class="example example-like" id="fs-id1169739300101"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.26: Using the  Power Rule"><a href="#fs-id1169736614308" title="Copy heading and permalink for Example 3.3.26: Using the  Power Rule" aria-label="Copy heading and permalink for Example 3.3.26: Using the  Power Rule">🔗</a></div>
+</article>
+<article class="example example-like" id="fs-id1169739300101"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using the  Power Rule and the Constant Multiple Rule.</span>
 </h4>
 <div class="para" id="fs-id1169739300101-2-1">Use the  power rule and the constant multiple rule to find <span class="process-math">\(f(x)=\frac{6}{x^2}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739300101-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169739300101-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169739300101-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169739300101-3-1">It may seem tempting to use the quotient rule to find this derivative, and it would certainly not be incorrect to do so. However, it is far easier to differentiate this function by first rewriting it as <span class="process-math">\(f(x)=6x^{-2}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739300101-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169739300101-3-2">
@@ -1132,24 +1238,36 @@ f'(x)\amp=\frac{d}{dx}(\frac{6}{x^2})=\frac{d}{dx}(6x^{-2})\amp\amp \text{ Rewri
 \end{align*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.27.1"><a href="#fs-id1169739300101-3" title="Copy heading and permalink for Solution 3.3.27.1" aria-label="Copy heading and permalink for Solution 3.3.27.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.27: Using the  Power Rule and the Constant Multiple Rule"><a href="#fs-id1169739300101" title="Copy heading and permalink for Example 3.3.27: Using the  Power Rule and the Constant Multiple Rule" aria-label="Copy heading and permalink for Example 3.3.27: Using the  Power Rule and the Constant Multiple Rule">🔗</a></div></article><details id="sec_Ch3Sec3-7-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.27: Using the  Power Rule and the Constant Multiple Rule"><a href="#fs-id1169739300101" title="Copy heading and permalink for Example 3.3.27: Using the  Power Rule and the Constant Multiple Rule" aria-label="Copy heading and permalink for Example 3.3.27: Using the  Power Rule and the Constant Multiple Rule">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-7-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.28</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec3-7-10-1-1">Find the derivative of <span class="process-math">\(g(x)=\frac{1}{x^7}\)</span> using the  power rule.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec3-7-10-1-1">Find the derivative of <span class="process-math">\(g(x)=\frac{1}{x^7}\)</span> using the  power rule.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch3Sec3-7-10-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch3Sec3-7-10-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-7-10-3-1">Rewrite <span class="process-math">\(g(x)=\frac{1}{x^7}=x^{-7}.\)</span> Use the  power rule with <span class="process-math">\(k=-7.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.3.28.1"><a href="#sec_Ch3Sec3-7-10-3" title="Copy heading and permalink for Hint 3.3.28.1" aria-label="Copy heading and permalink for Hint 3.3.28.1">🔗</a></div>
-</div></details><details id="sec_Ch3Sec3-7-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch3Sec3-7-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-7-10-2-1">
 <span class="process-math">\(g'(x)=-7x^{-8}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.3.28.1"><a href="#sec_Ch3Sec3-7-10-2" title="Copy heading and permalink for Solution 3.3.28.1" aria-label="Copy heading and permalink for Solution 3.3.28.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.3.28"><a href="#sec_Ch3Sec3-7-10" title="Copy heading and permalink for Checkpoint 3.3.28" aria-label="Copy heading and permalink for Checkpoint 3.3.28">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.3.5: The Quotient Rule"><a href="#sec_Ch3Sec3-7" title="Copy heading and permalink for Subsection 3.3.5: The Quotient Rule" aria-label="Copy heading and permalink for Subsection 3.3.5: The Quotient Rule">🔗</a></div></section><section class="subsection" id="sec_Ch3Sec3-8"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Checkpoint 3.3.28"><a href="#sec_Ch3Sec3-7-10" title="Copy heading and permalink for Checkpoint 3.3.28" aria-label="Copy heading and permalink for Checkpoint 3.3.28">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 3.3.5: The Quotient Rule"><a href="#sec_Ch3Sec3-7" title="Copy heading and permalink for Subsection 3.3.5: The Quotient Rule" aria-label="Copy heading and permalink for Subsection 3.3.5: The Quotient Rule">🔗</a></div>
+</section>
+<section class="subsection" id="sec_Ch3Sec3-8">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Combining Differentiation Rules</span>
 </h3>
 <div class="para" id="sec_Ch3Sec3-8-2">As we have seen throughout the examples in this section, it seldom happens that we are called on to apply just one differentiation rule to find the derivative of a given function. At this point, by combining the differentiation rules, we may find the derivatives of any polynomial or rational function. Later on we will encounter more complex combinations of differentiation rules. A good rule of thumb to use when applying several rules is to apply the rules in reverse of the order in which we would evaluate the function.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1159,7 +1277,9 @@ f'(x)\amp=\frac{d}{dx}(\frac{6}{x^2})=\frac{d}{dx}(6x^{-2})\amp\amp \text{ Rewri
 </h4>
 <div class="para" id="fs-id1169739347062-2-1">For <span class="process-math">\(k(x)=3h(x)+x^2g(x),\)</span> find <span class="process-math">\(k'(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739347062-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169739347062-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169739347062-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169739347062-3-1">Finding this derivative requires the sum rule, the constant multiple rule, and the product rule.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739347062-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169739347062-3-2">
@@ -1172,13 +1292,18 @@ k'(x)\amp=\frac{d}{dx}(3h(x)+x^2g(x))=\frac{d}{dx}(3h(x))+\frac{d}{dx}(x^2g(x))\
 \end{align*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.29.1"><a href="#fs-id1169739347062-3" title="Copy heading and permalink for Solution 3.3.29.1" aria-label="Copy heading and permalink for Solution 3.3.29.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.29: Combining Differentiation Rules"><a href="#fs-id1169739347062" title="Copy heading and permalink for Example 3.3.29: Combining Differentiation Rules" aria-label="Copy heading and permalink for Example 3.3.29: Combining Differentiation Rules">🔗</a></div></article><article class="example example-like" id="fs-id1169739325719"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.29: Combining Differentiation Rules"><a href="#fs-id1169739347062" title="Copy heading and permalink for Example 3.3.29: Combining Differentiation Rules" aria-label="Copy heading and permalink for Example 3.3.29: Combining Differentiation Rules">🔗</a></div>
+</article>
+<article class="example example-like" id="fs-id1169739325719"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.30</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Extending the Product Rule.</span>
 </h4>
 <div class="para" id="fs-id1169739325719-2-1">For <span class="process-math">\(k(x)=f(x)g(x)h(x),\)</span> express <span class="process-math">\(k'(x)\)</span> in terms of <span class="process-math">\(f(x),g(x),h(x),\)</span> and their derivatives.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739325719-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169739325719-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169739325719-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169739325719-3-1">We can think of the function <span class="process-math">\(k(x)\)</span> as the product of the function <span class="process-math">\(f(x)g(x)\)</span> and the function <span class="process-math">\(h(x).\)</span> That is, <span class="process-math">\(k(x)=(f(x)g(x))\cdot h(x).\)</span> Thus,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739325719-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169739325719-3-2">
@@ -1190,13 +1315,18 @@ k'(x)\amp=\frac{d}{dx}(f(x)g(x))\cdot h(x)+\frac{d}{dx}(h(x))\cdot (f(x)g(x))\am
 \end{align*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.30.1"><a href="#fs-id1169739325719-3" title="Copy heading and permalink for Solution 3.3.30.1" aria-label="Copy heading and permalink for Solution 3.3.30.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.30: Extending the Product Rule"><a href="#fs-id1169739325719" title="Copy heading and permalink for Example 3.3.30: Extending the Product Rule" aria-label="Copy heading and permalink for Example 3.3.30: Extending the Product Rule">🔗</a></div></article><article class="example example-like" id="fs-id1169737140879"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.30: Extending the Product Rule"><a href="#fs-id1169739325719" title="Copy heading and permalink for Example 3.3.30: Extending the Product Rule" aria-label="Copy heading and permalink for Example 3.3.30: Extending the Product Rule">🔗</a></div>
+</article>
+<article class="example example-like" id="fs-id1169737140879"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Combining Differentiation Rules.</span>
 </h4>
 <div class="para" id="fs-id1169737140879-2-1">Find the derivative of <span class="process-math">\(y=\frac{e^{x^2}}{x}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737140879-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169737140879-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169737140879-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169737140879-3-1">Use the derivative of the natural exponential function, the quotient rule, and the chain rule.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737140879-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169737140879-3-2">
@@ -1206,29 +1336,41 @@ y'\amp=\frac{(e^{x^2}\cdot 2)x\cdot x- 1\cdot e^{x^2}}{x^2}\amp \amp\text{ Apply
 \end{align*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.31.1"><a href="#fs-id1169737140879-3" title="Copy heading and permalink for Solution 3.3.31.1" aria-label="Copy heading and permalink for Solution 3.3.31.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.31: Combining Differentiation Rules"><a href="#fs-id1169737140879" title="Copy heading and permalink for Example 3.3.31: Combining Differentiation Rules" aria-label="Copy heading and permalink for Example 3.3.31: Combining Differentiation Rules">🔗</a></div></article><details id="sec_Ch3Sec3-8-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.31: Combining Differentiation Rules"><a href="#fs-id1169737140879" title="Copy heading and permalink for Example 3.3.31: Combining Differentiation Rules" aria-label="Copy heading and permalink for Example 3.3.31: Combining Differentiation Rules">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-8-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec3-8-6-1-1">Find the derivative of <span class="process-math">\(h(x)=xe^{2x}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec3-8-6-1-1">Find the derivative of <span class="process-math">\(h(x)=xe^{2x}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch3Sec3-8-6-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch3Sec3-8-6-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-8-6-3-1">Don’t forget to use the product rule.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.3.32.1"><a href="#sec_Ch3Sec3-8-6-3" title="Copy heading and permalink for Hint 3.3.32.1" aria-label="Copy heading and permalink for Hint 3.3.32.1">🔗</a></div>
-</div></details><details id="sec_Ch3Sec3-8-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch3Sec3-8-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-8-6-2-1">
 <span class="process-math">\(h'(x)=e^{2x}+2xe^{2x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.3.32.1"><a href="#sec_Ch3Sec3-8-6-2" title="Copy heading and permalink for Solution 3.3.32.1" aria-label="Copy heading and permalink for Solution 3.3.32.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.3.32"><a href="#sec_Ch3Sec3-8-6" title="Copy heading and permalink for Checkpoint 3.3.32" aria-label="Copy heading and permalink for Checkpoint 3.3.32">🔗</a></div></article></details><article class="example example-like" id="fs-id1169736658392"><h4 class="heading">
+<div class="autopermalink" data-description="Checkpoint 3.3.32"><a href="#sec_Ch3Sec3-8-6" title="Copy heading and permalink for Checkpoint 3.3.32" aria-label="Copy heading and permalink for Checkpoint 3.3.32">🔗</a></div>
+</article></details>
+<article class="example example-like" id="fs-id1169736658392"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Combining the Quotient Rule and the Product Rule.</span>
 </h4>
 <div class="para" id="fs-id1169736658392-2-1">For <span class="process-math">\(h(x)=\frac{2x^3k(x)}{3x+2},\)</span> find <span class="process-math">\(h'(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736658392-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169736658392-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169736658392-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169736658392-3-1">This procedure is typical for finding the derivative of a rational function.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736658392-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169736658392-3-2">
@@ -1240,29 +1382,41 @@ h'(x)\amp=\frac{\frac{d}{dx}(2x^3k(x))\cdot (3x+2)-\frac{d}{dx}(3x+2)\cdot (2x^3
 \end{align*}
 </div>
 <div class="autopermalink" data-description="Solution 3.3.33.1"><a href="#fs-id1169736658392-3" title="Copy heading and permalink for Solution 3.3.33.1" aria-label="Copy heading and permalink for Solution 3.3.33.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.33: Combining the Quotient Rule and the Product Rule"><a href="#fs-id1169736658392" title="Copy heading and permalink for Example 3.3.33: Combining the Quotient Rule and the Product Rule" aria-label="Copy heading and permalink for Example 3.3.33: Combining the Quotient Rule and the Product Rule">🔗</a></div></article><details id="sec_Ch3Sec3-8-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.33: Combining the Quotient Rule and the Product Rule"><a href="#fs-id1169736658392" title="Copy heading and permalink for Example 3.3.33: Combining the Quotient Rule and the Product Rule" aria-label="Copy heading and permalink for Example 3.3.33: Combining the Quotient Rule and the Product Rule">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-8-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec3-8-8-1-1">Find <span class="process-math">\(\frac{d}{dx}(3f(x)-2g(x)).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec3-8-8-1-1">Find <span class="process-math">\(\frac{d}{dx}(3f(x)-2g(x)).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch3Sec3-8-8-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch3Sec3-8-8-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-8-8-3-1">Apply the difference rule and the constant multiple rule.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.3.34.1"><a href="#sec_Ch3Sec3-8-8-3" title="Copy heading and permalink for Hint 3.3.34.1" aria-label="Copy heading and permalink for Hint 3.3.34.1">🔗</a></div>
-</div></details><details id="sec_Ch3Sec3-8-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch3Sec3-8-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-8-8-2-1">
 <span class="process-math">\(3f'(x)-2g'(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.3.34.1"><a href="#sec_Ch3Sec3-8-8-2" title="Copy heading and permalink for Solution 3.3.34.1" aria-label="Copy heading and permalink for Solution 3.3.34.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.3.34"><a href="#sec_Ch3Sec3-8-8" title="Copy heading and permalink for Checkpoint 3.3.34" aria-label="Copy heading and permalink for Checkpoint 3.3.34">🔗</a></div></article></details><article class="example example-like" id="fs-id1169736589236"><h4 class="heading">
+<div class="autopermalink" data-description="Checkpoint 3.3.34"><a href="#sec_Ch3Sec3-8-8" title="Copy heading and permalink for Checkpoint 3.3.34" aria-label="Copy heading and permalink for Checkpoint 3.3.34">🔗</a></div>
+</article></details>
+<article class="example example-like" id="fs-id1169736589236"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Determining Where a Function Has a Horizontal Tangent.</span>
 </h4>
 <div class="para" id="fs-id1169736589236-2-1">Determine the values of <span class="process-math">\(x\)</span> for which <span class="process-math">\(f(x)=x^3-7x^2+8x+1\)</span> has a horizontal tangent line.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736589236-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="fs-id1169736589236-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="fs-id1169736589236-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="fs-id1169736589236-3-1">To find the values of <span class="process-math">\(x\)</span> for which <span class="process-math">\(f(x)\)</span> has a horizontal tangent line, we must solve <span class="process-math">\(f'(x)=0.\)</span> Since<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736589236-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="fs-id1169736589236-3-2">
@@ -1273,36 +1427,51 @@ f'(x)=3x^2-14x+8=(3x-2)(x-4),
 <div class="para" id="fs-id1169736589236-3-3">we must solve <span class="process-math">\((3x-2)(x-4)=0.\)</span> Thus we see that the function has horizontal tangent lines at <span class="process-math">\(x=\frac{2}{3}\)</span> and <span class="process-math">\(x=4\)</span> as shown in the following graph.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736589236-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_03_03_002"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch3/CNX_Calc_Figure_03_03_002.jpg" class="contained" alt='"The graph shows f(x) = x3 – 7x2 + 8x + 1, and the tangent lines are shown as x = 2/3 and x = 4."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.36<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>This function has horizontal tangent lines at <span class="process-math">\(x\)</span> = 2/3 and <span class="process-math">\(x\)</span> = 4.<div class="autopermalink" data-description="Figure 3.3.36"><a href="#CNX_Calc_Figure_03_03_002" title="Copy heading and permalink for Figure 3.3.36" aria-label="Copy heading and permalink for Figure 3.3.36">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 3.3.35.1"><a href="#fs-id1169736589236-3" title="Copy heading and permalink for Solution 3.3.35.1" aria-label="Copy heading and permalink for Solution 3.3.35.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 3.3.35: Determining Where a Function Has a Horizontal Tangent"><a href="#fs-id1169736589236" title="Copy heading and permalink for Example 3.3.35: Determining Where a Function Has a Horizontal Tangent" aria-label="Copy heading and permalink for Example 3.3.35: Determining Where a Function Has a Horizontal Tangent">🔗</a></div></article><details id="sec_Ch3Sec3-8-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.36<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>This function has horizontal tangent lines at <span class="process-math">\(x\)</span> = 2/3 and <span class="process-math">\(x\)</span> = 4.<div class="autopermalink" data-description="Figure 3.3.36"><a href="#CNX_Calc_Figure_03_03_002" title="Copy heading and permalink for Figure 3.3.36" aria-label="Copy heading and permalink for Figure 3.3.36">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 3.3.35.1"><a href="#fs-id1169736589236-3" title="Copy heading and permalink for Solution 3.3.35.1" aria-label="Copy heading and permalink for Solution 3.3.35.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.3.35: Determining Where a Function Has a Horizontal Tangent"><a href="#fs-id1169736589236" title="Copy heading and permalink for Example 3.3.35: Determining Where a Function Has a Horizontal Tangent" aria-label="Copy heading and permalink for Example 3.3.35: Determining Where a Function Has a Horizontal Tangent">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec3-8-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.37</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch3Sec3-8-10-1-1">Find the values of <span class="process-math">\(x\)</span> for which the line tangent to the graph of <span class="process-math">\(f(x)=4x^2-3x+2\)</span> has a tangent line parallel to the line <span class="process-math">\(y=2x+3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec3-8-10-1-1">Find the values of <span class="process-math">\(x\)</span> for which the line tangent to the graph of <span class="process-math">\(f(x)=4x^2-3x+2\)</span> has a tangent line parallel to the line <span class="process-math">\(y=2x+3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch3Sec3-8-10-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch3Sec3-8-10-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-8-10-3-1">Solve <span class="process-math">\(f'(x)=2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.3.37.1"><a href="#sec_Ch3Sec3-8-10-3" title="Copy heading and permalink for Hint 3.3.37.1" aria-label="Copy heading and permalink for Hint 3.3.37.1">🔗</a></div>
-</div></details><details id="sec_Ch3Sec3-8-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch3Sec3-8-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch3Sec3-8-10-2-1">
 <span class="process-math">\(\frac{5}{8}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-8-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.3.37.1"><a href="#sec_Ch3Sec3-8-10-2" title="Copy heading and permalink for Solution 3.3.37.1" aria-label="Copy heading and permalink for Solution 3.3.37.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.3.37"><a href="#sec_Ch3Sec3-8-10" title="Copy heading and permalink for Checkpoint 3.3.37" aria-label="Copy heading and permalink for Checkpoint 3.3.37">🔗</a></div></article></details><article class="project project-like" id="fs-id1169739298028"><h4 class="heading">
+<div class="autopermalink" data-description="Checkpoint 3.3.37"><a href="#sec_Ch3Sec3-8-10" title="Copy heading and permalink for Checkpoint 3.3.37" aria-label="Copy heading and permalink for Checkpoint 3.3.37">🔗</a></div>
+</article></details>
+<article class="project project-like" id="fs-id1169739298028"><h4 class="heading">
 <span class="type">Project</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Project: Formula One Grandstands.</span>
 </h4>
 <div class="para" id="fs-id1169739298028-2">Formula One car races can be very exciting to watch and attract a lot of spectators. Formula One track designers have to ensure sufficient grandstand space is available around the track to accommodate these viewers. However, car racing can be dangerous, and safety considerations are paramount. The grandstands must be placed where spectators will not be in danger should a driver lose control of a car (<a href="sec_Ch3Sec3.html#CNX_Calc_Figure_03_03_003" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_03_003.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.3.38">Figure 3.3.38</a>).<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739298028-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_03_03_003"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch3/CNX_Calc_Figure_03_03_003.jpg" class="contained" alt='"A photo of a grandstand next to a straightaway of a race track."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.38<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The grandstand next to a straightaway of the Circuit de Barcelona-Catalunya race track, located where the spectators are not in danger.<div class="autopermalink" data-description="Figure 3.3.38"><a href="#CNX_Calc_Figure_03_03_003" title="Copy heading and permalink for Figure 3.3.38" aria-label="Copy heading and permalink for Figure 3.3.38">🔗</a></div></figcaption></figure><div class="para" id="fs-id1169739298028-4">Safety is especially a concern on turns. If a driver does not slow down enough before entering the turn, the car may slide off the racetrack. Normally, this just results in a wider turn, which slows the driver down. But if the driver loses control completely, the car may fly off the track entirely, on a path tangent to the curve of the racetrack.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739298028-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.38<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The grandstand next to a straightaway of the Circuit de Barcelona-Catalunya race track, located where the spectators are not in danger.<div class="autopermalink" data-description="Figure 3.3.38"><a href="#CNX_Calc_Figure_03_03_003" title="Copy heading and permalink for Figure 3.3.38" aria-label="Copy heading and permalink for Figure 3.3.38">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="fs-id1169739298028-4">Safety is especially a concern on turns. If a driver does not slow down enough before entering the turn, the car may slide off the racetrack. Normally, this just results in a wider turn, which slows the driver down. But if the driver loses control completely, the car may fly off the track entirely, on a path tangent to the curve of the racetrack.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739298028-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="fs-id1169739298028-5">Suppose you are designing a new Formula One track. One section of the track can be modeled by the function <span class="process-math">\(f(x)=x^3+3x^2+x\)</span> (<a href="sec_Ch3Sec3.html#CNX_Calc_Figure_03_03_004" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_03_004.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.3.39">Figure 3.3.39</a>). The current plan calls for grandstands to be built along the first straightaway and around a portion of the first curve. The plans call for the front corner of the grandstand to be located at the point <span class="process-math">\((-1.9,2.8).\)</span> We want to determine whether this location puts the spectators in danger if a driver loses control of the car.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739298028-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_03_03_004"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch3/CNX_Calc_Figure_03_03_004.jpg" class="contained" alt='"This figure has two parts labeled a and b. Figure a shows the graph of f(x) = x3 + 3x2 + x. Figure b shows the same graph but this time with two boxes on it. The first box appears along the left-hand side of the graph straddling the x-axis roughly parallel to f(x). The second box appears a little higher, also roughly parallel to f(x), with its front corner located at (-1.9, 2.8). Note that this corner is roughly in line with the direct path of the track before it started to turn."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.39<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>(a) One section of the racetrack can be modeled by the function <span class="process-math">\(f(x)=x^3+3x^2+x.\)</span> (b) The front corner of the grandstand is located at <span class="process-math">\((-1.9,2.8).\)</span><div class="autopermalink" data-description="Figure 3.3.39"><a href="#CNX_Calc_Figure_03_03_004" title="Copy heading and permalink for Figure 3.3.39" aria-label="Copy heading and permalink for Figure 3.3.39">🔗</a></div></figcaption></figure><ol class="decimal" id="fs-id1169739298028-7">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.39<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>(a) One section of the racetrack can be modeled by the function <span class="process-math">\(f(x)=x^3+3x^2+x.\)</span> (b) The front corner of the grandstand is located at <span class="process-math">\((-1.9,2.8).\)</span><div class="autopermalink" data-description="Figure 3.3.39"><a href="#CNX_Calc_Figure_03_03_004" title="Copy heading and permalink for Figure 3.3.39" aria-label="Copy heading and permalink for Figure 3.3.39">🔗</a></div></figcaption>
+</figure>
+<ol class="decimal" id="fs-id1169739298028-7">
 <li id="fs-id1169739298028-7-1">
 <div class="para" id="p-derived-fs-id1169739298028-7-1">Physicists have determined that drivers are most likely to lose control of their cars as they are coming into a turn, at the point where the slope of the tangent line is 1. Find the <span class="process-math">\((x,y)\)</span> coordinates of this point near the turn.</div>
 <div class="autopermalink" data-description="Item 1"><a href="#fs-id1169739298028-7-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
@@ -1328,9 +1497,13 @@ f'(x)=3x^2-14x+8=(3x-2)(x-4),
 <div class="autopermalink" data-description="Item 6"><a href="#fs-id1169739298028-7-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Project 3.3.1: Project: Formula One Grandstands"><a href="#fs-id1169739298028" title="Copy heading and permalink for Project 3.3.1: Project: Formula One Grandstands" aria-label="Copy heading and permalink for Project 3.3.1: Project: Formula One Grandstands">🔗</a></div></article><div class="autopermalink" data-description="Subsection 3.3.6: Combining Differentiation Rules"><a href="#sec_Ch3Sec3-8" title="Copy heading and permalink for Subsection 3.3.6: Combining Differentiation Rules" aria-label="Copy heading and permalink for Subsection 3.3.6: Combining Differentiation Rules">🔗</a></div></section><div class="autopermalink" data-description="Section 3.3: Differentiation Rules (3.3.31-2 Need Chain Rule)"><a href="#sec_Ch3Sec3" title="Copy heading and permalink for Section 3.3: Differentiation Rules (3.3.31-2 Need Chain Rule)" aria-label="Copy heading and permalink for Section 3.3: Differentiation Rules (3.3.31-2 Need Chain Rule)">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Project 3.3.1: Project: Formula One Grandstands"><a href="#fs-id1169739298028" title="Copy heading and permalink for Project 3.3.1: Project: Formula One Grandstands" aria-label="Copy heading and permalink for Project 3.3.1: Project: Formula One Grandstands">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 3.3.6: Combining Differentiation Rules"><a href="#sec_Ch3Sec3-8" title="Copy heading and permalink for Subsection 3.3.6: Combining Differentiation Rules" aria-label="Copy heading and permalink for Subsection 3.3.6: Combining Differentiation Rules">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 3.3: Differentiation Rules (3.3.31-2 Need Chain Rule)"><a href="#sec_Ch3Sec3" title="Copy heading and permalink for Section 3.3: Differentiation Rules (3.3.31-2 Need Chain Rule)" aria-label="Copy heading and permalink for Section 3.3: Differentiation Rules (3.3.31-2 Need Chain Rule)">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec_Ch3Sec2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_Ch3Sec6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec_Ch3Sec2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_Ch3Sec4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -4285,11 +4285,164 @@ var ptx_lunr_docs = [
   "body": " Project: Formula One Grandstands  Formula One car races can be very exciting to watch and attract a lot of spectators. Formula One track designers have to ensure sufficient grandstand space is available around the track to accommodate these viewers. However, car racing can be dangerous, and safety considerations are paramount. The grandstands must be placed where spectators will not be in danger should a driver lose control of a car ( ).    \"A photo of a grandstand next to a straightaway of a race track.\"  The grandstand next to a straightaway of the Circuit de Barcelona-Catalunya race track, located where the spectators are not in danger.  ********** Safety is especially a concern on turns. If a driver does not slow down enough before entering the turn, the car may slide off the racetrack. Normally, this just results in a wider turn, which slows the driver down. But if the driver loses control completely, the car may fly off the track entirely, on a path tangent to the curve of the racetrack.  Suppose you are designing a new Formula One track. One section of the track can be modeled by the function ( ). The current plan calls for grandstands to be built along the first straightaway and around a portion of the first curve. The plans call for the front corner of the grandstand to be located at the point We want to determine whether this location puts the spectators in danger if a driver loses control of the car.   \"This figure has two parts labeled a and b. Figure a shows the graph of f(x) = x3 + 3x2 + x. Figure b shows the same graph but this time with two boxes on it. The first box appears along the left-hand side of the graph straddling the x-axis roughly parallel to f(x). The second box appears a little higher, also roughly parallel to f(x), with its front corner located at (-1.9, 2.8). Note that this corner is roughly in line with the direct path of the track before it started to turn.\"  (a) One section of the racetrack can be modeled by the function (b) The front corner of the grandstand is located at  Physicists have determined that drivers are most likely to lose control of their cars as they are coming into a turn, at the point where the slope of the tangent line is 1. Find the coordinates of this point near the turn.  Find the equation of the tangent line to the curve at this point.  To determine whether the spectators are in danger in this scenario, find the -coordinate of the point where the tangent line crosses the line Is this point safely to the right of the grandstand? Or are the spectators in danger?  What if a driver loses control earlier than the physicists project? Suppose a driver loses control at the point What is the slope of the tangent line at this point?  If a driver loses control as described in part 4, are the spectators safe?  Should you proceed with the current design for the grandstand, or should the grandstands be moved?   "
 },
 {
+  "id": "sec_Ch3Sec4",
+  "level": "1",
+  "url": "sec_Ch3Sec4.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Derivatives as Rates of Change",
+  "body": " Derivatives as Rates of Change   Learning Objectives    Calculate the average rate of change and explain how it differs from the instantaneous rate of change.  Apply rates of change to displacement, velocity, and acceleration of an object moving along a straight line.  Predict the future population from the present value and the population growth rate.  Use derivatives to calculate marginal cost and revenue in a business situation.   In this section, we explore applications of derivatives as tools for modeling rates of change. While it is most natural to think about change over time, derivatives can describe how one quantity changes with respect to any variable. For instance, an economist might examine how the cost of producing steel depends on the number of tons produced, while an engineer might study how a generator’s power output varies with temperature.    Rates of Change  We’ve noted previously that the average rate of change of a function, , over the interval corresponds to the difference quotient of f:   Taking the limit as gives us the definition of the derivative. This leads us to an important interpretation of the derivative.    The instantaneous rate of change of with respect to at is the derivative provided the limit exists.    Thus, instantaneous rates are average rates. Notice that for small values of ,   It is conventional to say ``rate of change'' and omit the word instantaneous. So, unless we specify that it is an average rate of change, it is assumed to be instantaneous.   A Motivating Example for Rates of Change   The area of a circle depends on it diameter according to   As the diameter changes, the area changes as well. How fast is the area increasing when the diameter is meters? In other words, what is the rate at which the area grows with respect to the diameter at that moment?    To answer this question requires the Chain Rule, which we will learn about soon. Suffice it to say, if the diameter is growing then the area must be growing as well. In particular, at the moment the diameter is meters, the area will be growing as fast as the diameter is growing.       Motion along a Line  Let be a function giving the position of an object at time . Then the difference quotient can be interpreted as the average velocity over the interval . That is,   As before, taking the limit as goes to gives us instantaneous velocity, which we see is also the derivative of the position function. This gives us the following definition.    Velocity (or instantaneous velocity) is the derivative of position with respect to time.    Velocity describes not only how fast an object is moving, but also its direction. When an object moves forward along a straight line (so its position is increasing), its velocity is positive; when it moves backwards (so is decreasing), its velocity is negative. On a vertical line, positive velocity indicates upward motion while negative velocity indicates downward motion.  To see the difference between velocity and speed, imagine driving to the store and then returning at mph. The speedometer reads mph both ways; it does not display on the return trip, even though your distance from home is decreasing. This is because the speedometer measures speed, which is the absolute value of velocity. Speed tells how fast you are moving, regardless of direction.   The speed of an object at time is given by .      Insert a graph like Thomas' Figure 3.17   The rate at which an object's velocity changes is the object's acceleration. The acceleration measures how quizckly an objects gains or loses speed.    Acceleration is the derivative of velocity with respect to time.     Comparing Instantaneous Velocity and Average Velocity   A ball is dropped from a height of 64 feet. Its height above ground (in feet) seconds later is given by    \"On the Cartesian coordinate plane, the function s(t) = -16t2 + 64 is graphed. This function starts at (0, 64) and decreases to (0, 2).\"   A graph of the height of the ball with respect to time    What is the instantaneous velocity of the ball when it hits the ground?  What is the average velocity during its fall?     The first thing to do is determine how long it takes the ball to reach the ground. To do this, set Solving we get so it take 2 seconds for the ball to reach the ground.   The instantaneous velocity of the ball as it strikes the ground is Since we obtain  The average velocity of the ball during its fall is      Interpreting the Relationship between and   A particle moves along a coordinate axis in the positive direction to the right. Its position at time is given by Find and and use these values to answer the following questions.   Is the particle moving from left to right or from right to left at time  Is the particle speeding up or slowing down at time     Begin by finding and  and  Evaluating these functions at we obtain and   Because the particle is moving from right to left.  Because and velocity and acceleration are acting in opposite directions. In other words, the particle is being accelerated in the direction opposite the direction in which it is traveling, causing to decrease. The particle is slowing down.      Position and Velocity   The position of a particle moving along a coordinate axis is given by   Find  At what time(s) is the particle at rest?  On what time intervals is the particle moving from left to right? From right to left?  Use the information obtained to sketch the path of the particle along a coordinate axis.      The velocity is the derivative of the position function:  The particle is at rest when so set Factoring the left-hand side of the equation produces Solving, we find that the particle is at rest at and  The particle is moving from left to right when and from right to left when  gives the analysis of the sign of for but it does not represent the axis along which the particle is moving.   \"A number line marked with 0, 2, and 4. Between 0 and 2, there is a plus sign. Above 2, there is a 0. Between 2 and 4 there is a negative sign. Above 4 there is a 0. After 4 there is a plus sign and v(t).\"  The sign of v(t) determines the direction of the particle.  Since on the particle is moving from left to right on these intervals. Since on the particle is moving from right to left on this interval.  Before we can sketch the graph of the particle, we need to know its position at the time it starts moving and at the times that it changes direction We have and This means that the particle begins on the coordinate axis at 4 and changes direction at 0 and 20 on the coordinate axis. The path of the particle is shown on a coordinate axis in .   \"A number line is given and above it a line snakes, starting at t = 0 above 4 on the number line. Then the line at t = 2 is above 24 on the number line. Then the line decreases at t = 4 to be above 20 on the number line, at which point the line reverses direction again and increases indefinitely.\"  The path of the particle can be determined by analyzing v(t).        A particle moves along a coordinate axis. Its position at time is given by Is the particle moving from right to left or from left to right at time    left to right    Find and look at the sign.      Population Change  In addition to analyzing velocity, speed, acceleration, and position, we can use derivatives to analyze various types of populations, including those as diverse as bacteria colonies and cities. We can use a current population, together with a growth rate, to estimate the size of a population in the future. The population growth rate is the rate of change of a population and consequently can be represented by the derivative of the size of the population.    If is the number of entities present in a population, then the population growth rate of is defined to be    Estimating a Population   The population of a city is tripling every 5 years. If its current population is 10,000, what will be its approximate population 2 years from now?    Let be the population (in thousands) years from now. Thus, we know that and based on the information, we anticipate Now estimate the current growth rate, using   By applying to we can estimate the population 2 years from now by writing   thus, in 2 years the population will be 18,000.      The current population of a mosquito colony is known to be 3,000; that is, If estimate the size of the population in 3 days, where is measured in days.    3,300    Use      Changes in Cost and Revenue  In addition to analyzing motion along a line and population growth, derivatives are useful in analyzing changes in cost, revenue, and profit. The concept of a marginal function is common in the fields of business and economics and implies the use of derivatives. The marginal cost is the derivative of the cost function. The marginal revenue is the derivative of the revenue function. The marginal profit is the derivative of the profit function, which is based on the cost function and the revenue function.    If is the cost of producing items, then the marginal cost  is  If is the revenue obtained from selling items, then the marginal revenue is  If is the profit obtained from selling items, then the marginal profit  is defined to be   We can roughly approximate   by choosing an appropriate value for Since represents objects, a reasonable and small value for is 1. Thus, by substituting we get the approximation Consequently, for a given value of can be thought of as the change in cost associated with producing one additional item. In a similar way, approximates the revenue obtained by selling one additional item, and approximates the profit obtained by producing and selling one additional item.   Applying Marginal Revenue   Assume that the number of barbeque dinners that can be sold, can be related to the price charged, by the equation  In this case, the revenue in dollars obtained by selling barbeque dinners is given by   Use the marginal revenue function to estimate the revenue obtained from selling the 101st barbeque dinner. Compare this to the actual revenue obtained from the sale of this dinner.    First, find the marginal revenue function:  Next, use to approximate the revenue obtained from the sale of the 101st dinner. Since the revenue obtained from the sale of the 101st dinner is approximately \\$3.  The actual revenue obtained from the sale of the 101st dinner is   The marginal revenue is a fairly good estimate in this case and has the advantage of being easy to compute.      Suppose that the profit obtained from the sale of fish-fry dinners is given by Use the marginal profit function to estimate the profit from the sale of the 101st fish-fry dinner.    \\$2    Use to approximate       "
+},
+{
+  "id": "def-instantaneousrateofchange",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#def-instantaneousrateofchange",
+  "type": "Definition",
+  "number": "3.4.1",
+  "title": "",
+  "body": "  The instantaneous rate of change of with respect to at is the derivative provided the limit exists.   "
+},
+{
+  "id": "ex-circlearearateofchange",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#ex-circlearearateofchange",
+  "type": "Example",
+  "number": "3.4.2",
+  "title": "A Motivating Example for Rates of Change.",
+  "body": " A Motivating Example for Rates of Change   The area of a circle depends on it diameter according to   As the diameter changes, the area changes as well. How fast is the area increasing when the diameter is meters? In other words, what is the rate at which the area grows with respect to the diameter at that moment?    To answer this question requires the Chain Rule, which we will learn about soon. Suffice it to say, if the diameter is growing then the area must be growing as well. In particular, at the moment the diameter is meters, the area will be growing as fast as the diameter is growing.   "
+},
+{
+  "id": "sec_Ch3Sec4-4-4",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#sec_Ch3Sec4-4-4",
+  "type": "Definition",
+  "number": "3.4.3",
+  "title": "",
+  "body": "  Velocity (or instantaneous velocity) is the derivative of position with respect to time.   "
+},
+{
+  "id": "sec_Ch3Sec4-4-7",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#sec_Ch3Sec4-4-7",
+  "type": "Definition",
+  "number": "3.4.4",
+  "title": "",
+  "body": " The speed of an object at time is given by .  "
+},
+{
+  "id": "ThomasFig3-17",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#ThomasFig3-17",
+  "type": "Figure",
+  "number": "3.4.5",
+  "title": "",
+  "body": "  Insert a graph like Thomas' Figure 3.17  "
+},
+{
+  "id": "sec_Ch3Sec4-4-10",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#sec_Ch3Sec4-4-10",
+  "type": "Definition",
+  "number": "3.4.6",
+  "title": "",
+  "body": "  Acceleration is the derivative of velocity with respect to time.   "
+},
+{
+  "id": "fs-id1169738906211",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#fs-id1169738906211",
+  "type": "Example",
+  "number": "3.4.7",
+  "title": "Comparing Instantaneous Velocity and Average Velocity.",
+  "body": " Comparing Instantaneous Velocity and Average Velocity   A ball is dropped from a height of 64 feet. Its height above ground (in feet) seconds later is given by    \"On the Cartesian coordinate plane, the function s(t) = -16t2 + 64 is graphed. This function starts at (0, 64) and decreases to (0, 2).\"   A graph of the height of the ball with respect to time    What is the instantaneous velocity of the ball when it hits the ground?  What is the average velocity during its fall?     The first thing to do is determine how long it takes the ball to reach the ground. To do this, set Solving we get so it take 2 seconds for the ball to reach the ground.   The instantaneous velocity of the ball as it strikes the ground is Since we obtain  The average velocity of the ball during its fall is    "
+},
+{
+  "id": "fs-id1169738904404",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#fs-id1169738904404",
+  "type": "Example",
+  "number": "3.4.9",
+  "title": "Interpreting the Relationship between <span class=\"process-math\">\\(v(t)\\)<\/span> and <span class=\"process-math\">\\(a(t)\\)<\/span>.",
+  "body": " Interpreting the Relationship between and   A particle moves along a coordinate axis in the positive direction to the right. Its position at time is given by Find and and use these values to answer the following questions.   Is the particle moving from left to right or from right to left at time  Is the particle speeding up or slowing down at time     Begin by finding and  and  Evaluating these functions at we obtain and   Because the particle is moving from right to left.  Because and velocity and acceleration are acting in opposite directions. In other words, the particle is being accelerated in the direction opposite the direction in which it is traveling, causing to decrease. The particle is slowing down.    "
+},
+{
+  "id": "fs-id1169738889577",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#fs-id1169738889577",
+  "type": "Example",
+  "number": "3.4.10",
+  "title": "Position and Velocity.",
+  "body": " Position and Velocity   The position of a particle moving along a coordinate axis is given by   Find  At what time(s) is the particle at rest?  On what time intervals is the particle moving from left to right? From right to left?  Use the information obtained to sketch the path of the particle along a coordinate axis.      The velocity is the derivative of the position function:  The particle is at rest when so set Factoring the left-hand side of the equation produces Solving, we find that the particle is at rest at and  The particle is moving from left to right when and from right to left when  gives the analysis of the sign of for but it does not represent the axis along which the particle is moving.   \"A number line marked with 0, 2, and 4. Between 0 and 2, there is a plus sign. Above 2, there is a 0. Between 2 and 4 there is a negative sign. Above 4 there is a 0. After 4 there is a plus sign and v(t).\"  The sign of v(t) determines the direction of the particle.  Since on the particle is moving from left to right on these intervals. Since on the particle is moving from right to left on this interval.  Before we can sketch the graph of the particle, we need to know its position at the time it starts moving and at the times that it changes direction We have and This means that the particle begins on the coordinate axis at 4 and changes direction at 0 and 20 on the coordinate axis. The path of the particle is shown on a coordinate axis in .   \"A number line is given and above it a line snakes, starting at t = 0 above 4 on the number line. Then the line at t = 2 is above 24 on the number line. Then the line decreases at t = 4 to be above 20 on the number line, at which point the line reverses direction again and increases indefinitely.\"  The path of the particle can be determined by analyzing v(t).     "
+},
+{
+  "id": "sec_Ch3Sec4-4-14",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#sec_Ch3Sec4-4-14",
+  "type": "Checkpoint",
+  "number": "3.4.13",
+  "title": "",
+  "body": "  A particle moves along a coordinate axis. Its position at time is given by Is the particle moving from right to left or from left to right at time    left to right    Find and look at the sign.   "
+},
+{
+  "id": "sec_Ch3Sec4-5-3",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#sec_Ch3Sec4-5-3",
+  "type": "Definition",
+  "number": "3.4.14",
+  "title": "",
+  "body": "  If is the number of entities present in a population, then the population growth rate of is defined to be  "
+},
+{
+  "id": "fs-id1169739270775",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#fs-id1169739270775",
+  "type": "Example",
+  "number": "3.4.15",
+  "title": "Estimating a Population.",
+  "body": " Estimating a Population   The population of a city is tripling every 5 years. If its current population is 10,000, what will be its approximate population 2 years from now?    Let be the population (in thousands) years from now. Thus, we know that and based on the information, we anticipate Now estimate the current growth rate, using   By applying to we can estimate the population 2 years from now by writing   thus, in 2 years the population will be 18,000.   "
+},
+{
+  "id": "sec_Ch3Sec4-5-5",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#sec_Ch3Sec4-5-5",
+  "type": "Checkpoint",
+  "number": "3.4.16",
+  "title": "",
+  "body": "  The current population of a mosquito colony is known to be 3,000; that is, If estimate the size of the population in 3 days, where is measured in days.    3,300    Use   "
+},
+{
+  "id": "sec_Ch3Sec4-6-3",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#sec_Ch3Sec4-6-3",
+  "type": "Definition",
+  "number": "3.4.17",
+  "title": "",
+  "body": "  If is the cost of producing items, then the marginal cost  is  If is the revenue obtained from selling items, then the marginal revenue is  If is the profit obtained from selling items, then the marginal profit  is defined to be  "
+},
+{
+  "id": "fs-id1169739302508",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#fs-id1169739302508",
+  "type": "Example",
+  "number": "3.4.18",
+  "title": "Applying Marginal Revenue.",
+  "body": " Applying Marginal Revenue   Assume that the number of barbeque dinners that can be sold, can be related to the price charged, by the equation  In this case, the revenue in dollars obtained by selling barbeque dinners is given by   Use the marginal revenue function to estimate the revenue obtained from selling the 101st barbeque dinner. Compare this to the actual revenue obtained from the sale of this dinner.    First, find the marginal revenue function:  Next, use to approximate the revenue obtained from the sale of the 101st dinner. Since the revenue obtained from the sale of the 101st dinner is approximately \\$3.  The actual revenue obtained from the sale of the 101st dinner is   The marginal revenue is a fairly good estimate in this case and has the advantage of being easy to compute.   "
+},
+{
+  "id": "sec_Ch3Sec4-6-8",
+  "level": "2",
+  "url": "sec_Ch3Sec4.html#sec_Ch3Sec4-6-8",
+  "type": "Checkpoint",
+  "number": "3.4.19",
+  "title": "",
+  "body": "  Suppose that the profit obtained from the sale of fish-fry dinners is given by Use the marginal profit function to estimate the profit from the sale of the 101st fish-fry dinner.    \\$2    Use to approximate   "
+},
+{
   "id": "sec_Ch3Sec6",
   "level": "1",
   "url": "sec_Ch3Sec6.html",
   "type": "Section",
-  "number": "3.4",
+  "number": "3.5",
   "title": "Chapter 3 Section 6 Placeholder",
   "body": " Chapter 3 Section 6 Placeholder  "
 },

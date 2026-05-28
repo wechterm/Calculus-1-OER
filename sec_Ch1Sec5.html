@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="OpenStax Calculus">
@@ -101,14 +53,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.0.0';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -348,7 +300,16 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-8" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Combining Differentiation Rules</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Chapter 3 Section 6 Placeholder</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Derivatives as Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#subsec-instantaneousrateofchange" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Motion along a Line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Population Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-6" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Changes in Cost and Revenue</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Chapter 3 Section 6 Placeholder</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -365,7 +326,9 @@ eBookConfig.enable_chatcodes =  false;
 </li></ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_Ch1Sec5"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec_Ch1Sec5">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exponential and Logarithmic Functions</span>
 </h2>
 <section class="introduction" id="sec_Ch1Sec5-2"><h3 class="heading">Learning Objectives.<span></span>
@@ -403,10 +366,13 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ol>
 <div class="para" id="sec_Ch1Sec5-2-3">In this section we examine exponential and logarithmic functions. We use the properties of these functions to solve equations involving exponential or logarithmic terms, and we study the meaning and importance of the number <span class="process-math">\(e.\)</span> We also define hyperbolic and inverse hyperbolic functions, which involve combinations of exponential and logarithmic functions. (Note that we present alternative definitions of exponential and logarithmic functions in the chapter  Applications of Integrations , and prove that the functions have the same properties with either definition.)<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="sec_Ch1Sec5-3"><h3 class="heading hide-type">
+</div></section>
+<section class="subsection" id="sec_Ch1Sec5-3">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exponential Functions</span>
 </h3>
-<section class="introduction" id="sec_Ch1Sec5-3-2"><div class="para" id="sec_Ch1Sec5-3-2-1">Exponential functions arise in many applications. One common example is <dfn class="terminology">population growth</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sec_Ch1Sec5-3-2">
+<div class="para" id="sec_Ch1Sec5-3-2-1">Exponential functions arise in many applications. One common example is <dfn class="terminology">population growth</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec_Ch1Sec5-3-2-2">For example, if a population starts with <span class="process-math">\(P_0\)</span> individuals and then grows at an annual rate of <span class="process-math">\(2\%,\)</span> its population after 1 year is<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -473,10 +439,15 @@ P(t)=P_0(1.02)^t,
 <td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(32\)</span></td>
 <td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(64\)</span></td>
 </tr>
-</table></div></figure><div class="para" id="sec_Ch1Sec5-3-2-11">In <a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.2">Figure 1.5.2</a>, we graph both <span class="process-math">\(y=x^2\)</span> and <span class="process-math">\(y=2^x\)</span> to show how the graphs differ.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</table></div>
+</figure>
+<div class="para" id="sec_Ch1Sec5-3-2-11">In <a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.2">Figure 1.5.2</a>, we graph both <span class="process-math">\(y=x^2\)</span> and <span class="process-math">\(y=2^x\)</span> to show how the graphs differ.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_01_05_001"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_05_001.jpg" class="contained" alt='"An image of a graph. The x axis runs from -10 to 10 and the y axis runs from 0 to 50. The graph is of two functions. The first function is “y = x squared”, which is a parabola. The function decreases until it hits the origin and then begins increasing. The second function is “y = 2 to the power of x”, which starts slightly above the x axis, and begins increasing very rapidly, more rapidly than the first function."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Both <span class="process-math">\(2^x\)</span> and <span class="process-math">\(x^2\)</span> approach infinity as <span class="process-math">\(x\to \infty,\)</span> but <span class="process-math">\(2^x\)</span> grows more rapidly than <span class="process-math">\(x^2.\)</span> As <span class="process-math">\(x\to .\infty,x^2\to \infty,\)</span> whereas <span class="process-math">\(2^x\to 0.\)</span><div class="autopermalink" data-description="Figure 1.5.2"><a href="#CNX_Calc_Figure_01_05_001" title="Copy heading and permalink for Figure 1.5.2" aria-label="Copy heading and permalink for Figure 1.5.2">🔗</a></div></figcaption></figure></section><section class="subsubsection" id="sec_Ch1Sec5-3-3"><h4 class="heading hide-type">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Both <span class="process-math">\(2^x\)</span> and <span class="process-math">\(x^2\)</span> approach infinity as <span class="process-math">\(x\to \infty,\)</span> but <span class="process-math">\(2^x\)</span> grows more rapidly than <span class="process-math">\(x^2.\)</span> As <span class="process-math">\(x\to .\infty,x^2\to \infty,\)</span> whereas <span class="process-math">\(2^x\to 0.\)</span><div class="autopermalink" data-description="Figure 1.5.2"><a href="#CNX_Calc_Figure_01_05_001" title="Copy heading and permalink for Figure 1.5.2" aria-label="Copy heading and permalink for Figure 1.5.2">🔗</a></div></figcaption>
+</figure></section>
+<section class="subsubsection" id="sec_Ch1Sec5-3-3">
+<h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating Exponential Functions</span>
 </h4>
 <div class="para" id="sec_Ch1Sec5-3-3-2">Recall the properties of exponents: If <span class="process-math">\(x\)</span> is a positive integer, then we define <span class="process-math">\(b^x=b\cdot b\cdots b\)</span> (with <span class="process-math">\(x\)</span> factors of <span class="process-math">\(b).\)</span> If <span class="process-math">\(x\)</span> is a negative integer, then <span class="process-math">\(x=.y\)</span> for some positive integer <span class="process-math">\(y,\)</span> and we define <span class="process-math">\(b^x=b^{-y}=1/b^y.\)</span> Also, <span class="process-math">\(b^0\)</span> is defined to be <span class="process-math">\(1.\)</span> If <span class="process-math">\(x\)</span> is a rational number, then <span class="process-math">\(x=p/q,\)</span> where <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are integers and <span class="process-math">\(b^x=b^{p/q}=\sqrt[q]{b^p}.\)</span> For example, <span class="process-math">\(9^{3/2}=\sqrt{9^3}=27.\)</span> However, how is <span class="process-math">\(b^x\)</span> defined if <span class="process-math">\(x\)</span> is an irrational number? For example, what do we mean by <span class="process-math">\(2^{\sqrt{2}}\)</span> This is too complex a question for us to answer fully right now; however, we can make an approximation. In <a href="sec_Ch1Sec5.html#fs-id1170572480690" class="xref" data-knowl="./knowl/xref/fs-id1170572480690.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.5.3: Values of 2^x for a List of Rational Numbers Approximating \sqrt{2}">Table 1.5.3</a>, we list some rational numbers approaching <span class="process-math">\(\sqrt{2},\)</span> and the values of <span class="process-math">\(2^x\)</span> for each rational number <span class="process-math">\(x\)</span> are presented as well. We claim that if we choose rational numbers <span class="process-math">\(x\)</span> getting closer and closer to <span class="process-math">\(\sqrt{2},\)</span> the values of <span class="process-math">\(2^x\)</span> get closer and closer to some number <span class="process-math">\(L.\)</span> We define that number <span class="process-math">\(L\)</span> to be <span class="process-math">\(2^{\sqrt{2}}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -500,43 +471,65 @@ P(t)=P_0(1.02)^t,
 <td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(2.665138\)</span></td>
 <td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(2.665143\)</span></td>
 </tr>
-</table></div></figure><article class="example example-like" id="sec_Ch1Sec5-3-3-4"><h5 class="heading">
+</table></div>
+</figure>
+<article class="example example-like" id="sec_Ch1Sec5-3-3-4"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bacterial Growth.</span>
 </h5>
 <div class="para" id="sec_Ch1Sec5-3-3-4-2-1">Suppose a particular population of bacteria is known to double in size every <span class="process-math">\(4\)</span> hours. If a culture starts with <span class="process-math">\(1000\)</span> bacteria, the number of bacteria after <span class="process-math">\(4\)</span> hours is <span class="process-math">\(n(4)=1000\cdot 2.\)</span> The number of bacteria after <span class="process-math">\(8\)</span> hours is <span class="process-math">\(n(8)=n(4)\cdot 2=1000\cdot 2^2.\)</span> In general, the number of bacteria after <span class="process-math">\(4m\)</span> hours is <span class="process-math">\(n(4m)=1000\cdot 2^m.\)</span> Letting <span class="process-math">\(t=4m,\)</span> we see that the number of bacteria after <span class="process-math">\(t\)</span> hours is <span class="process-math">\(n(t)=1000\cdot 2^{t/4}.\)</span> Find the number of bacteria after <span class="process-math">\(6\)</span> hours, <span class="process-math">\(10\)</span> hours, and <span class="process-math">\(24\)</span> hours.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="sec_Ch1Sec5-3-3-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="sec_Ch1Sec5-3-3-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-3-3-4-3-1">The number of bacteria after 6 hours is given by <span class="process-math">\(n(6)=1000\cdot 2^{6/4} \approx 2828\)</span> bacteria. The number of bacteria after <span class="process-math">\(10\)</span> hours is given by <span class="process-math">\(n(10)=1000\cdot 2^{10/4}\approx5657\)</span> bacteria. The number of bacteria after <span class="process-math">\(24\)</span> hours is given by <span class="process-math">\(n(24)=1000\cdot 2^6=64,000\)</span> bacteria.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-3-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.4.1"><a href="#sec_Ch1Sec5-3-3-4-3" title="Copy heading and permalink for Solution 1.5.4.1" aria-label="Copy heading and permalink for Solution 1.5.4.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.5.4: Bacterial Growth"><a href="#sec_Ch1Sec5-3-3-4" title="Copy heading and permalink for Example 1.5.4: Bacterial Growth" aria-label="Copy heading and permalink for Example 1.5.4: Bacterial Growth">🔗</a></div></article><details id="sec_Ch1Sec5-3-3-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
-<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec5-3-3-5-1-1">Given the exponential function <span class="process-math">\(f(x)=100\cdot 3^{x/2},\)</span> evaluate <span class="process-math">\(f(4)\)</span> and <span class="process-math">\(f(10).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details>
 </div>
-<div class="solutions"><details id="sec_Ch1Sec5-3-3-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="autopermalink" data-description="Example 1.5.4: Bacterial Growth"><a href="#sec_Ch1Sec5-3-3-4" title="Copy heading and permalink for Example 1.5.4: Bacterial Growth" aria-label="Copy heading and permalink for Example 1.5.4: Bacterial Growth">🔗</a></div>
+</article>
+<details id="sec_Ch1Sec5-3-3-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch1Sec5-3-3-5-1-1">Given the exponential function <span class="process-math">\(f(x)=100\cdot 3^{x/2},\)</span> evaluate <span class="process-math">\(f(4)\)</span> and <span class="process-math">\(f(10).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch1Sec5-3-3-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-3-3-5-2-1">
 <span class="process-math">\(f(4)=900;f(10)=24,300.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-3-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.5.1"><a href="#sec_Ch1Sec5-3-3-5-2" title="Copy heading and permalink for Solution 1.5.5.1" aria-label="Copy heading and permalink for Solution 1.5.5.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Checkpoint 1.5.5"><a href="#sec_Ch1Sec5-3-3-5" title="Copy heading and permalink for Checkpoint 1.5.5" aria-label="Copy heading and permalink for Checkpoint 1.5.5">🔗</a></div></article></details><article class="note remark-like" id="sec_Ch1Sec5-3-3-6"><h5 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.5.5"><a href="#sec_Ch1Sec5-3-3-5" title="Copy heading and permalink for Checkpoint 1.5.5" aria-label="Copy heading and permalink for Checkpoint 1.5.5">🔗</a></div>
+</article></details>
+<article class="note remark-like" id="sec_Ch1Sec5-3-3-6"><h5 class="heading">
 <span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Media.</span>
 </h5>
 <div class="para" id="sec_Ch1Sec5-3-3-6-2">Go to <a class="external" href="http://www.openstax.org/l/20_exponengrow" target="_blank">World Population Balance</a> for another example of exponential population growth.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-3-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Note 1.5.6: Media"><a href="#sec_Ch1Sec5-3-3-6" title="Copy heading and permalink for Note 1.5.6: Media" aria-label="Copy heading and permalink for Note 1.5.6: Media">🔗</a></div></article><div class="autopermalink" data-description="Subsubsection 1.5.1.1: Evaluating Exponential Functions"><a href="#sec_Ch1Sec5-3-3" title="Copy heading and permalink for Subsubsection 1.5.1.1: Evaluating Exponential Functions" aria-label="Copy heading and permalink for Subsubsection 1.5.1.1: Evaluating Exponential Functions">🔗</a></div></section><section class="subsubsection" id="sec_Ch1Sec5-3-4"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Note 1.5.6: Media"><a href="#sec_Ch1Sec5-3-3-6" title="Copy heading and permalink for Note 1.5.6: Media" aria-label="Copy heading and permalink for Note 1.5.6: Media">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsubsection 1.5.1.1: Evaluating Exponential Functions"><a href="#sec_Ch1Sec5-3-3" title="Copy heading and permalink for Subsubsection 1.5.1.1: Evaluating Exponential Functions" aria-label="Copy heading and permalink for Subsubsection 1.5.1.1: Evaluating Exponential Functions">🔗</a></div>
+</section>
+<section class="subsubsection" id="sec_Ch1Sec5-3-4">
+<h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Graphing Exponential Functions</span>
 </h4>
 <div class="para" id="sec_Ch1Sec5-3-4-2">For any base <span class="process-math">\(b\gt 0,b\neq 1,\)</span> the exponential function <span class="process-math">\(f(x)=b^x\)</span> is defined for all real numbers <span class="process-math">\(x\)</span> and <span class="process-math">\(b^x\gt 0.\)</span> Therefore, the domain of <span class="process-math">\(f(x)=b^x\)</span> is <span class="process-math">\((.\infty,\infty)\)</span> and the range is <span class="process-math">\((0,\infty).\)</span> To graph <span class="process-math">\(b^x,\)</span> we note that for <span class="process-math">\(b\gt 1,b^x\)</span> is increasing on <span class="process-math">\((.\infty,\infty)\)</span> and <span class="process-math">\(b^x\to \infty\)</span> as <span class="process-math">\(x\to \infty,\)</span> whereas <span class="process-math">\(b^x\to 0\)</span> as <span class="process-math">\(x\to .\infty.\)</span> On the other hand, if <span class="process-math">\(0\lt b\lt 1,f(x)=b^x\)</span> is decreasing on <span class="process-math">\((.\infty,\infty)\)</span> and <span class="process-math">\(b^x\to 0\)</span> as <span class="process-math">\(x\to \infty\)</span> whereas <span class="process-math">\(b^x\to \infty\)</span> as <span class="process-math">\(x\to .\infty\)</span> (<a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_002" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.7">Figure 1.5.7</a>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_01_05_002"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_05_002.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 3 and the y axis runs from 0 to 4. The graph is of four functions. The first function is “f(x) = 2 to the power of x”, an increasing curved function, which starts slightly above the x axis and begins increasing. The second function is “f(x) = 4 to the power of x”, an increasing curved function, which starts slightly above the x axis and begins increasing rapidly, more rapidly than the first function. The third function is “f(x) = (1/2) to the power of x”, a decreasing curved function with decreases until it gets close to the x axis without touching it. The third function is “f(x) = (1/4) to the power of x”, a decreasing curved function with decreases until it gets close to the x axis without touching it. It decreases at a faster rate than the third function."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>If <span class="process-math">\(b\gt 1,\)</span> then <span class="process-math">\(b^x\)</span> is increasing on <span class="process-math">\((.\infty,\infty).\)</span> If <span class="process-math">\(0\lt b\lt 1,\)</span> then <span class="process-math">\(b^x\)</span> is decreasing on <span class="process-math">\((.\infty,\infty).\)</span><div class="autopermalink" data-description="Figure 1.5.7"><a href="#CNX_Calc_Figure_01_05_002" title="Copy heading and permalink for Figure 1.5.7" aria-label="Copy heading and permalink for Figure 1.5.7">🔗</a></div></figcaption></figure><article class="note remark-like" id="sec_Ch1Sec5-3-4-4"><h5 class="heading">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>If <span class="process-math">\(b\gt 1,\)</span> then <span class="process-math">\(b^x\)</span> is increasing on <span class="process-math">\((.\infty,\infty).\)</span> If <span class="process-math">\(0\lt b\lt 1,\)</span> then <span class="process-math">\(b^x\)</span> is decreasing on <span class="process-math">\((.\infty,\infty).\)</span><div class="autopermalink" data-description="Figure 1.5.7"><a href="#CNX_Calc_Figure_01_05_002" title="Copy heading and permalink for Figure 1.5.7" aria-label="Copy heading and permalink for Figure 1.5.7">🔗</a></div></figcaption>
+</figure>
+<article class="note remark-like" id="sec_Ch1Sec5-3-4-4"><h5 class="heading">
 <span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Media.</span>
 </h5>
 <div class="para" id="sec_Ch1Sec5-3-4-4-2">Visit this <a class="external" href="http://www.openstax.org/l/20_inverse" target="_blank">site</a> for more exploration of the graphs of exponential functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Note 1.5.8: Media"><a href="#sec_Ch1Sec5-3-4-4" title="Copy heading and permalink for Note 1.5.8: Media" aria-label="Copy heading and permalink for Note 1.5.8: Media">🔗</a></div></article><div class="para" id="sec_Ch1Sec5-3-4-5">Note that exponential functions satisfy the general laws of exponents. To remind you of these laws, we state them as rules.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Note 1.5.8: Media"><a href="#sec_Ch1Sec5-3-4-4" title="Copy heading and permalink for Note 1.5.8: Media" aria-label="Copy heading and permalink for Note 1.5.8: Media">🔗</a></div>
+</article>
+<div class="para" id="sec_Ch1Sec5-3-4-5">Note that exponential functions satisfy the general laws of exponents. To remind you of these laws, we state them as rules.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="note remark-like" id="sec_Ch1Sec5-3-4-6"><h5 class="heading">
 <span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rule: Laws of Exponents.</span>
@@ -565,11 +558,14 @@ P(t)=P_0(1.02)^t,
 <div class="autopermalink" data-description="Item 5"><a href="#sec_Ch1Sec5-3-4-6-3-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Note 1.5.9: Rule: Laws of Exponents"><a href="#sec_Ch1Sec5-3-4-6" title="Copy heading and permalink for Note 1.5.9: Rule: Laws of Exponents" aria-label="Copy heading and permalink for Note 1.5.9: Rule: Laws of Exponents">🔗</a></div></article><article class="example example-like" id="sec_Ch1Sec5-3-4-7"><h5 class="heading">
+<div class="autopermalink" data-description="Note 1.5.9: Rule: Laws of Exponents"><a href="#sec_Ch1Sec5-3-4-6" title="Copy heading and permalink for Note 1.5.9: Rule: Laws of Exponents" aria-label="Copy heading and permalink for Note 1.5.9: Rule: Laws of Exponents">🔗</a></div>
+</article>
+<article class="example example-like" id="sec_Ch1Sec5-3-4-7"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using the Laws of Exponents.</span>
 </h5>
 <div class="para" id="sec_Ch1Sec5-3-4-7-2-1">Use the laws of exponents to simplify each of the following expressions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-4-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <ol class="decimal" id="sec_Ch1Sec5-3-4-7-2-2">
+</div> 
+<ol class="decimal" id="sec_Ch1Sec5-3-4-7-2-2">
 <li id="sec_Ch1Sec5-3-4-7-2-2-1">
 <div class="para" id="p-derived-sec_Ch1Sec5-3-4-7-2-2-1"><span class="process-math">\(\displaystyle \frac{(2x^{2/3})^3}{(4x^{-1/3})^2}\)</span></div>
 <div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec5-3-4-7-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
@@ -579,7 +575,9 @@ P(t)=P_0(1.02)^t,
 <div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec5-3-4-7-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="solutions"><details id="sec_Ch1Sec5-3-4-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="sec_Ch1Sec5-3-4-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <ol class="decimal" id="sec_Ch1Sec5-3-4-7-3-1">
 <li id="sec_Ch1Sec5-3-4-7-3-1-1">
 <div class="para" id="p-derived-sec_Ch1Sec5-3-4-7-3-1-1">We can simplify as follows:<div class="displaymath process-math" id="sec_Ch1Sec5-3-4-7-3-1-1-1">
@@ -601,25 +599,38 @@ P(t)=P_0(1.02)^t,
 </li>
 </ol>
 <div class="autopermalink" data-description="Solution 1.5.10.1"><a href="#sec_Ch1Sec5-3-4-7-3" title="Copy heading and permalink for Solution 1.5.10.1" aria-label="Copy heading and permalink for Solution 1.5.10.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.5.10: Using the Laws of Exponents"><a href="#sec_Ch1Sec5-3-4-7" title="Copy heading and permalink for Example 1.5.10: Using the Laws of Exponents" aria-label="Copy heading and permalink for Example 1.5.10: Using the Laws of Exponents">🔗</a></div></article><details id="sec_Ch1Sec5-3-4-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.5.10: Using the Laws of Exponents"><a href="#sec_Ch1Sec5-3-4-7" title="Copy heading and permalink for Example 1.5.10: Using the Laws of Exponents" aria-label="Copy heading and permalink for Example 1.5.10: Using the Laws of Exponents">🔗</a></div>
+</article>
+<details id="sec_Ch1Sec5-3-4-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec5-3-4-8-1-1">Use the laws of exponents to simplify <span class="process-math">\((6x^{-3}y^2)/(12x^{-4}y^5).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-4-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch1Sec5-3-4-8-1-1">Use the laws of exponents to simplify <span class="process-math">\((6x^{-3}y^2)/(12x^{-4}y^5).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-4-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch1Sec5-3-4-8-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch1Sec5-3-4-8-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-3-4-8-3-1">
 <span class="process-math">\(x^a/x^b=x^{a-b}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-4-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.5.11.1"><a href="#sec_Ch1Sec5-3-4-8-3" title="Copy heading and permalink for Hint 1.5.11.1" aria-label="Copy heading and permalink for Hint 1.5.11.1">🔗</a></div>
-</div></details><details id="sec_Ch1Sec5-3-4-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch1Sec5-3-4-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-3-4-8-2-1">
 <span class="process-math">\(x/(2y^3)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-3-4-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.11.1"><a href="#sec_Ch1Sec5-3-4-8-2" title="Copy heading and permalink for Solution 1.5.11.1" aria-label="Copy heading and permalink for Solution 1.5.11.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 1.5.11"><a href="#sec_Ch1Sec5-3-4-8" title="Copy heading and permalink for Checkpoint 1.5.11" aria-label="Copy heading and permalink for Checkpoint 1.5.11">🔗</a></div></article></details><div class="autopermalink" data-description="Subsubsection 1.5.1.2: Graphing Exponential Functions"><a href="#sec_Ch1Sec5-3-4" title="Copy heading and permalink for Subsubsection 1.5.1.2: Graphing Exponential Functions" aria-label="Copy heading and permalink for Subsubsection 1.5.1.2: Graphing Exponential Functions">🔗</a></div></section><div class="autopermalink" data-description="Subsection 1.5.1: Exponential Functions"><a href="#sec_Ch1Sec5-3" title="Copy heading and permalink for Subsection 1.5.1: Exponential Functions" aria-label="Copy heading and permalink for Subsection 1.5.1: Exponential Functions">🔗</a></div></section><section class="subsection" id="sec_Ch1Sec5-4"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Checkpoint 1.5.11"><a href="#sec_Ch1Sec5-3-4-8" title="Copy heading and permalink for Checkpoint 1.5.11" aria-label="Copy heading and permalink for Checkpoint 1.5.11">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsubsection 1.5.1.2: Graphing Exponential Functions"><a href="#sec_Ch1Sec5-3-4" title="Copy heading and permalink for Subsubsection 1.5.1.2: Graphing Exponential Functions" aria-label="Copy heading and permalink for Subsubsection 1.5.1.2: Graphing Exponential Functions">🔗</a></div>
+</section><div class="autopermalink" data-description="Subsection 1.5.1: Exponential Functions"><a href="#sec_Ch1Sec5-3" title="Copy heading and permalink for Subsection 1.5.1: Exponential Functions" aria-label="Copy heading and permalink for Subsection 1.5.1: Exponential Functions">🔗</a></div>
+</section>
+<section class="subsection" id="sec_Ch1Sec5-4">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Number <span class="process-math">\(e \)</span></span>
 </h3>
 <div class="para" id="sec_Ch1Sec5-4-2">A special type of exponential function appears frequently in real-world applications. To describe it, consider the following example of exponential growth, which arises from <dfn class="terminology">compounding interest</dfn> in a savings account. Suppose a person invests <span class="process-math">\(P\)</span> dollars in a savings account with an annual interest rate <span class="process-math">\(r,\)</span> compounded annually. The amount of money after 1 year is<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -699,7 +710,9 @@ A\left(t\right)=P\left(1+\frac{r}{n}\right)^{nt}.
 <td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(2.718268\)</span></td>
 <td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(2.718280\)</span></td>
 </tr>
-</table></div></figure><div class="para" id="sec_Ch1Sec5-4-20">Looking at this table, it appears that <span class="process-math">\((1+1/m)^m\)</span> is approaching a number between <span class="process-math">\(2.7\)</span> and <span class="process-math">\(2.8\)</span> as <span class="process-math">\(m\to \infty.\)</span> In fact, <span class="process-math">\((1+1/m)^m\)</span> does approach some number as <span class="process-math">\(m\to \infty.\)</span> We call this <dfn class="terminology">number <span class="process-math">\(e\)</span></dfn>. To six decimal places of accuracy,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-4-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</table></div>
+</figure>
+<div class="para" id="sec_Ch1Sec5-4-20">Looking at this table, it appears that <span class="process-math">\((1+1/m)^m\)</span> is approaching a number between <span class="process-math">\(2.7\)</span> and <span class="process-math">\(2.8\)</span> as <span class="process-math">\(m\to \infty.\)</span> In fact, <span class="process-math">\((1+1/m)^m\)</span> does approach some number as <span class="process-math">\(m\to \infty.\)</span> We call this <dfn class="terminology">number <span class="process-math">\(e\)</span></dfn>. To six decimal places of accuracy,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-4-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1170572451390.html ./knowl/xref/CNX_Calc_Figure_01_05_003.html" id="sec_Ch1Sec5-4-21">
 \begin{equation*}
@@ -713,11 +726,14 @@ e\approx2.718282.
 <div class="para" id="sec_Ch1Sec5-4-24">Since <span class="process-math">\(e\gt 1,\)</span> we know <span class="process-math">\(e^x\)</span> is increasing on <span class="process-math">\((.\infty,\infty).\)</span> In <a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_003" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_003.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.13">Figure 1.5.13</a>, we show a graph of <span class="process-math">\(f(x)=e^x\)</span> along with a tangent line to the graph of at <span class="process-math">\(x=0.\)</span> We give a precise definition of tangent line in the next chapter; but, informally, we say a tangent line to a graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=a\)</span> is a line that passes through the point <span class="process-math">\((a,f(a))\)</span> and has the same “slope” as <span class="process-math">\(f\)</span> at that point <span class="process-math">\(.\)</span> The function <span class="process-math">\(f(x)=e^x\)</span> is the only exponential function <span class="process-math">\(b^x\)</span> with tangent line at <span class="process-math">\(x=0\)</span> that has a slope of 1. As we see later in the text, having this property makes the natural exponential function the most simple exponential function to use in many instances.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-4-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_01_05_003"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_05_003.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 3 and the y axis runs from 0 to 4. The graph is of the function “f(x) = e to power of x”, an increasing curved function that starts slightly above the x axis. The y intercept is at the point (0, 1). At this point, a line is drawn tangent to the function. This line has the label “slope = 1”."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(f(x)=e^x\)</span> has a tangent line with slope <span class="process-math">\(1\)</span> at <span class="process-math">\(x=0.\)</span><div class="autopermalink" data-description="Figure 1.5.13"><a href="#CNX_Calc_Figure_01_05_003" title="Copy heading and permalink for Figure 1.5.13" aria-label="Copy heading and permalink for Figure 1.5.13">🔗</a></div></figcaption></figure><article class="example example-like" id="sec_Ch1Sec5-4-26"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(f(x)=e^x\)</span> has a tangent line with slope <span class="process-math">\(1\)</span> at <span class="process-math">\(x=0.\)</span><div class="autopermalink" data-description="Figure 1.5.13"><a href="#CNX_Calc_Figure_01_05_003" title="Copy heading and permalink for Figure 1.5.13" aria-label="Copy heading and permalink for Figure 1.5.13">🔗</a></div></figcaption>
+</figure>
+<article class="example example-like" id="sec_Ch1Sec5-4-26"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Compounding Interest.</span>
 </h4>
 <div class="para" id="sec_Ch1Sec5-4-26-2-1">Suppose <span class="process-math">\(.500\)</span> is invested in an account at an annual interest rate of <span class="process-math">\(r=5.5\%,\)</span> compounded continuously.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-4-26-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <ol class="decimal" id="sec_Ch1Sec5-4-26-2-2">
+</div> 
+<ol class="decimal" id="sec_Ch1Sec5-4-26-2-2">
 <li id="sec_Ch1Sec5-4-26-2-2-1">
 <div class="para" id="p-derived-sec_Ch1Sec5-4-26-2-2-1">Let <span class="process-math">\(t\)</span> denote the number of years after the initial investment and <span class="process-math">\(A(t)\)</span> denote the amount of money in the account at time <span class="process-math">\(t.\)</span> Find a formula for <span class="process-math">\(A(t).\)</span>
 </div>
@@ -728,7 +744,9 @@ e\approx2.718282.
 <div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec5-4-26-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="solutions"><details id="sec_Ch1Sec5-4-26-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="sec_Ch1Sec5-4-26-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <ol class="decimal" id="sec_Ch1Sec5-4-26-3-1">
 <li id="sec_Ch1Sec5-4-26-3-1-1">
 <div class="para" id="p-derived-sec_Ch1Sec5-4-26-3-1-1">If <span class="process-math">\(P\)</span> dollars are invested in an account at an annual interest rate <span class="process-math">\(r,\)</span> compounded continuously, then <span class="process-math">\(A(t)=Pe^{rt}.\)</span> Here <span class="process-math">\(P=.500\)</span> and <span class="process-math">\(r=0.055.\)</span> Therefore, <span class="process-math">\(A(t)=500e^{0.055t}.\)</span>
@@ -750,25 +768,37 @@ A(20)=500e^{0.055\cdot 20}=500e^{1.1}\approx.1,502.08.
 </li>
 </ol>
 <div class="autopermalink" data-description="Solution 1.5.14.1"><a href="#sec_Ch1Sec5-4-26-3" title="Copy heading and permalink for Solution 1.5.14.1" aria-label="Copy heading and permalink for Solution 1.5.14.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.5.14: Compounding Interest"><a href="#sec_Ch1Sec5-4-26" title="Copy heading and permalink for Example 1.5.14: Compounding Interest" aria-label="Copy heading and permalink for Example 1.5.14: Compounding Interest">🔗</a></div></article><details id="sec_Ch1Sec5-4-27" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.5.14: Compounding Interest"><a href="#sec_Ch1Sec5-4-26" title="Copy heading and permalink for Example 1.5.14: Compounding Interest" aria-label="Copy heading and permalink for Example 1.5.14: Compounding Interest">🔗</a></div>
+</article>
+<details id="sec_Ch1Sec5-4-27" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec5-4-27-1-1">If <span class="process-math">\(.750\)</span> is invested in an account at an annual interest rate of <span class="process-math">\(4\%,\)</span> compounded continuously, find a formula for the amount of money in the account after <span class="process-math">\(t\)</span> years. Find the amount of money after <span class="process-math">\(30\)</span> years.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-4-27-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch1Sec5-4-27-1-1">If <span class="process-math">\(.750\)</span> is invested in an account at an annual interest rate of <span class="process-math">\(4\%,\)</span> compounded continuously, find a formula for the amount of money in the account after <span class="process-math">\(t\)</span> years. Find the amount of money after <span class="process-math">\(30\)</span> years.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-4-27-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch1Sec5-4-27-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch1Sec5-4-27-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-4-27-3-1">
 <span class="process-math">\(A(t)=Pe^{rt}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-4-27-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.5.15.1"><a href="#sec_Ch1Sec5-4-27-3" title="Copy heading and permalink for Hint 1.5.15.1" aria-label="Copy heading and permalink for Hint 1.5.15.1">🔗</a></div>
-</div></details><details id="sec_Ch1Sec5-4-27-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch1Sec5-4-27-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-4-27-2-1">
 <span class="process-math">\(A(t)=750e^{0.04t}.\)</span> After <span class="process-math">\(30\)</span> years, there will be approximately <span class="process-math">\(.2,490.09.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-4-27-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.15.1"><a href="#sec_Ch1Sec5-4-27-2" title="Copy heading and permalink for Solution 1.5.15.1" aria-label="Copy heading and permalink for Solution 1.5.15.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 1.5.15"><a href="#sec_Ch1Sec5-4-27" title="Copy heading and permalink for Checkpoint 1.5.15" aria-label="Copy heading and permalink for Checkpoint 1.5.15">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 1.5.2: The Number  e "><a href="#sec_Ch1Sec5-4" title="Copy heading and permalink for Subsection 1.5.2: The Number  e " aria-label="Copy heading and permalink for Subsection 1.5.2: The Number  e ">🔗</a></div></section><section class="subsection" id="sec_Ch1Sec5-5"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Checkpoint 1.5.15"><a href="#sec_Ch1Sec5-4-27" title="Copy heading and permalink for Checkpoint 1.5.15" aria-label="Copy heading and permalink for Checkpoint 1.5.15">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 1.5.2: The Number  e "><a href="#sec_Ch1Sec5-4" title="Copy heading and permalink for Subsection 1.5.2: The Number  e " aria-label="Copy heading and permalink for Subsection 1.5.2: The Number  e ">🔗</a></div>
+</section>
+<section class="subsection" id="sec_Ch1Sec5-5">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Logarithmic Functions</span>
 </h3>
 <div class="para" id="sec_Ch1Sec5-5-2">Using our understanding of exponential functions, we can discuss their inverses, which are the logarithmic functions. These come in handy when we need to consider any phenomenon that varies over a wide range of values, such as pH in chemistry or decibels in sound levels.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -813,15 +843,21 @@ A(20)=500e^{0.055\cdot 20}=500e^{1.1}\approx.1,502.08.
 <div class="para" id="sec_Ch1Sec5-5-13">and their graphs are symmetric about the line <span class="process-math">\(y=x\)</span> (<a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_004" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_004.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.16">Figure 1.5.16</a>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_01_05_004"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_05_004.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 3 and the y axis runs from -3 to 4. The graph is of two functions. The first function is “f(x) = e to power of x”, an increasing curved function that starts slightly above the x axis. The y intercept is at the point (0, 1) and there is no x intercept. The second function is “f(x) = ln(x)”, an increasing curved function. The x intercept is at the point (1, 0) and there is no y intercept. A dotted line with label “y = x” is also plotted on the graph, to show that the functions are mirror images over this line."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The functions <span class="process-math">\(y=e^x\)</span> and <span class="process-math">\(y=\ln(x)\)</span> are inverses of each other, so their graphs are symmetric about the line <span class="process-math">\(y=x.\)</span><div class="autopermalink" data-description="Figure 1.5.16"><a href="#CNX_Calc_Figure_01_05_004" title="Copy heading and permalink for Figure 1.5.16" aria-label="Copy heading and permalink for Figure 1.5.16">🔗</a></div></figcaption></figure><article class="note remark-like" id="sec_Ch1Sec5-5-15"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The functions <span class="process-math">\(y=e^x\)</span> and <span class="process-math">\(y=\ln(x)\)</span> are inverses of each other, so their graphs are symmetric about the line <span class="process-math">\(y=x.\)</span><div class="autopermalink" data-description="Figure 1.5.16"><a href="#CNX_Calc_Figure_01_05_004" title="Copy heading and permalink for Figure 1.5.16" aria-label="Copy heading and permalink for Figure 1.5.16">🔗</a></div></figcaption>
+</figure>
+<article class="note remark-like" id="sec_Ch1Sec5-5-15"><h4 class="heading">
 <span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Media.</span>
 </h4>
 <div class="para" id="sec_Ch1Sec5-5-15-2">At this <a class="external" href="http://www.openstax.org/l/20_logscale" target="_blank">site</a> you can see an example of a base-10 logarithmic scale.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-15-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Note 1.5.17: Media"><a href="#sec_Ch1Sec5-5-15" title="Copy heading and permalink for Note 1.5.17: Media" aria-label="Copy heading and permalink for Note 1.5.17: Media">🔗</a></div></article><div class="para" id="sec_Ch1Sec5-5-16">In general, for any base <span class="process-math">\(b\gt 0,b\neq 1,\)</span> the function <span class="process-math">\(g(x)=\log_b (x)\)</span> is symmetric about the line <span class="process-math">\(y=x\)</span> with the function <span class="process-math">\(f(x)=b^x.\)</span> Using this fact and the graphs of the exponential functions, we graph functions <span class="process-math">\(\log_b \)</span> for several values of <span class="process-math">\(b\gt 1\)</span> (<a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_005" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_005.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.18">Figure 1.5.18</a>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Note 1.5.17: Media"><a href="#sec_Ch1Sec5-5-15" title="Copy heading and permalink for Note 1.5.17: Media" aria-label="Copy heading and permalink for Note 1.5.17: Media">🔗</a></div>
+</article>
+<div class="para" id="sec_Ch1Sec5-5-16">In general, for any base <span class="process-math">\(b\gt 0,b\neq 1,\)</span> the function <span class="process-math">\(g(x)=\log_b (x)\)</span> is symmetric about the line <span class="process-math">\(y=x\)</span> with the function <span class="process-math">\(f(x)=b^x.\)</span> Using this fact and the graphs of the exponential functions, we graph functions <span class="process-math">\(\log_b \)</span> for several values of <span class="process-math">\(b\gt 1\)</span> (<a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_005" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_005.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.18">Figure 1.5.18</a>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_01_05_005"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_05_005.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 3 and the y axis runs from 0 to 4. The graph is of three functions. All three functions a log functions that are increasing curved functions that start slightly to the right of the y axis and have an x intercept at (1, 0). The first function is “y = log base 10 (x)”, the second function is “f(x) = ln(x)”, and the third function is “y = log base 2 (x)”. The third function increases the most rapidly, the second function increases next most rapidly, and the third function increases the slowest."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of <span class="process-math">\(y=\log_b (x)\)</span> are depicted for <span class="process-math">\(b=2,e,10.\)</span><div class="autopermalink" data-description="Figure 1.5.18"><a href="#CNX_Calc_Figure_01_05_005" title="Copy heading and permalink for Figure 1.5.18" aria-label="Copy heading and permalink for Figure 1.5.18">🔗</a></div></figcaption></figure><div class="para" id="sec_Ch1Sec5-5-18">Before solving some equations involving exponential and logarithmic functions, let’s review the basic properties of logarithms.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of <span class="process-math">\(y=\log_b (x)\)</span> are depicted for <span class="process-math">\(b=2,e,10.\)</span><div class="autopermalink" data-description="Figure 1.5.18"><a href="#CNX_Calc_Figure_01_05_005" title="Copy heading and permalink for Figure 1.5.18" aria-label="Copy heading and permalink for Figure 1.5.18">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="sec_Ch1Sec5-5-18">Before solving some equations involving exponential and logarithmic functions, let’s review the basic properties of logarithms.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="note remark-like" id="sec_Ch1Sec5-5-19"><h4 class="heading">
 <span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rule: Properties of Logarithms.</span>
@@ -835,11 +871,14 @@ A(20)=500e^{0.055\cdot 20}=500e^{1.1}\approx.1,502.08.
 3. \log_b (a^r)=r\log_b (a) \amp \text{ (Power property) }
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Note 1.5.19: Rule: Properties of Logarithms"><a href="#sec_Ch1Sec5-5-19" title="Copy heading and permalink for Note 1.5.19: Rule: Properties of Logarithms" aria-label="Copy heading and permalink for Note 1.5.19: Rule: Properties of Logarithms">🔗</a></div></article><article class="example example-like" id="sec_Ch1Sec5-5-20"><h4 class="heading">
+<div class="autopermalink" data-description="Note 1.5.19: Rule: Properties of Logarithms"><a href="#sec_Ch1Sec5-5-19" title="Copy heading and permalink for Note 1.5.19: Rule: Properties of Logarithms" aria-label="Copy heading and permalink for Note 1.5.19: Rule: Properties of Logarithms">🔗</a></div>
+</article>
+<article class="example example-like" id="sec_Ch1Sec5-5-20"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving Equations Involving Exponential Functions.</span>
 </h4>
 <div class="para" id="sec_Ch1Sec5-5-20-2-1">Solve each of the following equations for <span class="process-math">\(x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-20-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <ol class="decimal" id="sec_Ch1Sec5-5-20-2-2">
+</div> 
+<ol class="decimal" id="sec_Ch1Sec5-5-20-2-2">
 <li id="sec_Ch1Sec5-5-20-2-2-1">
 <div class="para" id="p-derived-sec_Ch1Sec5-5-20-2-2-1"><span class="process-math">\(\displaystyle 5^x=2\)</span></div>
 <div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec5-5-20-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
@@ -849,7 +888,9 @@ A(20)=500e^{0.055\cdot 20}=500e^{1.1}\approx.1,502.08.
 <div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec5-5-20-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="solutions"><details id="sec_Ch1Sec5-5-20-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="sec_Ch1Sec5-5-20-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <ol class="decimal" id="sec_Ch1Sec5-5-20-3-1">
 <li id="sec_Ch1Sec5-5-20-3-1-1">
 <div class="para" id="p-derived-sec_Ch1Sec5-5-20-3-1-1">Applying the natural logarithm function to both sides of the equation, we have<div class="displaymath process-math" id="sec_Ch1Sec5-5-20-3-1-1-1">
@@ -887,28 +928,39 @@ e^{2x}-5e^x+6=0,
 </li>
 </ol>
 <div class="autopermalink" data-description="Solution 1.5.20.1"><a href="#sec_Ch1Sec5-5-20-3" title="Copy heading and permalink for Solution 1.5.20.1" aria-label="Copy heading and permalink for Solution 1.5.20.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.5.20: Solving Equations Involving Exponential Functions"><a href="#sec_Ch1Sec5-5-20" title="Copy heading and permalink for Example 1.5.20: Solving Equations Involving Exponential Functions" aria-label="Copy heading and permalink for Example 1.5.20: Solving Equations Involving Exponential Functions">🔗</a></div></article><details id="sec_Ch1Sec5-5-21" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.5.20: Solving Equations Involving Exponential Functions"><a href="#sec_Ch1Sec5-5-20" title="Copy heading and permalink for Example 1.5.20: Solving Equations Involving Exponential Functions" aria-label="Copy heading and permalink for Example 1.5.20: Solving Equations Involving Exponential Functions">🔗</a></div>
+</article>
+<details id="sec_Ch1Sec5-5-21" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec5-5-21-1-1">Solve <span class="process-math">\(e^{-x}/(3+e^{-x})=1/2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch1Sec5-5-21-1-1">Solve <span class="process-math">\(e^{-x}/(3+e^{-x})=1/2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch1Sec5-5-21-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch1Sec5-5-21-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-5-21-3-1">First solve the equation for <span class="process-math">\(e^{-x}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-21-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.5.21.1"><a href="#sec_Ch1Sec5-5-21-3" title="Copy heading and permalink for Hint 1.5.21.1" aria-label="Copy heading and permalink for Hint 1.5.21.1">🔗</a></div>
-</div></details><details id="sec_Ch1Sec5-5-21-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch1Sec5-5-21-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-5-21-2-1">
 <span class="process-math">\(x=\frac{\ln 3}{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-21-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.21.1"><a href="#sec_Ch1Sec5-5-21-2" title="Copy heading and permalink for Solution 1.5.21.1" aria-label="Copy heading and permalink for Solution 1.5.21.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 1.5.21"><a href="#sec_Ch1Sec5-5-21" title="Copy heading and permalink for Checkpoint 1.5.21" aria-label="Copy heading and permalink for Checkpoint 1.5.21">🔗</a></div></article></details><article class="example example-like" id="sec_Ch1Sec5-5-22"><h4 class="heading">
+<div class="autopermalink" data-description="Checkpoint 1.5.21"><a href="#sec_Ch1Sec5-5-21" title="Copy heading and permalink for Checkpoint 1.5.21" aria-label="Copy heading and permalink for Checkpoint 1.5.21">🔗</a></div>
+</article></details>
+<article class="example example-like" id="sec_Ch1Sec5-5-22"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving Equations Involving Logarithmic Functions.</span>
 </h4>
 <div class="para" id="sec_Ch1Sec5-5-22-2-1">Solve each of the following equations for <span class="process-math">\(x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-22-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <ol class="decimal" id="sec_Ch1Sec5-5-22-2-2">
+</div> 
+<ol class="decimal" id="sec_Ch1Sec5-5-22-2-2">
 <li id="sec_Ch1Sec5-5-22-2-2-1">
 <div class="para" id="p-derived-sec_Ch1Sec5-5-22-2-2-1"><span class="process-math">\(\displaystyle \ln(\frac{1}{x})=4\)</span></div>
 <div class="autopermalink" data-description="Item 1"><a href="#sec_Ch1Sec5-5-22-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
@@ -922,7 +974,9 @@ e^{2x}-5e^x+6=0,
 <div class="autopermalink" data-description="Item 3"><a href="#sec_Ch1Sec5-5-22-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
-<div class="solutions"><details id="sec_Ch1Sec5-5-22-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="sec_Ch1Sec5-5-22-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <ol class="decimal" id="sec_Ch1Sec5-5-22-3-1">
 <li id="sec_Ch1Sec5-5-22-3-1-1">
 <div class="para" id="p-derived-sec_Ch1Sec5-5-22-3-1-1">By the definition of the natural logarithm function,<div class="displaymath process-math" id="sec_Ch1Sec5-5-22-3-1-1-1">
@@ -956,24 +1010,34 @@ e^{2x}-5e^x+6=0,
 </li>
 </ol>
 <div class="autopermalink" data-description="Solution 1.5.22.1"><a href="#sec_Ch1Sec5-5-22-3" title="Copy heading and permalink for Solution 1.5.22.1" aria-label="Copy heading and permalink for Solution 1.5.22.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.5.22: Solving Equations Involving Logarithmic Functions"><a href="#sec_Ch1Sec5-5-22" title="Copy heading and permalink for Example 1.5.22: Solving Equations Involving Logarithmic Functions" aria-label="Copy heading and permalink for Example 1.5.22: Solving Equations Involving Logarithmic Functions">🔗</a></div></article><details id="sec_Ch1Sec5-5-23" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.5.22: Solving Equations Involving Logarithmic Functions"><a href="#sec_Ch1Sec5-5-22" title="Copy heading and permalink for Example 1.5.22: Solving Equations Involving Logarithmic Functions" aria-label="Copy heading and permalink for Example 1.5.22: Solving Equations Involving Logarithmic Functions">🔗</a></div>
+</article>
+<details id="sec_Ch1Sec5-5-23" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec5-5-23-1-1">Solve <span class="process-math">\(\ln(x^3)-4&gt;\ln(x)=1.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch1Sec5-5-23-1-1">Solve <span class="process-math">\(\ln(x^3)-4&gt;\ln(x)=1.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch1Sec5-5-23-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch1Sec5-5-23-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-5-23-3-1">First use the power property, then use the product property of logarithms.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-23-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.5.23.1"><a href="#sec_Ch1Sec5-5-23-3" title="Copy heading and permalink for Hint 1.5.23.1" aria-label="Copy heading and permalink for Hint 1.5.23.1">🔗</a></div>
-</div></details><details id="sec_Ch1Sec5-5-23-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch1Sec5-5-23-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-5-23-2-1">
 <span class="process-math">\(x=\frac{1}{e}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-23-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.23.1"><a href="#sec_Ch1Sec5-5-23-2" title="Copy heading and permalink for Solution 1.5.23.1" aria-label="Copy heading and permalink for Solution 1.5.23.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 1.5.23"><a href="#sec_Ch1Sec5-5-23" title="Copy heading and permalink for Checkpoint 1.5.23" aria-label="Copy heading and permalink for Checkpoint 1.5.23">🔗</a></div></article></details><div class="para" id="sec_Ch1Sec5-5-24">When evaluating a logarithmic function with a calculator, you may have noticed that the only options are <span class="process-math">\(\log_{10}\)</span> or log, called the <dfn class="terminology">common logarithm</dfn>, or ln, which is the natural logarithm. However, exponential functions and logarithm functions can be expressed in terms of any desired base <span class="process-math">\(b.\)</span> If you need to use a calculator to evaluate an expression with a different base, you can apply the change-of-base formulas first. Using this change of base, we typically write a given exponential or logarithmic function in terms of the natural exponential and natural logarithmic functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Checkpoint 1.5.23"><a href="#sec_Ch1Sec5-5-23" title="Copy heading and permalink for Checkpoint 1.5.23" aria-label="Copy heading and permalink for Checkpoint 1.5.23">🔗</a></div>
+</article></details>
+<div class="para" id="sec_Ch1Sec5-5-24">When evaluating a logarithmic function with a calculator, you may have noticed that the only options are <span class="process-math">\(\log_{10}\)</span> or log, called the <dfn class="terminology">common logarithm</dfn>, or ln, which is the natural logarithm. However, exponential functions and logarithm functions can be expressed in terms of any desired base <span class="process-math">\(b.\)</span> If you need to use a calculator to evaluate an expression with a different base, you can apply the change-of-base formulas first. Using this change of base, we typically write a given exponential or logarithmic function in terms of the natural exponential and natural logarithmic functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="note remark-like" id="sec_Ch1Sec5-5-25"><h4 class="heading">
 <span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rule: Change-of-Base Formulas.</span>
@@ -994,7 +1058,9 @@ e^{2x}-5e^x+6=0,
 <div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec5-5-25-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Note 1.5.24: Rule: Change-of-Base Formulas"><a href="#sec_Ch1Sec5-5-25" title="Copy heading and permalink for Note 1.5.24: Rule: Change-of-Base Formulas" aria-label="Copy heading and permalink for Note 1.5.24: Rule: Change-of-Base Formulas">🔗</a></div></article><article class="note remark-like" id="sec_Ch1Sec5-5-26"><h4 class="heading">
+<div class="autopermalink" data-description="Note 1.5.24: Rule: Change-of-Base Formulas"><a href="#sec_Ch1Sec5-5-25" title="Copy heading and permalink for Note 1.5.24: Rule: Change-of-Base Formulas" aria-label="Copy heading and permalink for Note 1.5.24: Rule: Change-of-Base Formulas">🔗</a></div>
+</article>
+<article class="note remark-like" id="sec_Ch1Sec5-5-26"><h4 class="heading">
 <span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proof.</span>
 </h4>
 <div class="para" id="sec_Ch1Sec5-5-26-2">For the first change-of-base formula, we begin by making use of the power property of logarithmic functions. We know that for any base <span class="process-math">\(b\gt 0,b\neq 1,\log_b (a^x)=x\log_b a.\)</span> Therefore,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-26-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1029,40 +1095,56 @@ b^{uv}=(b^u)^v=a^v=x=b^w.
 </div>
 <div class="para" id="sec_Ch1Sec5-5-26-11">Therefore, <span class="process-math">\(b^{uv}=b^w.\)</span> Since exponential functions are one-to-one, we can conclude that <span class="process-math">\(u\cdot v=w.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-26-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Note 1.5.25: Proof"><a href="#sec_Ch1Sec5-5-26" title="Copy heading and permalink for Note 1.5.25: Proof" aria-label="Copy heading and permalink for Note 1.5.25: Proof">🔗</a></div></article><article class="example example-like" id="sec_Ch1Sec5-5-27"><h4 class="heading">
+<div class="autopermalink" data-description="Note 1.5.25: Proof"><a href="#sec_Ch1Sec5-5-26" title="Copy heading and permalink for Note 1.5.25: Proof" aria-label="Copy heading and permalink for Note 1.5.25: Proof">🔗</a></div>
+</article>
+<article class="example example-like" id="sec_Ch1Sec5-5-27"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Changing Bases.</span>
 </h4>
 <div class="para" id="sec_Ch1Sec5-5-27-2-1">Use a calculating utility to evaluate <span class="process-math">\(\log_{3}7\)</span> with the change-of-base formula presented earlier.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-27-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="sec_Ch1Sec5-5-27-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="sec_Ch1Sec5-5-27-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-5-27-3-1">Use the second equation with <span class="process-math">\(a=3\)</span> and <span class="process-math">\(e=3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-27-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec_Ch1Sec5-5-27-3-2">
 <span class="process-math">\(\log_{3}7=\frac{\ln 7}{\ln 3}\approx1.77124.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-27-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.26.1"><a href="#sec_Ch1Sec5-5-27-3" title="Copy heading and permalink for Solution 1.5.26.1" aria-label="Copy heading and permalink for Solution 1.5.26.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.5.26: Changing Bases"><a href="#sec_Ch1Sec5-5-27" title="Copy heading and permalink for Example 1.5.26: Changing Bases" aria-label="Copy heading and permalink for Example 1.5.26: Changing Bases">🔗</a></div></article><details id="sec_Ch1Sec5-5-28" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.5.26: Changing Bases"><a href="#sec_Ch1Sec5-5-27" title="Copy heading and permalink for Example 1.5.26: Changing Bases" aria-label="Copy heading and permalink for Example 1.5.26: Changing Bases">🔗</a></div>
+</article>
+<details id="sec_Ch1Sec5-5-28" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec5-5-28-1-1">Use the change-of-base formula and a calculating utility to evaluate <span class="process-math">\(\log_{4}6.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-28-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch1Sec5-5-28-1-1">Use the change-of-base formula and a calculating utility to evaluate <span class="process-math">\(\log_{4}6.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-28-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch1Sec5-5-28-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch1Sec5-5-28-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-5-28-3-1">Use the change of base to rewrite this expression in terms of expressions involving the natural logarithm function.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-28-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.5.27.1"><a href="#sec_Ch1Sec5-5-28-3" title="Copy heading and permalink for Hint 1.5.27.1" aria-label="Copy heading and permalink for Hint 1.5.27.1">🔗</a></div>
-</div></details><details id="sec_Ch1Sec5-5-28-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch1Sec5-5-28-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-5-28-2-1">
 <span class="process-math">\(1.29248\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-28-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.27.1"><a href="#sec_Ch1Sec5-5-28-2" title="Copy heading and permalink for Solution 1.5.27.1" aria-label="Copy heading and permalink for Solution 1.5.27.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 1.5.27"><a href="#sec_Ch1Sec5-5-28" title="Copy heading and permalink for Checkpoint 1.5.27" aria-label="Copy heading and permalink for Checkpoint 1.5.27">🔗</a></div></article></details><article class="example example-like" id="sec_Ch1Sec5-5-29"><h4 class="heading">
+<div class="autopermalink" data-description="Checkpoint 1.5.27"><a href="#sec_Ch1Sec5-5-28" title="Copy heading and permalink for Checkpoint 1.5.27" aria-label="Copy heading and permalink for Checkpoint 1.5.27">🔗</a></div>
+</article></details>
+<article class="example example-like" id="sec_Ch1Sec5-5-29"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.28</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Chapter Opener: The Richter Scale for Earthquakes.</span>
 </h4>
 <figure class="figure figure-like" id="CNX_Calc_Figure_01_05_010"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_05_013.jpg" class="contained" alt='"A photograph of an earthquake fault."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.29<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>(credit: modification of work by Robb Hannawacker, NPS)<div class="autopermalink" data-description="Figure 1.5.29"><a href="#CNX_Calc_Figure_01_05_010" title="Copy heading and permalink for Figure 1.5.29" aria-label="Copy heading and permalink for Figure 1.5.29">🔗</a></div></figcaption></figure> <div class="para" id="sec_Ch1Sec5-5-29-2-2">In 1935, Charles Richter developed a scale (now known as the <dfn class="terminology">Richter scale</dfn>) to measure the magnitude of an <dfn class="terminology">earthquake</dfn>. The scale is a base-10 logarithmic scale, and it can be described as follows: Consider one earthquake with magnitude <span class="process-math">\(R_1\)</span> on the Richter scale and a second earthquake with magnitude <span class="process-math">\(R_2\)</span> on the Richter scale. Suppose <span class="process-math">\(R_1\gt R_2,\)</span> which means the earthquake of magnitude <span class="process-math">\(R_1\)</span> is stronger, but how much stronger is it than the other earthquake? A way of measuring the intensity of an earthquake is by using a seismograph to measure the amplitude of the earthquake waves. If <span class="process-math">\(A_1\)</span> is the amplitude measured for the first earthquake and <span class="process-math">\(A_2\)</span> is the amplitude measured for the second earthquake, then the amplitudes and magnitudes of the two earthquakes satisfy the following equation:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-29-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.29<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>(credit: modification of work by Robb Hannawacker, NPS)<div class="autopermalink" data-description="Figure 1.5.29"><a href="#CNX_Calc_Figure_01_05_010" title="Copy heading and permalink for Figure 1.5.29" aria-label="Copy heading and permalink for Figure 1.5.29">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="sec_Ch1Sec5-5-29-2-2">In 1935, Charles Richter developed a scale (now known as the <dfn class="terminology">Richter scale</dfn>) to measure the magnitude of an <dfn class="terminology">earthquake</dfn>. The scale is a base-10 logarithmic scale, and it can be described as follows: Consider one earthquake with magnitude <span class="process-math">\(R_1\)</span> on the Richter scale and a second earthquake with magnitude <span class="process-math">\(R_2\)</span> on the Richter scale. Suppose <span class="process-math">\(R_1\gt R_2,\)</span> which means the earthquake of magnitude <span class="process-math">\(R_1\)</span> is stronger, but how much stronger is it than the other earthquake? A way of measuring the intensity of an earthquake is by using a seismograph to measure the amplitude of the earthquake waves. If <span class="process-math">\(A_1\)</span> is the amplitude measured for the first earthquake and <span class="process-math">\(A_2\)</span> is the amplitude measured for the second earthquake, then the amplitudes and magnitudes of the two earthquakes satisfy the following equation:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-29-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="sec_Ch1Sec5-5-29-2-3">
 \begin{equation*}
@@ -1091,9 +1173,12 @@ R_1-R_2=\log_{10}\left(\frac{A_1}{A_2}\right).
 \end{equation*}
 </div>
 <div class="para" id="sec_Ch1Sec5-5-29-2-10">Therefore, <span class="process-math">\(A_1=100A_2.\)</span> That is, the first earthquake is 100 times more intense than the second earthquake.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-29-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="sec_Ch1Sec5-5-29-2-11">How can we use logarithmic functions to compare the relative severity of the magnitude 9 earthquake in Japan in 2011 with the magnitude 7.3 earthquake in Haiti in 2010?<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-29-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="sec_Ch1Sec5-5-29-2-11">How can we use logarithmic functions to compare the relative severity of the magnitude 9 earthquake in Japan in 2011 with the magnitude 7.3 earthquake in Haiti in 2010?<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-29-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="sec_Ch1Sec5-5-29-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="sec_Ch1Sec5-5-29-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-5-29-3-1">To compare the Japan and Haiti earthquakes, we can use an equation presented earlier:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-29-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec_Ch1Sec5-5-29-3-2">
@@ -1102,30 +1187,45 @@ R_1-R_2=\log_{10}\left(\frac{A_1}{A_2}\right).
 <div class="para" id="sec_Ch1Sec5-5-29-3-3">Therefore, <span class="process-math">\(A_1/A_2=10^1.7,\)</span> and we conclude that the earthquake in Japan was approximately <span class="process-math">\(50\)</span> times more intense than the earthquake in Haiti.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-29-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.28.1"><a href="#sec_Ch1Sec5-5-29-3" title="Copy heading and permalink for Solution 1.5.28.1" aria-label="Copy heading and permalink for Solution 1.5.28.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.5.28: Chapter Opener: The Richter Scale for Earthquakes"><a href="#sec_Ch1Sec5-5-29" title="Copy heading and permalink for Example 1.5.28: Chapter Opener: The Richter Scale for Earthquakes" aria-label="Copy heading and permalink for Example 1.5.28: Chapter Opener: The Richter Scale for Earthquakes">🔗</a></div></article><details id="sec_Ch1Sec5-5-30" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.5.28: Chapter Opener: The Richter Scale for Earthquakes"><a href="#sec_Ch1Sec5-5-29" title="Copy heading and permalink for Example 1.5.28: Chapter Opener: The Richter Scale for Earthquakes" aria-label="Copy heading and permalink for Example 1.5.28: Chapter Opener: The Richter Scale for Earthquakes">🔗</a></div>
+</article>
+<details id="sec_Ch1Sec5-5-30" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.30</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec5-5-30-1-1">Compare the relative severity of a magnitude <span class="process-math">\(8.4\)</span> earthquake with a magnitude <span class="process-math">\(7.4\)</span> earthquake.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-30-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch1Sec5-5-30-1-1">Compare the relative severity of a magnitude <span class="process-math">\(8.4\)</span> earthquake with a magnitude <span class="process-math">\(7.4\)</span> earthquake.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-30-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch1Sec5-5-30-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch1Sec5-5-30-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-5-30-3-1">
 <span class="process-math">\(R_1-R_2=\log_{10}\left(A_1/A_2\right).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-30-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.5.30.1"><a href="#sec_Ch1Sec5-5-30-3" title="Copy heading and permalink for Hint 1.5.30.1" aria-label="Copy heading and permalink for Hint 1.5.30.1">🔗</a></div>
-</div></details><details id="sec_Ch1Sec5-5-30-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch1Sec5-5-30-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-5-30-2-1">The magnitude <span class="process-math">\(8.4\)</span> earthquake is roughly <span class="process-math">\(10\)</span> times as severe as the magnitude <span class="process-math">\(7.4\)</span> earthquake.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-5-30-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.30.1"><a href="#sec_Ch1Sec5-5-30-2" title="Copy heading and permalink for Solution 1.5.30.1" aria-label="Copy heading and permalink for Solution 1.5.30.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 1.5.30"><a href="#sec_Ch1Sec5-5-30" title="Copy heading and permalink for Checkpoint 1.5.30" aria-label="Copy heading and permalink for Checkpoint 1.5.30">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 1.5.3: Logarithmic Functions"><a href="#sec_Ch1Sec5-5" title="Copy heading and permalink for Subsection 1.5.3: Logarithmic Functions" aria-label="Copy heading and permalink for Subsection 1.5.3: Logarithmic Functions">🔗</a></div></section><section class="subsection" id="sec_Ch1Sec5-6"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Checkpoint 1.5.30"><a href="#sec_Ch1Sec5-5-30" title="Copy heading and permalink for Checkpoint 1.5.30" aria-label="Copy heading and permalink for Checkpoint 1.5.30">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 1.5.3: Logarithmic Functions"><a href="#sec_Ch1Sec5-5" title="Copy heading and permalink for Subsection 1.5.3: Logarithmic Functions" aria-label="Copy heading and permalink for Subsection 1.5.3: Logarithmic Functions">🔗</a></div>
+</section>
+<section class="subsection" id="sec_Ch1Sec5-6">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hyperbolic Functions</span>
 </h3>
-<section class="introduction" id="sec_Ch1Sec5-6-2"><div class="para" id="sec_Ch1Sec5-6-2-1">The hyperbolic functions are defined in terms of certain combinations of <span class="process-math">\(e^x\)</span> and <span class="process-math">\(e^{-x}.\)</span> These functions arise naturally in various engineering and physics applications, including the study of water waves and vibrations of elastic membranes. Another common use for a hyperbolic function is the representation of a hanging chain or cable, also known as a catenary (<a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_006" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_006.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.31">Figure 1.5.31</a>). If we introduce a coordinate system so that the low point of the chain lies along the <span class="process-math">\(y\)</span>-axis, we can describe the height of the chain in terms of a hyperbolic function. First, we define the <dfn class="terminology">hyperbolic functions</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sec_Ch1Sec5-6-2">
+<div class="para" id="sec_Ch1Sec5-6-2-1">The hyperbolic functions are defined in terms of certain combinations of <span class="process-math">\(e^x\)</span> and <span class="process-math">\(e^{-x}.\)</span> These functions arise naturally in various engineering and physics applications, including the study of water waves and vibrations of elastic membranes. Another common use for a hyperbolic function is the representation of a hanging chain or cable, also known as a catenary (<a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_006" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_006.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.31">Figure 1.5.31</a>). If we introduce a coordinate system so that the low point of the chain lies along the <span class="process-math">\(y\)</span>-axis, we can describe the height of the chain in terms of a hyperbolic function. First, we define the <dfn class="terminology">hyperbolic functions</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_01_05_006"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_05_009.jpg" class="contained" alt='"A photograph of a spider web collecting dew drops."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.31<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The shape of a strand of silk in a spider’s web can be described in terms of a hyperbolic function. The same shape applies to a chain or cable hanging from two supports with only its own weight. (credit: “Mtpaley”, Wikimedia Commons)<div class="autopermalink" data-description="Figure 1.5.31"><a href="#CNX_Calc_Figure_01_05_006" title="Copy heading and permalink for Figure 1.5.31" aria-label="Copy heading and permalink for Figure 1.5.31">🔗</a></div></figcaption></figure><article class="definition definition-like" id="sec_Ch1Sec5-6-2-3"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.31<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The shape of a strand of silk in a spider’s web can be described in terms of a hyperbolic function. The same shape applies to a chain or cable hanging from two supports with only its own weight. (credit: “Mtpaley”, Wikimedia Commons)<div class="autopermalink" data-description="Figure 1.5.31"><a href="#CNX_Calc_Figure_01_05_006" title="Copy heading and permalink for Figure 1.5.31" aria-label="Copy heading and permalink for Figure 1.5.31">🔗</a></div></figcaption>
+</figure>
+<article class="definition definition-like" id="sec_Ch1Sec5-6-2-3"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="sec_Ch1Sec5-6-2-3-1">Hyperbolic cosine<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1170,7 +1270,9 @@ R_1-R_2=\log_{10}\left(\frac{A_1}{A_2}\right).
 \text{ coth } x=\frac{\cosh x}{\sinh x}=\frac{e^x+e^{-x}}{e^x-e^{-x}}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Definition 1.5.32"><a href="#sec_Ch1Sec5-6-2-3" title="Copy heading and permalink for Definition 1.5.32" aria-label="Copy heading and permalink for Definition 1.5.32">🔗</a></div></article><div class="para" id="sec_Ch1Sec5-6-2-4">The name <span class="process-math">\(\cosh \)</span> rhymes with “gosh,” whereas the name <span class="process-math">\(\sinh \)</span> is pronounced “cinch.” The functions <span class="process-math">\(\tanh \text{,}\)</span> <span class="process-math">\(\text{ sech } \text{,}\)</span> <span class="process-math">\(\text{ csch } \text{,}\)</span> and <span class="process-math">\(\coth \)</span> are pronounced “tanch,” “seech,” “coseech,” and “cotanch,” respectively.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 1.5.32"><a href="#sec_Ch1Sec5-6-2-3" title="Copy heading and permalink for Definition 1.5.32" aria-label="Copy heading and permalink for Definition 1.5.32">🔗</a></div>
+</article>
+<div class="para" id="sec_Ch1Sec5-6-2-4">The name <span class="process-math">\(\cosh \)</span> rhymes with “gosh,” whereas the name <span class="process-math">\(\sinh \)</span> is pronounced “cinch.” The functions <span class="process-math">\(\tanh \text{,}\)</span> <span class="process-math">\(\text{ sech } \text{,}\)</span> <span class="process-math">\(\text{ csch } \text{,}\)</span> and <span class="process-math">\(\coth \)</span> are pronounced “tanch,” “seech,” “coseech,” and “cotanch,” respectively.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec_Ch1Sec5-6-2-5">Using the definition of <span class="process-math">\(\cosh(x)\)</span> and principles of physics, it can be shown that the height of a hanging chain, such as the one in <a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_006" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_006.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.31">Figure 1.5.31</a>, can be described by the function <span class="process-math">\(h(x)=a \cosh(x/a)+c\)</span> for certain constants <span class="process-math">\(a\)</span> and <span class="process-math">\(c.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -1184,13 +1286,20 @@ R_1-R_2=\log_{10}\left(\frac{A_1}{A_2}\right).
 <div class="para" id="sec_Ch1Sec5-6-2-8">This identity is the analog of the trigonometric identity <span class="process-math">\(\text{ cos }^2t+\sin^2t=1.\)</span> Here, given a value <span class="process-math">\(t,\)</span> the point <span class="process-math">\((x,y)=(\cosh t,\sinh t)\)</span> lies on the unit hyperbola <span class="process-math">\(x^2-y^2=1\)</span> (<a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_007" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_007.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.33">Figure 1.5.33</a>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_01_05_007"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_05_007.jpg" class="contained" alt='"An image of a graph. The x axis runs from -1 to 3 and the y axis runs from -3 to 3. The graph is of the relation “(x squared) - (y squared) -1”. The left most point of the relation is at the x intercept, which is at the point (1, 0). From this point the relation both increases and decreases in curves as x increases. This relation is known as a hyperbola and it resembles a sideways “U” shape. There is a point plotted on the graph of the relation labeled “(cosh(1), sinh(1))”, which is at the approximate point (1.5, 1.2)."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.33<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The unit hyperbola <span class="process-math">\(\cosh^2t-\sinh^2t=1.\)</span><div class="autopermalink" data-description="Figure 1.5.33"><a href="#CNX_Calc_Figure_01_05_007" title="Copy heading and permalink for Figure 1.5.33" aria-label="Copy heading and permalink for Figure 1.5.33">🔗</a></div></figcaption></figure></section><section class="subsubsection" id="sec_Ch1Sec5-6-3"><h4 class="heading hide-type">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.33<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The unit hyperbola <span class="process-math">\(\cosh^2t-\sinh^2t=1.\)</span><div class="autopermalink" data-description="Figure 1.5.33"><a href="#CNX_Calc_Figure_01_05_007" title="Copy heading and permalink for Figure 1.5.33" aria-label="Copy heading and permalink for Figure 1.5.33">🔗</a></div></figcaption>
+</figure></section>
+<section class="subsubsection" id="sec_Ch1Sec5-6-3">
+<h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Graphs of Hyperbolic Functions</span>
 </h4>
 <div class="para" id="sec_Ch1Sec5-6-3-2">To graph <span class="process-math">\(\cosh x\)</span> and <span class="process-math">\(\sinh x,\)</span> we make use of the fact that both functions approach <span class="process-math">\((1/2)e^x\)</span> as <span class="process-math">\(x\to \infty,\)</span> since <span class="process-math">\(e^{-x}\to 0\)</span> as <span class="process-math">\(x\to \infty.\)</span> As <span class="process-math">\(x\to .\infty,\cosh x\)</span> approaches <span class="process-math">\(1/2e^{-x},\)</span> whereas <span class="process-math">\(\sinh x\)</span> approaches <span class="process-math">\(-1/2e^{-x}.\)</span> Therefore, using the graphs of <span class="process-math">\(1/2e^x,1/2e^{-x},\)</span> and <span class="process-math">\(.1/2e^{-x}\)</span> as guides, we graph <span class="process-math">\(\cosh x\)</span> and <span class="process-math">\(\sinh x.\)</span> To graph <span class="process-math">\(\tanh x,\)</span> we use the fact that <span class="process-math">\(\tanh(0)=0,-1\lt \tanh(x)\lt 1\)</span> for all <span class="process-math">\(x,\tanh x\to 1\)</span> as <span class="process-math">\(x\to \infty,\)</span> and <span class="process-math">\(\tanh x\to .1\)</span> as <span class="process-math">\(x\to .\infty.\)</span> The graphs of the other three hyperbolic functions can be sketched using the graphs of <span class="process-math">\(\cosh x,\sinh x,\)</span> and <span class="process-math">\(\tanh x\)</span> (<a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_008" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_008.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.34">Figure 1.5.34</a>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="CNX_Calc_Figure_01_05_008"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_05_011.jpg" class="contained" alt='"An image of six graphs. Each graph has an x axis that runs from -3 to 3 and a y axis that runs from -4 to 4. The first graph is of the function “y = cosh(x)”, which is a hyperbola. The function decreases until it hits the point (0, 1), where it begins to increase. There are also two functions that serve as a boundary for this function. The first of these functions is “y = (1/2)(e to power of -x)”, a decreasing curved function and the second of these functions is “y = (1/2)(e to power of x)”, an increasing curved function. The function “y = cosh(x)” is always above these two functions without ever touching them. The second graph is of the function “y = sinh(x)”, which is an increasing curved function. There are also two functions that serve as a boundary for this function. The first of these functions is “y = (1/2)(e to power of x)”, an increasing curved function and the second of these functions is “y = -(1/2)(e to power of -x)”, an increasing curved function that approaches the x axis without touching it. The function “y = sinh(x)” is always between these two functions without ever touching them. The third graph is of the function “y = sech(x)”, which increases until the point (0, 1), where it begins to decrease. The graph of the function has a hump. The fourth graph is of the function “y = csch(x)”. On the left side of the y axis, the function starts slightly below the x axis and decreases until it approaches the y axis, which it never touches. On the right side of the y axis, the function starts slightly to the right of the y axis and decreases until it approaches the x axis, which it never touches. The fifth graph is of the function “y = tanh(x)”, an increasing curved function. There are also two functions that serve as a boundary for this function. The first of these functions is “y = 1”, a horizontal line function and the second of these functions is “y = -1”, another horizontal line function. The function “y = tanh(x)” is always between these two functions without ever touching them. The sixth graph is of the function “y = coth(x)”. On the left side of the y axis, the function starts slightly below the boundary line “y = 1” and decreases until it approaches the y axis, which it never touches. On the right side of the y axis, the function starts slightly to the right of the y axis and decreases until it approaches the boundary line “y = -1”, which it never touches."'></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.34<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The hyperbolic functions involve combinations of <span class="process-math">\(e^x\)</span> and <span class="process-math">\(e^{-x}.\)</span><div class="autopermalink" data-description="Figure 1.5.34"><a href="#CNX_Calc_Figure_01_05_008" title="Copy heading and permalink for Figure 1.5.34" aria-label="Copy heading and permalink for Figure 1.5.34">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Subsubsection 1.5.4.1: Graphs of Hyperbolic Functions"><a href="#sec_Ch1Sec5-6-3" title="Copy heading and permalink for Subsubsection 1.5.4.1: Graphs of Hyperbolic Functions" aria-label="Copy heading and permalink for Subsubsection 1.5.4.1: Graphs of Hyperbolic Functions">🔗</a></div></section><section class="subsubsection" id="sec_Ch1Sec5-6-4"><h4 class="heading hide-type">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.34<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The hyperbolic functions involve combinations of <span class="process-math">\(e^x\)</span> and <span class="process-math">\(e^{-x}.\)</span><div class="autopermalink" data-description="Figure 1.5.34"><a href="#CNX_Calc_Figure_01_05_008" title="Copy heading and permalink for Figure 1.5.34" aria-label="Copy heading and permalink for Figure 1.5.34">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Subsubsection 1.5.4.1: Graphs of Hyperbolic Functions"><a href="#sec_Ch1Sec5-6-3" title="Copy heading and permalink for Subsubsection 1.5.4.1: Graphs of Hyperbolic Functions" aria-label="Copy heading and permalink for Subsubsection 1.5.4.1: Graphs of Hyperbolic Functions">🔗</a></div>
+</section>
+<section class="subsubsection" id="sec_Ch1Sec5-6-4">
+<h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Identities Involving Hyperbolic Functions</span>
 </h4>
 <div class="para" id="sec_Ch1Sec5-6-4-2">The identity <span class="process-math">\(\cosh2^t-\sinh^2t,\)</span> shown in <a href="sec_Ch1Sec5.html#CNX_Calc_Figure_01_05_007" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_01_05_007.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5.33">Figure 1.5.33</a>, is one of several identities involving the hyperbolic functions, some of which are listed next. The first four properties follow easily from the definitions of hyperbolic sine and hyperbolic cosine. Except for some differences in signs, most of these properties are analogous to identities for trigonometric functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1236,7 +1345,9 @@ R_1-R_2=\log_{10}\left(\frac{A_1}{A_2}\right).
 <div class="autopermalink" data-description="Item 9"><a href="#sec_Ch1Sec5-6-4-3-2-9" title="Copy heading and permalink for Item 9" aria-label="Copy heading and permalink for Item 9">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Note 1.5.35: Rule: Identities Involving Hyperbolic Functions"><a href="#sec_Ch1Sec5-6-4-3" title="Copy heading and permalink for Note 1.5.35: Rule: Identities Involving Hyperbolic Functions" aria-label="Copy heading and permalink for Note 1.5.35: Rule: Identities Involving Hyperbolic Functions">🔗</a></div></article><article class="example example-like" id="sec_Ch1Sec5-6-4-4"><h5 class="heading">
+<div class="autopermalink" data-description="Note 1.5.35: Rule: Identities Involving Hyperbolic Functions"><a href="#sec_Ch1Sec5-6-4-3" title="Copy heading and permalink for Note 1.5.35: Rule: Identities Involving Hyperbolic Functions" aria-label="Copy heading and permalink for Note 1.5.35: Rule: Identities Involving Hyperbolic Functions">🔗</a></div>
+</article>
+<article class="example example-like" id="sec_Ch1Sec5-6-4-4"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.36</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating Hyperbolic Functions.</span>
 </h5>
 <ol class="decimal" id="sec_Ch1Sec5-6-4-4-2-1">
@@ -1250,7 +1361,9 @@ R_1-R_2=\log_{10}\left(\frac{A_1}{A_2}\right).
 <div class="autopermalink" data-description="Item 2"><a href="#sec_Ch1Sec5-6-4-4-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="solutions"><details id="sec_Ch1Sec5-6-4-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="sec_Ch1Sec5-6-4-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <ol class="decimal" id="sec_Ch1Sec5-6-4-4-3-1">
 <li id="sec_Ch1Sec5-6-4-4-3-1-1">
 <div class="para" id="p-derived-sec_Ch1Sec5-6-4-4-3-1-1">Using the definition of the <span class="process-math">\(\sinh\)</span> function, we write<div class="displaymath process-math" id="sec_Ch1Sec5-6-4-4-3-1-1-2">
@@ -1272,24 +1385,36 @@ R_1-R_2=\log_{10}\left(\frac{A_1}{A_2}\right).
 </li>
 </ol>
 <div class="autopermalink" data-description="Solution 1.5.36.1"><a href="#sec_Ch1Sec5-6-4-4-3" title="Copy heading and permalink for Solution 1.5.36.1" aria-label="Copy heading and permalink for Solution 1.5.36.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.5.36: Evaluating Hyperbolic Functions"><a href="#sec_Ch1Sec5-6-4-4" title="Copy heading and permalink for Example 1.5.36: Evaluating Hyperbolic Functions" aria-label="Copy heading and permalink for Example 1.5.36: Evaluating Hyperbolic Functions">🔗</a></div></article><details id="sec_Ch1Sec5-6-4-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.5.36: Evaluating Hyperbolic Functions"><a href="#sec_Ch1Sec5-6-4-4" title="Copy heading and permalink for Example 1.5.36: Evaluating Hyperbolic Functions" aria-label="Copy heading and permalink for Example 1.5.36: Evaluating Hyperbolic Functions">🔗</a></div>
+</article>
+<details id="sec_Ch1Sec5-6-4-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.37</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec5-6-4-5-1-1">Simplify <span class="process-math">\(\cosh(2 \ln x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-4-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch1Sec5-6-4-5-1-1">Simplify <span class="process-math">\(\cosh(2 \ln x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-4-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch1Sec5-6-4-5-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch1Sec5-6-4-5-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-6-4-5-3-1">Use the definition of the cosh function and the power property of logarithm functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-4-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.5.37.1"><a href="#sec_Ch1Sec5-6-4-5-3" title="Copy heading and permalink for Hint 1.5.37.1" aria-label="Copy heading and permalink for Hint 1.5.37.1">🔗</a></div>
-</div></details><details id="sec_Ch1Sec5-6-4-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch1Sec5-6-4-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-6-4-5-2-1">
 <span class="process-math">\((x^2+x^{-2})/2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-4-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.37.1"><a href="#sec_Ch1Sec5-6-4-5-2" title="Copy heading and permalink for Solution 1.5.37.1" aria-label="Copy heading and permalink for Solution 1.5.37.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 1.5.37"><a href="#sec_Ch1Sec5-6-4-5" title="Copy heading and permalink for Checkpoint 1.5.37" aria-label="Copy heading and permalink for Checkpoint 1.5.37">🔗</a></div></article></details><div class="autopermalink" data-description="Subsubsection 1.5.4.2: Identities Involving Hyperbolic Functions"><a href="#sec_Ch1Sec5-6-4" title="Copy heading and permalink for Subsubsection 1.5.4.2: Identities Involving Hyperbolic Functions" aria-label="Copy heading and permalink for Subsubsection 1.5.4.2: Identities Involving Hyperbolic Functions">🔗</a></div></section><section class="subsubsection" id="sec_Ch1Sec5-6-5"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Checkpoint 1.5.37"><a href="#sec_Ch1Sec5-6-4-5" title="Copy heading and permalink for Checkpoint 1.5.37" aria-label="Copy heading and permalink for Checkpoint 1.5.37">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsubsection 1.5.4.2: Identities Involving Hyperbolic Functions"><a href="#sec_Ch1Sec5-6-4" title="Copy heading and permalink for Subsubsection 1.5.4.2: Identities Involving Hyperbolic Functions" aria-label="Copy heading and permalink for Subsubsection 1.5.4.2: Identities Involving Hyperbolic Functions">🔗</a></div>
+</section>
+<section class="subsubsection" id="sec_Ch1Sec5-6-5">
+<h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inverse Hyperbolic Functions</span>
 </h4>
 <div class="para" id="sec_Ch1Sec5-6-5-2">From the graphs of the hyperbolic functions, we see that all of them are one-to-one except <span class="process-math">\(\cosh x\)</span> and <span class="process-math">\(\text{ sech } x.\)</span> If we restrict the domains of these two functions to the interval <span class="process-math">\([0,\infty),\)</span> then all the hyperbolic functions are one-to-one, and we can define the <dfn class="terminology">inverse hyperbolic functions</dfn>. Since the hyperbolic functions themselves involve exponential functions, the inverse hyperbolic functions involve logarithmic functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1306,7 +1431,9 @@ R_1-R_2=\log_{10}\left(\frac{A_1}{A_2}\right).
 \text{ sech }^{-1}x=\text{ arcsech } x=\ln\left(\frac{1+\sqrt{1-x^2}}{x}\right)\amp \amp \text{ csch }^{-1}x=\text{ arccsch } x=\ln\left(\frac{1}{x}+\frac{\sqrt{1+x^2}}{|x|}\right)
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Definition 1.5.38"><a href="#sec_Ch1Sec5-6-5-3" title="Copy heading and permalink for Definition 1.5.38" aria-label="Copy heading and permalink for Definition 1.5.38">🔗</a></div></article><div class="para" id="sec_Ch1Sec5-6-5-4">Let’s look at how to derive the first equation. The others follow similarly. Suppose <span class="process-math">\(y=\sinh^{-1}x.\)</span> Then, <span class="process-math">\(x=\sinh y\)</span> and, by the definition of the hyperbolic sine function, <span class="process-math">\(x=\frac{e^y-e^{-y}}{2}.\)</span> Therefore,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 1.5.38"><a href="#sec_Ch1Sec5-6-5-3" title="Copy heading and permalink for Definition 1.5.38" aria-label="Copy heading and permalink for Definition 1.5.38">🔗</a></div>
+</article>
+<div class="para" id="sec_Ch1Sec5-6-5-4">Let’s look at how to derive the first equation. The others follow similarly. Suppose <span class="process-math">\(y=\sinh^{-1}x.\)</span> Then, <span class="process-math">\(x=\sinh y\)</span> and, by the definition of the hyperbolic sine function, <span class="process-math">\(x=\frac{e^y-e^{-y}}{2}.\)</span> Therefore,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="sec_Ch1Sec5-6-5-5">
 \begin{equation*}
@@ -1349,7 +1476,9 @@ y=\ln(x+\sqrt{x^2+1}).
 \tanh^{-1}(1/4)
 \end{equation*}
 </div>
-<div class="solutions"><details id="sec_Ch1Sec5-6-5-12-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="sec_Ch1Sec5-6-5-12-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-6-5-12-3-1">
 <span class="process-math">\(\sinh^{-1}(2)=\ln(2+\sqrt{2^2+1})=\ln(2+\sqrt{5})\approx1.4436\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-5-12-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -1357,24 +1486,37 @@ y=\ln(x+\sqrt{x^2+1}).
 <span class="process-math">\(\tanh^{-1}(1/4)=\frac{1}{2}\ln(\frac{1+1/4}{1-1/4})=\frac{1}{2}\ln(\frac{5/4}{3/4})=\frac{1}{2}\ln(\frac{5}{3})\approx0.2554\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-5-12-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.39.1"><a href="#sec_Ch1Sec5-6-5-12-3" title="Copy heading and permalink for Solution 1.5.39.1" aria-label="Copy heading and permalink for Solution 1.5.39.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.5.39: Evaluating Inverse Hyperbolic Functions"><a href="#sec_Ch1Sec5-6-5-12" title="Copy heading and permalink for Example 1.5.39: Evaluating Inverse Hyperbolic Functions" aria-label="Copy heading and permalink for Example 1.5.39: Evaluating Inverse Hyperbolic Functions">🔗</a></div></article><details id="sec_Ch1Sec5-6-5-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 1.5.39: Evaluating Inverse Hyperbolic Functions"><a href="#sec_Ch1Sec5-6-5-12" title="Copy heading and permalink for Example 1.5.39: Evaluating Inverse Hyperbolic Functions" aria-label="Copy heading and permalink for Example 1.5.39: Evaluating Inverse Hyperbolic Functions">🔗</a></div>
+</article>
+<details id="sec_Ch1Sec5-6-5-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.40</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec_Ch1Sec5-6-5-13-1-1">Evaluate <span class="process-math">\(\tanh^{-1}(1/2).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-5-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch1Sec5-6-5-13-1-1">Evaluate <span class="process-math">\(\tanh^{-1}(1/2).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-5-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="sec_Ch1Sec5-6-5-13-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="sec_Ch1Sec5-6-5-13-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-6-5-13-3-1">Use the definition of <span class="process-math">\(\tanh^{-1}x\)</span> and simplify.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-5-13-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.5.40.1"><a href="#sec_Ch1Sec5-6-5-13-3" title="Copy heading and permalink for Hint 1.5.40.1" aria-label="Copy heading and permalink for Hint 1.5.40.1">🔗</a></div>
-</div></details><details id="sec_Ch1Sec5-6-5-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="sec_Ch1Sec5-6-5-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch1Sec5-6-5-13-2-1">
 <span class="process-math">\(\frac{1}{2}\ln(3)\approx0.5493.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch1Sec5-6-5-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1.5.40.1"><a href="#sec_Ch1Sec5-6-5-13-2" title="Copy heading and permalink for Solution 1.5.40.1" aria-label="Copy heading and permalink for Solution 1.5.40.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Checkpoint 1.5.40"><a href="#sec_Ch1Sec5-6-5-13" title="Copy heading and permalink for Checkpoint 1.5.40" aria-label="Copy heading and permalink for Checkpoint 1.5.40">🔗</a></div></article></details><div class="autopermalink" data-description="Subsubsection 1.5.4.3: Inverse Hyperbolic Functions"><a href="#sec_Ch1Sec5-6-5" title="Copy heading and permalink for Subsubsection 1.5.4.3: Inverse Hyperbolic Functions" aria-label="Copy heading and permalink for Subsubsection 1.5.4.3: Inverse Hyperbolic Functions">🔗</a></div></section><div class="autopermalink" data-description="Subsection 1.5.4: Hyperbolic Functions"><a href="#sec_Ch1Sec5-6" title="Copy heading and permalink for Subsection 1.5.4: Hyperbolic Functions" aria-label="Copy heading and permalink for Subsection 1.5.4: Hyperbolic Functions">🔗</a></div></section><section class="subsection" id="sec_Ch1Sec5-7"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Checkpoint 1.5.40"><a href="#sec_Ch1Sec5-6-5-13" title="Copy heading and permalink for Checkpoint 1.5.40" aria-label="Copy heading and permalink for Checkpoint 1.5.40">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsubsection 1.5.4.3: Inverse Hyperbolic Functions"><a href="#sec_Ch1Sec5-6-5" title="Copy heading and permalink for Subsubsection 1.5.4.3: Inverse Hyperbolic Functions" aria-label="Copy heading and permalink for Subsubsection 1.5.4.3: Inverse Hyperbolic Functions">🔗</a></div>
+</section><div class="autopermalink" data-description="Subsection 1.5.4: Hyperbolic Functions"><a href="#sec_Ch1Sec5-6" title="Copy heading and permalink for Subsection 1.5.4: Hyperbolic Functions" aria-label="Copy heading and permalink for Subsection 1.5.4: Hyperbolic Functions">🔗</a></div>
+</section>
+<section class="subsection" id="sec_Ch1Sec5-7">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Key Concepts</span>
 </h3>
 <ul class="disc" id="sec_Ch1Sec5-7-2">
@@ -1403,7 +1545,10 @@ y=\ln(x+\sqrt{x^2+1}).
 <div class="autopermalink" data-description="Item"><a href="#sec_Ch1Sec5-7-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Subsection 1.5.5: Key Concepts"><a href="#sec_Ch1Sec5-7" title="Copy heading and permalink for Subsection 1.5.5: Key Concepts" aria-label="Copy heading and permalink for Subsection 1.5.5: Key Concepts">🔗</a></div></section><div class="autopermalink" data-description="Section 1.5: Exponential and Logarithmic Functions"><a href="#sec_Ch1Sec5" title="Copy heading and permalink for Section 1.5: Exponential and Logarithmic Functions" aria-label="Copy heading and permalink for Section 1.5: Exponential and Logarithmic Functions">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Subsection 1.5.5: Key Concepts"><a href="#sec_Ch1Sec5-7" title="Copy heading and permalink for Subsection 1.5.5: Key Concepts" aria-label="Copy heading and permalink for Subsection 1.5.5: Key Concepts">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 1.5: Exponential and Logarithmic Functions"><a href="#sec_Ch1Sec5" title="Copy heading and permalink for Section 1.5: Exponential and Logarithmic Functions" aria-label="Copy heading and permalink for Section 1.5: Exponential and Logarithmic Functions">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec_Ch1Sec4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch_second.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
