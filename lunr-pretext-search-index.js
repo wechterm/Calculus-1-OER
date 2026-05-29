@@ -2437,7 +2437,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "The Limit Laws",
-  "body": " The Limit Laws   Learning Objectives   Recognize the basic limit laws.  Use the limit laws to evaluate the limit of a function.  Use the limit laws to evaluate the limit of a polynomial or rational function.  Evaluate the limit of a function by factoring or by using conjugates.  Evaluate the limit of a function by using the squeeze theorem.   In , we evaluated limits by looking at graphs or by constructing a table of values. In this section, we establish laws for calculating limits and learn how to apply these laws.    The Limit Laws   A few basic rules allow us to break down complicated functions into simpler ones when calculating limits. By using these limit laws, we can simplify many limit computations. We start with two important limits.   Basic Limit Results   For any real number and any constant ,          For , let . Whenever then Therefore,     For , let . Whenever then Therefore,        Evaluating a Basic Limit   Evaluate each of the following limits using .         The limit of as approaches is :  The limit of a constant is that constant:     We now take a look at the limit laws , the individual properties of limits. The proofs that these laws hold are included at the end of the section.   Limit Laws  Let and be defined for all over some open interval containing . Assume that and are real numbers such that and Let be a constant. Then, each of the following statements holds:  Sum law for limits :  Difference law for limits :  Constant multiple law for limits :  Product law for limits :  Quotient law for limits : for  Power law for limits : for every positive integer .  Root law for limits : for all if is odd and for if is even. (If then this cannot be computed with a two-sided limit).   We now practice applying these limit laws to evaluate a limit.   Evaluating a Limit Using Limit Laws   Use the limit laws to evaluate    Let’s apply the limit laws one step at a time to be sure we understand how they work. We need to keep in mind the requirement that, at each application of a limit law, the new limits must exist for the limit law to be applied.      Using Limit Laws Repeatedly   Use the limit laws to evaluate    To find this limit, we need to apply the limit laws several times. Again, we need to keep in mind that as we rewrite the limit in terms of other limits, each new limit must exist for the limit law to be applied.       Use the limit laws to evaluate In each step, indicate the limit law applied.       Begin by applying the product law.      Limits of Polynomial and Rational Functions  By now you have probably noticed that, in each of the previous examples, it has been the case that This is not always true, but it does hold for all polynomials for any choice of and for all rational functions at all values of for which the rational function is defined.    Let and be polynomial functions. Let be a real number. Then,      To see that this theorem holds, consider the polynomial By applying the sum, constant multiple, and power laws, we end up with   It now follows from the quotient law that if and are polynomials for which then       Evaluating a Limit of a Rational Function   Evaluate the    Since 3 is in the domain of the rational function we can calculate the limit by substituting 3 for into the function. Thus,       Evaluate    -13;    Use      Additional Limit Evaluation Techniques  As we have seen, we may evaluate easily the limits of polynomials and limits of some (but not all) rational functions by direct substitution. However, as we saw in the introductory section on limits, it is certainly possible for to exist when is undefined. The following observation allows us to evaluate many limits of this type:  If for all over some open interval containing , then  To understand this idea better, consider the limit  The function   and the function are identical for all values of The graphs of these two functions are shown in .    \"Two graphs side by side. The first is a graph of g(x) = x + 1, a linear function with y intercept at (0,1) and x intercept at (-1,0). The second is a graph of f(x) = (x^2 – 1) \/ (x – 1). This graph is identical to the first for all x not equal to 1, as there is an open circle at (1,2) in the second graph.\"  The graphs of and are identical for all Their limits at 1 are equal.   We see that   The limit has the form where and (In this case, we say that has the indeterminate form The following problem-solving strategy provides a general outline for evaluating limits of this type.   Strategy For Calculating a Limit When has the Indeterminate Form 0\/0   First, we need to make sure that our function has the appropriate form and cannot be evaluated immediately using the limit laws.  We then need to find a function that is equal to for all over some interval containing . To do this, we may need to try one or more of the following steps:   If and are polynomials, we should factor each function and cancel out any common factors.  If the numerator or denominator contains a difference involving a square root, we should try multiplying the numerator and denominator by the conjugate of the expression involving the square root.  If is a complex fraction, we begin by simplifying it.   Last, we apply the limit laws.    The next examples demonstrate the use of this Problem-Solving Strategy. illustrates the factor-and-cancel technique; shows multiplying by a conjugate. In , we look at simplifying a complex fraction.   Evaluating a Limit by Factoring and Canceling   Evaluate       The function is undefined for In fact, if we substitute 3 into the function we get which is undefined. Factoring and canceling is a good strategy:     For all Therefore,     Evaluate using the limit laws:          Evaluate       Follow the steps in and .     Evaluating a Limit by Multiplying by a Conjugate   Evaluate       has the form at -1. Let’s begin by multiplying by the conjugate of on the numerator and denominator:    We then multiply out the numerator. We don’t multiply out the denominator because we are hoping that the in the denominator cancels out in the end:   Then we cancel:    Last, we apply the limit laws:          Evaluate       Follow the steps in and .     Evaluating a Limit by Simplifying a Complex Fraction   Evaluate       has the form at 1.    We simplify the algebraic fraction by multiplying by    Next, we multiply through the numerators. Do not multiply the denominators because we want to be able to cancel the factor   Then, we simplify the numerator:   Now we factor out -1 from the numerator:   Then, we cancel the common factors of     Last, we evaluate using the limit laws:          Evaluate    -1;    Follow the steps in and .    does not fall neatly into any of the patterns established in the previous examples. However, with a little creativity, we can still use these same techniques.   Evaluating a Limit When the Limit Laws Do Not Apply   Evaluate    Both and fail to have a limit at zero. Since neither of the two functions has a limit at zero, we cannot apply the sum law for limits; we must use a different strategy. In this case, we find the limit by performing addition and then applying one of our previous strategies. Observe that   Thus,       Evaluate       Use the same technique as . Don’t forget to factor before getting a common denominator.      One-Sided Limits  Let’s now revisit one-sided limits. Simple modifications in the limit laws allow us to apply them to one-sided limits. For example, to apply the limit laws to a limit of the form we require the function to be defined over an open interval of the form for a limit of the form we require the function to be defined over an open interval of the form  illustrates this point.   Evaluating a One-Sided Limit Using the Limit Laws   Evaluate each of the following limits, if possible.        illustrates the function and aids in our understanding of these limits.    \"A graph of the function f(x) = sqrt(x-3). Visually, the function looks like the top half of a parabola opening to the right with vertex at (3,0).\"  The graph shows the function    The function is defined over the interval Since this function is not defined to the left of 3, we cannot apply the limit laws to compute In fact, since is undefined to the left of 3, does not exist.  Since is defined to the right of 3, the limit laws do apply to By applying these limit laws we obtain     In we look at one-sided limits of a piecewise-defined function and use these limits to draw a conclusion about a two-sided limit of the same function.    Evaluating a Two-Sided Limit Using the Limit Laws  For evaluate each of the following limits:         illustrates the function and aids in our understanding of these limits.    \"The graph of a piecewise function with two segments. For x\\lt 2, the function is linear with the equation 4x-3. There is an open circle at (2,5). The second segment is a parabola and exists for x\\gt =2, with the equation (x-3)^2. There is a closed circle at (2,1). The vertex of the parabola is at (3,0).\"  This graph shows a function    Since for all in replace in the limit with and apply the limit laws:   Since for all in replace in the limit with and apply the limit laws:   Since and we conclude that does not exist.      Graph and evaluate      \"The graph of a piecewise function with three segments. The first is a linear function, -x-2, for x\\lt -1. The x intercept is at (-2,0), and there is an open circle at (-1,-1). The next segment is simply the point (-1, 2). The third segment is the function x^3 for x \\gt -1, which crossed the x axis and y axis at the origin.\"      Use the method in to evaluate the limit.    Limits approaching the form are omitted from this section and held until the section on infinite limits     The Squeeze Theorem  The techniques we have developed thus far work very well for algebraic functions, but we are still unable to evaluate limits of very basic trigonometric functions. The next theorem, called the squeeze theorem , proves very useful for establishing basic trigonometric limits. This theorem allows us to calculate limits by “squeezing” a function, with a limit at a point that is unknown, between two functions having a common known limit at . illustrates this idea.    \"A graph of three functions over a small interval. All three functions curve. Over this interval, the function g(x) is trapped between the functions h(x), which gives greater y values for the same x values, and f(x), which gives smaller y values for the same x values. The functions all approach the same limit when x=a.\"  The Squeeze Theorem applies when and    The Squeeze Theorem  Let and be defined for all over an open interval containing . If   for all in an open interval containing and   where is a real number, then   For there exist such that whenever and whenever .  Let be the smaller of . For any satisfying , then (or ) and (or ).  Putting it all together, Therefore, .     Applying the Squeeze Theorem   Apply the squeeze theorem to evaluate    Because for all , we have . Since from the squeeze theorem, we obtain The graphs of and are shown in .   \"The graph of three functions: h(x) = x, f(x) = -x, and g(x) = xcos(x). The first, h(x) = x, is a linear function with slope of 1 going through the origin. The second, f(x), is also a linear function with slope of -1; going through the origin. The third, g(x) = xcos(x), curves between the two and goes through the origin. It opens upward for x\\gt 0 and downward for x\\gt 0.\"  The graphs of and are shown around the point       Use the squeeze theorem to evaluate    0    Use the fact that to help you find two functions such that is squeezed between them.      A Few Important Trigonometric Limits  We now use the squeeze theorem to tackle several very important limits. Although this discussion is somewhat lengthy, these limits prove invaluable for the development of the material in both the next section and the next chapter. The first of these limits is Consider the unit circle shown in . In the figure, we see that is the -coordinate on the unit circle and it corresponds to the line segment shown in blue. The radian measure of angle is the length of the arc it subtends on the unit circle. Therefore, we see that for    \"A diagram of the unit circle in the x,y plane – it is a circle with radius 1 and center at the origin. A specific point (cos(theta), sin(theta)) is labeled in quadrant 1 on the edge of the circle. This point is one vertex of a right triangle inside the circle, with other vertices at the origin and (cos(theta), 0). As such, the lengths of the sides are cos(theta) for the base and sin(theta) for the height, where theta is the angle created by the hypotenuse and base. The radian measure of angle theta is the length of the arc it subtends on the unit circle. The diagram shows that for 0 \\lt theta \\lt pi\/2, 0 \\lt sin(theta) \\lt theta.\"  The sine function is shown as a line on the unit circle.   Because and by using the squeeze theorem we conclude that  To see that as well, observe that for and hence, Consequently, It follows that An application of the squeeze theorem produces the desired limit. Thus, since and   Next, using the identity for we see that   We now take a look at a limit that plays an important role in later chapters—namely, To evaluate this limit, we use the unit circle in . Notice that this figure adds one additional triangle to . We see that the length of the side opposite angle in this new triangle is Thus, we see that for    \"The same diagram as the previous one. However, the triangle is expanded. The base is now from the origin to (1,0). The height goes from (1,0) to (1, tan(theta)). The hypotenuse goes from the origin to (1, tan(theta)). As such, the height is now tan(theta). It shows that for 0 \\lt theta \\lt pi\/2, sin(theta) \\lt theta \\lt tan(theta).\"  The sine and tangent functions are shown as lines on the unit circle.   By dividing by in all parts of the inequality, we obtain   Equivalently, we have   Since we conclude that By applying a manipulation similar to that used in demonstrating that we can show that Thus,   In we use this limit to establish This limit also proves useful in later chapters.   Evaluating an Important Trigonometric Limit   Evaluate    In the first step, we multiply by the conjugate so that we can use a trigonometric identity to convert the cosine in the numerator to a sine:   Therefore,       Evaluate    0    Multiply numerator and denominator by      Deriving the Formula for the Area of a Circle  Some of the geometric formulas we take for granted today were first derived by methods that anticipate some of the methods of calculus. The Greek mathematician Archimedes (ca. 287-212; BCE) was particularly inventive, using polygons inscribed within circles to approximate the area of the circle as the number of sides of the polygon increased. He never came up with the idea of a limit, but we can use this idea to see what his geometric constructions could have predicted about the limit.  We can estimate the area of a circle by computing the area of an inscribed regular polygon. Think of the regular polygon as being made up of triangles. By taking the limit as the vertex angle of these triangles goes to zero, you can obtain the area of the circle. To see this, carry out the following steps:   Express the height and the base of the isosceles triangle in in terms of and .    \"A diagram of a circle with an inscribed polygon – namely, an octagon. An isosceles triangle is drawn with one of the sides of the octagon as the base and center of the circle\/octagon as the top vertex. The height h goes from the center of the base b to the center, and each of the legs is also radii r of the circle. The angle created by the height h and one of the legs r is labeled as theta.\"    Using the expressions that you obtained in step 1, express the area of the isosceles triangle in terms of and . (Substitute for in your expression.)  If an -sided regular polygon is inscribed in a circle of radius , find a relationship between and . Solve this for . Keep in mind there are 2 radians in a circle. (Use radians, not degrees.)  Find an expression for the area of the -sided polygon in terms of and .  To find a formula for the area of the circle, find the limit of the expression in step 4 as goes to zero. ( Hint:    The technique of estimating areas of regions by using polygons is revisited in Introduction to Integration .      Proofs of the Limit Laws (Optional)  We now prove    To start, we need the triangle inequality , which says that for any real numbers ,    Sum law for limits : For . Since the limit for exists, then there exists such that when then .  Also, since the limit for exists, there is some such that when then .  Let be the smaller of (so and ). Whenever , then using the Triangle Inequality,    Difference law for limits : Choose the same way as in the sum law for limits.  Again using the Triangle Inequality, whenever , then    Constant multiple law for limits : If then this is just a case of   If , let . Since the limit for exists, there is some such that whenever . For such ,    Product law for limits : Let . First, consider the case if Since the limits for exist, there exists and such that when and when .  Let be the smaller of like we did in the sum law for limits. For any ,   Now, for the more general case, assume . Since the limit for exists, then there is some such that whenever , then (the last line is true regardless of whether is positive or negative)  Since the limit for exists, there is some such that whenever , then . Also, there is some such that whenever .  Let's put the pieces altogether by letting be the minimum of . For any x satisfying , again use the Triangle Inequality to show    Quotient law for limits : This limit law will follow quickly if we first show that : Assume for simplicity that . Since the limit for exists, then given there exists such that whenever . Note that .  Following the inequalities down the rabbit hole, for any satisfying , Since , then .  Now, if , define . The constant multiple law of limits shows that and so   Finally, to prove the quotient law for limits, rewrite as and apply the product law for limits.   Power law for limits : This is a repeated application of the product law for limits   Root law for limits : First start with the case when . Let . Without loss of generality, assume . Then there exists such that whenever (which makes ). It can be verified that So, Therefore, if then   Now suppose where is any nonzero number. Define . Using the constant multiple law for limits, . Thus, by the work above, . Again using the constant multiple law for limits,   Finally, suppose with odd. It can be shown that whenever , then .     "
+  "body": " The Limit Laws   Learning Objectives   Recognize the basic limit laws.  Use the limit laws to evaluate the limit of a function.  Use the limit laws to evaluate the limit of a polynomial or rational function.  Evaluate the limit of a function by factoring or by using conjugates.  Evaluate the limit of a function by using the squeeze theorem.   In , we evaluated limits by looking at graphs or by constructing a table of values. In this section, we establish laws for calculating limits and learn how to apply these laws.    The Limit Laws   A few basic rules allow us to break down complicated functions into simpler ones when calculating limits. By using these limit laws, we can simplify many limit computations. We start with two important limits.   Basic Limit Results   For any real number and any constant ,          For , let . Whenever then Therefore,     For , let . Whenever then Therefore,        Evaluating a Basic Limit   Evaluate each of the following limits using .         The limit of as approaches is :  The limit of a constant is that constant:     We now take a look at the limit laws , the individual properties of limits. The proofs that these laws hold are included at the end of the section.   Limit Laws  Let and be defined for all over some open interval containing . Assume that and are real numbers such that and Let be a constant. Then, each of the following statements holds:  Sum law for limits :  Difference law for limits :  Constant multiple law for limits :  Product law for limits :  Quotient law for limits : for  Power law for limits : for every positive integer .  Root law for limits : for all if is odd and for if is even. (If then this cannot be computed with a two-sided limit).   We now practice applying these limit laws to evaluate a limit.   Evaluating a Limit Using Limit Laws   Use the limit laws to evaluate    Let’s apply the limit laws one step at a time to be sure we understand how they work. We need to keep in mind the requirement that, at each application of a limit law, the new limits must exist for the limit law to be applied.      Using Limit Laws Repeatedly   Use the limit laws to evaluate    To find this limit, we need to apply the limit laws several times. Again, we need to keep in mind that as we rewrite the limit in terms of other limits, each new limit must exist for the limit law to be applied.       Use the limit laws to evaluate In each step, indicate the limit law applied.       Begin by applying the product law.      Limits of Polynomial and Rational Functions  By now you have probably noticed that, in each of the previous examples, it has been the case that This is not always true, but it does hold for all polynomials for any choice of and for all rational functions at all values of for which the rational function is defined.    Let and be polynomial functions. Let be a real number. Then,      To see that this theorem holds, consider the polynomial By applying the sum, constant multiple, and power laws, we end up with   It now follows from the quotient law that if and are polynomials for which then       Evaluating a Limit of a Rational Function   Evaluate the    Since 3 is in the domain of the rational function we can calculate the limit by substituting 3 for into the function. Thus,       Evaluate    -13;    Use      Additional Limit Evaluation Techniques  As we have seen, we may evaluate easily the limits of polynomials and limits of some (but not all) rational functions by direct substitution. However, as we saw in the introductory section on limits, it is certainly possible for to exist when is undefined. The following observation allows us to evaluate many limits of this type:  If for all over some open interval containing , then  To understand this idea better, consider the limit  The function   and the function are identical for all values of The graphs of these two functions are shown in .    \"Two graphs side by side. The first is a graph of g(x) = x + 1, a linear function with y intercept at (0,1) and x intercept at (-1,0). The second is a graph of f(x) = (x^2 – 1) \/ (x – 1). This graph is identical to the first for all x not equal to 1, as there is an open circle at (1,2) in the second graph.\"  The graphs of and are identical for all Their limits at 1 are equal.   We see that   The limit has the form where and (In this case, we say that has the indeterminate form The following problem-solving strategy provides a general outline for evaluating limits of this type.   Strategy For Calculating a Limit When has the Indeterminate Form 0\/0   First, we need to make sure that our function has the appropriate form and cannot be evaluated immediately using the limit laws.  We then need to find a function that is equal to for all over some interval containing . To do this, we may need to try one or more of the following steps:   If and are polynomials, we should factor each function and cancel out any common factors.  If the numerator or denominator contains a difference involving a square root, we should try multiplying the numerator and denominator by the conjugate of the expression involving the square root.  If is a complex fraction, we begin by simplifying it.   Last, we apply the limit laws.    The next examples demonstrate the use of this Problem-Solving Strategy. illustrates the factor-and-cancel technique; shows multiplying by a conjugate. In , we look at simplifying a complex fraction.   Evaluating a Limit by Factoring and Canceling   Evaluate       The function is undefined for In fact, if we substitute 3 into the function we get which is undefined. Factoring and canceling is a good strategy:     For all Therefore,     Evaluate using the limit laws:          Evaluate       Follow the steps in and .     Evaluating a Limit by Multiplying by a Conjugate   Evaluate       has the form at -1. Let’s begin by multiplying by the conjugate of on the numerator and denominator:    We then multiply out the numerator. We don’t multiply out the denominator because we are hoping that the in the denominator cancels out in the end:   Then we cancel:    Last, we apply the limit laws:          Evaluate       Follow the steps in and .     Evaluating a Limit by Simplifying a Complex Fraction   Evaluate       has the form at 1.    We simplify the algebraic fraction by multiplying by    Next, we multiply through the numerators. Do not multiply the denominators because we want to be able to cancel the factor   Then, we simplify the numerator:   Now we factor out -1 from the numerator:   Then, we cancel the common factors of     Last, we evaluate using the limit laws:          Evaluate    -1;    Follow the steps in and .    does not fall neatly into any of the patterns established in the previous examples. However, with a little creativity, we can still use these same techniques.   Evaluating a Limit When the Limit Laws Do Not Apply   Evaluate    Both and fail to have a limit at zero. Since neither of the two functions has a limit at zero, we cannot apply the sum law for limits; we must use a different strategy. In this case, we find the limit by performing addition and then applying one of our previous strategies. Observe that   Thus,       Evaluate       Use the same technique as . Don’t forget to factor before getting a common denominator.      One-Sided Limits  Let’s now revisit one-sided limits. Simple modifications in the limit laws allow us to apply them to one-sided limits. For example, to apply the limit laws to a limit of the form we require the function to be defined over an open interval of the form for a limit of the form we require the function to be defined over an open interval of the form  illustrates this point.   Evaluating a One-Sided Limit Using the Limit Laws   Evaluate each of the following limits, if possible.        illustrates the function and aids in our understanding of these limits.    \"A graph of the function f(x) = sqrt(x-3). Visually, the function looks like the top half of a parabola opening to the right with vertex at (3,0).\"  The graph shows the function    The function is defined over the interval Since this function is not defined to the left of 3, we cannot apply the limit laws to compute In fact, since is undefined to the left of 3, does not exist.  Since is defined to the right of 3, the limit laws do apply to By applying these limit laws we obtain     In we look at one-sided limits of a piecewise-defined function and use these limits to draw a conclusion about a two-sided limit of the same function.    Evaluating a Two-Sided Limit Using the Limit Laws  For evaluate each of the following limits:         illustrates the function and aids in our understanding of these limits.    \"The graph of a piecewise function with two segments. For x\\lt 2, the function is linear with the equation 4x-3. There is an open circle at (2,5). The second segment is a parabola and exists for x\\gt =2, with the equation (x-3)^2. There is a closed circle at (2,1). The vertex of the parabola is at (3,0).\"  This graph shows a function    Since for all in replace in the limit with and apply the limit laws:   Since for all in replace in the limit with and apply the limit laws:   Since and we conclude that does not exist.      Graph and evaluate      \"The graph of a piecewise function with three segments. The first is a linear function, -x-2, for x\\lt -1. The x intercept is at (-2,0), and there is an open circle at (-1,-1). The next segment is simply the point (-1, 2). The third segment is the function x^3 for x \\gt -1, which crossed the x axis and y axis at the origin.\"      Use the method in to evaluate the limit.    Limits approaching the form are omitted from this section and held until the section on infinite limits     The Squeeze Theorem  The techniques we have developed thus far work very well for algebraic functions, but we are still unable to evaluate limits of very basic trigonometric functions. The next theorem, called the squeeze theorem , proves very useful for establishing basic trigonometric limits. This theorem allows us to calculate limits by “squeezing” a function, with a limit at a point that is unknown, between two functions having a common known limit at . illustrates this idea.    \"A graph of three functions over a small interval. All three functions curve. Over this interval, the function g(x) is trapped between the functions h(x), which gives greater y values for the same x values, and f(x), which gives smaller y values for the same x values. The functions all approach the same limit when x=a.\"  The Squeeze Theorem applies when and    The Squeeze Theorem  Let and be defined for all over an open interval containing . If   for all in an open interval containing and   where is a real number, then   For there exist such that whenever and whenever .  Let be the smaller of . For any satisfying , then (or ) and (or ).  Putting it all together, Therefore, .     Applying the Squeeze Theorem   Apply the squeeze theorem to evaluate    Because for all , we have . Since from the squeeze theorem, we obtain The graphs of and are shown in .   \"The graph of three functions: h(x) = x, f(x) = -x, and g(x) = xcos(x). The first, h(x) = x, is a linear function with slope of 1 going through the origin. The second, f(x), is also a linear function with slope of -1; going through the origin. The third, g(x) = xcos(x), curves between the two and goes through the origin. It opens upward for x\\gt 0 and downward for x\\gt 0.\"  The graphs of and are shown around the point       Use the squeeze theorem to evaluate    0    Use the fact that to help you find two functions such that is squeezed between them.      A Few Important Trigonometric Limits  We now use the squeeze theorem to tackle several very important limits. Although this discussion is somewhat lengthy, these limits prove invaluable for the development of the material in both the next section and the next chapter. The first of these limits is Consider the unit circle shown in . In the figure, we see that is the -coordinate on the unit circle and it corresponds to the line segment shown in blue. The radian measure of angle is the length of the arc it subtends on the unit circle. Therefore, we see that for    \"A diagram of the unit circle in the x,y plane – it is a circle with radius 1 and center at the origin. A specific point (cos(theta), sin(theta)) is labeled in quadrant 1 on the edge of the circle. This point is one vertex of a right triangle inside the circle, with other vertices at the origin and (cos(theta), 0). As such, the lengths of the sides are cos(theta) for the base and sin(theta) for the height, where theta is the angle created by the hypotenuse and base. The radian measure of angle theta is the length of the arc it subtends on the unit circle. The diagram shows that for 0 \\lt theta \\lt pi\/2, 0 \\lt sin(theta) \\lt theta.\"  The sine function is shown as a line on the unit circle.   Because and by using the squeeze theorem we conclude that  To see that as well, observe that for and hence, Consequently, It follows that An application of the squeeze theorem produces the desired limit. Thus, since and   Next, using the identity for we see that   We now take a look at a limit that plays an important role in later chapters—namely, To evaluate this limit, we use the unit circle in . Notice that this figure adds one additional triangle to . We see that the length of the side opposite angle in this new triangle is Thus, we see that for    \"The same diagram as the previous one. However, the triangle is expanded. The base is now from the origin to (1,0). The height goes from (1,0) to (1, tan(theta)). The hypotenuse goes from the origin to (1, tan(theta)). As such, the height is now tan(theta). It shows that for 0 \\lt theta \\lt pi\/2, sin(theta) \\lt theta \\lt tan(theta).\"  The sine and tangent functions are shown as lines on the unit circle.   By dividing by in all parts of the inequality, we obtain   Equivalently, we have   Since we conclude that By applying a manipulation similar to that used in demonstrating that we can show that Thus,   In we use this limit to establish This limit also proves useful in later chapters.   Evaluating an Important Trigonometric Limit   Evaluate    In the first step, we multiply by the conjugate so that we can use a trigonometric identity to convert the cosine in the numerator to a sine:   Therefore,       Evaluate    0    Multiply numerator and denominator by      Deriving the Formula for the Area of a Circle  Some of the geometric formulas we take for granted today were first derived by methods that anticipate some of the methods of calculus. The Greek mathematician Archimedes (ca. 287-212; BCE) was particularly inventive, using polygons inscribed within circles to approximate the area of the circle as the number of sides of the polygon increased. He never came up with the idea of a limit, but we can use this idea to see what his geometric constructions could have predicted about the limit.  We can estimate the area of a circle by computing the area of an inscribed regular polygon. Think of the regular polygon as being made up of triangles. By taking the limit as the vertex angle of these triangles goes to zero, you can obtain the area of the circle. To see this, carry out the following steps:   Express the height and the base of the isosceles triangle in in terms of and .    \"A diagram of a circle with an inscribed polygon – namely, an octagon. An isosceles triangle is drawn with one of the sides of the octagon as the base and center of the circle\/octagon as the top vertex. The height h goes from the center of the base b to the center, and each of the legs is also radii r of the circle. The angle created by the height h and one of the legs r is labeled as theta.\"    Using the expressions that you obtained in step 1, express the area of the isosceles triangle in terms of and . (Substitute for in your expression.)  If an -sided regular polygon is inscribed in a circle of radius , find a relationship between and . Solve this for . Keep in mind there are 2 radians in a circle. (Use radians, not degrees.)  Find an expression for the area of the -sided polygon in terms of and .  To find a formula for the area of the circle, find the limit of the expression in step 4 as goes to zero. ( Hint:    The technique of estimating areas of regions by using polygons is revisited in Introduction to Integration .      Proofs of the Limit Laws (Optional)  We now prove    To start, we need the triangle inequality , which says that for any real numbers ,    Sum law for limits : For . Since the limit for exists, then there exists such that when then .  Also, since the limit for exists, there is some such that when then .  Let be the smaller of (so and ). Whenever , then using the Triangle Inequality,    Difference law for limits : Choose the same way as in the sum law for limits.  Again using the Triangle Inequality, whenever , then    Constant multiple law for limits : If then this is just a case of   If , let . Since the limit for exists, there is some such that whenever . For such ,    Product law for limits : Let . First, consider the case if Since the limits for exist, there exists and such that when and when .  Let be the smaller of like we did in the sum law for limits. For any ,   Now, for the more general case, assume . Since the limit for exists, then there is some such that whenever , then (the last line is true regardless of whether is positive or negative)  Since the limit for exists, there is some such that whenever , then . Also, there is some such that whenever .  Let's put the pieces altogether by letting be the minimum of . For any x satisfying , again use the Triangle Inequality to show    Quotient law for limits : This limit law will follow quickly if we first show that : Assume for simplicity that . Since the limit for exists, then given there exists such that whenever . Note that .  Following the inequalities down the rabbit hole, for any satisfying , Since , then .  Now, if , define . The constant multiple law of limits shows that and so   Finally, to prove the quotient law for limits, rewrite as and apply the product law for limits.   Power law for limits : This is a repeated application of the product law for limits   Root law for limits : First start with the case when . Let . Without loss of generality, assume . Then there exists such that whenever (which makes ). It can be verified that So, Therefore, if then   Now suppose where is any nonzero number. Define . Using the constant multiple law for limits, . Thus, by the work above, . Again using the constant multiple law for limits,   Finally, suppose with odd. It can be shown that whenever , then .    "
 },
 {
   "id": "fs-id1170572451153",
@@ -4444,7 +4444,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.5",
   "title": "Derivatives of Trigonometric Functions",
-  "body": " Derivatives of Trigonometric Functions   Learning Objectives   Find the derivatives of the sine and cosine function.  Describe how harmonic motion can be modeled by sine and cosine functions.  Find the derivatives of the standard trigonometric functions.  Calculate the higher-order derivatives of the sine and cosine.   One of the most important types of motion in physics is simple harmonic motion, which is associated with such systems as an object with mass oscillating on a spring. Simple harmonic motion can be described by using either sine or cosine functions. In this section we expand our knowledge of derivative formulas to include derivatives of these and other trigonometric functions. We begin with the derivatives of the sine and cosine functions and then use them to obtain formulas for the derivatives of the remaining four trigonometric functions. Being able to calculate the derivatives of the sine and cosine functions will enable us to find the velocity and acceleration of simple harmonic motion.    Derivatives of the Sine and Cosine Functions  We begin our exploration of the derivative for the sine function by using the formula to make a reasonable guess at its derivative. Recall that for a function ,   Consequently, for values of very close to , . We see that by using , By setting and using a graphing utility, we can get a graph of an appoximation to the derivative of ( ).    \"A graph of D(x) between -2 pi and 2 pi. The graph is periodic with period 2 pi and range from -1 to 1. The y intercept is at (0,1) and there are x-intercepts at -3pi\/2, -pi\/2, pi\/2, and 3pi\/2\"   The graph of the function looks a lot like a cosine curve.   Upon inspection, the graph of appears to be very close to the graph of the cosine function. Indeed, we will show that . If we were to follow the same steps to approximate the derivative of the cosine function, we would find that    The Derivatives of and  The derivative of the sine function is the cosine and the derivative of the cosine function is the negative sine.     Because the proofs for and use similar techniques, we provide only the proof the for former. Before beginning, recall two important trigonometric limits from : The graphs of and are shown in     Two graphs side by side. The first is a graph of y=sin(h)\/h ad the second is a graph of y=(cos(h)-1)\/h   These graphs show two important limits needed to establish the derivative formulas for the sine and cosine functions.   We also recall the following trigonometric identity for the sine of the sum of two angles:       shows the relationship between the graph of and its derivative . Notice that at the points where has a horizontal tangent, its derivative takes on the value zero. We also see that where is increasing, and where is decreasing, .    A graph of sine of x and cosine of x on the interval from 0 to 2 pi.   Where has a maximum or a minimum, . That is, where has a horizontal tangent. These points are noted with dots on the graph.    Differentiating a Function Containing   Find the derivative of .    Using the product rule, we have After simplifying, we obtain      Find the derivative of      Use the product rule    Finding the Derivative of a Function Containing   Find the derivative of .    By applying the quotient rule, we have Simplifying, we obtain      Find the derivative of      Use the quotient rule    An Application to Velocity   A particle moves along a coordinate axis in such a way that its position at time is given by for . At what times is the particle at rest?    To determine when the particle is at rest, set . Begin by finding . We obtain so we must solve   The solutions to this equation are and . Thus the particle is at rest at times and .     A particle moves along a coordinate axis. Its position at time is given by for . At what times is the particle at rest?   and .   Determine when the velocity is .     Many physical systems move in a regular, repeating way. One of the simplest examples is a mass attached to a spring. If the mass is pulled away from its resting position and released, it moves back and forth, slowing down as it reaches the ends of its motion and speeding up as it passes through the center. This type of motion is called harmonic motion .  We can describe the position of the mass at time using a sine or cosine function, such as where is the amplitude (the maximum distance from the equilibrium position).  Using derivatives, we can understand how the motion changes over time. The velocity is and the acceleration is These formulas reveal an important feature of harmonic motion. The acceleration satisifes This means the acceleration is always directed opposite the position. When the mass is above the equilibrium position, the acceleration pulls it downward; when it is below, the acceleration pulls it upward. In other words, the spring exerts a restoring force that continually pulls the mass back toward equilibrium.  This connection between position, velocity, and acceleration explains the motion: the mass speeds up as it moves toward the center, slows down as it moves away, and repeats this pattern over time. Because sine and cosine functions naturally capture this behavior—and their derivatives cycle between each other—they provide an ideal mathematical model for harmonic motion.   Interpreting the graph  Suppose the position is given by .    The maximum and minimum values ( ) occur at the endpoints of the motion. At these points, the object momentarily stops so the velocity is zero.  The speed is greatest when , which occurs when the graph crosses , the equilibrium position.  Where the graph is increasing, the velocity is positive (the object is moving upward or forward). Where the graph is decreasing, the velocity is negative.  The steepness of the graph reflects the magnitude of the velocity: steeper means faster motion.      This needs to be created.      Derivatives of Other Trigonometric Functions  Since the remaining four trigonometric functions may be expressed as quotients involving sine, cosine, or both, we can use the quotient rule to find the formulas for their derivatives.   The Derivative of the Tangent Function   Find the derivative of .    Start by expressing as the quotient of and : . Now apply the quotient rule to obtain . Simplifying, we obtain . Recognizing that , by the Pythagorean theorem, we now have . Finally, use the identity to obtain .     Find the derivative of    .   Use the quotient rule.   The derivatives of the remaining trigonometric functions may be obtained by using similar techniques. We provide these formulas in the following theorem.   Derivatives of    The derivatives of the remaining trigonometric functions are as follows.      Finding the Equation of a Tangent Line   Find the equation of a line tangent to the graph of at .    To find an equation of the tangent line, we need a point and a slope at that point. To find the point, compute Thus the tangent line passes through the point . Next, find the slope by finding the derivative of by evaluating it at : Using the point-slope equation of the line, we obtain or equivalently,      Finding the Derivative of Trigonometric Functions   Find the derivative of     To find this derivative, we must use both the sum rule and the product rule. Using the sum rule, we find In the first term, , and by applying the product rule to the second term we obtain Therefore, we have      Find the derivative of    .   Use the formulas.    Find the slope of the line tangent to the graph of at    .   The slope of the tangent line is the derivative of the function..     Higher-Order Derivatives  The higher-order derivatives of and follow a repeating pattern. By following the pattern, we can find any higher-order derivative of and .   Finding Higher-Order Derivatives of   Find the first four derivatives of .    Each step in the chain is straightforward:   In fact, once we recognize the pattern of derivatives, we can find any higher-order derivative by determining the step in the pattern to which it corresponds. For example, every fourth derivative of equals , so for any positive integer ,       For , find .       Take four consecutive derivatives of the cosine function,     Using the Pattern for Higher-Order Derivatives of   Find .    We can see right away that for the 74th derivative of , , so       For , find .             An Application to Acceleration   A particle moves along a coordinate axis in such a way that its position at time is given by . Find and . Compare these values and decide whether the particle is speeding up or slowing down.    First find : Thus, Next, find . Thus, and we have Since and , we see that velocity and acceleration are acting in opposite directions; that is, the object is being accelerated in the direction opposite to the direction in which it is travelling. Consequently, the particle is slowing down.     A block attached to a spring is moving vertically. Its position at time is given by . Find and . Compare these values and decide whether the block is speeding up or slowing down.    and . The block is speeding up.    Find the first and second derivative of when .     "
+  "body": " Derivatives of Trigonometric Functions   Learning Objectives   Find the derivatives of the sine and cosine function.  Describe how harmonic motion can be modeled by sine and cosine functions.  Find the derivatives of the standard trigonometric functions.  Calculate the higher-order derivatives of the sine and cosine.   One of the most important types of motion in physics is simple harmonic motion, which is associated with such systems as an object with mass oscillating on a spring. Simple harmonic motion can be described by using either sine or cosine functions. In this section we expand our knowledge of derivative formulas to include derivatives of these and other trigonometric functions. We begin with the derivatives of the sine and cosine functions and then use them to obtain formulas for the derivatives of the remaining four trigonometric functions. Being able to calculate the derivatives of the sine and cosine functions will enable us to find the velocity and acceleration of simple harmonic motion.    Derivatives of the Sine and Cosine Functions  We begin our exploration of the derivative for the sine function by using the formula to make a reasonable guess at its derivative. Recall that for a function ,   Consequently, for values of very close to , . We see that by using , By setting and using a graphing utility, we can get a graph of an appoximation to the derivative of ( ).    \"A graph of D(x) between -2 pi and 2 pi. The graph is periodic with period 2 pi and range from -1 to 1. The y intercept is at (0,1) and there are x-intercepts at -3pi\/2, -pi\/2, pi\/2, and 3pi\/2\"   The graph of the function looks a lot like a cosine curve.   Upon inspection, the graph of appears to be very close to the graph of the cosine function. Indeed, we will show that . If we were to follow the same steps to approximate the derivative of the cosine function, we would find that    The Derivatives of and  The derivative of the sine function is the cosine and the derivative of the cosine function is the negative sine.     Because the proofs for and use similar techniques, we provide only the proof the for former. Before beginning, recall two important trigonometric limits from : The graphs of and are shown in     Two graphs side by side. The first is a graph of y=sin(h)\/h ad the second is a graph of y=(cos(h)-1)\/h   These graphs show two important limits needed to establish the derivative formulas for the sine and cosine functions.   We also recall the following trigonometric identity for the sine of the sum of two angles:        Radians or Degrees?  It is important to note that the derivation of the derivatives of and required the limits from , and while proving whether those limits existed, we needed . The measurements in this figure only apply when has radian units. Therefore, the derivative formulas for our trigonometric functions are only valid with radian values of   (To put it another way, we know that when is in radians. But see if this still works when the input is in degrees. Use a calculator to plug in small degree values for and find that the result is not approaching !   shows the relationship between the graph of and its derivative . Notice that at the points where has a horizontal tangent, its derivative takes on the value zero. We also see that where is increasing, and where is decreasing, .    A graph of sine of x and cosine of x on the interval from 0 to 2 pi.   Where has a maximum or a minimum, . That is, where has a horizontal tangent. These points are noted with dots on the graph.    Differentiating a Function Containing   Find the derivative of .    Using the product rule, we have After simplifying, we obtain      Find the derivative of      Use the product rule    Finding the Derivative of a Function Containing   Find the derivative of .    By applying the quotient rule, we have Simplifying, we obtain      Find the derivative of      Use the quotient rule    An Application to Velocity   A particle moves along a coordinate axis in such a way that its position at time is given by for . At what times is the particle at rest?    To determine when the particle is at rest, set . Begin by finding . We obtain so we must solve   The solutions to this equation are and . Thus the particle is at rest at times and .     A particle moves along a coordinate axis. Its position at time is given by for . At what times is the particle at rest?   and .   Determine when the velocity is .     Harmonic Motion  Many physical systems move in a regular, repeating way. One of the simplest examples is a mass attached to a spring. If the mass is pulled away from its resting position and released, it moves back and forth, slowing down as it reaches the ends of its motion and speeding up as it passes through the center. This type of motion is called harmonic motion .  We can describe the position of the mass at time using a sine or cosine function, such as where is the amplitude (the maximum distance from the equilibrium position).  Using derivatives, we can understand how the motion changes over time. The velocity is and the acceleration is These formulas reveal an important feature of harmonic motion. The acceleration satisifes This means the acceleration is always directed opposite the position. When the mass is above the equilibrium position, the acceleration pulls it downward; when it is below, the acceleration pulls it upward. In other words, the spring exerts a restoring force that continually pulls the mass back toward equilibrium.  This connection between position, velocity, and acceleration explains the motion: the mass speeds up as it moves toward the center, slows down as it moves away, and repeats this pattern over time. Because sine and cosine functions naturally capture this behavior—and their derivatives cycle between each other—they provide an ideal mathematical model for harmonic motion.   Interpreting the graph  Suppose the position is given by .    The maximum and minimum values ( ) occur at the endpoints of the motion. At these points, the object momentarily stops so the velocity is zero.  The speed is greatest when , which occurs when the graph crosses , the equilibrium position.  Where the graph is increasing, the velocity is positive (the object is moving upward or forward). Where the graph is decreasing, the velocity is negative.  The steepness of the graph reflects the magnitude of the velocity: steeper means faster motion.      This needs to be created.      Derivatives of Other Trigonometric Functions  Since the remaining four trigonometric functions may be expressed as quotients involving sine, cosine, or both, we can use the quotient rule to find the formulas for their derivatives.   The Derivative of the Tangent Function   Find the derivative of .    Start by expressing as the quotient of and : . Now apply the quotient rule to obtain . Simplifying, we obtain . Recognizing that , by the Pythagorean theorem, we now have . Finally, use the identity to obtain .     Find the derivative of    .   Use the quotient rule.   The derivatives of the remaining trigonometric functions may be obtained by using similar techniques. We provide these formulas in the following theorem.   Derivatives of    The derivatives of the remaining trigonometric functions are as follows.      Finding the Equation of a Tangent Line   Find the equation of a line tangent to the graph of at .    To find an equation of the tangent line, we need a point and a slope at that point. To find the point, compute Thus the tangent line passes through the point . Next, find the slope by finding the derivative of by evaluating it at : Using the point-slope equation of the line, we obtain or equivalently,      Finding the Derivative of Trigonometric Functions   Find the derivative of     To find this derivative, we must use both the sum rule and the product rule. Using the sum rule, we find In the first term, , and by applying the product rule to the second term we obtain Therefore, we have      Find the derivative of    .   Use the formulas.    Find the slope of the line tangent to the graph of at    .   The slope of the tangent line is the derivative of the function..     Higher-Order Derivatives  The higher-order derivatives of and follow a repeating pattern. By following the pattern, we can find any higher-order derivative of and .   Finding Higher-Order Derivatives of   Find the first four derivatives of .    Each step in the chain is straightforward:   In fact, once we recognize the pattern of derivatives, we can find any higher-order derivative by determining the step in the pattern to which it corresponds. For example, every fourth derivative of equals , so for any positive integer ,       For , find .       Take four consecutive derivatives of the cosine function,     Using the Pattern for Higher-Order Derivatives of   Find .    We can see right away that for the 74th derivative of , , so       For , find .             An Application to Acceleration   A particle moves along a coordinate axis in such a way that its position at time is given by . Find and . Compare these values and decide whether the particle is speeding up or slowing down.    First find : Thus, Next, find . Thus, and we have Since and , we see that velocity and acceleration are acting in opposite directions; that is, the object is being accelerated in the direction opposite to the direction in which it is travelling. Consequently, the particle is slowing down.     A block attached to a spring is moving vertically. Its position at time is given by . Find and . Compare these values and decide whether the block is speeding up or slowing down.    and . The block is speeding up.    Find the first and second derivative of when .     "
 },
 {
   "id": "CNX_Calc_Figure_03_05_001",
@@ -4465,11 +4465,20 @@ var ptx_lunr_docs = [
   "body": " The Derivatives of and  The derivative of the sine function is the cosine and the derivative of the cosine function is the negative sine.     Because the proofs for and use similar techniques, we provide only the proof the for former. Before beginning, recall two important trigonometric limits from : The graphs of and are shown in     Two graphs side by side. The first is a graph of y=sin(h)\/h ad the second is a graph of y=(cos(h)-1)\/h   These graphs show two important limits needed to establish the derivative formulas for the sine and cosine functions.   We also recall the following trigonometric identity for the sine of the sum of two angles:     "
 },
 {
+  "id": "remark-radiansordegrees",
+  "level": "2",
+  "url": "sec_Ch3Sec5.html#remark-radiansordegrees",
+  "type": "Remark",
+  "number": "3.5.4",
+  "title": "Radians or Degrees?",
+  "body": " Radians or Degrees?  It is important to note that the derivation of the derivatives of and required the limits from , and while proving whether those limits existed, we needed . The measurements in this figure only apply when has radian units. Therefore, the derivative formulas for our trigonometric functions are only valid with radian values of   (To put it another way, we know that when is in radians. But see if this still works when the input is in degrees. Use a calculator to plug in small degree values for and find that the result is not approaching !  "
+},
+{
   "id": "CNX_Calc_Figure_03_05_003",
   "level": "2",
   "url": "sec_Ch3Sec5.html#CNX_Calc_Figure_03_05_003",
   "type": "Figure",
-  "number": "3.5.4",
+  "number": "3.5.5",
   "title": "",
   "body": "  A graph of sine of x and cosine of x on the interval from 0 to 2 pi.   Where has a maximum or a minimum, . That is, where has a horizontal tangent. These points are noted with dots on the graph.  "
 },
@@ -4478,7 +4487,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-9",
   "type": "Example",
-  "number": "3.5.5",
+  "number": "3.5.6",
   "title": "Differentiating a Function Containing <span class=\"process-math\">\\(\\sin{x}\\)<\/span>.",
   "body": " Differentiating a Function Containing   Find the derivative of .    Using the product rule, we have After simplifying, we obtain    "
 },
@@ -4487,7 +4496,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-10",
   "type": "Checkpoint",
-  "number": "3.5.6",
+  "number": "3.5.7",
   "title": "",
   "body": " Find the derivative of      Use the product rule  "
 },
@@ -4496,7 +4505,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-11",
   "type": "Example",
-  "number": "3.5.7",
+  "number": "3.5.8",
   "title": "Finding the Derivative of a Function Containing <span class=\"process-math\">\\(\\cos{x}\\)<\/span>.",
   "body": " Finding the Derivative of a Function Containing   Find the derivative of .    By applying the quotient rule, we have Simplifying, we obtain    "
 },
@@ -4505,7 +4514,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-12",
   "type": "Checkpoint",
-  "number": "3.5.8",
+  "number": "3.5.9",
   "title": "",
   "body": " Find the derivative of      Use the quotient rule  "
 },
@@ -4514,7 +4523,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-13",
   "type": "Example",
-  "number": "3.5.9",
+  "number": "3.5.10",
   "title": "An Application to Velocity.",
   "body": " An Application to Velocity   A particle moves along a coordinate axis in such a way that its position at time is given by for . At what times is the particle at rest?    To determine when the particle is at rest, set . Begin by finding . We obtain so we must solve   The solutions to this equation are and . Thus the particle is at rest at times and .   "
 },
@@ -4523,34 +4532,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivs-sine-cosine-14",
   "type": "Checkpoint",
-  "number": "3.5.10",
+  "number": "3.5.11",
   "title": "",
   "body": " A particle moves along a coordinate axis. Its position at time is given by for . At what times is the particle at rest?   and .   Determine when the velocity is .  "
 },
 {
-  "id": "subsec-harmonicmotion-1",
+  "id": "subsec-harmonicmotion-2",
   "level": "2",
-  "url": "sec_Ch3Sec5.html#subsec-harmonicmotion-1",
+  "url": "sec_Ch3Sec5.html#subsec-harmonicmotion-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "harmonic motion "
 },
 {
-  "id": "subsec-harmonicmotion-3",
+  "id": "subsec-harmonicmotion-4",
   "level": "2",
-  "url": "sec_Ch3Sec5.html#subsec-harmonicmotion-3",
+  "url": "sec_Ch3Sec5.html#subsec-harmonicmotion-4",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "restoring force "
 },
 {
-  "id": "subsec-harmonicmotion-5",
+  "id": "subsec-harmonicmotion-6",
   "level": "2",
-  "url": "sec_Ch3Sec5.html#subsec-harmonicmotion-5",
+  "url": "sec_Ch3Sec5.html#subsec-harmonicmotion-6",
   "type": "Example",
-  "number": "3.5.11",
+  "number": "3.5.12",
   "title": "Interpreting the graph.",
   "body": " Interpreting the graph  Suppose the position is given by .    The maximum and minimum values ( ) occur at the endpoints of the motion. At these points, the object momentarily stops so the velocity is zero.  The speed is greatest when , which occurs when the graph crosses , the equilibrium position.  Where the graph is increasing, the velocity is positive (the object is moving upward or forward). Where the graph is decreasing, the velocity is negative.  The steepness of the graph reflects the magnitude of the velocity: steeper means faster motion.      This needs to be created.   "
 },
@@ -4559,7 +4568,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-3",
   "type": "Example",
-  "number": "3.5.13",
+  "number": "3.5.14",
   "title": "The Derivative of the Tangent Function.",
   "body": " The Derivative of the Tangent Function   Find the derivative of .    Start by expressing as the quotient of and : . Now apply the quotient rule to obtain . Simplifying, we obtain . Recognizing that , by the Pythagorean theorem, we now have . Finally, use the identity to obtain .   "
 },
@@ -4568,7 +4577,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-4",
   "type": "Checkpoint",
-  "number": "3.5.14",
+  "number": "3.5.15",
   "title": "",
   "body": " Find the derivative of    .   Use the quotient rule.  "
 },
@@ -4577,7 +4586,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-6",
   "type": "Theorem",
-  "number": "3.5.15",
+  "number": "3.5.16",
   "title": "Derivatives of <span class=\"process-math\">\\(\\tan{x},\\,\\cot{x},\\,\\sec{x},\\,\\csc{x}\\)<\/span>.",
   "body": " Derivatives of    The derivatives of the remaining trigonometric functions are as follows.    "
 },
@@ -4586,7 +4595,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-7",
   "type": "Example",
-  "number": "3.5.16",
+  "number": "3.5.17",
   "title": "Finding the Equation of a Tangent Line.",
   "body": " Finding the Equation of a Tangent Line   Find the equation of a line tangent to the graph of at .    To find an equation of the tangent line, we need a point and a slope at that point. To find the point, compute Thus the tangent line passes through the point . Next, find the slope by finding the derivative of by evaluating it at : Using the point-slope equation of the line, we obtain or equivalently,    "
 },
@@ -4595,7 +4604,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-8",
   "type": "Example",
-  "number": "3.5.17",
+  "number": "3.5.18",
   "title": "Finding the Derivative of Trigonometric Functions.",
   "body": " Finding the Derivative of Trigonometric Functions   Find the derivative of     To find this derivative, we must use both the sum rule and the product rule. Using the sum rule, we find In the first term, , and by applying the product rule to the second term we obtain Therefore, we have    "
 },
@@ -4604,7 +4613,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-9",
   "type": "Checkpoint",
-  "number": "3.5.18",
+  "number": "3.5.19",
   "title": "",
   "body": " Find the derivative of    .   Use the formulas.  "
 },
@@ -4613,7 +4622,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-derivatives-other-trig-10",
   "type": "Checkpoint",
-  "number": "3.5.19",
+  "number": "3.5.20",
   "title": "",
   "body": " Find the slope of the line tangent to the graph of at    .   The slope of the tangent line is the derivative of the function..  "
 },
@@ -4622,7 +4631,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-higher-trig-derivatives-3",
   "type": "Example",
-  "number": "3.5.20",
+  "number": "3.5.21",
   "title": "Finding Higher-Order Derivatives of <span class=\"process-math\">\\(y=\\sin{x}\\)<\/span>.",
   "body": " Finding Higher-Order Derivatives of   Find the first four derivatives of .    Each step in the chain is straightforward:   In fact, once we recognize the pattern of derivatives, we can find any higher-order derivative by determining the step in the pattern to which it corresponds. For example, every fourth derivative of equals , so for any positive integer ,    "
 },
@@ -4631,7 +4640,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-higher-trig-derivatives-4",
   "type": "Checkpoint",
-  "number": "3.5.21",
+  "number": "3.5.22",
   "title": "",
   "body": "  For , find .       Take four consecutive derivatives of the cosine function,   "
 },
@@ -4640,7 +4649,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-higher-trig-derivatives-5",
   "type": "Example",
-  "number": "3.5.22",
+  "number": "3.5.23",
   "title": "Using the Pattern for Higher-Order Derivatives of <span class=\"process-math\">\\(y=\\sin{x}\\)<\/span>.",
   "body": " Using the Pattern for Higher-Order Derivatives of   Find .    We can see right away that for the 74th derivative of , , so    "
 },
@@ -4649,7 +4658,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-higher-trig-derivatives-6",
   "type": "Checkpoint",
-  "number": "3.5.23",
+  "number": "3.5.24",
   "title": "",
   "body": "  For , find .           "
 },
@@ -4658,7 +4667,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-higher-trig-derivatives-7",
   "type": "Example",
-  "number": "3.5.24",
+  "number": "3.5.25",
   "title": "An Application to Acceleration.",
   "body": " An Application to Acceleration   A particle moves along a coordinate axis in such a way that its position at time is given by . Find and . Compare these values and decide whether the particle is speeding up or slowing down.    First find : Thus, Next, find . Thus, and we have Since and , we see that velocity and acceleration are acting in opposite directions; that is, the object is being accelerated in the direction opposite to the direction in which it is travelling. Consequently, the particle is slowing down.   "
 },
@@ -4667,7 +4676,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_Ch3Sec5.html#subsec-higher-trig-derivatives-8",
   "type": "Checkpoint",
-  "number": "3.5.25",
+  "number": "3.5.26",
   "title": "",
   "body": " A block attached to a spring is moving vertically. Its position at time is given by . Find and . Compare these values and decide whether the block is speeding up or slowing down.    and . The block is speeding up.    Find the first and second derivative of when .   "
 },
@@ -4677,8 +4686,287 @@ var ptx_lunr_docs = [
   "url": "sec_Ch3Sec6.html",
   "type": "Section",
   "number": "3.6",
-  "title": "Chapter 3 Section 6 Placeholder",
-  "body": " Chapter 3 Section 6 Placeholder  "
+  "title": "The Chain Rule",
+  "body": " The Chain Rule   Learning Objectives   State the chain rule for the composition of two functions.  Apply the chain rule together with the power rule.  Apply the chain rule and the product\/quotient rules correctly in combination when both are necessary.  Recognize the chain rule for a composition of three or more functions.  Describe the proof of the chain rule.   We have seen the techniques for differentiating basic functions ( , etc.) as well as sums, differences, products, quotients, and constant multiples of these functions. However, these techniques do not allow us to differentiate compositions of functions, such as or In this section, we study the rule for finding the derivative of the composition of two or more functions.    Deriving the Chain Rule  When we have a function that is a composition of two or more functions, we could use all of the techniques we have already learned to differentiate it. However, using all of those techniques to break down a function into simpler parts that we are able to differentiate can get cumbersome. Instead, we use the chain rule , which states that the derivative of a composite function is the derivative of the outer function evaluated at the inner function times the derivative of the inner function.  To put this rule into context, let’s take a look at an example: We can think of the derivative of this function with respect to as the rate of change of relative to the change in Consequently, we want to know how changes as changes. We can think of this event as a chain reaction: As changes, changes, which leads to a change in This chain reaction gives us hints as to what is involved in computing the derivative of First of all, a change in forcing a change in suggests that somehow the derivative of is involved. In addition, the change in forcing a change in suggests that the derivative of with respect to where is also part of the final derivative.  We can take a more formal look at the derivative of by setting up the limit that would give us the derivative at a specific value in the domain of   This expression does not seem particularly helpful; however, we can modify it by multiplying and dividing by the expression to obtain   From the definition of the derivative, we can see that the second factor is the derivative of at That is,   However, it might be a little more challenging to recognize that the first term is also a derivative. We can see this by letting and observing that as  Thus,   In other words, if then Thus, if we think of as the composition where sin and then the derivative of is the product of the derivative of and the derivative of the function evaluated at the function At this point, we anticipate that for it is quite likely that As we determined above, this is the case for  Now that we have derived a special case of the chain rule, we state the general case and then apply it in a general form to other composite functions. An informal proof is provided at the end of the section.   Chain Rule   Let and be functions. For all in the domain of for which is differentiable at and is differentiable at the derivative of the composite function   is given by   Alternatively, if is a function of and is a function of then       Create Figure 3.27 From Thomas     Watch an animation of the chain rule.    Applying the Chain Rule   To differentiate begin by identifying and  Find and evaluate it at to obtain  Find  Write   Note : When applying the chain rule to the composition of two or more functions, keep in mind that we work our way from the outside function in. It is also useful to remember that the derivative of the composition of two functions can be thought of as having two parts; the derivative of the composition of three functions has three parts; and so on. Also, remember that we never evaluate a derivative at a derivative.     The Chain and Power Rules Combined  We can now apply the chain rule to composite functions, but note that we often need to use it with other rules. For example, to find derivatives of functions of the form we need to use the chain rule combined with the power rule. To do so, we can think of as where Then Thus, This leads us to the derivative of a power function using the chain rule,    A Power Rule for Composition of Functions  For all values of for which the derivative is defined, if   Then     Using the Chain and Power Rules   Find the derivative of    First, rewrite  Applying the power rule with we have   Rewriting back to the original form gives us       Find the derivative of      Use with     Using the Chain and Power Rules with a Trigonometric Function   Find the derivative of .    First recall that so we can rewrite as  Applying the power rule with we obtain  .    Finding the Equation of a Tangent Line   Find the equation of a line tangent to the graph of at    Because we are finding an equation of a line, we need a point. The -coordinate of the point is 2. To find the -coordinate, substitute 2 into Since the point is  For the slope, we need To find first we rewrite and apply the power rule to obtain   By substituting, we have Therefore, the line has equation Rewriting, the equation of the line is      Find the equation of the line tangent to the graph of at       Use the preceding example as a guide.      Combining the Chain Rule with Other Rules  Now that we can combine the chain rule and the power rule, we examine how to combine the chain rule with the other rules we have learned. In particular, we can use it with the formulas for the derivatives of quotient or product rule.   Using the Chain Rule on a General Cosine Function   Find the derivative of    Think of as where Since we have Then we do the following calculation.   Thus, the derivative of is given by    In the following example we apply the rule that we have just derived.   Using the Chain Rule on a Cosine Function   Find the derivative of    Let Then Using the result from the previous example,      Using the Chain Rule on Another Trigonometric Function   Find the derivative of    Apply the chain rule to to obtain   In this problem, so we have Therefore, we obtain       Find the derivative of       Apply the chain rule to first and then use    At this point we provide a list of derivative formulas that may be obtained by applying the chain rule in conjunction with the formulas for derivatives of trigonometric functions. Their derivations are similar to those used in and . For convenience, formulas are also given in Leibniz’s notation, which some students find easier to remember. (We discuss the chain rule using Leibniz’s notation at the end of this section.) It is not absolutely necessary to memorize these as separate formulas as they are all applications of the chain rule to previously learned formulas.  Change next end note to end theorem Using the Chain Rule with Trigonometric Functions  For all values of for which the derivative is defined,     Combining the Chain Rule with the Product Rule   Find the derivative of    First apply the product rule, then apply the chain rule to each term of the product.      Find the derivative of       Start out by applying the quotient rule. Remember to use the chain rule to differentiate the denominator.      Composites of Three or More Functions  We can now combine the chain rule with other rules for differentiating functions, but when we are differentiating the composition of three or more functions, we need to apply the chain rule more than once. If we look at this situation in general terms, we can generate a formula, but we do not need to remember it, as we can simply apply the chain rule multiple times.  In general terms, first we let   Then, applying the chain rule once we obtain   Applying the chain rule again, we obtain    Chain Rule for a Composition of Three Functions  For all values of for which the function is differentiable, if   then   In other words, we are applying the chain rule twice.   Notice that the derivative of the composition of three functions has three parts. (Similarly, the derivative of the composition of four functions has four parts, and so on.) Also, remember, we can always work from the outside in, taking one derivative at a time.   Differentiating a Composite of Three Functions   Find the derivative of    First, rewrite as   Then apply the chain rule several times.      Find the derivative of       Rewrite and use as a guide.     Using the Chain Rule in a Velocity Problem   A particle moves along a coordinate axis. Its position at time is given by What is the velocity of the particle at time    To find the velocity of the particle at time we must differentiate Thus,   Substituting into we obtain      A particle moves along a coordinate axis. Its position at time is given by Find its acceleration at time       Acceleration is the second derivative of position.      At this point, we present a very informal proof of the chain rule, . .  For simplicity’s sake we ignore certain issues: For example, we assume that for in some open interval containing We begin by applying the limit definition of the derivative to the function to obtain   Rewriting, we obtain   Although it is clear that   it is not obvious that   To see that this is true, first recall that since is differentiable at is also continuous at Thus,   Next, make the substitution and and use change of variables in the limit to obtain   Finally,      Using the Chain Rule with Functional Values   Let If and find    Use the chain rule, then substitute.       Given If and find       Follow .      The Chain Rule Using Leibniz’s Notation  As with other derivatives that we have seen, we can express the chain rule using Leibniz’s notation. This notation for the chain rule is used heavily in physics applications.  let and Thus,   and   Consequently,    Chain Rule Using Leibniz’s Notation  If is a function of and is a function of then     Taking a Derivative Using Leibniz’s Notation   Find the derivative of    First, let Thus, Next, find and Using the quotient rule,   and   Finally, we put it all together.   It is important to remember that, when using the Leibniz form of the chain rule, the final answer must be expressed entirely in terms of the original variable given in the problem.      Taking Another Derivative Using Leibniz’s Notation  Find the derivative of    First, let Then Next, find and   Finally, we put it all together.       Use Leibniz’s notation to find the derivative of Make sure that the final answer is expressed entirely in terms of the variable       Let     Trigonometric Derivatives Using Degrees  Recall the discussion in that the formulas for the derivatives of trigonometric functions are only valid with radian measurements. If we graphed a trigonometric function using degrees along the horizontal axis, how would we compute the slopes of tangent lines?  Let where is an angle measured using radians. At , what is the instantaneous rate of change of the function? That is, at , how much would the function be increasing or decreasing with one more degree?  We can convert this angle to degrees by the formula , or . The instanteneous rate of change with each degree is . Using Leibniz notation and noting that is also    So, when the angle is , the sine function will increase by with each extra radian, but will only increase by approximately with each extra degree.   Probably need a picture here.     "
+},
+{
+  "id": "sec_Ch3Sec6-3-2",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-3-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "chain rule "
+},
+{
+  "id": "thm-chainrule",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#thm-chainrule",
+  "type": "Theorem",
+  "number": "3.6.1",
+  "title": "Chain Rule.",
+  "body": " Chain Rule   Let and be functions. For all in the domain of for which is differentiable at and is differentiable at the derivative of the composite function   is given by   Alternatively, if is a function of and is a function of then    "
+},
+{
+  "id": "fig-chainRule",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fig-chainRule",
+  "type": "Figure",
+  "number": "3.6.2",
+  "title": "",
+  "body": "  Create Figure 3.27 From Thomas   "
+},
+{
+  "id": "sec_Ch3Sec6-3-17",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-3-17",
+  "type": "Exploration",
+  "number": "3.6.1",
+  "title": "",
+  "body": " Watch an animation of the chain rule.  "
+},
+{
+  "id": "fs-id1169736619728",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169736619728",
+  "type": "Problem-Solving Strategy",
+  "number": "3.6.3",
+  "title": "Applying the Chain Rule.",
+  "body": " Applying the Chain Rule   To differentiate begin by identifying and  Find and evaluate it at to obtain  Find  Write   Note : When applying the chain rule to the composition of two or more functions, keep in mind that we work our way from the outside function in. It is also useful to remember that the derivative of the composition of two functions can be thought of as having two parts; the derivative of the composition of three functions has three parts; and so on. Also, remember that we never evaluate a derivative at a derivative.  "
+},
+{
+  "id": "sec_Ch3Sec6-4-4",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-4-4",
+  "type": "Proposition",
+  "number": "3.6.4",
+  "title": "A Power Rule for Composition of Functions.",
+  "body": " A Power Rule for Composition of Functions  For all values of for which the derivative is defined, if   Then   "
+},
+{
+  "id": "fs-id1169739274312",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169739274312",
+  "type": "Example",
+  "number": "3.6.5",
+  "title": "Using the Chain and Power Rules.",
+  "body": " Using the Chain and Power Rules   Find the derivative of    First, rewrite  Applying the power rule with we have   Rewriting back to the original form gives us    "
+},
+{
+  "id": "sec_Ch3Sec6-4-6",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-4-6",
+  "type": "Checkpoint",
+  "number": "3.6.6",
+  "title": "",
+  "body": "  Find the derivative of      Use with   "
+},
+{
+  "id": "fs-id1169739302258",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169739302258",
+  "type": "Example",
+  "number": "3.6.7",
+  "title": "Using the Chain and Power Rules with a Trigonometric Function.",
+  "body": " Using the Chain and Power Rules with a Trigonometric Function   Find the derivative of .    First recall that so we can rewrite as  Applying the power rule with we obtain  .  "
+},
+{
+  "id": "fs-id1169739190027",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169739190027",
+  "type": "Example",
+  "number": "3.6.8",
+  "title": "Finding the Equation of a Tangent Line.",
+  "body": " Finding the Equation of a Tangent Line   Find the equation of a line tangent to the graph of at    Because we are finding an equation of a line, we need a point. The -coordinate of the point is 2. To find the -coordinate, substitute 2 into Since the point is  For the slope, we need To find first we rewrite and apply the power rule to obtain   By substituting, we have Therefore, the line has equation Rewriting, the equation of the line is   "
+},
+{
+  "id": "sec_Ch3Sec6-4-9",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-4-9",
+  "type": "Checkpoint",
+  "number": "3.6.9",
+  "title": "",
+  "body": "  Find the equation of the line tangent to the graph of at       Use the preceding example as a guide.   "
+},
+{
+  "id": "fs-id1169736656617",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169736656617",
+  "type": "Example",
+  "number": "3.6.10",
+  "title": "Using the Chain Rule on a General Cosine Function.",
+  "body": " Using the Chain Rule on a General Cosine Function   Find the derivative of    Think of as where Since we have Then we do the following calculation.   Thus, the derivative of is given by   "
+},
+{
+  "id": "fs-id1169739301537",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169739301537",
+  "type": "Example",
+  "number": "3.6.11",
+  "title": "Using the Chain Rule on a Cosine Function.",
+  "body": " Using the Chain Rule on a Cosine Function   Find the derivative of    Let Then Using the result from the previous example,    "
+},
+{
+  "id": "fs-id1169739333921",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169739333921",
+  "type": "Example",
+  "number": "3.6.12",
+  "title": "Using the Chain Rule on Another Trigonometric Function.",
+  "body": " Using the Chain Rule on Another Trigonometric Function   Find the derivative of    Apply the chain rule to to obtain   In this problem, so we have Therefore, we obtain    "
+},
+{
+  "id": "sec_Ch3Sec6-5-7",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-5-7",
+  "type": "Checkpoint",
+  "number": "3.6.13",
+  "title": "",
+  "body": "  Find the derivative of       Apply the chain rule to first and then use   "
+},
+{
+  "id": "sec_Ch3Sec6-5-9",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-5-9",
+  "type": "Theorem",
+  "number": "3.6.14",
+  "title": "Using the Chain Rule with Trigonometric Functions.",
+  "body": "Change next end note to end theorem Using the Chain Rule with Trigonometric Functions  For all values of for which the derivative is defined,   "
+},
+{
+  "id": "fs-id1169739298047",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169739298047",
+  "type": "Example",
+  "number": "3.6.15",
+  "title": "Combining the Chain Rule with the Product Rule.",
+  "body": " Combining the Chain Rule with the Product Rule   Find the derivative of    First apply the product rule, then apply the chain rule to each term of the product.   "
+},
+{
+  "id": "sec_Ch3Sec6-5-11",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-5-11",
+  "type": "Checkpoint",
+  "number": "3.6.16",
+  "title": "",
+  "body": "  Find the derivative of       Start out by applying the quotient rule. Remember to use the chain rule to differentiate the denominator.   "
+},
+{
+  "id": "sec_Ch3Sec6-6-9",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-6-9",
+  "type": "Proposition",
+  "number": "3.6.17",
+  "title": "Chain Rule for a Composition of Three Functions.",
+  "body": " Chain Rule for a Composition of Three Functions  For all values of for which the function is differentiable, if   then   In other words, we are applying the chain rule twice.  "
+},
+{
+  "id": "fs-id1169736658580",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169736658580",
+  "type": "Example",
+  "number": "3.6.18",
+  "title": "Differentiating a Composite of Three Functions.",
+  "body": " Differentiating a Composite of Three Functions   Find the derivative of    First, rewrite as   Then apply the chain rule several times.   "
+},
+{
+  "id": "sec_Ch3Sec6-6-12",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-6-12",
+  "type": "Checkpoint",
+  "number": "3.6.19",
+  "title": "",
+  "body": "  Find the derivative of       Rewrite and use as a guide.   "
+},
+{
+  "id": "fs-id1169736593542",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169736593542",
+  "type": "Example",
+  "number": "3.6.20",
+  "title": "Using the Chain Rule in a Velocity Problem.",
+  "body": " Using the Chain Rule in a Velocity Problem   A particle moves along a coordinate axis. Its position at time is given by What is the velocity of the particle at time    To find the velocity of the particle at time we must differentiate Thus,   Substituting into we obtain   "
+},
+{
+  "id": "sec_Ch3Sec6-6-14",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-6-14",
+  "type": "Checkpoint",
+  "number": "3.6.21",
+  "title": "",
+  "body": "  A particle moves along a coordinate axis. Its position at time is given by Find its acceleration at time       Acceleration is the second derivative of position.   "
+},
+{
+  "id": "sec_Ch3Sec6-6-16",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-6-16",
+  "type": "Proof",
+  "number": "3.6.4.1",
+  "title": "",
+  "body": " For simplicity’s sake we ignore certain issues: For example, we assume that for in some open interval containing We begin by applying the limit definition of the derivative to the function to obtain   Rewriting, we obtain   Although it is clear that   it is not obvious that   To see that this is true, first recall that since is differentiable at is also continuous at Thus,   Next, make the substitution and and use change of variables in the limit to obtain   Finally,    "
+},
+{
+  "id": "fs-id1169736613849",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169736613849",
+  "type": "Example",
+  "number": "3.6.22",
+  "title": "Using the Chain Rule with Functional Values.",
+  "body": " Using the Chain Rule with Functional Values   Let If and find    Use the chain rule, then substitute.    "
+},
+{
+  "id": "sec_Ch3Sec6-6-18",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-6-18",
+  "type": "Checkpoint",
+  "number": "3.6.23",
+  "title": "",
+  "body": "  Given If and find       Follow .   "
+},
+{
+  "id": "sec_Ch3Sec6-7-9",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-7-9",
+  "type": "Convention",
+  "number": "3.6.24",
+  "title": "Chain Rule Using Leibniz’s Notation.",
+  "body": " Chain Rule Using Leibniz’s Notation  If is a function of and is a function of then   "
+},
+{
+  "id": "fs-id1169739264200",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169739264200",
+  "type": "Example",
+  "number": "3.6.25",
+  "title": "Taking a Derivative Using Leibniz’s Notation.",
+  "body": " Taking a Derivative Using Leibniz’s Notation   Find the derivative of    First, let Thus, Next, find and Using the quotient rule,   and   Finally, we put it all together.   It is important to remember that, when using the Leibniz form of the chain rule, the final answer must be expressed entirely in terms of the original variable given in the problem.   "
+},
+{
+  "id": "fs-id1169736592583",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#fs-id1169736592583",
+  "type": "Example",
+  "number": "3.6.26",
+  "title": "",
+  "body": "  Taking Another Derivative Using Leibniz’s Notation  Find the derivative of    First, let Then Next, find and   Finally, we put it all together.    "
+},
+{
+  "id": "sec_Ch3Sec6-7-12",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-7-12",
+  "type": "Checkpoint",
+  "number": "3.6.27",
+  "title": "",
+  "body": "  Use Leibniz’s notation to find the derivative of Make sure that the final answer is expressed entirely in terms of the variable       Let   "
+},
+{
+  "id": "sec_Ch3Sec6-7-13",
+  "level": "2",
+  "url": "sec_Ch3Sec6.html#sec_Ch3Sec6-7-13",
+  "type": "Example",
+  "number": "3.6.28",
+  "title": "Trigonometric Derivatives Using Degrees.",
+  "body": " Trigonometric Derivatives Using Degrees  Recall the discussion in that the formulas for the derivatives of trigonometric functions are only valid with radian measurements. If we graphed a trigonometric function using degrees along the horizontal axis, how would we compute the slopes of tangent lines?  Let where is an angle measured using radians. At , what is the instantaneous rate of change of the function? That is, at , how much would the function be increasing or decreasing with one more degree?  We can convert this angle to degrees by the formula , or . The instanteneous rate of change with each degree is . Using Leibniz notation and noting that is also    So, when the angle is , the sine function will increase by with each extra radian, but will only increase by approximately with each extra degree.   Probably need a picture here.   "
 },
 {
   "id": "sec_exp_func",
