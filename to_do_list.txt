@@ -7,4 +7,8 @@
 
 - image like Thomas' Figure 3.17 after Definition 3.4.4
 
-- image for Figure 3.5.12
+- image for Figure 3.5.13
+
+-image for Figure 3.6.2
+
+-image for Figure 3.6.29

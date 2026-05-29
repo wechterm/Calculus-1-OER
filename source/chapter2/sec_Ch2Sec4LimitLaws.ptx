@@ -739,28 +739,7 @@ The graphs of <m>f(x)=-|x|,g(x)=x\cos x,</m> and <m>h(x)=|x|</m> are shown in <x
       </proof>
   
 </subsection>
-<!-- <subsection id="fs-id1170572624436" class="key-concepts">
-<title>Key Concepts</title>
-<ul>
-<li>The limit laws allow us to evaluate limits of functions without having to go through step-by-step processes each time.</li>
-<li>For polynomials and rational functions, <m>\limit_{x \to a }f(x)=f(a).</m></li>
-<li>You can evaluate the limit of a function by factoring and canceling, by multiplying by a conjugate, or by simplifying a complex fraction.</li>
-<li>The squeeze theorem allows you to find the limit of a function if the function is always greater than one function and less than another function with limits that are known.</li>
-</ul>
-</subsection>
-<subsection id="fs-id1170572624507" class="key-equations">
-<title>Key Equations</title>
-<ul>
-<li><emphasis effect="bold">Basic Limit Results</emphasis><newline/>
-<m>\limit_{x \to a }x=a \limit_{x \to a }c=c</m></li>
-<li><emphasis effect="bold">Important Limits</emphasis><newline/>
-<m>\limit_{\theta\to0}\sin \theta=0</m><newline/>
-<m>\limit_{\theta\to0}\cos \theta=1</m><newline/>
-<m>\limit_{\theta\to0}\frac{\sin \theta}{\theta}=1</m><newline/>
-<m>\limit_{\theta\to0}\frac{1-\cos \theta}{\theta}=0</m></li>
-</ul>
 
-</subsection> -->
 </section>
 
 

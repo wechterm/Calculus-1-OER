@@ -19,7 +19,7 @@
 <p>
 We begin our exploration of the derivative for the sine function by using the formula to make a reasonable guess at its derivative.  Recall that for a function <m>f(x)</m>,
 <me>
-f'(x)=\lim_{h\to 0}\frac{f(x+h_f(x)}{h}
+f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
 </me>
 </p>
 <p>
@@ -27,7 +27,7 @@ Consequently, for values of <m>h</m> very close to <m>0</m>, <m>f'(x)\displaysty
 <me>
 \frac{d}{dx}(\sin{x})\approx\frac{sin\left(x+0.01\right)-\sin{x}}{0.01}
 </me>
-By setting <m>D(x)=\displaystyle\frac{sin\left(x+0.01\right)-\sin{x}}{0.01}</m> and using a graphing utility, we can get a graph of an appoximation to the derivative of <m>\sin{x}</m> (<xref ref="CNX_Calc_Figure_03_05_001"/>).
+By setting <m>D(x)=\displaystyle\frac{\sin\left(x+0.01\right)-\sin{x}}{0.01}</m> and using a graphing utility, we can get a graph of an appoximation to the derivative of <m>\sin{x}</m> (<xref ref="CNX_Calc_Figure_03_05_001"/>).
 </p>
 <figure xml:id="CNX_Calc_Figure_03_05_001">
 <image source="ch3/CNX_Calc_Figure_03_05_001.jpg" width="50%">
@@ -61,11 +61,11 @@ The derivative of the sine function is the cosine and the derivative of the cosi
 </statement>
 <proof>
 <p>
-Because the proofs for <m>\frac{d}{dx}(\sin{x}=\cos{x}</m> and <m>\frac{d}{dx}(\cos{x}=-\sin{x}</m> use similar techniques, we provide only the proof the for former.  Before beginning, recall two important trigonometric limits from <xref ref="subsubsec-triglimits"/>:
+Because the proofs for <m>\frac{d}{dx}(\sin{x})=\cos{x}</m> and <m>\frac{d}{dx}(\cos{x)}=-\sin{x}</m> use similar techniques, we provide only the proof the for former.  Before beginning, recall two important trigonometric limits from <xref ref="subsubsec-triglimits"/>:
 <me>
 \lim_{h\to 0}\frac{\sin{h}}{h}=1\quad\text{and}\quad\lim_{h\to 0}\frac{\cos{h}-1}{h}=0
 </me>
-The graphs of <m>\displaystyle y=\frac{\sin{h}}{h}</m> and <m>\displaystyle y=\frac{cos{h}-1}{h}</m> are shown in <xref ref="CNX_Calc_Figure_03_05_002"/>
+The graphs of <m>\displaystyle y=\frac{\sin{h}}{h}</m> and <m>\displaystyle y=\frac{\cos{h}-1}{h}</m> are shown in <xref ref="CNX_Calc_Figure_03_05_002"/>
 </p>
 <figure xml:id="CNX_Calc_Figure_03_05_002">
 <image source="ch3/CNX_Calc_Figure_03_05_002.jpg" width="100%">
@@ -105,6 +105,19 @@ We also recall the following trigonometric identity for the sine of the sum of t
 </proof>
 </theorem>
 <p>
+
+<remark xml:id="remark-radiansordegrees">
+<title>Radians or Degrees?</title>
+<p>
+It is important to note that the derivation of the derivatives of <m>\sin</m> and <m>\cos</m> required the limits from <xref ref="subsubsec-triglimits"/>, and while proving whether those limits existed, we needed <xref ref="CNX_Calc_Figure_02_03_008"/>.  The measurements in this figure only apply when <m>\theta</m> has radian units. Therefore, the derivative formulas for our trigonometric functions are only valid with radian values of <m>x</m>
+</p>
+
+<p>
+(To put it another way, we know that <m>\ds\lim_{\theta\to 0}\frac{\sin\theta}{\theta}=1</m> when <m>\theta</m> is in radians.  But see if this still works when the input is in degrees.  Use a calculator to plug in small degree values for <m>\ds\frac{\sin\theta^\circ}{\theta^\circ}</m> and find that the result is <em>not</em> approaching <m>1</m>!
+</p>
+
+</remark>
+
 <xref ref="CNX_Calc_Figure_03_05_003"/> shows the relationship between the graph of <m>f(x)=\sin{x}</m> and its derivative <m>f'(x)=\cos{x}</m>.  Notice that at the points where <m>f(x)=\sin{x}</m> has a horizontal tangent, its derivative <m>f'(x)=\cos{x}</m> takes on the value zero.  We also see that where <m>f(x)=\sin{x}</m> is increasing, <m>f'(x)=\cos{x}\gt 0</m> and where <m>f(x)=\sin{x}</m> is decreasing, <m>f'(x)=\cos{x}\lt 0</m>.
 </p>
 <figure xml:id="CNX_Calc_Figure_03_05_003">
@@ -220,6 +233,7 @@ A particle moves along a coordinate axis.  Its position at time <m>t</m> is give
 </subsection>
 
 <subsection xml:id="subsec-harmonicmotion">
+<title> Harmonic Motion</title>
 <p>
 Many physical systems move in a regular, repeating way. One of the simplest examples is a mass attached to a spring. If the mass is pulled away from its resting position and released, it moves back and forth, slowing down as it reaches the ends of its motion and speeding up as it passes through the center. This type of motion is called <term>harmonic motion</term>. 
 </p>
