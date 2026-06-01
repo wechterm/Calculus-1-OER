@@ -4,12 +4,12 @@
 <title>Derivatives of Trigonometric Functions</title>
 <introduction>
   <title> Learning Objectives</title>
-  <ul>
+  <ol>
 <li>Find the derivatives of the sine and cosine function.</li>
 <li>Describe how harmonic motion can be modeled by sine and cosine functions.</li>
 <li>Find the derivatives of the standard trigonometric functions.</li>
 <li>Calculate the higher-order derivatives of the sine and cosine.</li>
-</ul>
+</ol>
 
 <p>One of the most important types of motion in physics is simple harmonic motion, which is associated with such systems as an object with mass oscillating on a spring. Simple harmonic motion can be described by using either sine or cosine functions. In this section we expand our knowledge of derivative formulas to include derivatives of these and other trigonometric functions. We begin with the derivatives of the sine and cosine functions and then use them to obtain formulas for the derivatives of the remaining four trigonometric functions. Being able to calculate the derivatives of the sine and cosine functions will enable us to find the velocity and acceleration of simple harmonic motion.</p>
 </introduction>

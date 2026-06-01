@@ -4,14 +4,14 @@
 <title>Differentiation Rules (3.3.31-2 Need Chain Rule)</title>
   <introduction>
   <title> Learning Objectives</title>
-  <ul>
+  <ol>
 <li>State the constant, constant multiple, and power rules.</li>
 <li>Apply the sum and difference rules to combine derivatives.</li>
 <li>Use the product rule for finding the derivative of a product of functions.</li>
 <li>Use the quotient rule for finding the derivative of a quotient of functions.</li>
 <li>Extend the power rule to functions with negative exponents.</li>
 <li>Combine the differentiation rules to find the derivative of a polynomial or rational function.</li>
-</ul>
+</ol>
 <p id="fs-id1169738948964">Finding derivatives of functions by using the definition of the derivative can be a lengthy and, for certain functions, a rather challenging process. For example, previously we found that <m>\frac{d}{dx}(\sqrt{x})=\frac{1}{2\sqrt{x}}</m> by using a process that involved multiplying an expression by a conjugate prior to evaluating a limit. The process that we could use to evaluate <m>\frac{d}{dx}(\sqrt[3]{x})</m> using the definition, while similar, is more complicated. In this section, we develop rules for finding derivatives that allow us to bypass this process. We begin with the basics.</p>
 </introduction>
 <subsection id="fs-id1169738828810">

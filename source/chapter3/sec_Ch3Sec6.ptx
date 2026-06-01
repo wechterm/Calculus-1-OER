@@ -4,13 +4,13 @@
 <title>The Chain Rule</title>
   <introduction>
   <title> Learning Objectives</title>
-  <ul>
+  <ol>
 <li>State the chain rule for the composition of two functions.</li>
 <li>Apply the chain rule together with the power rule.</li>
 <li>Apply the chain rule and the product/quotient rules correctly in combination when both are necessary.</li>
 <li>Recognize the chain rule for a composition of three or more functions.</li>
 <li>Describe the proof of the chain rule.</li>
-</ul>
+</ol>
 <p id="fs-id1169738949189">We have seen the techniques for differentiating basic functions (<m>x^n,\sin x,\cos x,)</m>, etc.) as well as sums, differences, products, quotients, and constant multiples of these functions. However, these techniques do not allow us to differentiate compositions of functions, such as <m>h(x)=(9x+1)^2</m> or <m>k(x)=\sqrt{3x^2+1}.</m> In this section, we study the rule for finding the derivative of the composition of two or more functions.</p>
 </introduction>
 <subsection id="fs-id1169738923754">
