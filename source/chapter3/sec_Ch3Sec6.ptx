@@ -411,7 +411,7 @@ Let <m>y=\sin{x}</m> where <m>x</m> is an angle measured using radians.  At <m>6
 
 <p>We can convert this angle to degrees <m>D^\circ</m> by the formula 
 <me>x\text{ radians }=D^\circ\times \frac{\pi}{180^\circ}=\frac{D\pi}{180}</me>,
-or <me>D=\frac{180}{\pi}\cdot x</me>.  The instanteneous rate of change with each degree is <m>\ds\frac{dy}{dD}</m>. 
+or <me>D=\frac{180}{\pi}\cdot x</me>.  The instantaneous rate of change with each degree is <m>\ds\frac{dy}{dD}</m>. 
 Using Leibniz notation and noting that <m>D^\circ=60^\circ</m> is also <m>x=\ds\frac{\pi}{3}</m> 
 <md>
 <mrow>\left.\frac{dy}{dx}\right|_{x=\pi/3}\amp =\left.\frac{dy}{dD}\right|_{D=60^\circ}\cdot \left.\frac{dD}{dx}\right|_{x=\pi/3}</mrow>
