@@ -192,7 +192,18 @@ g'(x)\amp =\displaystyle \frac{-4x^2\sin{x}-8x\cos{x}}{16x^4}
 Find the derivative of <m>f(x)=\displaystyle\frac{x}{\cos{x}}</m>
 </statement>
 <solution>
-<m>\displaystyle\frac{\cos{x}+x\sin{x}}{\cos^2{x}</m>
+<m>\displaystyle
+\frac{
+	\cos{
+		x
+	}+x\sin
+	{x
+	}
+}
+{\cos^2
+	{x
+	}
+}</m>
 </solution>
 <hint><p>Use the quotient rule</p></hint>
 </exercise>

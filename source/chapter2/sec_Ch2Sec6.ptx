@@ -614,7 +614,7 @@ Where the <m>|x|</m> is the absolute value of <m>x</m>. You are perhaps used to 
 
 <figure xml:id='absolutevalue'>
 	<caption>A graph of the absolute value function <alert>NEEDS A DESCRIPTION</alert></caption>
-	<image source="UBC_fig_2_6_1.svg"/>
+	<image source="UBC_fig_2_6_1"/>
 </figure>
 <p>
 It is a piecewise function defined by

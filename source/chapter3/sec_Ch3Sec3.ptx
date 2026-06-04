@@ -268,7 +268,7 @@ Since
 <me>g'(x)=\frac{d}{dx}(3x^2)=3\frac{d}{dx}(x^2)=3(2x)=6x.</me>
 <p id="fs-id1169736660712">Since <m>f(x)=x^2</m> has derivative <m>f'(x)=2x,</m> we see that the derivative of <m>g(x)</m> is 3 times the derivative of <m>f(x).</m> This relationship is illustrated in <xref ref="CNX_Calc_Figure_03_03_001"/>.</p>
 <figure xml:id="CNX_Calc_Figure_03_03_001">
-  <image source="CNX_Calc_Figure_03_03_001.jpg" width="50%">
+  <image source="ch3/CNX_Calc_Figure_03_03_001.jpg" width="100%">
 <description>"Two graphs are shown. The first graph shows g(x) = 3x2 and f(x) = x squared. The second graph shows g’(x) = 6x and f’(x) = 2x. In the first graph, g(x) increases three times more quickly than f(x). In the second graph, g’(x) increases three times more quickly than f’(x)."
   </description></image> <caption>The derivative of <m>g(x)</m> is 3 times the derivative of <m>f(x).</m></caption>
 </figure>
