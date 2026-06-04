@@ -136,7 +136,7 @@ Consequently, for any <m>0 \lt Y \lt \infty</m>, the horizontal straight line <m
 </p>
 
 <sidebyside width="50%">
-  <image source="CLP_expGraphA"/>
+  <image source="appendix/CLP_expGraphA"/>
 </sidebyside>
 
 <p>
@@ -259,7 +259,7 @@ Below is a sketch of <m>C(a)</m> against <m>a</m>.</p>
 
 <figure xml:id="fig_CofA2">
 <caption/>
-<image width="85%" source="CLP_expGraphB.svg"/>
+<image width="85%" source="appendix/CLP_expGraphB"/>
 </figure>
 
 <p>
@@ -339,7 +339,7 @@ Further,
 
 <p>We plot <m>e^x</m> in the graph below</p>
 <sidebyside width="66%">
-<image source="CLP_expGraphC.svg"/>
+<image source="appendix/CLP_expGraphC"/>
 </sidebyside>
 
 <p>

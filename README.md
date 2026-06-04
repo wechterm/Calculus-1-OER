@@ -70,6 +70,10 @@ https://openstax.org/books/calculus-volume-1/pages/1-introduction
 https://personal.math.ubc.ca/~CLP/CLP1/
 https://github.com/arechnitzer/CLP1/tree/master/pretext
 
+### Link to APEX Calculus
+https://www.apexcalculus.com/
+https://github.com/APEXCalculus
+
 ### To Change Project With Git
 - Open the codespace on the main branch
 

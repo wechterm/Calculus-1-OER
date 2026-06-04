@@ -290,7 +290,7 @@ We'll explore each of these in turn.
   <p>A graph of <m>f(x)</m> around <m>x=1</m> and a table are given in <xref ref="APEX_fig1-1"/> and <xref ref="APEX_table1-1"/>, respectively.  It is clear that as <m>x</m> approaches <m>1</m>, <m>f(x)</m> does not seem to approach a single number.  Instead it seems as though <m>f(x)</m> approaches two different numbers.  When considering values of <m>x</m> less than <m>1</m> (approaching <m>1</m> from the left), it seems <m>f(x)</m> is approaching <m>2</m>; when considering values of <m>x</m> greater than <m>1</m> (approaching <m>1</m> from the right), it seems <m>f(x)</m> is approaching <m>1</m>.</p>  <p>Recognizing this behavior is important; we'll study this in greater depth later.  Right now, it suffices to say that the limit does not exist since <m>f(x)</m> is approaching two <em>different</em> values as <m>x</m> approaches <m>1</m>.
   </p>
 <figure xml:id="APEX_fig1-1">
-<image source="APEX_fig1-1_01.svg" width="50%">
+<image source="APEX_fig1-1_01" width="50%">
   <description>A graph of a polynomial from (0,3) to (2,1) with a point at (2,1) and on the same axes a line from (1,1) to (2,2) with a hole at (1,1)</description>
 </image>
 <caption>The limit of <m>f(x)</m> does not exist at <m>x=1</m></caption>
@@ -339,7 +339,7 @@ We'll explore each of these in turn.
   <p>A graph and table of <m>f(x)=\ds\frac{1}{(x-1)^2}</m> are given in <xref ref="APEX_fig1-2"/> and <xref ref="APEX_table1-2"/>, respectively.  Both show that as <m>x</m> approaches <m>1</m>, <m>f(x)</m> grows larger and larger
   </p>
 <figure xml:id="APEX_fig1-2">
-<image source="APEX_fig1-1_02.svg" width="50%">
+<image source="APEX_fig1-1_02" width="50%">
   <description>A graph of 1/(x-1)^2 showing a vertical asymptote at x=1 </description>
 </image>
 <caption>Observing no limit as <m>x\to 1</m></caption>
@@ -455,9 +455,9 @@ We'll explore each of these in turn.
   <p>Two graphs of <m>f(x)=\ds\sin(1/x)</m> are given in <xref ref="APEX_fig1-3"/>. The first shows <m>f(x)</m> on the interval <m>[-1,1]</m>; notice how <m>f(x)</m> seems to oscillate near <m>x=0</m>.  One might think that despite the oscillation, as <m>x</m> approaches <m>0</m>, <m>f(x)</m> approaches <m>0</m>.  However, the second image zooms in on <m>\sin(1/x)</m> on the interval <m>[-1,1]</m>.  Here the oscillation is even more pronounced.
   </p>
   <figure xml:id="APEX_fig1-3">
-    <image source="APEX_fig1-1_03.svg" width="50%"></image>
-    <image source="CNX_Calc_Figure_02_02_008.jpg" width="50%"></image>
-    <image source="APEX_fig1-1_04.svg" width="50%">
+    <image source="APEX_fig1-1_03" width="50%"></image>
+    <!-- image source="CNX_Calc_Figure_02_02_008.jpg" width="50%"></image -->
+    <image source="APEX_fig1-1_04" width="50%">
       <description>"The graph of the function f(x) = sin(1/x), which oscillates rapidly between -1 and 1 as x approaches 0. The oscillations are less frequent as the function moves away from 0 on the x axis." </description>
     </image>
     
