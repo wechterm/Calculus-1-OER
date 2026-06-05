@@ -1,0 +1,77 @@
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.18)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->variables->add(y=>'Real');
+Context()->flags->set(reduceConstantFunctions=>0);
+$m=list_random(2,3,5);
+$b=random(2,9,1);
+$c=random(4,9,1);
+if($envir{problemSeed}==1){$m=2;$b=2;$c=5;};
+#$m=2;$b=2;$c=5;
+$dydx=Formula("-(e^x x(x+$m) $b^(-y))/(ln($b))");
+@x=(random(-4,1,0.1),random(-4,1,0.1),random(-4,1,0.1),random(-4,1,0.1),random(-4,1,0.1));
+@y=map{ln($c-($_)**$m*exp($_))/ln($b)}(@x);
+@xy=map{[$x[$_],$y[$_]]}(0..4);
+$dydx->{test_points}=~~@xy;
+$showwork = '[@ explanation_box(message => "Show your work using implicit differentiation.") @]*';
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find [`\lz{y}{x}`] using implicit differentiation.
+
+[`x^[$m]e^x+[$b]^y=[$c]`]
+
+[_]{$dydx}{80}
+
+[$showwork]**
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

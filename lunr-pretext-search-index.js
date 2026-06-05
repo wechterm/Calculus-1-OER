@@ -3097,9 +3097,9 @@ var ptx_lunr_docs = [
   "body": " Show that has a zero over the interval    is continuous over It must have a zero on this interval.    Find and Apply the Intermediate Value Theorem.   "
 },
 {
-  "id": "sec_Ch4Sec6",
+  "id": "sec_Ch2Sec6",
   "level": "1",
-  "url": "sec_Ch4Sec6.html",
+  "url": "sec_Ch2Sec6.html",
   "type": "Section",
   "number": "2.6",
   "title": "Limits at Infinity and Asymptotes",
@@ -3108,7 +3108,7 @@ var ptx_lunr_docs = [
 {
   "id": "CNX_Calc_Figure_04_06_001",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_001",
+  "url": "sec_Ch2Sec6.html#CNX_Calc_Figure_04_06_001",
   "type": "Figure",
   "number": "2.6.1",
   "title": "",
@@ -3117,25 +3117,25 @@ var ptx_lunr_docs = [
 {
   "id": "fs-id1165043428402",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#fs-id1165043428402",
+  "url": "sec_Ch2Sec6.html#fs-id1165043428402",
   "type": "Table",
   "number": "2.6.2",
   "title": "Values of a function <span class=\"process-math\">\\(f\\)<\/span> as <span class=\"process-math\">\\(x\\to\\pm\\infty\\)<\/span>",
   "body": " Values of a function as                                "
 },
 {
-  "id": "sec_Ch4Sec6-3-6",
+  "id": "sec_Ch2Sec6-3-6",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-3-6",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-3-6",
   "type": "Definition",
   "number": "2.6.3",
   "title": "",
   "body": " (Informal) If the values of become arbitrarily close to as becomes sufficiently large, we say the function has a limit at infinity and write   If the values of becomes arbitrarily close to for as becomes sufficiently large, we say that the function has a limit at negative infinity and write  "
 },
 {
-  "id": "sec_Ch4Sec6-3-8",
+  "id": "sec_Ch2Sec6-3-8",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-3-8",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-3-8",
   "type": "Definition",
   "number": "2.6.4",
   "title": "",
@@ -3144,7 +3144,7 @@ var ptx_lunr_docs = [
 {
   "id": "CNX_Calc_Figure_04_06_002",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_002",
+  "url": "sec_Ch2Sec6.html#CNX_Calc_Figure_04_06_002",
   "type": "Figure",
   "number": "2.6.5",
   "title": "",
@@ -3153,7 +3153,7 @@ var ptx_lunr_docs = [
 {
   "id": "CNX_Calc_Figure_04_06_003",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_003",
+  "url": "sec_Ch2Sec6.html#CNX_Calc_Figure_04_06_003",
   "type": "Figure",
   "number": "2.6.6",
   "title": "",
@@ -3162,16 +3162,16 @@ var ptx_lunr_docs = [
 {
   "id": "fs-id1165042962649",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#fs-id1165042962649",
+  "url": "sec_Ch2Sec6.html#fs-id1165042962649",
   "type": "Example",
   "number": "2.6.7",
   "title": "Computing Limits at Infinity.",
   "body": " Computing Limits at Infinity   For each of the following functions evaluate and Determine the horizontal asymptote(s) for         Using the algebraic limit laws, we have Similarly, Therefore, has a horizontal asymptote of and approaches this horizontal asymptote as as shown in the following graph.   \"The function f(x) = 5 – 2\/x2 is graphed. The function approaches the horizontal asymptote y = 5 as x approaches ±∞.\"  This function approaches a horizontal asymptote as   Since for all we have for all Also, since we can apply the squeeze theorem to conclude that Similarly, Thus, has a horizontal asymptote of and approaches this horizontal asymptote as as shown in the following graph.   \"The function f(x) = (sin x)\/x is shown. It has a global maximum at (0, 1) and then proceeds to oscillate around y = 0 with decreasing amplitude.\"  This function crosses its horizontal asymptote multiple times.   To evaluate and we first consider the graph of over the interval as shown in the following graph.   \"The function f(x) = tan x is shown. It increases from (−π\/2, −∞), passes through the origin, and then increases toward (π\/2, ∞). There are vertical dashed lines marking x = ±π\/2.\"  The graph of has vertical asymptotes at   Since   it follows that   Similarly, since   it follows that   As a result, and are horizontal asymptotes of as shown in the following graph.    \"The function f(x) = tan−1 x is shown. It increases from (−∞, −π\/2), passes through the origin, and then increases toward (∞, π\/2). There are horizontal dashed lines marking y = ±π\/2.\"  This function has two horizontal asymptotes.    "
 },
 {
-  "id": "sec_Ch4Sec6-3-14",
+  "id": "sec_Ch2Sec6-3-14",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-3-14",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-3-14",
   "type": "Checkpoint",
   "number": "2.6.12",
   "title": "",
@@ -3180,7 +3180,7 @@ var ptx_lunr_docs = [
 {
   "id": "fs-id1165042406634",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#fs-id1165042406634",
+  "url": "sec_Ch2Sec6.html#fs-id1165042406634",
   "type": "Table",
   "number": "2.6.13",
   "title": "Values of a power function as <span class=\"process-math\">\\(x\\to\\pm\\infty\\)<\/span>",
@@ -3189,16 +3189,16 @@ var ptx_lunr_docs = [
 {
   "id": "CNX_Calc_Figure_04_06_008",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_008",
+  "url": "sec_Ch2Sec6.html#CNX_Calc_Figure_04_06_008",
   "type": "Figure",
   "number": "2.6.14",
   "title": "",
   "body": "  \"The function f(x) = x3 is graphed. It is apparent that this function rapidly approaches infinity as x approaches infinity.\"  For this function, the functional values approach infinity as  "
 },
 {
-  "id": "sec_Ch4Sec6-4-6",
+  "id": "sec_Ch2Sec6-4-6",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-4-6",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-4-6",
   "type": "Definition",
   "number": "2.6.15",
   "title": "",
@@ -3207,25 +3207,25 @@ var ptx_lunr_docs = [
 {
   "id": "eg_1_5_3",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#eg_1_5_3",
+  "url": "sec_Ch2Sec6.html#eg_1_5_3",
   "type": "Example",
   "number": "2.6.16",
   "title": "Do not try to add and subtract infinity.",
   "body": "Do not try to add and subtract infinity   Compute the following limit:    In this case we cannot use the arithmetic of limits to write this as because the limits do not exist. We can only use the limit laws when the limits exist. So we should go back and think some more.  When is very large, will be much larger than , so the term will dominate the term. So factor out and rewrite it as Consider what happens to each of the factors as   For large , (this is actually true for any ). In the limit as , becomes arbitrarily large and positive, and must be bigger still, so it follows that   On the other hand, becomes closer and closer to  we can use the arithmetic of limits to write this as   So the product of these two factors will be come larger and larger (and positive) as moves off to infinity. Hence we have   "
 },
 {
-  "id": "sec_Ch4Sec6-5-2",
+  "id": "sec_Ch2Sec6-5-2",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-5-2",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-5-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "arbitrarily close arbitrarily large sufficiently large "
 },
 {
-  "id": "sec_Ch4Sec6-5-3",
+  "id": "sec_Ch2Sec6-5-3",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-5-3",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-5-3",
   "type": "Definition",
   "number": "2.6.17",
   "title": "",
@@ -3234,7 +3234,7 @@ var ptx_lunr_docs = [
 {
   "id": "CNX_Calc_Figure_04_06_009",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_009",
+  "url": "sec_Ch2Sec6.html#CNX_Calc_Figure_04_06_009",
   "type": "Figure",
   "number": "2.6.18",
   "title": "",
@@ -3243,25 +3243,25 @@ var ptx_lunr_docs = [
 {
   "id": "fs-id1165042970473",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#fs-id1165042970473",
+  "url": "sec_Ch2Sec6.html#fs-id1165042970473",
   "type": "Example",
   "number": "2.6.19",
   "title": "A Finite Limit at Infinity Example.",
   "body": " A Finite Limit at Infinity Example   Use the formal definition of limit at infinity to prove that   Let Let Therefore, for all we have    "
 },
 {
-  "id": "sec_Ch4Sec6-5-7",
+  "id": "sec_Ch2Sec6-5-7",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-5-7",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-5-7",
   "type": "Checkpoint",
   "number": "2.6.20",
   "title": "",
   "body": "  Use the formal definition of limit at infinity to prove that   Let Let Therefore, for all we have   Therefore,    Let  "
 },
 {
-  "id": "sec_Ch4Sec6-5-9",
+  "id": "sec_Ch2Sec6-5-9",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-5-9",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-5-9",
   "type": "Definition",
   "number": "2.6.21",
   "title": "",
@@ -3270,7 +3270,7 @@ var ptx_lunr_docs = [
 {
   "id": "CNX_Calc_Figure_04_06_010",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_010",
+  "url": "sec_Ch2Sec6.html#CNX_Calc_Figure_04_06_010",
   "type": "Figure",
   "number": "2.6.22",
   "title": "",
@@ -3279,25 +3279,25 @@ var ptx_lunr_docs = [
 {
   "id": "fs-id1165042323534",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#fs-id1165042323534",
+  "url": "sec_Ch2Sec6.html#fs-id1165042323534",
   "type": "Example",
   "number": "2.6.23",
   "title": "An Infinite Limit at Infinity.",
   "body": " An Infinite Limit at Infinity   Use the formal definition of infinite limit at infinity to prove that    Let Let Then, for all we have   Therefore,   "
 },
 {
-  "id": "sec_Ch4Sec6-5-13",
+  "id": "sec_Ch2Sec6-5-13",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-5-13",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-5-13",
   "type": "Checkpoint",
   "number": "2.6.24",
   "title": "",
   "body": "  Use the formal definition of infinite limit at infinity to prove that    Let Let Then, for all we have     Let  "
 },
 {
-  "id": "sec_Ch4Sec6-6-2-1",
+  "id": "sec_Ch2Sec6-6-2-1",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-6-2-1",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-6-2-1",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -3306,7 +3306,7 @@ var ptx_lunr_docs = [
 {
   "id": "CNX_Calc_Figure_04_06_011",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_011",
+  "url": "sec_Ch2Sec6.html#CNX_Calc_Figure_04_06_011",
   "type": "Figure",
   "number": "2.6.25",
   "title": "",
@@ -3315,7 +3315,7 @@ var ptx_lunr_docs = [
 {
   "id": "CNX_Calc_Figure_04_06_012",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_012",
+  "url": "sec_Ch2Sec6.html#CNX_Calc_Figure_04_06_012",
   "type": "Figure",
   "number": "2.6.26",
   "title": "",
@@ -3324,16 +3324,16 @@ var ptx_lunr_docs = [
 {
   "id": "fs-id1165043219126",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#fs-id1165043219126",
+  "url": "sec_Ch2Sec6.html#fs-id1165043219126",
   "type": "Example",
   "number": "2.6.27",
   "title": "Limits at Infinity for Power Functions.",
   "body": " Limits at Infinity for Power Functions   For each function evaluate and         Since the coefficient of is the graph of involves a vertical stretch and reflection of the graph of about the -axis. Therefore, and  Since the coefficient of is the graph of is a vertical stretch of the graph of Therefore, and    "
 },
 {
-  "id": "sec_Ch4Sec6-6-15",
+  "id": "sec_Ch2Sec6-6-15",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-6-15",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-6-15",
   "type": "Checkpoint",
   "number": "2.6.28",
   "title": "",
@@ -3342,7 +3342,7 @@ var ptx_lunr_docs = [
 {
   "id": "CNX_Calc_Figure_04_06_013",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_013",
+  "url": "sec_Ch2Sec6.html#CNX_Calc_Figure_04_06_013",
   "type": "Figure",
   "number": "2.6.29",
   "title": "",
@@ -3351,7 +3351,7 @@ var ptx_lunr_docs = [
 {
   "id": "fs-id1165043250976",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#fs-id1165043250976",
+  "url": "sec_Ch2Sec6.html#fs-id1165043250976",
   "type": "Table",
   "number": "2.6.30",
   "title": "A polynomial’s end behavior is determined by the term with the largest exponent.",
@@ -3360,25 +3360,25 @@ var ptx_lunr_docs = [
 {
   "id": "fs-id1165042638553",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#fs-id1165042638553",
+  "url": "sec_Ch2Sec6.html#fs-id1165042638553",
   "type": "Example",
   "number": "2.6.31",
   "title": "Determining End Behavior for Rational Functions.",
   "body": " Determining End Behavior for Rational Functions   For each of the following functions, determine the limits as and Then, use this information to describe the end behavior of the function.  ( Note: The degree of the numerator and the denominator are the same.)  ( Note: The degree of numerator is less than the degree of the denominator.)  ( Note: The degree of numerator is greater than the degree of the denominator.)     The highest power of in the denominator is Therefore, dividing the numerator and denominator by and applying the algebraic limit laws, we see that Since we know that is a horizontal asymptote for this function as shown in the following graph.   \"The function f(x) = (3x + 1)\/(2x + 5) is plotted as is its horizontal asymptote at y = 3\/2.\">   The graph of this rational function approaches a horizontal asymptote as   Since the largest power of appearing in the denominator is divide the numerator and denominator by After doing so and applying algebraic limit laws, we obtain Therefore has a horizontal asymptote of as shown in the following graph.   \"The function f(x) = (3x2 + 2x)\/(4x2 – 5x + 7) is plotted as is its horizontal asymptote at y = 0.\"  The graph of this rational function approaches the horizontal asymptote as   Dividing the numerator and denominator by we have As the denominator approaches As the numerator approaches As the numerator approaches Therefore whereas as shown in the following figure.   \"The function f(x) = (3x2 + 4x)\/(x + 2) is plotted. It appears to have a diagonal asymptote as well as a vertical asymptote at x = −2.\"  As the values As the values     "
 },
 {
-  "id": "sec_Ch4Sec6-7-4",
+  "id": "sec_Ch2Sec6-7-4",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-7-4",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-7-4",
   "type": "Checkpoint",
   "number": "2.6.35",
   "title": "",
   "body": " Evaluate and use these limits to determine the end behavior of      Divide the numerator and denominator by  "
 },
 {
-  "id": "sec_Ch4Sec6-7-9",
+  "id": "sec_Ch2Sec6-7-9",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-7-9",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-7-9",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -3387,7 +3387,7 @@ var ptx_lunr_docs = [
 {
   "id": "CNX_Calc_Figure_04_06_017",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#CNX_Calc_Figure_04_06_017",
+  "url": "sec_Ch2Sec6.html#CNX_Calc_Figure_04_06_017",
   "type": "Figure",
   "number": "2.6.36",
   "title": "",
@@ -3396,7 +3396,7 @@ var ptx_lunr_docs = [
 {
   "id": "eg_lim_tricky",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#eg_lim_tricky",
+  "url": "sec_Ch2Sec6.html#eg_lim_tricky",
   "type": "Example",
   "number": "2.6.37",
   "title": "Be careful of limits involving roots.",
@@ -3405,7 +3405,7 @@ var ptx_lunr_docs = [
 {
   "id": "absolutevalue",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#absolutevalue",
+  "url": "sec_Ch2Sec6.html#absolutevalue",
   "type": "Figure",
   "number": "2.6.38",
   "title": "",
@@ -3414,7 +3414,7 @@ var ptx_lunr_docs = [
 {
   "id": "eg_lim_tricky_part2",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#eg_lim_tricky_part2",
+  "url": "sec_Ch2Sec6.html#eg_lim_tricky_part2",
   "type": "Example",
   "number": "2.6.39",
   "title": "Be careful of limits involving roots — continued.",
@@ -3423,16 +3423,16 @@ var ptx_lunr_docs = [
 {
   "id": "limitsatnegativeinf",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#limitsatnegativeinf",
+  "url": "sec_Ch2Sec6.html#limitsatnegativeinf",
   "type": "Figure",
   "number": "2.6.40",
   "title": "",
   "body": " A sketch of the graph of NEEDS DESCRIPTION   "
 },
 {
-  "id": "sec_Ch4Sec6-7-25",
+  "id": "sec_Ch2Sec6-7-25",
   "level": "2",
-  "url": "sec_Ch4Sec6.html#sec_Ch4Sec6-7-25",
+  "url": "sec_Ch2Sec6.html#sec_Ch2Sec6-7-25",
   "type": "Checkpoint",
   "number": "2.6.41",
   "title": "",
@@ -3988,9 +3988,9 @@ var ptx_lunr_docs = [
   "body": "power rule "
 },
 {
-  "id": "sec_Ch3Sec3-3-4-8",
+  "id": "thm_PowerRule",
   "level": "2",
-  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-3-4-8",
+  "url": "sec_Ch3Sec3.html#thm_PowerRule",
   "type": "Theorem",
   "number": "3.3.6",
   "title": "The Power Rule.",
@@ -4141,9 +4141,9 @@ var ptx_lunr_docs = [
   "body": "  Use the product rule to obtain the derivative of       Set and and use the preceding example as a guide.   "
 },
 {
-  "id": "sec_Ch3Sec3-7-4",
+  "id": "thm_QuotientRule",
   "level": "2",
-  "url": "sec_Ch3Sec3.html#sec_Ch3Sec3-7-4",
+  "url": "sec_Ch3Sec3.html#thm_QuotientRule",
   "type": "Theorem",
   "number": "3.3.23",
   "title": "The Quotient Rule.",
@@ -4687,7 +4687,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.6",
   "title": "The Chain Rule",
-  "body": " The Chain Rule   Learning Objectives   State the chain rule for the composition of two functions.  Apply the chain rule together with the power rule.  Apply the chain rule and the product\/quotient rules correctly in combination when both are necessary.  Recognize the chain rule for a composition of three or more functions.  Describe the proof of the chain rule.   We have seen the techniques for differentiating basic functions ( , etc.) as well as sums, differences, products, quotients, and constant multiples of these functions. However, these techniques do not allow us to differentiate compositions of functions, such as or In this section, we study the rule for finding the derivative of the composition of two or more functions.    Deriving the Chain Rule  When we have a function that is a composition of two or more functions, we could use all of the techniques we have already learned to differentiate it. However, using all of those techniques to break down a function into simpler parts that we are able to differentiate can get cumbersome. Instead, we use the chain rule , which states that the derivative of a composite function is the derivative of the outer function evaluated at the inner function times the derivative of the inner function.  To put this rule into context, let’s take a look at an example: We can think of the derivative of this function with respect to as the rate of change of relative to the change in Consequently, we want to know how changes as changes. We can think of this event as a chain reaction: As changes, changes, which leads to a change in This chain reaction gives us hints as to what is involved in computing the derivative of First of all, a change in forcing a change in suggests that somehow the derivative of is involved. In addition, the change in forcing a change in suggests that the derivative of with respect to where is also part of the final derivative.  We can take a more formal look at the derivative of by setting up the limit that would give us the derivative at a specific value in the domain of   This expression does not seem particularly helpful; however, we can modify it by multiplying and dividing by the expression to obtain   From the definition of the derivative, we can see that the second factor is the derivative of at That is,   However, it might be a little more challenging to recognize that the first term is also a derivative. We can see this by letting and observing that as  Thus,   In other words, if then Thus, if we think of as the composition where sin and then the derivative of is the product of the derivative of and the derivative of the function evaluated at the function At this point, we anticipate that for it is quite likely that As we determined above, this is the case for  Now that we have derived a special case of the chain rule, we state the general case and then apply it in a general form to other composite functions. An informal proof is provided at the end of the section.   Chain Rule   Let and be functions. For all in the domain of for which is differentiable at and is differentiable at the derivative of the composite function   is given by   Alternatively, if is a function of and is a function of then       Create Figure 3.27 From Thomas     Watch an animation of the chain rule.    Applying the Chain Rule   To differentiate begin by identifying and  Find and evaluate it at to obtain  Find  Write   Note : When applying the chain rule to the composition of two or more functions, keep in mind that we work our way from the outside function in. It is also useful to remember that the derivative of the composition of two functions can be thought of as having two parts; the derivative of the composition of three functions has three parts; and so on. Also, remember that we never evaluate a derivative at a derivative.     The Chain and Power Rules Combined  We can now apply the chain rule to composite functions, but note that we often need to use it with other rules. For example, to find derivatives of functions of the form we need to use the chain rule combined with the power rule. To do so, we can think of as where Then Thus, This leads us to the derivative of a power function using the chain rule,    A Power Rule for Composition of Functions  For all values of for which the derivative is defined, if   Then     Using the Chain and Power Rules   Find the derivative of    First, rewrite  Applying the power rule with we have   Rewriting back to the original form gives us       Find the derivative of      Use with     Using the Chain and Power Rules with a Trigonometric Function   Find the derivative of .    First recall that so we can rewrite as  Applying the power rule with we obtain  .    Finding the Equation of a Tangent Line   Find the equation of a line tangent to the graph of at    Because we are finding an equation of a line, we need a point. The -coordinate of the point is 2. To find the -coordinate, substitute 2 into Since the point is  For the slope, we need To find first we rewrite and apply the power rule to obtain   By substituting, we have Therefore, the line has equation Rewriting, the equation of the line is      Find the equation of the line tangent to the graph of at       Use the preceding example as a guide.      Combining the Chain Rule with Other Rules  Now that we can combine the chain rule and the power rule, we examine how to combine the chain rule with the other rules we have learned. In particular, we can use it with the formulas for the derivatives of quotient or product rule.   Using the Chain Rule on a General Cosine Function   Find the derivative of    Think of as where Since we have Then we do the following calculation.   Thus, the derivative of is given by    In the following example we apply the rule that we have just derived.   Using the Chain Rule on a Cosine Function   Find the derivative of    Let Then Using the result from the previous example,      Using the Chain Rule on Another Trigonometric Function   Find the derivative of    Apply the chain rule to to obtain   In this problem, so we have Therefore, we obtain       Find the derivative of       Apply the chain rule to first and then use    At this point we provide a list of derivative formulas that may be obtained by applying the chain rule in conjunction with the formulas for derivatives of trigonometric functions. Their derivations are similar to those used in and . For convenience, formulas are also given in Leibniz’s notation, which some students find easier to remember. (We discuss the chain rule using Leibniz’s notation at the end of this section.) It is not absolutely necessary to memorize these as separate formulas as they are all applications of the chain rule to previously learned formulas.  Change next end note to end theorem Using the Chain Rule with Trigonometric Functions  For all values of for which the derivative is defined,     Combining the Chain Rule with the Product Rule   Find the derivative of    First apply the product rule, then apply the chain rule to each term of the product.      Find the derivative of       Start out by applying the quotient rule. Remember to use the chain rule to differentiate the denominator.      Composites of Three or More Functions  We can now combine the chain rule with other rules for differentiating functions, but when we are differentiating the composition of three or more functions, we need to apply the chain rule more than once. If we look at this situation in general terms, we can generate a formula, but we do not need to remember it, as we can simply apply the chain rule multiple times.  In general terms, first we let   Then, applying the chain rule once we obtain   Applying the chain rule again, we obtain    Chain Rule for a Composition of Three Functions  For all values of for which the function is differentiable, if   then   In other words, we are applying the chain rule twice.   Notice that the derivative of the composition of three functions has three parts. (Similarly, the derivative of the composition of four functions has four parts, and so on.) Also, remember, we can always work from the outside in, taking one derivative at a time.   Differentiating a Composite of Three Functions   Find the derivative of    First, rewrite as   Then apply the chain rule several times.      Find the derivative of       Rewrite and use as a guide.     Using the Chain Rule in a Velocity Problem   A particle moves along a coordinate axis. Its position at time is given by What is the velocity of the particle at time    To find the velocity of the particle at time we must differentiate Thus,   Substituting into we obtain      A particle moves along a coordinate axis. Its position at time is given by Find its acceleration at time       Acceleration is the second derivative of position.      At this point, we present a very informal proof of the chain rule, . .  For simplicity’s sake we ignore certain issues: For example, we assume that for in some open interval containing We begin by applying the limit definition of the derivative to the function to obtain   Rewriting, we obtain   Although it is clear that   it is not obvious that   To see that this is true, first recall that since is differentiable at is also continuous at Thus,   Next, make the substitution and and use change of variables in the limit to obtain   Finally,      Using the Chain Rule with Functional Values   Let If and find    Use the chain rule, then substitute.       Given If and find       Follow .      The Chain Rule Using Leibniz’s Notation  As with other derivatives that we have seen, we can express the chain rule using Leibniz’s notation. This notation for the chain rule is used heavily in physics applications.  let and Thus,   and   Consequently,    Chain Rule Using Leibniz’s Notation  If is a function of and is a function of then     Taking a Derivative Using Leibniz’s Notation   Find the derivative of    First, let Thus, Next, find and Using the quotient rule,   and   Finally, we put it all together.   It is important to remember that, when using the Leibniz form of the chain rule, the final answer must be expressed entirely in terms of the original variable given in the problem.      Taking Another Derivative Using Leibniz’s Notation  Find the derivative of    First, let Then Next, find and   Finally, we put it all together.       Use Leibniz’s notation to find the derivative of Make sure that the final answer is expressed entirely in terms of the variable       Let     Trigonometric Derivatives Using Degrees  Recall the discussion in that the formulas for the derivatives of trigonometric functions are only valid with radian measurements. If we graphed a trigonometric function using degrees along the horizontal axis, how would we compute the slopes of tangent lines?  Let where is an angle measured using radians. At , what is the instantaneous rate of change of the function? That is, at , how much would the function be increasing or decreasing with one more degree?  We can convert this angle to degrees by the formula , or . The instanteneous rate of change with each degree is . Using Leibniz notation and noting that is also    So, when the angle is , the sine function will increase by with each extra radian, but will only increase by approximately with each extra degree.   Probably need a picture here.     "
+  "body": " The Chain Rule   Learning Objectives   State the chain rule for the composition of two functions.  Apply the chain rule together with the power rule.  Apply the chain rule and the product\/quotient rules correctly in combination when both are necessary.  Recognize the chain rule for a composition of three or more functions.  Describe the proof of the chain rule.   We have seen the techniques for differentiating basic functions ( , etc.) as well as sums, differences, products, quotients, and constant multiples of these functions. However, these techniques do not allow us to differentiate compositions of functions, such as or In this section, we study the rule for finding the derivative of the composition of two or more functions.    Deriving the Chain Rule  When we have a function that is a composition of two or more functions, we could use all of the techniques we have already learned to differentiate it. However, using all of those techniques to break down a function into simpler parts that we are able to differentiate can get cumbersome. Instead, we use the chain rule , which states that the derivative of a composite function is the derivative of the outer function evaluated at the inner function times the derivative of the inner function.  To put this rule into context, let’s take a look at an example: We can think of the derivative of this function with respect to as the rate of change of relative to the change in Consequently, we want to know how changes as changes. We can think of this event as a chain reaction: As changes, changes, which leads to a change in This chain reaction gives us hints as to what is involved in computing the derivative of First of all, a change in forcing a change in suggests that somehow the derivative of is involved. In addition, the change in forcing a change in suggests that the derivative of with respect to where is also part of the final derivative.  We can take a more formal look at the derivative of by setting up the limit that would give us the derivative at a specific value in the domain of   This expression does not seem particularly helpful; however, we can modify it by multiplying and dividing by the expression to obtain   From the definition of the derivative, we can see that the second factor is the derivative of at That is,   However, it might be a little more challenging to recognize that the first term is also a derivative. We can see this by letting and observing that as  Thus,   In other words, if then Thus, if we think of as the composition where sin and then the derivative of is the product of the derivative of and the derivative of the function evaluated at the function At this point, we anticipate that for it is quite likely that As we determined above, this is the case for  Now that we have derived a special case of the chain rule, we state the general case and then apply it in a general form to other composite functions. An informal proof is provided at the end of the section.   Chain Rule   Let and be functions. For all in the domain of for which is differentiable at and is differentiable at the derivative of the composite function   is given by   Alternatively, if is a function of and is a function of then       Create Figure 3.27 From Thomas     Watch an animation of the chain rule.    Applying the Chain Rule   To differentiate begin by identifying and  Find and evaluate it at to obtain  Find  Write   Note : When applying the chain rule to the composition of two or more functions, keep in mind that we work our way from the outside function in. It is also useful to remember that the derivative of the composition of two functions can be thought of as having two parts; the derivative of the composition of three functions has three parts; and so on. Also, remember that we never evaluate a derivative at a derivative.     The Chain and Power Rules Combined  We can now apply the chain rule to composite functions, but note that we often need to use it with other rules. For example, to find derivatives of functions of the form we need to use the chain rule combined with the power rule. To do so, we can think of as where Then Thus, This leads us to the derivative of a power function using the chain rule,    A Power Rule for Composition of Functions  For all values of for which the derivative is defined, if   Then     Using the Chain and Power Rules   Find the derivative of    First, rewrite  Applying the power rule with we have   Rewriting back to the original form gives us       Find the derivative of      Use with     Using the Chain and Power Rules with a Trigonometric Function   Find the derivative of .    First recall that so we can rewrite as  Applying the power rule with we obtain  .    Finding the Equation of a Tangent Line   Find the equation of a line tangent to the graph of at    Because we are finding an equation of a line, we need a point. The -coordinate of the point is 2. To find the -coordinate, substitute 2 into Since the point is  For the slope, we need To find first we rewrite and apply the power rule to obtain   By substituting, we have Therefore, the line has equation Rewriting, the equation of the line is      Find the equation of the line tangent to the graph of at       Use the preceding example as a guide.      Combining the Chain Rule with Other Rules  Now that we can combine the chain rule and the power rule, we examine how to combine the chain rule with the other rules we have learned. In particular, we can use it with the formulas for the derivatives of quotient or product rule.   Using the Chain Rule on a General Cosine Function   Find the derivative of    Think of as where Since we have Then we do the following calculation.   Thus, the derivative of is given by    In the following example we apply the rule that we have just derived.   Using the Chain Rule on a Cosine Function   Find the derivative of    Let Then Using the result from the previous example,      Using the Chain Rule on Another Trigonometric Function   Find the derivative of    Apply the chain rule to to obtain   In this problem, so we have Therefore, we obtain       Find the derivative of       Apply the chain rule to first and then use    At this point we provide a list of derivative formulas that may be obtained by applying the chain rule in conjunction with the formulas for derivatives of trigonometric functions. Their derivations are similar to those used in and . For convenience, formulas are also given in Leibniz’s notation, which some students find easier to remember. (We discuss the chain rule using Leibniz’s notation at the end of this section.) It is not absolutely necessary to memorize these as separate formulas as they are all applications of the chain rule to previously learned formulas.  Change next end note to end theorem Using the Chain Rule with Trigonometric Functions  For all values of for which the derivative is defined,     Combining the Chain Rule with the Product Rule   Find the derivative of    First apply the product rule, then apply the chain rule to each term of the product.      Find the derivative of       Start out by applying the quotient rule. Remember to use the chain rule to differentiate the denominator.      Composites of Three or More Functions  We can now combine the chain rule with other rules for differentiating functions, but when we are differentiating the composition of three or more functions, we need to apply the chain rule more than once. If we look at this situation in general terms, we can generate a formula, but we do not need to remember it, as we can simply apply the chain rule multiple times.  In general terms, first we let   Then, applying the chain rule once we obtain   Applying the chain rule again, we obtain    Chain Rule for a Composition of Three Functions  For all values of for which the function is differentiable, if   then   In other words, we are applying the chain rule twice.   Notice that the derivative of the composition of three functions has three parts. (Similarly, the derivative of the composition of four functions has four parts, and so on.) Also, remember, we can always work from the outside in, taking one derivative at a time.   Differentiating a Composite of Three Functions   Find the derivative of    First, rewrite as   Then apply the chain rule several times.      Find the derivative of       Rewrite and use as a guide.     Using the Chain Rule in a Velocity Problem   A particle moves along a coordinate axis. Its position at time is given by What is the velocity of the particle at time    To find the velocity of the particle at time we must differentiate Thus,   Substituting into we obtain      A particle moves along a coordinate axis. Its position at time is given by Find its acceleration at time       Acceleration is the second derivative of position.      At this point, we present a very informal proof of the chain rule, . .  For simplicity’s sake we ignore certain issues: For example, we assume that for in some open interval containing We begin by applying the limit definition of the derivative to the function to obtain   Rewriting, we obtain   Although it is clear that   it is not obvious that   To see that this is true, first recall that since is differentiable at is also continuous at Thus,   Next, make the substitution and and use change of variables in the limit to obtain   Finally,      Using the Chain Rule with Functional Values   Let If and find    Use the chain rule, then substitute.       Given If and find       Follow .      The Chain Rule Using Leibniz’s Notation  As with other derivatives that we have seen, we can express the chain rule using Leibniz’s notation. This notation for the chain rule is used heavily in physics applications.  let and Thus,   and   Consequently,    Chain Rule Using Leibniz’s Notation  If is a function of and is a function of then     Taking a Derivative Using Leibniz’s Notation   Find the derivative of    First, let Thus, Next, find and Using the quotient rule,   and   Finally, we put it all together.   It is important to remember that, when using the Leibniz form of the chain rule, the final answer must be expressed entirely in terms of the original variable given in the problem.      Taking Another Derivative Using Leibniz’s Notation  Find the derivative of    First, let Then Next, find and   Finally, we put it all together.       Use Leibniz’s notation to find the derivative of Make sure that the final answer is expressed entirely in terms of the variable       Let     Trigonometric Derivatives Using Degrees  Recall the discussion in that the formulas for the derivatives of trigonometric functions are only valid with radian measurements. If we graphed a trigonometric function using degrees along the horizontal axis, how would we compute the slopes of tangent lines?  Let where is an angle measured using radians. At , what is the instantaneous rate of change of the function? That is, at , how much would the function be increasing or decreasing with one more degree?  We can convert this angle to degrees by the formula , or . The instantaneous rate of change with each degree is . Using Leibniz notation and noting that is also    So, when the angle is , the sine function will increase by with each extra radian, but will only increase by approximately with each extra degree.   Probably need a picture here.     "
 },
 {
   "id": "sec_Ch3Sec6-3-2",
@@ -4966,14 +4966,167 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.6.28",
   "title": "Trigonometric Derivatives Using Degrees.",
-  "body": " Trigonometric Derivatives Using Degrees  Recall the discussion in that the formulas for the derivatives of trigonometric functions are only valid with radian measurements. If we graphed a trigonometric function using degrees along the horizontal axis, how would we compute the slopes of tangent lines?  Let where is an angle measured using radians. At , what is the instantaneous rate of change of the function? That is, at , how much would the function be increasing or decreasing with one more degree?  We can convert this angle to degrees by the formula , or . The instanteneous rate of change with each degree is . Using Leibniz notation and noting that is also    So, when the angle is , the sine function will increase by with each extra radian, but will only increase by approximately with each extra degree.   Probably need a picture here.   "
+  "body": " Trigonometric Derivatives Using Degrees  Recall the discussion in that the formulas for the derivatives of trigonometric functions are only valid with radian measurements. If we graphed a trigonometric function using degrees along the horizontal axis, how would we compute the slopes of tangent lines?  Let where is an angle measured using radians. At , what is the instantaneous rate of change of the function? That is, at , how much would the function be increasing or decreasing with one more degree?  We can convert this angle to degrees by the formula , or . The instantaneous rate of change with each degree is . Using Leibniz notation and noting that is also    So, when the angle is , the sine function will increase by with each extra radian, but will only increase by approximately with each extra degree.   Probably need a picture here.   "
+},
+{
+  "id": "sec_imp_deriv",
+  "level": "1",
+  "url": "sec_imp_deriv.html",
+  "type": "Section",
+  "number": "3.7",
+  "title": "Implicit Differentiation",
+  "body": " Implicit Differentiation   Learning Objectives   Find the derivative of a relation that cannot be written as a function of x by using implicit differentiation.  Use implicit differentiation to determine the equation of a tangent line.   In the previous sections we learned to find the derivative, , or , when is given explicitly as a function of . That is, if we know for some function , we can find . For example, given , we can easily find . (Here we explicitly state how depends on . Knowing , we can directly find .)   Video introduction to    Sometimes the relationship between and is not explicit; rather, it is implicit . For instance, we might know that . This equality defines a relationship between and ; if we know , we could figure out . Can we still find ? In this case, sure; we solve for to get (hence we now know explicitly) and then differentiate to get .  Sometimes the implicit relationship between and is complicated. Suppose we are given . A graph of this implicit relationship is given in . In this case there is absolutely no way to solve for in terms of elementary functions. The surprising thing is, however, that we can still find via a process known as implicit differentiation . implicit differentiation  derivative implicit    A graph of the implicit relationship    A curve beginning in the second quadrant, forming a gentle corner in the first quadrant, and decreasing into the fourth quadrant.   The curve begins in the second quadrant. From the left, the curve decreases as increases. The curve slowly flattens out, almost becoming horizontal as the curve crosses the -axis near the point . When comes close to 0.75, the curve begins decreasing in the shape of a gentle corner. The curve continues decreasing, becoming steepest around the point , at which it also crosses into the fourth quadrant. When is close to 2, the curve begins to decrease more gently, at around the same rate as the beginning of the curve.         The Method of Implicit Differentiation  Implicit differentiation is a technique based on the that is used to find a derivative when the relationship between the variables is given implicitly rather than explicitly (solved for one variable in terms of the other).  We begin by reviewing the Chain Rule. Let and be functions of . Then .  Suppose now that . We can rewrite the above as .  These equations look strange; the key concept to learn here is that we can find even if we don't exactly know how and relate.  We demonstrate this process in the following example.   Using Implicit Differentiation   Find given that .    We start by taking the derivative of both sides (thus maintaining the equality.) We have: .  The right hand side is easy; it returns .  The left hand side requires more consideration. We take the derivative term-by-term. Using the technique derived from Equation above, we can see that .  We apply the same process to the term. .  Putting this together with the right hand side, we have .  Now solve for . It's important to treat as an algebraically independent variable from and .          Video solution      PROTEUS EXERCISE   State or describe what the word implicit refers to in implicit differentiation .      PROTEUS EXERCISE: Match the Reason to the Step   Suppose we want apply implicit differentiation to find for the equation . Match the one or more tasks on the right that was applied in each step on the left.     Apply the derivative with respect to both sides     Sum rule     Chain rule  Power rule     Factor     Divide both sides by     Quotient rule  Simplify     Implicit functions are generally harder to deal with than explicit functions. With an explicit function, given an value, we have an explicit formula for computing the corresponding value. With an implicit function, one often has to find and values at the same time that satisfy the equation. It is much easier to demonstrate that a given point satisfies the equation than to actually find such a point.  For instance, we can affirm easily that the point lies on the graph of the implicit function . Plugging in for , we see the left hand side is . Setting , we see the right hand side is also ; the equation is satisfied. The following example finds the equation of the tangent line to this function at this point.   Using implicit differentiation to find a tangent line   Find the equation of the line tangent to the curve of the implicitly defined function at the point .    In we found that .  We find the slope of the tangent line at the point by substituting for and for . Thus at the point , we have the slope as .  Therefore the equation of the tangent line to the implicitly defined function at the point is .  The curve and this tangent line are shown in .   The function and its tangent line at the point    A decreasing curve with a negative tangent line through the negative x-axis   The same curve as , but with a tangent line drawn at . The tangent line is pointing sharply downward.         Video solution     This suggests a general method for implicit differentiation. For the steps below assume is a function of .     Take the derivative of each term in the equation. Treat the terms like normal. When taking the derivatives of terms, the usual rules apply except that, because of the , we need to multiply each term by .    Get all the terms on one side of the equal sign and put the remaining terms on the other side.    Factor out ; solve for by dividing.     (Practical Note: when working by hand, it may be beneficial to use the symbol instead of , as the latter can be easily confused for or .)   Using Implicit Differentiation   Given the implicitly defined function , find .    We will take the implicit derivatives term by term. The derivative of is .  The second term, , is a little tricky. It requires the as it is the product of two functions of : and . Its derivative is . The first part of this expression requires a because we are taking the derivative of a term. The second part does not require it because we are taking the derivative of .  The derivative of the right hand side is easily found to be . In all, we get: .  Move terms around so that the left side consists only of the terms and the right side consists of all the other terms: .  Factor out from the left side and solve to get .  To confirm the validity of our work, let's find the equation of a tangent line to this function at a point. It is easy to confirm that the point lies on the graph of this function. At this point, . So the equation of the tangent line is . The function and its tangent line are graphed in .   A graph of the implicitly defined function along with its tangent line at the point    A curve with two distinct segments and a tangent line with a positive slope  Two curves are drawn in the -plane. The left curve stretches upwards from the left side of the axis, curving slightly to the left. As approaches -2, the curve begins to widen to the left, creating a bump in the curve. As the curve crosses the axis, the curve moves towards the right, no longer increasing and becoming more horizontal as increases. At the point , a tangent line is drawn, with a moderate positive slope. This point corresponds to the corner at which the curve begins to become horizontal. At this point, the curve passes the vertical line test, but does not at most other points on the graph. The second curve begins to the right of the -axis, as a line stretching upwards from the bottom of the -axis. As approaches 1, the curve also begins to become horizontal as increases. The entire second curve lies in the fourth quadrant.      Notice how our curve looks much different than for functions we have seen. For one, it fails the vertical line test, and so the complete curve is not truly representing as a function of . But when we indicate we are interested in the derivative at , we are indicating that we want the function defined by the small portion of the curve that passes through , and that small portion does pass the vertical line test. Such functions are important in many areas of mathematics, so developing tools to deal with them is also important.    Video solution      Using Implicit Differentiation   Given the implicitly defined function , find .    Differentiating term by term, we find the most difficulty in the first term. It requires both the and . .  We leave the derivatives of the other terms to the reader. After taking the derivatives of both sides, we have .  We now have to be careful to properly solve for , particularly because of the product on the left. It is best to multiply out the product. Doing this, we get .  From here we can safely move around terms to get the following: .  Then we can solve for to get .  A graph of this implicit function is given in .   A graph of the implicitly defined curve    A curve beginning in the third quadrant passing through the points (0,-1), (0,0), (0,1).   The curve begins in the third quadrant. From there, the curve bends slightly back and increases, crossing above itself. The curve extends to the right, increasing almost linearly as it crosses the -axis at into the fourth quadrant. The curve continues to increase as such until it reaches a point close to . The curve then bends back, increasing towards the top left linearly. It then crosses the origin and passes into the second quadrant. The curve quickly bends towards the right, crossing the -axis at into the first quadrant. From there, the curve continues towards the right while slightly increasing. The curves rises sharply at , before decreasing again.       It is easy to verify that the points , and all lie on the graph. We can find the slopes of the tangent lines at each of these points using our formula for .  At , the slope is .  At , the slope is .  At , the slope is also .  The tangent lines have been added to the graph of the function in .   A graph of the implicitly defined curve and certain tangent lines    A curve beginning in the third quadrant passing through the points (0,-1), (0,0), (0,1), with tangent lines at those points.   The graph in , with tagent lines drawn at , , and . The tangent line at has a positive slope less than 1. The tangent line at has a negative slope, close to -1. The tangent line at has a positive slope, less than 1.         Video solution     Quite a few famous curves have equations that are given implicitly. We can use implicit differentiation to find the slope at various points on those curves. We investigate two such curves in the next examples.   Finding slopes of tangent lines to a circle   Find the slope of the tangent line to the circle at the point .    Taking derivatives, we get . Solving for gives: .  This is a clever formula. Recall that the slope of the line through the origin and the point on the circle will be . We have found that the slope of the tangent line to the circle at that point is the opposite reciprocal of , namely, . Hence these two lines are always perpendicular.  At the point , we have the tangent line's slope as .  A graph of the circle and its tangent line at is given in , along with a thin dashed line from the origin that is perpendicular to the tangent line. (It turns out that all normal lines to a circle pass through the center of the circle.)   The unit circle with its tangent line at    A circle of radius 1 centered at the origin with a tangent line drawn at a point in the first quadrant.   A circle of radius 1 centered at the origin. A dashed line extends from the origin to a tangent line at the point . At that point a tangent line is drawn with a slight negative slope.                                                                                          Find Slopes of Tangents Lines to Curves Defined Implicitly   Find the slope of at the point .    This is a particularly interesting curve called an astroid . It is the shape traced out by a point on the edge of a circle that is rolling around inside of a larger circle, as shown in .   An astroid, traced out by a point on the smaller circle as it rolls inside the larger circle    A four pointed star with rounded edges, surrounded by a dashed circle.   A dashed circle of radius 20 entirely contains the curve. In each quadrant curves connect the points on the x and y axis which also lie on the circle. This gives the overall curve the appearence of a diamond with sides curved towards the inside. In the third quadrant a smaller circle is drawn which touches both the outer circle and the curve. The point on the circle touching the curve is highlighted blue.       To find the slope of the astroid at the point , we take the derivative implicitly. .  Plugging in and , we get a slope of . The astroid, with its tangent line at , is shown in .   An astroid with a tangent line    A previously described astroid with a tangent line in the first quadrant.   The curve sketched in with a tangent line at . It has a slope of -1.          Applying Implicit Differentiation   In a simple video game, a rocket travels in an elliptical orbit whose path is described by the equation The rocket can fire missiles along lines tangent to its path. The object of the game is to destroy an incoming asteroid traveling along the positive -axis toward If the rocket fires a missile when it is located at where will it intersect the -axis?   To solve this problem, we must determine where the line tangent to the graph of  at intersects the -axis. Begin by finding implicitly. Differentiating, we have   Solving for we have   The slope of the tangent line is The equation of the tangent line is To determine where the line intersects the -axis, solve The solution is The missile intersects the -axis at the point     Find the equation of the line tangent to the hyperbola at the point           Implicit Differentiation and the Second Derivative  We can use implicit differentiation to find higher order derivatives. In theory, this is simple: first find , then take its derivative with respect to . In practice, it is not hard, but it often requires a bit of algebra. We demonstrate this in an example.   Finding the second derivative   Given , find .    We found that in . To find , we apply implicit differentiation to . .  While this is not a particularly simple expression, it is usable. We can see that when and when . In , we will see how this relates to the shape of the graph.  Also, if we remember that we are only considering points on the curve , then we know that . So we can replace the in the expression for to get which is a simpler expression. Recognizing when simplifications like this are possible is not always easy.    Video solution       "
+},
+{
+  "id": "vid_deriv_impl_intro",
+  "level": "2",
+  "url": "sec_imp_deriv.html#vid_deriv_impl_intro",
+  "type": "Figure",
+  "number": "3.7.1",
+  "title": "",
+  "body": " Video introduction to   "
+},
+{
+  "id": "sec_imp_deriv-2-6",
+  "level": "2",
+  "url": "sec_imp_deriv.html#sec_imp_deriv-2-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "implicit differentiation "
+},
+{
+  "id": "fig_implicit1",
+  "level": "2",
+  "url": "sec_imp_deriv.html#fig_implicit1",
+  "type": "Figure",
+  "number": "3.7.2",
+  "title": "",
+  "body": " A graph of the implicit relationship    A curve beginning in the second quadrant, forming a gentle corner in the first quadrant, and decreasing into the fourth quadrant.   The curve begins in the second quadrant. From the left, the curve decreases as increases. The curve slowly flattens out, almost becoming horizontal as the curve crosses the -axis near the point . When comes close to 0.75, the curve begins decreasing in the shape of a gentle corner. The curve continues decreasing, becoming steepest around the point , at which it also crosses into the fourth quadrant. When is close to 2, the curve begins to decrease more gently, at around the same rate as the beginning of the curve.      "
+},
+{
+  "id": "ex_implicit1",
+  "level": "2",
+  "url": "sec_imp_deriv.html#ex_implicit1",
+  "type": "Example",
+  "number": "3.7.3",
+  "title": "Using Implicit Differentiation.",
+  "body": " Using Implicit Differentiation   Find given that .    We start by taking the derivative of both sides (thus maintaining the equality.) We have: .  The right hand side is easy; it returns .  The left hand side requires more consideration. We take the derivative term-by-term. Using the technique derived from Equation above, we can see that .  We apply the same process to the term. .  Putting this together with the right hand side, we have .  Now solve for . It's important to treat as an algebraically independent variable from and .          Video solution    "
+},
+{
+  "id": "APEX-PROTEUS-deriv-implicit-1-v1",
+  "level": "2",
+  "url": "sec_imp_deriv.html#APEX-PROTEUS-deriv-implicit-1-v1",
+  "type": "Checkpoint",
+  "number": "3.7.4",
+  "title": "PROTEUS EXERCISE.",
+  "body": " PROTEUS EXERCISE   State or describe what the word implicit refers to in implicit differentiation .    "
+},
+{
+  "id": "APEX-PROTEUS-deriv-implicit-2-v1",
+  "level": "2",
+  "url": "sec_imp_deriv.html#APEX-PROTEUS-deriv-implicit-2-v1",
+  "type": "Checkpoint",
+  "number": "3.7.5",
+  "title": "PROTEUS EXERCISE: Match the Reason to the Step.",
+  "body": " PROTEUS EXERCISE: Match the Reason to the Step   Suppose we want apply implicit differentiation to find for the equation . Match the one or more tasks on the right that was applied in each step on the left.     Apply the derivative with respect to both sides     Sum rule     Chain rule  Power rule     Factor     Divide both sides by     Quotient rule  Simplify    "
+},
+{
+  "id": "ex_implicit2",
+  "level": "2",
+  "url": "sec_imp_deriv.html#ex_implicit2",
+  "type": "Problem-Solving Strategy",
+  "number": "3.7.6",
+  "title": "Using implicit differentiation to find a tangent line.",
+  "body": " Using implicit differentiation to find a tangent line   Find the equation of the line tangent to the curve of the implicitly defined function at the point .    In we found that .  We find the slope of the tangent line at the point by substituting for and for . Thus at the point , we have the slope as .  Therefore the equation of the tangent line to the implicitly defined function at the point is .  The curve and this tangent line are shown in .   The function and its tangent line at the point    A decreasing curve with a negative tangent line through the negative x-axis   The same curve as , but with a tangent line drawn at . The tangent line is pointing sharply downward.         Video solution    "
+},
+{
+  "id": "ex_implicit3",
+  "level": "2",
+  "url": "sec_imp_deriv.html#ex_implicit3",
+  "type": "Example",
+  "number": "3.7.8",
+  "title": "Using Implicit Differentiation.",
+  "body": " Using Implicit Differentiation   Given the implicitly defined function , find .    We will take the implicit derivatives term by term. The derivative of is .  The second term, , is a little tricky. It requires the as it is the product of two functions of : and . Its derivative is . The first part of this expression requires a because we are taking the derivative of a term. The second part does not require it because we are taking the derivative of .  The derivative of the right hand side is easily found to be . In all, we get: .  Move terms around so that the left side consists only of the terms and the right side consists of all the other terms: .  Factor out from the left side and solve to get .  To confirm the validity of our work, let's find the equation of a tangent line to this function at a point. It is easy to confirm that the point lies on the graph of this function. At this point, . So the equation of the tangent line is . The function and its tangent line are graphed in .   A graph of the implicitly defined function along with its tangent line at the point    A curve with two distinct segments and a tangent line with a positive slope  Two curves are drawn in the -plane. The left curve stretches upwards from the left side of the axis, curving slightly to the left. As approaches -2, the curve begins to widen to the left, creating a bump in the curve. As the curve crosses the axis, the curve moves towards the right, no longer increasing and becoming more horizontal as increases. At the point , a tangent line is drawn, with a moderate positive slope. This point corresponds to the corner at which the curve begins to become horizontal. At this point, the curve passes the vertical line test, but does not at most other points on the graph. The second curve begins to the right of the -axis, as a line stretching upwards from the bottom of the -axis. As approaches 1, the curve also begins to become horizontal as increases. The entire second curve lies in the fourth quadrant.      Notice how our curve looks much different than for functions we have seen. For one, it fails the vertical line test, and so the complete curve is not truly representing as a function of . But when we indicate we are interested in the derivative at , we are indicating that we want the function defined by the small portion of the curve that passes through , and that small portion does pass the vertical line test. Such functions are important in many areas of mathematics, so developing tools to deal with them is also important.    Video solution    "
+},
+{
+  "id": "ex_implicit5",
+  "level": "2",
+  "url": "sec_imp_deriv.html#ex_implicit5",
+  "type": "Example",
+  "number": "3.7.10",
+  "title": "Using Implicit Differentiation.",
+  "body": " Using Implicit Differentiation   Given the implicitly defined function , find .    Differentiating term by term, we find the most difficulty in the first term. It requires both the and . .  We leave the derivatives of the other terms to the reader. After taking the derivatives of both sides, we have .  We now have to be careful to properly solve for , particularly because of the product on the left. It is best to multiply out the product. Doing this, we get .  From here we can safely move around terms to get the following: .  Then we can solve for to get .  A graph of this implicit function is given in .   A graph of the implicitly defined curve    A curve beginning in the third quadrant passing through the points (0,-1), (0,0), (0,1).   The curve begins in the third quadrant. From there, the curve bends slightly back and increases, crossing above itself. The curve extends to the right, increasing almost linearly as it crosses the -axis at into the fourth quadrant. The curve continues to increase as such until it reaches a point close to . The curve then bends back, increasing towards the top left linearly. It then crosses the origin and passes into the second quadrant. The curve quickly bends towards the right, crossing the -axis at into the first quadrant. From there, the curve continues towards the right while slightly increasing. The curves rises sharply at , before decreasing again.       It is easy to verify that the points , and all lie on the graph. We can find the slopes of the tangent lines at each of these points using our formula for .  At , the slope is .  At , the slope is .  At , the slope is also .  The tangent lines have been added to the graph of the function in .   A graph of the implicitly defined curve and certain tangent lines    A curve beginning in the third quadrant passing through the points (0,-1), (0,0), (0,1), with tangent lines at those points.   The graph in , with tagent lines drawn at , , and . The tangent line at has a positive slope less than 1. The tangent line at has a negative slope, close to -1. The tangent line at has a positive slope, less than 1.         Video solution    "
+},
+{
+  "id": "ex_implicit7",
+  "level": "2",
+  "url": "sec_imp_deriv.html#ex_implicit7",
+  "type": "Example",
+  "number": "3.7.13",
+  "title": "Finding slopes of tangent lines to a circle.",
+  "body": " Finding slopes of tangent lines to a circle   Find the slope of the tangent line to the circle at the point .    Taking derivatives, we get . Solving for gives: .  This is a clever formula. Recall that the slope of the line through the origin and the point on the circle will be . We have found that the slope of the tangent line to the circle at that point is the opposite reciprocal of , namely, . Hence these two lines are always perpendicular.  At the point , we have the tangent line's slope as .  A graph of the circle and its tangent line at is given in , along with a thin dashed line from the origin that is perpendicular to the tangent line. (It turns out that all normal lines to a circle pass through the center of the circle.)   The unit circle with its tangent line at    A circle of radius 1 centered at the origin with a tangent line drawn at a point in the first quadrant.   A circle of radius 1 centered at the origin. A dashed line extends from the origin to a tangent line at the point . At that point a tangent line is drawn with a slight negative slope.        "
+},
+{
+  "id": "ex_implicit8",
+  "level": "2",
+  "url": "sec_imp_deriv.html#ex_implicit8",
+  "type": "Example",
+  "number": "3.7.15",
+  "title": "Find Slopes of Tangents Lines to Curves Defined Implicitly.",
+  "body": " Find Slopes of Tangents Lines to Curves Defined Implicitly   Find the slope of at the point .    This is a particularly interesting curve called an astroid . It is the shape traced out by a point on the edge of a circle that is rolling around inside of a larger circle, as shown in .   An astroid, traced out by a point on the smaller circle as it rolls inside the larger circle    A four pointed star with rounded edges, surrounded by a dashed circle.   A dashed circle of radius 20 entirely contains the curve. In each quadrant curves connect the points on the x and y axis which also lie on the circle. This gives the overall curve the appearence of a diamond with sides curved towards the inside. In the third quadrant a smaller circle is drawn which touches both the outer circle and the curve. The point on the circle touching the curve is highlighted blue.       To find the slope of the astroid at the point , we take the derivative implicitly. .  Plugging in and , we get a slope of . The astroid, with its tangent line at , is shown in .   An astroid with a tangent line    A previously described astroid with a tangent line in the first quadrant.   The curve sketched in with a tangent line at . It has a slope of -1.        "
+},
+{
+  "id": "fs-id1169737935216",
+  "level": "2",
+  "url": "sec_imp_deriv.html#fs-id1169737935216",
+  "type": "Example",
+  "number": "3.7.18",
+  "title": "Applying Implicit Differentiation.",
+  "body": " Applying Implicit Differentiation   In a simple video game, a rocket travels in an elliptical orbit whose path is described by the equation The rocket can fire missiles along lines tangent to its path. The object of the game is to destroy an incoming asteroid traveling along the positive -axis toward If the rocket fires a missile when it is located at where will it intersect the -axis?   To solve this problem, we must determine where the line tangent to the graph of  at intersects the -axis. Begin by finding implicitly. Differentiating, we have   Solving for we have   The slope of the tangent line is The equation of the tangent line is To determine where the line intersects the -axis, solve The solution is The missile intersects the -axis at the point  "
+},
+{
+  "id": "sec_imp_deriv-3-22",
+  "level": "2",
+  "url": "sec_imp_deriv.html#sec_imp_deriv-3-22",
+  "type": "Checkpoint",
+  "number": "3.7.19",
+  "title": "",
+  "body": "  Find the equation of the line tangent to the hyperbola at the point        "
+},
+{
+  "id": "ex_implicit9",
+  "level": "2",
+  "url": "sec_imp_deriv.html#ex_implicit9",
+  "type": "Example",
+  "number": "3.7.20",
+  "title": "Finding the second derivative.",
+  "body": " Finding the second derivative   Given , find .    We found that in . To find , we apply implicit differentiation to . .  While this is not a particularly simple expression, it is usable. We can see that when and when . In , we will see how this relates to the shape of the graph.  Also, if we remember that we are only considering points on the curve , then we know that . So we can replace the in the expression for to get which is a simpler expression. Recognizing when simplifications like this are possible is not always easy.    Video solution    "
+},
+{
+  "id": "sec_Ch3Sec8",
+  "level": "1",
+  "url": "sec_Ch3Sec8.html",
+  "type": "Section",
+  "number": "3.8",
+  "title": "Derivatives of Inverse Functions (PLACEHOLDER)",
+  "body": " Derivatives of Inverse Functions (PLACEHOLDER)  "
+},
+{
+  "id": "sec_Ch4Sec6",
+  "level": "1",
+  "url": "sec_Ch4Sec6.html",
+  "type": "Section",
+  "number": "4.1",
+  "title": "Concavity and Curve Sketching (PLACEHOLDER)",
+  "body": " Concavity and Curve Sketching (PLACEHOLDER)  "
 },
 {
   "id": "sec_exp_func",
   "level": "1",
   "url": "sec_exp_func.html",
   "type": "Section",
-  "number": "4.1",
+  "number": "5.1",
   "title": "Derivatives of Exponential Functions (check if table headers needed)",
   "body": " Derivatives of Exponential Functions (check if table headers needed)   Now that we understand how derivatives interact with products and quotients, we are able to compute derivatives of  polynomials,  rational functions, and  powers and roots of rational functions.  Notice that all of the above come from knowing Differentiating powers and roots of functions is actually quite a bit easier once one knows the chain rule which we will discuss soon. the derivative of and applying linearity of derivatives and the product rule.  There is still one more rule that we need to complete our toolbox and that is the chain rule. However before we get there, we will add a few functions to our list of things we can differentiate One reason we add these functions is that they interact very nicely with the derivative. Another reason is that they turn up in many real world examples. . The first of these is the exponential function.  Let and set  this is what is known as an exponential function. Let's see what happens when we try to compute the derivative of this function just using the definition of the derivative. Unfortunately we cannot complete this computation because we cannot evaluate the last limit directly. For the moment, let us assume this limit exists and name it It depends only on and is completely independent of . Using this notation (which we will quickly improve upon below), our desired derivative is now Thus the derivative of is multiplied by some constant i.e. the function is nearly unchanged by differentiating. If we can tune so that then the derivative would just be the original function! This turns out to be very useful.  To try finding an that obeys , let us investigate how changes with . Unfortunately (though this fact is not at all obvious) there is no way to write as a finite combination of any of the functions we have examined so far To a bit more be precise, we say that a number is algebraic if we can write as the zero of a polynomial with integer coefficients. When is any positive algebraic number other than , is not algebraic. A number that is not algebraic is called transcendental. The best known example of a transcendental number is (which follows from the Lindemann-Weierstrass Theorem way beyond the scope of this course). . To get started, we'll try to guess , for a few values of , by plugging in some small values of .  Estimates of  Let then . This is not surprising since is constant, and so its derivative must be zero everywhere. Let then . Setting to smaller and smaller numbers gives      0.1 0.01 0.001 0.0001 0.00001 0.000001 0.0000001    0.7177 0.6956 0.6934 0.6932 0.6931 0.6931 0.6931     Similarly when we get      0.1 0.01 0.001 0.0001 0.00001 0.000001 0.0000001    1.1612 1.1047 1.0992 1.0987 1.0986 1.0986 1.0986     and      0.1 0.01 0.001 0.0001 0.00001 0.000001 0.0000001    2.5893 2.3293 2.3052 2.3028 2.3026 2.3026 2.3026     From this example it appears that increases as we increase , and that for some value of between and .   We can learn a lot more about , and, in particular, confirm the guesses that we made in the last example, by making use of logarithms this would be a good time for you to review them.   Whirlwind Review of Logarithms   Before you read much further into this little review on logarithms, you should first go back and take a look at the review of inverse functions in Section .   Logarithmic Functions  We are about to define the logarithm with base . In principle, is allowed to be any strictly positive real number, except . However we shall restrict our attention to , because, in practice, the only 's that are ever used are (a number that we shall define in the next few pages), and, if you are a computer scientist, . So, fix any (if you like, pretend that ). The function   increases as increases (for example if , then since )  obeys (for example is really small) and  obeys (for example is really big).  Consequently, for any , the horizontal straight line crosses the graph of at exactly one point, as illustrated in the figure below.     The coordinate of that intersection point, denoted in the figure, is . So is the power to which you have to raise to get . It is the inverse function of . Of course we are free to rename the dummy variables and . If, for example, we wish to graph our logarithm function, it is natural to rename and , giving   Let . Then the logarithm with base is defined We can also define logarithms with base but doing so is not necessary. To see this, set . Then it is reasonable to define since as required. by    Obviously the power to which we have to raise to get is , so we have both From the exponential properties we have     Can we convert from logarithms in one base to logarithms in another? For example, if our calculator computes logarithms base 10 for us (which it very likely does), can we also use it to compute a logarithm base ? Yes, using How did we get this? Well, let's start with a number and suppose that we want to compute We can rearrange this by exponentiating both sides Now take log base 10 of both sides But recall that , so     Back to that Limit  Recall that we are trying to choose so that We can estimate the correct value of by using our numerical estimate of above. The way to do this is to first rewrite in terms of logarithms. Using this we rewrite as Now set , and notice that as we also have Below is a sketch of against .      Remember that we are trying to find an with . We can do so by recognising that has the following properties.  When , so that . Of course, we should have expected this, because when we have which is just the constant function and .   increases as increases, and hence increases as increases.   tends to as , and hence tends to as .  Hence the graph of passes through , is always increasing as increases and goes off to as goes off to . See Figure . Consequently We are applying the Intermediate Value Theorem here, but we have neglected to verify the hypothesis that is a continuous function. Please forgive us we could do this if we really had to, but it would make a big mess without adding much understanding, if we were to do so here in the text. Better to just trust us on this. there is exactly one value of for which .  The value of for which is given the name . It is called Euler's constant Unfortunately there is another Euler's constant, , which is more properly called the Euler Mascheroni constant. Anyway like many mathematical discoveries, was first found by someone else Napier used the constant in order to compute logarithms but only implicitly. Bernoulli was probably the first to approximate it when examining continuous compound interest. It first appeared explicitly in work of Leibniz, though he denoted it . It was Euler, though, who established the notation we now use and who showed how important the constant is to mathematics. . In Example , we estimated . So if we assume then the above equation becomes This gives us the estimate which is not too bad. In fact Recall factorial, written is the product .   Euler's constant     We will be able to explain this last formula once we develop Taylor polynomials later in the course.  To summarize   The constant is the unique real number that satisfies Further,    We plot in the graph below     And just a reminder of some of its The function is of course the special case of the function with . So it inherits all the usual algebraic properties of . properties                ,     Now consider again the problem of differentiating . We saw above that We can eliminate the term with a little care. Since we know that , we have . This allows us to express Putting things back together gives There is more than one way to get to this result. For example, let , then So if we write then we are really attempting to differentiate the function In order to compute this derivative we need to know how to differentiate where is a constant. We'll hold off on learning this for the moment until we have introduced the chain rule (see Section . Similarly we'd like to know how to differentiate logarithms again this has to wait until we have learned the chain rule.  Notice that the derivatives are either nearly unchanged or actually unchanged by differentiating. It turns out that some of the trigonometric functions also have this property of being nearly unchanged by differentiation. That brings us to the next section.    "
 },
@@ -4982,7 +5135,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_exp_func.html#eg_log_est",
   "type": "Example",
-  "number": "4.1.1",
+  "number": "5.1.1",
   "title": "Estimates of <span class=\"process-math\">\\(C(a)\\)<\/span>.",
   "body": "Estimates of  Let then . This is not surprising since is constant, and so its derivative must be zero everywhere. Let then . Setting to smaller and smaller numbers gives      0.1 0.01 0.001 0.0001 0.00001 0.000001 0.0000001    0.7177 0.6956 0.6934 0.6932 0.6931 0.6931 0.6931     Similarly when we get      0.1 0.01 0.001 0.0001 0.00001 0.000001 0.0000001    1.1612 1.1047 1.0992 1.0987 1.0986 1.0986 1.0986     and      0.1 0.01 0.001 0.0001 0.00001 0.000001 0.0000001    2.5893 2.3293 2.3052 2.3028 2.3026 2.3026 2.3026     From this example it appears that increases as we increase , and that for some value of between and .  "
 },
@@ -4991,7 +5144,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_exp_func.html#def_2_7_1",
   "type": "Definition",
-  "number": "4.1.2",
+  "number": "5.1.2",
   "title": "",
   "body": " Let . Then the logarithm with base is defined We can also define logarithms with base but doing so is not necessary. To see this, set . Then it is reasonable to define since as required. by   "
 },
@@ -5000,7 +5153,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_exp_func.html#fig_CofA2",
   "type": "Figure",
-  "number": "4.1.3",
+  "number": "5.1.3",
   "title": "",
   "body": "   "
 },
@@ -5009,7 +5162,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_exp_func.html#eq_eulerconst",
   "type": "Fact",
-  "number": "4.1.4",
+  "number": "5.1.4",
   "title": "Euler’s constant.",
   "body": "Euler's constant    "
 },
@@ -5018,7 +5171,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec_exp_func.html#sec_exp_func-4-9",
   "type": "Theorem",
-  "number": "4.1.5",
+  "number": "5.1.5",
   "title": "",
   "body": " The constant is the unique real number that satisfies Further,   "
 }

@@ -30,7 +30,7 @@ htmlPresentation: false,
 </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="OpenStax Calculus">
+<meta property="book:title" content="College of Dupage OER Calculus 1">
 <script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -67,7 +67,7 @@ eBookConfig.enable_chatcodes =  false;
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">OpenStax Calculus</span> <span class="subtitle">Volume 1</span></a></h1>
+<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">College of Dupage OER Calculus 1</span></a></h1>
 <p class="byline"></p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
@@ -91,6 +91,101 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
 \newcommand{\liff}{ {\;\Leftrightarrow\;} }
 \newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+ 
+ \newcommand\blank[2]{\,\colorbox{gray}{$\phantom{\rule{#1pt}{#2pt}}$}\,}
+    \newcommand{\highlight}[1]{{\color{blue}{#1}}}
+    \newcommand{\fp}{f\hskip.75pt '}
+    \newcommand{\fpp}{f\hskip.75pt ''}
+
+    
+    
+    \newcommand{\lz}[2]{\frac{d#1}{d#2}}
+    
+    
+    
+    \newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+    
+    
+    
+    \newcommand{\lzo}[1]{\frac{d}{d#1}}
+    
+    
+    
+    \newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+    
+    
+    
+    \newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+    
+    
+    
+    \newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+    
+    
+    
+    \newcommand{\plz}[2]{\frac{\partial#1}{\partial#2}}
+    
+    
+    
+    \newcommand{\plzoa}[3]{\left.{\frac{\partial#1}{\partial#2}}\right|_{#3}}
+
+    
+    
+    \newcommand{\inflim}[1][n]{\lim\limits_{#1 \to \infty}}
+
+    
+    
+    \newcommand{\primeskip}{\hskip.75pt }
+    \newcommand{\infser}[1][1]{\sum_{n=#1}^\infty}
+    \newcommand{\Fp}{F\hskip.75pt '}
+    \newcommand{\Fpp}{F\hskip.75pt ''}
+    
+	    \newcommand{\yp}{y\hskip.75pt '}
+    \newcommand{\gp}{g\hskip.75pt '}
+    \newcommand{\dx}{\Delta x}
+    \newcommand{\dy}{\Delta y}
+    \newcommand{\ddz}{\Delta z}
+    \newcommand{\thet}{\theta}
+    \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+    \newcommand{\vnorm}[1]{\left\lVert\vec #1\right\rVert}
+    \newcommand{\snorm}[1]{\left|\left|\,#1\,\right|\right|}
+    \newcommand{\la}{\left\langle}
+    \newcommand{\ra}{\right\rangle}
+    \newcommand{\dotp}[2]{\vec #1 \cdot \vec #2}
+    \newcommand{\proj}[2]{\text{proj}_{\,\vec #2}{\,\vec #1}}
+    \newcommand{\crossp}[2]{\vec #1 \times \vec #2}
+    \newcommand{\veci}{\vec i}
+    \newcommand{\vecj}{\vec j}
+    \newcommand{\veck}{\vec k}
+    \newcommand{\vecu}{\vec u}
+    \newcommand{\vecv}{\vec v}
+    \newcommand{\vecw}{\vec w}
+    \newcommand{\vecx}{\vec x}
+    \newcommand{\vecy}{\vec y}
+    \newcommand{\vrp}{\vec r\hskip0.75pt '}
+    \newcommand{\vrpp}{\vec r\hskip0.75pt ''}
+    \newcommand{\vsp}{\vec s\hskip0.75pt '}
+    \newcommand{\vrt}{\vec r(t)}
+    \newcommand{\vst}{\vec s(t)}
+    \newcommand{\vvt}{\vec v(t)}
+    \newcommand{\vat}{\vec a(t)}
+    \newcommand{\px}{\partial x}
+    \newcommand{\py}{\partial y}
+    \newcommand{\pz}{\partial z}
+    \newcommand{\pf}{\partial f}
+    \newcommand{\unittangent}{\vec{{}T}}
+    \newcommand{\unitnormal}{\vec{N}}
+    \newcommand{\unittangentprime}{\vec{{}T}\hskip0.75pt '}
+ 
+    \newcommand{\mathN}{\mathbb{N}}
+    \newcommand{\surfaceS}{\mathcal{S}}
+    \newcommand{\zerooverzero}{\displaystyle \raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\textit{ ''}}}
+    \newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+    \newcommand{\sech}{\operatorname{sech}}
+    \newcommand{\csch}{\operatorname{csch}}
+    \newcommand{\curl}{\operatorname{curl}}
+    \newcommand{\divv}{\operatorname{div}}
+    \newcommand{\Hess}{\operatorname{Hess}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -248,13 +343,13 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec_Ch4Sec6.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Limits at Infinity and Asymptotes</span></a></div>
+<div class="toc-title-box"><a href="sec_Ch2Sec6.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Limits at Infinity and Asymptotes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Limits at Infinity and Horizontal Asymptotes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Infinite Limits at Infinity</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-5" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Formal Definitions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-6" class="internal"><span class="codenumber">2.6.4</span> <span class="title">End Behavior for Polynomials Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-7" class="internal"><span class="codenumber">2.6.5</span> <span class="title">End Behavior for Algebraic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Limits at Infinity and Horizontal Asymptotes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Infinite Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-5" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Formal Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-6" class="internal"><span class="codenumber">2.6.4</span> <span class="title">End Behavior for Polynomials Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-7" class="internal"><span class="codenumber">2.6.5</span> <span class="title">End Behavior for Algebraic Functions</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -328,18 +423,30 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-7" class="internal"><span class="codenumber">3.6.5</span> <span class="title">The Chain Rule Using Leibniz’s Notation</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_imp_deriv.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-3" class="internal"><span class="codenumber">3.7.1</span> <span class="title">The Method of Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-4" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Implicit Differentiation and the Second Derivative</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch3Sec8.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Derivatives of Inverse Functions (PLACEHOLDER)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch_appendix.html" class="internal"><span class="codenumber">4</span> <span class="title">Appendix</span></a></div>
+<div class="toc-title-box"><a href="ch_fourth.html" class="internal"><span class="codenumber">4</span> <span class="title">Applications of Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch4Sec6.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Concavity and Curve Sketching (PLACEHOLDER)</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_appendix.html" class="internal"><span class="codenumber">5</span> <span class="title">Appendix</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec_exp_func.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Derivatives of Exponential Functions (check if table headers needed)</span></a></div>
+<div class="toc-title-box"><a href="sec_exp_func.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Derivatives of Exponential Functions (check if table headers needed)</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Whirlwind Review of Logarithms</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3-3" class="internal"><span class="codenumber">4.1.1.1</span> <span class="title">Logarithmic Functions</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Whirlwind Review of Logarithms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3-3" class="internal"><span class="codenumber">5.1.1.1</span> <span class="title">Logarithmic Functions</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-4" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Back to that Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Back to that Limit</span></a></div></li>
 </ul>
 </li></ul>
 </li>
@@ -715,7 +822,7 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 </div>
 <div class="para" id="sec_Ch2Sec2v2-4-3-3-2">Recognizing this behavior is important; we’ll study this in greater depth later.  Right now, it suffices to say that the limit does not exist since <span class="process-math">\(f(x)\)</span> is approaching two <em class="emphasis">different</em> values as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-4-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="APEX_fig1-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/APEX_fig1-1_01.svg" class="contained" alt="A graph of a polynomial from (0,3) to (2,1) with a point at (2,1) and on the same axes a line from (1,1) to (2,2) with a hole at (1,1)"></div>
+<figure class="figure figure-like" id="APEX_fig1-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/APEX_fig1-1_01.svg" role="img" class="contained" alt="A graph of a polynomial from (0,3) to (2,1) with a point at (2,1) and on the same axes a line from (1,1) to (2,2) with a hole at (1,1)"></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The limit of <span class="process-math">\(f(x)\)</span> does not exist at <span class="process-math">\(x=1\)</span><div class="autopermalink" data-description="Figure 2.2.17"><a href="#APEX_fig1-1" title="Copy heading and permalink for Figure 2.2.17" aria-label="Copy heading and permalink for Figure 2.2.17">🔗</a></div></figcaption>
 </figure>
 <figure class="table table-like" id="APEX_table1-1"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Values of <span class="process-math">\(f(x)\)</span> near <span class="process-math">\(x=1\)</span><div class="autopermalink" data-description="Table 2.2.18: Values of f(x) near x=1"><a href="#APEX_table1-1" title="Copy heading and permalink for Table 2.2.18: Values of f(x) near x=1" aria-label="Copy heading and permalink for Table 2.2.18: Values of f(x) near x=1">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
@@ -760,7 +867,7 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 <div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch2Sec2v2-4-4-3-1">A graph and table of <span class="process-math">\(f(x)=\ds\frac{1}{(x-1)^2}\)</span> are given in <a href="sec_Ch2Sec2v2.html#APEX_fig1-2" class="xref" data-knowl="./knowl/xref/APEX_fig1-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.20">Figure 2.2.20</a> and <a href="sec_Ch2Sec2v2.html#APEX_table1-2" class="xref" data-knowl="./knowl/xref/APEX_table1-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.21: Values of f(x) near x=1">Table 2.2.21</a>, respectively.  Both show that as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(f(x)\)</span> grows larger and larger<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-4-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="APEX_fig1-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/APEX_fig1-1_02.svg" class="contained" alt="A graph of 1/(x-1)^2 showing a vertical asymptote at x=1"></div>
+<figure class="figure figure-like" id="APEX_fig1-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/APEX_fig1-1_02.svg" role="img" class="contained" alt="A graph of 1/(x-1)^2 showing a vertical asymptote at x=1"></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Observing no limit as <span class="process-math">\(x\to 1\)</span><div class="autopermalink" data-description="Figure 2.2.20"><a href="#APEX_fig1-2" title="Copy heading and permalink for Figure 2.2.20" aria-label="Copy heading and permalink for Figure 2.2.20">🔗</a></div></figcaption>
 </figure>
 <figure class="table table-like" id="APEX_table1-2"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Values of <span class="process-math">\(f(x)\)</span> near <span class="process-math">\(x=1\)</span><div class="autopermalink" data-description="Table 2.2.21: Values of f(x) near x=1"><a href="#APEX_table1-2" title="Copy heading and permalink for Table 2.2.21: Values of f(x) near x=1" aria-label="Copy heading and permalink for Table 2.2.21: Values of f(x) near x=1">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
@@ -823,9 +930,8 @@ f(x)=\begin{cases}x^2-2x+3\amp x\le 1\\x\amp x&gt;1\end{cases}
 <div class="solution solution-like knowl__content">
 <div class="para" id="sec_Ch2Sec2v2-4-5-3-1">Two graphs of <span class="process-math">\(f(x)=\ds\sin(1/x)\)</span> are given in <a href="sec_Ch2Sec2v2.html#APEX_fig1-3" class="xref" data-knowl="./knowl/xref/APEX_fig1-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.23">Figure 2.2.23</a>. The first shows <span class="process-math">\(f(x)\)</span> on the interval <span class="process-math">\([-1,1]\text{;}\)</span> notice how <span class="process-math">\(f(x)\)</span> seems to oscillate near <span class="process-math">\(x=0\text{.}\)</span>  One might think that despite the oscillation, as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(0\text{,}\)</span> <span class="process-math">\(f(x)\)</span> approaches <span class="process-math">\(0\text{.}\)</span>  However, the second image zooms in on <span class="process-math">\(\sin(1/x)\)</span> on the interval <span class="process-math">\([-1,1]\text{.}\)</span>  Here the oscillation is even more pronounced.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch2Sec2v2-4-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="APEX_fig1-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/APEX_fig1-1_03.svg" class="contained"></div>
-<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_02_02_008.jpg" class="contained"></div>
-<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/APEX_fig1-1_04.svg" class="contained" alt='"The graph of the function f(x) = sin(1/x), which oscillates rapidly between -1 and 1 as x approaches 0. The oscillations are less frequent as the function moves away from 0 on the x axis."'></div>
+<figure class="figure figure-like" id="APEX_fig1-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/APEX_fig1-1_03.svg" role="img" class="contained"></div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/APEX_fig1-1_04.svg" role="img" class="contained" alt='"The graph of the function f(x) = sin(1/x), which oscillates rapidly between -1 and 1 as x approaches 0. The oscillations are less frequent as the function moves away from 0 on the x axis."'></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Observing no limit as <span class="process-math">\(x\to 1\)</span><div class="autopermalink" data-description="Figure 2.2.23"><a href="#APEX_fig1-3" title="Copy heading and permalink for Figure 2.2.23" aria-label="Copy heading and permalink for Figure 2.2.23">🔗</a></div></figcaption>
 </figure>
 <div class="para" id="sec_Ch2Sec2v2-4-5-3-3">

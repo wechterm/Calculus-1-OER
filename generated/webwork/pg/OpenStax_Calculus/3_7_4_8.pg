@@ -1,0 +1,72 @@
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.8)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PCCmacros.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+$fname = list_random('f','g','h','j','k','p','m');
+$x = list_random('q','r','t','x','y','z','w');
+$trig = list_random('sin','cos','tan');
+if($envir{problemSeed}==1){$fname='g';$x='t';$trig='sin';};
+Context()->variables->are($x=>'Real');
+Context()->variables->set($x=>{limits=>[0,pi/2]});
+$f = Formula("sqrt($x)$trig($x)");
+$fp = $f->D($x);
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Compute the derivative of the given function.
+
+[`[$fname]([$x])=[$f]`]
+
+[@KeyboardInstructions('To enter [`\sqrt{x}\text{,}`] type [|sqrt(x)|]*.')@]**
+
+[_]{$fp}{80}
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

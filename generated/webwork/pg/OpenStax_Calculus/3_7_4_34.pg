@@ -1,0 +1,67 @@
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.34)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->variables->add(y=>'Real');
+$ddyddx=Formula("-(x^(3/5)*3/5y^(-2/5)(-y^(3/5)/x^(3/5))-y^(3/5)*3/5x^(-2/5))/x^(6/5)");
+@y=(random(0.01,0.99,0.01),random(0.01,0.99,0.01),random(0.01,0.99,0.01),random(0.01,0.99,0.01),random(0.01,0.99,0.01));
+@x=map{(1-($_)**(2/5))**(5/2)}(@y);
+@xy=map{[$x[$_],$y[$_]]}(0..4);
+$ddyddx->{test_points}=~~@xy;
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+An implicitly defined function is given. Find [`\lzn{2}{y}{x}\text{.}`] Note: these are the same functions used in Exercises 13 through 16.
+
+[`x^{2/5}+y^{2/5}=1`]
+
+[_]{$ddyddx}{50}
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

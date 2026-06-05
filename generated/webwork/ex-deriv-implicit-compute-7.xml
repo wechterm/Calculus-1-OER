@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-ex-deriv-implicit-compute-7" assembly-id="ex-deriv-implicit-compute-7">
+  <static seed="15">
+    <statement><p><m>{x^{7}\cot\mathopen{}\left(y\right)}=1</m></p>
+<p><fillin characters="80" name="AnSwEr0001"/></p>
+</statement>
+    <answer>
+      <p>
+        <m>\frac{7\sin\mathopen{}\left(y\right)\cos\mathopen{}\left(y\right)}{x}</m>
+      </p>
+    </answer>
+  </static>
+  <rendering-data problemSource="OpenStax_Calculus/3_7_4_19.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
+  <pg><![CDATA[
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.19)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->variables->add(y=>'Real');
+$m = random(2,9,1);
+$trig = list_random('sin','cos','tan','cot');
+$c = random(1,9,1);
+if($envir{problemSeed}==1){$m=2;$trig='tan';$c=50;};
+#$m=2;$trig='tan';$c=50;
+if ($trig eq 'sin') {$dydx=Formula("-$m tan(y)/x");};
+if ($trig eq 'cos') {$dydx=Formula("$m cot(y)/x");};
+if ($trig eq 'tan') {$dydx=Formula("-$m sin(y) cos(y)/x");};
+if ($trig eq 'cot') {$dydx=Formula("$m sin(y) cos(y)/x");};
+# need to avoid x==0
+@x=(random(3,7,0.2),random(3,7,0.2),random(3,7,0.2),random(3,7,0.2),random(3,7,0.2));
+if ($trig eq 'sin') {@y=map{asin($c/($_)**$m)}(@x);};
+if ($trig eq 'cos') {@y=map{acos($c/($_)**$m)}(@x);};
+if ($trig eq 'tan') {@y=map{atan($c/($_)**$m)}(@x);};
+if ($trig eq 'cot') {@y=map{pi/2 - atan($c/($_)**$m)}(@x);};
+$left = Formula("x^$m $trig(y)");
+@xy=map{[$x[$_],$y[$_]]}(0..4);
+$dydx->{test_points}=~~@xy;
+$showwork = '[@ explanation_box(message => "Show your work using implicit differentiation.") @]*';
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find [`\lz{y}{x}`] using implicit differentiation.
+
+[`[$left]=[$c]`]
+
+[_]{$dydx}{80}
+
+[$showwork]**
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+]]></pg>
+</webwork-reps>

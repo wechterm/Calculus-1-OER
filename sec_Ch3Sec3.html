@@ -30,7 +30,7 @@ htmlPresentation: false,
 </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="OpenStax Calculus">
+<meta property="book:title" content="College of Dupage OER Calculus 1">
 <script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -67,7 +67,7 @@ eBookConfig.enable_chatcodes =  false;
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">OpenStax Calculus</span> <span class="subtitle">Volume 1</span></a></h1>
+<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">College of Dupage OER Calculus 1</span></a></h1>
 <p class="byline"></p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
@@ -91,6 +91,101 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
 \newcommand{\liff}{ {\;\Leftrightarrow\;} }
 \newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+ 
+ \newcommand\blank[2]{\,\colorbox{gray}{$\phantom{\rule{#1pt}{#2pt}}$}\,}
+    \newcommand{\highlight}[1]{{\color{blue}{#1}}}
+    \newcommand{\fp}{f\hskip.75pt '}
+    \newcommand{\fpp}{f\hskip.75pt ''}
+
+    
+    
+    \newcommand{\lz}[2]{\frac{d#1}{d#2}}
+    
+    
+    
+    \newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+    
+    
+    
+    \newcommand{\lzo}[1]{\frac{d}{d#1}}
+    
+    
+    
+    \newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+    
+    
+    
+    \newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+    
+    
+    
+    \newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+    
+    
+    
+    \newcommand{\plz}[2]{\frac{\partial#1}{\partial#2}}
+    
+    
+    
+    \newcommand{\plzoa}[3]{\left.{\frac{\partial#1}{\partial#2}}\right|_{#3}}
+
+    
+    
+    \newcommand{\inflim}[1][n]{\lim\limits_{#1 \to \infty}}
+
+    
+    
+    \newcommand{\primeskip}{\hskip.75pt }
+    \newcommand{\infser}[1][1]{\sum_{n=#1}^\infty}
+    \newcommand{\Fp}{F\hskip.75pt '}
+    \newcommand{\Fpp}{F\hskip.75pt ''}
+    
+	    \newcommand{\yp}{y\hskip.75pt '}
+    \newcommand{\gp}{g\hskip.75pt '}
+    \newcommand{\dx}{\Delta x}
+    \newcommand{\dy}{\Delta y}
+    \newcommand{\ddz}{\Delta z}
+    \newcommand{\thet}{\theta}
+    \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+    \newcommand{\vnorm}[1]{\left\lVert\vec #1\right\rVert}
+    \newcommand{\snorm}[1]{\left|\left|\,#1\,\right|\right|}
+    \newcommand{\la}{\left\langle}
+    \newcommand{\ra}{\right\rangle}
+    \newcommand{\dotp}[2]{\vec #1 \cdot \vec #2}
+    \newcommand{\proj}[2]{\text{proj}_{\,\vec #2}{\,\vec #1}}
+    \newcommand{\crossp}[2]{\vec #1 \times \vec #2}
+    \newcommand{\veci}{\vec i}
+    \newcommand{\vecj}{\vec j}
+    \newcommand{\veck}{\vec k}
+    \newcommand{\vecu}{\vec u}
+    \newcommand{\vecv}{\vec v}
+    \newcommand{\vecw}{\vec w}
+    \newcommand{\vecx}{\vec x}
+    \newcommand{\vecy}{\vec y}
+    \newcommand{\vrp}{\vec r\hskip0.75pt '}
+    \newcommand{\vrpp}{\vec r\hskip0.75pt ''}
+    \newcommand{\vsp}{\vec s\hskip0.75pt '}
+    \newcommand{\vrt}{\vec r(t)}
+    \newcommand{\vst}{\vec s(t)}
+    \newcommand{\vvt}{\vec v(t)}
+    \newcommand{\vat}{\vec a(t)}
+    \newcommand{\px}{\partial x}
+    \newcommand{\py}{\partial y}
+    \newcommand{\pz}{\partial z}
+    \newcommand{\pf}{\partial f}
+    \newcommand{\unittangent}{\vec{{}T}}
+    \newcommand{\unitnormal}{\vec{N}}
+    \newcommand{\unittangentprime}{\vec{{}T}\hskip0.75pt '}
+ 
+    \newcommand{\mathN}{\mathbb{N}}
+    \newcommand{\surfaceS}{\mathcal{S}}
+    \newcommand{\zerooverzero}{\displaystyle \raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\textit{ ''}}}
+    \newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+    \newcommand{\sech}{\operatorname{sech}}
+    \newcommand{\csch}{\operatorname{csch}}
+    \newcommand{\curl}{\operatorname{curl}}
+    \newcommand{\divv}{\operatorname{div}}
+    \newcommand{\Hess}{\operatorname{Hess}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -248,13 +343,13 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec_Ch4Sec6.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Limits at Infinity and Asymptotes</span></a></div>
+<div class="toc-title-box"><a href="sec_Ch2Sec6.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Limits at Infinity and Asymptotes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Limits at Infinity and Horizontal Asymptotes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Infinite Limits at Infinity</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-5" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Formal Definitions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-6" class="internal"><span class="codenumber">2.6.4</span> <span class="title">End Behavior for Polynomials Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-7" class="internal"><span class="codenumber">2.6.5</span> <span class="title">End Behavior for Algebraic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Limits at Infinity and Horizontal Asymptotes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Infinite Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-5" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Formal Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-6" class="internal"><span class="codenumber">2.6.4</span> <span class="title">End Behavior for Polynomials Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-7" class="internal"><span class="codenumber">2.6.5</span> <span class="title">End Behavior for Algebraic Functions</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -328,18 +423,30 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-7" class="internal"><span class="codenumber">3.6.5</span> <span class="title">The Chain Rule Using Leibniz’s Notation</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_imp_deriv.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-3" class="internal"><span class="codenumber">3.7.1</span> <span class="title">The Method of Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-4" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Implicit Differentiation and the Second Derivative</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch3Sec8.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Derivatives of Inverse Functions (PLACEHOLDER)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch_appendix.html" class="internal"><span class="codenumber">4</span> <span class="title">Appendix</span></a></div>
+<div class="toc-title-box"><a href="ch_fourth.html" class="internal"><span class="codenumber">4</span> <span class="title">Applications of Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch4Sec6.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Concavity and Curve Sketching (PLACEHOLDER)</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_appendix.html" class="internal"><span class="codenumber">5</span> <span class="title">Appendix</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec_exp_func.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Derivatives of Exponential Functions (check if table headers needed)</span></a></div>
+<div class="toc-title-box"><a href="sec_exp_func.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Derivatives of Exponential Functions (check if table headers needed)</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Whirlwind Review of Logarithms</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3-3" class="internal"><span class="codenumber">4.1.1.1</span> <span class="title">Logarithmic Functions</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Whirlwind Review of Logarithms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3-3" class="internal"><span class="codenumber">5.1.1.1</span> <span class="title">Logarithmic Functions</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-4" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Back to that Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Back to that Limit</span></a></div></li>
 </ul>
 </li></ul>
 </li>
@@ -351,32 +458,32 @@ eBookConfig.enable_chatcodes =  false;
 </h2>
 <section class="introduction" id="sec_Ch3Sec3-2"><h3 class="heading">Learning Objectives.<span></span>
 </h3>
-<ul class="disc" id="sec_Ch3Sec3-2-2">
+<ol class="decimal" id="sec_Ch3Sec3-2-2">
 <li id="sec_Ch3Sec3-2-2-1">
 <div class="para" id="p-derived-sec_Ch3Sec3-2-2-1">State the constant, constant multiple, and power rules.</div>
-<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec3-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch3Sec3-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="sec_Ch3Sec3-2-2-2">
 <div class="para" id="p-derived-sec_Ch3Sec3-2-2-2">Apply the sum and difference rules to combine derivatives.</div>
-<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec3-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch3Sec3-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 <li id="sec_Ch3Sec3-2-2-3">
 <div class="para" id="p-derived-sec_Ch3Sec3-2-2-3">Use the product rule for finding the derivative of a product of functions.</div>
-<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec3-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_Ch3Sec3-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 <li id="sec_Ch3Sec3-2-2-4">
 <div class="para" id="p-derived-sec_Ch3Sec3-2-2-4">Use the quotient rule for finding the derivative of a quotient of functions.</div>
-<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec3-2-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec_Ch3Sec3-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
 <li id="sec_Ch3Sec3-2-2-5">
 <div class="para" id="p-derived-sec_Ch3Sec3-2-2-5">Extend the power rule to functions with negative exponents.</div>
-<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec3-2-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item 5"><a href="#sec_Ch3Sec3-2-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
 </li>
 <li id="sec_Ch3Sec3-2-2-6">
 <div class="para" id="p-derived-sec_Ch3Sec3-2-2-6">Combine the differentiation rules to find the derivative of a polynomial or rational function.</div>
-<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec3-2-2-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item 6"><a href="#sec_Ch3Sec3-2-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
 </li>
-</ul>
+</ol>
 <div class="para" id="sec_Ch3Sec3-2-3">Finding derivatives of functions by using the definition of the derivative can be a lengthy and, for certain functions, a rather challenging process. For example, previously we found that <span class="process-math">\(\frac{d}{dx}(\sqrt{x})=\frac{1}{2\sqrt{x}}\)</span> by using a process that involved multiplying an expression by a conjugate prior to evaluating a limit. The process that we could use to evaluate <span class="process-math">\(\frac{d}{dx}(\sqrt[3]{x})\)</span> using the definition, while similar, is more complicated. In this section, we develop rules for finding derivatives that allow us to bypass this process. We begin with the basics.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="subsection" id="sec_Ch3Sec3-3">
@@ -527,69 +634,69 @@ f'(8)=0.
 </article></details>
 <div class="para" id="sec_Ch3Sec3-3-4-7">As we shall see, the procedure for finding the derivative of the general form <span class="process-math">\(f(x)=x^n\)</span> is very similar. Although it is often unwise to draw general conclusions from specific examples, we note that when we differentiate <span class="process-math">\(f(x)=x^3,\)</span> the power on <span class="process-math">\(x\)</span> becomes the coefficient of <span class="process-math">\(x^2\)</span> in the derivative and the power on <span class="process-math">\(x\)</span> in the derivative decreases by 1. The following theorem states that the <dfn class="terminology">power rule</dfn> holds for all positive integer powers of <span class="process-math">\(x.\)</span> We will eventually extend this result to negative integer powers. Later, we will see that this rule may also be extended first to rational powers of <span class="process-math">\(x\)</span> and then to arbitrary powers of <span class="process-math">\(x.\)</span> Be aware, however, that this rule does not apply to functions in which a constant is raised to a variable power, such as <span class="process-math">\(f(x)=3^x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="sec_Ch3Sec3-3-4-8"><h5 class="heading">
+<article class="theorem theorem-like" id="thm_PowerRule"><h5 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Power Rule.</span>
 </h5>
-<div class="para" id="sec_Ch3Sec3-3-4-8-2"> Let <span class="process-math">\(n\)</span> be a positive integer. If <span class="process-math">\(f(x)=x^n,\)</span> then<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm_PowerRule-2"> Let <span class="process-math">\(n\)</span> be a positive integer. If <span class="process-math">\(f(x)=x^n,\)</span> then<div class="autopermalink" data-description="Paragraph"><a href="#thm_PowerRule-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec_Ch3Sec3-3-4-8-3">
+<div class="displaymath process-math" id="thm_PowerRule-3">
 \begin{equation*}
 f'(x)=nx^{n-1}.
 \end{equation*}
 </div>
-<div class="para" id="sec_Ch3Sec3-3-4-8-4">Alternatively, we may express this rule as<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-8-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm_PowerRule-4">Alternatively, we may express this rule as<div class="autopermalink" data-description="Paragraph"><a href="#thm_PowerRule-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec_Ch3Sec3-3-4-8-5">
+<div class="displaymath process-math" id="thm_PowerRule-5">
 \begin{equation*}
 \frac{d}{dx}x^n=nx^{n-1}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Theorem 3.3.6: The Power Rule"><a href="#sec_Ch3Sec3-3-4-8" title="Copy heading and permalink for Theorem 3.3.6: The Power Rule" aria-label="Copy heading and permalink for Theorem 3.3.6: The Power Rule">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 3.3.6: The Power Rule"><a href="#thm_PowerRule" title="Copy heading and permalink for Theorem 3.3.6: The Power Rule" aria-label="Copy heading and permalink for Theorem 3.3.6: The Power Rule">🔗</a></div>
 </article>
-<details id="sec_Ch3Sec3-3-4-8-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
+<details id="thm_PowerRule-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
 <article class="hiddenproof knowl__content">
-<div class="para" id="sec_Ch3Sec3-3-4-8-6-1">For <span class="process-math">\(f(x)=x^n\)</span> where <span class="process-math">\(n\)</span> is a positive integer, we have<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-8-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm_PowerRule-6-1">For <span class="process-math">\(f(x)=x^n\)</span> where <span class="process-math">\(n\)</span> is a positive integer, we have<div class="autopermalink" data-description="Paragraph"><a href="#thm_PowerRule-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec_Ch3Sec3-3-4-8-6-2">
+<div class="displaymath process-math" id="thm_PowerRule-6-2">
 \begin{equation*}
 f'(x)=\lim_{h\to 0}\frac{(x+h)^n-x^n}{h}.
 \end{equation*}
 </div>
-<div class="displaymath process-math" id="sec_Ch3Sec3-3-4-8-6-3">
+<div class="displaymath process-math" id="thm_PowerRule-6-3">
 \begin{equation*}
 (x+h)^n=x^n+nx^{n-1}h+{n \choose 2} x^{n-2}h^2+{n \choose 3} x^{n-3}h^3+\text{ … }+nxh^{n-1}+h^n,
 \end{equation*}
 </div>
-<div class="para" id="sec_Ch3Sec3-3-4-8-6-4">using the Binomial Theorem we see that<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-8-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm_PowerRule-6-4">using the Binomial Theorem we see that<div class="autopermalink" data-description="Paragraph"><a href="#thm_PowerRule-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec_Ch3Sec3-3-4-8-6-5">
+<div class="displaymath process-math" id="thm_PowerRule-6-5">
 \begin{equation*}
 (x+h)^n-x^n=nx^{n-1}h+{n \choose 2} x^{n-2}h^2+{n \choose 3} x^{n-3}h^3+\text{ … }+nxh^{n-1}+h^n.
 \end{equation*}
 </div>
-<div class="para" id="sec_Ch3Sec3-3-4-8-6-6">Next, divide both sides by <span class="process-math">\(h\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-8-6-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm_PowerRule-6-6">Next, divide both sides by <span class="process-math">\(h\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_PowerRule-6-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec_Ch3Sec3-3-4-8-6-7">
+<div class="displaymath process-math" id="thm_PowerRule-6-7">
 \begin{equation*}
 \frac{(x+h)^n-x^n}{h}=\frac{nx^{n-1}h+{n \choose 2} x^{n-2}h^2+{n \choose 3} x^{n-3}h^3+\text{ … }+nxh^{n-1}+h^n}{h}.
 \end{equation*}
 </div>
-<div class="para" id="sec_Ch3Sec3-3-4-8-6-8">Thus,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-8-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm_PowerRule-6-8">Thus,<div class="autopermalink" data-description="Paragraph"><a href="#thm_PowerRule-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec_Ch3Sec3-3-4-8-6-9">
+<div class="displaymath process-math" id="thm_PowerRule-6-9">
 \begin{equation*}
 \frac{(x+h)^n-x^n}{h}=nx^{n-1}+{n \choose 2} x^{n-2}h+{n \choose 3} x^{n-3}h^2+\text{ … }+nxh^{n-2}+h^{n-1}.
 \end{equation*}
 </div>
-<div class="para" id="sec_Ch3Sec3-3-4-8-6-10">Finally,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-3-4-8-6-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm_PowerRule-6-10">Finally,<div class="autopermalink" data-description="Paragraph"><a href="#thm_PowerRule-6-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec_Ch3Sec3-3-4-8-6-11">
+<div class="displaymath process-math" id="thm_PowerRule-6-11">
 \begin{align*}
 f'(x)\amp=\lim_{h\to 0}(nx^{n-1}+{n \choose 2} x^{n-2}h+{n \choose 3} x^{n-3}h^2+\text{ … }+nxh^{n-1}+h^n)\\
 \amp=nx^{n-1}.
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Proof 3.3.6.1"><a href="#sec_Ch3Sec3-3-4-8-6" title="Copy heading and permalink for Proof 3.3.6.1" aria-label="Copy heading and permalink for Proof 3.3.6.1">🔗</a></div>
+<div class="autopermalink" data-description="Proof 3.3.6.1"><a href="#thm_PowerRule-6" title="Copy heading and permalink for Proof 3.3.6.1" aria-label="Copy heading and permalink for Proof 3.3.6.1">🔗</a></div>
 </article></details>
 <article class="example example-like" id="fs-id1169739190555"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Power Rule.</span>
@@ -865,7 +972,7 @@ g'(x)=\frac{d}{dx}(3x^2)=3\frac{d}{dx}(x^2)=3(2x)=6x.
 </div>
 <div class="para" id="fs-id1169739269764-3-3">Since <span class="process-math">\(f(x)=x^2\)</span> has derivative <span class="process-math">\(f'(x)=2x,\)</span> we see that the derivative of <span class="process-math">\(g(x)\)</span> is 3 times the derivative of <span class="process-math">\(f(x).\)</span> This relationship is illustrated in <a href="sec_Ch3Sec3.html#CNX_Calc_Figure_03_03_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_03_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.3.13">Figure 3.3.13</a>.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739269764-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="CNX_Calc_Figure_03_03_001"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_03_03_001.jpg" class="contained" alt='"Two graphs are shown. The first graph shows g(x) = 3x2 and f(x) = x squared. The second graph shows g’(x) = 6x and f’(x) = 2x. In the first graph, g(x) increases three times more quickly than f(x). In the second graph, g’(x) increases three times more quickly than f’(x)."'></div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_03_03_001"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch3/CNX_Calc_Figure_03_03_001.jpg" class="contained" alt='"Two graphs are shown. The first graph shows g(x) = 3x2 and f(x) = x squared. The second graph shows g’(x) = 6x and f’(x) = 2x. In the first graph, g(x) increases three times more quickly than f(x). In the second graph, g’(x) increases three times more quickly than f’(x)."'></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The derivative of <span class="process-math">\(g(x)\)</span> is 3 times the derivative of <span class="process-math">\(f(x).\)</span><div class="autopermalink" data-description="Figure 3.3.13"><a href="#CNX_Calc_Figure_03_03_001" title="Copy heading and permalink for Figure 3.3.13" aria-label="Copy heading and permalink for Figure 3.3.13">🔗</a></div></figcaption>
 </figure><div class="autopermalink" data-description="Solution 3.3.12.1"><a href="#fs-id1169739269764-3" title="Copy heading and permalink for Solution 3.3.12.1" aria-label="Copy heading and permalink for Solution 3.3.12.1">🔗</a></div>
 </div></details>
@@ -988,7 +1095,7 @@ y=-2x+5.
 <h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of Exponential Functions</span>
 </h3>
-<div class="para" id="subsec-exponentialderivative-2">In order to study the derivatives of a wider variety of functions, we state here the derivative of exponential functions.  The proof of how these formulas are valid will be given in the <a href="ch_appendix.html" class="internal" title="Chapter 4: Appendix">Appendix</a><div class="autopermalink" data-description="Paragraph"><a href="#subsec-exponentialderivative-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-exponentialderivative-2">In order to study the derivatives of a wider variety of functions, we state here the derivative of exponential functions.  The proof of how these formulas are valid will be given in the <a href="ch_appendix.html" class="internal" title="Chapter 5: Appendix">Appendix</a><div class="autopermalink" data-description="Paragraph"><a href="#subsec-exponentialderivative-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-exponentialderivative-3">
 <div class="para">Assume the function <span class="process-math">\(y=e^x\)</span> is differentiable for all <span class="process-math">\(x\)</span> (this is a big assumption we will have to verify at a later time).</div>
@@ -1146,24 +1253,24 @@ j'(x)=15x^4+3x^2-10.
 \frac{d}{dx}(x^2)=2x,\text{ not } \frac{\frac{d}{dx}(x^3)}{\frac{d}{dx}(x)}=\frac{3x^2}{1}=3x^2.
 \end{equation*}
 </div>
-<article class="theorem theorem-like" id="sec_Ch3Sec3-7-4"><h4 class="heading">
+<article class="theorem theorem-like" id="thm_QuotientRule"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Quotient Rule.</span>
 </h4>
-<div class="para" id="sec_Ch3Sec3-7-4-2">Let <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> be differentiable functions. Then<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm_QuotientRule-2">Let <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> be differentiable functions. Then<div class="autopermalink" data-description="Paragraph"><a href="#thm_QuotientRule-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec_Ch3Sec3-7-4-3">
+<div class="displaymath process-math" id="thm_QuotientRule-3">
 \begin{equation*}
 \frac{d}{dx}(\frac{f(x)}{g(x)})=\frac{\frac{d}{dx}(f(x))\cdot g(x)-\frac{d}{dx}(g(x))\cdot f(x)}{(g(x))^2}.
 \end{equation*}
 </div>
-<div class="para" id="sec_Ch3Sec3-7-4-4">That is,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm_QuotientRule-4">That is,<div class="autopermalink" data-description="Paragraph"><a href="#thm_QuotientRule-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec_Ch3Sec3-7-4-5">
+<div class="displaymath process-math" id="thm_QuotientRule-5">
 \begin{equation*}
 \text{ if } j(x)=\frac{f(x)}{g(x)},\text{ then } j'(x)=\frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^2}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Theorem 3.3.23: The Quotient Rule"><a href="#sec_Ch3Sec3-7-4" title="Copy heading and permalink for Theorem 3.3.23: The Quotient Rule" aria-label="Copy heading and permalink for Theorem 3.3.23: The Quotient Rule">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 3.3.23: The Quotient Rule"><a href="#thm_QuotientRule" title="Copy heading and permalink for Theorem 3.3.23: The Quotient Rule" aria-label="Copy heading and permalink for Theorem 3.3.23: The Quotient Rule">🔗</a></div>
 </article>
 <div class="para" id="sec_Ch3Sec3-7-5">The proof of the <dfn class="terminology">quotient rule</dfn> is very similar to the proof of the product rule, so it is omitted here. Instead, we apply this new rule for finding derivatives in the next example.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec3-7-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>

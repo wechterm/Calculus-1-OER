@@ -1,0 +1,159 @@
+openDate          = 01/01/2027 at 12:00am
+dueDate           = 12/31/2027 at 10:00pm
+answerDate        = 12/31/2027 at 10:00pm
+paperHeaderFile   = OpenStax_Calculus/header/OpenStax_Calculus_Exercises.pg
+screenHeaderFile  = OpenStax_Calculus/header/OpenStax_Calculus_Exercises.pg
+description       = OpenStax Calculus
+problemListV2
+problem_start
+source_file = OpenStax_Calculus/3_7_4_5.pg
+problem_id = 5
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_6.pg
+problem_id = 6
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_7.pg
+problem_id = 7
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_8.pg
+problem_id = 8
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_9.pg
+problem_id = 9
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_10.pg
+problem_id = 10
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_11.pg
+problem_id = 11
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_12.pg
+problem_id = 12
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_13.pg
+problem_id = 13
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_14.pg
+problem_id = 14
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_15.pg
+problem_id = 15
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_16.pg
+problem_id = 16
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_17.pg
+problem_id = 17
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_18.pg
+problem_id = 18
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_19.pg
+problem_id = 19
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_20.pg
+problem_id = 20
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_21.pg
+problem_id = 21
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_22.pg
+problem_id = 22
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_23.pg
+problem_id = 23
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_24.pg
+problem_id = 24
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_25.pg
+problem_id = 25
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_26.pg
+problem_id = 26
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_27.pg
+problem_id = 27
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_28.pg
+problem_id = 28
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_29.pg
+problem_id = 29
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_30.pg
+problem_id = 30
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_31.pg
+problem_id = 31
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_32.pg
+problem_id = 32
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_33.pg
+problem_id = 33
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_34.pg
+problem_id = 34
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_35.pg
+problem_id = 35
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_36.pg
+problem_id = 36
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_37.pg
+problem_id = 37
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_38.pg
+problem_id = 38
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_39.pg
+problem_id = 39
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_40.pg
+problem_id = 40
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_41.pg
+problem_id = 41
+problem_end
+problem_start
+source_file = OpenStax_Calculus/3_7_4_42.pg
+problem_id = 42
+problem_end

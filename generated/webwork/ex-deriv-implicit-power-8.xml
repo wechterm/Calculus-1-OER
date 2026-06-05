@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-ex-deriv-implicit-power-8" assembly-id="ex-deriv-implicit-power-8">
+  <static seed="8">
+    <statement><p><m>m(t)={\sqrt[3]{t}\mathopen{}\left(\csc\mathopen{}\left(t\right)+e^{t}\right)}</m></p>
+<p><fillin characters="80" name="AnSwEr0001"/></p>
+</statement>
+    <answer>
+      <p>
+        <m>{\frac{1}{3}}\frac{1}{\left(\sqrt[3]{t}\right)^{2}}\mathopen{}\left(\csc\mathopen{}\left(t\right)+e^{t}\right)+\left(e^{t}-\csc\mathopen{}\left(t\right)\cot\mathopen{}\left(t\right)\right)\sqrt[3]{t}</m>
+      </p>
+    </answer>
+  </static>
+  <rendering-data problemSource="OpenStax_Calculus/3_7_4_12.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
+  <pg><![CDATA[
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.12)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PCCmacros.pl",
+  "parserRoot.pl",
+  "contextForm.pl",
+  "contextFraction.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context("Fraction");
+$fname = list_random('f','g','h','j','k','p','m');
+$x = list_random('q','r','t','x','y','z','w');
+$n = random(3,9,1);
+$trig = list_random('sin','cos','tan','sec','cot','csc');
+if($envir{problemSeed}==1){$fname='f';$x='t';$n=5;$trig='sec';};
+Context()->variables->are($x=>'Real');
+Context()->variables->set($x=>{limits=>[0,4]});
+parser::Root->Enable;
+$f = Formula("root($n,$x)($trig($x)+e^$x)");
+$fp = $f->D($x);
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Compute the derivative of the given function.
+
+[`[$fname]([$x])=[$f]`]
+
+[@KeyboardInstructions('To enter [`\sqrt{x}\text{,}`] type [|sqrt(x)|]*. To enter [`\sqrt[n]{x}\text{,}`] type [|root(n,x)|]*.')@]**
+
+[_]{$fp}{80}
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+]]></pg>
+</webwork-reps>

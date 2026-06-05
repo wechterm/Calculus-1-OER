@@ -1,0 +1,121 @@
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.27)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGlateximage.pl",
+  "scaffold.pl",
+  "parserAssignment.pl",
+  "contextForm.pl",
+  "OpenStax_Calculus.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+COMMENT('This problem is scaffolded with multiple parts');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
+Context()->variables->add(y=>'Real');
+parser::Assignment->Allow;
+@eq=(Formula("y=0"),Formula("y=-1.859(x-0.1)+0.2811"));
+
+$image_1 = createLaTeXImage();
+$image_1->addToPreamble(latexImagePreamble());
+$image_1->BEGIN_LATEX_IMAGE
+\begin{tikzpicture}
+  \begin{axis}[
+    ymin=-1.1,ymax=1.1,%
+    xmin=-1.1,xmax=1.1,%
+  ]
+
+  \addplot [firstcurvestyle,domain=0:360,samples=101] ({(cos(x))^5},{(sin(x))^5});
+  \filldraw [] (axis cs:.1,.28) node [above right] {\((0.1,0.281)\)} circle (1pt);
+  \end{axis}
+\end{tikzpicture}
+
+END_LATEX_IMAGE
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find the equation of the tangent line to the graph of the implicitly defined function at the indicated points. As a visual aid, the function is graphed.
+
+On the curve [`x^{2/5}+y^{2/5} = 1\text{.}`]
+
+>> [@image(insertGraph($image_1), width=>600, alt=>qq"An astroid of radius 1 with a point drawn at (0.1,0.281).")@]*  <<
+
+END_PGML
+
+############################################################
+# Scaffold
+############################################################
+Scaffold::Begin(numbered => 1,is_open => "correct_or_first_incorrect",can_open => always,);
+
+############################################################
+# Section
+############################################################
+Section::Begin("");
+
+BEGIN_PGML
+At [`(1,0)\text{.}`]
+
+[_]{$eq[0]}{30}
+
+END_PGML
+
+Section::End();
+
+############################################################
+# Section
+############################################################
+Section::Begin("");
+
+BEGIN_PGML
+At [`(0.1,0.2811)`] (which does not _exactly_ lie on the curve, but is very close).
+
+[_]{$eq[1]}{30}
+
+END_PGML
+
+Section::End();
+
+Scaffold::End();
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

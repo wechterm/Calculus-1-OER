@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Implicit Differentiation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="College of Dupage OER Calculus 1">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">College of Dupage OER Calculus 1</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_Ch3Sec6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_third.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_Ch3Sec8.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\limit}{\ds\lim} 
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+ 
+ \newcommand\blank[2]{\,\colorbox{gray}{$\phantom{\rule{#1pt}{#2pt}}$}\,}
+    \newcommand{\highlight}[1]{{\color{blue}{#1}}}
+    \newcommand{\fp}{f\hskip.75pt '}
+    \newcommand{\fpp}{f\hskip.75pt ''}
+
+    
+    
+    \newcommand{\lz}[2]{\frac{d#1}{d#2}}
+    
+    
+    
+    \newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+    
+    
+    
+    \newcommand{\lzo}[1]{\frac{d}{d#1}}
+    
+    
+    
+    \newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+    
+    
+    
+    \newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+    
+    
+    
+    \newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+    
+    
+    
+    \newcommand{\plz}[2]{\frac{\partial#1}{\partial#2}}
+    
+    
+    
+    \newcommand{\plzoa}[3]{\left.{\frac{\partial#1}{\partial#2}}\right|_{#3}}
+
+    
+    
+    \newcommand{\inflim}[1][n]{\lim\limits_{#1 \to \infty}}
+
+    
+    
+    \newcommand{\primeskip}{\hskip.75pt }
+    \newcommand{\infser}[1][1]{\sum_{n=#1}^\infty}
+    \newcommand{\Fp}{F\hskip.75pt '}
+    \newcommand{\Fpp}{F\hskip.75pt ''}
+    
+	    \newcommand{\yp}{y\hskip.75pt '}
+    \newcommand{\gp}{g\hskip.75pt '}
+    \newcommand{\dx}{\Delta x}
+    \newcommand{\dy}{\Delta y}
+    \newcommand{\ddz}{\Delta z}
+    \newcommand{\thet}{\theta}
+    \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+    \newcommand{\vnorm}[1]{\left\lVert\vec #1\right\rVert}
+    \newcommand{\snorm}[1]{\left|\left|\,#1\,\right|\right|}
+    \newcommand{\la}{\left\langle}
+    \newcommand{\ra}{\right\rangle}
+    \newcommand{\dotp}[2]{\vec #1 \cdot \vec #2}
+    \newcommand{\proj}[2]{\text{proj}_{\,\vec #2}{\,\vec #1}}
+    \newcommand{\crossp}[2]{\vec #1 \times \vec #2}
+    \newcommand{\veci}{\vec i}
+    \newcommand{\vecj}{\vec j}
+    \newcommand{\veck}{\vec k}
+    \newcommand{\vecu}{\vec u}
+    \newcommand{\vecv}{\vec v}
+    \newcommand{\vecw}{\vec w}
+    \newcommand{\vecx}{\vec x}
+    \newcommand{\vecy}{\vec y}
+    \newcommand{\vrp}{\vec r\hskip0.75pt '}
+    \newcommand{\vrpp}{\vec r\hskip0.75pt ''}
+    \newcommand{\vsp}{\vec s\hskip0.75pt '}
+    \newcommand{\vrt}{\vec r(t)}
+    \newcommand{\vst}{\vec s(t)}
+    \newcommand{\vvt}{\vec v(t)}
+    \newcommand{\vat}{\vec a(t)}
+    \newcommand{\px}{\partial x}
+    \newcommand{\py}{\partial y}
+    \newcommand{\pz}{\partial z}
+    \newcommand{\pf}{\partial f}
+    \newcommand{\unittangent}{\vec{{}T}}
+    \newcommand{\unitnormal}{\vec{N}}
+    \newcommand{\unittangentprime}{\vec{{}T}\hskip0.75pt '}
+ 
+    \newcommand{\mathN}{\mathbb{N}}
+    \newcommand{\surfaceS}{\mathcal{S}}
+    \newcommand{\zerooverzero}{\displaystyle \raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\textit{ ''}}}
+    \newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+    \newcommand{\sech}{\operatorname{sech}}
+    \newcommand{\csch}{\operatorname{csch}}
+    \newcommand{\curl}{\operatorname{curl}}
+    \newcommand{\divv}{\operatorname{div}}
+    \newcommand{\Hess}{\operatorname{Hess}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_first.html" class="internal"><span class="codenumber">1</span> <span class="title">Functions and Graphs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Review of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#subsec_Ch1Sec1Ss1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Representing Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-3" class="internal"><span class="codenumber">1.1.2.1</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-4" class="internal"><span class="codenumber">1.1.2.2</span> <span class="title">Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-5" class="internal"><span class="codenumber">1.1.2.3</span> <span class="title">Algebraic Formulas</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Combining Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-3" class="internal"><span class="codenumber">1.1.3.1</span> <span class="title">Combining Functions with Mathematical Operators</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-4" class="internal"><span class="codenumber">1.1.3.2</span> <span class="title">Function Composition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetry of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Basic Classes of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear Functions and Slope</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-3" class="internal"><span class="codenumber">1.2.2.1</span> <span class="title">Power Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-4" class="internal"><span class="codenumber">1.2.2.2</span> <span class="title">Behavior at Infinity</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-5" class="internal"><span class="codenumber">1.2.2.3</span> <span class="title">Zeros of Polynomial Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-6" class="internal"><span class="codenumber">1.2.2.4</span> <span class="title">Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Algebraic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Transcendental Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Piecewise-Defined Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Transformations of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-9" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-10" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Mathematical Modeling</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Quadratic Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Inverse Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Existence of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding a Function’s Inverse</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-2" class="internal"><span class="codenumber">1.4.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-3" class="internal"><span class="codenumber">1.4.2.2</span> <span class="title">Graphing Inverse Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-4" class="internal"><span class="codenumber">1.4.2.3</span> <span class="title">Restricting Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Inverse Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-7" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exponential Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-3" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Evaluating Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-4" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">Graphing Exponential Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-4" class="internal"><span class="codenumber">1.5.2</span> <span class="title">The Number <span class="process-math">\(e \)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-5" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Hyperbolic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-3" class="internal"><span class="codenumber">1.5.4.1</span> <span class="title">Graphs of Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-4" class="internal"><span class="codenumber">1.5.4.2</span> <span class="title">Identities Involving Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-5" class="internal"><span class="codenumber">1.5.4.3</span> <span class="title">Inverse Hyperbolic Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-7" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Key Concepts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_second.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">A Preview of Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Tangent Problem and Differential Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Area Problem and Integral Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Other Aspects of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Limit of a Function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Infinite Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.3.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec3.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Limit Laws</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Limit Laws</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Limits of Polynomial and Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-5" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Additional Limit Evaluation Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-onesidedlimits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-7" class="internal"><span class="codenumber">2.4.5</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsubsec-triglimits" class="internal"><span class="codenumber">2.4.6</span> <span class="title">A Few Important Trigonometric Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-LimitLawProofs" class="internal"><span class="codenumber">2.4.7</span> <span class="title">Proofs of the Limit Laws (Optional)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec4.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Continuity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Continuity at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-4" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Types of Discontinuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-5" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Continuity over an Interval</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-6" class="internal"><span class="codenumber">2.5.4</span> <span class="title">The Intermediate Value Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec6.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Limits at Infinity and Asymptotes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Limits at Infinity and Horizontal Asymptotes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Infinite Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-5" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Formal Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-6" class="internal"><span class="codenumber">2.6.4</span> <span class="title">End Behavior for Polynomials Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-7" class="internal"><span class="codenumber">2.6.5</span> <span class="title">End Behavior for Algebraic Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_third.html" class="internal"><span class="codenumber">3</span> <span class="title">Derivatives</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Defining the Derivative (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Tangent Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The Derivative of a Function at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Velocities and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-6" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-7" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">The Derivative as a Function (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivative Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Graphing a Derivative</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Derivatives and Continuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-6" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Higher-Order Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-7" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-8" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Differentiation Rules (3.3.31-2 Need Chain Rule)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The Basic Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-3" class="internal"><span class="codenumber">3.3.1.1</span> <span class="title">The Constant Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-4" class="internal"><span class="codenumber">3.3.1.2</span> <span class="title">The Power Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">The Sum, Difference, and Constant Multiple Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#subsec-exponentialderivative" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-6" class="internal"><span class="codenumber">3.3.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-7" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The Quotient Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-8" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Combining Differentiation Rules</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Derivatives as Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#subsec-instantaneousrateofchange" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Motion along a Line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Population Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-6" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Changes in Cost and Revenue</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec5.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Derivatives of Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-derivs-sine-cosine" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Derivatives of the Sine and Cosine Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-harmonicmotion" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Harmonic Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-derivatives-other-trig" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Derivatives of Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-higher-trig-derivatives" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Higher-Order Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.6</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-3" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Deriving the Chain Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-4" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Chain and Power Rules Combined</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-5" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Combining the Chain Rule with Other Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-6" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Composites of Three or More Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-7" class="internal"><span class="codenumber">3.6.5</span> <span class="title">The Chain Rule Using Leibniz’s Notation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec_imp_deriv.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-3" class="internal"><span class="codenumber">3.7.1</span> <span class="title">The Method of Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-4" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Implicit Differentiation and the Second Derivative</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch3Sec8.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Derivatives of Inverse Functions (PLACEHOLDER)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_fourth.html" class="internal"><span class="codenumber">4</span> <span class="title">Applications of Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch4Sec6.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Concavity and Curve Sketching (PLACEHOLDER)</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_appendix.html" class="internal"><span class="codenumber">5</span> <span class="title">Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_exp_func.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Derivatives of Exponential Functions (check if table headers needed)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Whirlwind Review of Logarithms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3-3" class="internal"><span class="codenumber">5.1.1.1</span> <span class="title">Logarithmic Functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Back to that Limit</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec_imp_deriv">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Implicit Differentiation</span>
+</h2>
+<section class="introduction" id="sec_imp_deriv-2"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ol class="decimal" id="sec_imp_deriv-2-2">
+<li id="sec_imp_deriv-2-2-1">
+<div class="para" id="p-derived-sec_imp_deriv-2-2-1">Find the derivative of a relation that cannot be written as a function of x by using implicit differentiation.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_imp_deriv-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_imp_deriv-2-2-2">
+<div class="para" id="p-derived-sec_imp_deriv-2-2-2">Use implicit differentiation to determine the equation of a tangent line.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_imp_deriv-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="sec_imp_deriv-2-3">In the previous sections we learned to find the derivative, <span class="process-math">\(\lz{y}{x}\text{,}\)</span> or <span class="process-math">\(\yp\text{,}\)</span> when <span class="process-math">\(y\)</span> is given <em class="emphasis">explicitly</em> as a function of <span class="process-math">\(x\text{.}\)</span> That is, if we know <span class="process-math">\(y=f(x)\)</span> for some function <span class="process-math">\(f\text{,}\)</span> we can find <span class="process-math">\(\yp\text{.}\)</span> For example, given <span class="process-math">\(y=3x^2-7\text{,}\)</span> we can easily find <span class="process-math">\(\yp=6x\text{.}\)</span> (Here we explicitly state how <span class="process-math">\(y\)</span> depends on <span class="process-math">\(x\text{.}\)</span> Knowing <span class="process-math">\(x\text{,}\)</span> we can directly find <span class="process-math">\(y\text{.}\)</span>)<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="vid_deriv_impl_intro"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/E0mQbLG3Pjo?&amp;modestbranding=1&amp;rel=0" id="vid_deriv_impl_intro"></iframe></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Video introduction to <a href="sec_imp_deriv.html" class="internal" title="Section 3.7: Implicit Differentiation">Section 3.7</a><div class="autopermalink" data-description="Figure 3.7.1"><a href="#vid_deriv_impl_intro" title="Copy heading and permalink for Figure 3.7.1" aria-label="Copy heading and permalink for Figure 3.7.1">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="sec_imp_deriv-2-5">Sometimes the relationship between <span class="process-math">\(y\)</span> and <span class="process-math">\(x\)</span> is not explicit; rather, it is <em class="emphasis">implicit</em>. For instance, we might know that <span class="process-math">\(x^2-y=4\text{.}\)</span> This equality defines a relationship between <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{;}\)</span> if we know <span class="process-math">\(x\text{,}\)</span> we could figure out <span class="process-math">\(y\text{.}\)</span> Can we still find <span class="process-math">\(\yp\text{?}\)</span> In this case, sure; we solve for <span class="process-math">\(y\)</span> to get <span class="process-math">\(y=x^2-4\)</span> (hence we now know <span class="process-math">\(y\)</span> explicitly) and then differentiate to get <span class="process-math">\(\yp=2x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_imp_deriv-2-6">Sometimes the <em class="emphasis">implicit</em> relationship between <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> is complicated. Suppose we are given <span class="process-math">\(\sin(y)+y^3=6-x^3\text{.}\)</span> A graph of this implicit relationship is given in <a href="sec_imp_deriv.html#fig_implicit1" class="xref" data-knowl="./knowl/xref/fig_implicit1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.2">Figure 3.7.2</a>. In this case there is absolutely no way to solve for <span class="process-math">\(y\)</span> in terms of elementary functions. The surprising thing is, however, that we can still find <span class="process-math">\(\yp\)</span> via a process known as <dfn class="terminology">implicit differentiation</dfn>. <div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_implicit1"><div class="image-box" style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;">
+<img src="generated/latex-image/img_implicit1.svg" role="img" class="contained" alt="A curve beginning in the second quadrant, forming a gentle corner in the first quadrant, and decreasing into the fourth quadrant."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_implicit1-2-description">
+<div class="para" id="fig_implicit1-2-2-1">The curve begins in the second quadrant. From the left, the curve decreases as <span class="process-math">\(x\)</span> increases. The curve slowly flattens out, almost becoming horizontal as the curve crosses the <span class="process-math">\(y\)</span>-axis near the point <span class="process-math">\((0,1.8)\text{.}\)</span> When <span class="process-math">\(x\)</span> comes close to 0.75, the curve begins decreasing in the shape of a gentle corner. The curve continues decreasing, becoming steepest around the point <span class="process-math">\((0,1.8)\text{,}\)</span> at which it also crosses into the fourth quadrant. When <span class="process-math">\(x\)</span> is close to 2, the curve begins to decrease more gently, at around the same rate as the beginning of the curve.<div class="autopermalink" data-description="Paragraph"><a href="#fig_implicit1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A graph of the implicit relationship <span class="process-math">\(\sin(y)+y^3=6-x^3\)</span><div class="autopermalink" data-description="Figure 3.7.2"><a href="#fig_implicit1" title="Copy heading and permalink for Figure 3.7.2" aria-label="Copy heading and permalink for Figure 3.7.2">🔗</a></div></figcaption>
+</figure></section>
+<section class="subsection" id="sec_imp_deriv-3">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Method of Implicit Differentiation</span>
+</h3>
+<div class="para" id="sec_imp_deriv-3-2">Implicit differentiation is a technique based on the  that is used to find a derivative when the relationship between the variables is given implicitly rather than explicitly (solved for one variable in terms of the other).<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec_imp_deriv-3-3">
+<div class="para">We begin by reviewing the Chain Rule. Let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be functions of <span class="process-math">\(x\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="sec_imp_deriv-3-3-4">
+\begin{equation*}
+\lzoo{x}{f(g(x))} = \fp(g(x))\cdot g'(x)\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec_imp_deriv-3-4">
+<div class="para">Suppose now that <span class="process-math">\(y=g(x)\text{.}\)</span> We can rewrite the above as</div>
+<div class="displaymath process-math" id="eq_implicit1">
+\begin{equation}
+\lzoo{x}{f(y)}=\fp(y)\cdot \yp, \quad \text{ or } \quad \lzoo{x}{f(y)}=\fp(y)\cdot\lz{y}{x}\text{.}\tag{3.7.1}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_imp_deriv-3-5">These equations look strange; the key concept to learn here is that we can find <span class="process-math">\(\yp\)</span> even if we don’t exactly know how <span class="process-math">\(y\)</span> and <span class="process-math">\(x\)</span> relate.<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_imp_deriv-3-6">We demonstrate this process in the following example.<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ex_implicit1"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using Implicit Differentiation.</span>
+</h4>
+<div class="para" id="ex_implicit1-2-1">Find <span class="process-math">\(\yp\)</span> given that <span class="process-math">\(\sin(y) + y^3=6-x^3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex_implicit1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex_implicit1-3-1">
+<div class="para">We start by taking the derivative of both sides (thus maintaining the equality.) We have:</div>
+<div class="displaymath process-math" id="ex_implicit1-3-1-1">
+\begin{equation*}
+\lzoo{x}{\sin(y) + y^3}=\lzoo{x}{6-x^3}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_implicit1-3-2">The right hand side is easy; it returns <span class="process-math">\(-3x^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit1-3-3">
+<div class="para">The left hand side requires more consideration. We take the derivative term-by-term. Using the technique derived from  <a href="sec_imp_deriv.html#eq_implicit1" class="xref" data-knowl="./knowl/xref/eq_implicit1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.7.1">Equation (3.7.1)</a> above, we can see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_implicit1.html" id="ex_implicit1-3-3-2">
+\begin{equation*}
+\lzoo{x}{\sin(y)} = \cos(y) \cdot \yp\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit1-3-4">
+<div class="para">We apply the same process to the <span class="process-math">\(y^3\)</span> term.</div>
+<div class="displaymath process-math" id="ex_implicit1-3-4-2">
+\begin{equation*}
+\lzoo{x}{y^3} = \lzoo{(y)^3} = 3(y)^2\cdot \yp\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit1-3-5">
+<div class="para">Putting this together with the right hand side, we have</div>
+<div class="displaymath process-math" id="ex_implicit1-3-5-1">
+\begin{equation*}
+\cos(y)\yp+3y^2\yp = -3x^2\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit1-3-6">
+<div class="para">Now solve for <span class="process-math">\(\yp\text{.}\)</span> It’s important to treat <span class="process-math">\(\yp\)</span> as an algebraically independent variable from <span class="process-math">\(y\)</span> and <span class="process-math">\(x\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="ex_implicit1-3-6-5">
+\begin{align*}
+\cos(y)\yp+3y^2\yp\amp = -3x^2\\
+\left(\cos(y) +3y^2\right)\yp \amp =-3x^2\\
+\yp \amp = 6
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.7.3.1"><a href="#ex_implicit1-3" title="Copy heading and permalink for Solution 3.7.3.1" aria-label="Copy heading and permalink for Solution 3.7.3.1">🔗</a></div>
+</div></details>
+<details id="ex_implicit1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Video solution</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="video-box" style="width: 98%;padding-top: 55.125%; margin-left: 1%; margin-right: 1%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/0baXlbhup0o?&amp;modestbranding=1&amp;rel=0" id="vid_deriv_impl_ex_1"></iframe></div>
+<div class="autopermalink" data-description="Solution 3.7.3.2: Video solution"><a href="#ex_implicit1-4" title="Copy heading and permalink for Solution 3.7.3.2: Video solution" aria-label="Copy heading and permalink for Solution 3.7.3.2: Video solution">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.7.3: Using Implicit Differentiation"><a href="#ex_implicit1" title="Copy heading and permalink for Example 3.7.3: Using Implicit Differentiation" aria-label="Copy heading and permalink for Example 3.7.3: Using Implicit Differentiation">🔗</a></div>
+</article>
+<details id="APEX-PROTEUS-deriv-implicit-1-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PROTEUS EXERCISE.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="APEX-PROTEUS-deriv-implicit-1-v1-2-1">State or describe what the word “implicit” refers to in “implicit differentiation”.<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-deriv-implicit-1-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.7.4: PROTEUS EXERCISE"><a href="#APEX-PROTEUS-deriv-implicit-1-v1" title="Copy heading and permalink for Checkpoint 3.7.4: PROTEUS EXERCISE" aria-label="Copy heading and permalink for Checkpoint 3.7.4: PROTEUS EXERCISE">🔗</a></div>
+</article></details>
+<details id="APEX-PROTEUS-deriv-implicit-2-v1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PROTEUS EXERCISE: Match the Reason to the Step.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-APEX-PROTEUS-deriv-implicit-2-v1">
+<span data-subcomponent="question">
+<div class="para logical" id="APEX-PROTEUS-deriv-implicit-2-v1-2-1">
+<div class="para">Suppose we want apply implicit differentiation to find <span class="process-math">\(\frac{dy}{dx}\)</span> for the equation</div>
+<div class="displaymath process-math" id="APEX-PROTEUS-deriv-implicit-2-v1-2-1-2">
+\begin{equation*}
+y + y^2 = 3x^6\text{.}
+\end{equation*}
+</div>
+<div class="para">Match the one or more tasks on the right that was applied in each step on the left.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APEX-PROTEUS-deriv-implicit-2-v1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></span><li data-subcomponent="draggable" id="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag1" data-category="1">Apply the derivative with respect <span class="process-math">\(x\)</span> to both sides</li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag1" data-category="1"><div class="displaymath process-math" id="APEX-PROTEUS-deriv-implicit-2-v1-3-1-2-1">
+\begin{equation*}
+\frac{d}{dx}(y + y^2) = \frac{d}{dx}(3x^6)
+\end{equation*}
+</div></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag2" data-category="2">Sum rule</li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag2" data-category="2"><div class="displaymath process-math" id="APEX-PROTEUS-deriv-implicit-2-v1-3-2-2-1">
+\begin{equation*}
+\frac{d}{dx}(y) + \frac{d}{dx}(y^2) = \frac{d}{dx}(3x^6)
+\end{equation*}
+</div></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag3" data-category="3">Chain rule</li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag4" data-category="3">Power rule</li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag3" data-category="3"><div class="displaymath process-math" id="APEX-PROTEUS-deriv-implicit-2-v1-3-3-3-1">
+\begin{equation*}
+\frac{dy}{dx} + 2y\frac{dy}{dx} = 18x^5
+\end{equation*}
+</div></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag5" data-category="4">Factor</li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag4" data-category="4"><div class="displaymath process-math" id="APEX-PROTEUS-deriv-implicit-2-v1-3-4-2-1">
+\begin{equation*}
+\frac{dy}{dx}\left(1+2y\right) = 18x^5
+\end{equation*}
+</div></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag6" data-category="5">Divide both sides by <span class="process-math">\(1+2y\)</span>
+</li>
+<li data-subcomponent="dropzone" for="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag5" data-category="5"><div class="displaymath process-math" id="APEX-PROTEUS-deriv-implicit-2-v1-3-5-2-1">
+\begin{equation*}
+\frac{dy}{dx} = \frac{18x^5}{1+2y}
+\end{equation*}
+</div></li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag7" data-category="6">Quotient rule</li>
+<li data-subcomponent="draggable" id="rs-APEX-PROTEUS-deriv-implicit-2-v1_drag8" data-category="6">Simplify</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Checkpoint 3.7.5: PROTEUS EXERCISE: Match the Reason to the Step"><a href="#APEX-PROTEUS-deriv-implicit-2-v1" title="Copy heading and permalink for Checkpoint 3.7.5: PROTEUS EXERCISE: Match the Reason to the Step" aria-label="Copy heading and permalink for Checkpoint 3.7.5: PROTEUS EXERCISE: Match the Reason to the Step">🔗</a></div>
+</article></details>
+<div class="para" id="sec_imp_deriv-3-10">Implicit functions are generally harder to deal with than explicit functions. With an explicit function, given an <span class="process-math">\(x\)</span> value, we have an explicit formula for computing the corresponding <span class="process-math">\(y\)</span> value. With an implicit function, one often has to find <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> values <em class="emphasis">at the same time</em> that satisfy the equation. It is much easier to demonstrate that a given point satisfies the equation than to actually find such a point.<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_imp_deriv-3-11">For instance, we can affirm easily that the point <span class="process-math">\(\left(\sqrt[3]{6},0\right)\)</span> lies on the graph of the implicit function <span class="process-math">\(\sin(y) + y^3=6-x^3\text{.}\)</span> Plugging in <span class="process-math">\(0\)</span> for <span class="process-math">\(y\text{,}\)</span> we see the left hand side is <span class="process-math">\(0\text{.}\)</span> Setting <span class="process-math">\(x=\sqrt[3]6\text{,}\)</span> we see the right hand side is also <span class="process-math">\(0\text{;}\)</span> the equation is satisfied. The following example finds the equation of the tangent line to this function at this point.<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="ex_implicit2"><h4 class="heading">
+<span class="type">Problem-Solving Strategy</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using implicit differentiation to find a tangent line.</span>
+</h4>
+<div class="para" id="ex_implicit2-2-1">Find the equation of the line tangent to the curve of the implicitly defined function <span class="process-math">\(\sin(y) + y^3=6-x^3\)</span> at the point <span class="process-math">\(\left(\sqrt[3]6,0\right)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex_implicit2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex_implicit2-3-1">
+<div class="para">In <a href="sec_imp_deriv.html#ex_implicit1" class="xref" data-knowl="./knowl/xref/ex_implicit1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.7.3: Using Implicit Differentiation">Example 3.7.3</a> we found that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex_implicit1.html" id="ex_implicit2-3-1-2">
+\begin{equation*}
+\yp = \frac{-3x^2}{\cos(y) +3y^2}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit2-3-2">
+<div class="para">We find the slope of the tangent line at the point <span class="process-math">\(\left(\sqrt[3]6,0\right)\)</span> by substituting <span class="process-math">\(\sqrt[3]6\)</span> for <span class="process-math">\(x\)</span> and <span class="process-math">\(0\)</span> for <span class="process-math">\(y\text{.}\)</span> Thus at the point <span class="process-math">\(\left(\sqrt[3]6,0\right)\text{,}\)</span> we have the slope as</div>
+<div class="displaymath process-math" id="ex_implicit2-3-2-7">
+\begin{equation*}
+\yp = \frac{-3\left(\sqrt[3]{6}\right)^2}{\cos(0) + 3\cdot0^2} = \frac{-3\sqrt[3]{36}}{1} \approx -9.91\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit2-3-3">
+<div class="para">Therefore the equation of the tangent line to the implicitly defined function <span class="process-math">\(\sin(y) + y^3=6-x^3\)</span> at the point <span class="process-math">\(\left(\sqrt[3]{6},0\right)\)</span> is</div>
+<div class="displaymath process-math" id="ex_implicit2-3-3-3">
+\begin{equation*}
+y = -3\sqrt[3]{36}\left(x-\sqrt[3]{6}\right)+0 \approx -9.91x+18\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_implicit2-3-4">The curve and this tangent line are shown in <a href="sec_imp_deriv.html#fig_implicit2" class="xref" data-knowl="./knowl/xref/fig_implicit2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.7">Figure 3.7.7</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_implicit2"><div class="image-box" style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;">
+<img src="generated/latex-image/img_implicit2.svg" role="img" class="contained" alt="A decreasing curve with a negative tangent line through the negative x-axis"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_implicit2-2-description">
+<div class="para" id="fig_implicit2-2-2-1">The same curve as <a href="sec_imp_deriv.html#fig_implicit1" class="xref" data-knowl="./knowl/xref/fig_implicit1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.2">Figure 3.7.2</a>, but with a tangent line drawn at <span class="process-math">\(x=\sqrt[3]{6}\text{.}\)</span> The tangent line is pointing sharply downward.<div class="autopermalink" data-description="Paragraph"><a href="#fig_implicit2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The function <span class="process-math">\(\sin(y) +y^3 = 6-x^3\)</span> and its tangent line at the point <span class="process-math">\((\sqrt[3]{6},0)\)</span><div class="autopermalink" data-description="Figure 3.7.7"><a href="#fig_implicit2" title="Copy heading and permalink for Figure 3.7.7" aria-label="Copy heading and permalink for Figure 3.7.7">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 3.7.6.1"><a href="#ex_implicit2-3" title="Copy heading and permalink for Solution 3.7.6.1" aria-label="Copy heading and permalink for Solution 3.7.6.1">🔗</a></div>
+</div></details>
+<details id="ex_implicit2-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Video solution</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="video-box" style="width: 98%;padding-top: 55.125%; margin-left: 1%; margin-right: 1%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/qYrcm4ObwOM?&amp;modestbranding=1&amp;rel=0" id="vid_deriv_impl_tan_line_prev_ex"></iframe></div>
+<div class="autopermalink" data-description="Solution 3.7.6.2: Video solution"><a href="#ex_implicit2-4" title="Copy heading and permalink for Solution 3.7.6.2: Video solution" aria-label="Copy heading and permalink for Solution 3.7.6.2: Video solution">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Problem-Solving Strategy 3.7.6: Using implicit differentiation to find a tangent line"><a href="#ex_implicit2" title="Copy heading and permalink for Problem-Solving Strategy 3.7.6: Using implicit differentiation to find a tangent line" aria-label="Copy heading and permalink for Problem-Solving Strategy 3.7.6: Using implicit differentiation to find a tangent line">🔗</a></div>
+</article>
+<div class="para" id="sec_imp_deriv-3-13">This suggests a general method for implicit differentiation. For the steps below assume <span class="process-math">\(y\)</span> is a function of <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec_imp_deriv-3-14">
+<ol class="decimal" id="sec_imp_deriv-3-14-1">
+<li id="sec_imp_deriv-3-14-1-1">
+<div class="para" id="sec_imp_deriv-3-14-1-1-1">Take the derivative of each term in the equation. Treat the <span class="process-math">\(x\)</span> terms like normal. When taking the derivatives of <span class="process-math">\(y\)</span> terms, the usual rules apply except that, because of the , we need to multiply each term by <span class="process-math">\(\yp\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-14-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_imp_deriv-3-14-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_imp_deriv-3-14-1-2">
+<div class="para" id="sec_imp_deriv-3-14-1-2-1">Get all the <span class="process-math">\(\yp\)</span> terms on one side of the equal sign and put the remaining terms on the other side.<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-14-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_imp_deriv-3-14-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec_imp_deriv-3-14-1-3">
+<div class="para" id="sec_imp_deriv-3-14-1-3-1">Factor out <span class="process-math">\(\yp\text{;}\)</span> solve for <span class="process-math">\(\yp\)</span> by dividing.<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-14-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_imp_deriv-3-14-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_imp_deriv-3-15">(Practical Note: when working by hand, it may be beneficial to use the symbol <span class="process-math">\(\frac{dy}{dx}\)</span> instead of <span class="process-math">\(\yp\text{,}\)</span> as the latter can be easily confused for <span class="process-math">\(y\)</span> or <span class="process-math">\(y^1\text{.}\)</span>)<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ex_implicit3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using Implicit Differentiation.</span>
+</h4>
+<div class="para" id="ex_implicit3-2-1">Given the implicitly defined function <span class="process-math">\(y^3+x^2y^4=1+2x\text{,}\)</span> find <span class="process-math">\(\yp\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex_implicit3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="ex_implicit3-3-1">We will take the implicit derivatives term by term. The derivative of <span class="process-math">\(y^3\)</span> is <span class="process-math">\(3y^2\yp\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_implicit3-3-2">The second term, <span class="process-math">\(x^2y^4\text{,}\)</span> is a little tricky. It requires the  as it is the product of two functions of <span class="process-math">\(x\text{:}\)</span> <span class="process-math">\(x^2\)</span> and <span class="process-math">\(y^4\text{.}\)</span> Its derivative is <span class="process-math">\(x^2(4y^3\yp) + 2xy^4\text{.}\)</span> The first part of this expression requires a <span class="process-math">\(\yp\)</span> because we are taking the derivative of a <span class="process-math">\(y\)</span> term. The second part does not require it because we are taking the derivative of <span class="process-math">\(x^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit3-3-3">
+<div class="para">The derivative of the right hand side is easily found to be <span class="process-math">\(2\text{.}\)</span> In all, we get:</div>
+<div class="displaymath process-math" id="ex_implicit3-3-3-2">
+\begin{equation*}
+3y^2\yp + 4x^2y^3\yp + 2xy^4 = 2\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit3-3-4">
+<div class="para">Move terms around so that the left side consists only of the <span class="process-math">\(\yp\)</span> terms and the right side consists of all the other terms:</div>
+<div class="displaymath process-math" id="ex_implicit3-3-4-2">
+\begin{equation*}
+3y^2\yp + 4x^2y^3\yp = 2-2xy^4\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit3-3-5">
+<div class="para">Factor out <span class="process-math">\(\yp\)</span> from the left side and solve to get</div>
+<div class="displaymath process-math" id="ex_implicit3-3-5-2">
+\begin{equation*}
+\yp = \frac{2-2xy^4}{3y^2+4x^2y^3}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_implicit3-3-6">To confirm the validity of our work, let’s find the equation of a tangent line to this function at a point. It is easy to confirm that the point <span class="process-math">\((0,1)\)</span> lies on the graph of this function. At this point, <span class="process-math">\(\yp = 2/3\text{.}\)</span> So the equation of the tangent line is <span class="process-math">\(y = 2/3(x-0)+1\text{.}\)</span> The function and its tangent line are graphed in <a href="sec_imp_deriv.html#fig_implicit4" class="xref" data-knowl="./knowl/xref/fig_implicit4.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.9">Figure 3.7.9</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_implicit4"><div class="image-box" style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;">
+<img src="generated/latex-image/img_implicit4.svg" role="img" class="contained" alt="A curve with two distinct segments and a tangent line with a positive slope"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_implicit4-2-description">Two curves are drawn in the <span class="process-math">\(xy\)</span>-plane. The left curve stretches upwards from the left side of the <span class="process-math">\(y\)</span> axis, curving slightly to the left. As <span class="process-math">\(y\)</span> approaches -2, the curve begins to widen to the left, creating a bump in the curve. As the curve crosses the <span class="process-math">\(x\)</span> axis, the curve moves towards the right, no longer increasing and becoming more horizontal as <span class="process-math">\(x\)</span> increases. At the point <span class="process-math">\((0,1)\text{,}\)</span> a tangent line is drawn, with a moderate positive slope. This point corresponds to the corner at which the curve begins to become horizontal. At this point, the curve passes the vertical line test, but does not at most other points on the graph. The second curve begins to the right of the <span class="process-math">\(y\)</span>-axis, as a line stretching upwards from the bottom of the <span class="process-math">\(y\)</span>-axis. As <span class="process-math">\(x\)</span> approaches 1, the curve also begins to become horizontal as <span class="process-math">\(x\)</span> increases. The entire second curve lies in the fourth quadrant.</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A graph of the implicitly defined function <span class="process-math">\(y^3+x^2y^4=1+2x\)</span> along with its tangent line at the point <span class="process-math">\((0,1)\)</span><div class="autopermalink" data-description="Figure 3.7.9"><a href="#fig_implicit4" title="Copy heading and permalink for Figure 3.7.9" aria-label="Copy heading and permalink for Figure 3.7.9">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ex_implicit3-3-8">Notice how our curve looks much different than for functions we have seen. For one, it fails the vertical line test, and so the complete curve is not truly representing <span class="process-math">\(y\)</span> as a function of <span class="process-math">\(x\text{.}\)</span> But when we indicate we are interested in the derivative at <span class="process-math">\((0,1)\text{,}\)</span> we are indicating that we want the function defined by the small portion of the curve that passes through <span class="process-math">\((0,1)\text{,}\)</span> and that small portion does pass the vertical line test. Such functions are important in many areas of mathematics, so developing tools to deal with them is also important.<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit3-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.7.8.1"><a href="#ex_implicit3-3" title="Copy heading and permalink for Solution 3.7.8.1" aria-label="Copy heading and permalink for Solution 3.7.8.1">🔗</a></div>
+</div></details>
+<details id="ex_implicit3-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Video solution</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="video-box" style="width: 98%;padding-top: 55.125%; margin-left: 1%; margin-right: 1%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/O5OqJ7a_Ovo?&amp;modestbranding=1&amp;rel=0" id="vid_deriv_impl_ex_2"></iframe></div>
+<div class="autopermalink" data-description="Solution 3.7.8.2: Video solution"><a href="#ex_implicit3-4" title="Copy heading and permalink for Solution 3.7.8.2: Video solution" aria-label="Copy heading and permalink for Solution 3.7.8.2: Video solution">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.7.8: Using Implicit Differentiation"><a href="#ex_implicit3" title="Copy heading and permalink for Example 3.7.8: Using Implicit Differentiation" aria-label="Copy heading and permalink for Example 3.7.8: Using Implicit Differentiation">🔗</a></div>
+</article>
+<article class="example example-like" id="ex_implicit5"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using Implicit Differentiation.</span>
+</h4>
+<div class="para" id="ex_implicit5-2-1">Given the implicitly defined function <span class="process-math">\(\sin\mathopen{}\left(x^2y^2\right)\mathclose{}+y^3=x+y\text{,}\)</span> find <span class="process-math">\(\yp\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex_implicit5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex_implicit5-3-1">
+<div class="para">Differentiating term by term, we find the most difficulty in the first term. It requires both the  and .</div>
+<div class="displaymath process-math" id="ex_implicit5-3-1-1">
+\begin{align*}
+\lzoo{x}{\sin\mathopen{}\left(x^2y^2\right)\mathclose{}} \amp = \cos\mathopen{}\left(x^2y^2\right)\mathclose{}\cdot\lzoo{x}{x^2y^2}\\
+\amp = \cos\mathopen{}\left(x^2y^2\right)\mathclose{}\cdot\left(x^2(2y\yp)+2xy^2\right)\\
+\amp = 2\left(x^2y\yp+xy^2\right)\cos\mathopen{}\left(x^2y^2\right)\mathclose{}\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit5-3-2">
+<div class="para">We leave the derivatives of the other terms to the reader. After taking the derivatives of both sides, we have</div>
+<div class="displaymath process-math" id="ex_implicit5-3-2-1">
+\begin{equation*}
+2\left(x^2y\yp+xy^2\right)\cos\mathopen{}\left(x^2y^2\right)\mathclose{} + 3y^2\yp = 1 + \yp\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit5-3-3">
+<div class="para">We now have to be careful to properly solve for <span class="process-math">\(\yp\text{,}\)</span> particularly because of the product on the left. It is best to multiply out the product. Doing this, we get</div>
+<div class="displaymath process-math" id="ex_implicit5-3-3-2">
+\begin{equation*}
+2x^2y\cos\mathopen{}\left(x^2y^2\right)\mathclose{}\yp + 2xy^2\cos\mathopen{}\left(x^2y^2\right)\mathclose{} + 3y^2\yp = 1 + \yp\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit5-3-4">
+<div class="para">From here we can safely move around terms to get the following:</div>
+<div class="displaymath process-math" id="ex_implicit5-3-4-1">
+\begin{equation*}
+2x^2y\cos\mathopen{}\left(x^2y^2\right)\mathclose{}\yp + 3y^2\yp - \yp = 1 - 2xy^2\cos\mathopen{}\left(x^2y^2\right)\mathclose{}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit5-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit5-3-5">
+<div class="para">Then we can solve for <span class="process-math">\(\yp\)</span> to get</div>
+<div class="displaymath process-math" id="ex_implicit5-3-5-2">
+\begin{equation*}
+\yp = \frac{1 - 2xy^2\cos\mathopen{}\left(x^2y^2\right)\mathclose{}}{2x^2y\cos\mathopen{}\left(x^2y^2\right)\mathclose{}+3y^2-1}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit5-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_implicit5-3-6">A graph of this implicit function is given in <a href="sec_imp_deriv.html#fig_implicit5" class="xref" data-knowl="./knowl/xref/fig_implicit5.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.11">Figure 3.7.11</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit5-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_implicit5"><div class="image-box" style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;">
+<img src="generated/latex-image/img_implicit5.svg" role="img" class="contained" alt="A curve beginning in the third quadrant passing through the points (0,-1), (0,0), (0,1)."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_implicit5-2-description">
+<div class="para" id="fig_implicit5-2-2-1">The curve begins in the third quadrant. From there, the curve bends slightly back and increases, crossing above itself. The curve extends to the right, increasing almost linearly as it crosses the <span class="process-math">\(y\)</span>-axis at <span class="process-math">\(y = -1\)</span> into the fourth quadrant. The curve continues to increase as such until it reaches a point close to <span class="process-math">\((\frac{1}{2},-\frac{3}{4}\text{.}\)</span> The curve then bends back, increasing towards the top left linearly. It then crosses the origin and passes into the second quadrant. The curve quickly bends towards the right, crossing the <span class="process-math">\(y\)</span>-axis at <span class="process-math">\(y = 1\)</span> into the first quadrant. From there, the curve continues towards the right while slightly increasing. The curves rises sharply at <span class="process-math">\(x = 1.5\text{,}\)</span> before decreasing again.<div class="autopermalink" data-description="Paragraph"><a href="#fig_implicit5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A graph of the implicitly defined curve <span class="process-math">\(\sin\mathopen{}\left(x^2y^2\right)\mathclose{}+y^3=x+y\)</span><div class="autopermalink" data-description="Figure 3.7.11"><a href="#fig_implicit5" title="Copy heading and permalink for Figure 3.7.11" aria-label="Copy heading and permalink for Figure 3.7.11">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="ex_implicit5-3-8">
+<div class="para">It is easy to verify that the points <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((0,1)\)</span> and <span class="process-math">\((0,-1)\)</span> all lie on the graph. We can find the slopes of the tangent lines at each of these points using our formula for <span class="process-math">\(\yp\text{.}\)</span>
+</div>
+<ul class="disc" id="ex_implicit5-3-8-5">
+<li id="ex_implicit5-3-8-5-1">
+<div class="para" id="p-derived-ex_implicit5-3-8-5-1">At <span class="process-math">\((0,0)\text{,}\)</span> the slope is <span class="process-math">\(-1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex_implicit5-3-8-5-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex_implicit5-3-8-5-2">
+<div class="para" id="p-derived-ex_implicit5-3-8-5-2">At <span class="process-math">\((0,1)\text{,}\)</span> the slope is <span class="process-math">\(1/2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex_implicit5-3-8-5-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex_implicit5-3-8-5-3">
+<div class="para" id="p-derived-ex_implicit5-3-8-5-3">At <span class="process-math">\((0,-1)\text{,}\)</span> the slope is also <span class="process-math">\(1/2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex_implicit5-3-8-5-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">The tangent lines have been added to the graph of the function in <a href="sec_imp_deriv.html#fig_implicit6" class="xref" data-knowl="./knowl/xref/fig_implicit6.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.12">Figure 3.7.12</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit5-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_implicit6"><div class="image-box" style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;">
+<img src="generated/latex-image/img_implicit6.svg" role="img" class="contained" alt="A curve beginning in the third quadrant passing through the points (0,-1), (0,0), (0,1), with tangent lines at those points."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_implicit6-2-description">
+<div class="para" id="fig_implicit6-2-2-1">The graph in <a href="sec_imp_deriv.html#fig_implicit5" class="xref" data-knowl="./knowl/xref/fig_implicit5.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.11">Figure 3.7.11</a>, with tagent lines drawn at <span class="process-math">\((0,-1)\text{,}\)</span> <span class="process-math">\((0,0)\text{,}\)</span> and <span class="process-math">\((0,1)\text{.}\)</span> The tangent line at <span class="process-math">\((0,-1)\)</span> has a positive slope less than 1. The tangent line at <span class="process-math">\((0,0)\)</span> has a negative slope, close to -1. The tangent line at <span class="process-math">\((0,1)\)</span> has a positive slope, less than 1.<div class="autopermalink" data-description="Paragraph"><a href="#fig_implicit6-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A graph of the implicitly defined curve <span class="process-math">\(\sin\mathopen{}\left(x^2y^2\right)\mathclose{}+y^3=x+y\)</span> and certain tangent lines<div class="autopermalink" data-description="Figure 3.7.12"><a href="#fig_implicit6" title="Copy heading and permalink for Figure 3.7.12" aria-label="Copy heading and permalink for Figure 3.7.12">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 3.7.10.1"><a href="#ex_implicit5-3" title="Copy heading and permalink for Solution 3.7.10.1" aria-label="Copy heading and permalink for Solution 3.7.10.1">🔗</a></div>
+</div></details>
+<details id="ex_implicit5-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Video solution</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="video-box" style="width: 98%;padding-top: 55.125%; margin-left: 1%; margin-right: 1%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/BMn-BU6VTQU?&amp;modestbranding=1&amp;rel=0" id="vid_deriv_impl_ex_3"></iframe></div>
+<div class="autopermalink" data-description="Solution 3.7.10.2: Video solution"><a href="#ex_implicit5-4" title="Copy heading and permalink for Solution 3.7.10.2: Video solution" aria-label="Copy heading and permalink for Solution 3.7.10.2: Video solution">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.7.10: Using Implicit Differentiation"><a href="#ex_implicit5" title="Copy heading and permalink for Example 3.7.10: Using Implicit Differentiation" aria-label="Copy heading and permalink for Example 3.7.10: Using Implicit Differentiation">🔗</a></div>
+</article>
+<div class="para" id="sec_imp_deriv-3-18">Quite a few “famous” curves have equations that are given implicitly. We can use implicit differentiation to find the slope at various points on those curves. We investigate two such curves in the next examples.<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ex_implicit7"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding slopes of tangent lines to a circle.</span>
+</h4>
+<div class="para" id="ex_implicit7-2-1">Find the slope of the tangent line to the circle <span class="process-math">\(x^2+y^2=1\)</span> at the point <span class="process-math">\(\left(1/2, \sqrt{3}/2\right)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex_implicit7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex_implicit7-3-1">
+<div class="para">Taking derivatives, we get <span class="process-math">\(2x+2y\yp=0\text{.}\)</span> Solving for <span class="process-math">\(\yp\)</span> gives:</div>
+<div class="displaymath process-math" id="ex_implicit7-3-1-3">
+\begin{equation*}
+\yp = \frac{-x}{y}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_implicit7-3-2">This is a clever formula. Recall that the slope of the line through the origin and the point <span class="process-math">\((x,y)\)</span> on the circle will be <span class="process-math">\(y/x\text{.}\)</span> We have found that the slope of the tangent line to the circle at that point is the opposite reciprocal of <span class="process-math">\(y/x\text{,}\)</span> namely, <span class="process-math">\(-x/y\text{.}\)</span> Hence these two lines are always perpendicular.<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit7-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit7-3-3">
+<div class="para">At the point <span class="process-math">\(\left(1/2, \sqrt{3}/2\right)\text{,}\)</span> we have the tangent line’s slope as</div>
+<div class="displaymath process-math" id="ex_implicit7-3-3-2">
+\begin{equation*}
+\yp = \frac{-1/2}{\sqrt{3}/2} = \frac{-1}{\sqrt{3}} \approx -0.577\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit7-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_implicit7-3-4">A graph of the circle and its tangent line at <span class="process-math">\(\left(1/2,\sqrt{3}/2\right)\)</span> is given in <a href="sec_imp_deriv.html#fig_implicit7" class="xref" data-knowl="./knowl/xref/fig_implicit7.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.14">Figure 3.7.14</a>, along with a thin dashed line from the origin that is perpendicular to the tangent line. (It turns out that all normal lines to a circle pass through the center of the circle.)<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit7-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_implicit7"><div class="image-box" style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;">
+<img src="generated/latex-image/img_implicit7.svg" role="img" class="contained" alt="A circle of radius 1 centered at the origin with a tangent line drawn at a point in the first quadrant."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_implicit7-2-description">
+<div class="para" id="fig_implicit7-2-2-1">A circle of radius 1 centered at the origin. A dashed line extends from the origin to a tangent line at the point <span class="process-math">\((\frac{1}{2},\frac{\sqrt{3}}{2})\text{.}\)</span> At that point a tangent line is drawn with a slight negative slope.<div class="autopermalink" data-description="Paragraph"><a href="#fig_implicit7-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The unit circle with its tangent line at <span class="process-math">\((1/2,\sqrt{3}/2)\)</span><div class="autopermalink" data-description="Figure 3.7.14"><a href="#fig_implicit7" title="Copy heading and permalink for Figure 3.7.14" aria-label="Copy heading and permalink for Figure 3.7.14">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 3.7.13.1"><a href="#ex_implicit7-3" title="Copy heading and permalink for Solution 3.7.13.1" aria-label="Copy heading and permalink for Solution 3.7.13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.7.13: Finding slopes of tangent lines to a circle"><a href="#ex_implicit7" title="Copy heading and permalink for Example 3.7.13: Finding slopes of tangent lines to a circle" aria-label="Copy heading and permalink for Example 3.7.13: Finding slopes of tangent lines to a circle">🔗</a></div>
+</article>
+<article class="example example-like" id="ex_implicit8"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Find Slopes of Tangents Lines to Curves Defined Implicitly.</span>
+</h4>
+<div class="para" id="ex_implicit8-2-1">Find the slope of <span class="process-math">\(x^{2/3}+y^{2/3}=8\)</span> at the point <span class="process-math">\((8,8)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex_implicit8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="ex_implicit8-3-1">This is a particularly interesting curve called an <dfn class="terminology">astroid</dfn>. It is the shape traced out by a point on the edge of a circle that is rolling around inside of a larger circle, as shown in <a href="sec_imp_deriv.html#fig_implicit9" class="xref" data-knowl="./knowl/xref/fig_implicit9.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.16">Figure 3.7.16</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_implicit9"><div class="image-box" style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;">
+<img src="generated/latex-image/img_implicit9.svg" role="img" class="contained" alt="A four pointed star with rounded edges, surrounded by a dashed circle."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_implicit9-2-description">
+<div class="para" id="fig_implicit9-2-2-1">A dashed circle of radius 20 entirely contains the curve. In each quadrant curves connect the points on the x and y axis which also lie on the circle. This gives the overall curve the appearence of a diamond with sides curved towards the inside. In the third quadrant a smaller circle is drawn which touches both the outer circle and the curve. The point on the circle touching the curve is highlighted blue.<div class="autopermalink" data-description="Paragraph"><a href="#fig_implicit9-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>An astroid, traced out by a point on the smaller circle as it rolls inside the larger circle<div class="autopermalink" data-description="Figure 3.7.16"><a href="#fig_implicit9" title="Copy heading and permalink for Figure 3.7.16" aria-label="Copy heading and permalink for Figure 3.7.16">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="ex_implicit8-3-3">
+<div class="para">To find the slope of the astroid at the point <span class="process-math">\((8,8)\text{,}\)</span> we take the derivative implicitly.</div>
+<div class="displaymath process-math" id="ex_implicit8-3-3-2">
+\begin{align*}
+\frac{2}{3}x^{-1/3}+\frac{2}{3}y^{-1/3}\yp\amp =0\\
+\frac{2}{3}y^{-1/3}\yp \amp = -\frac{2}{3}x^{-1/3}\\
+\yp\amp =-\frac{x^{-1/3}}{y^{-1/3}}\\
+\yp\amp =-\frac{y^{1/3}}{x^{1/3}} = -\sqrt[3]{\frac{y}{x}}\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit8-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_implicit8-3-4">Plugging in <span class="process-math">\(x=8\)</span> and <span class="process-math">\(y=8\text{,}\)</span> we get a slope of <span class="process-math">\(-1\text{.}\)</span> The astroid, with its tangent line at <span class="process-math">\((8,8)\text{,}\)</span> is shown in <a href="sec_imp_deriv.html#fig_implicit8" class="xref" data-knowl="./knowl/xref/fig_implicit8.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.17">Figure 3.7.17</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit8-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_implicit8"><div class="image-box" style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;">
+<img src="generated/latex-image/img_implicit8.svg" role="img" class="contained" alt="A previously described astroid with a tangent line in the first quadrant."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_implicit8-2-description">
+<div class="para" id="fig_implicit8-2-2-1">The curve sketched in <a href="sec_imp_deriv.html#fig_implicit9" class="xref" data-knowl="./knowl/xref/fig_implicit9.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.16">Figure 3.7.16</a> with a tangent line at <span class="process-math">\((8,8)\text{.}\)</span> It has a slope of -1.<div class="autopermalink" data-description="Paragraph"><a href="#fig_implicit8-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>An astroid with a tangent line<div class="autopermalink" data-description="Figure 3.7.17"><a href="#fig_implicit8" title="Copy heading and permalink for Figure 3.7.17" aria-label="Copy heading and permalink for Figure 3.7.17">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 3.7.15.1"><a href="#ex_implicit8-3" title="Copy heading and permalink for Solution 3.7.15.1" aria-label="Copy heading and permalink for Solution 3.7.15.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.7.15: Find Slopes of Tangents Lines to Curves Defined Implicitly"><a href="#ex_implicit8" title="Copy heading and permalink for Example 3.7.15: Find Slopes of Tangents Lines to Curves Defined Implicitly" aria-label="Copy heading and permalink for Example 3.7.15: Find Slopes of Tangents Lines to Curves Defined Implicitly">🔗</a></div>
+</article>
+<article class="example example-like" id="fs-id1169737935216"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying Implicit Differentiation.</span>
+</h4>
+<div class="para" id="fs-id1169737935216-2-1">In a simple video game, a rocket travels in an elliptical orbit whose path is described by the equation <span class="process-math">\(4x^2+25y^2=100.\)</span> The rocket can fire missiles along lines tangent to its path. The object of the game is to destroy an incoming asteroid traveling along the positive <span class="process-math">\(x\)</span>-axis toward <span class="process-math">\((0,0).\)</span> If the rocket fires a missile when it is located at <span class="process-math">\((3,\frac{8}{5}),\)</span> where will it intersect the <span class="process-math">\(x\)</span>-axis?<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737935216-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1169737935216-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169737935216-3-1">To solve this problem, we must determine where the line tangent to the graph of<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737935216-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1169737935216-3-2">
+<span class="process-math">\(4x^2+25y^2=100\)</span> at <span class="process-math">\((3,\frac{8}{5})\)</span> intersects the <span class="process-math">\(x\)</span>-axis. Begin by finding <span class="process-math">\(\frac{dy}{dx}\)</span> implicitly.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737935216-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1169737935216-3-3">Differentiating, we have<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737935216-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169737935216-3-4">
+\begin{equation*}
+8x+50y\frac{dy}{dx}=0.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169737935216-3-5">Solving for <span class="process-math">\(\frac{dy}{dx},\)</span> we have<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737935216-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169737935216-3-6">
+\begin{equation*}
+\frac{dy}{dx}=\geq \frac{4x}{25y}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169737935216-3-7">The slope of the tangent line is <span class="process-math">\(\frac{dy}{dx}|_{(3,\frac{8}{5})}=\geq \frac{3}{10}.\)</span> The equation of the tangent line is <span class="process-math">\(y=\geq \frac{3}{10}x+\frac{5}{2}.\)</span> To determine where the line intersects the <span class="process-math">\(x\)</span>-axis, solve <span class="process-math">\(0=\geq \frac{3}{10}x+\frac{5}{2}.\)</span> The solution is <span class="process-math">\(x=\frac{25}{3}.\)</span> The missile intersects the <span class="process-math">\(x\)</span>-axis at the point <span class="process-math">\((\frac{25}{3},0).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169737935216-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.7.18.1"><a href="#fs-id1169737935216-3" title="Copy heading and permalink for Solution 3.7.18.1" aria-label="Copy heading and permalink for Solution 3.7.18.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.7.18: Applying Implicit Differentiation"><a href="#fs-id1169737935216" title="Copy heading and permalink for Example 3.7.18: Applying Implicit Differentiation" aria-label="Copy heading and permalink for Example 3.7.18: Applying Implicit Differentiation">🔗</a></div>
+</article>
+<details id="sec_imp_deriv-3-22" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_imp_deriv-3-22-1-1">Find the equation of the line tangent to the hyperbola <span class="process-math">\(x^2\geq y^2=16\)</span> at the point <span class="process-math">\((5,3).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-22-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_imp_deriv-3-22-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_imp_deriv-3-22-3-1">
+<span class="process-math">\(\frac{dy}{dx}=\frac{x}{y}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-22-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.7.19.1"><a href="#sec_imp_deriv-3-22-3" title="Copy heading and permalink for Hint 3.7.19.1" aria-label="Copy heading and permalink for Hint 3.7.19.1">🔗</a></div>
+</div></details>
+<details id="sec_imp_deriv-3-22-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_imp_deriv-3-22-2-1">
+<span class="process-math">\(y=\frac{5}{3}x\geq \frac{16}{3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-3-22-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.7.19.1"><a href="#sec_imp_deriv-3-22-2" title="Copy heading and permalink for Solution 3.7.19.1" aria-label="Copy heading and permalink for Solution 3.7.19.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.7.19"><a href="#sec_imp_deriv-3-22" title="Copy heading and permalink for Checkpoint 3.7.19" aria-label="Copy heading and permalink for Checkpoint 3.7.19">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 3.7.1: The Method of Implicit Differentiation"><a href="#sec_imp_deriv-3" title="Copy heading and permalink for Subsection 3.7.1: The Method of Implicit Differentiation" aria-label="Copy heading and permalink for Subsection 3.7.1: The Method of Implicit Differentiation">🔗</a></div>
+</section>
+<section class="subsection" id="sec_imp_deriv-4">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Implicit Differentiation and the Second Derivative</span>
+</h3>
+<div class="para" id="sec_imp_deriv-4-2">We can use implicit differentiation to find higher order derivatives. In theory, this is simple: first find <span class="process-math">\(\lz{y}{x}\text{,}\)</span> then take its derivative with respect to <span class="process-math">\(x\text{.}\)</span> In practice, it is not hard, but it often requires a bit of algebra. We demonstrate this in an example.<div class="autopermalink" data-description="Paragraph"><a href="#sec_imp_deriv-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ex_implicit9"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding the second derivative.</span>
+</h4>
+<div class="para" id="ex_implicit9-2-1">Given <span class="process-math">\(x^2+y^2=1\text{,}\)</span> find <span class="process-math">\(\lzn{2}{y}{x} = \yp'\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex_implicit9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex_implicit9-3-1">
+<div class="para">We found that <span class="process-math">\(\yp = \lz{y}{x} = -x/y\)</span> in <a href="sec_imp_deriv.html#ex_implicit7" class="xref" data-knowl="./knowl/xref/ex_implicit7.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.7.13: Finding slopes of tangent lines to a circle">Example 3.7.13</a>. To find <span class="process-math">\(\yp'\text{,}\)</span> we apply implicit differentiation to <span class="process-math">\(\yp\text{.}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex_implicit7.html" id="ex_implicit9-3-1-5">
+\begin{align*}
+\yp' \amp = \lzoo{x}{\yp}\\
+\amp = \lzoo{x}{-\frac{x}{y}}\amp\amp\text{(Now use the Quotient Rule.)}\\
+\amp = -\frac{y\cdot1 - x(\yp)}{y^2}\amp\amp\text{replace }\yp\text{ with }-x/y\text{:}\\
+\amp = -\frac{y-x(-x/y)}{y^2}\\
+\amp = -\frac{y+x^2/y}{y^2}\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_implicit9-3-2">While this is not a particularly simple expression, it is usable. We can see that <span class="process-math">\(\yp' \gt 0\)</span> when <span class="process-math">\(y\lt 0\)</span> and <span class="process-math">\(\yp'\lt 0\)</span> when <span class="process-math">\(y \gt 0\text{.}\)</span> In <a href="sec_Ch4Sec6.html" class="internal" title="Section 4.1: Concavity and Curve Sketching (PLACEHOLDER)">Section 4.1</a>, we will see how this relates to the shape of the graph.<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit9-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_implicit9-3-3">
+<div class="para">Also, if we remember that we are only considering points on the curve <span class="process-math">\(x^2+y^2=1\text{,}\)</span> then we know that <span class="process-math">\(x^2=1-y^2\text{.}\)</span> So we can replace the <span class="process-math">\(x^2\)</span> in the expression for <span class="process-math">\(\yp'\)</span> to get</div>
+<div class="displaymath process-math" id="ex_implicit9-3-3-5">
+\begin{equation*}
+\yp'=-\frac{y+\left(1-y^2\right)/y}{y^2}=-\frac{1}{y^3}
+\end{equation*}
+</div>
+<div class="para">which is a simpler expression. Recognizing when simplifications like this are possible is not always easy.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_implicit9-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.7.20.1"><a href="#ex_implicit9-3" title="Copy heading and permalink for Solution 3.7.20.1" aria-label="Copy heading and permalink for Solution 3.7.20.1">🔗</a></div>
+</div></details>
+<details id="ex_implicit9-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Video solution</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="video-box" style="width: 98%;padding-top: 55.125%; margin-left: 1%; margin-right: 1%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/V6piqsjn2mk?&amp;modestbranding=1&amp;rel=0" id="vid_deriv_impl_second_deriv"></iframe></div>
+<div class="autopermalink" data-description="Solution 3.7.20.2: Video solution"><a href="#ex_implicit9-4" title="Copy heading and permalink for Solution 3.7.20.2: Video solution" aria-label="Copy heading and permalink for Solution 3.7.20.2: Video solution">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.7.20: Finding the second derivative"><a href="#ex_implicit9" title="Copy heading and permalink for Example 3.7.20: Finding the second derivative" aria-label="Copy heading and permalink for Example 3.7.20: Finding the second derivative">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 3.7.2: Implicit Differentiation and the Second Derivative"><a href="#sec_imp_deriv-4" title="Copy heading and permalink for Subsection 3.7.2: Implicit Differentiation and the Second Derivative" aria-label="Copy heading and permalink for Subsection 3.7.2: Implicit Differentiation and the Second Derivative">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 3.7: Implicit Differentiation"><a href="#sec_imp_deriv" title="Copy heading and permalink for Section 3.7: Implicit Differentiation" aria-label="Copy heading and permalink for Section 3.7: Implicit Differentiation">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec_Ch3Sec6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_Ch3Sec8.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
