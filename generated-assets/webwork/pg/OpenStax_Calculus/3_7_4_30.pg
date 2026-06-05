@@ -1,0 +1,124 @@
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.30)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGlateximage.pl",
+  "scaffold.pl",
+  "parserAssignment.pl",
+  "contextForm.pl",
+  "OpenStax_Calculus.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+COMMENT('This problem is scaffolded with multiple parts');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
+Context()->variables->add(y=>'Real');
+parser::Assignment->Allow;
+@eq=(Formula("y=-x+1"),Formula("y=3sqrt(3)/4"));
+
+$image_1 = createLaTeXImage();
+$image_1->addToPreamble(latexImagePreamble());
+$image_1->BEGIN_LATEX_IMAGE
+\begin{tikzpicture}
+\begin{axis}[
+  ymin=-1.5,ymax=1.5,%
+  xmin=-2.5,xmax=0.5,%
+]
+
+\addplot [firstcurvestyle,samples=150] coordinates {(-2.,0) (-1.9547,-0.34466) (-1.8227,-0.66341) (-1.616,-0.93301)(-1.3529,-1.1352) (-1.056,-1.2584) (-0.75,-1.299) (-0.459,-1.2611)(-0.2038,-1.1558) (0,-1.) (0.14349,-0.8138) (0.22504,-0.6183)(0.25,-0.43301) (0.22961,-0.27364) (0.17922,-0.15038)(0.11603,-0.066987) (0.05667,-0.020626) (0.014961,-0.0026381) (0,0)
+(0.014961,0.0026381) (0.05667,0.020626) (0.11603,0.066987)(0.17922,0.15038) (0.22961,0.27364) (0.25,0.43301) (0.22504,0.6183)(0.14349,0.8138) (0,1.) (-0.2038,1.1558) (-0.459,1.2611)(-0.75,1.299) (-1.056,1.2584) (-1.3529,1.1352) (-1.616,0.93301)(-1.8227,0.66341) (-1.9547,0.34466) (-2.,0)};
+
+\filldraw [] (axis cs:-.75,1.3) node [shift={(0pt,-12pt)}] {\(\left(-\frac{3}{4},\frac{3\sqrt{3}}{4}\right)\)} circle (1pt);
+
+\end{axis}
+\end{tikzpicture}
+
+END_LATEX_IMAGE
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find the equation of the tangent line to the graph of the implicitly defined function at the indicated points. As a visual aid, the function is graphed.
+
+On the curve [`(x^2+y^2+x)^2 = x^2+y^2\text{.}`]
+
+>> [@image(insertGraph($image_1), width=>600, alt=>qq"An oval with a cusp on the right side.")@]*  <<
+
+END_PGML
+
+############################################################
+# Scaffold
+############################################################
+Scaffold::Begin(numbered => 1,is_open => "correct_or_first_incorrect",can_open => always,);
+
+############################################################
+# Section
+############################################################
+Section::Begin("");
+
+BEGIN_PGML
+At [`(0,1)\text{.}`]
+
+[_]{$eq[0]}{30}
+
+END_PGML
+
+Section::End();
+
+############################################################
+# Section
+############################################################
+Section::Begin("");
+
+BEGIN_PGML
+At [`\left(-\frac{3}{4}, \frac{3\sqrt{3}}{4}\right)\text{.}`]
+
+[_]{$eq[1]}{30}
+
+END_PGML
+
+Section::End();
+
+Scaffold::End();
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

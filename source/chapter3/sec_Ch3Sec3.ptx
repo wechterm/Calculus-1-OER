@@ -89,7 +89,7 @@
 </hint>
 </exercise>
 <p id="fs-id1169736619689">As we shall see, the procedure for finding the derivative of the general form <m>f(x)=x^n</m> is very similar. Although it is often unwise to draw general conclusions from specific examples, we note that when we differentiate <m>f(x)=x^3,</m> the power on <m>x</m> becomes the coefficient of <m>x^2</m> in the derivative and the power on <m>x</m> in the derivative decreases by 1. The following theorem states that the <term>power rule</term> holds for all positive integer powers of <m>x.</m> We will eventually extend this result to negative integer powers. Later, we will see that this rule may also be extended first to rational powers of <m>x</m> and then to arbitrary powers of <m>x.</m> Be aware, however, that this rule does not apply to functions in which a constant is raised to a variable power, such as <m>f(x)=3^x.</m></p>
-<theorem>
+<theorem xml:id="thm_PowerRule">
 <title>The Power Rule</title>
 <p id="fs-id1169738850005">
 <!--Let <m>n</m> be a positive integer.-->
@@ -434,7 +434,7 @@ Since
 <p id="fs-id1169739269461"> Having developed and practiced the product rule, we now consider differentiating quotients of functions. As we see in the following theorem, the derivative of the quotient is not the quotient of the derivatives; rather, it is the derivative of the function in the numerator times the function in the denominator minus the derivative of the function in the denominator times the function in the numerator, all divided by the square of the function in the denominator. In order to better grasp why we cannot simply take the quotient of the derivatives, keep in mind that</p>
 
 <me>\frac{d}{dx}(x^2)=2x,\text{ not } \frac{\frac{d}{dx}(x^3)}{\frac{d}{dx}(x)}=\frac{3x^2}{1}=3x^2.</me>
-<theorem>
+<theorem xml:id="thm_QuotientRule">
 <title>The Quotient Rule</title>
 <p id="fs-id1169736662921">Let <m>f(x)</m> and <m>g(x)</m> be differentiable functions. Then</p>
 <me>\frac{d}{dx}(\frac{f(x)}{g(x)})=\frac{\frac{d}{dx}(f(x))\cdot g(x)-\frac{d}{dx}(g(x))\cdot f(x)}{(g(x))^2}.</me>

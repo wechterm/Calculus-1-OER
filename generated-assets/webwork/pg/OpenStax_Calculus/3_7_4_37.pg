@@ -1,0 +1,81 @@
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.37)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PCCmacros.pl",
+  "PGessaymacros.pl",
+  "parserAssignment.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->variables->set(x=>{limits=>[-0.9,4]});
+Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
+$dydx=Formula("(1+x)^(1/x)(1/(x(x+1))-ln(1+x)/x^2)");
+Context("Numeric");
+Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
+Context()->variables->add(y=>'Real');
+parser::Assignment->Allow;
+$t=Formula("y=(1-2ln(2))(x-1)+2");
+$showwork = '[@ explanation_box(message => "Show your work using logarithmic differentiation.") @]*';
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Use logarithmic differentiation to find [`\lz{y}{x}\text{,}`] then find the equation of the tangent line at the indicated [`x`]-value.
+
+[`y=(1+x)^{1/x}`] at [`x=1`]
+
+[@KeyboardInstructions('Enter [`\lz{y}{x}`] here.')@]**
+
+[_]{$dydx}{50}
+
+[@KeyboardInstructions('Enter the equation of the tangent line here.')@]**
+
+[_]{$t}{50}
+
+[$showwork]**
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

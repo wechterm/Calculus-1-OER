@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-ex-deriv-implicit-log-4" assembly-id="ex-deriv-implicit-log-4">
+  <static seed="36">
+    <statement><p><m>y=x^{\sin(x)+2}</m> at <m>x=\pi/2</m></p>
+<p><fillin characters="50" name="AnSwEr0001"/></p>
+<p><fillin characters="50" name="AnSwEr0002"/></p>
+</statement>
+    <answer>
+      <p>
+        <m>x^{\sin\mathopen{}\left(x\right)+2}\mathopen{}\left(\cos\mathopen{}\left(x\right)\ln\mathopen{}\left(x\right)+\frac{\sin\mathopen{}\left(x\right)+2}{x}\right)</m>
+      </p>
+    </answer>
+    <answer>
+      <p>
+        <m>y = \frac{3\pi ^{2}}{4}\mathopen{}\left(x-\frac{\pi }{2}\right)+\left(\frac{\pi }{2}\right)^{3}</m>
+      </p>
+    </answer>
+  </static>
+  <rendering-data problemSource="OpenStax_Calculus/3_7_4_40.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
+  <pg><![CDATA[
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.40)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PCCmacros.pl",
+  "PGessaymacros.pl",
+  "parserAssignment.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->variables->set(x=>{limits=>[0.01,4]});
+Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
+$dydx=Formula("x^(sin(x)+2)(cos(x)*ln(x)+(sin(x)+2)/x)");
+Context("Numeric");
+Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
+Context()->variables->add(y=>'Real');
+parser::Assignment->Allow;
+$t=Formula("y=(3pi^2)/4*(x-pi/2)+(pi/2)^3");
+$showwork = '[@ explanation_box(message => "Show your work using logarithmic differentiation.") @]*';
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Use logarithmic differentiation to find [`\lz{y}{x}\text{,}`] then find the equation of the tangent line at the indicated [`x`]-value.
+
+[`y=x^{\sin(x)+2}`] at [`x=\pi/2`]
+
+[@KeyboardInstructions('Enter [`\lz{y}{x}`] here.')@]**
+
+[_]{$dydx}{50}
+
+[@KeyboardInstructions('Enter the equation of the tangent line here.')@]**
+
+[_]{$t}{50}
+
+[$showwork]**
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+]]></pg>
+</webwork-reps>

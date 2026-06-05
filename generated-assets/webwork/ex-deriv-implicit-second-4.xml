@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-ex-deriv-implicit-second-4" assembly-id="ex-deriv-implicit-second-4">
+  <static seed="32">
+    <statement><p><m>\dfrac{x}{y}=10</m></p>
+<p><fillin characters="50" name="AnSwEr0001"/></p>
+</statement>
+    <answer>
+      <p>
+        <m>0</m>
+      </p>
+    </answer>
+  </static>
+  <rendering-data problemSource="OpenStax_Calculus/3_7_4_36.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
+  <pg><![CDATA[
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.36)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->variables->add(y=>'Real');
+$ddyddx=Formula("0");
+@x=(random(-4,4,0.1),random(-4,4,0.1),random(-4,4,0.1),random(-4,4,0.1),random(-4,4,0.1));
+@y=map{$_/10}(@x);
+@xy=map{[$x[$_],$y[$_]]}(0..4);
+$ddyddx->{test_points}=~~@xy;
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+An implicitly defined function is given. Find [`\lzn{2}{y}{x}\text{.}`] Note: these are the same functions used in Exercises 13 through 16.
+
+[`\dfrac{x}{y}=10`]
+
+[_]{$ddyddx}{50}
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+]]></pg>
+</webwork-reps>

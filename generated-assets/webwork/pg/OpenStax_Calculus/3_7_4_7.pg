@@ -1,0 +1,74 @@
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.7)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PCCmacros.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+$fname = list_random('f','g','h','j','k','p','m');
+$x = list_random('q','r','t','x','y','z','w');
+$pm = list_random('+','-');
+$a = random(1,4,1)**2;
+$n = random(2,4,1);
+if($envir{problemSeed}==1){$fname='f';$x='t';$pm='-';$a=1;$n=2;};
+Context()->variables->are($x=>'Real');
+Context()->variables->set($x=>{limits=>[-$a**(1/$n),$a**(1/$n)]});
+$f = Formula("sqrt($a $pm $x^$n)");
+$fp = $f->D($x);
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Compute the derivative of the given function.
+
+[`[$fname]([$x])=[$f]`]
+
+[@KeyboardInstructions('To enter [`\sqrt{x}\text{,}`] type [|sqrt(x)|]*.')@]**
+
+[_]{$fp}{80}
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

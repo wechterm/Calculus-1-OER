@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-ex-deriv-implicit-compute-10" assembly-id="ex-deriv-implicit-compute-10">
+  <static seed="18">
+    <statement><p><m>{\frac{x^{2}+y}{x+y^{2}}}={12}</m></p>
+<p><fillin characters="80" name="AnSwEr0001"/></p>
+</statement>
+    <answer>
+      <p>
+        <m>\frac{y-x^{2}-2xy^{2}}{x-y^{2}-2x^{2}y}</m>
+      </p>
+    </answer>
+    <solution><p>If one takes the derivative of the equation, as shown, using the Quotient Rule, one finds <m>\frac{dy}{dx}=\frac{x^2+2 x y^2-y}{2 x^2 y-x+y^2}\text{.}</m></p>
+<p>If one first clears the denominator and writes <m>x^2+y=17(x+y^2)</m> then takes the derivative of both sides, one finds <m>\frac{dy}{dx}= \frac{2x-17}{34y-1}\text{.}</m></p>
+<p>These expressions, by themselves, are not equal. However, for values of <m>x</m> and <m>y</m> that satisfy the original equation (i.e, for <m>x</m> and <m>y</m> such that <m>\frac{x^2+y}{x+y^2}=17</m>), these expressions are equal.</p>
+</solution>
+  </static>
+  <rendering-data problemSource="OpenStax_Calculus/3_7_4_22.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
+  <pg><![CDATA[
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.22)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "contextForm.pl",
+  "contextFraction.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context("Fraction");
+Context()->variables->add(y=>'Real');
+($m,$n) = random_subset(2,1..2);
+$c = random(10,20,1);
+if($envir{problemSeed}==1){$m=2;$n=1;$c=17};
+#$m=2;$n=1;$c=17;
+$left = Formula("(x^$m + y^$n)/(x^$n + y^$m)")->reduce;
+$right = Formula("$c");
+$dydx = Formula("(($n-$m) x^2 + $n x^($n-1) y^$n - $m x^($m-1) y^$m)/($n x^$n y^($n-1) + ($n-$m) y^2 - $m x^$m y^($m-1))")->reduce;
+@y=(random(-3.9,1.9,0.2),random(-3.9,1.9,0.2),random(-3.9,1.9,0.2),random(-3.9,1.9,0.2),random(-3.9,1.9,0.2));
+if ($m == 2) {
+  @x=map{($c+(-1)**(random(-1,1,2))*sqrt($c**2 - 4*($_)*(1 - $c*($_))))/2}(@y);
+} else {
+  @x=map{(1+(-1)**(random(-1,1,2))*sqrt(1 - 4*$c*($_)*($c - ($_))))/(2*$c)}(@y);
+}
+@xy=map{[$x[$_],$y[$_]]}(0..4);
+$dydx->{test_points}=~~@xy;
+$showwork = '[@ explanation_box(message => "Show your work using implicit differentiation.") @]*';
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find [`\lz{y}{x}`] using implicit differentiation.
+
+[`[$left]=[$right]`]
+
+[_]{$dydx}{80}
+
+[$showwork]**
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+If one takes the derivative of the equation, as shown, using the Quotient Rule, one finds [`\frac{dy}{dx}=\frac{x^2+2 x y^2-y}{2 x^2 y-x+y^2}\text{.}`]
+
+If one first clears the denominator and writes [`x^2+y=17(x+y^2)`] then takes the derivative of both sides, one finds [`\frac{dy}{dx}= \frac{2x-17}{34y-1}\text{.}`]
+
+These expressions, by themselves, are not equal. However, for values of [`x`] and [`y`] that satisfy the original equation (i.e, for [`x`] and [`y`] such that [`\frac{x^2+y}{x+y^2}=17`]), these expressions are equal.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+]]></pg>
+</webwork-reps>

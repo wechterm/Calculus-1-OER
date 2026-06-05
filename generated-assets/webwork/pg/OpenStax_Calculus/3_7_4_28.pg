@@ -1,0 +1,122 @@
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.28)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGlateximage.pl",
+  "scaffold.pl",
+  "parserAssignment.pl",
+  "contextForm.pl",
+  "OpenStax_Calculus.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+COMMENT('This problem is scaffolded with multiple parts');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
+Context()->variables->add(y=>'Real');
+parser::Assignment->Allow;
+@eq=(Formula("x=1"),Formula("y=-3sqrt(3)/8(x-sqrt(0.6))+sqrt(0.8)"),Formula("y=1"));
+
+$image_1 = createLaTeXImage();
+$image_1->addToPreamble(latexImagePreamble());
+$image_1->BEGIN_LATEX_IMAGE
+\begin{tikzpicture}
+\begin{axis}[
+  ymin=-1.1,ymax=1.1,%
+  xmin=-1.1,xmax=1.1,%
+]
+
+\addplot [firstcurvestyle] coordinates {(1.,0) (0.98901,0.45597) (0.9558,0.63776) (0.89945,0.76667) (0.818,0.86206) (0.70711,0.9306) (0.55589,0.97522) (0.32331,0.99726) (-0.32331,0.99726) (-0.55589,0.97522) (-0.70711,0.9306) (-0.818,0.86206) (-0.89945,0.76667) (-0.9558,0.63776) (-0.98901,0.45597) (-1.,0) (-1.,0) (-0.98901,-0.45597) (-0.9558,-0.63776) (-0.89945,-0.76667) (-0.818,-0.86206)(-0.70711,-0.9306) (-0.55589,-0.97522) (-0.32331,-0.99726)(0.32331,-0.99726) (0.55589,-0.97522) (0.70711,-0.9306)(0.818,-0.86206) (0.89945,-0.76667) (0.9558,-0.63776)(0.98901,-0.45597) (1.,0) };
+\filldraw [] (axis cs:.775,.894) node [below left] {\((\sqrt{0.6},\sqrt{0.8})\)} circle (1pt);
+
+\end{axis}
+\end{tikzpicture}
+
+END_LATEX_IMAGE
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find the equation of the tangent line to the graph of the implicitly defined function at the indicated points. As a visual aid, the function is graphed.
+
+On the curve [`x^{4}+y^{4} = 1\text{.}`]
+
+>> [@image(insertGraph($image_1), width=>600, alt=>qq"A square with rounded corners and edges with a point in the first quadrant.")@]*  <<
+
+END_PGML
+
+############################################################
+# Scaffold
+############################################################
+Scaffold::Begin(numbered => 1,is_open => "correct_or_first_incorrect",can_open => always,);
+
+############################################################
+# Section
+############################################################
+Section::Begin("");
+
+BEGIN_PGML
+At [`(1,0)\text{.}`]
+
+[_]{$eq[0]}{30}
+
+END_PGML
+
+Section::End();
+
+############################################################
+# Section
+############################################################
+Section::Begin("");
+
+BEGIN_PGML
+At [`\left(\sqrt{0.6},\sqrt{0.8}\right)\text{.}`]
+
+[_]{$eq[1]}{30}
+
+END_PGML
+
+Section::End();
+
+Scaffold::End();
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

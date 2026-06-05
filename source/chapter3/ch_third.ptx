@@ -13,8 +13,8 @@
   <xi:include href="./sec_Ch3Sec4.ptx" />
   <xi:include href="./sec_Ch3Sec5.ptx" />
   <xi:include href="./sec_Ch3Sec6.ptx" />
-  <!-- <xi:include href="./sec_Ch3Sec7.ptx" /> -->
-  <!-- <xi:include href="./sec_Ch3Sec8.ptx" /> -->
+  <xi:include href="./sec_Ch3Sec7.ptx" />
+  <xi:include href="./sec_Ch3Sec8.ptx" />
   <!-- <xi:include href="./sec_Ch3Sec9.ptx" /> -->
 <!--  <xi:include href="./sec_Ch2Sec2.ptx" />
   <xi:include href="./sec_Ch2Sec3.ptx" />

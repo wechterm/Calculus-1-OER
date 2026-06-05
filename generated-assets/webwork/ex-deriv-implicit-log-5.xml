@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-ex-deriv-implicit-log-5" assembly-id="ex-deriv-implicit-log-5">
+  <static seed="37">
+    <statement><p><m>y=\dfrac{x+1}{x+2}</m> at <m>x=1</m></p>
+<p><fillin characters="50" name="AnSwEr0001"/></p>
+<p><fillin characters="50" name="AnSwEr0002"/></p>
+</statement>
+    <answer>
+      <p>
+        <m>\frac{x+1}{x+2}\mathopen{}\left(\frac{1}{x+1}-\frac{1}{x+2}\right)</m>
+      </p>
+    </answer>
+    <answer>
+      <p>
+        <m>y = \frac{1}{9}\mathopen{}\left(x-1\right)+\frac{2}{3}</m>
+      </p>
+    </answer>
+  </static>
+  <rendering-data problemSource="OpenStax_Calculus/3_7_4_41.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
+  <pg><![CDATA[
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.41)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PCCmacros.pl",
+  "PGessaymacros.pl",
+  "parserAssignment.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
+$dydx=Formula("(x+1)/(x+2)(1/(x+1)-1/(x+2))");
+Context("Numeric");
+Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
+Context()->variables->add(y=>'Real');
+parser::Assignment->Allow;
+$t=Formula("y=1/9(x-1)+2/3");
+$showwork = '[@ explanation_box(message => "Show your work using logarithmic differentiation.") @]*';
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Use logarithmic differentiation to find [`\lz{y}{x}\text{,}`] then find the equation of the tangent line at the indicated [`x`]-value.
+
+[`y=\dfrac{x+1}{x+2}`] at [`x=1`]
+
+[@KeyboardInstructions('Enter [`\lz{y}{x}`] here.')@]**
+
+[_]{$dydx}{50}
+
+[@KeyboardInstructions('Enter the equation of the tangent line here.')@]**
+
+[_]{$t}{50}
+
+[$showwork]**
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+]]></pg>
+</webwork-reps>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-ex-deriv-implicit-compute-13" assembly-id="ex-deriv-implicit-compute-13">
+  <static seed="21">
+    <statement><p><m>\ln\mathopen{}\left(x^2+xy+y^2\right)\mathclose{} = 1</m></p>
+<p><fillin characters="80" name="AnSwEr0001"/></p>
+</statement>
+    <answer>
+      <p>
+        <m>\frac{-\left(2x+y\right)}{2y+x}</m>
+      </p>
+    </answer>
+  </static>
+  <rendering-data problemSource="OpenStax_Calculus/3_7_4_25.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
+  <pg><![CDATA[
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.25)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->variables->add(y=>'Real');
+$dydx=Formula("-(2x+y)/(2y+x)");
+@t=(random(0,6.28,0.01),random(0,6.28,0.01),random(0,6.28,0.01),random(0,6.28,0.01),random(0,6.28,0.01));
+@u=map{sqrt(2/3*exp(1))*cos($_)}(@t);
+@v=map{sqrt(2*exp(1))*sin($_)}(@t);
+@x=map{($u[$_]-$v[$_])/sqrt(2)}(0..4);
+@y=map{($u[$_]+$v[$_])/sqrt(2)}(0..4);
+@xy=map{[$x[$_],$y[$_]]}(0..4);
+$dydx->{test_points}=~~@xy;
+$showwork = '[@ explanation_box(message => "Show your work using implicit differentiation.") @]*';
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find [`\lz{y}{x}`] using implicit differentiation.
+
+[`\ln\mathopen{}\left(x^2+xy+y^2\right)\mathclose{} = 1`]
+
+[_]{$dydx}{80}
+
+[$showwork]**
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+]]></pg>
+</webwork-reps>

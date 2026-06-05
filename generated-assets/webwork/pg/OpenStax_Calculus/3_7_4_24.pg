@@ -1,0 +1,72 @@
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.24)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->variables->add(y=>'Real');
+$dydx=Formula("-x/y");
+@t=(random(0,6.28,0.01),random(0,6.28,0.01),random(0,6.28,0.01),random(0,6.28,0.01),random(0,6.28,0.01));
+@x=map{exp(exp(1)/2)*cos($_)}(@t);
+@y=map{exp(exp(1)/2)*sin($_)}(@t);
+@xy=map{[$x[$_],$y[$_]]}(0..4);
+$dydx->{test_points}=~~@xy;
+$showwork = '[@ explanation_box(message => "Show your work using implicit differentiation.") @]*';
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find [`\lz{y}{x}`] using implicit differentiation.
+
+[`\ln\mathopen{}\left(x^2+y^2\right)\mathclose{}=e`]
+
+[_]{$dydx}{80}
+
+[$showwork]**
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();

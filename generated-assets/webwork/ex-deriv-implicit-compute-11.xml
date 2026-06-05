@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-ex-deriv-implicit-compute-11" assembly-id="ex-deriv-implicit-compute-11">
+  <static seed="19">
+    <statement><p><m>{\frac{\sin\mathopen{}\left(x\right)+y}{\cos\mathopen{}\left(y\right)+x}}={1}</m></p>
+<p><fillin characters="80" name="AnSwEr0001"/></p>
+</statement>
+    <answer>
+      <p>
+        <m>\frac{1-\cos\mathopen{}\left(x\right)}{\sin\mathopen{}\left(y\right)+1}</m>
+      </p>
+    </answer>
+    <solution><p>If one takes the derivative of the equation, as shown, using the Quotient Rule, one finds <m>\frac{dy}{dx} = \frac{-\cos (x) (x+\cos (y))+\sin (x)+y}{\sin (y) (\sin (x)+y)+x+\cos (y)}\text{.}</m></p>
+<p>If one first clears the denominator and writes <m>\sin(x)+y = \cos(y)+x</m> then takes the derivative of both sides, one finds <m>\frac{dy}{dx} = \frac{1-\cos(x)}{1+\sin(y)}\text{.}</m></p>
+<p>These expressions, by themselves, are not equal. However, for values of <m>x</m> and <m>y</m> that satisfy the original equation (i.e, for <m>x</m> and <m>y</m> such that <m>\frac{\sin(x)+y}{\cos(y)+x}=1</m>), these expressions are equal.</p>
+</solution>
+  </static>
+  <rendering-data problemSource="OpenStax_Calculus/3_7_4_23.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
+  <pg><![CDATA[
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.23)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGessaymacros.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+Context()->variables->add(y=>'Real');
+($triga,$trigb) = random_subset(2,'sin','cos');
+if($envir{problemSeed}==1){$triga='sin';$trigb='cos';};
+#$triga='sin';$trigb='cos';
+$left = Formula("($triga(x)+y)/($trigb(y)+x)");
+$right = Formula("1");
+if ($triga eq 'sin') {
+  $dydx = Formula("(1-cos(x))/(sin(y)+1)")->reduce;
+  $dydx->{test_points}=[[-3.1,-3.83041],[-0.41,0.732269],[0.59,0.759097],[2.6,1.82908],[5.3,6.93017]];
+} else {
+  $dydx = Formula("(sin(x)+1)/(1-cos(y))")->reduce;
+  $dydx->{test_points}=[[0.831958,1],[1.329583,2],[-0.0952339,-2],[-3.70455,-3],[0.7390851,0]];
+}
+$showwork = '[@ explanation_box(message => "Show your work using implicit differentiation.") @]*';
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Find [`\lz{y}{x}`] using implicit differentiation.
+
+[`[$left]=[$right]`]
+
+[_]{$dydx}{80}
+
+[$showwork]**
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+If one takes the derivative of the equation, as shown, using the Quotient Rule, one finds [`\frac{dy}{dx} = \frac{-\cos (x) (x+\cos (y))+\sin (x)+y}{\sin (y) (\sin (x)+y)+x+\cos (y)}\text{.}`]
+
+If one first clears the denominator and writes [`\sin(x)+y = \cos(y)+x`] then takes the derivative of both sides, one finds [`\frac{dy}{dx} = \frac{1-\cos(x)}{1+\sin(y)}\text{.}`]
+
+These expressions, by themselves, are not equal. However, for values of [`x`] and [`y`] that satisfy the original equation (i.e, for [`x`] and [`y`] such that [`\frac{\sin(x)+y}{\cos(y)+x}=1`]), these expressions are equal.
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+]]></pg>
+</webwork-reps>

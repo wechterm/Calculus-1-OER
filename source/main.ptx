@@ -14,8 +14,8 @@
   <!-- to some short (non-spaced) description of your book         -->
   <book xml:id="OpenStaxCalculus">
     <!-- The book needs a title and can have a subtitle  -->
-    <title>OpenStax Calculus</title>
-    <subtitle>Volume 1</subtitle>
+    <title>College of Dupage OER Calculus 1</title>
+    <!-- subtitle>Volume 1</subtitle -->
 
     <!-- Now we include files containing each main devision.       -->
 
@@ -30,7 +30,7 @@
    <xi:include href="./chapter1/ch_first.ptx" />
    <xi:include href="./chapter2/ch_second.ptx"/>
    <xi:include href="./chapter3/ch_third.ptx"/>
-   <!-- xi:include href="./ch_fourth.ptx"/-->
+   <xi:include href="./chapter4/ch_fourth.ptx"/>
    <!-- xi:include href="./ch_fifth.ptx"/-->
    <!-- xi:include href="./ch_sixth.ptx"/	-->
    <xi:include href="./appendix/appendix.ptx"/>

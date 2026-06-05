@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-ex-deriv-implicit-power-1" assembly-id="ex-deriv-implicit-power-1">
+  <static seed="1">
+    <statement><p><m>f(x)={\sqrt{x}+\frac{1}{\sqrt{x}}}</m></p>
+<p><fillin characters="80" name="AnSwEr0001"/></p>
+</statement>
+    <answer>
+      <p>
+        <m>\frac{1}{2\sqrt{x}}-\frac{\frac{1}{2\sqrt{x}}}{\left(\sqrt{x}\right)^{2}}</m>
+      </p>
+    </answer>
+  </static>
+  <rendering-data problemSource="OpenStax_Calculus/3_7_4_5.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
+  <pg><![CDATA[
+#############################################
+###       Generated from PreTeXt source      
+###                                          
+###         https://pretextbook.org          
+###                                          
+#############################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(3.7.4.5)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PCCmacros.pl",
+  "contextForm.pl",
+  "PGcourse.pl",
+);
+COMMENT('Authored in PreTeXt');
+
+############################################################
+# Header
+############################################################
+TEXT(beginproblem());
+
+############################################################
+# PG Setup Code
+############################################################
+$fname = list_random('f','g','h','j','k','p','m');
+$x = list_random('q','r','t','x','y','z','w');
+$pm = list_random('+','-');
+if($envir{problemSeed}==1){$fname='f';$x='x';$pm='+'};
+Context()->variables->are($x=>'Real');
+Context()->variables->set($x=>{limits=>[0,4]});
+$f = Formula("sqrt($x) $pm 1/sqrt($x)")->reduce;
+$fp = $f->D($x);
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Compute the derivative of the given function.
+
+[`[$fname]([$x])=[$f]`]
+
+[@KeyboardInstructions('To enter [`\sqrt{x}\text{,}`] type [|sqrt(x)|]*.')@]**
+
+[_]{$fp}{80}
+
+END_PGML
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
+]]></pg>
+</webwork-reps>
