@@ -21,7 +21,7 @@
 <description>"This graph shows a function f(x) and its inverse f−1(x). These functions are symmetric about the line y = x. The tangent line of the function f(x) at the point (f−1(a), a) and the tangent line of the function f−1(x) at (a, f−1(a)) are also symmetric about the line y = x. Specifically, if the slope of one were p/q, then the slope of the other would be q/p. Lastly, their derivatives are also symmetric about the line y = x." </description></image> <caption>The tangent lines of a function and its inverse are related; so, too, are the derivatives of these functions.</caption>
 </figure>
 <p id="fs-id1169739030946">We may also derive the formula for the derivative of the inverse by first recalling that <m>x=f(f^{-1}(x)).</m> Then by differentiating both sides of this equation (using the chain rule on the right), we obtain</p>
-<me>1=f'(f^{-1}(x))\left((f^{-1}\right)'(x)\right).</me>
+<me>1=f'(f^{-1}(x))\left(\left(f^{-1}\right)'(x)\right).</me>
 <p id="fs-id1169739172653">Solving for <m>{f^{-1}}'(x),</m> we obtain</p>
 <me>{f^{-1}}'(x)=\frac{1}{f'(f^{-1}(x))}.</me>
 <p id="fs-id1169739028393">We summarize this result in the following theorem.</p>
@@ -191,6 +191,12 @@
 <men>  \frac{d}{dx} \sec^{-1}x=\frac{1}{|x|\sqrt{x^2−1}}</men>
 <men>  \frac{d}{dx} \csc^{-1}x=\frac{−1}{|x|\sqrt{x^2−1}}</men>
 </theorem>
+
+<p>
+Recall that two trigonometric functions are called <term>cofunctions</term> if they are related by complementary angles, such as 
+<m>\sin(\theta) =\ds\cos\left(\frac{\pi}{2}-\theta\right)</m> and <m>\tan(\theta) = \ds\cot\left(\frac{\pi}{2}-\theta\right)</m>. Their inverses satisfy similar relationships, for example <m>\sin^{-1}(x) +\cos^{-1}(x) = \ds\frac{\pi}{2}</m>. Differentiating both sides of this equation with respect to <m>x</m> gives <m>\ds\frac{d}{dx} \sin^{-1}(x) +\frac{d}{dx} \cos^{-1}(x) =0</m>, so the derivatives must be negatives of each other. This explains why the formulas for inverse cofunctions differ only by a change in sign, a pattern which also holds for <m>\tan^{-1}(x)</m> and <m>\cot^{-1}(x)</m>,  as well as <m>\sec^{-1}(x) </m> and <m>\csc^{-1}(x)</m>. 
+</p>
+
 <example xml:id="fs-id1169739282715">
 <title>Applying Differentiation Formulas to an Inverse Tangent Function</title>
 <statement id="fs-id1169736659203">
@@ -203,6 +209,7 @@
 <me>f'(x)=\frac{2}{x}{1+x^4}.</me>
 </solution>
 </example>
+
 <example xml:id="fs-id1169739301501">
 <title>Applying Differentiation Formulas to an Inverse Sine Function</title>
  <statement id="fs-id1169738894991">
