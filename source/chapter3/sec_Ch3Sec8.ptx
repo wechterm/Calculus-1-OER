@@ -1,7 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<section xml:id="sec_Ch3Sec8">
-  <title>Derivatives of Inverse Functions (PLACEHOLDER)</title>
-  
-  
+
+<section xml:id="sec_Ch3Sec8" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Derivatives of Inverse Functions</title>
+  <introduction>
+  <title> Learning Objectives</title>
+  <ul>
+
+<li>Calculate the derivative of an inverse function.</li>
+<li>Recognize the derivatives of the standard inverse trigonometric functions.</li>
+</ul>
+<p id="fs-id1169736659839">In this section we explore the relationship between the derivative of a function and the derivative of its inverse. For functions whose derivatives we already know, we can use this relationship to find derivatives of inverses without having to use the limit definition of the derivative. In particular, we will apply the formula for derivatives of inverse functions to trigonometric functions. This formula may also be used to extend the power rule to rational exponents.</p>
+</introduction>
+<subsection id="fs-id1169738951769">
+<title>The Derivative of an Inverse Function</title>
+<p id="fs-id1169736613607">We begin by considering a function and its inverse. If <m>f(x)</m> is both invertible and differentiable, it seems reasonable that the inverse of <m>f(x)</m> is also differentiable. <xref ref="CNX_Calc_Figure_03_07_001"/> shows the relationship between a function <m>f(x)</m> and its inverse <m>f^{-1}(x).</m> Look at the point <m>(a,f^{-1}(a))</m> on the graph of <m>f^{-1}(x)</m> having a tangent line with a slope of <m>\left(f^{-1}\right)'(a)=\frac{p}{q}.</m> This point corresponds to a point <m>(f^{-1}(a),a)</m> on the graph of <m>f(x)</m> having a tangent line with a slope of <m>f'(f^{-1}(a))=\frac{q}{p}.</m> Thus, if <m>f^{-1}(x)</m> is differentiable at <m>a,</m> then it must be the case that</p>
+<me>\left(f^{-1}\right)'(a)=\frac{1}{f'(f^{-1}(a))}.</me>
+<me>\left(f^{-1}\right)'(a)=\frac{1}{f'(f^{-1}(a))}.</me>
+<figure xml:id="CNX_Calc_Figure_03_07_001">
+  <image source="ch3/CNX_Calc_Figure_03_07_001.jpg" width="50%">
+<description>"This graph shows a function f(x) and its inverse f−1(x). These functions are symmetric about the line y = x. The tangent line of the function f(x) at the point (f−1(a), a) and the tangent line of the function f−1(x) at (a, f−1(a)) are also symmetric about the line y = x. Specifically, if the slope of one were p/q, then the slope of the other would be q/p. Lastly, their derivatives are also symmetric about the line y = x." </description></image> <caption>The tangent lines of a function and its inverse are related; so, too, are the derivatives of these functions.</caption>
+</figure>
+<p id="fs-id1169739030946">We may also derive the formula for the derivative of the inverse by first recalling that <m>x=f(f^{-1}(x)).</m> Then by differentiating both sides of this equation (using the chain rule on the right), we obtain</p>
+<me>1=f'(f^{-1}(x))\left((f^{-1}\right)'(x)\right).</me>
+<p id="fs-id1169739172653">Solving for <m>{f^{-1}}'(x),</m> we obtain</p>
+<me>{f^{-1}}'(x)=\frac{1}{f'(f^{-1}(x))}.</me>
+<p id="fs-id1169739028393">We summarize this result in the following theorem.</p>
+
+<theorem> <!-- Change next end note to end theorem -->
+<title>Inverse Function Theorem</title>
+<p id="fs-id1169736655824">Let <m>f(x)</m> be a function that is both invertible and differentiable. Let <m>y=f^{-1}(x)</m> be the inverse of <m>f(x).</m> For all <m>x</m> satisfying <m>f'(f^{-1}(x))\neq 0,</m></p>
+<me>\frac{dy}{dx}=\frac{d}{dx}(f^{-1}(x))=\left(f^{-1}\right)'(x)=\frac{1}{f'(f^{-1}(x))}.</me>
+<p id="fs-id1169739270778">Alternatively, if <m>y=g(x)</m> is the inverse of <m>f(x),</m> then</p>
+<me>g'(x)=\frac{1}{f'(g(x))}.</me>
+</theorem>
+
+<example xml:id="fs-id1169739001941">
+<title>Applying the Inverse Function Theorem</title>
+<statement id="fs-id1169739011063">
+<p id="fs-id1169739007605">Use the inverse function theorem to find the derivative of <m>g(x)=\frac{x+2}{x}.</m> Compare the resulting derivative to that obtained by differentiating the function directly.</p>
+</statement>
+<solution id="fs-id1169739038136">
+<p id="fs-id1169738951381">The inverse of <m>g(x)=\frac{x+2}{x}</m> is <m>f(x)=\frac{2}{x−1}.</m> Since <m>g'(x)=\frac{1}{f'(g(x))},</m> begin by finding <m>f'(x).</m> Thus,</p>
+<me>f'(x)=\frac{−2}{(x-1)^2} \text{ and } f'(g(x))=\frac{−2}{(g(x)−1)^2}=\frac{−2}{(\frac{x+2}{x}−1)^2}=−\frac{x^2}{2}.</me>
+<p id="fs-id1169736655762">Finally,</p>
+<me>g'(x)=\frac{1}{f'(g(x))}=−\frac{2}{x^2}.</me>
+<p id="fs-id1169739000892">We can verify that this is the correct derivative by applying the quotient rule to <m>g(x)</m> to obtain</p>
+<me>g'(x)=−\frac{2}{x^2}.</me>
+</solution>
+</example>
+
+<exercise>  <statement id="fs-id1169739273259">
+<p id="fs-id1169739269403">Use the inverse function theorem to find the derivative of <m>g(x)=\frac{1}{x+2}.</m> Compare the result obtained by differentiating <m>g(x)</m> directly.</p>
+</statement>
+<solution id="fs-id1169739302810">
+<p id="fs-id1169739064846"><m>g'(x)=−\frac{1}{(x+2)^2}</m></p>
+</solution>
+<hint>
+<p id="fs-id1169739302308">Use the preceding example as a guide.</p>
+</hint> </exercise>
+
+<example xml:id="fs-id1169738977168">
+<title>Applying the Inverse Function Theorem</title>
+ <statement id="fs-id1169736660668">
+<p id="fs-id1169739036425">Use the inverse function theorem to find the derivative of <m>g(x)=\sqrt[3]{x}.</m></p>
+</statement>
+<solution id="fs-id1169739233800">
+<p id="fs-id1169738969956">The function <m>g(x)=\sqrt[3]{x}</m> is the inverse of the function <m>f(x)=x^3.</m> Since <m>g'(x)=\frac{1}{f'(g(x))},</m> begin by finding <m>f'(x).</m> Thus,</p>
+<me>f'(x)=3x^3 \text{ and } f'(g(x))=3(\sqrt[3]{x})^2=3x2/^3.</me>
+<p id="fs-id1169739034112">Finally,</p>
+<me>g'(x)=\frac{1}{3x^{2/3}}=\frac{1}{3}x^{−2/3}.</me>
+</solution>
+</example>
+
+<exercise>  <statement id="fs-id1169736617657">
+<p id="fs-id1169738835681">Find the derivative of <m>g(x)=\sqrt[5]{x}</m> by applying the inverse function theorem.</p>
+</statement>
+<solution id="fs-id1169739286509">
+<p id="fs-id1169739014316"><m>g(x)=\frac{1}{5}x^{-4/5}</m></p>
+</solution>
+<hint>
+<p id="fs-id1169739009099"><m>g(x)</m> is the inverse of <m>f(x)=x^5.</m></p>
+</hint> </exercise>
+
+<p id="fs-id1169739326667">From the previous example, we see that we can use the inverse function theorem to extend the power rule to exponents of the form <m>\frac{1}{n},</m> where <m>n</m> is a positive integer. This extension will ultimately allow us to differentiate <m>x^q,</m> where <m>q</m> is any rational number.</p>
+
+<theorem> <!-- Change next end note to end theorem -->
+<title>Extending the Power Rule to Rational Exponents</title>
+<p id="fs-id1169738960496">The power rule may be extended to rational exponents. That is, if <m>n</m> is a positive integer, then</p>
+<me>\frac{d}{dx}(x^{1/n})=\frac{1}{n}x^{(1/n)−1}.</me>
+<p id="fs-id1169736657214">Also, if <m>n</m> is a positive integer and <m>m</m> is an arbitrary integer, then</p>
+<me>\frac{d}{dx}(x^{m/n})=\frac{m}{n}x^{(m/n)−1}.</me>
+<proof>
+<title>Proof</title>
+<p id="fs-id1169739000138">The function <m>g(x)=x^{1/n}</m> is the inverse of the function <m>f(x)=x^n.</m> Since <m>g'(x)=\frac{1}{f'(g(x))},</m> begin by finding <m>f'(x).</m> Thus,</p>
+<me>f'(x)=nx^{n-1} \text{ and } f'(g(x))=n(x^{1/n})^{n−1}=nx^{(n−1)/n}.</me>
+<p id="fs-id1169738961739">Finally,</p>
+<me>g'(x)=\frac{1}{nx^{(n−1)/n}}=\frac{1}{n}x^{(1−n)/n}=\frac{1}{n}x^{(1/n)−1}.</me>
+<p id="fs-id1169736613834">To differentiate <m>x^{m/n}</m> we must rewrite it as <m>(x^{1/n})^m</m> and apply the chain rule. Thus,</p>
+<me>\frac{d}{dx}(x^{m/n})=\frac{d}{dx}((x^{1/n})^m)=m(x^{1/n})^{m−1}\cdot \frac{1}{n}x^{(1/n)−1}=\frac{m}{n}x^{(m/n)−1}.</me>
+</proof>
+</theorem>
+
+<example xml:id="fs-id1169739298630">
+<title>Applying the Power Rule to a Rational Power</title>
+ <statement id="fs-id1169739022986">
+<p id="fs-id1169739343740">Find the equation of the line tangent to the graph of <m>y=x^{2/3}</m> at <m>x=8.</m></p>
+</statement>
+<solution id="fs-id1169739270369">
+<p id="fs-id1169739020528">First find <m>\frac{dy}{dx}</m> and evaluate it at <m>x=8.</m> Since</p>
+<me>\frac{dy}{dx}=\frac{2}{3}x^{−1/3} \text{ and } \left.\frac{dy}{dx}\right|_{x=8}=\frac{1}{3}</me>
+<p id="fs-id1169739234023">the slope of the tangent line to the graph at <m>x=8</m> is <m>\frac{1}{3}.</m></p>
+<p id="fs-id1169738993930">Substituting <m>x=8</m> into the original function, we obtain <m>y=4.</m> Thus, the tangent line passes through the point <m>(8,4).</m> Substituting into the point-slope formula for a line, we obtain the tangent line</p>
+<me>y=\frac{1}{3}x+\frac{4}{3}.</me>
+</solution>
+</example>
+<exercise>  <statement id="fs-id1169739013016">
+<p id="fs-id1169736607624">Find the derivative of <m>s(t)=\sqrt{2t+1}.</m></p>
+</statement>
+<solution id="fs-id1169739000282">
+<p id="fs-id1169739183503"><m>s'(t)=(2t+1)^{-1/2}</m></p>
+</solution>
+<hint>
+<p id="fs-id1169736596062">Use the chain rule.</p>
+</hint> </exercise>
+</subsection>
+
+<subsection id="fs-id1169739301198">
+<title>Derivatives of Inverse Trigonometric Functions</title>
+<p id="fs-id1169739029363">We now turn our attention to finding derivatives of inverse trigonometric functions. These derivatives will prove invaluable in the study of integration later in this text. The derivatives of inverse trigonometric functions are quite surprising in that their derivatives are actually algebraic functions. Previously, derivatives of algebraic functions have proven to be algebraic functions and derivatives of trigonometric functions have been shown to be trigonometric functions. Here, for the first time, we see that the derivative of a function need not be of the same type as the original function.</p>
+<example xml:id="fs-id1169739208944">
+<title>Derivative of the Inverse Sine Function</title>
+<statement id="fs-id1169739227813">
+<p id="fs-id1169739188589">Use the inverse function theorem to find the derivative of <m>g(x)=\sin^{−1}x.</m></p>
+</statement>
+<solution id="fs-id1169739187453">
+<!-- <p id="fs-id1169739269789">Since for <m>x</m> in the interval <m>[−\frac{\pi}{2},\frac{\pi}{2}],f(x)=\sin x</m> is the inverse of <m>g(x)=\sin^{−1}x,</m> begin by finding <m>f'(x).</m> Since</p> -->
+<!-- <me>f'(x)=\cos  x \text{ and } f'(g(x))=\cos  (\sin^{-1}x)=\sqrt{1−x^2},</me> -->
+<!-- <p id="fs-id1169739347090">we see that</p> -->
+<!-- <me>g'(x)=\frac{d}{dx}(\sin^{-1}x)=\frac{1}{f'(g(x))}=\frac{1}{\sqrt{1−x^2}}.</me> -->
+
+<!-- <solution id="fs-id1169739264145"> -->
+<!-- <title>Analysis</title> -->
+
+<p id="fs-id1169739111057">To see that <m>\cos  (\sin^{-1}x)=\sqrt{1−x^2},</m> consider the following argument. Set <m>\sin^{-1}x=\theta .</m> In this case, <m>\sin \theta =x</m> where <m>−\frac{\pi}{2}≤\theta ≤\frac{\pi}{2}.</m> We begin by considering the case where <m>0\lt \theta \lt \frac{\pi}{2}.</m> Since <m>\theta </m> is an acute angle, we may construct a right triangle having acute angle <m>\theta ,</m> a hypotenuse of length <m>1</m> and the side opposite angle <m>\theta </m> having length <m>x.</m> From the Pythagorean theorem, the side adjacent to angle <m>\theta </m> has length <m>\sqrt{1−x^2}.</m> This triangle is shown in <xref ref="CNX_Calc_Figure_03_07_002"/>. Using the triangle, we see that <m>\cos  (\sin^{-1}x)=\cos  \theta =\sqrt{1−x^2}.</m></p>
+
+<figure xml:id="CNX_Calc_Figure_03_07_002">
+  <image source="ch3/CNX_Calc_Figure_03_07_002.jpg" width="50%">
+
+<description>"A right triangle with angle \theta , opposite side x, hypotenuse 1, and adjacent side equal to the square root of the quantity (1 – x2)."
+ </description></image> <caption>Using a right triangle having acute angle <m>\theta ,</m> a hypotenuse of length <m>1,</m> and the side opposite angle <m>\theta </m> having length <m>x,</m> we can see that <m>\cos  (\sin^{-1}x)=\cos  \theta =\sqrt{1−x^2}.</m></caption>
+</figure>
+
+<p id="fs-id1169739299632">In the case where <m>−\frac{\pi}{2}\lt \theta \lt 0,</m> we make the observation that <m>0\lt -\theta \lt \frac{\pi}{2}</m> and hence</p>
+<me>\cos  (\sin^{-1}x)=\cos  \theta =\cos  (-\theta )=\sqrt{1−x^2}.</me>
+<p id="fs-id1169736611289">Now if <m>\theta =\frac{\pi}{2}</m> or <m>\theta =−\frac{\pi}{2},x=1</m> or <m>x=−1,</m> and since in either case <m>\cos  \theta =0</m> and <m>\sqrt{1−x^2}=0,</m> we have</p>
+<me>\cos  (\sin^{-1}x)=\cos  \theta =\sqrt{1−x^2}.</me>
+<p id="fs-id1169739190632">Consequently, in all cases, <m>\cos  (\sin^{-1}x)=\sqrt{1−x^2}.</m></p>
+<!-- </note> -->
+</solution>
+</example>
+
+<example xml:id="fs-id1169736662939">
+<title>Applying the Chain Rule to the Inverse Sine Function</title>
+ <statement id="fs-id1169736614226">
+<p id="fs-id1169739190553">Apply the chain rule to the formula derived in <xref ref="fs-id1169738977168"/> to find the derivative of <m>h(x)=\sin^{-1}(g(x))</m> and use this result to find the derivative of <m>h(x)=\sin^{-1}(2x^3).</m></p>
+</statement>
+<solution id="fs-id1169739189897">
+<p id="fs-id1169739189899">Applying the chain rule to <m>h(x)=\sin^{-1}(g(x)),</m> we have</p>
+<me>h'(x)=\frac{1}{\sqrt{1−(g(x))^2}}g'(x).</me>
+<p xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1169739269950">Now let <m>g(x)=2x^3,</m> so <m>g'(x)=6x^2.</m> Substituting into the previous result, we obtain</p>
+<md><mrow>h'(x)\amp=\frac{1}{\sqrt{1−4x^6}}\cdot 6x^2</mrow><mrow>\amp=\frac{6x^2}{\sqrt{1−4x^6}}.</mrow></md></solution>
+
+</example>
+<exercise>  <statement id="fs-id1169739111208">
+<p id="fs-id1169739111210">Use the inverse function theorem to find the derivative of <m>g(x)=\tan^{-1}x.</m></p>
+</statement>
+<solution id="fs-id1169736659260">
+<p id="fs-id1169736659262"><m>g'(x)=\frac{1}{1+x^2}</m></p>
+</solution>
+<hint>
+<p id="fs-id1169736613675">The inverse of <m>g(x)</m> is <m>f(x)=\tan x.</m> Use <xref ref="fs-id1169738977168"/> as a guide.</p>
+</hint> </exercise>
+<p id="fs-id1169739282743">The derivatives of the remaining inverse trigonometric functions may also be found by using the inverse function theorem. These formulas are provided in the following theorem.</p>
+<theorem>
+<title>Derivatives of Inverse Trigonometric Functions</title>
+<men>  \frac{d}{dx} \sin^{-1}x=\frac{1}{\sqrt{1−x^2}}</men>
+<men xml:id="fs-id1169736659297">  \frac{d}{dx} \cos^{-1}x=\frac{−1}{\sqrt{1−x^2}}</men>
+<men xml:id="fs-id1169739307948">\frac{d}{dx} \tan^{-1}x=\frac{1}{1+x^2}</men>
+<men>  \frac{d}{dx}\cot^{-1}x=\frac{−1}{1+x^2}</men>
+<men>  \frac{d}{dx} \sec^{-1}x=\frac{1}{|x|\sqrt{x^2−1}}</men>
+<men>  \frac{d}{dx} \csc^{-1}x=\frac{−1}{|x|\sqrt{x^2−1}}</men>
+</theorem>
+<example xml:id="fs-id1169739282715">
+<title>Applying Differentiation Formulas to an Inverse Tangent Function</title>
+<statement id="fs-id1169736659203">
+<p id="fs-id1169736654830">Find the derivative of <m>f(x)=\tan^{-1}(x^2).</m></p>
+</statement>
+<solution id="fs-id1169739270392">
+<p id="fs-id1169739270394">Let <m>g(x)=x^2,</m> so <m>g'(x)=2x.</m> Substituting into <xref ref="fs-id1169739307948"/>, we obtain</p>
+<me>f'(x)=\frac{1}{1+(x^2)^2}\cdot (2x).</me>
+<p id="fs-id1169736595973">Simplifying, we have</p>
+<me>f'(x)=\frac{2}{x}{1+x^4}.</me>
+</solution>
+</example>
+<example xml:id="fs-id1169739301501">
+<title>Applying Differentiation Formulas to an Inverse Sine Function</title>
+ <statement id="fs-id1169738894991">
+<p id="fs-id1169739027843">Find the derivative of <m>h(x)=x^2\sin^{-1}x.</m></p>
+</statement>
+<solution id="fs-id1169739305210">
+<p id="fs-id1169736603526">By applying the product rule, we have</p>
+<me>h'(x)=2x \sin^{-1}x+\frac{1}{\sqrt{1−x^2}}\cdot x^2.</me>
+</solution>
+</example>
+<exercise>  <statement id="fs-id1169736656492">
+<p id="fs-id1169739325671">Find the derivative of <m>h(x)=\cos^{-1}(3x−1).</m></p>
+</statement>
+<solution id="fs-id1169739289434">
+<p id="fs-id1169739304017"><m>h'(x)=\frac{−3}{\sqrt{6x−9x^2}}</m></p>
+</solution>
+<hint>
+<p id="fs-id1169739274281">Use <xref ref="fs-id1169736659297"/>. with <m>g(x)=3x−1</m></p>
+</hint> </exercise>
+
+<example xml:id="fs-id1169736614197">
+<title>Applying the Inverse Tangent Function</title>
+ <statement id="fs-id1169739302505">
+<p id="fs-id1169739208500">The position of a particle at time <m>t</m> is given by <m>s(t)=\tan^{-1}(\frac{1}{t})</m> for <m>t≥\frac{1}{2}.</m> Find the velocity of the particle at time <m>t=1.</m></p>
+</statement>
+<solution id="fs-id1169736614256">
+<p id="fs-id1169736656603">Begin by differentiating <m>s(t)</m> in order to find <m>v(t).</m> Thus,</p>
+<me>v(t)=s'(t)=\frac{1}{1+(\frac{1}{t})^2}\cdot \frac{−1}{t^2}.</me>
+<p id="fs-id1169739282656">Simplifying, we have</p>
+<me>v(t)=−\frac{1}{t^2+1}.</me>
+<p id="fs-id1169736594230">Thus, <m>v(1)=−\frac{1}{2}.</m></p>
+</solution>
+</example>
+
+<exercise>  <statement id="fs-id1169739273646">
+<p id="fs-id1169739273648">Find the equation of the line tangent to the graph of <m>f(x)=\sin^{-1}x</m> at <m>x=0.</m></p>
+</statement>
+<solution id="fs-id1169736652019">
+<p id="fs-id1169739302752"><m>y=x</m></p>
+</solution>
+<hint>
+<p id="fs-id1169739299514"><m>f'(0)</m> is the slope of the tangent line.</p>
+</hint> </exercise>
+
+</subsection>
+
+
+
+
 
 </section>
+
+
+
