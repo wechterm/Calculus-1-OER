@@ -5082,8 +5082,179 @@ var ptx_lunr_docs = [
   "url": "sec_Ch3Sec8.html",
   "type": "Section",
   "number": "3.8",
-  "title": "Derivatives of Inverse Functions (PLACEHOLDER)",
-  "body": " Derivatives of Inverse Functions (PLACEHOLDER)  "
+  "title": "Derivatives of Inverse Functions",
+  "body": " Derivatives of Inverse Functions   Learning Objectives   Calculate the derivative of an inverse function.  Recognize the derivatives of the standard inverse trigonometric functions.   In this section we explore the relationship between the derivative of a function and the derivative of its inverse. For functions whose derivatives we already know, we can use this relationship to find derivatives of inverses without having to use the limit definition of the derivative. In particular, we will apply the formula for derivatives of inverse functions to trigonometric functions. This formula may also be used to extend the power rule to rational exponents.    The Derivative of an Inverse Function  We begin by considering a function and its inverse. If is both invertible and differentiable, it seems reasonable that the inverse of is also differentiable. shows the relationship between a function and its inverse Look at the point on the graph of having a tangent line with a slope of This point corresponds to a point on the graph of having a tangent line with a slope of Thus, if is differentiable at then it must be the case that      \"This graph shows a function f(x) and its inverse f−1(x). These functions are symmetric about the line y = x. The tangent line of the function f(x) at the point (f−1(a), a) and the tangent line of the function f−1(x) at (a, f−1(a)) are also symmetric about the line y = x. Specifically, if the slope of one were p\/q, then the slope of the other would be q\/p. Lastly, their derivatives are also symmetric about the line y = x.\"  The tangent lines of a function and its inverse are related; so, too, are the derivatives of these functions.   We may also derive the formula for the derivative of the inverse by first recalling that Then by differentiating both sides of this equation (using the chain rule on the right), we obtain   Solving for we obtain   We summarize this result in the following theorem.    Inverse Function Theorem  Let be a function that is both invertible and differentiable. Let be the inverse of For all satisfying   Alternatively, if is the inverse of then     Applying the Inverse Function Theorem   Use the inverse function theorem to find the derivative of Compare the resulting derivative to that obtained by differentiating the function directly.    The inverse of is Since begin by finding Thus,   Finally,   We can verify that this is the correct derivative by applying the quotient rule to to obtain       Use the inverse function theorem to find the derivative of Compare the result obtained by differentiating directly.       Use the preceding example as a guide.     Applying the Inverse Function Theorem   Use the inverse function theorem to find the derivative of    The function is the inverse of the function Since begin by finding Thus,   Finally,       Find the derivative of by applying the inverse function theorem.       is the inverse of    From the previous example, we see that we can use the inverse function theorem to extend the power rule to exponents of the form where is a positive integer. This extension will ultimately allow us to differentiate where is any rational number.    Extending the Power Rule to Rational Exponents  The power rule may be extended to rational exponents. That is, if is a positive integer, then   Also, if is a positive integer and is an arbitrary integer, then    Proof  The function is the inverse of the function Since begin by finding Thus,   Finally,   To differentiate we must rewrite it as and apply the chain rule. Thus,      Applying the Power Rule to a Rational Power   Find the equation of the line tangent to the graph of at    First find and evaluate it at Since   the slope of the tangent line to the graph at is  Substituting into the original function, we obtain Thus, the tangent line passes through the point Substituting into the point-slope formula for a line, we obtain the tangent line       Find the derivative of       Use the chain rule.      Derivatives of Inverse Trigonometric Functions  We now turn our attention to finding derivatives of inverse trigonometric functions. These derivatives will prove invaluable in the study of integration later in this text. The derivatives of inverse trigonometric functions are quite surprising in that their derivatives are actually algebraic functions. Previously, derivatives of algebraic functions have proven to be algebraic functions and derivatives of trigonometric functions have been shown to be trigonometric functions. Here, for the first time, we see that the derivative of a function need not be of the same type as the original function.   Derivative of the Inverse Sine Function   Use the inverse function theorem to find the derivative of          To see that consider the following argument. Set In this case, where We begin by considering the case where Since is an acute angle, we may construct a right triangle having acute angle a hypotenuse of length and the side opposite angle having length From the Pythagorean theorem, the side adjacent to angle has length This triangle is shown in . Using the triangle, we see that    \"A right triangle with angle \\theta , opposite side x, hypotenuse 1, and adjacent side equal to the square root of the quantity (1 – x2).\"  Using a right triangle having acute angle a hypotenuse of length and the side opposite angle having length we can see that   In the case where we make the observation that and hence   Now if or or and since in either case and we have   Consequently, in all cases,      Applying the Chain Rule to the Inverse Sine Function   Apply the chain rule to the formula derived in to find the derivative of and use this result to find the derivative of    Applying the chain rule to we have   Now let so Substituting into the previous result, we obtain      Use the inverse function theorem to find the derivative of       The inverse of is Use as a guide.    The derivatives of the remaining inverse trigonometric functions may also be found by using the inverse function theorem. These formulas are provided in the following theorem.   Derivatives of Inverse Trigonometric Functions         Recall that two trigonometric functions are called cofunctions if they are related by complementary angles, such as and . Their inverses satisfy similar relationships, for example . Differentiating both sides of this equation with respect to gives , so the derivatives must be negatives of each other. This explains why the formulas for inverse cofunctions differ only by a change in sign, a pattern which also holds for and , as well as and .   Applying Differentiation Formulas to an Inverse Tangent Function   Find the derivative of    Let so Substituting into , we obtain   Simplifying, we have      Applying Differentiation Formulas to an Inverse Sine Function   Find the derivative of    By applying the product rule, we have       Find the derivative of       Use . with     Applying the Inverse Tangent Function   The position of a particle at time is given by for Find the velocity of the particle at time    Begin by differentiating in order to find Thus,   Simplifying, we have   Thus,      Find the equation of the line tangent to the graph of at       is the slope of the tangent line.     "
+},
+{
+  "id": "CNX_Calc_Figure_03_07_001",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#CNX_Calc_Figure_03_07_001",
+  "type": "Figure",
+  "number": "3.8.1",
+  "title": "",
+  "body": "  \"This graph shows a function f(x) and its inverse f−1(x). These functions are symmetric about the line y = x. The tangent line of the function f(x) at the point (f−1(a), a) and the tangent line of the function f−1(x) at (a, f−1(a)) are also symmetric about the line y = x. Specifically, if the slope of one were p\/q, then the slope of the other would be q\/p. Lastly, their derivatives are also symmetric about the line y = x.\"  The tangent lines of a function and its inverse are related; so, too, are the derivatives of these functions.  "
+},
+{
+  "id": "sec_Ch3Sec8-3-11",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#sec_Ch3Sec8-3-11",
+  "type": "Theorem",
+  "number": "3.8.2",
+  "title": "Inverse Function Theorem.",
+  "body": "  Inverse Function Theorem  Let be a function that is both invertible and differentiable. Let be the inverse of For all satisfying   Alternatively, if is the inverse of then   "
+},
+{
+  "id": "fs-id1169739001941",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#fs-id1169739001941",
+  "type": "Example",
+  "number": "3.8.3",
+  "title": "Applying the Inverse Function Theorem.",
+  "body": " Applying the Inverse Function Theorem   Use the inverse function theorem to find the derivative of Compare the resulting derivative to that obtained by differentiating the function directly.    The inverse of is Since begin by finding Thus,   Finally,   We can verify that this is the correct derivative by applying the quotient rule to to obtain    "
+},
+{
+  "id": "sec_Ch3Sec8-3-13",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#sec_Ch3Sec8-3-13",
+  "type": "Checkpoint",
+  "number": "3.8.4",
+  "title": "",
+  "body": "  Use the inverse function theorem to find the derivative of Compare the result obtained by differentiating directly.       Use the preceding example as a guide.   "
+},
+{
+  "id": "fs-id1169738977168",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#fs-id1169738977168",
+  "type": "Example",
+  "number": "3.8.5",
+  "title": "Applying the Inverse Function Theorem.",
+  "body": " Applying the Inverse Function Theorem   Use the inverse function theorem to find the derivative of    The function is the inverse of the function Since begin by finding Thus,   Finally,    "
+},
+{
+  "id": "sec_Ch3Sec8-3-15",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#sec_Ch3Sec8-3-15",
+  "type": "Checkpoint",
+  "number": "3.8.6",
+  "title": "",
+  "body": "  Find the derivative of by applying the inverse function theorem.       is the inverse of   "
+},
+{
+  "id": "sec_Ch3Sec8-3-17",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#sec_Ch3Sec8-3-17",
+  "type": "Theorem",
+  "number": "3.8.7",
+  "title": "Extending the Power Rule to Rational Exponents.",
+  "body": "  Extending the Power Rule to Rational Exponents  The power rule may be extended to rational exponents. That is, if is a positive integer, then   Also, if is a positive integer and is an arbitrary integer, then    Proof  The function is the inverse of the function Since begin by finding Thus,   Finally,   To differentiate we must rewrite it as and apply the chain rule. Thus,    "
+},
+{
+  "id": "fs-id1169739298630",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#fs-id1169739298630",
+  "type": "Example",
+  "number": "3.8.8",
+  "title": "Applying the Power Rule to a Rational Power.",
+  "body": " Applying the Power Rule to a Rational Power   Find the equation of the line tangent to the graph of at    First find and evaluate it at Since   the slope of the tangent line to the graph at is  Substituting into the original function, we obtain Thus, the tangent line passes through the point Substituting into the point-slope formula for a line, we obtain the tangent line    "
+},
+{
+  "id": "sec_Ch3Sec8-3-19",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#sec_Ch3Sec8-3-19",
+  "type": "Checkpoint",
+  "number": "3.8.9",
+  "title": "",
+  "body": "  Find the derivative of       Use the chain rule.   "
+},
+{
+  "id": "fs-id1169739208944",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#fs-id1169739208944",
+  "type": "Example",
+  "number": "3.8.10",
+  "title": "Derivative of the Inverse Sine Function.",
+  "body": " Derivative of the Inverse Sine Function   Use the inverse function theorem to find the derivative of          To see that consider the following argument. Set In this case, where We begin by considering the case where Since is an acute angle, we may construct a right triangle having acute angle a hypotenuse of length and the side opposite angle having length From the Pythagorean theorem, the side adjacent to angle has length This triangle is shown in . Using the triangle, we see that    \"A right triangle with angle \\theta , opposite side x, hypotenuse 1, and adjacent side equal to the square root of the quantity (1 – x2).\"  Using a right triangle having acute angle a hypotenuse of length and the side opposite angle having length we can see that   In the case where we make the observation that and hence   Now if or or and since in either case and we have   Consequently, in all cases,    "
+},
+{
+  "id": "fs-id1169736662939",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#fs-id1169736662939",
+  "type": "Example",
+  "number": "3.8.12",
+  "title": "Applying the Chain Rule to the Inverse Sine Function.",
+  "body": " Applying the Chain Rule to the Inverse Sine Function   Apply the chain rule to the formula derived in to find the derivative of and use this result to find the derivative of    Applying the chain rule to we have   Now let so Substituting into the previous result, we obtain   "
+},
+{
+  "id": "sec_Ch3Sec8-4-5",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#sec_Ch3Sec8-4-5",
+  "type": "Checkpoint",
+  "number": "3.8.13",
+  "title": "",
+  "body": "  Use the inverse function theorem to find the derivative of       The inverse of is Use as a guide.   "
+},
+{
+  "id": "sec_Ch3Sec8-4-7",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#sec_Ch3Sec8-4-7",
+  "type": "Theorem",
+  "number": "3.8.14",
+  "title": "Derivatives of Inverse Trigonometric Functions.",
+  "body": " Derivatives of Inverse Trigonometric Functions        "
+},
+{
+  "id": "sec_Ch3Sec8-4-8",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#sec_Ch3Sec8-4-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "cofunctions "
+},
+{
+  "id": "fs-id1169739282715",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#fs-id1169739282715",
+  "type": "Example",
+  "number": "3.8.15",
+  "title": "Applying Differentiation Formulas to an Inverse Tangent Function.",
+  "body": " Applying Differentiation Formulas to an Inverse Tangent Function   Find the derivative of    Let so Substituting into , we obtain   Simplifying, we have    "
+},
+{
+  "id": "fs-id1169739301501",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#fs-id1169739301501",
+  "type": "Example",
+  "number": "3.8.16",
+  "title": "Applying Differentiation Formulas to an Inverse Sine Function.",
+  "body": " Applying Differentiation Formulas to an Inverse Sine Function   Find the derivative of    By applying the product rule, we have    "
+},
+{
+  "id": "sec_Ch3Sec8-4-11",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#sec_Ch3Sec8-4-11",
+  "type": "Checkpoint",
+  "number": "3.8.17",
+  "title": "",
+  "body": "  Find the derivative of       Use . with   "
+},
+{
+  "id": "fs-id1169736614197",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#fs-id1169736614197",
+  "type": "Example",
+  "number": "3.8.18",
+  "title": "Applying the Inverse Tangent Function.",
+  "body": " Applying the Inverse Tangent Function   The position of a particle at time is given by for Find the velocity of the particle at time    Begin by differentiating in order to find Thus,   Simplifying, we have   Thus,   "
+},
+{
+  "id": "sec_Ch3Sec8-4-13",
+  "level": "2",
+  "url": "sec_Ch3Sec8.html#sec_Ch3Sec8-4-13",
+  "type": "Checkpoint",
+  "number": "3.8.19",
+  "title": "",
+  "body": "  Find the equation of the line tangent to the graph of at       is the slope of the tangent line.   "
 },
 {
   "id": "sec_Ch4Sec6",

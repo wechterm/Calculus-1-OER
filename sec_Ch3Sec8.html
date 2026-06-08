@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Derivatives of Inverse Functions (PLACEHOLDER)</title>
+<title>Derivatives of Inverse Functions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -430,7 +430,13 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-4" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Implicit Differentiation and the Second Derivative</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec_Ch3Sec8.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Derivatives of Inverse Functions (PLACEHOLDER)</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec_Ch3Sec8.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Derivatives of Inverse Functions</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec8.html#sec_Ch3Sec8-3" class="internal"><span class="codenumber">3.8.1</span> <span class="title">The Derivative of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec8.html#sec_Ch3Sec8-4" class="internal"><span class="codenumber">3.8.2</span> <span class="title">Derivatives of Inverse Trigonometric Functions</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -454,9 +460,537 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="sec_Ch3Sec8">
 <h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of Inverse Functions (PLACEHOLDER)</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of Inverse Functions</span>
 </h2>
-<div class="autopermalink" data-description="Section 3.8: Derivatives of Inverse Functions (PLACEHOLDER)"><a href="#sec_Ch3Sec8" title="Copy heading and permalink for Section 3.8: Derivatives of Inverse Functions (PLACEHOLDER)" aria-label="Copy heading and permalink for Section 3.8: Derivatives of Inverse Functions (PLACEHOLDER)">🔗</a></div>
+<section class="introduction" id="sec_Ch3Sec8-2"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ul class="disc" id="sec_Ch3Sec8-2-2">
+<li id="sec_Ch3Sec8-2-2-1">
+<div class="para" id="p-derived-sec_Ch3Sec8-2-2-1">Calculate the derivative of an inverse function.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec8-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch3Sec8-2-2-2">
+<div class="para" id="p-derived-sec_Ch3Sec8-2-2-2">Recognize the derivatives of the standard inverse trigonometric functions.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch3Sec8-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para" id="sec_Ch3Sec8-2-3">In this section we explore the relationship between the derivative of a function and the derivative of its inverse. For functions whose derivatives we already know, we can use this relationship to find derivatives of inverses without having to use the limit definition of the derivative. In particular, we will apply the formula for derivatives of inverse functions to trigonometric functions. This formula may also be used to extend the power rule to rational exponents.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="sec_Ch3Sec8-3">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Derivative of an Inverse Function</span>
+</h3>
+<div class="para" id="sec_Ch3Sec8-3-2">We begin by considering a function and its inverse. If <span class="process-math">\(f(x)\)</span> is both invertible and differentiable, it seems reasonable that the inverse of <span class="process-math">\(f(x)\)</span> is also differentiable. <a href="sec_Ch3Sec8.html#CNX_Calc_Figure_03_07_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_07_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.1">Figure 3.8.1</a> shows the relationship between a function <span class="process-math">\(f(x)\)</span> and its inverse <span class="process-math">\(f^{-1}(x).\)</span> Look at the point <span class="process-math">\((a,f^{-1}(a))\)</span> on the graph of <span class="process-math">\(f^{-1}(x)\)</span> having a tangent line with a slope of <span class="process-math">\(\left(f^{-1}\right)'(a)=\frac{p}{q}.\)</span> This point corresponds to a point <span class="process-math">\((f^{-1}(a),a)\)</span> on the graph of <span class="process-math">\(f(x)\)</span> having a tangent line with a slope of <span class="process-math">\(f'(f^{-1}(a))=\frac{q}{p}.\)</span> Thus, if <span class="process-math">\(f^{-1}(x)\)</span> is differentiable at <span class="process-math">\(a,\)</span> then it must be the case that<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_03_07_001.html" id="sec_Ch3Sec8-3-3">
+\begin{equation*}
+\left(f^{-1}\right)'(a)=\frac{1}{f'(f^{-1}(a))}.
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_03_07_001.html" id="sec_Ch3Sec8-3-4">
+\begin{equation*}
+\left(f^{-1}\right)'(a)=\frac{1}{f'(f^{-1}(a))}.
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_03_07_001"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch3/CNX_Calc_Figure_03_07_001.jpg" class="contained" alt='"This graph shows a function f(x) and its inverse f−1(x). These functions are symmetric about the line y = x. The tangent line of the function f(x) at the point (f−1(a), a) and the tangent line of the function f−1(x) at (a, f−1(a)) are also symmetric about the line y = x. Specifically, if the slope of one were p/q, then the slope of the other would be q/p. Lastly, their derivatives are also symmetric about the line y = x."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The tangent lines of a function and its inverse are related; so, too, are the derivatives of these functions.<div class="autopermalink" data-description="Figure 3.8.1"><a href="#CNX_Calc_Figure_03_07_001" title="Copy heading and permalink for Figure 3.8.1" aria-label="Copy heading and permalink for Figure 3.8.1">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="sec_Ch3Sec8-3-6">We may also derive the formula for the derivative of the inverse by first recalling that <span class="process-math">\(x=f(f^{-1}(x)).\)</span> Then by differentiating both sides of this equation (using the chain rule on the right), we obtain<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_03_07_001.html" id="sec_Ch3Sec8-3-7">
+\begin{equation*}
+1=f'(f^{-1}(x))\left(\left(f^{-1}\right)'(x)\right).
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch3Sec8-3-8">Solving for <span class="process-math">\({f^{-1}}'(x),\)</span> we obtain<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_03_07_001.html" id="sec_Ch3Sec8-3-9">
+\begin{equation*}
+{f^{-1}}'(x)=\frac{1}{f'(f^{-1}(x))}.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch3Sec8-3-10">We summarize this result in the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="sec_Ch3Sec8-3-11"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inverse Function Theorem.</span>
+</h4>
+<div class="para" id="sec_Ch3Sec8-3-11-2">Let <span class="process-math">\(f(x)\)</span> be a function that is both invertible and differentiable. Let <span class="process-math">\(y=f^{-1}(x)\)</span> be the inverse of <span class="process-math">\(f(x).\)</span> For all <span class="process-math">\(x\)</span> satisfying <span class="process-math">\(f'(f^{-1}(x))\neq 0,\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch3Sec8-3-11-3">
+\begin{equation*}
+\frac{dy}{dx}=\frac{d}{dx}(f^{-1}(x))=\left(f^{-1}\right)'(x)=\frac{1}{f'(f^{-1}(x))}.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch3Sec8-3-11-4">Alternatively, if <span class="process-math">\(y=g(x)\)</span> is the inverse of <span class="process-math">\(f(x),\)</span> then<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-11-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch3Sec8-3-11-5">
+\begin{equation*}
+g'(x)=\frac{1}{f'(g(x))}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Theorem 3.8.2: Inverse Function Theorem"><a href="#sec_Ch3Sec8-3-11" title="Copy heading and permalink for Theorem 3.8.2: Inverse Function Theorem" aria-label="Copy heading and permalink for Theorem 3.8.2: Inverse Function Theorem">🔗</a></div>
+</article>
+<article class="example example-like" id="fs-id1169739001941"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Inverse Function Theorem.</span>
+</h4>
+<div class="para" id="fs-id1169739001941-2-1">Use the inverse function theorem to find the derivative of <span class="process-math">\(g(x)=\frac{x+2}{x}.\)</span> Compare the resulting derivative to that obtained by differentiating the function directly.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739001941-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1169739001941-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169739001941-3-1">The inverse of <span class="process-math">\(g(x)=\frac{x+2}{x}\)</span> is <span class="process-math">\(f(x)=\frac{2}{x−1}.\)</span> Since <span class="process-math">\(g'(x)=\frac{1}{f'(g(x))},\)</span> begin by finding <span class="process-math">\(f'(x).\)</span> Thus,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739001941-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169739001941-3-2">
+\begin{equation*}
+f'(x)=\frac{−2}{(x-1)^2} \text{ and } f'(g(x))=\frac{−2}{(g(x)−1)^2}=\frac{−2}{(\frac{x+2}{x}−1)^2}=−\frac{x^2}{2}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169739001941-3-3">Finally,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739001941-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169739001941-3-4">
+\begin{equation*}
+g'(x)=\frac{1}{f'(g(x))}=−\frac{2}{x^2}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169739001941-3-5">We can verify that this is the correct derivative by applying the quotient rule to <span class="process-math">\(g(x)\)</span> to obtain<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739001941-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169739001941-3-6">
+\begin{equation*}
+g'(x)=−\frac{2}{x^2}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 3.8.3.1"><a href="#fs-id1169739001941-3" title="Copy heading and permalink for Solution 3.8.3.1" aria-label="Copy heading and permalink for Solution 3.8.3.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.8.3: Applying the Inverse Function Theorem"><a href="#fs-id1169739001941" title="Copy heading and permalink for Example 3.8.3: Applying the Inverse Function Theorem" aria-label="Copy heading and permalink for Example 3.8.3: Applying the Inverse Function Theorem">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec8-3-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-3-13-1-1">Use the inverse function theorem to find the derivative of <span class="process-math">\(g(x)=\frac{1}{x+2}.\)</span> Compare the result obtained by differentiating <span class="process-math">\(g(x)\)</span> directly.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch3Sec8-3-13-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-3-13-3-1">Use the preceding example as a guide.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-13-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.8.4.1"><a href="#sec_Ch3Sec8-3-13-3" title="Copy heading and permalink for Hint 3.8.4.1" aria-label="Copy heading and permalink for Hint 3.8.4.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch3Sec8-3-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-3-13-2-1">
+<span class="process-math">\(g'(x)=−\frac{1}{(x+2)^2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.8.4.1"><a href="#sec_Ch3Sec8-3-13-2" title="Copy heading and permalink for Solution 3.8.4.1" aria-label="Copy heading and permalink for Solution 3.8.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.8.4"><a href="#sec_Ch3Sec8-3-13" title="Copy heading and permalink for Checkpoint 3.8.4" aria-label="Copy heading and permalink for Checkpoint 3.8.4">🔗</a></div>
+</article></details>
+<article class="example example-like" id="fs-id1169738977168"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Inverse Function Theorem.</span>
+</h4>
+<div class="para" id="fs-id1169738977168-2-1">Use the inverse function theorem to find the derivative of <span class="process-math">\(g(x)=\sqrt[3]{x}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738977168-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1169738977168-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169738977168-3-1">The function <span class="process-math">\(g(x)=\sqrt[3]{x}\)</span> is the inverse of the function <span class="process-math">\(f(x)=x^3.\)</span> Since <span class="process-math">\(g'(x)=\frac{1}{f'(g(x))},\)</span> begin by finding <span class="process-math">\(f'(x).\)</span> Thus,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738977168-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169738977168-3-2">
+\begin{equation*}
+f'(x)=3x^3 \text{ and } f'(g(x))=3(\sqrt[3]{x})^2=3x2/^3.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169738977168-3-3">Finally,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169738977168-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169738977168-3-4">
+\begin{equation*}
+g'(x)=\frac{1}{3x^{2/3}}=\frac{1}{3}x^{−2/3}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 3.8.5.1"><a href="#fs-id1169738977168-3" title="Copy heading and permalink for Solution 3.8.5.1" aria-label="Copy heading and permalink for Solution 3.8.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.8.5: Applying the Inverse Function Theorem"><a href="#fs-id1169738977168" title="Copy heading and permalink for Example 3.8.5: Applying the Inverse Function Theorem" aria-label="Copy heading and permalink for Example 3.8.5: Applying the Inverse Function Theorem">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec8-3-15" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-3-15-1-1">Find the derivative of <span class="process-math">\(g(x)=\sqrt[5]{x}\)</span> by applying the inverse function theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch3Sec8-3-15-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-3-15-3-1">
+<span class="process-math">\(g(x)\)</span> is the inverse of <span class="process-math">\(f(x)=x^5.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-15-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.8.6.1"><a href="#sec_Ch3Sec8-3-15-3" title="Copy heading and permalink for Hint 3.8.6.1" aria-label="Copy heading and permalink for Hint 3.8.6.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch3Sec8-3-15-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-3-15-2-1">
+<span class="process-math">\(g(x)=\frac{1}{5}x^{-4/5}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-15-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.8.6.1"><a href="#sec_Ch3Sec8-3-15-2" title="Copy heading and permalink for Solution 3.8.6.1" aria-label="Copy heading and permalink for Solution 3.8.6.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.8.6"><a href="#sec_Ch3Sec8-3-15" title="Copy heading and permalink for Checkpoint 3.8.6" aria-label="Copy heading and permalink for Checkpoint 3.8.6">🔗</a></div>
+</article></details>
+<div class="para" id="sec_Ch3Sec8-3-16">From the previous example, we see that we can use the inverse function theorem to extend the power rule to exponents of the form <span class="process-math">\(\frac{1}{n},\)</span> where <span class="process-math">\(n\)</span> is a positive integer. This extension will ultimately allow us to differentiate <span class="process-math">\(x^q,\)</span> where <span class="process-math">\(q\)</span> is any rational number.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="sec_Ch3Sec8-3-17"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Extending the Power Rule to Rational Exponents.</span>
+</h4>
+<div class="para" id="sec_Ch3Sec8-3-17-2">The power rule may be extended to rational exponents. That is, if <span class="process-math">\(n\)</span> is a positive integer, then<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-17-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch3Sec8-3-17-3">
+\begin{equation*}
+\frac{d}{dx}(x^{1/n})=\frac{1}{n}x^{(1/n)−1}.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch3Sec8-3-17-4">Also, if <span class="process-math">\(n\)</span> is a positive integer and <span class="process-math">\(m\)</span> is an arbitrary integer, then<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-17-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch3Sec8-3-17-5">
+\begin{equation*}
+\frac{d}{dx}(x^{m/n})=\frac{m}{n}x^{(m/n)−1}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Theorem 3.8.7: Extending the Power Rule to Rational Exponents"><a href="#sec_Ch3Sec8-3-17" title="Copy heading and permalink for Theorem 3.8.7: Extending the Power Rule to Rational Exponents" aria-label="Copy heading and permalink for Theorem 3.8.7: Extending the Power Rule to Rational Exponents">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec8-3-17-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="title">Proof.</span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="sec_Ch3Sec8-3-17-6-2">The function <span class="process-math">\(g(x)=x^{1/n}\)</span> is the inverse of the function <span class="process-math">\(f(x)=x^n.\)</span> Since <span class="process-math">\(g'(x)=\frac{1}{f'(g(x))},\)</span> begin by finding <span class="process-math">\(f'(x).\)</span> Thus,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-17-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch3Sec8-3-17-6-3">
+\begin{equation*}
+f'(x)=nx^{n-1} \text{ and } f'(g(x))=n(x^{1/n})^{n−1}=nx^{(n−1)/n}.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch3Sec8-3-17-6-4">Finally,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-17-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch3Sec8-3-17-6-5">
+\begin{equation*}
+g'(x)=\frac{1}{nx^{(n−1)/n}}=\frac{1}{n}x^{(1−n)/n}=\frac{1}{n}x^{(1/n)−1}.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch3Sec8-3-17-6-6">To differentiate <span class="process-math">\(x^{m/n}\)</span> we must rewrite it as <span class="process-math">\((x^{1/n})^m\)</span> and apply the chain rule. Thus,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-17-6-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch3Sec8-3-17-6-7">
+\begin{equation*}
+\frac{d}{dx}(x^{m/n})=\frac{d}{dx}((x^{1/n})^m)=m(x^{1/n})^{m−1}\cdot \frac{1}{n}x^{(1/n)−1}=\frac{m}{n}x^{(m/n)−1}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Proof 3.8.7.1: Proof"><a href="#sec_Ch3Sec8-3-17-6" title="Copy heading and permalink for Proof 3.8.7.1: Proof" aria-label="Copy heading and permalink for Proof 3.8.7.1: Proof">🔗</a></div>
+</article></details>
+<article class="example example-like" id="fs-id1169739298630"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Power Rule to a Rational Power.</span>
+</h4>
+<div class="para" id="fs-id1169739298630-2-1">Find the equation of the line tangent to the graph of <span class="process-math">\(y=x^{2/3}\)</span> at <span class="process-math">\(x=8.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739298630-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1169739298630-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169739298630-3-1">First find <span class="process-math">\(\frac{dy}{dx}\)</span> and evaluate it at <span class="process-math">\(x=8.\)</span> Since<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739298630-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169739298630-3-2">
+\begin{equation*}
+\frac{dy}{dx}=\frac{2}{3}x^{−1/3} \text{ and } \left.\frac{dy}{dx}\right|_{x=8}=\frac{1}{3}
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169739298630-3-3">the slope of the tangent line to the graph at <span class="process-math">\(x=8\)</span> is <span class="process-math">\(\frac{1}{3}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739298630-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1169739298630-3-4">Substituting <span class="process-math">\(x=8\)</span> into the original function, we obtain <span class="process-math">\(y=4.\)</span> Thus, the tangent line passes through the point <span class="process-math">\((8,4).\)</span> Substituting into the point-slope formula for a line, we obtain the tangent line<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739298630-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169739298630-3-5">
+\begin{equation*}
+y=\frac{1}{3}x+\frac{4}{3}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 3.8.8.1"><a href="#fs-id1169739298630-3" title="Copy heading and permalink for Solution 3.8.8.1" aria-label="Copy heading and permalink for Solution 3.8.8.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.8.8: Applying the Power Rule to a Rational Power"><a href="#fs-id1169739298630" title="Copy heading and permalink for Example 3.8.8: Applying the Power Rule to a Rational Power" aria-label="Copy heading and permalink for Example 3.8.8: Applying the Power Rule to a Rational Power">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec8-3-19" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-3-19-1-1">Find the derivative of <span class="process-math">\(s(t)=\sqrt{2t+1}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch3Sec8-3-19-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-3-19-3-1">Use the chain rule.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-19-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.8.9.1"><a href="#sec_Ch3Sec8-3-19-3" title="Copy heading and permalink for Hint 3.8.9.1" aria-label="Copy heading and permalink for Hint 3.8.9.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch3Sec8-3-19-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-3-19-2-1">
+<span class="process-math">\(s'(t)=(2t+1)^{-1/2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-3-19-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.8.9.1"><a href="#sec_Ch3Sec8-3-19-2" title="Copy heading and permalink for Solution 3.8.9.1" aria-label="Copy heading and permalink for Solution 3.8.9.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.8.9"><a href="#sec_Ch3Sec8-3-19" title="Copy heading and permalink for Checkpoint 3.8.9" aria-label="Copy heading and permalink for Checkpoint 3.8.9">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 3.8.1: The Derivative of an Inverse Function"><a href="#sec_Ch3Sec8-3" title="Copy heading and permalink for Subsection 3.8.1: The Derivative of an Inverse Function" aria-label="Copy heading and permalink for Subsection 3.8.1: The Derivative of an Inverse Function">🔗</a></div>
+</section>
+<section class="subsection" id="sec_Ch3Sec8-4">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of Inverse Trigonometric Functions</span>
+</h3>
+<div class="para" id="sec_Ch3Sec8-4-2">We now turn our attention to finding derivatives of inverse trigonometric functions. These derivatives will prove invaluable in the study of integration later in this text. The derivatives of inverse trigonometric functions are quite surprising in that their derivatives are actually algebraic functions. Previously, derivatives of algebraic functions have proven to be algebraic functions and derivatives of trigonometric functions have been shown to be trigonometric functions. Here, for the first time, we see that the derivative of a function need not be of the same type as the original function.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1169739208944"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivative of the Inverse Sine Function.</span>
+</h4>
+<div class="para" id="fs-id1169739208944-2-1">Use the inverse function theorem to find the derivative of <span class="process-math">\(g(x)=\sin^{−1}x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739208944-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1169739208944-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169739208944-3-1">To see that <span class="process-math">\(\cos  (\sin^{-1}x)=\sqrt{1−x^2},\)</span> consider the following argument. Set <span class="process-math">\(\sin^{-1}x=\theta .\)</span> In this case, <span class="process-math">\(\sin \theta =x\)</span> where <span class="process-math">\(−\frac{\pi}{2}≤\theta ≤\frac{\pi}{2}.\)</span> We begin by considering the case where <span class="process-math">\(0\lt \theta \lt \frac{\pi}{2}.\)</span> Since <span class="process-math">\(\theta \)</span> is an acute angle, we may construct a right triangle having acute angle <span class="process-math">\(\theta ,\)</span> a hypotenuse of length <span class="process-math">\(1\)</span> and the side opposite angle <span class="process-math">\(\theta \)</span> having length <span class="process-math">\(x.\)</span> From the Pythagorean theorem, the side adjacent to angle <span class="process-math">\(\theta \)</span> has length <span class="process-math">\(\sqrt{1−x^2}.\)</span> This triangle is shown in <a href="sec_Ch3Sec8.html#CNX_Calc_Figure_03_07_002" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_03_07_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.11">Figure 3.8.11</a>. Using the triangle, we see that <span class="process-math">\(\cos  (\sin^{-1}x)=\cos  \theta =\sqrt{1−x^2}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739208944-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_03_07_002"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch3/CNX_Calc_Figure_03_07_002.jpg" class="contained" alt='"A right triangle with angle \theta , opposite side x, hypotenuse 1, and adjacent side equal to the square root of the quantity (1 – x2)."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Using a right triangle having acute angle <span class="process-math">\(\theta ,\)</span> a hypotenuse of length <span class="process-math">\(1,\)</span> and the side opposite angle <span class="process-math">\(\theta \)</span> having length <span class="process-math">\(x,\)</span> we can see that <span class="process-math">\(\cos  (\sin^{-1}x)=\cos  \theta =\sqrt{1−x^2}.\)</span><div class="autopermalink" data-description="Figure 3.8.11"><a href="#CNX_Calc_Figure_03_07_002" title="Copy heading and permalink for Figure 3.8.11" aria-label="Copy heading and permalink for Figure 3.8.11">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="fs-id1169739208944-3-3">In the case where <span class="process-math">\(−\frac{\pi}{2}\lt \theta \lt 0,\)</span> we make the observation that <span class="process-math">\(0\lt -\theta \lt \frac{\pi}{2}\)</span> and hence<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739208944-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_03_07_002.html" id="fs-id1169739208944-3-4">
+\begin{equation*}
+\cos  (\sin^{-1}x)=\cos  \theta =\cos  (-\theta )=\sqrt{1−x^2}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169739208944-3-5">Now if <span class="process-math">\(\theta =\frac{\pi}{2}\)</span> or <span class="process-math">\(\theta =−\frac{\pi}{2},x=1\)</span> or <span class="process-math">\(x=−1,\)</span> and since in either case <span class="process-math">\(\cos  \theta =0\)</span> and <span class="process-math">\(\sqrt{1−x^2}=0,\)</span> we have<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739208944-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_03_07_002.html" id="fs-id1169739208944-3-6">
+\begin{equation*}
+\cos  (\sin^{-1}x)=\cos  \theta =\sqrt{1−x^2}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169739208944-3-7">Consequently, in all cases, <span class="process-math">\(\cos  (\sin^{-1}x)=\sqrt{1−x^2}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739208944-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.8.10.1"><a href="#fs-id1169739208944-3" title="Copy heading and permalink for Solution 3.8.10.1" aria-label="Copy heading and permalink for Solution 3.8.10.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.8.10: Derivative of the Inverse Sine Function"><a href="#fs-id1169739208944" title="Copy heading and permalink for Example 3.8.10: Derivative of the Inverse Sine Function" aria-label="Copy heading and permalink for Example 3.8.10: Derivative of the Inverse Sine Function">🔗</a></div>
+</article>
+<article class="example example-like" id="fs-id1169736662939"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Chain Rule to the Inverse Sine Function.</span>
+</h4>
+<div class="para" id="fs-id1169736662939-2-1">Apply the chain rule to the formula derived in <a href="sec_Ch3Sec8.html#fs-id1169738977168" class="xref" data-knowl="./knowl/xref/fs-id1169738977168.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.8.5: Applying the Inverse Function Theorem">Example 3.8.5</a> to find the derivative of <span class="process-math">\(h(x)=\sin^{-1}(g(x))\)</span> and use this result to find the derivative of <span class="process-math">\(h(x)=\sin^{-1}(2x^3).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736662939-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1169736662939-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169736662939-3-1">Applying the chain rule to <span class="process-math">\(h(x)=\sin^{-1}(g(x)),\)</span> we have<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736662939-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169736662939-3-2">
+\begin{equation*}
+h'(x)=\frac{1}{\sqrt{1−(g(x))^2}}g'(x).
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169736662939-3-3">Now let <span class="process-math">\(g(x)=2x^3,\)</span> so <span class="process-math">\(g'(x)=6x^2.\)</span> Substituting into the previous result, we obtain<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736662939-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169736662939-3-4">
+\begin{align*}
+h'(x)\amp=\frac{1}{\sqrt{1−4x^6}}\cdot 6x^2\\
+\amp=\frac{6x^2}{\sqrt{1−4x^6}}.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Solution 3.8.12.1"><a href="#fs-id1169736662939-3" title="Copy heading and permalink for Solution 3.8.12.1" aria-label="Copy heading and permalink for Solution 3.8.12.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.8.12: Applying the Chain Rule to the Inverse Sine Function"><a href="#fs-id1169736662939" title="Copy heading and permalink for Example 3.8.12: Applying the Chain Rule to the Inverse Sine Function" aria-label="Copy heading and permalink for Example 3.8.12: Applying the Chain Rule to the Inverse Sine Function">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec8-4-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-4-5-1-1">Use the inverse function theorem to find the derivative of <span class="process-math">\(g(x)=\tan^{-1}x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-4-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch3Sec8-4-5-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-4-5-3-1">The inverse of <span class="process-math">\(g(x)\)</span> is <span class="process-math">\(f(x)=\tan x.\)</span> Use <a href="sec_Ch3Sec8.html#fs-id1169738977168" class="xref" data-knowl="./knowl/xref/fs-id1169738977168.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.8.5: Applying the Inverse Function Theorem">Example 3.8.5</a> as a guide.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-4-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.8.13.1"><a href="#sec_Ch3Sec8-4-5-3" title="Copy heading and permalink for Hint 3.8.13.1" aria-label="Copy heading and permalink for Hint 3.8.13.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch3Sec8-4-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-4-5-2-1">
+<span class="process-math">\(g'(x)=\frac{1}{1+x^2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-4-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.8.13.1"><a href="#sec_Ch3Sec8-4-5-2" title="Copy heading and permalink for Solution 3.8.13.1" aria-label="Copy heading and permalink for Solution 3.8.13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.8.13"><a href="#sec_Ch3Sec8-4-5" title="Copy heading and permalink for Checkpoint 3.8.13" aria-label="Copy heading and permalink for Checkpoint 3.8.13">🔗</a></div>
+</article></details>
+<div class="para" id="sec_Ch3Sec8-4-6">The derivatives of the remaining inverse trigonometric functions may also be found by using the inverse function theorem. These formulas are provided in the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="sec_Ch3Sec8-4-7"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of Inverse Trigonometric Functions.</span>
+</h4>
+<div class="displaymath process-math" id="sec_Ch3Sec8-4-7-2">
+\begin{equation}
+\frac{d}{dx} \sin^{-1}x=\frac{1}{\sqrt{1−x^2}}\tag{3.8.1}
+\end{equation}
+</div>
+<div class="displaymath process-math" id="fs-id1169736659297">
+\begin{equation}
+\frac{d}{dx} \cos^{-1}x=\frac{−1}{\sqrt{1−x^2}}\tag{3.8.2}
+\end{equation}
+</div>
+<div class="displaymath process-math" id="fs-id1169739307948">
+\begin{equation}
+\frac{d}{dx} \tan^{-1}x=\frac{1}{1+x^2}\tag{3.8.3}
+\end{equation}
+</div>
+<div class="displaymath process-math" id="sec_Ch3Sec8-4-7-5">
+\begin{equation}
+\frac{d}{dx}\cot^{-1}x=\frac{−1}{1+x^2}\tag{3.8.4}
+\end{equation}
+</div>
+<div class="displaymath process-math" id="sec_Ch3Sec8-4-7-6">
+\begin{equation}
+\frac{d}{dx} \sec^{-1}x=\frac{1}{|x|\sqrt{x^2−1}}\tag{3.8.5}
+\end{equation}
+</div>
+<div class="displaymath process-math" id="sec_Ch3Sec8-4-7-7">
+\begin{equation}
+\frac{d}{dx} \csc^{-1}x=\frac{−1}{|x|\sqrt{x^2−1}}\tag{3.8.6}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Theorem 3.8.14: Derivatives of Inverse Trigonometric Functions"><a href="#sec_Ch3Sec8-4-7" title="Copy heading and permalink for Theorem 3.8.14: Derivatives of Inverse Trigonometric Functions" aria-label="Copy heading and permalink for Theorem 3.8.14: Derivatives of Inverse Trigonometric Functions">🔗</a></div>
+</article>
+<div class="para" id="sec_Ch3Sec8-4-8">Recall that two trigonometric functions are called <dfn class="terminology">cofunctions</dfn> if they are related by complementary angles, such as <span class="process-math">\(\sin(\theta) =\ds\cos\left(\frac{\pi}{2}-\theta\right)\)</span> and <span class="process-math">\(\tan(\theta) = \ds\cot\left(\frac{\pi}{2}-\theta\right)\text{.}\)</span> Their inverses satisfy similar relationships, for example <span class="process-math">\(\sin^{-1}(x) +\cos^{-1}(x) = \ds\frac{\pi}{2}\text{.}\)</span> Differentiating both sides of this equation with respect to <span class="process-math">\(x\)</span> gives <span class="process-math">\(\ds\frac{d}{dx} \sin^{-1}(x) +\frac{d}{dx} \cos^{-1}(x) =0\text{,}\)</span> so the derivatives must be negatives of each other. This explains why the formulas for inverse cofunctions differ only by a change in sign, a pattern which also holds for <span class="process-math">\(\tan^{-1}(x)\)</span> and <span class="process-math">\(\cot^{-1}(x)\text{,}\)</span>  as well as <span class="process-math">\(\sec^{-1}(x) \)</span> and <span class="process-math">\(\csc^{-1}(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-4-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1169739282715"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying Differentiation Formulas to an Inverse Tangent Function.</span>
+</h4>
+<div class="para" id="fs-id1169739282715-2-1">Find the derivative of <span class="process-math">\(f(x)=\tan^{-1}(x^2).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739282715-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1169739282715-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169739282715-3-1">Let <span class="process-math">\(g(x)=x^2,\)</span> so <span class="process-math">\(g'(x)=2x.\)</span> Substituting into <a href="sec_Ch3Sec8.html#fs-id1169739307948" class="xref" data-knowl="./knowl/xref/fs-id1169739307948.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.8.3">(3.8.3)</a>, we obtain<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739282715-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1169739307948.html" id="fs-id1169739282715-3-2">
+\begin{equation*}
+f'(x)=\frac{1}{1+(x^2)^2}\cdot (2x).
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169739282715-3-3">Simplifying, we have<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739282715-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1169739307948.html" id="fs-id1169739282715-3-4">
+\begin{equation*}
+f'(x)=\frac{2}{x}{1+x^4}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 3.8.15.1"><a href="#fs-id1169739282715-3" title="Copy heading and permalink for Solution 3.8.15.1" aria-label="Copy heading and permalink for Solution 3.8.15.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.8.15: Applying Differentiation Formulas to an Inverse Tangent Function"><a href="#fs-id1169739282715" title="Copy heading and permalink for Example 3.8.15: Applying Differentiation Formulas to an Inverse Tangent Function" aria-label="Copy heading and permalink for Example 3.8.15: Applying Differentiation Formulas to an Inverse Tangent Function">🔗</a></div>
+</article>
+<article class="example example-like" id="fs-id1169739301501"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying Differentiation Formulas to an Inverse Sine Function.</span>
+</h4>
+<div class="para" id="fs-id1169739301501-2-1">Find the derivative of <span class="process-math">\(h(x)=x^2\sin^{-1}x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739301501-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1169739301501-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169739301501-3-1">By applying the product rule, we have<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169739301501-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169739301501-3-2">
+\begin{equation*}
+h'(x)=2x \sin^{-1}x+\frac{1}{\sqrt{1−x^2}}\cdot x^2.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 3.8.16.1"><a href="#fs-id1169739301501-3" title="Copy heading and permalink for Solution 3.8.16.1" aria-label="Copy heading and permalink for Solution 3.8.16.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.8.16: Applying Differentiation Formulas to an Inverse Sine Function"><a href="#fs-id1169739301501" title="Copy heading and permalink for Example 3.8.16: Applying Differentiation Formulas to an Inverse Sine Function" aria-label="Copy heading and permalink for Example 3.8.16: Applying Differentiation Formulas to an Inverse Sine Function">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec8-4-11" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-4-11-1-1">Find the derivative of <span class="process-math">\(h(x)=\cos^{-1}(3x−1).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-4-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch3Sec8-4-11-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-4-11-3-1">Use <a href="sec_Ch3Sec8.html#fs-id1169736659297" class="xref" data-knowl="./knowl/xref/fs-id1169736659297.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.8.2">(3.8.2)</a>. with <span class="process-math">\(g(x)=3x−1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-4-11-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.8.17.1"><a href="#sec_Ch3Sec8-4-11-3" title="Copy heading and permalink for Hint 3.8.17.1" aria-label="Copy heading and permalink for Hint 3.8.17.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch3Sec8-4-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-4-11-2-1">
+<span class="process-math">\(h'(x)=\frac{−3}{\sqrt{6x−9x^2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-4-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.8.17.1"><a href="#sec_Ch3Sec8-4-11-2" title="Copy heading and permalink for Solution 3.8.17.1" aria-label="Copy heading and permalink for Solution 3.8.17.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.8.17"><a href="#sec_Ch3Sec8-4-11" title="Copy heading and permalink for Checkpoint 3.8.17" aria-label="Copy heading and permalink for Checkpoint 3.8.17">🔗</a></div>
+</article></details>
+<article class="example example-like" id="fs-id1169736614197"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applying the Inverse Tangent Function.</span>
+</h4>
+<div class="para" id="fs-id1169736614197-2-1">The position of a particle at time <span class="process-math">\(t\)</span> is given by <span class="process-math">\(s(t)=\tan^{-1}(\frac{1}{t})\)</span> for <span class="process-math">\(t≥\frac{1}{2}.\)</span> Find the velocity of the particle at time <span class="process-math">\(t=1.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736614197-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1169736614197-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1169736614197-3-1">Begin by differentiating <span class="process-math">\(s(t)\)</span> in order to find <span class="process-math">\(v(t).\)</span> Thus,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736614197-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169736614197-3-2">
+\begin{equation*}
+v(t)=s'(t)=\frac{1}{1+(\frac{1}{t})^2}\cdot \frac{−1}{t^2}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169736614197-3-3">Simplifying, we have<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736614197-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1169736614197-3-4">
+\begin{equation*}
+v(t)=−\frac{1}{t^2+1}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1169736614197-3-5">Thus, <span class="process-math">\(v(1)=−\frac{1}{2}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1169736614197-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.8.18.1"><a href="#fs-id1169736614197-3" title="Copy heading and permalink for Solution 3.8.18.1" aria-label="Copy heading and permalink for Solution 3.8.18.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.8.18: Applying the Inverse Tangent Function"><a href="#fs-id1169736614197" title="Copy heading and permalink for Example 3.8.18: Applying the Inverse Tangent Function" aria-label="Copy heading and permalink for Example 3.8.18: Applying the Inverse Tangent Function">🔗</a></div>
+</article>
+<details id="sec_Ch3Sec8-4-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-4-13-1-1">Find the equation of the line tangent to the graph of <span class="process-math">\(f(x)=\sin^{-1}x\)</span> at <span class="process-math">\(x=0.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-4-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch3Sec8-4-13-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-4-13-3-1">
+<span class="process-math">\(f'(0)\)</span> is the slope of the tangent line.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-4-13-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.8.19.1"><a href="#sec_Ch3Sec8-4-13-3" title="Copy heading and permalink for Hint 3.8.19.1" aria-label="Copy heading and permalink for Hint 3.8.19.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch3Sec8-4-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch3Sec8-4-13-2-1">
+<span class="process-math">\(y=x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch3Sec8-4-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.8.19.1"><a href="#sec_Ch3Sec8-4-13-2" title="Copy heading and permalink for Solution 3.8.19.1" aria-label="Copy heading and permalink for Solution 3.8.19.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.8.19"><a href="#sec_Ch3Sec8-4-13" title="Copy heading and permalink for Checkpoint 3.8.19" aria-label="Copy heading and permalink for Checkpoint 3.8.19">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 3.8.2: Derivatives of Inverse Trigonometric Functions"><a href="#sec_Ch3Sec8-4" title="Copy heading and permalink for Subsection 3.8.2: Derivatives of Inverse Trigonometric Functions" aria-label="Copy heading and permalink for Subsection 3.8.2: Derivatives of Inverse Trigonometric Functions">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 3.8: Derivatives of Inverse Functions"><a href="#sec_Ch3Sec8" title="Copy heading and permalink for Section 3.8: Derivatives of Inverse Functions" aria-label="Copy heading and permalink for Section 3.8: Derivatives of Inverse Functions">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
