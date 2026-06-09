@@ -123,7 +123,7 @@ As we develop these formulas, we need to make certain basic assumptions. The pro
 </table>
 -->
 <p id="fs-id1169738213815">We know that <m>2.7182\lt e\lt 2.7183.</m></p>
-<p id="fs-id1169737978597">The graph of <m>E(x)=e^x</m> together with the line <m>y=x+1</m> are shown in <xref ref="CNX_Calc_Figure_03_09_002"/>. This line is tangent to the graph of <m>E(x)=e^x</m> at <m>x=0.</m></p>
+<p id="fs-id1169737978597">The graph of <m>E(x)=e^x</m> together with the line <m>y=x+1</m> are shown in <xref ref="CNX_Calc_Figure_03_09_002"/>. By <xref ref="thm-eulernumberlimit"/>, this line is tangent to the graph of <m>E(x)=e^x</m> at <m>x=0.</m></p>
 <figure xml:id="CNX_Calc_Figure_03_09_002">
   <image source="ch3/CNX_Calc_Figure_03_09_002.jpg" width="50%">
 <description>"Graph of the function ex along with its tangent at (0, 1), x + 1."</description></image> <caption>The tangent line to <m>E(x)=e^x</m> at <m>x=0</m> has slope 1.</caption>
@@ -310,16 +310,15 @@ More generally, if <m>h(x)=\log_b(g(x)),</m> then for all values of <m>x</m> for
 More generally, if <m>h(x)=b^{g(x)},</m> then
 <men xml:id="fs-id1169738045159">h'(x)=b^{g(x)}g\text{ ' }(x) \ln  b.</men></li>
 </ol>
-<!--Commenting out proof
 <proof>
 <p id="fs-id1169738184804">If <m>y=\log_bx,</m> then <m>b^y=x.</m> It follows that <m>\ln  (b^y)=\ln  x.</m> Thus <m>y \ln  b=\ln  x.</m> Solving for <m>y,</m> we have <m>y=\frac{\ln  x}{\ln  b}.</m> Differentiating and keeping in mind that <m>\ln  b</m> is a constant, we see that</p>
 <me>\frac{dy}{dx}=\frac{1}{x \ln  b}.</me>
 <p id="fs-id1169738211864">The derivative in <xref ref="fs-id1169738186308"/> now follows from the chain rule.</p>
 <p id="fs-id1169737954089">If <m>y=b^x,</m> then <m>\ln  y=x \ln  b.</m> Using implicit differentiation, again keeping in mind that <m>\ln  b</m> is constant, it follows that <m>\frac{1}{y} \frac{dy}{dx}=\ln  b.</m> Solving for <m>\frac{dy}{dx}</m> and substituting <m>y=b^x,</m> we see that</p>
 <me>\frac{dy}{dx}=y \ln  b=b^x\ln  b.</me>
-<p id="fs-id1169737145057">The more general derivative (<xref ref="fs-id1169738045159"/>) follows from the chain rule.</p>
+<p id="fs-id1169737145057">The more general derivative <xref ref="fs-id1169738045159"/> follows from the chain rule.</p>
 </proof>
--->
+
 </theorem>
 <example xml:id="fs-id1169737145066">
 <title>Applying Derivative Formulas</title>
@@ -343,7 +342,7 @@ More generally, if <m>h(x)=b^{g(x)},</m> then
 <p id="fs-id1169738045067">To find the slope, we must evaluate <m>\frac{dy}{dx}</m> at <m>x=1.</m> Using <xref ref="fs-id1169738186308"/>, we see that</p>
 <me>\frac{dy}{dx}=\frac{3}{ \ln  2(3x+1)}.</me>
 <p id="fs-id1169738186987">By evaluating the derivative at <m>x=1,</m> we see that the tangent line has slope</p>
-<me>\left\;\frac{dy}{dx}\right|_{x=1}=\frac{3}{4 \ln  2}=\frac{3}{ \ln  16}.</me>
+<me>\left.\frac{dy}{dx}\right|_{x=1}=\frac{3}{4 \ln  2}=\frac{3}{ \ln  16}.</me>
 </solution>
 </example>
 <exercise>  <statement id="fs-id1169738240288">
@@ -357,12 +356,12 @@ More generally, if <m>h(x)=b^{g(x)},</m> then
 </hint>
 </exercise>
 </subsection>
-<!-- Commenting out loogaritmic differentiation and extended power rule
+
 <subsection id="fs-id1169737933453">
 <title>Logarithmic Differentiation</title>
 <p id="fs-id1169737933458">At this point, we can take derivatives of functions of the form <m>y=(g(x))^n</m> for certain values of <m>n,</m> as well as functions of the form <m>y=b^{g(x)},</m> where <m>b\gt 0</m> and <m>b\neq 1.</m> Unfortunately, we still do not know the derivatives of functions such as <m>y=x^x</m> or <m>y=x^\pi.</m> These functions require a technique called <term>logarithmic differentiation</term>, which allows us to differentiate any function of the form <m>h(x)=g(x)^f(x).</m> It can also be used to convert a very complex differentiation problem into a simpler one, such as finding the derivative of <m>y=\frac{x\sqrt{2x+1}}{e^x\sin^3x}.</m> We outline this technique in the following problem-solving strategy.</p>
-<note id="fs-id1169738197957" class="problem-solving">
-<title>Problem-Solving Strategy: Using Logarithmic Differentiation</title>
+<problem id="fs-id1169738197957">
+<title>Using Logarithmic Differentiation</title>
 <ol>
 <li>To differentiate <m>y=h(x)</m> using logarithmic differentiation, take the natural logarithm of both sides of the equation to obtain <m>\ln  y=\ln  (h(x)).</m></li>
 <li>Use properties of logarithms to expand <m>\ln  (h(x))</m> as much as possible.</li>
@@ -370,7 +369,7 @@ More generally, if <m>h(x)=b^{g(x)},</m> then
 <li>Multiply both sides of the equation by <m>y</m> to solve for <m>\frac{dy}{dx}.</m></li>
 <li>Replace <m>y</m> by <m>h(x).</m></li>
 </ol>
-</note>
+</problem>
 <example xml:id="fs-id1169738238112">
 <title>Using Logarithmic Differentiation</title>
  <statement id="fs-id1169738238117">
@@ -404,6 +403,7 @@ More generally, if <m>h(x)=b^{g(x)},</m> then
 </md>
 </solution>
 </example>
+<p>Now we are ready to prove the general version of <xref ref="thm-generalpowerrule"/> stated in <xref ref="sec_Ch3Sec3"/> .</p>
 <example xml:id="fs-id1169738228453">
   <title>Extending the Power Rule</title>
  <statement id="fs-id1169738228457">
@@ -440,7 +440,6 @@ More generally, if <m>h(x)=b^{g(x)},</m> then
 <p id="fs-id1169738233597">Use the result from <xref ref="fs-id1169738228453"/>.</p>
 </hint> </exercise>
 </subsection>
--->
 
 
 
