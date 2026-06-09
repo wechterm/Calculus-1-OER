@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_Ch3Sec9" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Derivatives of Exponential and Logarithmic Functions</title>
+  <introduction>
+  <title> Learning Objectives</title>
+  <ul>
+<li>Find the derivative of exponential functions.</li>
+<li>Find the derivative of logarithmic functions.</li>
+<!-- Commenting out logarithmic differentiation
+<li>Use logarithmic differentiation to determine the derivative of a function.</li>
+-->
+</ul>
+<p id="fs-id1169738221270">So far, we have learned how to differentiate a variety of functions, including trigonometric, inverse, and implicit functions. In this section, we explore derivatives of exponential and logarithmic functions. As we discussed in <xref ref="sec_Ch1Sec5">Exponential and Logarithmic Functions</xref>, exponential functions play an important role in modeling population growth and the decay of radioactive materials. Logarithmic functions can help rescale large quantities and are particularly helpful for rewriting complicated expressions.</p>
+</introduction>
+<subsection id="fs-id1169737795671">
+<title>Derivative of the Exponential Function</title>
+<p id="fs-id1169738221359">Just as when we found the derivatives of other functions, we can find the derivatives of exponential and logarithmic functions using formulas.</p>
+<!-- Commenting out proof
+As we develop these formulas, we need to make certain basic assumptions. The proofs that these assumptions hold are beyond the scope of this course.</p>
+<p id="fs-id1169738045927">First of all, we begin with the assumption that the function <m>B(x)=b^x,b\gt 0,</m> is defined for every real number and is continuous. In previous courses, the values of exponential functions for all rational numbers were defined—beginning with the definition of <m>b^n,</m> where <m>n</m> is a positive integer—as the product of <m>b</m> multiplied by itself <m>n</m> times. Later, we defined <m>b^0=1,b^{-n}=\frac{1}{b^n},</m> for a positive integer <m>n,</m> and <m>b^{s/t}=(\sqrt[t]{b})^s</m> for positive integers <m>s</m> and <m>t.</m> These definitions leave open the question of the value of <m>b^r</m> where
+<m>r</m> is an arbitrary real number. By assuming the <em>continuity</em> of <m>B(x)=b^x,b\gt 0,</m> we may interpret <m>b^r</m> as <m>\lim_{x\to r}b^x</m> where the values of <m>x</m> as we take the limit are rational. For example, we may view <m>4^\pi</m> as the number satisfying</p>
+<md>
+  <mrow>4^3\lt 4^\pi\lt 4^4,4^{3.1}\lt 4^\pi\lt 4^{3.2},4^{3.14}\lt 4^\pi\lt 4^{3.15},</mrow>
+  <mrow>4^{3.141}\lt 4^\pi\lt 4^{3.142},4^{3.1415}\lt 4^\pi\lt 4^{3.1416}, \dots.</mrow></md>
+<p id="fs-id1169737765653">As we see in the following table, <m>4^\pi\approx77.88.</m></p>
+<table xml:id="fs-id1169738222068" summary="This table has seven rows and four columns. The first row is a header row and it labels each column. The first column header is x, the second column header is 4x, the third column header is x, and the fourth column header is 4x. Under the first column are the values 43, 43.1, 43.14, 43.141, 43.1415. Under the second column are the values 64, 73.5166947198, 77.7084726013, 77.8162741237, 77.8702309526, 77.8799471543. Under the third column are the values 43.141593, 43.1416, 43.142, 43.15, 43.2, and 44. Under the fourth column are the values 77.8802710486, 77.8810268071, 77.9242251944, 78.7932424541, 84.4485062895, and 256.">
+<title>Approximating a Value of <m>4^\pi</m></title>
+<tabular>
+<row valign="top" header="yes">
+<cell valign="top" halign ="left"><m>x</m></cell>
+<cell valign="top" halign ="left"><m>4^x</m></cell>
+<cell valign="top" halign ="left"><m>x</m></cell>
+<cell valign="top" halign ="left"><m>4^x</m></cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>4^3</m></cell>
+<cell valign="top" halign ="left">64</cell>
+<cell valign="top" halign ="left"><m>4^{3.141593}</m></cell>
+<cell valign="top" halign ="left">77.8802710486</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>4^{3.1}</m></cell>
+<cell valign="top" halign ="left">73.5166947198</cell>
+<cell valign="top" halign ="left"><m>4^{3.1416}</m></cell>
+<cell valign="top" halign ="left">77.8810268071</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>4^{3.14}</m></cell>
+<cell valign="top" halign ="left">77.7084726013</cell>
+<cell valign="top" halign ="left"><m>4^{3.142}</m></cell>
+<cell valign="top" halign ="left">77.9242251944</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>4^{3.141}</m></cell>
+<cell valign="top" halign ="left">77.8162741237</cell>
+<cell valign="top" halign ="left"><m>4^{3.15}</m></cell>
+<cell valign="top" halign ="left">78.7932424541</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>4^{3.1415}</m></cell>
+<cell valign="top" halign ="left">77.8702309526</cell>
+<cell valign="top" halign ="left"><m>4^{3.2}</m></cell>
+<cell valign="top" halign ="left">84.4485062895</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>4^{3.14159}</m></cell>
+<cell valign="top" halign ="left">77.8799471543</cell>
+<cell valign="top" halign ="left"><m>4^4</m></cell>
+<cell valign="top" halign ="left">256</cell>
+</row>
+</tabular>
+</table>
+<p id="fs-id1169737707453">We also assume that for <m>B(x)=b^x,b\gt 0,</m> the value <m>B'(0)</m> of the derivative exists. In this section, we show that by making this one additional assumption, it is possible to prove that the function <m>B(x)</m> is differentiable everywhere.</p>
+<p id="fs-id1169737728646">We make one final assumption: that there is a unique value of <m>b\gt 0</m> for which <m>B'(0)=1.</m> We define <m>e</m> to be this unique value, as we did in <xref ref="sec_Ch1Sec5">Exponential and Logarithmic Functions</xref>. <xref ref="CNX_Calc_Figure_03_09_001"/> provides graphs of the functions <m>y=2^x,y=3^x,y=2.7^{x},</m> and <m>y=2.8^{x}.</m> A visual estimate of the slopes of the tangent lines to these functions at 0 provides evidence that the value of <m>e</m> lies somewhere between 2.7 and 2.8. The function <m>E(x)=e^x</m> is called the <term>natural exponential function</term>. Its inverse, <m>L(x)=\log_e x=\ln  x</m> is called the <term>natural logarithmic function</term>.</p>
+<figure xml:id="CNX_Calc_Figure_03_09_001">
+<image source="ch3/CNX_Calc_Figure_03_09_001.jpg" width="50%">
+<description>"The graphs of 3x, 2.8x, 2.7x, and 2x are shown. In quadrant I, their order from least to greatest is 2x, 2.7x, 2.8x, and 3x. In quadrant II, this order is reversed. All cross the y-axis at (0, 1)." </description></image> <caption>The graph of <m>E(x)=e^x</m> is between <m>y=2^x</m> and <m>y=3^x.</m></caption>
+</figure>
+<p id="fs-id1169737717318">For a better estimate of <m>e,</m> we may construct a table of estimates of <m>B'(0)</m> for functions of the form <m>B(x)=b^x.</m> Before doing this, recall that</p>
+<me>B'(0)=\lim_{x\to 0}\frac{b^x- b^0}{x- 0}=\lim_{x\to 0}\frac{b^x- 1}{x}\approx\frac{b^x- 1}{x}</me>
+<p id="fs-id1169737790576">for values of <m>x</m> very close to zero. For our estimates, we choose <m>x=0.00001</m> and <m>x=- 0.00001</m> to obtain the estimate</p>
+<me>\frac{b^{-0.00001}- 1}{- 0.00001}\lt B'(0)\lt \frac{b^{0.00001} - 1}{0.00001}.</me>
+<p id="fs-id1169737952624">See the following table.</p>
+<table xml:id="fs-id1169738019199" summary="This table has six rows and four columns. The first row is a header row and it labels each column. The first column header is b, the second column header is (b- 0.00001 -  1)/- 0.00001 \lt  B’(0) \lt  (b0.00001 -  1)/0.00001, the third column header is b, and the fourth column header is (b- 0.00001 -  1)/- 0.00001 \lt  B’(0) \lt  (b0.00001 -  1)/0.00001. Under the first column are the values 2, 2.7, 2.71, 2.718, and 2.7182. Under the second column are the values 0.693145\lt B’(0)\lt 0.69315, 0.993247\lt B’(0)\lt  0.993257, 0.996944\lt B’(0)\lt 0.996954, 0.999891\lt B’(0)\lt  0.999901, and 0.999965\lt B’(0)\lt 0.999975. Under the third column are the values 2.7183, 2.719, 2.72, 2.8, and 3. Under the fourth column are the values 1.000002\lt B’(0)\lt  1.000012, 1.000259\lt B’(0)\lt  1.000269, 1.000627\lt B’(0)\lt 1.000637, 1.029614\lt B’(0)\lt 1.029625, and 1.098606\lt B’(00\lt 1.098618.">
+<title>Estimating a Value of <m>e</m></title>
+<tabular>
+<row valign="top" header="yes">
+<cell valign="top" halign ="left"><m>b</m></cell>
+<cell valign="top" halign ="left"><m>\frac{b^{-0.00001}- 1}{- 0.00001}\lt B'(0)\lt \frac{b^{0.00001} - 1}{0.00001}</m></cell>
+<cell valign="top" halign ="left"><m>b</m></cell>
+<cell valign="top" halign ="left"><m>\frac{b^{-0.00001}- 1}{- 0.00001}\lt B'(0)\lt \frac{b^{0.00001} - 1}{0.00001}</m></cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>2</m></cell>
+<cell valign="top" halign ="left"><m>0.693145\lt B'(0)\lt 0.69315</m></cell>
+<cell valign="top" halign ="left"><m>2.7183</m></cell>
+<cell valign="top" halign ="left"><m>1.000002\lt B'(0)\lt 1.000012</m></cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>2.7</m></cell>
+<cell valign="top" halign ="left"><m>0.993247\lt B'(0)\lt 0.993257</m></cell>
+<cell valign="top" halign ="left"><m>2.719</m></cell>
+<cell valign="top" halign ="left"><m>1.000259\lt B'(0)\lt 1.000269</m></cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>2.71</m></cell>
+<cell valign="top" halign ="left"><m>0.996944\lt B'(0)\lt 0.996954</m></cell>
+<cell valign="top" halign ="left"><m>2.72</m></cell>
+<cell valign="top" halign ="left"><m>1.000627\lt B'(0)\lt 1.000637</m></cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>2.718</m></cell>
+<cell valign="top" halign ="left"><m>0.999891\lt B'(0)\lt 0.999901</m></cell>
+<cell valign="top" halign ="left"><m>2.8</m></cell>
+<cell valign="top" halign ="left"><m>1.029614\lt B'(0)\lt 1.029625</m></cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>2.7182</m></cell>
+<cell valign="top" halign ="left"><m>0.999965\lt B'(0)\lt 0.999975</m></cell>
+<cell valign="top" halign ="left"><m>3</m></cell>
+<cell valign="top" halign ="left"><m>1.098606\lt B'(0)\lt 1.098618</m></cell>
+</row>
+</tabular>
+</table>
+-->
+<p id="fs-id1169738213815">We know that <m>2.7182\lt e\lt 2.7183.</m></p>
+<p id="fs-id1169737978597">The graph of <m>E(x)=e^x</m> together with the line <m>y=x+1</m> are shown in <xref ref="CNX_Calc_Figure_03_09_002"/>. This line is tangent to the graph of <m>E(x)=e^x</m> at <m>x=0.</m></p>
+<figure xml:id="CNX_Calc_Figure_03_09_002">
+  <image source="ch3/CNX_Calc_Figure_03_09_002.jpg" width="50%">
+<description>"Graph of the function ex along with its tangent at (0, 1), x + 1."</description></image> <caption>The tangent line to <m>E(x)=e^x</m> at <m>x=0</m> has slope 1.</caption>
+</figure>
+<p id="fs-id1169738198749">Now that we have laid out our basic assumptions, we begin our investigation by exploring the derivative of <m>B(x)=b^x,b\gt 0.</m> Recall that we have assumed that <m>B'(0)</m> exists. By applying the limit definition to the derivative we conclude that</p>
+<me>B'(0)=\lim_{h\to 0}\frac{b^{0+h}- b^0}{h}=\lim_{h\to 0}\frac{b^h- 1}{h}.</me>
+<p id="fs-id1169738187820">Turning to <m>B'(x),</m> we obtain the following.</p>
+<md>
+  <mrow>B'(x)\amp=\lim_{h\to 0}\frac{b^{x+h}- b^x}{h}\amp \amp \text{ Apply the limit definition of the derivative. }</mrow>
+  <mrow>\amp=\lim_{h\to 0}\frac{b^xb^h- b^x}{h}\amp\amp\text{ Note that } b^{x+h}=b^xb^h.</mrow>
+  <mrow>\amp=\lim_{h\to 0}\frac{b^x(b^h- 1)}{h}\amp\amp\text{ Factor out } b^x.</mrow>
+  <mrow>\amp=b^x\lim_{h\to 0}\frac{b^h- 1}{h}\amp\amp\text{ Apply a property of limits. }</mrow>
+  <mrow>\amp=b^xB'(0)\amp\amp\text{ Use } B'(0)=\lim_{h\to 0}\frac{b^{0+h}- b^0}{h}=\lim_{h\to 0}\frac{b^h- 1}{h}.</mrow>
+</md>
+<p id="fs-id1169738221160">We see that on the basis of the assumption that <m>B(x)=b^x</m> is differentiable at <m>0,B(x)</m> is not only differentiable everywhere, but its derivative is</p>
+<me>B'(x)=b^xB'(0).</me>
+<p id="fs-id1169738183261">For <m>E(x)=e^x,E'(0)=1.</m> Thus, we have <m>E'(x)=e^x.</m> (The value of <m>B'(0)</m> for an arbitrary function of the form <m>B(x)=b^x,b\gt 0,</m> will be derived later.)</p>
+<theorem>
+<title>Derivative of the Natural Exponential Function</title>
+<p id="fs-id1169738220224">Let <m>E(x)=e^x</m> be the natural exponential function. Then</p>
+<me>E'(x)=e^x.</me>
+<p id="fs-id1169737142141">In general,</p>
+<me>\frac{d}{dx}(e^{g(x)})=e^{g(x)}g'(x).</me>
+</theorem>
+<example xml:id="fs-id1169738223456">
+
+<title>Derivative of an Exponential Function</title>
+<!--Commenting out trig
+ <statement id="fs-id1169738223460">
+<p id="fs-id1169738187154">Find the derivative of <m>f(x)=e^{\tan (2x)}.</m></p>
+</statement>
+<solution id="fs-id1169737140842">
+<p id="fs-id1169737140844">Using the derivative formula and the chain rule,</p>
+<md><mrow>f'(x)\amp=e^{\tan (2x)}\frac{d}{dx}(\tan  (2x))</mrow>
+<mrow>\amp=e^{\tan (2x)}\sec^2(2x)\cdot 2.</mrow></md>
+</solution>
+-->
+ <statement id="fs-id1169738223460">
+<p id="fs-id1169738187154">Find the derivative of <m>f(x)=e^{2x^2+x}.</m></p>
+</statement>
+<solution id="fs-id1169737140842">
+<p id="fs-id1169737140844">Using the derivative formula and the chain rule,</p>
+<md><mrow>f'(x)\amp=e^{2x^2+x}\frac{d}{dx}(2x^2+x)</mrow>
+<mrow>\amp=e^{2x^2+x}\cdot(4x+1).</mrow></md>
+</solution>
+</example>
+<example xml:id="ex-combinediffrules">
+<title>Combining Differentiation Rules</title>
+ <statement id="fs-id1169737766541">
+<p id="fs-id1169737766547">Find the derivative of <m>y=\frac{e^{x^2}}{x}.</m></p>
+</statement>
+<solution id="fs-id1169737928256">
+<p id="fs-id1169737928258">Use the derivative of the natural exponential function, the quotient rule, and the chain rule.</p>
+<md>
+  <mrow>y'\amp=\frac{(e^{x^2}\cdot 2)x\cdot x- 1\cdot e^{x^2}}{x^2}\amp \amp\text{ Apply the quotient rule. }</mrow>
+<mrow>\amp =\frac{e^{x^2}(2x^2- 1)}{x^2}\amp \amp\text{ Simplify. }</mrow></md>
+</solution>
+</example>
+<exercise>  
+  <statement id="fs-id1169737923849">
+  <p id="fs-id1169737923851">Find the derivative of <m>h(x)=xe^{2x}.</m></p>
+</statement>
+<solution id="fs-id1169737948360">
+<p id="fs-id1169737948362"><m>h'(x)=e^{2x}+2xe^{2x}</m></p>
+</solution>
+<hint>
+<p id="fs-id1169738215078">Don’t forget to use the product rule.</p>
+</hint> </exercise>
+<example xml:id="fs-id1169737949367">
+<title>Applying the Natural Exponential Function</title>
+<statement id="fs-id1169737151938">
+<p id="fs-id1169737151943">A colony of mosquitoes has an initial population of 1000. After <m>t</m> days, the population is given by <m>A(t)=1000e^{0.3t}.</m> Show that the ratio of the rate of change of the population, <m>A'(t),</m> to the population, <m>A(t)</m> is constant.</p>
+</statement>
+<solution id="fs-id1169738212485">
+<p id="fs-id1169738212487">First find <m>A'(t).</m> By using the chain rule, we have <m>A'(t)=300e^{0.3t}.</m> Thus, the ratio of the rate of change of the population to the population is given by</p>
+<me>A'(t)=\frac{300e^{0.3t}}{1000e^{0.3t}}=0.3.</me>
+<p id="fs-id1169737145031">The ratio of the rate of change of the population to the population is the constant 0.3.</p>
+</solution>
+</example>
+<exercise>  <statement id="fs-id1169738186824">
+<p id="fs-id1169738215955">If <m>A(t)=1000e^{0.3t}</m> describes the mosquito population after <m>t</m> days, as in the preceding example, what is the rate of change of <m>A(t)</m> after 4 days?</p>
+</statement>
+<solution id="fs-id1169737934406">
+<p id="fs-id1169737934408">996</p>
+</solution>
+<hint>
+<p id="fs-id1169738225603">Find <m>A'(4).</m></p>
+</hint> </exercise>
+
+<example>
+<title>Applying the Natural Exponential Function to an Account with Interest Compounded Continuously</title>
+<statement >
+<p>If <m>A(t)=2500e^{0.012t}</m> is the future value of an account in dollars with interest compounded continuously after <m>t</m> years, what is the rate of change of <m>A(t)</m> after 4 years?</p>
+</statement>
+<solution>
+<p>First find <m>A'(t).</m> By using the chain rule, we have <m>A'(t)=2500e^{0.012t}\cdot 0.012=30e^{0.012t}.</m> Thus, the rate of change of the future value of the account after 4 years is given by</p>
+<me>A'(4)=30e^{0.012(4)}\approx \$31.48.</me>
+</solution>
+</example>
+</subsection>
+
+<subsection id="fs-id1169738221999">
+<title>Derivative of the Logarithmic Function</title>
+<p id="fs-id1169738222225">Now that we have the derivative of the natural exponential function, we can use implicit differentiation to find the derivative of its inverse, the natural logarithmic function.</p>
+
+<theorem>
+<title>The Derivative of the Natural Logarithmic Function</title>
+<p id="fs-id1169737911417">If <m>x\gt 0</m> and <m>y=\ln  x,</m> then</p>
+<me>\frac{dy}{dx}=\frac{1}{x}.</me>
+<p id="fs-id1169737765282">More generally, let <m>g(x)</m> be a differentiable function. For all values of <m>x</m> for which <m>g'(x)\gt 0,</m> the derivative of <m>h(x)=\ln  (g(x))</m> is given by</p>
+<md number="yes" xml:id="fs-id1169737919348">h'(x)=\frac{1}{g(x)}g'(x).</md>
+
+<proof>
+<p id="fs-id1169738186955">If <m>x\gt 0</m> and <m>y=\ln  x,</m> then <m>e^y=x.</m> Differentiating both sides of this equation results in the equation</p>
+<me>e^y\frac{dy}{dx}=1.</me>
+<p id="fs-id1169738216993">Solving for <m>\frac{dy}{dx}</m> yields</p>
+<me>\frac{dy}{dx}=\frac{1}{e^y}.</me>
+<p id="fs-id1169738219487">Finally, we substitute <m>x=e^y</m> to obtain</p>
+<me>\frac{dy}{dx}=\frac{1}{x}.</me>
+<p id="fs-id1169738221909">We may also derive this result by applying the inverse function theorem, as follows. Since <m>y=g(x)=\ln  x</m> is the inverse of <m>f(x)=e^x,</m> by applying the inverse function theorem we have</p>
+<men>\frac{dy}{dx}=\frac{1}{f'(g(x))}=\frac{1}{e^{\ln x}}=\frac{1}{x}.</men>
+<p id="fs-id1169737951681">Using this result and applying the chain rule to <m>h(x)=\ln  (g(x))</m> yields <xref ref="fs-id1169737919348"/></p>
+<!-- <men xml:id="fs-id1169737919348">h'(x)=\frac{1}{g(x)}g'(x).</men> -->
+</proof>
+
+</theorem>
+<p id="fs-id1169737935224">The graph of <m>y=\ln  x</m> and its derivative <m>\frac{dy}{dx}=\frac{1}{x}</m> are shown in <xref ref="CNX_Calc_Figure_03_09_003"/>.</p>
+<figure xml:id="CNX_Calc_Figure_03_09_003">
+<image source="ch3/CNX_Calc_Figure_03_09_003.jpg" width="50%">
+<description>"Graph of the function ln x along with its derivative 1/x. The function ln x is increasing on (0, + \infty ). Its derivative is decreasing but greater than 0 on (0, + \infty )."  </description></image> <caption><m>\text{ The function } y=\ln  x</m> is increasing on <m>(0,\text{ + }\infty ).</m> Its derivative <m>y'=\frac{1}{x}</m> is greater than zero on <m>(0,\text{ + }\infty ).</m></caption>
+</figure>
+<example xml:id="fs-id1169738211098">
+<title>Taking a Derivative of a Natural Logarithm</title>
+ <statement id="fs-id1169738228372">
+<p id="fs-id1169738228377">Find the derivative of <m>f(x)=\ln  (x^3+3x- 4).</m></p>
+</statement>
+<solution id="fs-id1169738221310">
+<p id="fs-id1169738221312">Use <xref ref="fs-id1169737919348"/> directly.</p>
+<md><mrow>f'(x)\amp=\frac{1}{x^3+3x- 4}\cdot (3x^2+3)\amp\amp\text{ Use } g(x)=x^3+3x- 4 \text{ in } h'(x)=\frac{1}{g(x)}g'(x).</mrow><mrow>\amp=\frac{3x^2+3}{x^3+3x- 4}\amp\amp\text{ Rewrite. }</mrow></md>
+</solution>
+</example>
+<example xml:id="fs-id1169738244488">
+<title>Using Properties of Logarithms in a Derivative</title>
+<!--Commenting out trig
+ <statement id="fs-id1169738106138">
+<p id="fs-id1169738106144">Find the derivative of <m>f(x)=\ln  (\frac{x^2\sin x}{2x+1}).</m></p>
+</statement>
+<solution id="fs-id1169738219672">
+<p id="fs-id1169738219674">At first glance, taking this derivative appears rather complicated. However, by using the properties of logarithms prior to finding the derivative, we can make the problem much simpler.</p>
+<md><mrow>f(x)\amp=\ln  (\frac{x^2\sin x}{2x+1})=2 \ln  x+\ln  (\sin x)- \ln  (2x+1)\amp\amp\text{ Apply properties of logarithms. }</mrow><mrow>f'(x)\amp=\frac{2}{x}+\cot  x- \frac{2}{2x+1}\amp\amp\text{ Apply sum rule and } h'(x)=\frac{1}{g(x)}g'(x).</mrow></md>
+</solution>
+-->
+ <statement id="fs-id1169738106138">
+<p id="fs-id1169738106144">Find the derivative of <m>f(x)=\ln  \left(\frac{x^2e^x}{5x+1}\right).</m></p>
+</statement>
+<solution id="fs-id1169738219672">
+<p id="fs-id1169738219674">At first glance, taking this derivative appears rather complicated. However, by using the properties of logarithms prior to finding the derivative, we can make the problem much simpler. Applying properties of logarithms and then differentiating,</p>
+<md><mrow>f(x)\amp=\ln  \left(\frac{x^2e^x}{5x+1}\right)=\ln  (x^2e^x)-\ln (5x+1)</mrow>
+<mrow>\amp=2\ln x+\ln e^x-\ln(5x+1)</mrow>
+<mrow>\amp=2\ln x+x-\ln(5x+1)</mrow>
+<mrow>f'(x)\amp=\frac{2}{x}+1-\frac{5}{5x+1}\amp\amp\text{ Apply sum rule and } h'(x)=\frac{1}{g(x)}g'(x).</mrow></md>
+</solution>
+</example>
+<exercise>  <statement id="fs-id1169738219659">
+<p id="fs-id1169738219661">Differentiate: <m>f(x)=\ln\left((3x+2)^5\right).</m></p>
+</statement>
+<solution id="fs-id1169738192194">
+<p id="fs-id1169738192196"><m>f'(x)=\frac{15}{3x+2}</m></p>
+</solution>
+<hint>
+<p id="fs-id1169738073202">Use a property of logarithms to simplify before taking the derivative.</p>
+</hint> </exercise>
+<p id="fs-id1169738076342">Now that we can differentiate the natural logarithmic function, we can use this result to find the derivatives of <m>y=log_bx</m> and <m>y=b^x</m> for <m>b\gt 0,b\neq 1.</m></p>
+<theorem xml:id="fs-id1169738238181">
+<title>Derivatives of General Exponential and Logarithmic Functions</title>
+<p id="fs-id1169738186170">Let <m>b\gt 0,b\neq 1,</m> and let <m>g(x)</m> be a differentiable function.</p>
+<ol>
+<li>If, <m>y=\log_bx,</m> then
+<men >\frac{dy}{dx}=\frac{1}{x \ln  b}.</men>
+More generally, if <m>h(x)=\log_b(g(x)),</m> then for all values of <m>x</m> for which <m>g(x)\gt 0,</m>
+<men xml:id="fs-id1169738186308">h'(x)=\frac{g'(x)}{g(x) \ln  b}.</men></li>
+<li>If <m>y=b^x,</m> then
+<men>\frac{dy}{dx}=b^x\ln  b.</men>
+More generally, if <m>h(x)=b^{g(x)},</m> then
+<men xml:id="fs-id1169738045159">h'(x)=b^{g(x)}g\text{ ' }(x) \ln  b.</men></li>
+</ol>
+<!--Commenting out proof
+<proof>
+<p id="fs-id1169738184804">If <m>y=\log_bx,</m> then <m>b^y=x.</m> It follows that <m>\ln  (b^y)=\ln  x.</m> Thus <m>y \ln  b=\ln  x.</m> Solving for <m>y,</m> we have <m>y=\frac{\ln  x}{\ln  b}.</m> Differentiating and keeping in mind that <m>\ln  b</m> is a constant, we see that</p>
+<me>\frac{dy}{dx}=\frac{1}{x \ln  b}.</me>
+<p id="fs-id1169738211864">The derivative in <xref ref="fs-id1169738186308"/> now follows from the chain rule.</p>
+<p id="fs-id1169737954089">If <m>y=b^x,</m> then <m>\ln  y=x \ln  b.</m> Using implicit differentiation, again keeping in mind that <m>\ln  b</m> is constant, it follows that <m>\frac{1}{y} \frac{dy}{dx}=\ln  b.</m> Solving for <m>\frac{dy}{dx}</m> and substituting <m>y=b^x,</m> we see that</p>
+<me>\frac{dy}{dx}=y \ln  b=b^x\ln  b.</me>
+<p id="fs-id1169737145057">The more general derivative (<xref ref="fs-id1169738045159"/>) follows from the chain rule.</p>
+</proof>
+-->
+</theorem>
+<example xml:id="fs-id1169737145066">
+<title>Applying Derivative Formulas</title>
+ <statement id="fs-id1169738185254">
+<p id="fs-id1169738185259">Find the derivative of <m>h(x)=\frac{3^x}{3^x+2}.</m></p>
+</statement>
+<solution id="fs-id1169737700311">
+<p id="fs-id1169737700313">Use the quotient rule and <xref ref="fs-id1169738238181"/>.</p>
+<md>
+  <mrow>h'(x)\amp=\frac{3^x \ln  3(3^x+2)- 3^x \ln  3(3^x)}{(3^x+2)^2}\amp\amp\text{ Apply the quotient rule. }</mrow>
+  <mrow>\amp=\frac{2\cdot 3^x \ln  3}{(3^x+2)^2}\amp\amp\text{ Simplify. }</mrow>
+</md>
+</solution>
+</example>
+<example xml:id="fs-id1169738219393">
+ <statement id="fs-id1169738219397">
+<title>Finding the Slope of a Tangent Line</title>
+<p id="fs-id1169738219403">Find the slope of the line tangent to the graph of <m>y=\log_{2} (3x+1)</m> at <m>x=1.</m></p>
+</statement>
+<solution id="fs-id1169738045065">
+<p id="fs-id1169738045067">To find the slope, we must evaluate <m>\frac{dy}{dx}</m> at <m>x=1.</m> Using <xref ref="fs-id1169738186308"/>, we see that</p>
+<me>\frac{dy}{dx}=\frac{3}{ \ln  2(3x+1)}.</me>
+<p id="fs-id1169738186987">By evaluating the derivative at <m>x=1,</m> we see that the tangent line has slope</p>
+<me>\left\;\frac{dy}{dx}\right|_{x=1}=\frac{3}{4 \ln  2}=\frac{3}{ \ln  16}.</me>
+</solution>
+</example>
+<exercise>  <statement id="fs-id1169738240288">
+<p id="fs-id1169738240290">Find the slope for the line tangent to <m>y=3^x</m> at <m>x=2.</m></p>
+</statement>
+<solution id="fs-id1169737934286">
+<p id="fs-id1169737934288"><m>9 \ln  (3)</m></p>
+</solution>
+<hint>
+<p id="fs-id1169737934313">Evaluate the derivative at <m>x=2.</m></p>
+</hint>
+</exercise>
+</subsection>
+<!-- Commenting out loogaritmic differentiation and extended power rule
+<subsection id="fs-id1169737933453">
+<title>Logarithmic Differentiation</title>
+<p id="fs-id1169737933458">At this point, we can take derivatives of functions of the form <m>y=(g(x))^n</m> for certain values of <m>n,</m> as well as functions of the form <m>y=b^{g(x)},</m> where <m>b\gt 0</m> and <m>b\neq 1.</m> Unfortunately, we still do not know the derivatives of functions such as <m>y=x^x</m> or <m>y=x^\pi.</m> These functions require a technique called <term>logarithmic differentiation</term>, which allows us to differentiate any function of the form <m>h(x)=g(x)^f(x).</m> It can also be used to convert a very complex differentiation problem into a simpler one, such as finding the derivative of <m>y=\frac{x\sqrt{2x+1}}{e^x\sin^3x}.</m> We outline this technique in the following problem-solving strategy.</p>
+<note id="fs-id1169738197957" class="problem-solving">
+<title>Problem-Solving Strategy: Using Logarithmic Differentiation</title>
+<ol>
+<li>To differentiate <m>y=h(x)</m> using logarithmic differentiation, take the natural logarithm of both sides of the equation to obtain <m>\ln  y=\ln  (h(x)).</m></li>
+<li>Use properties of logarithms to expand <m>\ln  (h(x))</m> as much as possible.</li>
+<li>Differentiate both sides of the equation. On the left we will have <m>\frac{1}{y} \frac{dy}{dx}.</m></li>
+<li>Multiply both sides of the equation by <m>y</m> to solve for <m>\frac{dy}{dx}.</m></li>
+<li>Replace <m>y</m> by <m>h(x).</m></li>
+</ol>
+</note>
+<example xml:id="fs-id1169738238112">
+<title>Using Logarithmic Differentiation</title>
+ <statement id="fs-id1169738238117">
+<p id="fs-id1169738211866">Find the derivative of <m>y=(2x^4+1)^{\tan  x}.</m></p>
+</statement>
+<solution id="fs-id1169738211906">
+<p id="fs-id1169738211908">Use logarithmic differentiation to find this derivative.</p>
+<md>
+  <mrow>\ln  y\amp=\ln (2x^4+1)^{\tan  x}\amp\amp\text{ Step 1. Take the natural logarithm of both sides. }</mrow>
+  <mrow>\ln  y\amp=\tan  x \ln  (2x^4+1)\amp\amp\text{ Step 2. Expand using properties of logarithms. }</mrow>
+  <mrow>\frac{1}{y} \frac{dy}{dx}\amp=\sec^2x \ln  (2x^4+1)+\frac{8x^3}{2x^4+1}\cdot \tan  x\amp \amp \text{ Step 3. Differentiate both sides. Use the }</mrow>
+    <mrow>\amp \amp \amp \text{ product rule on the right. }</mrow>
+    <mrow>\frac{dy}{dx}\amp=y\cdot (\sec^2x \ln  (2x^4+1)+\frac{8x^3}{2x^4+1}\cdot \tan  x)\amp \amp\text{ Step 4. Multiply by } y \text{ on both sides. }</mrow>
+    <mrow>\frac{dy}{dx}\amp=(2x^4+1)^{\tan  x}(\sec^2 x \ln(2x^4+1)+\frac{8x^3}{2x^4+1}\cdot \tan  x)\amp\amp\text{ Step 5. Substitute } y=(2x^4+1)^{\tan  x}.</mrow>
+  </md>
+</solution>
+</example>
+<example xml:id="fs-id1169738068346">
+  <title>Using Logarithmic Differentiation</title>
+ <statement id="fs-id1169738068350">
+<p id="fs-id1169738068356">Find the derivative of <m>y=\frac{x\sqrt{2x+1}}{e^x\sin^3x}.</m></p>
+</statement>
+<solution id="fs-id1169738201884">
+<p id="fs-id1169738201886">This problem really makes use of the properties of logarithms and the differentiation rules given in this chapter.</p>
+<md>
+  <mrow>\ln  y\amp=\ln  \frac{x\sqrt{2x+1}}{e^x\sin^3x}\amp\amp\text{ Step 1. Take the natural logarithm of both sides. }</mrow>
+  <mrow>\ln  y\amp=\ln  x+\frac{1}{2} \ln  (2x+1)- x \ln  e- 3 \ln  \sin x\amp\amp\text{ Step 2. Expand using properties of logarithms. }</mrow>
+  <mrow>\frac{1}{y} \frac{dy}{dx}\amp=\frac{1}{x}+\frac{1}{2x+1}- 1- 3\frac{\text{ cos } x}{\sin x}\amp\amp\text{ Step 3. Differentiate both sides. }</mrow>
+  <mrow>\frac{dy}{dx}\amp=y(\frac{1}{x}+\frac{1}{2x+1}- 1- 3 \cot  x)\amp\amp\text{ Step 4. Multiply by } y \text{ on both sides. }</mrow>
+  <mrow>\frac{dy}{dx}\amp=\frac{x\sqrt{2x+1}}{e^x\sin^3x}(\frac{1}{x}+\frac{1}{2x+1}- 1- 3 \cot  x)\amp\amp\text{ Step 5. Substitute } y=\frac{x\sqrt{2x+1}}{e^x\sin^3x}.</mrow>
+</md>
+</solution>
+</example>
+<example xml:id="fs-id1169738228453">
+  <title>Extending the Power Rule</title>
+ <statement id="fs-id1169738228457">
+<p id="fs-id1169738228463">Find the derivative of <m>y=x^r</m> where <m>r</m> is an arbitrary real number.</p>
+</statement>
+<solution id="fs-id1169738228484">
+<p id="fs-id1169738228486">The process is the same as in <xref ref="fs-id1169738068346"/>, though with fewer complications.</p>
+<md>
+  <mrow>\ln  y\amp=\ln x^r\amp\amp\text{ Step 1. Take the natural logarithm of both sides. }</mrow>
+  <mrow>\ln  y\amp=r \ln  x\amp\amp\text{ Step 2. Expand using properties of logarithms. }</mrow>
+  <mrow>\frac{1}{y} \frac{dy}{dx}\amp= r\frac{1}{x}\amp\amp\text{ Step 3. Differentiate both sides. }</mrow>
+  <mrow>\frac{dy}{dx}\amp=y\frac{r}{x}\amp\amp\text{ Step 4. Multiply by } y \text{ on both sides. }</mrow>
+  <mrow>\frac{dy}{dx}\amp=x^r\frac{r}{x}\amp\amp\text{ Step 5. Substitute } y=x^r.</mrow>
+  <mrow>\frac{dy}{dx}\amp= rx^{r- 1}\amp\amp\text{ Simplify. }</mrow>
+</md>
+</solution>
+</example>
+<exercise>  <statement id="fs-id1169737933515">
+<p id="fs-id1169737933517">Use logarithmic differentiation to find the derivative of <m>y=x^x.</m></p>
+</statement>
+<solution id="fs-id1169737933535">
+<p id="fs-id1169737933537"><m>\frac{dy}{dx}=x^x(1+\ln  x)</m></p>
+</solution>
+<hint>
+<p id="fs-id1169737933587">Follow the problem solving strategy.</p>
+</hint> </exercise>
+<exercise>  <statement id="fs-id1169737933600">
+<p id="fs-id1169737933602">Find the derivative of <m>y=(\tan  x)^{\pi}.</m></p>
+</statement>
+<solution id="fs-id1169738233541">
+<p id="fs-id1169738233543"><m>y'=\pi(\tan  x)^{\pi- 1}\sec^2x</m></p>
+</solution>
+<hint>
+<p id="fs-id1169738233597">Use the result from <xref ref="fs-id1169738228453"/>.</p>
+</hint> </exercise>
+</subsection>
+-->
+
+
+
+
+</section>
