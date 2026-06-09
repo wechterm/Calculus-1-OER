@@ -5257,6 +5257,231 @@ var ptx_lunr_docs = [
   "body": "  Find the equation of the line tangent to the graph of at       is the slope of the tangent line.   "
 },
 {
+  "id": "sec_Ch3Sec9",
+  "level": "1",
+  "url": "sec_Ch3Sec9.html",
+  "type": "Section",
+  "number": "3.9",
+  "title": "Derivatives of Exponential and Logarithmic Functions",
+  "body": " Derivatives of Exponential and Logarithmic Functions   Learning Objectives   Find the derivative of exponential functions.  Find the derivative of logarithmic functions.    So far, we have learned how to differentiate a variety of functions, including trigonometric, inverse, and implicit functions. In this section, we explore derivatives of exponential and logarithmic functions. As we discussed in Exponential and Logarithmic Functions , exponential functions play an important role in modeling population growth and the decay of radioactive materials. Logarithmic functions can help rescale large quantities and are particularly helpful for rewriting complicated expressions.    Derivative of the Exponential Function  Just as when we found the derivatives of other functions, we can find the derivatives of exponential and logarithmic functions using formulas.   We know that  The graph of together with the line are shown in . By , this line is tangent to the graph of at    \"Graph of the function ex along with its tangent at (0, 1), x + 1.\"  The tangent line to at has slope 1.   Now that we have laid out our basic assumptions, we begin our investigation by exploring the derivative of Recall that we have assumed that exists. By applying the limit definition to the derivative we conclude that   Turning to we obtain the following.   We see that on the basis of the assumption that is differentiable at is not only differentiable everywhere, but its derivative is   For Thus, we have (The value of for an arbitrary function of the form will be derived later.)   Derivative of the Natural Exponential Function  Let be the natural exponential function. Then   In general,     Derivative of an Exponential Function    Find the derivative of    Using the derivative formula and the chain rule,      Combining Differentiation Rules   Find the derivative of    Use the derivative of the natural exponential function, the quotient rule, and the chain rule.       Find the derivative of       Don’t forget to use the product rule.     Applying the Natural Exponential Function   A colony of mosquitoes has an initial population of 1000. After days, the population is given by Show that the ratio of the rate of change of the population, to the population, is constant.    First find By using the chain rule, we have Thus, the ratio of the rate of change of the population to the population is given by   The ratio of the rate of change of the population to the population is the constant 0.3.      If describes the mosquito population after days, as in the preceding example, what is the rate of change of after 4 days?    996    Find     Applying the Natural Exponential Function to an Account with Interest Compounded Continuously   If is the future value of an account in dollars with interest compounded continuously after years, what is the rate of change of after 4 years?    First find By using the chain rule, we have Thus, the rate of change of the future value of the account after 4 years is given by       Derivative of the Logarithmic Function  Now that we have the derivative of the natural exponential function, we can use implicit differentiation to find the derivative of its inverse, the natural logarithmic function.   The Derivative of the Natural Logarithmic Function  If and then   More generally, let be a differentiable function. For all values of for which the derivative of is given by    If and then Differentiating both sides of this equation results in the equation   Solving for yields   Finally, we substitute to obtain   We may also derive this result by applying the inverse function theorem, as follows. Since is the inverse of by applying the inverse function theorem we have   Using this result and applying the chain rule to yields     The graph of and its derivative are shown in .    \"Graph of the function ln x along with its derivative 1\/x. The function ln x is increasing on (0, + \\infty ). Its derivative is decreasing but greater than 0 on (0, + \\infty ).\"  is increasing on Its derivative is greater than zero on    Taking a Derivative of a Natural Logarithm   Find the derivative of    Use directly.      Using Properties of Logarithms in a Derivative    Find the derivative of    At first glance, taking this derivative appears rather complicated. However, by using the properties of logarithms prior to finding the derivative, we can make the problem much simpler. Applying properties of logarithms and then differentiating,       Differentiate:       Use a property of logarithms to simplify before taking the derivative.    Now that we can differentiate the natural logarithmic function, we can use this result to find the derivatives of and for   Derivatives of General Exponential and Logarithmic Functions  Let and let be a differentiable function.   If, then More generally, if then for all values of for which   If then More generally, if then    If then It follows that Thus Solving for we have Differentiating and keeping in mind that is a constant, we see that   The derivative in now follows from the chain rule.  If then Using implicit differentiation, again keeping in mind that is constant, it follows that Solving for and substituting we see that   The more general derivative follows from the chain rule.     Applying Derivative Formulas   Find the derivative of    Use the quotient rule and .       Finding the Slope of a Tangent Line  Find the slope of the line tangent to the graph of at    To find the slope, we must evaluate at Using , we see that   By evaluating the derivative at we see that the tangent line has slope       Find the slope for the line tangent to at       Evaluate the derivative at      Logarithmic Differentiation  At this point, we can take derivatives of functions of the form for certain values of as well as functions of the form where and Unfortunately, we still do not know the derivatives of functions such as or These functions require a technique called logarithmic differentiation , which allows us to differentiate any function of the form It can also be used to convert a very complex differentiation problem into a simpler one, such as finding the derivative of We outline this technique in the following problem-solving strategy.   Using Logarithmic Differentiation   To differentiate using logarithmic differentiation, take the natural logarithm of both sides of the equation to obtain  Use properties of logarithms to expand as much as possible.  Differentiate both sides of the equation. On the left we will have  Multiply both sides of the equation by to solve for  Replace by     Using Logarithmic Differentiation   Find the derivative of    Use logarithmic differentiation to find this derivative.      Using Logarithmic Differentiation   Find the derivative of    This problem really makes use of the properties of logarithms and the differentiation rules given in this chapter.     Now we are ready to prove the general version of stated in .   Extending the Power Rule   Find the derivative of where is an arbitrary real number.    The process is the same as in , though with fewer complications.       Use logarithmic differentiation to find the derivative of       Follow the problem solving strategy.      Find the derivative of       Use the result from .     "
+},
+{
+  "id": "CNX_Calc_Figure_03_09_002",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#CNX_Calc_Figure_03_09_002",
+  "type": "Figure",
+  "number": "3.9.1",
+  "title": "",
+  "body": "  \"Graph of the function ex along with its tangent at (0, 1), x + 1.\"  The tangent line to at has slope 1.  "
+},
+{
+  "id": "sec_Ch3Sec9-3-13",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#sec_Ch3Sec9-3-13",
+  "type": "Theorem",
+  "number": "3.9.2",
+  "title": "Derivative of the Natural Exponential Function.",
+  "body": " Derivative of the Natural Exponential Function  Let be the natural exponential function. Then   In general,   "
+},
+{
+  "id": "fs-id1169738223456",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#fs-id1169738223456",
+  "type": "Example",
+  "number": "3.9.3",
+  "title": "Derivative of an Exponential Function.",
+  "body": " Derivative of an Exponential Function    Find the derivative of    Using the derivative formula and the chain rule,    "
+},
+{
+  "id": "ex-combinediffrules",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#ex-combinediffrules",
+  "type": "Example",
+  "number": "3.9.4",
+  "title": "Combining Differentiation Rules.",
+  "body": " Combining Differentiation Rules   Find the derivative of    Use the derivative of the natural exponential function, the quotient rule, and the chain rule.    "
+},
+{
+  "id": "sec_Ch3Sec9-3-16",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#sec_Ch3Sec9-3-16",
+  "type": "Checkpoint",
+  "number": "3.9.5",
+  "title": "",
+  "body": "  Find the derivative of       Don’t forget to use the product rule.   "
+},
+{
+  "id": "fs-id1169737949367",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#fs-id1169737949367",
+  "type": "Example",
+  "number": "3.9.6",
+  "title": "Applying the Natural Exponential Function.",
+  "body": " Applying the Natural Exponential Function   A colony of mosquitoes has an initial population of 1000. After days, the population is given by Show that the ratio of the rate of change of the population, to the population, is constant.    First find By using the chain rule, we have Thus, the ratio of the rate of change of the population to the population is given by   The ratio of the rate of change of the population to the population is the constant 0.3.   "
+},
+{
+  "id": "sec_Ch3Sec9-3-18",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#sec_Ch3Sec9-3-18",
+  "type": "Checkpoint",
+  "number": "3.9.7",
+  "title": "",
+  "body": "  If describes the mosquito population after days, as in the preceding example, what is the rate of change of after 4 days?    996    Find   "
+},
+{
+  "id": "sec_Ch3Sec9-3-19",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#sec_Ch3Sec9-3-19",
+  "type": "Example",
+  "number": "3.9.8",
+  "title": "Applying the Natural Exponential Function to an Account with Interest Compounded Continuously.",
+  "body": " Applying the Natural Exponential Function to an Account with Interest Compounded Continuously   If is the future value of an account in dollars with interest compounded continuously after years, what is the rate of change of after 4 years?    First find By using the chain rule, we have Thus, the rate of change of the future value of the account after 4 years is given by    "
+},
+{
+  "id": "sec_Ch3Sec9-4-3",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#sec_Ch3Sec9-4-3",
+  "type": "Theorem",
+  "number": "3.9.9",
+  "title": "The Derivative of the Natural Logarithmic Function.",
+  "body": " The Derivative of the Natural Logarithmic Function  If and then   More generally, let be a differentiable function. For all values of for which the derivative of is given by    If and then Differentiating both sides of this equation results in the equation   Solving for yields   Finally, we substitute to obtain   We may also derive this result by applying the inverse function theorem, as follows. Since is the inverse of by applying the inverse function theorem we have   Using this result and applying the chain rule to yields    "
+},
+{
+  "id": "CNX_Calc_Figure_03_09_003",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#CNX_Calc_Figure_03_09_003",
+  "type": "Figure",
+  "number": "3.9.10",
+  "title": "",
+  "body": "  \"Graph of the function ln x along with its derivative 1\/x. The function ln x is increasing on (0, + \\infty ). Its derivative is decreasing but greater than 0 on (0, + \\infty ).\"  is increasing on Its derivative is greater than zero on  "
+},
+{
+  "id": "fs-id1169738211098",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#fs-id1169738211098",
+  "type": "Example",
+  "number": "3.9.11",
+  "title": "Taking a Derivative of a Natural Logarithm.",
+  "body": " Taking a Derivative of a Natural Logarithm   Find the derivative of    Use directly.    "
+},
+{
+  "id": "fs-id1169738244488",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#fs-id1169738244488",
+  "type": "Example",
+  "number": "3.9.12",
+  "title": "Using Properties of Logarithms in a Derivative.",
+  "body": " Using Properties of Logarithms in a Derivative    Find the derivative of    At first glance, taking this derivative appears rather complicated. However, by using the properties of logarithms prior to finding the derivative, we can make the problem much simpler. Applying properties of logarithms and then differentiating,    "
+},
+{
+  "id": "sec_Ch3Sec9-4-8",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#sec_Ch3Sec9-4-8",
+  "type": "Checkpoint",
+  "number": "3.9.13",
+  "title": "",
+  "body": "  Differentiate:       Use a property of logarithms to simplify before taking the derivative.   "
+},
+{
+  "id": "fs-id1169738238181",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#fs-id1169738238181",
+  "type": "Theorem",
+  "number": "3.9.14",
+  "title": "Derivatives of General Exponential and Logarithmic Functions.",
+  "body": " Derivatives of General Exponential and Logarithmic Functions  Let and let be a differentiable function.   If, then More generally, if then for all values of for which   If then More generally, if then    If then It follows that Thus Solving for we have Differentiating and keeping in mind that is a constant, we see that   The derivative in now follows from the chain rule.  If then Using implicit differentiation, again keeping in mind that is constant, it follows that Solving for and substituting we see that   The more general derivative follows from the chain rule.   "
+},
+{
+  "id": "fs-id1169737145066",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#fs-id1169737145066",
+  "type": "Example",
+  "number": "3.9.15",
+  "title": "Applying Derivative Formulas.",
+  "body": " Applying Derivative Formulas   Find the derivative of    Use the quotient rule and .    "
+},
+{
+  "id": "fs-id1169738219393",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#fs-id1169738219393",
+  "type": "Example",
+  "number": "3.9.16",
+  "title": "",
+  "body": "  Finding the Slope of a Tangent Line  Find the slope of the line tangent to the graph of at    To find the slope, we must evaluate at Using , we see that   By evaluating the derivative at we see that the tangent line has slope    "
+},
+{
+  "id": "sec_Ch3Sec9-4-13",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#sec_Ch3Sec9-4-13",
+  "type": "Checkpoint",
+  "number": "3.9.17",
+  "title": "",
+  "body": "  Find the slope for the line tangent to at       Evaluate the derivative at   "
+},
+{
+  "id": "sec_Ch3Sec9-5-2",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#sec_Ch3Sec9-5-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "logarithmic differentiation "
+},
+{
+  "id": "sec_Ch3Sec9-5-3",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#sec_Ch3Sec9-5-3",
+  "type": "Problem-Solving Strategy",
+  "number": "3.9.18",
+  "title": "Using Logarithmic Differentiation.",
+  "body": " Using Logarithmic Differentiation   To differentiate using logarithmic differentiation, take the natural logarithm of both sides of the equation to obtain  Use properties of logarithms to expand as much as possible.  Differentiate both sides of the equation. On the left we will have  Multiply both sides of the equation by to solve for  Replace by   "
+},
+{
+  "id": "fs-id1169738238112",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#fs-id1169738238112",
+  "type": "Example",
+  "number": "3.9.19",
+  "title": "Using Logarithmic Differentiation.",
+  "body": " Using Logarithmic Differentiation   Find the derivative of    Use logarithmic differentiation to find this derivative.    "
+},
+{
+  "id": "fs-id1169738068346",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#fs-id1169738068346",
+  "type": "Example",
+  "number": "3.9.20",
+  "title": "Using Logarithmic Differentiation.",
+  "body": " Using Logarithmic Differentiation   Find the derivative of    This problem really makes use of the properties of logarithms and the differentiation rules given in this chapter.    "
+},
+{
+  "id": "fs-id1169738228453",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#fs-id1169738228453",
+  "type": "Example",
+  "number": "3.9.21",
+  "title": "Extending the Power Rule.",
+  "body": " Extending the Power Rule   Find the derivative of where is an arbitrary real number.    The process is the same as in , though with fewer complications.    "
+},
+{
+  "id": "sec_Ch3Sec9-5-8",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#sec_Ch3Sec9-5-8",
+  "type": "Checkpoint",
+  "number": "3.9.22",
+  "title": "",
+  "body": "  Use logarithmic differentiation to find the derivative of       Follow the problem solving strategy.   "
+},
+{
+  "id": "sec_Ch3Sec9-5-9",
+  "level": "2",
+  "url": "sec_Ch3Sec9.html#sec_Ch3Sec9-5-9",
+  "type": "Checkpoint",
+  "number": "3.9.23",
+  "title": "",
+  "body": "  Find the derivative of       Use the result from .   "
+},
+{
   "id": "sec_Ch4Sec6",
   "level": "1",
   "url": "sec_Ch4Sec6.html",
