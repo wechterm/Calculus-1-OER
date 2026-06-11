@@ -4,14 +4,12 @@
 <title>Derivatives of Exponential and Logarithmic Functions</title>
   <introduction>
   <title> Learning Objectives</title>
-  <ul>
+  <ol>
 <li>Find the derivative of exponential functions.</li>
 <li>Find the derivative of logarithmic functions.</li>
-<!-- Commenting out logarithmic differentiation
 <li>Use logarithmic differentiation to determine the derivative of a function.</li>
--->
-</ul>
-<p id="fs-id1169738221270">So far, we have learned how to differentiate a variety of functions, including trigonometric, inverse, and implicit functions. In this section, we explore derivatives of exponential and logarithmic functions. As we discussed in <xref ref="sec_Ch1Sec5"/>, exponential functions play an important role in modeling population growth and the decay of radioactive materials. Logarithmic functions can help rescale large quantities and are particularly helpful for rewriting complicated expressions.</p>
+</ol>
+>>>>>>> origin/production
 </introduction>
 <subsection id="fs-id1169737795671">
 <title>Derivative of the Exponential Function</title>

@@ -6,6 +6,8 @@
 
 <!-- Change title when you have one: -->
   <title>Applications of Derivatives</title>
+  <xi:include href="./sec_Ch4Sec0.ptx" />
+  <xi:include href="./sec_Ch4Sec1.ptx" />
   <xi:include href="./sec_Ch4Sec6.ptx" />
   <!-- <xi:include href="./sec_Ch3Sec9.ptx" /> -->
 <!--  <xi:include href="./sec_Ch2Sec2.ptx" />

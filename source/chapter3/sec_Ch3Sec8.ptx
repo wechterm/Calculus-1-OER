@@ -4,11 +4,11 @@
 <title>Derivatives of Inverse Functions</title>
   <introduction>
   <title> Learning Objectives</title>
-  <ul>
+  <ol>
 
 <li>Calculate the derivative of an inverse function.</li>
 <li>Recognize the derivatives of the standard inverse trigonometric functions.</li>
-</ul>
+</ol>
 <p id="fs-id1169736659839">In this section we explore the relationship between the derivative of a function and the derivative of its inverse. For functions whose derivatives we already know, we can use this relationship to find derivatives of inverses without having to use the limit definition of the derivative. In particular, we will apply the formula for derivatives of inverse functions to trigonometric functions. This formula may also be used to extend the power rule to rational exponents.</p>
 </introduction>
 <subsection id="fs-id1169738951769">

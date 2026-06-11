@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_Ch4Sec1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Related Rates </title>
+  <introduction>
+  <title> Learning Objectives</title>
+  <ol>
+<li>Express changing quantities in terms of derivatives.</li>
+<li>Find relationships among the derivatives in a given problem.</li>
+<li>Use the chain rule to find the rate of change of one quantity that depends on the rate of change of other quantities.</li>
+</ol>
+<p>We have seen that for quantities that are changing over time, the rates at which these quantities change are given by derivatives. If two related quantities are changing over time, the rates at which the quantities change are related. For example, if a balloon is being filled with air, both the radius of the balloon and the volume of the balloon are increasing. In this section, we consider several problems in which two or more related quantities are changing and we study how to determine the relationship between the rates of change of these quantities.
+</p>
+</introduction>
+
+<subsection>
+<title>Setting up Related-Rates Problems</title>
+<p>
+In many real-world applications, related quantities are changing with respect to time. For example, if we consider the balloon example again, we can say that the rate of change in the volume, <m>V</m>, is related to the rate of change in the radius, <m>r</m>. In this case, we say that <m>\ds\frac{dV}{dt}</m> and <m>\ds\frac{dr}{dt}</m> are <term>related rates</term> because <m>V</m> is related to <m>r</m>. Here we study several examples of related quantities that are changing with respect to time and we look at how to calculate one rate of change given another rate of change.
+</p>
+
+<example xml:id="ex-inflatingballoon">
+	<title>Inflating a Balloon</title>
+	<statement>
+	<p>
+	A spherical balloon is being filled with air at the constant rate of <m>2\text{ cm}^3\text{/sec}</m> (<xref ref="CNX_Calc_Figure_04_01_001"/>). How fast is the radius increasing when the radius is <m>3\text{ cm}</m>?
+	</p>
+
+
+	<figure xml:id="CNX_Calc_Figure_04_01_001">
+		<image source="ch4/CNX_Calc_Figure_04_01_001.jpg" width="100%">
+			<description>Three balloons labeled with Time 1, Time 2, and Time 3.  The volume of each is increasing and the radius of each one is increasing.
+			</description>
+		</image> 
+		<caption>As the balloon is being filled with air, both the radius and the volume are increasing with respect to time.</caption>
+	</figure>
+	</statement>
+	<solution>
+	<p>
+	The volume of a sphere of radius <m>r</m> centimeters is 
+		<md>
+		V=\ds\frac{4}{3}\pi r^3\text{ cm}^3
+		</md>
+	Since the balloon is being filled with air, both the volume and the radius are functions of time. Therefore, <m>t</m> seconds after beginning to fill the balloon with air, the volume of air in the balloon is
+		<md>
+		V(t)=\frac{4}{3}\pi\left[r(t)\right]^3\text{cm}^3
+		</md>
+	</p>
+	
+	<p>
+	Differentiating both sides of this equation with respect to time and applying the chain rule, we see that the rate of change in the volume is related to the rate of change in the radius by the equation
+		<md>
+		V'(t)=4\pi\left[r(t)\right]^3r'(t)
+		</md>
+	The balloon is being filled with air at the constant rate of <m>2\text{ cm}^3\text{/sec}</m>, so <m>\ds V'(t)=2\text{ cm}^3\text{/sec}</m>.  Therefore,
+		<md>
+		2\text{cm}^3\text{/sec}=\left(4\pi\left[r(t)\right]^2\text{ cm}^2\right)\cdot\left(r'(t)\text{ cm/s}\right)
+		</md>,
+	which implies
+		<md>
+		r'(t)=\frac{1}{2\pi\left[r(t)\right]^2}\text{ cm/sec}
+		</md>.
+		When the radius <m>r=3\text{ cm}</m>,
+			<md>
+			r'(t)=\frac{1}{18\pi}\text{cm/sec}
+			</md>.
+	</p>
+	</solution>
+</example>
+
+<exercise>
+	<statement>
+	What is the instantaneous rate of change of the radius when <m>r=6\text{ cm}</m>?
+	</statement>
+	<solution>
+	<m>\ds\frac{1}{72\pi}\text{cm/sec}</m>
+	</solution>
+	<hint>
+		<p>
+		Plug <m>6</m> into the formula for <m>r'(t)</m> in <xref ref="ex-inflatingballoon"/>.
+		</p>
+	</hint>
+</exercise>
+
+</subsection>
+
+
+<subsection>
+	<title>
+	Examples of the Process
+	</title>
+	
+	<example xml:id="ex-rocketlaunch">
+	<title>Chapter Opener: A Rocket Launch</title>
+	</example>
+</subsection>
+</section>
+
