@@ -82,6 +82,35 @@ In many real-world applications, related quantities are changing with respect to
 	</hint>
 </exercise>
 
+<p>
+Before looking at other examples, let's outline the problem-solving strategy we will be using to solve related-rates problems.
+</p>
+
+<problem xml:id="problem-relatedrates">
+<title>Solving a Related-Rates Problem</title>
+	<ol>
+		<li xml:id="problem-list-1">
+		<p>Assign symbols to all variables involved in the problem. Draw a figure if applicable.</p>
+		</li>
+		<li>
+		State, in terms of the variables, the information that is given and the rate to be determined.
+		</li>
+		<li xml:id="problem-list-3">
+		Find an equation relating the variables introduced in <xref ref="problem-list-1" text="custom">step 1</xref>.
+		</li>
+		<li xml:id="problem-list-4">
+		Using the chain rule, differentiate both sides of the equation found in <xref ref="problem-list-3" text="custom">step 3</xref> with respect to the independent variable. This new equation will relate the derivatives.
+		</li>
+		<li>
+		Substitute all known values into the equation from step 4, then solve for the unknown rate of change.
+		</li>
+	</ol>
+</problem>
+
+<p>
+Note that when solving a related-rates problem, it is crucial not to substitute known values too soon. For example, if the value for a changing quantity is substituted into an equation before both sides of the equation are differentiated, then that quantity will behave as a constant and its derivative will not appear in the new equation found in <xref ref="problem-list-4" text="custom">step 4</xref>. We examine this potential error in the following example.
+</p>
+
 </subsection>
 
 
@@ -89,10 +118,321 @@ In many real-world applications, related quantities are changing with respect to
 	<title>
 	Examples of the Process
 	</title>
+	<p>
+	Let’s now implement the strategy just described to solve several related-rates problems. The first example involves a plane flying overhead. The relationship we are studying is between the speed of the plane and the rate at which the distance between the plane and a person on the ground is changing.
+	</p>
+	
+	<example>
+	<title>An Airplane Flying at a Constant Elevation</title>
+	<statement>
+		<p>
+		An airplane is flying overhead at a constant elevation of <m>4000</m> ft. A man is viewing the plane from a position <m>3000</m> ft from the base of a radio tower. The airplane is flying horizontally away from the man. If the plane is flying at the rate of <m>600</m> ft/sec, at what rate is the distance between the man and the plane increasing when the plane passes over the radio tower?
+		</p>
+	</statement>
+	
+	<solution>
+	<ol>
+		<li>
+			<p>Draw a picture, introducing variables to represent the different quantities involved.</p>
+		<figure xml:id="CNX_Calc_Figure_04_01_002">
+			<image source="ch4/CNX_Calc_Figure_04_01_002.jpg" width="100%">
+				<description>A radio tower which is vertically a distance of 4000 feet from an airplane and horizontally a distance of x from a person.  The slant distance from the person to the airplane is labeled s.
+				</description>
+			</image> 
+			<caption>An airplane is flying at a constant height of <m>4000</m> ft. The distance between the person and the airplane and the person and the place on the ground directly below the airplane are changing. We denote those quantities with the variables <m>s</m> and <m>x</m>, respectively.</caption>
+		</figure>
+		
+			<p>
+			As shown, <m>x</m> denotes the distance between the man and the position on the ground directly below the airplane. The variable <m>s</m> denotes the distance between the man and the plane. Note that both <m>x</m> and <m>s</m> are functions of time. We do not introduce a variable for the height of the plane because it remains at a constant elevation of <m>4000</m> ft. Since an object’s height above the ground is measured as the shortest distance between the object and the ground, the line segment of length <m>4000</m> ft is perpendicular to the line segment of length <m>x</m> feet, creating a right triangle.
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			Since <m>x</m> denotes the horizontal distance between the man and the point on the ground below the plane, <m>dx/dt</m>⁢ represents the speed of the plane. We are told the speed of the plane is <m>600</m> ft/sec. Therefore,<m>\ds\frac{dx}{dt}=600</m> ft/sec. Since we are asked to find the rate of change in the distance between the man and the plane when the plane is directly above the radio tower, we need to find <m>ds/dt</m> when <m>x=3000</m> ft.
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			From the figure, we can use the Pythagorean theorem to write an equation relating <m>x</m> and <m>s</m>:
+				<md>
+				\left[x(t)\right]^2+4000^2=\left[s(t)\right]^2
+				</md>.
+			</p>
+		</li>
+		
+		<li>
+		Differentiating this equation with respect to time and using the fact that the derivative of a constant is zero, we arrive at the equation
+			<md>
+			x\frac{dx}{dt}=s\frac{ds}{dt}
+			</md>.
+		</li>
+		
+		<li>
+			<p>
+			Find the rate at which the distance between the man and the plane is increasing when the plane is directly over the radio tower. That is, find <m>\ds\frac{ds}{dt}</m> when <m>x=3000</m> ft. Since the speed of the plane is <m>600</m> ft/sec, we know that <m>\ds\frac{dx}{dt}=600</m> ft/sec. We are not given an explicit value for <m>s</m>; however, since we are trying to find <m>\ds\frac{ds}{dt}</m> when <m>x=3000</m> ft, we can use the Pythagorean theorem to determine the distance <m>s</m> when <m>x=3000</m> and the height is <m>4000</m> ft. Solving the equation
+				<md>
+				3000^2+4000^2=s^2
+				</md>
+			for <m>s</m>, we have <m>s=5000</m> ft at the time of interest.  Using these values, we conclude that <m>ds/dt</m> is a solution of the equation	
+				<md>
+				(3000)(600)=(5000)\cdot\frac{ds}{dt}
+				</md>.
+			Therefore,
+				<md>
+				\frac{ds}{dt}=\frac{3000\cdot600}{5000}=360\text{ ft/sec}
+				</md>.
+			</p>
+			
+			<p>
+			Note: When solving related-rates problems, it is important not to substitute values for the variables too soon. For example,in step 3, we related the variable quantities <m>x(t)</m> and <m>s(t)</m> by the equation
+				<md>
+				\left[x(t)\right]^2+4000^2=\left[s(t)\right]^2
+				</md>.
+			Since the plane remains at a constant height, it is not necessary to introduce a variable for the height, and we are allowed to use the constant <m>4000</m> to denote that quantity. However, the other two quantities are changing. If we mistakenly substituted <m>x(t)=3000</m> into the equation before differentiating, our equation would have been
+				<md>	
+				3000^2+4000^2=\left[s(t)\right]^2
+				</md>
+			After differentiating, our equation would become 
+				<md>
+				0=s(t)\frac{ds}{dt}
+				</md>.
+			As a result, we would incorrectly conclude that <m>\ds\frac{ds}{dt}=0</m>.
+			</p>
+		</li>
+	</ol>
+	</solution>
+	</example>
+	
+	<exercise>
+	<statement>
+		<p>
+		What is the speed of the plane if the distance between the person and the plane is increasing at the rate of <m>300</m> ft/sec?
+		</p>
+	</statement>
+	<hint>
+		<p>
+		Set <m>\ds ds/dt=300</m> ft/sec and find <m>dx/dt</m>.
+		</p>
+	</hint>
+	<solution>
+	<p><m>500</m> ft/sec</p>
+	</solution>
+	</exercise>
+	
 	
 	<example xml:id="ex-rocketlaunch">
 	<title>Chapter Opener: A Rocket Launch</title>
+	<statement>
+	<figure>
+		<image source="ch4/CNX_Calc_Figure_04_00_003.jpg" width="50%">
+		<description>"A photo of rocket launching from the ground next to a camera on a tripod"
+		</description>
+		</image> 
+			<caption><p>(credit: modification of work by Steve Jurvetson, Wikimedia Commons)</p>
+			</caption>
+	</figure>
+		<p>
+		A rocket is launched so that it rises vertically. A camera is positioned <m>5000</m> ft from the launch pad. When the rocket is <m>1000</m> ft above the launch pad, its velocity is <m>600</m> ft/sec. Find the necessary rate of change of the camera’s angle as a function of time so that it stays focused on the rocket.
+		</p>
+
+	</statement>
+	
+	<solution>
+	<ol>
+		<li>
+			<p>Draw a picture introducing variables.</p>
+		<figure xml:id="CNX_Calc_Figure_04_01_003">
+			<image source="ch4/CNX_Calc_Figure_04_01_003.jpg" width="100%">
+				<description>A right triangle with base labeled 5000 ft, height labeled h, and bottom left angle labeled theta.  A rocket is in the top right vertex and a camera in the bottom left vertex.
+				</description>
+			</image> 
+			<caption> A camera is positioned <m>5000</m> ft from the launch pad of the rocket. The height of the rocket and the angle of the camera are changing with respect to time. We denote those quantities with the variables <m>h</m> and <m>\theta</m>, respectively.
+			</caption>
+		</figure>
+		
+			<p>
+			Let <m>h</m> denote the height of the rocket above the launch pad and <m>\theta</m> be the angle betwee the camera lens and the ground.
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			We are trying to find the rate of change in the angle of the camera with respect to time when the rocket is <m>1000</m> ft off the ground. That is, we need to find
+				<md>
+				\frac{d\theta}{dt}
+				</md>
+			when <m>h=1000</m> ft.  At that time, we know the velocity of the rocket is <m>\ds\frac{dh}{dt}=600</m> ft/sec.
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			Now we need to find an equation relating the two quantities that are changing with respect to time: <m>h</m> and <m>\theta</m>. How can we create such an equation? Using the fact that we have drawn a right triangle, it is natural to think about trigonometric functions. Recall that <m>\tan\theta</m> is the ratio of the length of the opposite side of the triangle to the length of the adjacent side. Thus, we have
+				<md>
+				\tan\theta=\frac{h}{5000}
+				</md>.
+			This gives us the equation	
+				<md>
+				h=5000\tan\theta
+				</md>.
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			Differentiating this equation with respect to time <m>t</m>, we obtain
+				<md>
+				\frac{dh}{dt}=5000\sec^2\theta\frac{d\theta}{dt}
+				</md>.
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			We want to find <m>\ds\frac{d\theta}{dt}</m> when <m>h=1000</m> ft. At this time, we know that  <m>\ds\frac{dh}{dt}=6000</m> ft/sec. We need to determine <m>\sec^2\theta</m>. Recall that <m>\sec\theta</m> is the ratio of the length of the hypotenuse to the length of the adjacent side. We know the length of the adjacent side is <m>5000</m> ft. To determine the length of the hypotenuse, we use the Pythagorean theorem, where the length of one leg is <m>5000</m> ft., the length of the other leg is <m>h=1000</m> ft, and the length of the hypotenuse is <m>c</m> feet as shown in the following figure.
+			</p>
+			<figure xml:id="CNX_Calc_Figure_04_01_005">
+			<image source="ch4/CNX_Calc_Figure_04_01_005.jpg" width="100%">
+				<description>A right triangle with base 5000, height 1000, hypotenuse c, and the angle across from the height is theta.
+				</description>
+			</image>
+		</figure>
+			<p>
+			We see that 
+				<md>
+				1000^2+5000^2=c^2
+				</md>
+			and we conclude the hypotenuse is 
+				<md>
+				c=1000\sqrt{26}\text{ ft}
+				</md>.
+			Therefore, when <m>h=1000</m>, we have
+				<md>				\sec^2\theta=\left(\frac{1000\sqrt{26}}{5000}\right)^2=\frac{26}{25}
+				</md>.
+			Recall from step 4 that the equation relating <m>\ds\frac{d\theta}{dt}</m> to our known values is 
+				<md>
+				\frac{dh}{dt}=5000\sec^2\theta\frac{d\theta}{dt}
+				</md>.
+			When <m>h=1000</m> ft, we know that <m>\ds\frac{dh}{dt}=600</m> ft/sec and <m>\sec^2\theta=\ds\frac{26}{25}</m>. Substituting these values into the previous equation, we arrive at the equation  
+				<md>
+				600=5000\left(\frac{26}{25}\right)\frac{d\theta}{dt}
+				</md>.
+			Therefore, <m>\ds\frac{d\theta}{dt}=\frac{3}{26}</m> rad/sec.
+			</p>
+		</li>
+	</ol>
+	</solution>
 	</example>
+	
+	<exercise>
+	<statement>
+		<p>
+		What rate of change is necessary for the elevation angle of the camera if the camera is placed on the ground at a distance of <m>4000</m> ft from the launch pad and the velocity of the rocket is <m>500</m>  ft/sec when the rocket is <m>2000</m> ft off the ground?
+		</p>
+	</statement>
+	<hint>
+	<p>Try <m>h=2000\text{ and }\ds\frac{dh}{dt}=500</m></p>
+	</hint>
+	<solution>
+	<p><m>\frac{1}{10}</m> rad/sec.</p>
+	</solution>
+	</exercise>
+	
+	<p>
+	In the next example, we consider water draining from a cone-shaped funnel. We compare the rate at which the level of water in the cone is decreasing with the rate at which the volume of water is decreasing.
+	</p>
+	
+	<example>
+		<title>Water Draining from a Funnel</title>
+		<statement>
+		<p>
+		Water is draining from the bottom of a cone-shaped funnel at the rate of <m>0.0⁢3\text{ft}^3\text{/sec}</m>. The height of the funnel is <m>2</m> ft and the radius at the top of the funnel is <m>1</m> ft. At what rate is the height of the water in the funnel changing when the height of the water is <m>\ds \frac{1}{2}</m> ft?
+		</p>
+		</statement>
+		<solution>
+		<ol>
+		<li>
+			<p>Draw a picture introducing the variables.</p>
+		<figure xml:id="CNX_Calc_Figure_04_01_004">
+			<image source="ch4/CNX_Calc_Figure_04_01_004.jpg" width="100%">
+				<description>A right circular funnel with maximum radius 1 and height 2.  Water is filled up to a maximum radius of r and a heigh of h.
+				</description>
+			</image> 
+			<caption> 
+			Water is draining from a funnel of height <m>2</m> ft and radius <m>1</m> ft. The height of the water and the radius of water are changing over time. We denote these quantities with the variables <m>h</m> and <m>r</m>, respectively.
+			</caption>
+		</figure>
+		
+			<p>
+			Let <m>h</m> denote the height of the water in the funnel, <m>r</m> denote the radius of the water at its surface, and <m>V</m> denote the volume of the water.
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			We need to determine <m>\ds\frac{dh}{dt}</m> when <m>h=\ds\frac{1}{2}</m> ft.  We know that <m>\ds\frac{dV}{dt}=-0.03\text{ ft}^2\text{/sec}</m>.
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			The volume of water in the cone is 
+				<md>
+				V=\frac{1}{3}\pi r^2h
+				</md>.
+			From the figure, we see that we have similar triangles. Therefore, the ratio of the sides in the two triangles is the same. Therefore, <m>\ds\frac{r}{h}=\frac{1}{2}</m> or <m>r=\ds\frac{h}{2}</m>.  Using this fact, the equation for volume can be simplified to
+				<md>
+				V=\frac{1}{3}\pi\left(\frac{h}{2}\right)^2h=\frac{\pi}{12}h^3
+				</md>.
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			Applying the chain rule while differentiating both sides of this equation with respect to time <m>t</m>, we obtain
+				<md>
+				\frac{dV}{dt}=\frac{\pi}{4}h^2\frac{dh}{dt}
+				</md>.
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			We want to find <m>\ds\frac{dh}{dt}</m> when <m>h=\ds\frac{1}{2}</m> ft.  Since water is leaving at the rate of <m>0.03\text{ ft}^3\text{/sec}</m>, we know that <m>\ds\frac{dV}{dt}=-0.03\text{ ft}^3\text{/sec}</m>.  Therefore 
+				<md>
+				-0.03=\frac{\pi}{4}\left(\frac{1}{2}\right)^2\frac{dh}{dt}
+				</md>,
+			which implies
+				<md>
+				-0.03=\frac{\pi}{16}\frac{dh}{dt}
+				</md>.
+			It follows that
+				<md>
+				\frac{dh}{dt}=-\frac{0.48}{\pi}\approx -0.153\text{ ft/sec}
+				</md>.
+			</p>
+		</li>
+		</ol>
+		</solution>
+	</example>
+	
+	<exercise>
+	<statement>
+		<p>
+		At what rate is the height of the water changing when the height of the water is <m>\ds\frac{1}{4}</m> ft?
+		</p>
+	</statement>
+	
+	<hint>
+	<p>Use <m>h=\ds\frac{1}{4}</m></p>/
+	</hint>
+	
+	<solution>
+	<p><m>-0.611</m> ft/sec.</p>
+	</solution>
+	</exercise>
 </subsection>
 </section>
 
