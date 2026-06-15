@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Linear Approximations and Differentials </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="College of Dupage OER Calculus 1">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.d0616b3d72ab3b06.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.af9055d29ed602c4.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">College of Dupage OER Calculus 1</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_Ch4Sec1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_fourth.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_Ch4Sec6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\limit}{\ds\lim} 
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+ 
+ \newcommand\blank[2]{\,\colorbox{gray}{$\phantom{\rule{#1pt}{#2pt}}$}\,}
+    \newcommand{\highlight}[1]{{\color{blue}{#1}}}
+    \newcommand{\fp}{f\hskip.75pt '}
+    \newcommand{\fpp}{f\hskip.75pt ''}
+
+    
+    
+    \newcommand{\lz}[2]{\frac{d#1}{d#2}}
+    
+    
+    
+    \newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+    
+    
+    
+    \newcommand{\lzo}[1]{\frac{d}{d#1}}
+    
+    
+    
+    \newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+    
+    
+    
+    \newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+    
+    
+    
+    \newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+    
+    
+    
+    \newcommand{\plz}[2]{\frac{\partial#1}{\partial#2}}
+    
+    
+    
+    \newcommand{\plzoa}[3]{\left.{\frac{\partial#1}{\partial#2}}\right|_{#3}}
+
+    
+    
+    \newcommand{\inflim}[1][n]{\lim\limits_{#1 \to \infty}}
+
+    
+    
+    \newcommand{\primeskip}{\hskip.75pt }
+    \newcommand{\infser}[1][1]{\sum_{n=#1}^\infty}
+    \newcommand{\Fp}{F\hskip.75pt '}
+    \newcommand{\Fpp}{F\hskip.75pt ''}
+    
+	    \newcommand{\yp}{y'}
+    \newcommand{\gp}{g\hskip.75pt '}
+    \newcommand{\dx}{\Delta x}
+    \newcommand{\dy}{\Delta y}
+    \newcommand{\ddz}{\Delta z}
+    \newcommand{\thet}{\theta}
+    \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+    \newcommand{\vnorm}[1]{\left\lVert\vec #1\right\rVert}
+    \newcommand{\snorm}[1]{\left|\left|\,#1\,\right|\right|}
+    \newcommand{\la}{\left\langle}
+    \newcommand{\ra}{\right\rangle}
+    \newcommand{\dotp}[2]{\vec #1 \cdot \vec #2}
+    \newcommand{\proj}[2]{\text{proj}_{\,\vec #2}{\,\vec #1}}
+    \newcommand{\crossp}[2]{\vec #1 \times \vec #2}
+    \newcommand{\veci}{\vec i}
+    \newcommand{\vecj}{\vec j}
+    \newcommand{\veck}{\vec k}
+    \newcommand{\vecu}{\vec u}
+    \newcommand{\vecv}{\vec v}
+    \newcommand{\vecw}{\vec w}
+    \newcommand{\vecx}{\vec x}
+    \newcommand{\vecy}{\vec y}
+    \newcommand{\vrp}{\vec r\hskip0.75pt '}
+    \newcommand{\vrpp}{\vec r\hskip0.75pt ''}
+    \newcommand{\vsp}{\vec s\hskip0.75pt '}
+    \newcommand{\vrt}{\vec r(t)}
+    \newcommand{\vst}{\vec s(t)}
+    \newcommand{\vvt}{\vec v(t)}
+    \newcommand{\vat}{\vec a(t)}
+    \newcommand{\px}{\partial x}
+    \newcommand{\py}{\partial y}
+    \newcommand{\pz}{\partial z}
+    \newcommand{\pf}{\partial f}
+    \newcommand{\unittangent}{\vec{{}T}}
+    \newcommand{\unitnormal}{\vec{N}}
+    \newcommand{\unittangentprime}{\vec{{}T}\hskip0.75pt '}
+ 
+    \newcommand{\mathN}{\mathbb{N}}
+    \newcommand{\surfaceS}{\mathcal{S}}
+    \newcommand{\zerooverzero}{\displaystyle \raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\textit{ ''}}}
+    \newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+    \newcommand{\sech}{\operatorname{sech}}
+    \newcommand{\csch}{\operatorname{csch}}
+    \newcommand{\curl}{\operatorname{curl}}
+    \newcommand{\divv}{\operatorname{div}}
+    \newcommand{\Hess}{\operatorname{Hess}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_first.html" class="internal"><span class="codenumber">1</span> <span class="title">Functions and Graphs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Review of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#subsec_Ch1Sec1Ss1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Representing Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-3" class="internal"><span class="codenumber">1.1.2.1</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-4" class="internal"><span class="codenumber">1.1.2.2</span> <span class="title">Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-5" class="internal"><span class="codenumber">1.1.2.3</span> <span class="title">Algebraic Formulas</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Combining Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-3" class="internal"><span class="codenumber">1.1.3.1</span> <span class="title">Combining Functions with Mathematical Operators</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-4" class="internal"><span class="codenumber">1.1.3.2</span> <span class="title">Function Composition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetry of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Basic Classes of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear Functions and Slope</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-3" class="internal"><span class="codenumber">1.2.2.1</span> <span class="title">Power Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-4" class="internal"><span class="codenumber">1.2.2.2</span> <span class="title">Behavior at Infinity</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-5" class="internal"><span class="codenumber">1.2.2.3</span> <span class="title">Zeros of Polynomial Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-6" class="internal"><span class="codenumber">1.2.2.4</span> <span class="title">Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Algebraic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Transcendental Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Piecewise-Defined Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Transformations of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-9" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-10" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Mathematical Modeling</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Quadratic Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Inverse Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Existence of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding a Function’s Inverse</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-2" class="internal"><span class="codenumber">1.4.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-3" class="internal"><span class="codenumber">1.4.2.2</span> <span class="title">Graphing Inverse Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-4" class="internal"><span class="codenumber">1.4.2.3</span> <span class="title">Restricting Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Inverse Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-7" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exponential Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-3" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Evaluating Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-4" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">Graphing Exponential Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-4" class="internal"><span class="codenumber">1.5.2</span> <span class="title">The Number <span class="process-math">\(e \)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-5" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Hyperbolic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-3" class="internal"><span class="codenumber">1.5.4.1</span> <span class="title">Graphs of Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-4" class="internal"><span class="codenumber">1.5.4.2</span> <span class="title">Identities Involving Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-5" class="internal"><span class="codenumber">1.5.4.3</span> <span class="title">Inverse Hyperbolic Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-7" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Key Concepts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_second.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">A Preview of Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Tangent Problem and Differential Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Area Problem and Integral Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Other Aspects of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Limit of a Function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Infinite Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.3.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec3.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Limit Laws</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Limit Laws</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Limits of Polynomial and Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-5" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Additional Limit Evaluation Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-onesidedlimits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-7" class="internal"><span class="codenumber">2.4.5</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsubsec-triglimits" class="internal"><span class="codenumber">2.4.6</span> <span class="title">A Few Important Trigonometric Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-LimitLawProofs" class="internal"><span class="codenumber">2.4.7</span> <span class="title">Proofs of the Limit Laws (Optional)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec4.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Continuity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Continuity at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-4" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Types of Discontinuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-5" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Continuity over an Interval</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-6" class="internal"><span class="codenumber">2.5.4</span> <span class="title">The Intermediate Value Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec6.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Limits at Infinity and Asymptotes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Limits at Infinity and Horizontal Asymptotes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Infinite Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-5" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Formal Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-6" class="internal"><span class="codenumber">2.6.4</span> <span class="title">End Behavior for Polynomials Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-7" class="internal"><span class="codenumber">2.6.5</span> <span class="title">End Behavior for Algebraic Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_third.html" class="internal"><span class="codenumber">3</span> <span class="title">Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Defining the Derivative (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Tangent Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The Derivative of a Function at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Velocities and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-6" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-7" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">The Derivative as a Function (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivative Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Graphing a Derivative</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Derivatives and Continuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-6" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Higher-Order Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-7" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-8" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Differentiation Rules (3.3.31-2 Need Chain Rule)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The Basic Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-3" class="internal"><span class="codenumber">3.3.1.1</span> <span class="title">The Constant Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-4" class="internal"><span class="codenumber">3.3.1.2</span> <span class="title">The Power Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">The Sum, Difference, and Constant Multiple Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#subsec-exponentialderivative" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-6" class="internal"><span class="codenumber">3.3.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-7" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The Quotient Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-8" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Combining Differentiation Rules</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Derivatives as Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#subsec-instantaneousrateofchange" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Motion along a Line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Population Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-6" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Changes in Cost and Revenue</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec5.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Derivatives of Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-derivs-sine-cosine" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Derivatives of the Sine and Cosine Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-harmonicmotion" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Harmonic Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-derivatives-other-trig" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Derivatives of Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-higher-trig-derivatives" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Higher-Order Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.6</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-3" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Deriving the Chain Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-4" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Chain and Power Rules Combined</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-5" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Combining the Chain Rule with Other Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-6" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Composites of Three or More Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-7" class="internal"><span class="codenumber">3.6.5</span> <span class="title">The Chain Rule Using Leibniz’s Notation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_imp_deriv.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-3" class="internal"><span class="codenumber">3.7.1</span> <span class="title">The Method of Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-4" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Implicit Differentiation and the Second Derivative</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec8.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Derivatives of Inverse Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec8.html#sec_Ch3Sec8-3" class="internal"><span class="codenumber">3.8.1</span> <span class="title">The Derivative of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec8.html#sec_Ch3Sec8-4" class="internal"><span class="codenumber">3.8.2</span> <span class="title">Derivatives of Inverse Trigonometric Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec9.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Derivatives of Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec9.html#sec_Ch3Sec9-3" class="internal"><span class="codenumber">3.9.1</span> <span class="title">Derivative of the Exponential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec9.html#sec_Ch3Sec9-4" class="internal"><span class="codenumber">3.9.2</span> <span class="title">Derivative of the Logarithmic Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec9.html#sec_Ch3Sec9-5" class="internal"><span class="codenumber">3.9.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_fourth.html" class="internal"><span class="codenumber">4</span> <span class="title">Applications of Derivatives</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Related Rates</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec1.html#sec_Ch4Sec1-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Setting up Related-Rates Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec1.html#sec_Ch4Sec1-4" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Examples of the Process</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec_Ch4Sec2.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Linear Approximations and Differentials </span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec2.html#sec_Ch4Sec2-3" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Linear Approximation of a Function at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec2.html#sec_Ch4Sec2-4" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Differentials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec2.html#sec_Ch4Sec2-5" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Calculating the Amount of Error</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch4Sec6.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Concavity and Curve Sketching (PLACEHOLDER)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_appendix.html" class="internal"><span class="codenumber">5</span> <span class="title">Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_exp_func.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Derivatives of Exponential Functions (check if table headers needed)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Whirlwind Review of Logarithms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3-3" class="internal"><span class="codenumber">5.1.1.1</span> <span class="title">Logarithmic Functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Back to that Limit</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec_Ch4Sec2">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear Approximations and Differentials </span>
+</h2>
+<section class="introduction" id="sec_Ch4Sec2-2"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ul class="disc" id="sec_Ch4Sec2-2-2">
+<li id="sec_Ch4Sec2-2-2-1">
+<div class="para" id="p-derived-sec_Ch4Sec2-2-2-1">Describe the linear approximation to a function at a point.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch4Sec2-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch4Sec2-2-2-2">
+<div class="para" id="p-derived-sec_Ch4Sec2-2-2-2">Write the linearization of a given function.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch4Sec2-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch4Sec2-2-2-3">
+<div class="para" id="p-derived-sec_Ch4Sec2-2-2-3">Draw a graph that illustrates the use of differentials to approximate the change in a quantity.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch4Sec2-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec_Ch4Sec2-2-2-4">
+<div class="para" id="p-derived-sec_Ch4Sec2-2-2-4">Calculate the relative error and percentage error in using a differential approximation.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec_Ch4Sec2-2-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para" id="sec_Ch4Sec2-2-3">We have just seen how derivatives allow us to compare related quantities that are changing over time. In this section, we examine another application of derivatives: the ability to approximate functions locally by linear functions. Linear functions are the easiest functions with which to work, so they provide a useful tool for approximating function values. In addition, the ideas presented in this section are generalized later in the text when we study how to approximate functions by higher-degree polynomials .<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="sec_Ch4Sec2-3">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear Approximation of a Function at a Point</span>
+</h3>
+<div class="para" id="sec_Ch4Sec2-3-2">Consider a function <span class="process-math">\(f\)</span> that is differentiable at a point <span class="process-math">\(x=a.\)</span> Recall that the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(a\)</span> is given by the equation<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/fs-id1165043306789.html ./knowl/xref/CNX_Calc_Figure_04_02_002.html ./knowl/xref/CNX_Calc_Figure_04_02_003.html ./knowl/xref/CNX_Calc_Figure_04_02_004.html" id="sec_Ch4Sec2-3-3">
+\begin{equation*}
+y=f(a)+f'(a)(x-a).
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-3-4">For example, consider the function <span class="process-math">\(f(x)=\frac{1}{x}\)</span> at <span class="process-math">\(a=2.\)</span> Since <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x=2\)</span> and <span class="process-math">\(f'(x)=-\frac{1}{x^2},\)</span> we see that <span class="process-math">\(f'(2)=-\frac{1}{4}.\)</span> Therefore, the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(a=2\)</span> is given by the equation<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/fs-id1165043306789.html ./knowl/xref/CNX_Calc_Figure_04_02_002.html ./knowl/xref/CNX_Calc_Figure_04_02_003.html ./knowl/xref/CNX_Calc_Figure_04_02_004.html" id="sec_Ch4Sec2-3-5">
+\begin{equation*}
+y=\frac{1}{2}-\frac{1}{4}(x-2).
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-3-6">
+<a href="sec_Ch4Sec2.html#CNX_Calc_Figure_04_02_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_02_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.1">Figure 4.2.1</a>(a) shows a graph of <span class="process-math">\(f(x)=\frac{1}{x}\)</span> along with the tangent line to <span class="process-math">\(f\)</span> at <span class="process-math">\(x=2.\)</span> Note that for <span class="process-math">\(x\)</span> near 2, the graph of the tangent line is close to the graph of <span class="process-math">\(f.\)</span> As a result, we can use the equation of the tangent line to approximate <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(x\)</span> near 2. For example, if <span class="process-math">\(x=2.1,\)</span> the <span class="process-math">\(y\)</span> value of the corresponding point on the tangent line is<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/fs-id1165043306789.html ./knowl/xref/CNX_Calc_Figure_04_02_002.html ./knowl/xref/CNX_Calc_Figure_04_02_003.html ./knowl/xref/CNX_Calc_Figure_04_02_004.html" id="sec_Ch4Sec2-3-7">
+\begin{equation*}
+y=\frac{1}{2}-\frac{1}{4}(2.1-2)=0.475.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-3-8">The actual value of <span class="process-math">\(f(2.1)\)</span> is given by<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/fs-id1165043306789.html ./knowl/xref/CNX_Calc_Figure_04_02_002.html ./knowl/xref/CNX_Calc_Figure_04_02_003.html ./knowl/xref/CNX_Calc_Figure_04_02_004.html" id="sec_Ch4Sec2-3-9">
+\begin{equation*}
+f(2.1)=\frac{1}{2.1}\approx 0.47619.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-3-10">Therefore, the tangent line gives us a fairly good approximation of <span class="process-math">\(f(2.1)\)</span> (<a href="sec_Ch4Sec2.html#CNX_Calc_Figure_04_02_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_02_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.1">Figure 4.2.1</a>(b)). However, note that for values of <span class="process-math">\(x\)</span> far from 2, the equation of the tangent line does not give us a good approximation. For example, if <span class="process-math">\(x=10,\)</span> the <span class="process-math">\(y\)</span>-value of the corresponding point on the tangent line is<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/fs-id1165043306789.html ./knowl/xref/CNX_Calc_Figure_04_02_002.html ./knowl/xref/CNX_Calc_Figure_04_02_003.html ./knowl/xref/CNX_Calc_Figure_04_02_004.html" id="sec_Ch4Sec2-3-11">
+\begin{equation*}
+y=\frac{1}{2}-\frac{1}{4}(10-2)=\frac{1}{2}-2=-1.5,
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-3-12">whereas the value of the function at <span class="process-math">\(x=10\)</span> is <span class="process-math">\(f(10)=0.1.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_02_001"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/ch4/CNX_Calc_Figure_04_02_006.jpg" class="contained" alt='"This figure has two parts a and b. In figure a, the line f(x) = 1/x is shown with its tangent line at x = 2. In figure b, the area near the tangent point is blown up to show how good of an approximation the tangent is near x = 2."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>(a) The tangent line to <span class="process-math">\(f(x)=1/x\)</span> at <span class="process-math">\(x=2\)</span> provides a good approximation to <span class="process-math">\(f\)</span> for <span class="process-math">\(x\)</span> near 2. (b) At <span class="process-math">\(x=2.1,\)</span> the value of <span class="process-math">\(y\)</span> on the tangent line to <span class="process-math">\(f(x)=1/x\)</span> is 0.475. The actual value of <span class="process-math">\(f(2.1)\)</span> is <span class="process-math">\(1/2.1,\)</span> which is approximately 0.47619.<div class="autopermalink" data-description="Figure 4.2.1"><a href="#CNX_Calc_Figure_04_02_001" title="Copy heading and permalink for Figure 4.2.1" aria-label="Copy heading and permalink for Figure 4.2.1">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="sec_Ch4Sec2-3-14">In general, for a differentiable function <span class="process-math">\(f,\)</span> the equation of the tangent line to <span class="process-math">\(f\)</span> at <span class="process-math">\(x=a\)</span> can be used to approximate <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(x\)</span> near <span class="process-math">\(a.\)</span> Therefore, we can write<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/fs-id1165043306789.html ./knowl/xref/CNX_Calc_Figure_04_02_002.html ./knowl/xref/CNX_Calc_Figure_04_02_003.html ./knowl/xref/CNX_Calc_Figure_04_02_004.html" id="sec_Ch4Sec2-3-15">
+\begin{equation*}
+f(x)\approx f(a)+f'(a)(x-a) \text{ for } x \text{ near } a.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-3-16">We call the linear function<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/CNX_Calc_Figure_04_02_001.html ./knowl/xref/fs-id1165043306789.html ./knowl/xref/CNX_Calc_Figure_04_02_002.html ./knowl/xref/CNX_Calc_Figure_04_02_003.html ./knowl/xref/CNX_Calc_Figure_04_02_004.html" id="fs-id1165043306789">
+\begin{equation}
+L(x)=f(a)+f'(a)(x-a)\tag{4.2.1}
+\end{equation}
+</div>
+<div class="para" id="sec_Ch4Sec2-3-18">the <dfn class="terminology">linear approximation</dfn>, or <dfn class="terminology">tangent line approximation</dfn>, of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=a.\)</span> This function <span class="process-math">\(L\)</span> is also known as the <dfn class="terminology">linearization</dfn> of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=a.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch4Sec2-3-19">To show how useful the linear approximation can be, we look at how to find the linear approximation for <span class="process-math">\(f(x)=\sqrt{x}\)</span> at <span class="process-math">\(x=9.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1165043051419"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear Approximation of <span class="process-math">\(\sqrt{x}\)</span>.</span>
+</h4>
+<div class="para" id="fs-id1165043051419-2-1">Find the linear approximation of <span class="process-math">\(f(x)=\sqrt{x}\)</span> at <span class="process-math">\(x=9\)</span> and use the approximation to estimate <span class="process-math">\(\sqrt{9.1}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043051419-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1165043051419-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1165043051419-3-1">Since we are looking for the linear approximation at <span class="process-math">\(x=9,\)</span> using <a href="sec_Ch4Sec2.html#fs-id1165043306789" class="xref" data-knowl="./knowl/xref/fs-id1165043306789.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.2.1">(4.2.1)</a> we know the linear approximation is given by<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043051419-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1165043306789.html ./knowl/xref/CNX_Calc_Figure_04_02_002.html" id="fs-id1165043051419-3-2">
+\begin{equation*}
+L(x)=f(9)+f'(9)(x-9).
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043051419-3-3">We need to find <span class="process-math">\(f(9)\)</span> and <span class="process-math">\(f'(9).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043051419-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1165043306789.html ./knowl/xref/CNX_Calc_Figure_04_02_002.html" id="fs-id1165043051419-3-4">
+\begin{align*}
+f(x)=\sqrt{x}\amp \implies \amp \amp f(9)=\sqrt{9}=3\\
+f'(x)=\frac{1}{2\sqrt{x}}\amp\implies \amp \amp f'(9)=\frac{1}{2\sqrt{9}}=\frac{1}{6}
+\end{align*}
+</div>
+<div class="para" id="fs-id1165043051419-3-5">Therefore, the linear approximation is given by <a href="sec_Ch4Sec2.html#CNX_Calc_Figure_04_02_002" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_02_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.3">Figure 4.2.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043051419-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1165043306789.html ./knowl/xref/CNX_Calc_Figure_04_02_002.html" id="fs-id1165043051419-3-6">
+\begin{equation*}
+L(x)=3+\frac{1}{6}(x-9)
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043051419-3-7">Using the linear approximation, we can estimate <span class="process-math">\(\sqrt{9.1}\)</span> by writing<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043051419-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1165043306789.html ./knowl/xref/CNX_Calc_Figure_04_02_002.html" id="fs-id1165043051419-3-8">
+\begin{equation*}
+\sqrt{9.1}=f(9.1)\approx L(9.1)=3+\frac{1}{6}(9.1-9)\approx 3.0167.
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_02_002"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch4/CNX_Calc_Figure_04_02_002.jpg" class="contained" alt='"The function f(x) = the square root of x is shown with its tangent at (9, 3). The tangent appears to be a very good approximation from x = 6 to x = 12."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The local linear approximation to <span class="process-math">\(f(x)=\sqrt{x}\)</span> at <span class="process-math">\(x=9\)</span> provides an approximation to <span class="process-math">\(f\)</span> for <span class="process-math">\(x\)</span> near 9.<div class="autopermalink" data-description="Figure 4.2.3"><a href="#CNX_Calc_Figure_04_02_002" title="Copy heading and permalink for Figure 4.2.3" aria-label="Copy heading and permalink for Figure 4.2.3">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 4.2.2.1"><a href="#fs-id1165043051419-3" title="Copy heading and permalink for Solution 4.2.2.1" aria-label="Copy heading and permalink for Solution 4.2.2.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.2.2: Linear Approximation of \sqrt{x}"><a href="#fs-id1165043051419" title="Copy heading and permalink for Example 4.2.2: Linear Approximation of \sqrt{x}" aria-label="Copy heading and permalink for Example 4.2.2: Linear Approximation of \sqrt{x}">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec2-3-21" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-3-21-1-1">Find the local linear approximation to <span class="process-math">\(f(x)=\sqrt[3]{x} \)</span> at <span class="process-math">\(x=8.\)</span> Use it to approximate <span class="process-math">\(\sqrt[3]{8.1} \)</span> to five decimal places.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec2-3-21-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-3-21-3-1">
+<span class="process-math">\(L(x)=f(a)+f'(a)(x-a)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-21-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.2.5.1"><a href="#sec_Ch4Sec2-3-21-3" title="Copy heading and permalink for Hint 4.2.5.1" aria-label="Copy heading and permalink for Hint 4.2.5.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec2-3-21-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-3-21-2-1">
+<span class="process-math">\(L(x)=2+\frac{1}{12}(x-8);\)</span> 2.00833<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-21-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.2.5.1"><a href="#sec_Ch4Sec2-3-21-2" title="Copy heading and permalink for Solution 4.2.5.1" aria-label="Copy heading and permalink for Solution 4.2.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.2.5"><a href="#sec_Ch4Sec2-3-21" title="Copy heading and permalink for Checkpoint 4.2.5" aria-label="Copy heading and permalink for Checkpoint 4.2.5">🔗</a></div>
+</article></details>
+<article class="example example-like" id="sec_Ch4Sec2-3-22"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear Approximation of <span class="process-math">\(\sin x\)</span>.</span>
+</h4>
+<div class="para" id="sec_Ch4Sec2-3-22-2-1">Find the linear approximation of <span class="process-math">\(f(x)=\sin x\)</span> at <span class="process-math">\(x=\frac{\pi}{3}\)</span> and use it to approximate <span class="process-math">\(\sin(62^{\circ} ).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-22-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec2-3-22-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-3-22-3-1">First we note that since <span class="process-math">\(\frac{\pi}{3}\)</span> rad is equivalent to <span class="process-math">\(60^{\circ} ,\)</span> using the linear approximation at <span class="process-math">\(x=\pi/3\)</span> seems reasonable. The linear approximation is given by<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-22-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_003.html" id="sec_Ch4Sec2-3-22-3-2">
+\begin{equation*}
+L(x)=f(\frac{\pi}{3})+f'(\frac{\pi}{3})(x-\frac{\pi}{3}).
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-3-22-3-3">We see that<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-22-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_003.html" id="sec_Ch4Sec2-3-22-3-4">
+\begin{align*}
+f(x)=\sin x\amp\implies \amp f(\frac{\pi}{3})=\sin(\frac{\pi}{3})=\frac{\sqrt{3}}{2}\\
+f'(x)=\cos  x\amp\implies \amp f'(\frac{\pi}{3})=\cos (\frac{\pi}{3})=\frac{1}{2}
+\end{align*}
+</div>
+<div class="para" id="sec_Ch4Sec2-3-22-3-5">Therefore, the linear approximation of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=\pi/3\)</span> is given by <a href="sec_Ch4Sec2.html#CNX_Calc_Figure_04_02_003" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_02_003.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.7">Figure 4.2.7</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-22-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_003.html" id="sec_Ch4Sec2-3-22-3-6">
+\begin{equation*}
+L(x)=\frac{\sqrt{3}}{2}+\frac{1}{2}(x-\frac{\pi}{3})
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-3-22-3-7">To estimate <span class="process-math">\(\sin(62^{\circ} )\)</span> using <span class="process-math">\(L,\)</span> we must first convert <span class="process-math">\(62^{\circ} \)</span> to radians. We have <span class="process-math">\(62^{\circ} =\frac{62\pi}{180}\)</span> radians, so the estimate for <span class="process-math">\(\sin(62^{\circ} )\)</span> is given by<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-22-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_003.html" id="sec_Ch4Sec2-3-22-3-8">
+\begin{equation*}
+\sin(62^{\circ} )=f(\frac{62\pi}{180})\approx L(\frac{62\pi}{180})=\frac{\sqrt{3}}{2}+\frac{1}{2}(\frac{62\pi}{180}-\frac{\pi}{3})=\frac{\sqrt{3}}{2}+\frac{1}{2}(\frac{2\pi}{180})=\frac{\sqrt{3}}{2}+\frac{\pi}{180}\approx 0.88348.
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_02_003"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch4/CNX_Calc_Figure_04_02_003.jpg" class="contained" alt='"The function f(x) = sin x is shown with its tangent at (pi/3, square root of 3 / 2). The tangent appears to be a very good approximation for x near pi / 3."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The linear approximation to <span class="process-math">\(f(x)=\sin x\)</span> at <span class="process-math">\(x=\pi/3\)</span> provides an approximation to <span class="process-math">\(\sin x\)</span> for <span class="process-math">\(x\)</span> near <span class="process-math">\(\pi/3.\)</span><div class="autopermalink" data-description="Figure 4.2.7"><a href="#CNX_Calc_Figure_04_02_003" title="Copy heading and permalink for Figure 4.2.7" aria-label="Copy heading and permalink for Figure 4.2.7">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 4.2.6.1"><a href="#sec_Ch4Sec2-3-22-3" title="Copy heading and permalink for Solution 4.2.6.1" aria-label="Copy heading and permalink for Solution 4.2.6.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.2.6: Linear Approximation of \sin x"><a href="#sec_Ch4Sec2-3-22" title="Copy heading and permalink for Example 4.2.6: Linear Approximation of \sin x" aria-label="Copy heading and permalink for Example 4.2.6: Linear Approximation of \sin x">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec2-3-23" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-3-23-1-1">Find the linear approximation for <span class="process-math">\(f(x)=\cos  x\)</span> at <span class="process-math">\(x=\frac{\pi}{2}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec2-3-23-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-3-23-3-1">
+<span class="process-math">\(L(x)=f(a)+f'(a)(x-a)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-23-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.2.8.1"><a href="#sec_Ch4Sec2-3-23-3" title="Copy heading and permalink for Hint 4.2.8.1" aria-label="Copy heading and permalink for Hint 4.2.8.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec2-3-23-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-3-23-2-1">
+<span class="process-math">\(L(x)=-x+\frac{\pi}{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-23-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.2.8.1"><a href="#sec_Ch4Sec2-3-23-2" title="Copy heading and permalink for Solution 4.2.8.1" aria-label="Copy heading and permalink for Solution 4.2.8.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.2.8"><a href="#sec_Ch4Sec2-3-23" title="Copy heading and permalink for Checkpoint 4.2.8" aria-label="Copy heading and permalink for Checkpoint 4.2.8">🔗</a></div>
+</article></details>
+<div class="para" id="sec_Ch4Sec2-3-24">Linear approximations may be used in estimating roots and powers. In the next example, we find the linear approximation for <span class="process-math">\(f(x)=(1+x)^n\)</span> at <span class="process-math">\(x=0,\)</span> which can be used to estimate roots and powers for real numbers near 1. The same idea can be extended to a function of the form <span class="process-math">\(f(x)=(m+x)^n \)</span> to estimate roots and powers near a different number <span class="process-math">\(m.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1165043161464"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Approximating Roots and Powers.</span>
+</h4>
+<div class="para" id="fs-id1165043161464-2-1">Find the linear approximation of <span class="process-math">\(f(x)=(1+x)^n\)</span> at <span class="process-math">\(x=0.\)</span> Use this approximation to estimate <span class="process-math">\((1.01)^3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043161464-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1165043161464-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1165043161464-3-1">The linear approximation at <span class="process-math">\(x=0\)</span> is given by<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043161464-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_004.html" id="fs-id1165043161464-3-2">
+\begin{equation*}
+L(x)=f(0)+f'(0)(x-0).
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043161464-3-3">Because<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043161464-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_004.html" id="fs-id1165043161464-3-4">
+\begin{align*}
+f(x)=(1+x)^n\amp\implies \amp \amp f(0)=1\\
+f'(x)=n(1+x)^{n-1}\amp\implies \amp \amp f'(0)=n,
+\end{align*}
+</div>
+<div class="para" id="fs-id1165043161464-3-5">the linear approximation is given by <a href="sec_Ch4Sec2.html#CNX_Calc_Figure_04_02_004" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_02_004.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.10">Figure 4.2.10</a>(a).<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043161464-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_004.html" id="fs-id1165043161464-3-6">
+\begin{equation*}
+L(x)=1+n(x-0)=1+nx
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043161464-3-7">We can approximate <span class="process-math">\((1.01)^3\)</span> by evaluating <span class="process-math">\(L(0.01)\)</span> when <span class="process-math">\(n=3.\)</span> We conclude that<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043161464-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_02_004.html" id="fs-id1165043161464-3-8">
+\begin{equation*}
+(1.01)^3=f(1.01)\approx L(1.01)=1+3(0.01)=1.03.
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_02_004"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch4/CNX_Calc_Figure_04_02_007.jpg" class="contained" alt='"This figure has two parts a and b. In figure a, the line f(x) = (1 + x)3 is shown with its tangent line at (0, 1). In figure b, the area near the tangent point is blown up to show how good of an approximation the tangent is near (0, 1)."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>(a) The linear approximation of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=0\)</span> is <span class="process-math">\(L(x).\)</span> (b) The actual value of <span class="process-math">\(1.01^3\)</span> is 1.030301. The linear approximation of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=0\)</span> estimates <span class="process-math">\(1.01^3\)</span> to be 1.03.<div class="autopermalink" data-description="Figure 4.2.10"><a href="#CNX_Calc_Figure_04_02_004" title="Copy heading and permalink for Figure 4.2.10" aria-label="Copy heading and permalink for Figure 4.2.10">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 4.2.9.1"><a href="#fs-id1165043161464-3" title="Copy heading and permalink for Solution 4.2.9.1" aria-label="Copy heading and permalink for Solution 4.2.9.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.2.9: Approximating Roots and Powers"><a href="#fs-id1165043161464" title="Copy heading and permalink for Example 4.2.9: Approximating Roots and Powers" aria-label="Copy heading and permalink for Example 4.2.9: Approximating Roots and Powers">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec2-3-26" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-3-26-1-1">Find the linear approximation of <span class="process-math">\(f(x)=(1+x)^4\)</span> at <span class="process-math">\(x=0\)</span> without using the result from the preceding example.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-26-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec2-3-26-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-3-26-3-1">
+<span class="process-math">\(f'(x)=4(1+x)^3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-26-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.2.11.1"><a href="#sec_Ch4Sec2-3-26-3" title="Copy heading and permalink for Hint 4.2.11.1" aria-label="Copy heading and permalink for Hint 4.2.11.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec2-3-26-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-3-26-2-1">
+<span class="process-math">\(L(x)=1+4x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-3-26-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.2.11.1"><a href="#sec_Ch4Sec2-3-26-2" title="Copy heading and permalink for Solution 4.2.11.1" aria-label="Copy heading and permalink for Solution 4.2.11.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.2.11"><a href="#sec_Ch4Sec2-3-26" title="Copy heading and permalink for Checkpoint 4.2.11" aria-label="Copy heading and permalink for Checkpoint 4.2.11">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 4.2.1: Linear Approximation of a Function at a Point"><a href="#sec_Ch4Sec2-3" title="Copy heading and permalink for Subsection 4.2.1: Linear Approximation of a Function at a Point" aria-label="Copy heading and permalink for Subsection 4.2.1: Linear Approximation of a Function at a Point">🔗</a></div>
+</section>
+<section class="subsection" id="sec_Ch4Sec2-4">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differentials</span>
+</h3>
+<div class="para" id="sec_Ch4Sec2-4-2">We have seen that linear approximations can be used to estimate function values. They can also be used to estimate the amount a function value changes as a result of a small change in the input. To discuss this more formally, we define a related concept: <dfn class="terminology">differentials</dfn>. Differentials provide us with a way of estimating the amount a function changes as a result of a small change in input values.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch4Sec2-4-3">When we first looked at derivatives, we used the Leibniz notation <span class="process-math">\(dy/dx\)</span> to represent the derivative of <span class="process-math">\(y\)</span> with respect to <span class="process-math">\(x.\)</span> Although we used the expressions <span class="process-math">\(dy \)</span> and <span class="process-math">\(dx \)</span> in this notation, they did not have meaning on their own. Here we see a meaning to the expressions <span class="process-math">\(dy \)</span> and <span class="process-math">\(dx \text{.}\)</span> Suppose <span class="process-math">\(y=f(x)\)</span> is a differentiable function. Let <span class="process-math">\(dx \)</span> be an independent variable that can be assigned any nonzero real number, and define the dependent variable <span class="process-math">\(dy\)</span> by<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042610583.html" id="fs-id1165042369661">
+\begin{equation}
+dy=f'(x)dx.\tag{4.2.2}
+\end{equation}
+</div>
+<div class="para" id="sec_Ch4Sec2-4-5">It is important to notice that <span class="process-math">\(dy\)</span> is a function of both <span class="process-math">\(x\)</span> and <span class="process-math">\(dx.\)</span> The expressions <span class="process-math">\(dy \)</span> and <span class="process-math">\(dx \)</span> are called <em class="emphasis">differentials</em>. We can divide both sides of <a href="sec_Ch4Sec2.html#fs-id1165042369661" class="xref" data-knowl="./knowl/xref/fs-id1165042369661.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.2.2">(4.2.2)</a> by <span class="process-math">\(dx,\)</span> which yields<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042610583.html" id="fs-id1165042610583">
+\begin{equation}
+\frac{dy}{dx}=f'(x).\tag{4.2.3}
+\end{equation}
+</div>
+<div class="para" id="sec_Ch4Sec2-4-7">This is the familiar expression we have used to denote a derivative. <a href="sec_Ch4Sec2.html#fs-id1165042369661" class="xref" data-knowl="./knowl/xref/fs-id1165042369661.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.2.2">(4.2.2)</a> is known as the <dfn class="terminology">differential form</dfn> of <a href="sec_Ch4Sec2.html#fs-id1165042610583" class="xref" data-knowl="./knowl/xref/fs-id1165042610583.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.2.3">(4.2.3)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1165043166548"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Computing differentials.</span>
+</h4>
+<div class="para" id="fs-id1165043166548-2-1">For each of the following functions, find <span class="process-math">\(dy \)</span> and evaluate when <span class="process-math">\(x=3\)</span> and <span class="process-math">\(dx=0.1.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043166548-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha ol-marker-2" id="fs-id1165043166548-2-2">
+<li id="fs-id1165043166548-2-2-1">
+<div class="para" id="p-derived-fs-id1165043166548-2-2-1"><span class="process-math">\(\displaystyle y=x^2+2x\)</span></div>
+<div class="autopermalink" data-description="Item a"><a href="#fs-id1165043166548-2-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="fs-id1165043166548-2-2-2">
+<div class="para" id="p-derived-fs-id1165043166548-2-2-2"><span class="process-math">\(\displaystyle y=\cos  x\)</span></div>
+<div class="autopermalink" data-description="Item b"><a href="#fs-id1165043166548-2-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="solutions">
+<details id="fs-id1165043166548-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1165043166548-3-1">The key step is calculating the derivative. When we have that, we can obtain <span class="process-math">\(dy \)</span> directly.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043166548-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-alpha ol-marker-2" id="fs-id1165043166548-3-2">
+<li id="fs-id1165043166548-3-2-1">
+<div class="para" id="p-derived-fs-id1165043166548-3-2-1">Since <span class="process-math">\(f(x)=x^2+2x,\)</span> we know <span class="process-math">\(f'(x)=2x+2,\)</span> and therefore<div class="displaymath process-math" id="fs-id1165043166548-3-2-1-3">
+\begin{equation*}
+dy=(2x+2)dx.
+\end{equation*}
+</div>When <span class="process-math">\(x=3\)</span> and <span class="process-math">\(dx=0.1,\)</span><div class="displaymath process-math" id="fs-id1165043166548-3-2-1-6">
+\begin{equation*}
+dy=(2\cdot 3+2)(0.1)=0.8.
+\end{equation*}
+</div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#fs-id1165043166548-3-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="fs-id1165043166548-3-2-2">
+<div class="para" id="p-derived-fs-id1165043166548-3-2-2">Since <span class="process-math">\(f(x)=\cos  x,\)</span> <span class="process-math">\(f'(x)=-\sin(x).\)</span> This gives us<div class="displaymath process-math" id="fs-id1165043166548-3-2-2-3">
+\begin{equation*}
+dy=-\sin x dx.
+\end{equation*}
+</div>When <span class="process-math">\(x=3\)</span> and <span class="process-math">\(dx=0.1,\)</span><div class="displaymath process-math" id="fs-id1165043166548-3-2-2-6">
+\begin{equation*}
+dy=-\sin(3)(0.1)=-0.1 \sin(3).
+\end{equation*}
+</div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#fs-id1165043166548-3-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 4.2.12.1"><a href="#fs-id1165043166548-3" title="Copy heading and permalink for Solution 4.2.12.1" aria-label="Copy heading and permalink for Solution 4.2.12.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.2.12: Computing differentials"><a href="#fs-id1165043166548" title="Copy heading and permalink for Example 4.2.12: Computing differentials" aria-label="Copy heading and permalink for Example 4.2.12: Computing differentials">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec2-4-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-4-9-1-1">For <span class="process-math">\(y=e^{x^2},\)</span> find <span class="process-math">\(dy.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec2-4-9-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-4-9-3-1">
+<span class="process-math">\(dy=f'(x)dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.2.13.1"><a href="#sec_Ch4Sec2-4-9-3" title="Copy heading and permalink for Hint 4.2.13.1" aria-label="Copy heading and permalink for Hint 4.2.13.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec2-4-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-4-9-2-1">
+<span class="process-math">\(dy=2xe^{x^2}dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.2.13.1"><a href="#sec_Ch4Sec2-4-9-2" title="Copy heading and permalink for Solution 4.2.13.1" aria-label="Copy heading and permalink for Solution 4.2.13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.2.13"><a href="#sec_Ch4Sec2-4-9" title="Copy heading and permalink for Checkpoint 4.2.13" aria-label="Copy heading and permalink for Checkpoint 4.2.13">🔗</a></div>
+</article></details>
+<div class="para" id="sec_Ch4Sec2-4-10">We now connect differentials to linear approximations. Differentials can be used to estimate the change in the value of a function resulting from a small change in input values. Consider a function <span class="process-math">\(f\)</span> that is differentiable at point <span class="process-math">\(a.\)</span> Suppose the input <span class="process-math">\(x\)</span> changes by a small amount. We are interested in how much the output <span class="process-math">\(y\)</span> changes. If <span class="process-math">\(x\)</span> changes from <span class="process-math">\(a\)</span> to <span class="process-math">\(a+dx,\)</span> then the change in <span class="process-math">\(x\)</span> is <span class="process-math">\(dx\)</span> (also denoted <span class="process-math">\(\Delta x),\)</span> and the change in <span class="process-math">\(y\)</span> is given by<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042610583.html" id="sec_Ch4Sec2-4-11">
+\begin{equation*}
+\Delta y=f(a+dx)-f(a).
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-4-12">Instead of calculating the exact change in <span class="process-math">\(y,\)</span> however, it is often easier to approximate the change in <span class="process-math">\(y\)</span> by using a linear approximation. For <span class="process-math">\(x\)</span> near <span class="process-math">\(a,\)</span> <span class="process-math">\(f(x)\)</span> can be approximated by the linear approximation<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042610583.html" id="sec_Ch4Sec2-4-13">
+\begin{equation*}
+L(x)=f(a)+f'(a)(x-a).
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-4-14">Therefore, if <span class="process-math">\(dx\)</span> is small,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042610583.html" id="sec_Ch4Sec2-4-15">
+\begin{equation*}
+f(a+dx)\approx L(a+dx)=f(a)+f'(a)(a+dx-a).
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-4-16">That is,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042610583.html" id="sec_Ch4Sec2-4-17">
+\begin{equation*}
+f(a+dx)-f(a)\approx L(a+dx)-f(a)=f'(a)dx.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-4-18">In other words, the actual change in the function <span class="process-math">\(f\)</span> if <span class="process-math">\(x\)</span> increases from <span class="process-math">\(a\)</span> to <span class="process-math">\(a+dx\)</span> is approximately the difference between <span class="process-math">\(L(a+dx)\)</span> and <span class="process-math">\(f(a),\)</span> where <span class="process-math">\(L(x)\)</span> is the linear approximation of <span class="process-math">\(f\)</span> at <span class="process-math">\(a.\)</span> By definition of <span class="process-math">\(L(x),\)</span> this difference is equal to <span class="process-math">\(f'(a)dx.\)</span> In summary,<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042369661.html ./knowl/xref/fs-id1165042610583.html" id="sec_Ch4Sec2-4-19">
+\begin{equation*}
+\Delta y=f(a+dx)-f(a)\approx L(a+dx)-f(a)=f'(a)dx=dy.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-4-20">Therefore, we can use the differential <span class="process-math">\(dy=f'(a)dx\)</span> to approximate the change in <span class="process-math">\(y\)</span> if <span class="process-math">\(x\)</span> increases from <span class="process-math">\(x=a\)</span> to <span class="process-math">\(x=a+dx.\)</span> We can see this in the following graph.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_02_005"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch4/CNX_Calc_Figure_04_02_005.jpg" class="contained" alt='"A function y = f(x) is shown along with its tangent line at (a, f(a)). The tangent line is denoted L(x). The x axis is marked with a and a + dx, with a dashed line showing the distance between a and a + dx as dx. The points (a + dx, f(a + dx)) and (a + dx, L(a + dx)) are marked on the curves for y = f(x) and y = L(x), respectively. The distance between f(a) and L(a + dx) is marked as dy = f’(a) dx, and the distance between f(a) and f(a + dx) is marked as Δy = f(a + dx) – f(a)."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The differential <span class="process-math">\(dy=f'(a)dx\)</span> is used to approximate the actual change in <span class="process-math">\(y\)</span> if <span class="process-math">\(x\)</span> increases from <span class="process-math">\(a\)</span> to <span class="process-math">\(a+dx.\)</span><div class="autopermalink" data-description="Figure 4.2.14"><a href="#CNX_Calc_Figure_04_02_005" title="Copy heading and permalink for Figure 4.2.14" aria-label="Copy heading and permalink for Figure 4.2.14">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="sec_Ch4Sec2-4-22">We now take a look at how to use differentials to approximate the change in the value of the function that results from a small change in the value of the input. Note the calculation with differentials is much simpler than calculating actual values of functions and the result is very close to what we would obtain with the more exact calculation.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1165043349128"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Approximating Change with Differentials.</span>
+</h4>
+<div class="para" id="fs-id1165043349128-2-1">Let <span class="process-math">\(y=x^2+2x.\)</span> Compute <span class="process-math">\(\Delta y\)</span> and <span class="process-math">\(dy \)</span> at <span class="process-math">\(x=3\)</span> if <span class="process-math">\(dx=0.1.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043349128-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1165043349128-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1165043349128-3-1">The actual change in <span class="process-math">\(y\)</span> if <span class="process-math">\(x\)</span> changes from <span class="process-math">\(x=3\)</span> to <span class="process-math">\(x=3.1\)</span> is given by<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043349128-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1165043349128-3-2">
+\begin{equation*}
+\Delta y=f(3.1)-f(3)=[3.1^2+2(3.1)]-[3^2+2(3)]=0.81.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043349128-3-3">The approximate change in <span class="process-math">\(y\)</span> is given by <span class="process-math">\(dy=f'(3)dx.\)</span> Since <span class="process-math">\(f'(x)=2x+2,\)</span> we have<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043349128-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1165043349128-3-4">
+\begin{equation*}
+dy=f'(3)dx=(2(3)+2)(0.1)=0.8.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 4.2.15.1"><a href="#fs-id1165043349128-3" title="Copy heading and permalink for Solution 4.2.15.1" aria-label="Copy heading and permalink for Solution 4.2.15.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.2.15: Approximating Change with Differentials"><a href="#fs-id1165043349128" title="Copy heading and permalink for Example 4.2.15: Approximating Change with Differentials" aria-label="Copy heading and permalink for Example 4.2.15: Approximating Change with Differentials">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec2-4-24" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-4-24-1-1">For <span class="process-math">\(y=x^2+2x,\)</span> find <span class="process-math">\(\Delta y\)</span> and <span class="process-math">\(dy\)</span> at <span class="process-math">\(x=3\)</span> if <span class="process-math">\(dx=0.2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-24-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec2-4-24-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-4-24-3-1">
+<span class="process-math">\(dy=f'(3)dx,\)</span> <span class="process-math">\(\Delta y=f(3.2)-f(3)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-24-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.2.16.1"><a href="#sec_Ch4Sec2-4-24-3" title="Copy heading and permalink for Hint 4.2.16.1" aria-label="Copy heading and permalink for Hint 4.2.16.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec2-4-24-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-4-24-2-1">
+<span class="process-math">\(dy=1.6,\)</span> <span class="process-math">\(\Delta y=1.64\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-4-24-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.2.16.1"><a href="#sec_Ch4Sec2-4-24-2" title="Copy heading and permalink for Solution 4.2.16.1" aria-label="Copy heading and permalink for Solution 4.2.16.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.2.16"><a href="#sec_Ch4Sec2-4-24" title="Copy heading and permalink for Checkpoint 4.2.16" aria-label="Copy heading and permalink for Checkpoint 4.2.16">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 4.2.2: Differentials"><a href="#sec_Ch4Sec2-4" title="Copy heading and permalink for Subsection 4.2.2: Differentials" aria-label="Copy heading and permalink for Subsection 4.2.2: Differentials">🔗</a></div>
+</section>
+<section class="subsection" id="sec_Ch4Sec2-5">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Calculating the Amount of Error</span>
+</h3>
+<div class="para" id="sec_Ch4Sec2-5-2">Any type of measurement is prone to a certain amount of error. In many applications, certain quantities are calculated based on measurements. For example, the area of a circle is calculated by measuring the radius of the circle. An error in the measurement of the radius leads to an error in the computed value of the area. Here we examine this type of error and study how differentials can be used to estimate the error.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch4Sec2-5-3">Consider a function <span class="process-math">\(f\)</span> with an input that is a measured quantity. Suppose the exact value of the measured quantity is <span class="process-math">\(a,\)</span> but the measured value is <span class="process-math">\(a+dx.\)</span> We say the measurement error is <span class="process-math">\(dx \)</span> (or <span class="process-math">\(\Delta x).\)</span> As a result, an error occurs in the calculated quantity <span class="process-math">\(f(x).\)</span> This type of error is known as a <dfn class="terminology">propagated error</dfn> and is given by<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch4Sec2-5-4">
+\begin{equation*}
+\Delta y=f(a+dx)-f(a).
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-5-5">Since all measurements are prone to some degree of error, we do not know the exact value of a measured quantity, so we cannot calculate the propagated error exactly. However, given an estimate of the accuracy of a measurement, we can use differentials to approximate the propagated error <span class="process-math">\(\Delta y.\)</span> Specifically, if <span class="process-math">\(f\)</span> is a differentiable function at <span class="process-math">\(a,\)</span> the propagated error is<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch4Sec2-5-6">
+\begin{equation*}
+\Delta y\approx dy=f'(a)dx.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-5-7">Unfortunately, we do not know the exact value <span class="process-math">\(a.\)</span> However, we can use the measured value <span class="process-math">\(a+dx,\)</span> and estimate<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-5-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec_Ch4Sec2-5-8">
+\begin{equation*}
+\Delta y\approx dy\approx f'(a+dx)dx.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec2-5-9">In the next example, we look at how differentials can be used to estimate the error in calculating the volume of a box if we assume the measurement of the side length is made with a certain amount of accuracy.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-5-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1165043397423"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Volume of a Cube.</span>
+</h4>
+<div class="para" id="fs-id1165043397423-2-1">Suppose the side length of a cube is measured to be 5 cm with an accuracy of 0.1 cm.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043397423-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha ol-marker-2" id="fs-id1165043397423-2-2">
+<li id="fs-id1165043397423-2-2-1">
+<div class="para" id="p-derived-fs-id1165043397423-2-2-1">Use differentials to estimate the error in the computed volume of the cube.</div>
+<div class="autopermalink" data-description="Item a"><a href="#fs-id1165043397423-2-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="fs-id1165043397423-2-2-2">
+<div class="para" id="p-derived-fs-id1165043397423-2-2-2">Compute the volume of the cube if the side length is (i) 4.9 cm and (ii) 5.1 cm to compare the estimated error with the actual potential error.</div>
+<div class="autopermalink" data-description="Item b"><a href="#fs-id1165043397423-2-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="solutions">
+<details id="fs-id1165043397423-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<ol class="lower-alpha ol-marker-2" id="fs-id1165043397423-3-1">
+<li id="fs-id1165043397423-3-1-1">
+<div class="para" id="p-derived-fs-id1165043397423-3-1-1">The measurement of the side length is accurate to within <span class="process-math">\(\pm 0.1\)</span> cm. Therefore,<div class="displaymath process-math" id="fs-id1165043397423-3-1-1-2">
+\begin{equation*}
+-0.1\leq dx\leq 0.1.
+\end{equation*}
+</div>The volume of a cube is given by <span class="process-math">\(V=x^3,\)</span> which leads to<div class="displaymath process-math" id="fs-id1165043397423-3-1-1-4">
+\begin{equation*}
+dV=3x^2dx.
+\end{equation*}
+</div>Using the measured side length of 5 cm, we can estimate that<div class="displaymath process-math" id="fs-id1165043397423-3-1-1-5">
+\begin{equation*}
+-3(5)^2(0.1)\leq dV\leq 3(5)^2(0.1).
+\end{equation*}
+</div>Therefore,<div class="displaymath process-math" id="fs-id1165043397423-3-1-1-6">
+\begin{equation*}
+-7.5\leq dV\leq 7.5.
+\end{equation*}
+</div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#fs-id1165043397423-3-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="fs-id1165043397423-3-1-2">
+<div class="para" id="p-derived-fs-id1165043397423-3-1-2">If the side length is actually 4.9 cm, then the volume of the cube is<div class="displaymath process-math" id="fs-id1165043397423-3-1-2-1">
+\begin{equation*}
+V(4.9)=(4.9)^3=117.649 \text{ cm}^3.
+\end{equation*}
+</div>If the side length is actually 5.1 cm, then the volume of the cube is<div class="displaymath process-math" id="fs-id1165043397423-3-1-2-2">
+\begin{equation*}
+V(5.1)=(5.1)^3=132.651 \text{ cm}^3.
+\end{equation*}
+</div>Therefore, the actual volume of the cube is between 117.649 and 132.651. Since the side length is measured to be 5 cm, the computed volume is <span class="process-math">\(V(5)=5^3=125.\)</span> Therefore, the error in the computed volume is<div class="displaymath process-math" id="fs-id1165043397423-3-1-2-4">
+\begin{equation*}
+117.649-125\leq \Delta V\leq 132.651-125.
+\end{equation*}
+</div>That is,<div class="displaymath process-math" id="fs-id1165043397423-3-1-2-5">
+\begin{equation*}
+-7.351\leq \Delta V\leq 7.651.
+\end{equation*}
+</div>We see the estimated error <span class="process-math">\(dV\)</span> is relatively close to the actual potential error in the computed volume.</div>
+<div class="autopermalink" data-description="Item b"><a href="#fs-id1165043397423-3-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 4.2.17.1"><a href="#fs-id1165043397423-3" title="Copy heading and permalink for Solution 4.2.17.1" aria-label="Copy heading and permalink for Solution 4.2.17.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.2.17: Volume of a Cube"><a href="#fs-id1165043397423" title="Copy heading and permalink for Example 4.2.17: Volume of a Cube" aria-label="Copy heading and permalink for Example 4.2.17: Volume of a Cube">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec2-5-11" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-5-11-1-1">Estimate the error in the computed volume of a cube if the side length is measured to be 6 cm with an accuracy of 0.2 cm.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-5-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec2-5-11-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-5-11-3-1">
+<span class="process-math">\(dV=3x^2dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-5-11-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.2.18.1"><a href="#sec_Ch4Sec2-5-11-3" title="Copy heading and permalink for Hint 4.2.18.1" aria-label="Copy heading and permalink for Hint 4.2.18.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec2-5-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-5-11-2-1">The volume measurement is accurate to within <span class="process-math">\(21.6 \text{ cm}^3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-5-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.2.18.1"><a href="#sec_Ch4Sec2-5-11-2" title="Copy heading and permalink for Solution 4.2.18.1" aria-label="Copy heading and permalink for Solution 4.2.18.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.2.18"><a href="#sec_Ch4Sec2-5-11" title="Copy heading and permalink for Checkpoint 4.2.18" aria-label="Copy heading and permalink for Checkpoint 4.2.18">🔗</a></div>
+</article></details>
+<div class="para" id="sec_Ch4Sec2-5-12">The measurement error <span class="process-math">\(dx \)</span> <span class="process-math">\((=\Delta x)\)</span> and the propagated error <span class="process-math">\(\Delta y\)</span> are absolute errors. We are typically interested in the size of an error relative to the size of the quantity being measured or calculated. Given an absolute error <span class="process-math">\(\Delta q\)</span> for a particular quantity, we define the <dfn class="terminology">relative error</dfn> as <span class="process-math">\(\frac{\Delta q}{q},\)</span> where <span class="process-math">\(q\)</span> is the actual value of the quantity. The <dfn class="terminology">percentage error</dfn> is the relative error expressed as a percentage. For example, if we measure the height of a ladder to be 63 in. when the actual height is 62 in., the absolute error is 1 in. but the relative error is <span class="process-math">\(\frac{1}{62}=0.016,\)</span> or <span class="process-math">\(1.6\text{ \% }.\)</span> By comparison, if we measure the width of a piece of cardboard to be 8.25 in. when the actual width is 8 in., our absolute error is <span class="process-math">\(\frac{1}{4}\)</span> in., whereas the relative error is <span class="process-math">\(\frac{0.25}{8}=\frac{1}{32},\)</span> or <span class="process-math">\(3.1\text{ \% }.\)</span> Therefore, the percentage error in the measurement of the cardboard is larger, even though 0.25 in. is less than 1 in.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-5-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1165043087612"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Relative and Percentage Error.</span>
+</h4>
+<div class="para" id="fs-id1165043087612-2-1">An astronaut using a camera measures the radius of Earth as 4000 mi with an error of <span class="process-math">\(\pm 80\)</span> mi. Let’s use differentials to estimate the relative and percentage error of using this radius measurement to calculate the volume of Earth, assuming the planet is a perfect sphere.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043087612-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1165043087612-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1165043087612-3-1">If the measurement of the radius is accurate to within <span class="process-math">\(\pm 80,\)</span> we have<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043087612-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1165043087612-3-2">
+\begin{equation*}
+-80\leq dr\leq 80.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043087612-3-3">Since the volume of a sphere is given by <span class="process-math">\(V=(\frac{4}{3})\pi r^3,\)</span> we have<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043087612-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1165043087612-3-4">
+\begin{equation*}
+dV=4\pi r^2dr.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043087612-3-5">Using the measured radius of 4000 mi, we can estimate<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043087612-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1165043087612-3-6">
+\begin{equation*}
+-4\pi(4000)^2(80)\leq dV\leq 4\pi(4000)^2(80).
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043087612-3-7">To estimate the relative error, consider <span class="process-math">\(\frac{dV}{V}.\)</span> Since we do not know the exact value of the volume <span class="process-math">\(V,\)</span> use the measured radius <span class="process-math">\(r=4000 \text{ mi }\)</span> to estimate <span class="process-math">\(V.\)</span> We obtain <span class="process-math">\(V\approx (\frac{4}{3})\pi(4000)^3.\)</span> Therefore the relative error satisfies<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043087612-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1165043087612-3-8">
+\begin{equation*}
+\frac{-4\pi(4000)^2(80)}{4\pi(4000)^3/3}\leq \frac{dV}{V}\leq \frac{4\pi(4000)^2(80)}{4\pi(4000)^3/3},
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043087612-3-9">which simplifies to<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043087612-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1165043087612-3-10">
+\begin{equation*}
+-0.06\leq \frac{dV}{V}\leq 0.06.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043087612-3-11">The relative error is 0.06 and the percentage error is <span class="process-math">\(6\text{ \% }.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043087612-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.2.19.1"><a href="#fs-id1165043087612-3" title="Copy heading and permalink for Solution 4.2.19.1" aria-label="Copy heading and permalink for Solution 4.2.19.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.2.19: Relative and Percentage Error"><a href="#fs-id1165043087612" title="Copy heading and permalink for Example 4.2.19: Relative and Percentage Error" aria-label="Copy heading and permalink for Example 4.2.19: Relative and Percentage Error">🔗</a></div>
+</article>
+<article class="example example-like" id="ex_diffal4"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using differentials to approximate propagated error.</span>
+</h4>
+<div class="para" id="ex_diffal4-2-1">A steel ball bearing is to be manufactured with a diameter of <span class="quantity">2 cm</span>. The manufacturing process has a tolerance of <span class="process-math">\(\pm 0.1\)</span><span class="quantity">mm</span> in the diameter. Given that the density of steel is about <span class="quantity">7.85 <sup>g</sup>⁄<sub>cm<sup>3</sup></sub></span>, estimate the propagated error in the mass of the ball bearing.<div class="autopermalink" data-description="Paragraph"><a href="#ex_diffal4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex_diffal4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex_diffal4-3-1">
+<div class="para">The mass of a ball bearing is found using the equation “mass = volume <span class="times-sign">×</span> density.” In this situation the mass function is a product of the radius of the ball bearing, hence it is <span class="process-math">\(m = 7.85\frac43\pi r^3\text{.}\)</span> The differential of the mass is</div>
+<div class="displaymath process-math" id="ex_diffal4-3-1-3">
+\begin{equation*}
+dm = 31.4\pi r^2 dr\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_diffal4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_diffal4-3-2">
+<div class="para">The radius is to be <span class="quantity">1 cm</span>; the manufacturing tolerance in the radius is <span class="process-math">\(\pm 0.05\)</span><span class="quantity">mm</span>, or <span class="process-math">\(\pm 0.005\)</span><span class="quantity">cm</span>. The propagated error is approximately:</div>
+<div class="displaymath process-math" id="ex_diffal4-3-2-6">
+\begin{align*}
+\Delta m \amp  \approx dm\\
+\amp = 31.4\pi (1)^2 (\pm 0.005)\\
+\amp = \pm 0.493\text{g}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_diffal4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex_diffal4-3-3">
+<div class="para">Is this error significant? It certainly depends on the application, but we can get an idea by computing the <em class="emphasis">relative error</em>. The ratio between amount of error to the total mass is</div>
+<div class="displaymath process-math" id="ex_diffal4-3-3-2">
+\begin{align*}
+\frac{dm}{m} \amp = \pm \frac{0.493}{7.85\frac43\pi}\\
+\amp =\pm \frac{0.493}{32.88}\\
+\amp =\pm 0.015\text{,}
+\end{align*}
+</div>
+<div class="para">or <span class="process-math">\(\pm 1.5\%\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex_diffal4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex_diffal4-3-4">We leave it to the reader to confirm this, but if the diameter of the ball was supposed to be <span class="quantity">10 cm</span>, the same manufacturing tolerance would give a propagated error in mass of <span class="process-math">\(\pm12.33\)</span><span class="quantity">g</span>, which corresponds to a <em class="emphasis">percent error</em> of <span class="process-math">\(\pm0.188\%\text{.}\)</span> While the amount of error is much greater (<span class="process-math">\(12.33 \gt 0.493\)</span>), the percent error is much lower.<div class="autopermalink" data-description="Paragraph"><a href="#ex_diffal4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.2.20.1"><a href="#ex_diffal4-3" title="Copy heading and permalink for Solution 4.2.20.1" aria-label="Copy heading and permalink for Solution 4.2.20.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.2.20: Using differentials to approximate propagated error"><a href="#ex_diffal4" title="Copy heading and permalink for Example 4.2.20: Using differentials to approximate propagated error" aria-label="Copy heading and permalink for Example 4.2.20: Using differentials to approximate propagated error">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec2-5-15" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-5-15-1-1">Determine the percentage error if the radius of Earth is measured to be 3950 mi with an error of <span class="process-math">\(\pm 100\)</span> mi.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-5-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec2-5-15-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-5-15-3-1">Use the fact that <span class="process-math">\(dV=4\pi r^2dr\)</span> to find <span class="process-math">\(dV/V.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-5-15-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.2.21.1"><a href="#sec_Ch4Sec2-5-15-3" title="Copy heading and permalink for Hint 4.2.21.1" aria-label="Copy heading and permalink for Hint 4.2.21.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec2-5-15-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec2-5-15-2-1">7.6%<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec2-5-15-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.2.21.1"><a href="#sec_Ch4Sec2-5-15-2" title="Copy heading and permalink for Solution 4.2.21.1" aria-label="Copy heading and permalink for Solution 4.2.21.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.2.21"><a href="#sec_Ch4Sec2-5-15" title="Copy heading and permalink for Checkpoint 4.2.21" aria-label="Copy heading and permalink for Checkpoint 4.2.21">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 4.2.3: Calculating the Amount of Error"><a href="#sec_Ch4Sec2-5" title="Copy heading and permalink for Subsection 4.2.3: Calculating the Amount of Error" aria-label="Copy heading and permalink for Subsection 4.2.3: Calculating the Amount of Error">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 4.2: Linear Approximations and Differentials "><a href="#sec_Ch4Sec2" title="Copy heading and permalink for Section 4.2: Linear Approximations and Differentials " aria-label="Copy heading and permalink for Section 4.2: Linear Approximations and Differentials ">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec_Ch4Sec1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_Ch4Sec6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

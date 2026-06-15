@@ -5581,11 +5581,218 @@ var ptx_lunr_docs = [
   "body": "  At what rate is the height of the water changing when the height of the water is ft?    Use \/   ft\/sec.   "
 },
 {
+  "id": "sec_Ch4Sec2",
+  "level": "1",
+  "url": "sec_Ch4Sec2.html",
+  "type": "Section",
+  "number": "4.2",
+  "title": "Linear Approximations and Differentials ",
+  "body": " Linear Approximations and Differentials    Learning Objectives   Describe the linear approximation to a function at a point.  Write the linearization of a given function.  Draw a graph that illustrates the use of differentials to approximate the change in a quantity.  Calculate the relative error and percentage error in using a differential approximation.   We have just seen how derivatives allow us to compare related quantities that are changing over time. In this section, we examine another application of derivatives: the ability to approximate functions locally by linear functions. Linear functions are the easiest functions with which to work, so they provide a useful tool for approximating function values. In addition, the ideas presented in this section are generalized later in the text when we study how to approximate functions by higher-degree polynomials .    Linear Approximation of a Function at a Point  Consider a function that is differentiable at a point Recall that the tangent line to the graph of at is given by the equation   For example, consider the function at Since is differentiable at and we see that Therefore, the tangent line to the graph of at is given by the equation   (a) shows a graph of along with the tangent line to at Note that for near 2, the graph of the tangent line is close to the graph of As a result, we can use the equation of the tangent line to approximate for near 2. For example, if the value of the corresponding point on the tangent line is   The actual value of is given by   Therefore, the tangent line gives us a fairly good approximation of ( (b)). However, note that for values of far from 2, the equation of the tangent line does not give us a good approximation. For example, if the -value of the corresponding point on the tangent line is   whereas the value of the function at is    \"This figure has two parts a and b. In figure a, the line f(x) = 1\/x is shown with its tangent line at x = 2. In figure b, the area near the tangent point is blown up to show how good of an approximation the tangent is near x = 2.\"  (a) The tangent line to at provides a good approximation to for near 2. (b) At the value of on the tangent line to is 0.475. The actual value of is which is approximately 0.47619.   In general, for a differentiable function the equation of the tangent line to at can be used to approximate for near Therefore, we can write   We call the linear function   the linear approximation , or tangent line approximation , of at This function is also known as the linearization of at  To show how useful the linear approximation can be, we look at how to find the linear approximation for at   Linear Approximation of    Find the linear approximation of at and use the approximation to estimate    Since we are looking for the linear approximation at using we know the linear approximation is given by   We need to find and   Therefore, the linear approximation is given by .   Using the linear approximation, we can estimate by writing     \"The function f(x) = the square root of x is shown with its tangent at (9, 3). The tangent appears to be a very good approximation from x = 6 to x = 12.\"  The local linear approximation to at provides an approximation to for near 9.     Analysis  Using a calculator, the value of to four decimal places is 3.0166. The value given by the linear approximation, 3.0167, is very close to the value obtained with a calculator, so it appears that using this linear approximation is a good way to estimate at least for near At the same time, it may seem odd to use a linear approximation when we can just push a few buttons on a calculator to evaluate However, how does the calculator evaluate The calculator uses an approximation! In fact, calculators and computers use approximations all the time to evaluate mathematical expressions; they just use higher-degree approximations.      Find the local linear approximation to at Use it to approximate to five decimal places.    2.00833        Linear Approximation of   Find the linear approximation of at and use it to approximate    First we note that since rad is equivalent to using the linear approximation at seems reasonable. The linear approximation is given by   We see that   Therefore, the linear approximation of at is given by .   To estimate using we must first convert to radians. We have radians, so the estimate for is given by     \"The function f(x) = sin x is shown with its tangent at (pi\/3, square root of 3 \/ 2). The tangent appears to be a very good approximation for x near pi \/ 3.\"  The linear approximation to at provides an approximation to for near       Find the linear approximation for at          Linear approximations may be used in estimating roots and powers. In the next example, we find the linear approximation for at which can be used to estimate roots and powers for real numbers near 1. The same idea can be extended to a function of the form to estimate roots and powers near a different number   Approximating Roots and Powers   Find the linear approximation of at Use this approximation to estimate    The linear approximation at is given by   Because   the linear approximation is given by (a).   We can approximate by evaluating when We conclude that     \"This figure has two parts a and b. In figure a, the line f(x) = (1 + x)3 is shown with its tangent line at (0, 1). In figure b, the area near the tangent point is blown up to show how good of an approximation the tangent is near (0, 1).\"  (a) The linear approximation of at is (b) The actual value of is 1.030301. The linear approximation of at estimates to be 1.03.       Find the linear approximation of at without using the result from the preceding example.              Differentials  We have seen that linear approximations can be used to estimate function values. They can also be used to estimate the amount a function value changes as a result of a small change in the input. To discuss this more formally, we define a related concept: differentials . Differentials provide us with a way of estimating the amount a function changes as a result of a small change in input values.  When we first looked at derivatives, we used the Leibniz notation to represent the derivative of with respect to Although we used the expressions and in this notation, they did not have meaning on their own. Here we see a meaning to the expressions and . Suppose is a differentiable function. Let be an independent variable that can be assigned any nonzero real number, and define the dependent variable by   It is important to notice that is a function of both and The expressions and are called differentials . We can divide both sides of by which yields   This is the familiar expression we have used to denote a derivative. is known as the differential form of .   Computing differentials   For each of the following functions, find and evaluate when and        The key step is calculating the derivative. When we have that, we can obtain directly.   Since we know and therefore When and   Since  This gives us When and        For find          We now connect differentials to linear approximations. Differentials can be used to estimate the change in the value of a function resulting from a small change in input values. Consider a function that is differentiable at point Suppose the input changes by a small amount. We are interested in how much the output changes. If changes from to then the change in is (also denoted and the change in is given by   Instead of calculating the exact change in however, it is often easier to approximate the change in by using a linear approximation. For near  can be approximated by the linear approximation   Therefore, if is small,   That is,   In other words, the actual change in the function if increases from to is approximately the difference between and where is the linear approximation of at By definition of this difference is equal to In summary,   Therefore, we can use the differential to approximate the change in if increases from to We can see this in the following graph.    \"A function y = f(x) is shown along with its tangent line at (a, f(a)). The tangent line is denoted L(x). The x axis is marked with a and a + dx, with a dashed line showing the distance between a and a + dx as dx. The points (a + dx, f(a + dx)) and (a + dx, L(a + dx)) are marked on the curves for y = f(x) and y = L(x), respectively. The distance between f(a) and L(a + dx) is marked as dy = f’(a) dx, and the distance between f(a) and f(a + dx) is marked as Δy = f(a + dx) – f(a).\"  The differential is used to approximate the actual change in if increases from to   We now take a look at how to use differentials to approximate the change in the value of the function that results from a small change in the value of the input. Note the calculation with differentials is much simpler than calculating actual values of functions and the result is very close to what we would obtain with the more exact calculation.   Approximating Change with Differentials   Let Compute and at if    The actual change in if changes from to is given by   The approximate change in is given by Since we have       For find and at if              Calculating the Amount of Error  Any type of measurement is prone to a certain amount of error. In many applications, certain quantities are calculated based on measurements. For example, the area of a circle is calculated by measuring the radius of the circle. An error in the measurement of the radius leads to an error in the computed value of the area. Here we examine this type of error and study how differentials can be used to estimate the error.  Consider a function with an input that is a measured quantity. Suppose the exact value of the measured quantity is but the measured value is We say the measurement error is (or As a result, an error occurs in the calculated quantity This type of error is known as a propagated error and is given by   Since all measurements are prone to some degree of error, we do not know the exact value of a measured quantity, so we cannot calculate the propagated error exactly. However, given an estimate of the accuracy of a measurement, we can use differentials to approximate the propagated error Specifically, if is a differentiable function at the propagated error is   Unfortunately, we do not know the exact value However, we can use the measured value and estimate   In the next example, we look at how differentials can be used to estimate the error in calculating the volume of a box if we assume the measurement of the side length is made with a certain amount of accuracy.   Volume of a Cube   Suppose the side length of a cube is measured to be 5 cm with an accuracy of 0.1 cm.   Use differentials to estimate the error in the computed volume of the cube.  Compute the volume of the cube if the side length is (i) 4.9 cm and (ii) 5.1 cm to compare the estimated error with the actual potential error.      The measurement of the side length is accurate to within cm. Therefore, The volume of a cube is given by which leads to Using the measured side length of 5 cm, we can estimate that Therefore,  If the side length is actually 4.9 cm, then the volume of the cube is If the side length is actually 5.1 cm, then the volume of the cube is Therefore, the actual volume of the cube is between 117.649 and 132.651. Since the side length is measured to be 5 cm, the computed volume is Therefore, the error in the computed volume is That is, We see the estimated error is relatively close to the actual potential error in the computed volume.       Estimate the error in the computed volume of a cube if the side length is measured to be 6 cm with an accuracy of 0.2 cm.    The volume measurement is accurate to within       The measurement error  and the propagated error are absolute errors. We are typically interested in the size of an error relative to the size of the quantity being measured or calculated. Given an absolute error for a particular quantity, we define the relative error as where is the actual value of the quantity. The percentage error is the relative error expressed as a percentage. For example, if we measure the height of a ladder to be 63 in. when the actual height is 62 in., the absolute error is 1 in. but the relative error is or By comparison, if we measure the width of a piece of cardboard to be 8.25 in. when the actual width is 8 in., our absolute error is in., whereas the relative error is or Therefore, the percentage error in the measurement of the cardboard is larger, even though 0.25 in. is less than 1 in.   Relative and Percentage Error   An astronaut using a camera measures the radius of Earth as 4000 mi with an error of mi. Let’s use differentials to estimate the relative and percentage error of using this radius measurement to calculate the volume of Earth, assuming the planet is a perfect sphere.    If the measurement of the radius is accurate to within we have   Since the volume of a sphere is given by we have   Using the measured radius of 4000 mi, we can estimate   To estimate the relative error, consider Since we do not know the exact value of the volume use the measured radius to estimate We obtain Therefore the relative error satisfies   which simplifies to   The relative error is 0.06 and the percentage error is     Using differentials to approximate propagated error   A steel ball bearing is to be manufactured with a diameter of  2  . The manufacturing process has a tolerance of   in the diameter. Given that the density of steel is about  7.85  , estimate the propagated error in the mass of the ball bearing.     The mass of a ball bearing is found using the equation mass = volume density. In this situation the mass function is a product of the radius of the ball bearing, hence it is . The differential of the mass is .  The radius is to be  1  ; the manufacturing tolerance in the radius is   , or   . The propagated error is approximately:   Is this error significant? It certainly depends on the application, but we can get an idea by computing the relative error . The ratio between amount of error to the total mass is , or .  We leave it to the reader to confirm this, but if the diameter of the ball was supposed to be  10  , the same manufacturing tolerance would give a propagated error in mass of   , which corresponds to a percent error of . While the amount of error is much greater ( ), the percent error is much lower.      Determine the percentage error if the radius of Earth is measured to be 3950 mi with an error of mi.    7.6%    Use the fact that to find     "
+},
+{
+  "id": "CNX_Calc_Figure_04_02_001",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#CNX_Calc_Figure_04_02_001",
+  "type": "Figure",
+  "number": "4.2.1",
+  "title": "",
+  "body": "  \"This figure has two parts a and b. In figure a, the line f(x) = 1\/x is shown with its tangent line at x = 2. In figure b, the area near the tangent point is blown up to show how good of an approximation the tangent is near x = 2.\"  (a) The tangent line to at provides a good approximation to for near 2. (b) At the value of on the tangent line to is 0.475. The actual value of is which is approximately 0.47619.  "
+},
+{
+  "id": "sec_Ch4Sec2-3-18",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-3-18",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "linear approximation tangent line approximation linearization "
+},
+{
+  "id": "fs-id1165043051419",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#fs-id1165043051419",
+  "type": "Example",
+  "number": "4.2.2",
+  "title": "Linear Approximation of <span class=\"process-math\">\\(\\sqrt{x}\\)<\/span>.",
+  "body": " Linear Approximation of    Find the linear approximation of at and use the approximation to estimate    Since we are looking for the linear approximation at using we know the linear approximation is given by   We need to find and   Therefore, the linear approximation is given by .   Using the linear approximation, we can estimate by writing     \"The function f(x) = the square root of x is shown with its tangent at (9, 3). The tangent appears to be a very good approximation from x = 6 to x = 12.\"  The local linear approximation to at provides an approximation to for near 9.     Analysis  Using a calculator, the value of to four decimal places is 3.0166. The value given by the linear approximation, 3.0167, is very close to the value obtained with a calculator, so it appears that using this linear approximation is a good way to estimate at least for near At the same time, it may seem odd to use a linear approximation when we can just push a few buttons on a calculator to evaluate However, how does the calculator evaluate The calculator uses an approximation! In fact, calculators and computers use approximations all the time to evaluate mathematical expressions; they just use higher-degree approximations.   "
+},
+{
+  "id": "sec_Ch4Sec2-3-21",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-3-21",
+  "type": "Checkpoint",
+  "number": "4.2.5",
+  "title": "",
+  "body": "  Find the local linear approximation to at Use it to approximate to five decimal places.    2.00833      "
+},
+{
+  "id": "sec_Ch4Sec2-3-22",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-3-22",
+  "type": "Example",
+  "number": "4.2.6",
+  "title": "Linear Approximation of <span class=\"process-math\">\\(\\sin x\\)<\/span>.",
+  "body": " Linear Approximation of   Find the linear approximation of at and use it to approximate    First we note that since rad is equivalent to using the linear approximation at seems reasonable. The linear approximation is given by   We see that   Therefore, the linear approximation of at is given by .   To estimate using we must first convert to radians. We have radians, so the estimate for is given by     \"The function f(x) = sin x is shown with its tangent at (pi\/3, square root of 3 \/ 2). The tangent appears to be a very good approximation for x near pi \/ 3.\"  The linear approximation to at provides an approximation to for near    "
+},
+{
+  "id": "sec_Ch4Sec2-3-23",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-3-23",
+  "type": "Checkpoint",
+  "number": "4.2.8",
+  "title": "",
+  "body": "  Find the linear approximation for at         "
+},
+{
+  "id": "fs-id1165043161464",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#fs-id1165043161464",
+  "type": "Example",
+  "number": "4.2.9",
+  "title": "Approximating Roots and Powers.",
+  "body": " Approximating Roots and Powers   Find the linear approximation of at Use this approximation to estimate    The linear approximation at is given by   Because   the linear approximation is given by (a).   We can approximate by evaluating when We conclude that     \"This figure has two parts a and b. In figure a, the line f(x) = (1 + x)3 is shown with its tangent line at (0, 1). In figure b, the area near the tangent point is blown up to show how good of an approximation the tangent is near (0, 1).\"  (a) The linear approximation of at is (b) The actual value of is 1.030301. The linear approximation of at estimates to be 1.03.    "
+},
+{
+  "id": "sec_Ch4Sec2-3-26",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-3-26",
+  "type": "Checkpoint",
+  "number": "4.2.11",
+  "title": "",
+  "body": "  Find the linear approximation of at without using the result from the preceding example.         "
+},
+{
+  "id": "sec_Ch4Sec2-4-2",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-4-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "differentials "
+},
+{
+  "id": "sec_Ch4Sec2-4-7",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-4-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "differential form "
+},
+{
+  "id": "fs-id1165043166548",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#fs-id1165043166548",
+  "type": "Example",
+  "number": "4.2.12",
+  "title": "Computing differentials.",
+  "body": " Computing differentials   For each of the following functions, find and evaluate when and        The key step is calculating the derivative. When we have that, we can obtain directly.   Since we know and therefore When and   Since  This gives us When and     "
+},
+{
+  "id": "sec_Ch4Sec2-4-9",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-4-9",
+  "type": "Checkpoint",
+  "number": "4.2.13",
+  "title": "",
+  "body": "  For find         "
+},
+{
+  "id": "CNX_Calc_Figure_04_02_005",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#CNX_Calc_Figure_04_02_005",
+  "type": "Figure",
+  "number": "4.2.14",
+  "title": "",
+  "body": "  \"A function y = f(x) is shown along with its tangent line at (a, f(a)). The tangent line is denoted L(x). The x axis is marked with a and a + dx, with a dashed line showing the distance between a and a + dx as dx. The points (a + dx, f(a + dx)) and (a + dx, L(a + dx)) are marked on the curves for y = f(x) and y = L(x), respectively. The distance between f(a) and L(a + dx) is marked as dy = f’(a) dx, and the distance between f(a) and f(a + dx) is marked as Δy = f(a + dx) – f(a).\"  The differential is used to approximate the actual change in if increases from to  "
+},
+{
+  "id": "fs-id1165043349128",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#fs-id1165043349128",
+  "type": "Example",
+  "number": "4.2.15",
+  "title": "Approximating Change with Differentials.",
+  "body": " Approximating Change with Differentials   Let Compute and at if    The actual change in if changes from to is given by   The approximate change in is given by Since we have    "
+},
+{
+  "id": "sec_Ch4Sec2-4-24",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-4-24",
+  "type": "Checkpoint",
+  "number": "4.2.16",
+  "title": "",
+  "body": "  For find and at if           "
+},
+{
+  "id": "sec_Ch4Sec2-5-3",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-5-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "propagated error "
+},
+{
+  "id": "fs-id1165043397423",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#fs-id1165043397423",
+  "type": "Example",
+  "number": "4.2.17",
+  "title": "Volume of a Cube.",
+  "body": " Volume of a Cube   Suppose the side length of a cube is measured to be 5 cm with an accuracy of 0.1 cm.   Use differentials to estimate the error in the computed volume of the cube.  Compute the volume of the cube if the side length is (i) 4.9 cm and (ii) 5.1 cm to compare the estimated error with the actual potential error.      The measurement of the side length is accurate to within cm. Therefore, The volume of a cube is given by which leads to Using the measured side length of 5 cm, we can estimate that Therefore,  If the side length is actually 4.9 cm, then the volume of the cube is If the side length is actually 5.1 cm, then the volume of the cube is Therefore, the actual volume of the cube is between 117.649 and 132.651. Since the side length is measured to be 5 cm, the computed volume is Therefore, the error in the computed volume is That is, We see the estimated error is relatively close to the actual potential error in the computed volume.    "
+},
+{
+  "id": "sec_Ch4Sec2-5-11",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-5-11",
+  "type": "Checkpoint",
+  "number": "4.2.18",
+  "title": "",
+  "body": "  Estimate the error in the computed volume of a cube if the side length is measured to be 6 cm with an accuracy of 0.2 cm.    The volume measurement is accurate to within      "
+},
+{
+  "id": "sec_Ch4Sec2-5-12",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-5-12",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "relative error percentage error "
+},
+{
+  "id": "fs-id1165043087612",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#fs-id1165043087612",
+  "type": "Example",
+  "number": "4.2.19",
+  "title": "Relative and Percentage Error.",
+  "body": " Relative and Percentage Error   An astronaut using a camera measures the radius of Earth as 4000 mi with an error of mi. Let’s use differentials to estimate the relative and percentage error of using this radius measurement to calculate the volume of Earth, assuming the planet is a perfect sphere.    If the measurement of the radius is accurate to within we have   Since the volume of a sphere is given by we have   Using the measured radius of 4000 mi, we can estimate   To estimate the relative error, consider Since we do not know the exact value of the volume use the measured radius to estimate We obtain Therefore the relative error satisfies   which simplifies to   The relative error is 0.06 and the percentage error is   "
+},
+{
+  "id": "ex_diffal4",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#ex_diffal4",
+  "type": "Example",
+  "number": "4.2.20",
+  "title": "Using differentials to approximate propagated error.",
+  "body": " Using differentials to approximate propagated error   A steel ball bearing is to be manufactured with a diameter of  2  . The manufacturing process has a tolerance of   in the diameter. Given that the density of steel is about  7.85  , estimate the propagated error in the mass of the ball bearing.     The mass of a ball bearing is found using the equation mass = volume density. In this situation the mass function is a product of the radius of the ball bearing, hence it is . The differential of the mass is .  The radius is to be  1  ; the manufacturing tolerance in the radius is   , or   . The propagated error is approximately:   Is this error significant? It certainly depends on the application, but we can get an idea by computing the relative error . The ratio between amount of error to the total mass is , or .  We leave it to the reader to confirm this, but if the diameter of the ball was supposed to be  10  , the same manufacturing tolerance would give a propagated error in mass of   , which corresponds to a percent error of . While the amount of error is much greater ( ), the percent error is much lower.   "
+},
+{
+  "id": "sec_Ch4Sec2-5-15",
+  "level": "2",
+  "url": "sec_Ch4Sec2.html#sec_Ch4Sec2-5-15",
+  "type": "Checkpoint",
+  "number": "4.2.21",
+  "title": "",
+  "body": "  Determine the percentage error if the radius of Earth is measured to be 3950 mi with an error of mi.    7.6%    Use the fact that to find   "
+},
+{
   "id": "sec_Ch4Sec6",
   "level": "1",
   "url": "sec_Ch4Sec6.html",
   "type": "Section",
-  "number": "4.2",
+  "number": "4.3",
   "title": "Concavity and Curve Sketching (PLACEHOLDER)",
   "body": " Concavity and Curve Sketching (PLACEHOLDER)  "
 },
