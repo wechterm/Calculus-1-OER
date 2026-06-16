@@ -7,13 +7,13 @@ and Differentials-->
 </title>
   <introduction>
   <title> Learning Objectives</title>
-  <ul>
+  <ol>
 
 <li>Describe the linear approximation to a function at a point.</li>
 <li>Write the linearization of a given function.</li>
 <li>Draw a graph that illustrates the use of differentials to approximate the change in a quantity.</li>
 <li>Calculate the relative error and percentage error in using a differential approximation.</li>
-</ul>
+</ol>
 
 <p id="fs-id1165042343413">We have just seen how derivatives allow us to compare related quantities that are changing over time. In this section, we examine another application of derivatives: the ability to approximate functions locally by linear functions. Linear functions are the easiest functions with which to work, so they provide a useful tool for approximating function values. In addition, the ideas presented in this section are generalized later in the text when we study how to approximate functions by higher-degree polynomials <!--<link class="target-chapter" document="m53760">Introduction to Power Series and Functions</url>-->.</p>
 </introduction>
