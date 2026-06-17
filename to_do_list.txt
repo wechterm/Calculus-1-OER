@@ -12,3 +12,5 @@
 -image for Figure 3.6.2
 
 -image for Figure 3.6.29
+
+-create Thomas' Figure 4.5 for Figure 4.3.7
