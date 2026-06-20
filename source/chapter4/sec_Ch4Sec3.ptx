@@ -257,7 +257,7 @@ We conclude that the absolute maximum of <m>f</m> over the interval [0, 2] is ze
 <p>A problem-solving strategy has been outlined below for intervals that are not closed.</p>
 
 <problem id="fs-id1165042035397">
-<title>Problem-Solving Strategy: Locating and Determining the Existence of Absolute Extrema over an Interval that is not Closed</title>
+<title>Locating and Determining the Existence of Absolute Extrema over an Interval that is not Closed</title>
 <p id="fs-id1165042035403">Consider a continuous function <m>f</m> defined over an interval that is not closed i.e.,<m>(a,b],\;[a,b),\text{ or }(a,b).</m></p>
 <ol id="fs-id1165042035429" list-type="enumerated" number-style="arabic">
 <li><p>We would like to evaluate <m>f</m> at the endpoints <m>x=a</m> and <m>x=b</m> but they may not be included in the interval. As a result, we may need to take a one sided limit. The proceedure is outlined below:
@@ -273,6 +273,7 @@ We conclude that the absolute maximum of <m>f</m> over the interval [0, 2] is ze
 </problem>
 
 <example>
+<title>Finding Absolute Extrema Over Various Intervals</title>
 <statement><p>Find the absolute maximum and absolute minimum of <m>f(x)=2+(x+5)e^x</m> over the following intervals.</p>
 <ol marker="(a)">
 <li>[-7,1]</li>
@@ -281,12 +282,12 @@ We conclude that the absolute maximum of <m>f</m> over the interval [0, 2] is ze
 </ol>
 </statement>
 <solution>
-Step 1. Evaluate <m>f</m> at the endpoints <m>x=-7</m> and <m>x=1.</m>
+<p>Step 1. Evaluate <m>f</m> at the endpoints <m>x=-7</m> and <m>x=1.</m>
 <me>f(-7)\approx 1.9982 \text{ and } f(1)\approx 18.3097</me>
 Step 2. Using the product rule, <m>f'(x)=e^x+(x+5)e^x=e^x(x+6).</m> Note that <m>f'</m> is defined for all real numbers <m>x.</m> Therefore, there are no critical points where the derivative is undefined. It remains to check where <m>f'(x)=0.</m> We know that <m>e^x\neq 0</m> for all real numbers <m>x</m>. Thus, <m>f'(x)=e^x(x+6)=0</m> at <m>x=-6</m> and note that it is in the intervals <m>[-7,1],\;[-7,1)\text{ and }(-7,1].</m> <m>f(-6)</m> is a candidate for an absolute extremum of <m>f</m> over the intervals <m>[-7,1],\;[-7,1)\text{ and }(-7,1].</m> We evaluate <m>f(-6)</m> and find
 <me>f(-6)\approx 1.9975.</me>
 Step 3. We set up the following tables to compare the values found in steps 1 and 2.
-
+</p>
 <ol marker="(a)">
 <li> For the interval <m>[-7,1]</m>
 <table class="unnumbered" summary="This table has three columns and four rows. The first row is a header row, and it reads x, f(x), and Conclusion. Below the header row, the first column reads x, -7, -6, and 1. The second column reads f(x), 1.9982, 1.9975, and 18.3097. The third column reads Conclusion, blank, Absolute minimum, Absolute maximum.">
@@ -390,7 +391,7 @@ From the table, we find that the absolute maximum of <m>f</m> over the interval 
 <exercise>
 <statement><p>Find the absolute maximum and absolute minimum of <m>g(x)=12x^2-32x</m> over the interval <m>[-2,3)</m></p>
 </statement>
-<solution>From <m>g'(x)=-32x-32</m>, we obtain a critical value at <m>x=-1</m> which is included in the interval <m>[-2,3)</m>. The results are summarized in the following table.
+<solution><p>From <m>g'(x)=-32x-32</m>, we obtain a critical value at <m>x=-1</m> which is included in the interval <m>[-2,3)</m>. The results are summarized in the following table.</p>
 <table class="unnumbered" summary="This table has three columns and four rows. The first row is a header row, and it reads x, g(x), and Conclusion. Below the header row, the first column reads x, -2, -1, and 3. The second column reads f(x), 0, 16, -240. The third column reads Conclusion, blank, Absolute minimum, Absolute maximum DNE.">
 <tabular>
 <row valign="top" header="yes" bottom="minor">
@@ -417,7 +418,7 @@ From the table, we find that the absolute maximum of <m>f</m> over the interval 
 </table>
 </solution>
 <hint>
-Look for critical points. Evaluate <m>g</m> at all critical points and at the endpoints.
+<p>Look for critical points. Evaluate <m>g</m> at all critical points and at the endpoints.</p>
 </hint>
 </exercise>
 
