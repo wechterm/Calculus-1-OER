@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_Ch4Sec4" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>The Mean Value Theorem</title>
+
+<introduction>
+	<title>
+	Learning Objectives
+	</title>
+	<ol>
+		<li>Explain the meaning of Rolle’s theorem.</li>
+		<li>Describe the significance of the Mean Value Theorem.</li>
+		<li>State three important consequences of the Mean Value Theorem.</li>
+	</ol>
+	<p>The <term>Mean Value Theorem</term> is one of the most important theorems in calculus. We look at some of its implications at the end of this section. First, let’s start with a special case of the Mean Value Theorem, called Rolle’s theorem.</p>
+</introduction>
+
+<subsection xml:id="subsec-rollestheorem">
+	<title>Rolle's Theorem</title>
+	<p>
+	Informally, Rolle’s theorem states that if the outputs of a differentiable function <m>f</m> are equal at the endpoints of an interval, then there must be an interior point <m>c</m> where <m>f'(c)=0</m>. <xref ref="fig-rollestheorem"/>illustrates this theorem.
+	</p>
+	
+	<figure xml:id="fig-rollestheorem">
+		<image source="ch4/CNX_Calc_Figure_04_04_009.jpg">
+			<description>
+			"Three graphs, each over an interval from a to b where the y-coordinate is the same at both a and b.  The first graph increases from a to c and decreases from c to a. The second graph descreases from a to c and increases from c to b.  The third graph increases from a to c_1, decreases from c_1 to c_2, and increases from c_2 to b.  A horizontal tangent line is drawn at c, c_1, and c_2 for each graph."  
+			</description>
+		 </image>
+		<caption>
+			<p>If a differentiable function <m>f</m> satisfies <m>f(a)=f(b)</m>, then its derivative must be zero at some point(s) between <m>a</m> and <m>b</m>.
+			</p>
+		</caption>
+	</figure>
+	<theorem xml:id="thm-rollestheorem">
+		<statement>
+			<p>Let <m>f</m> be a continuous function over the closed interval <m>[a,b]</m> and differentiable over the open interval <m>(a,b)</m> such that <m>f(a)=f(b)</m>.  There then exists at least one <m>c\in (a,b)</m> such that <m>f'(c)=0</m>.
+			</p>
+		</statement>
+		<proof>
+			<p>Let <m>k=f(a)=f(b)</m>.  We consider three cases:</p>
+				<ol>
+					<li><m>f(x)=k</m> for all <m>x\in (a,b)</m>.</li>
+					<li>There exists <m>x\in(a,b)</m> such that <m>f(x)\gt k</m>.</li>
+					<li>There exists <m>x\in(a,b)</m> such that <m>f(x)\lt k</m>.</li>
+				</ol>
+			<p>Case 1: If <m>f(x)=k</m> for all <m>x\in(a,b)</m>, then <m>f'(x)=0</m> for all <m>x\in(a,b)</m>.</p>
+			<p>Case 2: Since <m>f</m> is a continuous function over the closed, bounded interval <m>[a,b]</m>, by the extreme value theorem, it has an absolute maximum. Also, since there is a point <m>x\in(a,b)</m> such that <m>f(x_\gt k</m>, the absolute maximum is greater than <m>k</m>. Therefore, the absolute maximum does not occur at either endpoint. As a result, the absolute maximum must occur at an interior point <m>c\in (a,b)</m>.  Because <m>f</m> has a maximum at an interior point <m>c</m>, and <m>f</m> is differentiable at <m>c</m>, by Fermat's Theorem (<xref ref="fs-id1165041796868"/>), <m>f'(c)=0</m>.
+			</p>
+			<p>Case 3: The case when there exists a point <m>x\in(a,b)</m> such that <m>f(x)\lt k</m> is analogous to case 2, with maximum replaced by minimum.
+			</p>
+		</proof>
+	</theorem>
+	
+	<p>An important point about Rolle’s theorem is that the differentiability of the function <m>f</m> is critical.  If <m>f</m> is not differentiable, even at a single point, the result may not hold. For example, the function <m>f(x)=|x|-1</m> is continuous over <m>[-1,1]</m> and <m>f(-1)=0=f(1)</m>, but <m>f'(c)\ne 0</m> for any <m>c\in (-1,1)</m> as shown in the following figure.</p>
+	<figure xml:id="fig-rollestheoremfailure">
+		 <image source="ch4/CNX_Calc_Figure_04_04_002.jpg" width="70%">
+			<description>
+			"A graph of f(x)=|x|-1 on the interval from x=-1 to x=1."  
+			</description>
+		 </image>
+		<caption>
+			<p>Since <m>f(x)=|x|-1</m> is not differentiable at <m>x=0</m>, the conditions of Rolle's Theorem are not satisfied.  In fact, the conclusion does not hold here; there is no <m>c\in (-1,1)</m> such that <m>f'(c)=0</m>.
+			</p>
+		</caption>
+	</figure>
+	<p>Let's now consider functions that satisfy the conditions of Rolle's Theorem and calculate explicitly the points <m>c</m> where <m>f'(c)=0</m>
+	</p>
+	
+	<example>
+		<title>Using Rolle's Theorem</title>
+		<statement>
+			<p>For each of the following functions, verify that the function satisfies the criteria stated in Rolle’s theorem and find all values <m>c</m> in the given interval where <m>f'(c)=0</m>.</p>
+			<ol marker="a.">
+				<li><m>f(x)=x^2+2x</m> over <m>[-2,0]</m></li>
+				<li><m>f(x)=x^3-4x</m> over <m>[-2,2]</m>.</li>
+			</ol>
+		</statement>
+		<solution>
+			<ol marker="a.">
+				<li>Since <m>f</m> is a polynomial, it is continuous and differentiable everywhere.  In addition, <m>f(-2)=0=f(0)</m>.  Therefore, <m>f</m> satisfies teh criteria of Rolle's Theorem.  We conclude that there exists at least one value <m>c\in (-2,0)</m> such that <m>f'(c)=0</m>.  Since <m>f'(x)=2x+2=2(x+1)</m>, we see that <m>f'(c)=2(c+1)=0</m> implies <m>c=-1</m> as shown in the following graph.
+					<figure xml:id="ex-rollestheorema">
+						<image source="ch4/CNX_Calc_Figure_04_04_003.jpg">
+							<description>
+							"A graph of f(x)=x^2+2x on the interval from x=-2 to x=0 with the tangent line drawn at x=-1."  
+							</description>
+						</image>
+						<caption>
+							<p>This function is continuous and differentiable over <m>[-2,0]</m>, <m>f'(c)=0</m> when <m>c=-1</m>.
+							</p>
+						</caption>
+					</figure>	
+				</li>
+				<li>
+				As in part a, <m>f</m> is a polynomial and there is continuous and differentiable everywhere.  Also, <m>f(-2)=0=f(2)</m>.  That said, <m>f</m> satisfies the criteria of Rolle's Theorem.  Differentiating, we find that <m>f'(x)=3x^2-4</m>.  Therefore, <m>f'(c)=0</m> when <m>x=\ds\pm\frac{2}{\sqrt{3}}</m>.  Both points are in the interval <m>[-2,2]</m>, and therefore, both points satisfy the conclusions of Rolle's Theorem as shown in the following graph.
+					<figure xml:id="ex-rollestheoremb">
+						<image source="ch4/CNX_Calc_Figure_04_04_004.jpg">
+							<description>
+							"A graph of f(x)=x^3-4x on the interval from x=-2 to x=2 with the tangent line drawn at x=-1 and x=1."  
+							</description>
+						</image>
+						<caption>
+							<p>For this polynomial over <m>[-2,2]</m>, <m>f'(c)=0</m> at <m>x=\pm 2/\sqrt{3}</m>.
+							</p>
+						</caption>
+					</figure>	
+				</li>
+			</ol>
+		</solution>
+	</example>
+	
+	<exercise>
+		<statement>
+			<p>Verify that the function <m>f(x)=2x^2-8x+6</m> defined over the interval <m>[1,3]</m> satisfies the conditions of Rolle's Theorem.  Find all points <m>c</m> guaranteed by Rolle's Theorem.
+			</p>
+		</statement>
+		<hint>
+			<p>Solve <m>f'(c)=0</m> for <m>c</m>.</p>
+		</hint>
+		<solution>
+			<p><m>f(x)</m> is a polynomial and is thus both continuous and differentiable over any interval.  Also, <m>f(1)=0=f(3)</m>, so <m>f(x)</m> satisfies the hypotheses of Rolle's Theorem.  Since <m>f'(x)=4x-8</m>, then <m>f'(c)=0</m> when <m>4c-8=0</m>, or when <m>c=2</m>.  Since <m>2\in (1,3)</m>, the conclusion to Rolle's Theorem is satisfied.
+			</p>.
+		</solution>
+	</exercise>
+</subsection>
+
+<subsection xml:id="sec-MVTmeaning">
+	<title>The Mean Value Theorem and Its Meaning</title>
+	<p>Rolle’s theorem is a special case of the Mean Value Theorem. In Rolle’s theorem, we consider differentiable functions <m>f</m> defined on the closed interval <m>[a,b]</m> with <m>f(a)=f(b)</m>. The Mean Value Theorem generalizes Rolle’s theorem by considering functions that do not necessarily have equal value at the endpoints. Consequently, we can view the Mean Value Theorem as a slanted version of Rolle’s theorem (<xref ref="fig-meanvaluetheorem"/>). The Mean Value Theorem states that if <m>f</m> is continuous over the closed interval <m>[a,b]</m> and differentiable over the open interval <m>(a,b)</m>, then there exists a point <m>c\in(a,b)</m> such that the tangent line to the graph of <m>f</m> at <m>c</m> is parallel to the secant line connecting <m>(a,f(a))</m> and <m>(b,f(b))</m>.
+	</p>
+	<figure xml:id="fig-meanvaluetheorem">
+		<image source="ch4/CNX_Calc_Figure_04_04_010.jpg">
+			<description>
+			"A graph of a function f(x) from a to b.  Between a and b are x-values c1 and c2.  The secant line connecting the points of the graph of the function at a and b is drawn.  Also drawn is the tangent line to the function at c1 and c2.  These tangent lines a parallel to the secant line."  
+			</description>
+		</image>
+		<caption>
+			<p>The Mean Value Theorem says that for a function that meets its conditions, at some point the tangent line has the same slope as the secant line between the ends. For this function, there are two values <m>c_1</m> and <m>c_2</m> such that the tangent line to <m>f</m> at <m>c_1</m> and <m>c_2</m> has the same slope as the secant line.
+			</p>
+		</caption>
+	</figure>
+	
+	<theorem xml:id="thm-meanvaluetheorem">
+		<statement>
+			<p>Let <m>f</m> be continuous over the closed interval <m>[a,b]</m> and differentiable over the open interval <m>(a,b)</m>.  Then, there exists at least one point <m>c\in (a,b)</m> such that 
+				<md>f'(c)=\frac{f(b)-f(a)}{b-a}</md>.
+			</p>
+		</statement>
+		<proof>
+			<p>The proof follows from Rolle’s theorem by introducing an appropriate function that satisfies the criteria of Rolle’s theorem. Consider the line connecting <m>(a,f(a))</m> and <m>(b,f(b))</m>.  Since the slope of that line is 
+				<md>\frac{f(b)-f(a)}{b-a}
+				</md>
+			and the line passes through the point <m>(a,f(a))</m>, the equation of that line can be written as 
+				<md>
+				y=\frac{f(b)-f(a)}{b-a}(x-a)+f(a)
+				</md>.
+			</p>
+			<p>
+			Let <m>g(x)</m> denote the vertical different between the point <m>(x,f(x))</m> and the point <m>(x,y)</m> on that line.  Therefore,
+				<md>
+				g(x)=f(x)-\left[\frac{f(b)-f(a)}{b-a}(x-a)+f(a)\right]
+				</md>.
+			</p>
+			<figure xml:id="fig-meanvaluetheoremproof">
+				<image source="ch4/CNX_Calc_Figure_04_04_011.jpg" width="80%">
+					<description>
+					"A graph of a function g(x) from a to b.  The secant line connecting the points of the graph at a and b is drawn with the equation of the line labeled as described above."  
+					</description>
+				</image>
+				<caption>
+					<p>The value <m>g(x)</m> is the vertical difference between the point <m>(x,f(x))</m> and the point <m>(x,y)</m> on the secant line connecting <m>(a,f(a))</m> and <m>(b,f(b)))</m>.
+					</p>
+				</caption>
+			</figure>
+			<p>Since the graph of <m>f</m> intersects the secant line when <m>x=a</m> and <m>x=b</m>, we see that <m>g(a)=0=g(b)</m>.  Since <m>f</m> is a differentiable function over <m>(a,b)</m>, <m>g</m> is also a differentiable function over <m>(a,b)</m>.  Furthermore, since <m>f</m> is continuous over <m>[a,b]</m>, <m>g</m> is also continuous over <m>[a,b]</m>.  Therefore, <m>g</m> satisfies the criteria of Rolle’s Theorem. Consequently, there exists a point <m>c\in(a,b)</m> such that <m>g'(c)=0</m>. Since
+				<md>
+				g'(x)=f'(x)-\frac{f(b)-f(a)}{b-a}
+				</md>,
+			we see that 
+				<md>
+				g'(c)=f'(c)-\frac{f(b)-f(a)}{b-a}
+				</md>.
+			Since <m>g'(c)=0</m>, we conclude that 
+				<md>
+				f'(c)=\frac{f(b)-f(a)}{b-a}
+				</md>.
+			</p>
+		</proof>
+	</theorem>
+	<example xml:id="ex-verifyingMTV">
+		<title>Verifying that the Mean Value Theorem Applies</title>
+		<statement>
+			<p>For <m>f(x)=\sqrt{x}</m> over the interval <m>[0,9]</m>, show that <m>f</m> satisfies the hypothesis of the Mean Value Theorem, and therefore there exists at least one value <m>c\in(0,9)</m> such that <m>f'(c)</m> is equal to the slope of the line connecting <m>(0,f(0))</m> and <m>(9,f(9))</m>.  Find these values <m>c</m> guaranteed by the Mean Value Theorem.
+			</p>
+		</statement>
+		<solution>
+			<p>We know that <m>f(x)=\sqrt{x}</m> is continuous over <m>[0,9]</m> and differentiable over <m>(0,9)</m>.  Therefore, <m>f</m> satisfies the hypotheses of the Mean Value Theorem, and there must exist at least one value <m>c\in (0,9)</m> such that <m>f'(c)</m> is equal to the slope of the line connecting <m>(0,f(0))</m> and <m>(9,f(9))</m> (<xref ref="fig-verifyingMVT"/>).  To determine the value(s) of <m>c</m> are guaranteed, first calculate the derivative of <m>f</m>.  The derivative <m>\ds f'(x)=\frac{1}{2\sqrt{x}}</m>. The slope of the line connecting <m>(0,f(0))</m> and <m>(9,f(9))</m> is given by
+				<md>\frac{f(9)-f(0)}{9-0}=\frac{\sqrt{9}-\sqrt{0}}{9-0}=\frac{3}{9}=\frac{1}{3}
+				</md>.
+			</p>
+			<p>	We want to find <m>c</m> such that <m>f'(c)=\ds\frac{1}{3}</m>.  That is, we want to find <m>c</m>  such that 
+				<md>
+				\frac{1}{2\sqrt{c}}=\frac{1}{3}
+				</md>.
+			Solving this equation for <m>c</m>, we obtain <m>c=\ds\frac{9}{4}</m>. At this point, the slope of the tangent line equals the slope of the line joining the endpoints. 
+			</p>
+			<figure xml:id="fig-verifyingMVT">
+				<image source="ch4/CNX_Calc_Figure_04_04_006.jpg" width="80%">
+					<description>
+					"A graph of the square root function from 0 to 9. The secant line connects (0,0) to (9,3) and the tangent line to the graph at (9/4,3/2) is drawn and is parallel to the secant line."  
+					</description>
+				</image>
+				<caption>
+					<p>The slope of the tangent line at <m>c=9/4</m> is the same as the slope of the line segment connecting <m>(0,0)</m> and <m>(9,3)</m>.
+					</p>
+				</caption>
+			</figure>
+		</solution>
+	</example>
+	<p>One application that helps illustrate the Mean Value Theorem involves velocity. For example, suppose we drive a car for <m>1</m> h down a straight road with an average velocity of <m>45</m> mph.  Let <m>s(t)</m> and <m>v(t)</m> denote the position and velocity of the car, respectively, for <m>0\le t\le 1</m> h.  Assuming that the position functions <m>s(t)</m> is differentiable, we can apply the Mean Value Theorem to conclude that, at some time <m>c\in (0,1)</m>, the speed of the car was exactly
+		<md>
+		v(c)=s'(c)=\frac{s(1)-s(0)}{1-0}=45\text{  mph}
+		</md>.
+	</p>
+	<example xml:id="ex-meanvaluetheoremvelocity">
+		<title>Mean Value Theorem and Velocity</title>
+		<statement>
+			<p>If a rock is dropped from a height of <m>100</m> ft, its position <m>t</m> seconds after it is dropped until it hits the ground is given by the function <m>s(t)=-16t^2+100</m>.
+			</p>
+			<ol marker="a.">
+				<li>Determine how long it takes before the rock hits the ground.</li>
+				<li>Find the average velocity <m>v_{\text{avg}}</m> of the rock for when the rock is released and the rock hits the ground.</li>
+				<li>Find the time <m>t</m> guaranteed by the Mean Value Theorem when the instantaneous velocity of the rock is <m>v_{\text{avg}}</m>.</li>
+			</ol>
+		</statement>
+		<solution>
+			<ol marker="a.">
+				<li>When the rock hits the ground, its position is <m>s⁡(t)=0</m>. Solving the equation <m>−16⁢t^2+100=0</m> for <m>t</m>, we find that <m>t=\ds\pm\frac{5}{2}</m> sec. Since we are only considering <m>t\ge 0</m>, the ball will hit the ground <m>\ds\frac{5}{2}</m> sec after it is dropped.</li>
+				<li>The instantaneous velocity is given by the derivative of the position function. Therefore, we need to find a time <m>t</m> such that <m>v(t)=s'(t)=v_{\text{avg}}=-4o\text{ ft/sec}</m>.  Since <m>s(t)</m> is continuous over the interval <m>[0,5/2]</m> and differentiable over the interval <m>(0,5/2)</m>, by the Mean Value Theorem, there is guaranteed to be a point <m>c\in (0,5/2)</m> such that 
+					<md>
+					s'(c)=\frac{s(5/2)-s(0)}{5/2-0}=-40
+					</md>.
+				Taking the derivative of the position function <m>s(t)</m>, we find that <m>s'(t)=-32t</m>.  Therefore the equation reduces to <m>s'(c)=-32c=-40</m>.  Solving this equation for <m>c</m>, we have <m>c=\ds\frac{5}{4}</m>.  Therefore, <m>\ds\frac{5}{4}</m> sec after the rock is dropped, the instantaneous velocity equals the average velocity of the rock during its free fall: <m>-40\text{ ft/sec}</m>.
+					<figure xml:id="fig-meanvaluetheoremvelocity">
+					<image source="ch4/CNX_Calc_Figure_04_04_007.jpg" width="80%">
+						<description>
+						"A graph of s(t)=-16 t squared + 100 from t=0 to t05/2.  A secant line is drawn connecting the endpoints and the tangent line is drawn at t=5/4."  
+						</description>
+					</image>
+					<caption>
+						<p>At time <m>\ds t=5/4</m> sec, the velocity of the rock is equal to its average velocity from the time it is dropped until it hits the ground.
+						</p>
+					</caption>
+					</figure>
+				</li>
+			</ol>
+		</solution>
+	</example>
+	<exercise>
+		<statement>
+			<p>Suppose a ball is dropped from a height of <m>200</m> ft.  Its position at time <m>t</m> is <m>s(t)=-16t^2+200</m>.  Find the time <m>t</m> when the instantaneous velocity of the ball equals its average velocity.
+			</p>
+		</statement>
+		<solution>
+		<m>\ds\frac{5\sqrt{2}}{4}</m>
+		</solution>
+		<hint>
+			<p>
+			Find the time when the ball hits the ground, <m>t_g</m> and then solve <m>\ds s'(c)=\frac{s(t_g)-s(0)}{t_g-0}</m>.
+			</p>
+		</hint>
+	</exercise>
+</subsection>
+
+<subsection xml:id="subsec-meanvaluetheoremcorollaries">
+	<title>Corollaries of the Mean Value Theorem</title>
+	<p>Let’s now look at three corollaries of the Mean Value Theorem. These results have important consequences, which we use in upcoming sections.
+	</p>
+	<p>At this point, we know the derivative of any constant function is zero. The Mean Value Theorem allows us to conclude that the converse is also true. In particular, if <m>f'(x)=0</m> for all <m>x</m> in some interval <m>I</m>, then 𝑓<m>f(x)</m> is constant over that interval. This result may seem intuitively obvious, but it has important implications that are not obvious, and we discuss them shortly.
+	</p>
+	<corollary xml:id="cor-constantfunctionderivative">
+		<title>Functions with a Derivative of Zero</title>
+		<statement>
+			<p>Let <m>f</m> be differentiable over an interval <m>I</m>.  If <m>f'(x)=0</m> for all <m>x\in I</m>, then <m>f(x)=\text{constant}</m> for all <m>x\in I</m>.
+			</p>
+		</statement>
+		<proof>
+			<p>Since <m>f</m> is differentiable over <m>I</m>, <m>f</m> must be continuous over <m>I</m>. Suppose <m>f(x)</m> is not constant for all <m>x</m> in <m>I</m>. Then there exist <m>a,b\in I</m>, where <m>a\ne b</m> and <m>f(a)\ne f(b)</m>. Choose the notation so that <m>a\lt b</m>. Therefore,
+				<md>
+				\frac{f(b)-f(a)}{b-a}\ne 0
+				</md>.
+			Since <m>f</m>is a differentiable function, by the Mean Value Theorem, there exists <m>c\in (a,b)</m> such that
+				<md>
+				f'(c)=\frac{f(b)-f(a)}{b-a}
+				</md>.  
+			Therefore, there exists <m>c\in I</m> such that <m>f'(c)\ne 0</m>, which contradicts the assumption that <m>f'(x)=0</m> for all <m>x\in I</m>.
+			</p>
+		</proof>
+	</corollary>
+	<p> From <xref ref="cor-constantfunctionderivative"/> it follows that if two functions have the same derivative, they differ by at most a constant.
+	</p>
+	<corollary xml:id="cor-constantdifferencederivative">
+		<title>Functions With Equal Derivatives</title>
+		<statement>
+			<p>If <m>f</m> and <m>g</m> are differentiable over an interval <m>I</m> and <m>f'(x)=g'(x)</m> for all <m>x\in I</m>, then <m>f(x)=g(x)+C</m> for some constant <m>C</m>.
+			</p>
+		</statement>
+		<proof>
+			<p>Let <m>h(x)=f(x)-g(x)</m>.  Then <m>h'(x)=f'(x)-g'(x)=0</m> for all <m>x\in I</m>.  By <xref ref="cor-constantfunctionderivative"/>m there is a constant <m>C</m> such that <m>h(x)=C</m> for all <m>x\in I</m>.  Therefore, <m>f(x)=g(x)+C</m> for all <m>x\in I</m>.
+			</p>
+		</proof>
+	</corollary>
+	<p>
+	This fact is important because it means that for a given function <m>f</m>, if there exists a function <m>F</m> such that <m>F'(x)=f(x)</m>; then, the only other functions that have a derivative equal to <m>f</m> are 𝐹<m>F(x)+C</m> for some constant <m>C</m>. We discuss this result in more detail later in the chapter.
+	</p>
+	<p>The third corollary of the Mean Value Theorem discusses when a function is increasing and when it is decreasing. Recall that a function <m>f</m> is increasing over <m>I</m> if <m>f(x_1)\le f(x_2)</m> whenever <m>x_1\lt x_2</m>, whereas <m>f</m> is decreasing over <m>I</m> if <m>f(x_1)\gt f(x_2)</m> whenever <m>x_1\lt x_2</m>. Using the Mean Value Theorem, we can show that if the derivative of a function is positive, then the function is increasing; if the derivative is negative, then the function is decreasing (<xref ref="fig-MVTmonotonicity"/>). We make use of this fact in the next section, where we show how to use the derivative of a function to locate local maximum and minimum values of the function, and how to determine the shape of the graph.
+	</p>
+	<figure xml:id="fig-MVTmonotonicity">
+		<image source="ch4/CNX_Calc_Figure_04_04_008.jpg" width="80%">
+			<description>
+			"A graph of a function that is increasing when x is less than a, decreases between a and b, and is increasing when x is greater than b.  "  
+			</description>
+		</image>
+		<caption>
+			<p>If a function has a positive derivative over some interval <m>I</m>, then the function increases over that interval <m>I</m>; if the derivative is negative over some interval <m>I</m>, then the function decreases over that interval <m>I</m>.
+			</p>
+		</caption>
+	</figure>
+	<corollary xml:id="cor-MVTmonotonicity">
+		<title> Increasing and Decreasing Functions</title>
+		<statement>
+			<p>Let <m>f</m> be continuous over the closed interval <m>[a,b]</m> and differentiable over the open interval <m>(a,b)</m>.
+			</p>
+			<ol marker="i.">
+				<li>If <m>f'(x)\gt 0</m> for all <m>x\in (a,b)</m>, then <m>f</m> is an increasing function over <m>[a,b]</m>.</li>
+				<li>If <m>f'(x)\lt 0</m> for all <m>x\in (a,b)</m>, then <m>f</m> is an decreasing function over <m>[a,b]</m>.</li>
+			</ol>
+		</statement>
+		<proof>
+			<p>We will prove i.; the proof of ii. is similar. Suppose <m>f</m> is continuous and differentiable over an interval <m>I</m> and <m>f'(x)\gt 0</m> for all <m>x\in I</m>. By way of contradiction, suppose that <m>f</m> is not an increasing function on <m>I</m>. Then there exist <m>a</m> and <m>b</m> in <m>I</m> such that <m>a\lt b</m>, but <m>f(a)\gt f(b)</m>. Since <m>f</m> is a differentiable function over <m>I</m>, the Mean Value Theorem guarantees that there is some value <m>c\in (a,b)</m> such that
+				<md>
+				f'(c)=\frac{f(b)-f(a)}{b-a}
+				</md>
+			</p>
+			<p>Now <m>a\lt b</m> so <m>b-a\gt 0</m>.  Because <m>f(a)\gt f(b)</m>, it follows that <m>f(b)-f(a)\lt 0</m>.  It follows that the quotient of <m>f(b)-f(a)</m> and <m>b-a</m> is negative.  So, for <m>c</m>,
+				<md>
+				f'(c)=\frac{f(b)-f(a)}{b-a}\lt 0
+				</md>.
+			However, <m>f'(x)\gt 0</m> for all <m>x\in I</m> including <m>c</m>.  This is a contradiction.  The assumption that <m>f</m> is not an increasing function on <m>I</m> is false.  Therefore, <m>f</m> is increasing throughout <m>I</m>.
+			</p>
+		</proof>
+	</corollary>
+</subsection>
+</section>
