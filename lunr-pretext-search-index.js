@@ -5788,11 +5788,218 @@ var ptx_lunr_docs = [
   "body": "  Determine the percentage error if the radius of Earth is measured to be 3950 mi with an error of mi.    7.6%    Use the fact that to find   "
 },
 {
+  "id": "sec_Ch4Sec3",
+  "level": "1",
+  "url": "sec_Ch4Sec3.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "Maxima and Minima",
+  "body": " Maxima and Minima   Learning Objectives   Define absolute extrema.  Define local extrema.  Explain how to find the critical points of a function over an interval.  Describe how to use critical points to locate absolute extrema over an interval.   Given a particular function, we are often interested in determining the largest and smallest values of the function. This information is important in creating accurate graphs. Finding the maximum and minimum values of a function also has practical significance because we can use this method to solve optimization problems, such as maximizing profit, minimizing the amount of material used in manufacturing an aluminum can, or finding the maximum height a rocket can reach. In this section, we look at how to use derivatives to find the largest and smallest values for a function.    Absolute Extrema  Consider the function over the interval As  Therefore, the function does not have a largest value. However, since for all real numbers and when the function has a smallest value, 1, when We say that 1 is the absolute minimum of and it occurs at We say that does not have an absolute maximum (see the following figure).    \"The function f(x) = x2 + 1 is graphed, and its minimum of 1 is seen to be at x = 0.\"  The given function has an absolute minimum of 1 at The function does not have an absolute maximum.    Let be a function defined over an interval and let We say has an absolute maximum on at if for all We say has an absolute minimum on at if for all If has an absolute maximum on at or an absolute minimum on at we say has an absolute extremum on at   Before proceeding, let’s note two important issues regarding this definition. First, the term absolute here does not refer to absolute value. An absolute extremum may be positive, negative, or zero. Second, if a function has an absolute extremum over an interval at the absolute extremum is The real number is a point in the domain at which the absolute extremum occurs. For example, consider the function over the interval Since   for all real numbers we say has an absolute maximum over at The absolute maximum is It occurs at as shown in (b).  A function may have both an absolute maximum and an absolute minimum, just one extremum, or neither. shows several functions and some of the different possibilities regarding absolute extrema. However, the following theorem, called the Extreme Value Theorem , guarantees that a continuous function over a closed, bounded interval has both an absolute maximum and an absolute minimum.    \"This figure has six parts a, b, c, d, e, and f. In figure a, the line f(x) = x3 is shown, and it is noted that it has no absolute minimum and no absolute maximum. In figure b, the line f(x) = 1\/(x2 + 1) is shown, which is near 0 for most of its length and rises to a bump at (0, 1); it has no absolute minimum, but does have an absolute maximum of 1 at x = 0. In figure c, the line f(x) = cos x is shown, which has absolute minimums of −1 at ±π, ±3π, … and absolute maximums of 1 at 0, ±2π, ±4π, …. In figure d, the piecewise function f(x) = 2 – x2 for 0 ≤ x \\lt 2 and x – 3 for 2 ≤ x ≤ 4 is shown, with absolute maximum of 2 at x = 0 and no absolute minimum. In figure e, the function f(x) = (x – 2)2 is shown on [1, 4], which has absolute maximum of 4 at x = 4 and absolute minimum of 0 at x = 2. In figure f, the function f(x) = x\/(2 − x) is shown on [0, 2), with absolute minimum of 0 at x = 0 and no absolute maximum.\"  Graphs (a), (b), and (c) show several possibilities for absolute extrema for functions with a domain of Graphs (d), (e), and (f) show several possibilities for absolute extrema for functions with a domain that is a bounded interval.     Extreme Value Theorem  If is a continuous function over the closed, bounded interval then there is a point in at which has an absolute maximum over and there is a point in at which has an absolute minimum over   The proof of the extreme value theorem is beyond the scope of this text. Typically, it is proved in a course on real analysis. There are a couple of key points to note about the statement of this theorem. For the extreme value theorem to apply, the function must be continuous over a closed, bounded interval. If the interval is open or the function has even one point of discontinuity, the function may not have an absolute maximum or absolute minimum over For example, consider the functions shown in (d), (e), and (f). All three of these functions are defined over bounded intervals. However, the function in graph (e) is the only one that has both an absolute maximum and an absolute minimum over its domain. The extreme value theorem cannot be applied to the functions in graphs (d) and (f) because neither of these functions is continuous over a closed, bounded interval. Although the function in graph (d) is defined over the closed interval the function is discontinuous at The function has an absolute maximum over but does not have an absolute minimum. The function in graph (f) is continuous over the half-open interval but is not defined at and therefore is not continuous over a closed, bounded interval. The function has an absolute minimum over but does not have an absolute maximum over These two graphs illustrate why a function over a bounded interval may fail to have an absolute maximum and\/or absolute minimum.  Before looking at how to find absolute extrema, let’s examine the related concept of local extrema. This idea is useful in determining where absolute extrema occur.    Local Extrema and Critical Points  Consider the function shown in . The graph can be described as two mountains with a valley in the middle. The absolute maximum value of the function occurs at the higher peak, at However, is also a point of interest. Although is not the largest value of the value is larger than for all near 0. We say has a local maximum at Similarly, the function does not have an absolute minimum, but it does have a local minimum at because is less than for near 1.    \"The function f(x) is shown, which curves upward from quadrant III, slows down in quadrant II, achieves a local maximum on the y-axis, decreases to achieve a local minimum in quadrant I at x = 1, increases to a local maximum at x = 2 that is greater than the other local maximum, and then decreases rapidly through quadrant IV.\"  This function has two local maxima and one local minimum. The local maximum at is also the absolute maximum.     A function has a local maximum at if there exists an open interval containing such that is contained in the domain of and for all A function has a local minimum at if there exists an open interval containing such that is contained in the domain of and for all A function has a local extremum at if has a local maximum at or has a local minimum at   Note that if has an absolute extremum at and is defined over an interval containing then is also considered a local extremum. If an absolute extremum for a function occurs at an endpoint, we do not consider that to be a local extremum, but instead refer to that as an endpoint extremum.    How to identify types of maxima and minima for a fuction with domain .   Given the graph of a function it is sometimes easy to see where a local maximum or local minimum occurs. However, it is not always easy to see, since the interesting features on the graph of a function may not be visible because they occur at a very small scale. Also, we may not have a graph of the function. In these cases, how can we use a formula for a function to determine where these extrema occur?  To answer this question, let’s look at again. The local extrema occur at  and Notice that at and the derivative At the derivative does not exist, since the function has a corner there. In fact, if has a local extremum at a point the derivative must satisfy one of the following conditions: either or is undefined. Such a value is known as a critical point and it is important in finding extreme values for functions.   Let be an interior point in the domain of We say that is a critical point of if or is undefined.   As mentioned earlier, if has a local extremum at a point then must be a critical point of This fact is known as Fermat’s theorem .    Fermat’s Theorem  If has a local extremum at and is differentiable at then   Suppose has a local extremum at and is differentiable at We need to show that To do this, we will show that and and therefore Since has a local extremum at  has a local maximum or local minimum at Suppose has a local maximum at The case in which has a local minimum at can be handled similarly. There then exists an open interval such that for all Since is differentiable at from the definition of the derivative, we know that   Since this limit exists, both one-sided limits also exist and equal Therefore,   and   Since is a local maximum, we see that for near Therefore, for near but we have From we conclude that Similarly, it can be shown that Therefore,    From Fermat’s theorem, we conclude that if has a local extremum at then either or is undefined. In other words, local extrema can only occur at critical points.  Note this theorem does not claim that a function must have a local extremum at a critical point. Rather, it states that critical points are candidates for local extrema. For example, consider the function We have when Therefore, is a critical point. However, is increasing over and thus does not have a local extremum at In , we see several different possibilities for critical points. In some of these cases, the functions have local extrema at critical points, whereas in other cases the functions do not. Note that these graphs do not show all possibilities for the behavior of a function at a critical point.    \"This figure has five parts a, b, c, d, and e. In figure a, a parabola is shown facing down in quadrant I; there is a horizontal tangent line at the local maximum marked f’(c) = 0. In figure b, there is a function drawn with an asymptote at c, meaning that the function increases toward infinity on both sides of c; it is noted that f’(c) is undefined. In figure c, a version of the absolute value graph is shown that has been shifted so that its minimum is in quadrant I with x = c. It is noted that f’(c) is undefined. In figure d, a version of the function f(x) = x3 is shown that has been shifted so that its inflection point is in quadrant I with x = c. Its inflection point at (c, f(c)) has a horizontal line through it, and it is noted that f’(c) = 0. In figure e, a version of the function f(x) = x1\/3 is shown that has been shifted so that its inflection point is in quadrant I with x = c. Its inflection point at (c, f(c)) has a vertical line through it, and it is noted that f’(c) is undefined.\"  (a–e) A function has a critical point at if or is undefined. A function may or may not have a local extremum at a critical point.   Later in this chapter we look at analytical methods for determining whether a function actually has a local extremum at a critical point. For now, let’s turn our attention to finding critical points. We will use graphical observations to determine whether a critical point is associated with a local extremum.   Locating Critical Points   For each of the following functions, find all critical points. Use a graphing utility to determine whether the function has a local extremum at each of the critical points.          The derivative is defined for all real numbers Therefore, we only need to find the values for where Since the critical points are and From the graph of in , we see that has a local maximum at and a local minimum at    \"The function f(x) = (1\/3) x3 – (5\/2) x2 + 4x is graphed. The function has local maximum at x = 1 and local minimum at x = 4.\"  This function has a local maximum and a local minimum.   Using the chain rule, we see the derivative is Therefore, has critical points when and when We conclude that the critical points are From the graph of in , we see that has a local (and absolute) minimum at but does not have a local extremum at or    \"The function f(x) = (x2 − 1)3 is graphed. The function has local minimum at x = 0, and inflection points at x = ±1.\">  This function has three critical points:  and The function has a local (and absolute) minimum at but does not have extrema at the other two critical points.   By the chain rule, we see that the derivative is The derivative is defined everywhere. Therefore, we only need to find values for where Solving we see that which implies Therefore, the critical points are From the graph of in , we see that has an absolute maximum at and an absolute minimum at Hence, has a local maximum at and a local minimum at (Note that if has an absolute extremum over an interval at a point that is not an endpoint of then has a local extremum at    \"The function f(x) = 4x\/(1 + x2) is graphed. The function has local\/absolute maximum at x = 1 and local\/absolute minimum at x = −1.\"  This function has an absolute maximum and an absolute minimum.        Find all critical points for        Calculate     Locating Absolute Extrema  The extreme value theorem states that a continuous function over a closed, bounded interval has an absolute maximum and an absolute minimum. As shown in , one or both of these absolute extrema could occur at an endpoint. If an absolute extremum does not occur at an endpoint, however, it must occur at an interior point, in which case the absolute extremum is a local extremum. Therefore, by , the point at which the local extremum occurs must be a critical point. We summarize this result in the following theorem.   Location of Absolute Extrema  Let be a continuous function over a closed, bounded interval The absolute maximum of over and the absolute minimum of over must occur at endpoints of or at critical points of in   With this idea in mind, let’s examine a procedure for locating absolute extrema.   Locating Absolute Extrema over a Closed Interval  Consider a continuous function defined over the closed interval   Evaluate at the endpoints and  Find all critical points of that lie over the interval and evaluate at those critical points.  Compare all values found in (1) and (2). From , the absolute extrema must occur at endpoints or critical points. Therefore, the largest of these values is the absolute maximum of The smallest of these values is the absolute minimum of    Now let’s look at how to use this strategy to find the absolute maximum and absolute minimum values for continuous functions.   Locating Absolute Extrema   For each of the following functions, find the absolute maximum and absolute minimum over the specified interval and state where those values occur.   over  over      Step 1. Evaluate at the endpoints and  Step 2. Since  is defined for all real numbers Therefore, there are no critical points where the derivative is undefined. It remains to check where Since at and is in the interval  is a candidate for an absolute extremum of over We evaluate and find Step 3. We set up the following table to compare the values found in steps 1 and 2.      Conclusion           Absolute maximum      Absolute minimum    From the table, we find that the absolute maximum of over the interval [1, 3] is and it occurs at The absolute minimum of over the interval [1, 3] is and it occurs at as shown in the following graph.   \"The function f(x) = – x2 + 3x – 2 is graphed from (1, 0) to (3, −2), with its maximum marked at (3\/2, 1\/4).\"  This function has both an absolute maximum and an absolute minimum.   Step 1. Evaluate at the endpoints and  Step 2. The derivative of is given by for The derivative is zero when which implies The derivative is undefined at Therefore, the critical points of are The point is an endpoint, so we already evaluated in step 1. The point is not in the interval of interest, so we need only evaluate We find that Step 3. We compare the values found in steps 1 and 2, in the following table.      Conclusion      Absolute maximum      Absolute minimum         We conclude that the absolute maximum of over the interval [0, 2] is zero, and it occurs at The absolute minimum is -2, and it occurs at as shown in the following graph.   \"The function f(x) = x2 – 3x2\/3 is graphed from (0, 0) to (2, −0.762), with its minimum marked at (1, −2).\"  This function has an absolute maximum at an endpoint of the interval.       Find the absolute maximum and absolute minimum of over the interval    The absolute maximum is and it occurs at The absolute minimum is and it occurs at    Look for critical points. Evaluate at all critical points and at the endpoints.    At this point, we know how to locate absolute extrema for continuous functions over closed intervals.  We will next determine the location and existence of absolute extrema on intervals that are not closed. Let us consider the existence of absolute extrema by analyzing the graph of on the interval (1,5) as shown in . Note that here the interval (1,5) is not closed. We can see that the absolute minimum exists and is . If an absolute maximum existed, it would be at , but is not defined at since it is not included in our given interval. Here, we would say that the absolute maximum of over the interval (1,5) DNE.    \"The figure shows the graph of on the interval from to . There are open circles at the endpoints.\"  The given function has an absolute minimum of -4 at The function does not have an absolute maximum.   A problem-solving strategy has been outlined below for intervals that are not closed.   Locating and Determining the Existence of Absolute Extrema over an Interval that is not Closed  Consider a continuous function defined over an interval that is not closed i.e.,   We would like to evaluate at the endpoints and but they may not be included in the interval. As a result, we may need to take a one sided limit. The proceedure is outlined below:  If the left endpoint is not included in the interval (i.e., the given interval is (a,b]), then evaluate and  If the right endpoint is not included in the interval (i.e., the given interval is [a,b)), then evaluate and  If both the left and right endpoints are not included in the interval (i.e., the given interval is (a,b)), then evaluate and    Find all critical points of that lie over the interval and evaluate at those critical points.  Compare all values found in (1) and (2). We know that the absolute extrema must occur at endpoints or critical points. However, if absolute extrema occurs at an endpoint not included in the interval, we say the absolute maximum or absolute minimum DNE. Therefore, the largest of these values is the absolute maximum of if it occurred at a point included in the interval. The smallest of these values is the absolute minimum of if it occurred at a point included in the interval. Otherwise, the absolute maximum or absolute minimum DNE.     Finding Absolute Extrema Over Various Intervals  Find the absolute maximum and absolute minimum of over the following intervals.   [-7,1]  (-7,1]  [-7,1)     Step 1. Evaluate at the endpoints and  Step 2. Using the product rule, Note that is defined for all real numbers Therefore, there are no critical points where the derivative is undefined. It remains to check where We know that for all real numbers . Thus, at and note that it is in the intervals  is a candidate for an absolute extremum of over the intervals We evaluate and find Step 3. We set up the following tables to compare the values found in steps 1 and 2.   For the interval       Conclusion           Absolute minimum      Absolute maximum    From the table, we find that the absolute maximum of over the interval [-7,1] is and it occurs at The absolute minimum of over the interval [-7, 1] is and it occurs at as shown in the following graph.   \"The function is graphed on the interval [-7,1] with both closed endpoints at x=-7 and x=1.\"   on the interval [-7,1].    For the interval       Conclusion           Absolute minimum      Absolute maximum    From the table, we find that the absolute maximum of over the interval (-7,1] is and it occurs at The absolute minimum of over the interval (-7, 1] is and it occurs at as shown in the following graph.   \"The function is graphed on the interval (-7,1] with an open left endpoint at x=-7 and closed right endpoint at x=1.\"   on the interval (-7,1].    For the interval       Conclusion           Absolute minimum      Absolute maximum DNE    From the table, we find that the absolute maximum of over the interval [-7,1) DNE since is not included in the interval. The absolute minimum of over the interval [-7, 1) is and it occurs at as shown in the following graph.   \"The function is graphed on the interval [-7,1) with a closed left endpoint at x=-7 and open right endpoint at x=1.\"   on the interval [-7,1).        Find the absolute maximum and absolute minimum of over the interval   From , we obtain a critical value at which is included in the interval . The results are summarized in the following table.       Conclusion           Absolute maximum      Absolute minimum DNE       Look for critical points. Evaluate at all critical points and at the endpoints.    In this section, we determined the value and existence of absolute extrema over any given interval. We also defined local extrema and determined that if a function has a local extremum at a point then must be a critical point of However, being a critical point is not a sufficient condition for to have a local extremum at Later in this chapter, we show how to determine whether a function actually has a local extremum at a critical point. First, however, we need to introduce the Mean Value Theorem, which will help as we analyze the behavior of the graph of a function.   "
+},
+{
+  "id": "CNX_Calc_Figure_04_03_001",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#CNX_Calc_Figure_04_03_001",
+  "type": "Figure",
+  "number": "4.3.1",
+  "title": "",
+  "body": "  \"The function f(x) = x2 + 1 is graphed, and its minimum of 1 is seen to be at x = 0.\"  The given function has an absolute minimum of 1 at The function does not have an absolute maximum.  "
+},
+{
+  "id": "sec_Ch4Sec3-3-4",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#sec_Ch4Sec3-3-4",
+  "type": "Definition",
+  "number": "4.3.2",
+  "title": "",
+  "body": " Let be a function defined over an interval and let We say has an absolute maximum on at if for all We say has an absolute minimum on at if for all If has an absolute maximum on at or an absolute minimum on at we say has an absolute extremum on at  "
+},
+{
+  "id": "sec_Ch4Sec3-3-8",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#sec_Ch4Sec3-3-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Extreme Value Theorem "
+},
+{
+  "id": "CNX_Calc_Figure_04_03_002",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#CNX_Calc_Figure_04_03_002",
+  "type": "Figure",
+  "number": "4.3.3",
+  "title": "",
+  "body": "  \"This figure has six parts a, b, c, d, e, and f. In figure a, the line f(x) = x3 is shown, and it is noted that it has no absolute minimum and no absolute maximum. In figure b, the line f(x) = 1\/(x2 + 1) is shown, which is near 0 for most of its length and rises to a bump at (0, 1); it has no absolute minimum, but does have an absolute maximum of 1 at x = 0. In figure c, the line f(x) = cos x is shown, which has absolute minimums of −1 at ±π, ±3π, … and absolute maximums of 1 at 0, ±2π, ±4π, …. In figure d, the piecewise function f(x) = 2 – x2 for 0 ≤ x \\lt 2 and x – 3 for 2 ≤ x ≤ 4 is shown, with absolute maximum of 2 at x = 0 and no absolute minimum. In figure e, the function f(x) = (x – 2)2 is shown on [1, 4], which has absolute maximum of 4 at x = 4 and absolute minimum of 0 at x = 2. In figure f, the function f(x) = x\/(2 − x) is shown on [0, 2), with absolute minimum of 0 at x = 0 and no absolute maximum.\"  Graphs (a), (b), and (c) show several possibilities for absolute extrema for functions with a domain of Graphs (d), (e), and (f) show several possibilities for absolute extrema for functions with a domain that is a bounded interval.  "
+},
+{
+  "id": "sec_Ch4Sec3-3-10",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#sec_Ch4Sec3-3-10",
+  "type": "Theorem",
+  "number": "4.3.4",
+  "title": "Extreme Value Theorem.",
+  "body": "  Extreme Value Theorem  If is a continuous function over the closed, bounded interval then there is a point in at which has an absolute maximum over and there is a point in at which has an absolute minimum over  "
+},
+{
+  "id": "CNX_Calc_Figure_04_03_003",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#CNX_Calc_Figure_04_03_003",
+  "type": "Figure",
+  "number": "4.3.5",
+  "title": "",
+  "body": "  \"The function f(x) is shown, which curves upward from quadrant III, slows down in quadrant II, achieves a local maximum on the y-axis, decreases to achieve a local minimum in quadrant I at x = 1, increases to a local maximum at x = 2 that is greater than the other local maximum, and then decreases rapidly through quadrant IV.\"  This function has two local maxima and one local minimum. The local maximum at is also the absolute maximum.  "
+},
+{
+  "id": "sec_Ch4Sec3-4-4",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#sec_Ch4Sec3-4-4",
+  "type": "Definition",
+  "number": "4.3.6",
+  "title": "",
+  "body": "  A function has a local maximum at if there exists an open interval containing such that is contained in the domain of and for all A function has a local minimum at if there exists an open interval containing such that is contained in the domain of and for all A function has a local extremum at if has a local maximum at or has a local minimum at  "
+},
+{
+  "id": "fig-localextrema",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#fig-localextrema",
+  "type": "Figure",
+  "number": "4.3.7",
+  "title": "",
+  "body": "  How to identify types of maxima and minima for a fuction with domain .  "
+},
+{
+  "id": "sec_Ch4Sec3-4-9",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#sec_Ch4Sec3-4-9",
+  "type": "Definition",
+  "number": "4.3.8",
+  "title": "",
+  "body": " Let be an interior point in the domain of We say that is a critical point of if or is undefined.  "
+},
+{
+  "id": "sec_Ch4Sec3-4-10",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#sec_Ch4Sec3-4-10",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Fermat’s theorem "
+},
+{
+  "id": "fs-id1165041796868",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#fs-id1165041796868",
+  "type": "Theorem",
+  "number": "4.3.9",
+  "title": "Fermat’s Theorem.",
+  "body": "  Fermat’s Theorem  If has a local extremum at and is differentiable at then   Suppose has a local extremum at and is differentiable at We need to show that To do this, we will show that and and therefore Since has a local extremum at  has a local maximum or local minimum at Suppose has a local maximum at The case in which has a local minimum at can be handled similarly. There then exists an open interval such that for all Since is differentiable at from the definition of the derivative, we know that   Since this limit exists, both one-sided limits also exist and equal Therefore,   and   Since is a local maximum, we see that for near Therefore, for near but we have From we conclude that Similarly, it can be shown that Therefore,   "
+},
+{
+  "id": "CNX_Calc_Figure_04_03_004",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#CNX_Calc_Figure_04_03_004",
+  "type": "Figure",
+  "number": "4.3.10",
+  "title": "",
+  "body": "  \"This figure has five parts a, b, c, d, and e. In figure a, a parabola is shown facing down in quadrant I; there is a horizontal tangent line at the local maximum marked f’(c) = 0. In figure b, there is a function drawn with an asymptote at c, meaning that the function increases toward infinity on both sides of c; it is noted that f’(c) is undefined. In figure c, a version of the absolute value graph is shown that has been shifted so that its minimum is in quadrant I with x = c. It is noted that f’(c) is undefined. In figure d, a version of the function f(x) = x3 is shown that has been shifted so that its inflection point is in quadrant I with x = c. Its inflection point at (c, f(c)) has a horizontal line through it, and it is noted that f’(c) = 0. In figure e, a version of the function f(x) = x1\/3 is shown that has been shifted so that its inflection point is in quadrant I with x = c. Its inflection point at (c, f(c)) has a vertical line through it, and it is noted that f’(c) is undefined.\"  (a–e) A function has a critical point at if or is undefined. A function may or may not have a local extremum at a critical point.  "
+},
+{
+  "id": "fs-id1165041979119",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#fs-id1165041979119",
+  "type": "Example",
+  "number": "4.3.11",
+  "title": "Locating Critical Points.",
+  "body": " Locating Critical Points   For each of the following functions, find all critical points. Use a graphing utility to determine whether the function has a local extremum at each of the critical points.          The derivative is defined for all real numbers Therefore, we only need to find the values for where Since the critical points are and From the graph of in , we see that has a local maximum at and a local minimum at    \"The function f(x) = (1\/3) x3 – (5\/2) x2 + 4x is graphed. The function has local maximum at x = 1 and local minimum at x = 4.\"  This function has a local maximum and a local minimum.   Using the chain rule, we see the derivative is Therefore, has critical points when and when We conclude that the critical points are From the graph of in , we see that has a local (and absolute) minimum at but does not have a local extremum at or    \"The function f(x) = (x2 − 1)3 is graphed. The function has local minimum at x = 0, and inflection points at x = ±1.\">  This function has three critical points:  and The function has a local (and absolute) minimum at but does not have extrema at the other two critical points.   By the chain rule, we see that the derivative is The derivative is defined everywhere. Therefore, we only need to find values for where Solving we see that which implies Therefore, the critical points are From the graph of in , we see that has an absolute maximum at and an absolute minimum at Hence, has a local maximum at and a local minimum at (Note that if has an absolute extremum over an interval at a point that is not an endpoint of then has a local extremum at    \"The function f(x) = 4x\/(1 + x2) is graphed. The function has local\/absolute maximum at x = 1 and local\/absolute minimum at x = −1.\"  This function has an absolute maximum and an absolute minimum.     "
+},
+{
+  "id": "sec_Ch4Sec3-4-17",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#sec_Ch4Sec3-4-17",
+  "type": "Checkpoint",
+  "number": "4.3.15",
+  "title": "",
+  "body": "  Find all critical points for        Calculate  "
+},
+{
+  "id": "fs-id1165040757685",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#fs-id1165040757685",
+  "type": "Theorem",
+  "number": "4.3.16",
+  "title": "Location of Absolute Extrema.",
+  "body": " Location of Absolute Extrema  Let be a continuous function over a closed, bounded interval The absolute maximum of over and the absolute minimum of over must occur at endpoints of or at critical points of in  "
+},
+{
+  "id": "sec_Ch4Sec3-5-5",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#sec_Ch4Sec3-5-5",
+  "type": "Problem-Solving Strategy",
+  "number": "4.3.17",
+  "title": "Locating Absolute Extrema over a Closed Interval.",
+  "body": " Locating Absolute Extrema over a Closed Interval  Consider a continuous function defined over the closed interval   Evaluate at the endpoints and  Find all critical points of that lie over the interval and evaluate at those critical points.  Compare all values found in (1) and (2). From , the absolute extrema must occur at endpoints or critical points. Therefore, the largest of these values is the absolute maximum of The smallest of these values is the absolute minimum of   "
+},
+{
+  "id": "fs-id1165042035517",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#fs-id1165042035517",
+  "type": "Example",
+  "number": "4.3.18",
+  "title": "Locating Absolute Extrema.",
+  "body": " Locating Absolute Extrema   For each of the following functions, find the absolute maximum and absolute minimum over the specified interval and state where those values occur.   over  over      Step 1. Evaluate at the endpoints and  Step 2. Since  is defined for all real numbers Therefore, there are no critical points where the derivative is undefined. It remains to check where Since at and is in the interval  is a candidate for an absolute extremum of over We evaluate and find Step 3. We set up the following table to compare the values found in steps 1 and 2.      Conclusion           Absolute maximum      Absolute minimum    From the table, we find that the absolute maximum of over the interval [1, 3] is and it occurs at The absolute minimum of over the interval [1, 3] is and it occurs at as shown in the following graph.   \"The function f(x) = – x2 + 3x – 2 is graphed from (1, 0) to (3, −2), with its maximum marked at (3\/2, 1\/4).\"  This function has both an absolute maximum and an absolute minimum.   Step 1. Evaluate at the endpoints and  Step 2. The derivative of is given by for The derivative is zero when which implies The derivative is undefined at Therefore, the critical points of are The point is an endpoint, so we already evaluated in step 1. The point is not in the interval of interest, so we need only evaluate We find that Step 3. We compare the values found in steps 1 and 2, in the following table.      Conclusion      Absolute maximum      Absolute minimum         We conclude that the absolute maximum of over the interval [0, 2] is zero, and it occurs at The absolute minimum is -2, and it occurs at as shown in the following graph.   \"The function f(x) = x2 – 3x2\/3 is graphed from (0, 0) to (2, −0.762), with its minimum marked at (1, −2).\"  This function has an absolute maximum at an endpoint of the interval.    "
+},
+{
+  "id": "sec_Ch4Sec3-5-8",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#sec_Ch4Sec3-5-8",
+  "type": "Checkpoint",
+  "number": "4.3.23",
+  "title": "",
+  "body": "  Find the absolute maximum and absolute minimum of over the interval    The absolute maximum is and it occurs at The absolute minimum is and it occurs at    Look for critical points. Evaluate at all critical points and at the endpoints.   "
+},
+{
+  "id": "Busi_Calc_Figure_04_03_001",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#Busi_Calc_Figure_04_03_001",
+  "type": "Figure",
+  "number": "4.3.24",
+  "title": "",
+  "body": "  \"The figure shows the graph of on the interval from to . There are open circles at the endpoints.\"  The given function has an absolute minimum of -4 at The function does not have an absolute maximum.  "
+},
+{
+  "id": "sec_Ch4Sec3-5-13",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#sec_Ch4Sec3-5-13",
+  "type": "Problem-Solving Strategy",
+  "number": "4.3.25",
+  "title": "Locating and Determining the Existence of Absolute Extrema over an Interval that is not Closed.",
+  "body": " Locating and Determining the Existence of Absolute Extrema over an Interval that is not Closed  Consider a continuous function defined over an interval that is not closed i.e.,   We would like to evaluate at the endpoints and but they may not be included in the interval. As a result, we may need to take a one sided limit. The proceedure is outlined below:  If the left endpoint is not included in the interval (i.e., the given interval is (a,b]), then evaluate and  If the right endpoint is not included in the interval (i.e., the given interval is [a,b)), then evaluate and  If both the left and right endpoints are not included in the interval (i.e., the given interval is (a,b)), then evaluate and    Find all critical points of that lie over the interval and evaluate at those critical points.  Compare all values found in (1) and (2). We know that the absolute extrema must occur at endpoints or critical points. However, if absolute extrema occurs at an endpoint not included in the interval, we say the absolute maximum or absolute minimum DNE. Therefore, the largest of these values is the absolute maximum of if it occurred at a point included in the interval. The smallest of these values is the absolute minimum of if it occurred at a point included in the interval. Otherwise, the absolute maximum or absolute minimum DNE.   "
+},
+{
+  "id": "sec_Ch4Sec3-5-14",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#sec_Ch4Sec3-5-14",
+  "type": "Example",
+  "number": "4.3.26",
+  "title": "Finding Absolute Extrema Over Various Intervals.",
+  "body": " Finding Absolute Extrema Over Various Intervals  Find the absolute maximum and absolute minimum of over the following intervals.   [-7,1]  (-7,1]  [-7,1)     Step 1. Evaluate at the endpoints and  Step 2. Using the product rule, Note that is defined for all real numbers Therefore, there are no critical points where the derivative is undefined. It remains to check where We know that for all real numbers . Thus, at and note that it is in the intervals  is a candidate for an absolute extremum of over the intervals We evaluate and find Step 3. We set up the following tables to compare the values found in steps 1 and 2.   For the interval       Conclusion           Absolute minimum      Absolute maximum    From the table, we find that the absolute maximum of over the interval [-7,1] is and it occurs at The absolute minimum of over the interval [-7, 1] is and it occurs at as shown in the following graph.   \"The function is graphed on the interval [-7,1] with both closed endpoints at x=-7 and x=1.\"   on the interval [-7,1].    For the interval       Conclusion           Absolute minimum      Absolute maximum    From the table, we find that the absolute maximum of over the interval (-7,1] is and it occurs at The absolute minimum of over the interval (-7, 1] is and it occurs at as shown in the following graph.   \"The function is graphed on the interval (-7,1] with an open left endpoint at x=-7 and closed right endpoint at x=1.\"   on the interval (-7,1].    For the interval       Conclusion           Absolute minimum      Absolute maximum DNE    From the table, we find that the absolute maximum of over the interval [-7,1) DNE since is not included in the interval. The absolute minimum of over the interval [-7, 1) is and it occurs at as shown in the following graph.   \"The function is graphed on the interval [-7,1) with a closed left endpoint at x=-7 and open right endpoint at x=1.\"   on the interval [-7,1).      "
+},
+{
+  "id": "sec_Ch4Sec3-5-15",
+  "level": "2",
+  "url": "sec_Ch4Sec3.html#sec_Ch4Sec3-5-15",
+  "type": "Checkpoint",
+  "number": "4.3.33",
+  "title": "",
+  "body": " Find the absolute maximum and absolute minimum of over the interval   From , we obtain a critical value at which is included in the interval . The results are summarized in the following table.       Conclusion           Absolute maximum      Absolute minimum DNE       Look for critical points. Evaluate at all critical points and at the endpoints.   "
+},
+{
   "id": "sec_Ch4Sec6",
   "level": "1",
   "url": "sec_Ch4Sec6.html",
   "type": "Section",
-  "number": "4.3",
+  "number": "4.4",
   "title": "Concavity and Curve Sketching (PLACEHOLDER)",
   "body": " Concavity and Curve Sketching (PLACEHOLDER)  "
 },
