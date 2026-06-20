@@ -5995,11 +5995,155 @@ var ptx_lunr_docs = [
   "body": " Find the absolute maximum and absolute minimum of over the interval   From , we obtain a critical value at which is included in the interval . The results are summarized in the following table.       Conclusion           Absolute maximum      Absolute minimum DNE       Look for critical points. Evaluate at all critical points and at the endpoints.   "
 },
 {
+  "id": "sec_Ch4Sec4",
+  "level": "1",
+  "url": "sec_Ch4Sec4.html",
+  "type": "Section",
+  "number": "4.4",
+  "title": "The Mean Value Theorem",
+  "body": " The Mean Value Theorem   Learning Objectives   Explain the meaning of Rolle’s theorem.  Describe the significance of the Mean Value Theorem.  State three important consequences of the Mean Value Theorem.   The Mean Value Theorem is one of the most important theorems in calculus. We look at some of its implications at the end of this section. First, let’s start with a special case of the Mean Value Theorem, called Rolle’s theorem.    Rolle's Theorem  Informally, Rolle’s theorem states that if the outputs of a differentiable function are equal at the endpoints of an interval, then there must be an interior point where . illustrates this theorem.    \"Three graphs, each over an interval from a to b where the y-coordinate is the same at both a and b. The first graph increases from a to c and decreases from c to a. The second graph descreases from a to c and increases from c to b. The third graph increases from a to c_1, decreases from c_1 to c_2, and increases from c_2 to b. A horizontal tangent line is drawn at c, c_1, and c_2 for each graph.\"    If a differentiable function satisfies , then its derivative must be zero at some point(s) between and .      Let be a continuous function over the closed interval and differentiable over the open interval such that . There then exists at least one such that .    Let . We consider three cases:   for all .  There exists such that .  There exists such that .   Case 1: If for all , then for all .  Case 2: Since is a continuous function over the closed, bounded interval , by the extreme value theorem, it has an absolute maximum. Also, since there is a point such that , the absolute maximum is greater than . Therefore, the absolute maximum does not occur at either endpoint. As a result, the absolute maximum must occur at an interior point . Because has a maximum at an interior point , and is differentiable at , by Fermat's Theorem ( ), .  Case 3: The case when there exists a point such that is analogous to case 2, with maximum replaced by minimum.    An important point about Rolle’s theorem is that the differentiability of the function is critical. If is not differentiable, even at a single point, the result may not hold. For example, the function is continuous over and , but for any as shown in the following figure.    \"A graph of f(x)=|x|-1 on the interval from x=-1 to x=1.\"    Since is not differentiable at , the conditions of Rolle's Theorem are not satisfied. In fact, the conclusion does not hold here; there is no such that .    Let's now consider functions that satisfy the conditions of Rolle's Theorem and calculate explicitly the points where    Using Rolle's Theorem   For each of the following functions, verify that the function satisfies the criteria stated in Rolle’s theorem and find all values in the given interval where .   over  over .      Since is a polynomial, it is continuous and differentiable everywhere. In addition, . Therefore, satisfies teh criteria of Rolle's Theorem. We conclude that there exists at least one value such that . Since , we see that implies as shown in the following graph.   \"A graph of f(x)=x^2+2x on the interval from x=-2 to x=0 with the tangent line drawn at x=-1.\"    This function is continuous and differentiable over , when .     As in part a, is a polynomial and there is continuous and differentiable everywhere. Also, . That said, satisfies the criteria of Rolle's Theorem. Differentiating, we find that . Therefore, when . Both points are in the interval , and therefore, both points satisfy the conclusions of Rolle's Theorem as shown in the following graph.   \"A graph of f(x)=x^3-4x on the interval from x=-2 to x=2 with the tangent line drawn at x=-1 and x=1.\"    For this polynomial over , at .          Verify that the function defined over the interval satisfies the conditions of Rolle's Theorem. Find all points guaranteed by Rolle's Theorem.    Solve for .    is a polynomial and is thus both continuous and differentiable over any interval. Also, , so satisfies the hypotheses of Rolle's Theorem. Since , then when , or when . Since , the conclusion to Rolle's Theorem is satisfied. .     The Mean Value Theorem and Its Meaning  Rolle’s theorem is a special case of the Mean Value Theorem. In Rolle’s theorem, we consider differentiable functions defined on the closed interval with . The Mean Value Theorem generalizes Rolle’s theorem by considering functions that do not necessarily have equal value at the endpoints. Consequently, we can view the Mean Value Theorem as a slanted version of Rolle’s theorem ( ). The Mean Value Theorem states that if is continuous over the closed interval and differentiable over the open interval , then there exists a point such that the tangent line to the graph of at is parallel to the secant line connecting and .    \"A graph of a function f(x) from a to b. Between a and b are x-values c1 and c2. The secant line connecting the points of the graph of the function at a and b is drawn. Also drawn is the tangent line to the function at c1 and c2. These tangent lines a parallel to the secant line.\"    The Mean Value Theorem says that for a function that meets its conditions, at some point the tangent line has the same slope as the secant line between the ends. For this function, there are two values and such that the tangent line to at and has the same slope as the secant line.      Let be continuous over the closed interval and differentiable over the open interval . Then, there exists at least one point such that .    The proof follows from Rolle’s theorem by introducing an appropriate function that satisfies the criteria of Rolle’s theorem. Consider the line connecting and . Since the slope of that line is and the line passes through the point , the equation of that line can be written as .  Let denote the vertical different between the point and the point on that line. Therefore, .    \"A graph of a function g(x) from a to b. The secant line connecting the points of the graph at a and b is drawn with the equation of the line labeled as described above.\"    The value is the vertical difference between the point and the point on the secant line connecting and .    Since the graph of intersects the secant line when and , we see that . Since is a differentiable function over , is also a differentiable function over . Furthermore, since is continuous over , is also continuous over . Therefore, satisfies the criteria of Rolle’s Theorem. Consequently, there exists a point such that . Since , we see that . Since , we conclude that .     Verifying that the Mean Value Theorem Applies   For over the interval , show that satisfies the hypothesis of the Mean Value Theorem, and therefore there exists at least one value such that is equal to the slope of the line connecting and . Find these values guaranteed by the Mean Value Theorem.    We know that is continuous over and differentiable over . Therefore, satisfies the hypotheses of the Mean Value Theorem, and there must exist at least one value such that is equal to the slope of the line connecting and ( ). To determine the value(s) of are guaranteed, first calculate the derivative of . The derivative . The slope of the line connecting and is given by .  We want to find such that . That is, we want to find such that . Solving this equation for , we obtain . At this point, the slope of the tangent line equals the slope of the line joining the endpoints.    \"A graph of the square root function from 0 to 9. The secant line connects (0,0) to (9,3) and the tangent line to the graph at (9\/4,3\/2) is drawn and is parallel to the secant line.\"    The slope of the tangent line at is the same as the slope of the line segment connecting and .      One application that helps illustrate the Mean Value Theorem involves velocity. For example, suppose we drive a car for h down a straight road with an average velocity of mph. Let and denote the position and velocity of the car, respectively, for h. Assuming that the position functions is differentiable, we can apply the Mean Value Theorem to conclude that, at some time , the speed of the car was exactly .   Mean Value Theorem and Velocity   If a rock is dropped from a height of ft, its position seconds after it is dropped until it hits the ground is given by the function .   Determine how long it takes before the rock hits the ground.  Find the average velocity of the rock for when the rock is released and the rock hits the ground.  Find the time guaranteed by the Mean Value Theorem when the instantaneous velocity of the rock is .      When the rock hits the ground, its position is . Solving the equation for , we find that sec. Since we are only considering , the ball will hit the ground sec after it is dropped.  The instantaneous velocity is given by the derivative of the position function. Therefore, we need to find a time such that . Since is continuous over the interval and differentiable over the interval , by the Mean Value Theorem, there is guaranteed to be a point such that . Taking the derivative of the position function , we find that . Therefore the equation reduces to . Solving this equation for , we have . Therefore, sec after the rock is dropped, the instantaneous velocity equals the average velocity of the rock during its free fall: .   \"A graph of s(t)=-16 t squared + 100 from t=0 to t05\/2. A secant line is drawn connecting the endpoints and the tangent line is drawn at t=5\/4.\"    At time sec, the velocity of the rock is equal to its average velocity from the time it is dropped until it hits the ground.          Suppose a ball is dropped from a height of ft. Its position at time is . Find the time when the instantaneous velocity of the ball equals its average velocity.       Find the time when the ball hits the ground, and then solve .      Corollaries of the Mean Value Theorem  Let’s now look at three corollaries of the Mean Value Theorem. These results have important consequences, which we use in upcoming sections.  At this point, we know the derivative of any constant function is zero. The Mean Value Theorem allows us to conclude that the converse is also true. In particular, if for all in some interval , then 𝑓 is constant over that interval. This result may seem intuitively obvious, but it has important implications that are not obvious, and we discuss them shortly.   Functions with a Derivative of Zero   Let be differentiable over an interval . If for all , then for all .    Since is differentiable over , must be continuous over . Suppose is not constant for all in . Then there exist , where and . Choose the notation so that . Therefore, . Since is a differentiable function, by the Mean Value Theorem, there exists such that . Therefore, there exists such that , which contradicts the assumption that for all .    From it follows that if two functions have the same derivative, they differ by at most a constant.   Functions With Equal Derivatives   If and are differentiable over an interval and for all , then for some constant .    Let . Then for all . By m there is a constant such that for all . Therefore, for all .    This fact is important because it means that for a given function , if there exists a function such that ; then, the only other functions that have a derivative equal to are 𝐹 for some constant . We discuss this result in more detail later in the chapter.  The third corollary of the Mean Value Theorem discusses when a function is increasing and when it is decreasing. Recall that a function is increasing over if whenever , whereas is decreasing over if whenever . Using the Mean Value Theorem, we can show that if the derivative of a function is positive, then the function is increasing; if the derivative is negative, then the function is decreasing ( ). We make use of this fact in the next section, where we show how to use the derivative of a function to locate local maximum and minimum values of the function, and how to determine the shape of the graph.    \"A graph of a function that is increasing when x is less than a, decreases between a and b, and is increasing when x is greater than b. \"    If a function has a positive derivative over some interval , then the function increases over that interval ; if the derivative is negative over some interval , then the function decreases over that interval .     Increasing and Decreasing Functions   Let be continuous over the closed interval and differentiable over the open interval .   If for all , then is an increasing function over .  If for all , then is an decreasing function over .     We will prove i.; the proof of ii. is similar. Suppose is continuous and differentiable over an interval and for all . By way of contradiction, suppose that is not an increasing function on . Then there exist and in such that , but . Since is a differentiable function over , the Mean Value Theorem guarantees that there is some value such that   Now so . Because , it follows that . It follows that the quotient of and is negative. So, for , . However, for all including . This is a contradiction. The assumption that is not an increasing function on is false. Therefore, is increasing throughout .     "
+},
+{
+  "id": "sec_Ch4Sec4-2-3",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#sec_Ch4Sec4-2-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Mean Value Theorem "
+},
+{
+  "id": "fig-rollestheorem",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#fig-rollestheorem",
+  "type": "Figure",
+  "number": "4.4.1",
+  "title": "",
+  "body": "  \"Three graphs, each over an interval from a to b where the y-coordinate is the same at both a and b. The first graph increases from a to c and decreases from c to a. The second graph descreases from a to c and increases from c to b. The third graph increases from a to c_1, decreases from c_1 to c_2, and increases from c_2 to b. A horizontal tangent line is drawn at c, c_1, and c_2 for each graph.\"    If a differentiable function satisfies , then its derivative must be zero at some point(s) between and .   "
+},
+{
+  "id": "thm-rollestheorem",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#thm-rollestheorem",
+  "type": "Theorem",
+  "number": "4.4.2",
+  "title": "",
+  "body": "  Let be a continuous function over the closed interval and differentiable over the open interval such that . There then exists at least one such that .    Let . We consider three cases:   for all .  There exists such that .  There exists such that .   Case 1: If for all , then for all .  Case 2: Since is a continuous function over the closed, bounded interval , by the extreme value theorem, it has an absolute maximum. Also, since there is a point such that , the absolute maximum is greater than . Therefore, the absolute maximum does not occur at either endpoint. As a result, the absolute maximum must occur at an interior point . Because has a maximum at an interior point , and is differentiable at , by Fermat's Theorem ( ), .  Case 3: The case when there exists a point such that is analogous to case 2, with maximum replaced by minimum.   "
+},
+{
+  "id": "fig-rollestheoremfailure",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#fig-rollestheoremfailure",
+  "type": "Figure",
+  "number": "4.4.3",
+  "title": "",
+  "body": "  \"A graph of f(x)=|x|-1 on the interval from x=-1 to x=1.\"    Since is not differentiable at , the conditions of Rolle's Theorem are not satisfied. In fact, the conclusion does not hold here; there is no such that .   "
+},
+{
+  "id": "subsec-rollestheorem-8",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#subsec-rollestheorem-8",
+  "type": "Example",
+  "number": "4.4.4",
+  "title": "Using Rolle’s Theorem.",
+  "body": " Using Rolle's Theorem   For each of the following functions, verify that the function satisfies the criteria stated in Rolle’s theorem and find all values in the given interval where .   over  over .      Since is a polynomial, it is continuous and differentiable everywhere. In addition, . Therefore, satisfies teh criteria of Rolle's Theorem. We conclude that there exists at least one value such that . Since , we see that implies as shown in the following graph.   \"A graph of f(x)=x^2+2x on the interval from x=-2 to x=0 with the tangent line drawn at x=-1.\"    This function is continuous and differentiable over , when .     As in part a, is a polynomial and there is continuous and differentiable everywhere. Also, . That said, satisfies the criteria of Rolle's Theorem. Differentiating, we find that . Therefore, when . Both points are in the interval , and therefore, both points satisfy the conclusions of Rolle's Theorem as shown in the following graph.   \"A graph of f(x)=x^3-4x on the interval from x=-2 to x=2 with the tangent line drawn at x=-1 and x=1.\"    For this polynomial over , at .       "
+},
+{
+  "id": "subsec-rollestheorem-9",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#subsec-rollestheorem-9",
+  "type": "Checkpoint",
+  "number": "4.4.7",
+  "title": "",
+  "body": "  Verify that the function defined over the interval satisfies the conditions of Rolle's Theorem. Find all points guaranteed by Rolle's Theorem.    Solve for .    is a polynomial and is thus both continuous and differentiable over any interval. Also, , so satisfies the hypotheses of Rolle's Theorem. Since , then when , or when . Since , the conclusion to Rolle's Theorem is satisfied. .  "
+},
+{
+  "id": "fig-meanvaluetheorem",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#fig-meanvaluetheorem",
+  "type": "Figure",
+  "number": "4.4.8",
+  "title": "",
+  "body": "  \"A graph of a function f(x) from a to b. Between a and b are x-values c1 and c2. The secant line connecting the points of the graph of the function at a and b is drawn. Also drawn is the tangent line to the function at c1 and c2. These tangent lines a parallel to the secant line.\"    The Mean Value Theorem says that for a function that meets its conditions, at some point the tangent line has the same slope as the secant line between the ends. For this function, there are two values and such that the tangent line to at and has the same slope as the secant line.   "
+},
+{
+  "id": "thm-meanvaluetheorem",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#thm-meanvaluetheorem",
+  "type": "Theorem",
+  "number": "4.4.9",
+  "title": "",
+  "body": "  Let be continuous over the closed interval and differentiable over the open interval . Then, there exists at least one point such that .    The proof follows from Rolle’s theorem by introducing an appropriate function that satisfies the criteria of Rolle’s theorem. Consider the line connecting and . Since the slope of that line is and the line passes through the point , the equation of that line can be written as .  Let denote the vertical different between the point and the point on that line. Therefore, .    \"A graph of a function g(x) from a to b. The secant line connecting the points of the graph at a and b is drawn with the equation of the line labeled as described above.\"    The value is the vertical difference between the point and the point on the secant line connecting and .    Since the graph of intersects the secant line when and , we see that . Since is a differentiable function over , is also a differentiable function over . Furthermore, since is continuous over , is also continuous over . Therefore, satisfies the criteria of Rolle’s Theorem. Consequently, there exists a point such that . Since , we see that . Since , we conclude that .   "
+},
+{
+  "id": "ex-verifyingMTV",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#ex-verifyingMTV",
+  "type": "Example",
+  "number": "4.4.11",
+  "title": "Verifying that the Mean Value Theorem Applies.",
+  "body": " Verifying that the Mean Value Theorem Applies   For over the interval , show that satisfies the hypothesis of the Mean Value Theorem, and therefore there exists at least one value such that is equal to the slope of the line connecting and . Find these values guaranteed by the Mean Value Theorem.    We know that is continuous over and differentiable over . Therefore, satisfies the hypotheses of the Mean Value Theorem, and there must exist at least one value such that is equal to the slope of the line connecting and ( ). To determine the value(s) of are guaranteed, first calculate the derivative of . The derivative . The slope of the line connecting and is given by .  We want to find such that . That is, we want to find such that . Solving this equation for , we obtain . At this point, the slope of the tangent line equals the slope of the line joining the endpoints.    \"A graph of the square root function from 0 to 9. The secant line connects (0,0) to (9,3) and the tangent line to the graph at (9\/4,3\/2) is drawn and is parallel to the secant line.\"    The slope of the tangent line at is the same as the slope of the line segment connecting and .     "
+},
+{
+  "id": "ex-meanvaluetheoremvelocity",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#ex-meanvaluetheoremvelocity",
+  "type": "Example",
+  "number": "4.4.13",
+  "title": "Mean Value Theorem and Velocity.",
+  "body": " Mean Value Theorem and Velocity   If a rock is dropped from a height of ft, its position seconds after it is dropped until it hits the ground is given by the function .   Determine how long it takes before the rock hits the ground.  Find the average velocity of the rock for when the rock is released and the rock hits the ground.  Find the time guaranteed by the Mean Value Theorem when the instantaneous velocity of the rock is .      When the rock hits the ground, its position is . Solving the equation for , we find that sec. Since we are only considering , the ball will hit the ground sec after it is dropped.  The instantaneous velocity is given by the derivative of the position function. Therefore, we need to find a time such that . Since is continuous over the interval and differentiable over the interval , by the Mean Value Theorem, there is guaranteed to be a point such that . Taking the derivative of the position function , we find that . Therefore the equation reduces to . Solving this equation for , we have . Therefore, sec after the rock is dropped, the instantaneous velocity equals the average velocity of the rock during its free fall: .   \"A graph of s(t)=-16 t squared + 100 from t=0 to t05\/2. A secant line is drawn connecting the endpoints and the tangent line is drawn at t=5\/4.\"    At time sec, the velocity of the rock is equal to its average velocity from the time it is dropped until it hits the ground.       "
+},
+{
+  "id": "sec-MVTmeaning-8",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#sec-MVTmeaning-8",
+  "type": "Checkpoint",
+  "number": "4.4.15",
+  "title": "",
+  "body": "  Suppose a ball is dropped from a height of ft. Its position at time is . Find the time when the instantaneous velocity of the ball equals its average velocity.       Find the time when the ball hits the ground, and then solve .   "
+},
+{
+  "id": "cor-constantfunctionderivative",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#cor-constantfunctionderivative",
+  "type": "Corollary",
+  "number": "4.4.16",
+  "title": "Functions with a Derivative of Zero.",
+  "body": " Functions with a Derivative of Zero   Let be differentiable over an interval . If for all , then for all .    Since is differentiable over , must be continuous over . Suppose is not constant for all in . Then there exist , where and . Choose the notation so that . Therefore, . Since is a differentiable function, by the Mean Value Theorem, there exists such that . Therefore, there exists such that , which contradicts the assumption that for all .   "
+},
+{
+  "id": "cor-constantdifferencederivative",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#cor-constantdifferencederivative",
+  "type": "Corollary",
+  "number": "4.4.17",
+  "title": "Functions With Equal Derivatives.",
+  "body": " Functions With Equal Derivatives   If and are differentiable over an interval and for all , then for some constant .    Let . Then for all . By m there is a constant such that for all . Therefore, for all .   "
+},
+{
+  "id": "fig-MVTmonotonicity",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#fig-MVTmonotonicity",
+  "type": "Figure",
+  "number": "4.4.18",
+  "title": "",
+  "body": "  \"A graph of a function that is increasing when x is less than a, decreases between a and b, and is increasing when x is greater than b. \"    If a function has a positive derivative over some interval , then the function increases over that interval ; if the derivative is negative over some interval , then the function decreases over that interval .   "
+},
+{
+  "id": "cor-MVTmonotonicity",
+  "level": "2",
+  "url": "sec_Ch4Sec4.html#cor-MVTmonotonicity",
+  "type": "Corollary",
+  "number": "4.4.19",
+  "title": "Increasing and Decreasing Functions.",
+  "body": " Increasing and Decreasing Functions   Let be continuous over the closed interval and differentiable over the open interval .   If for all , then is an increasing function over .  If for all , then is an decreasing function over .     We will prove i.; the proof of ii. is similar. Suppose is continuous and differentiable over an interval and for all . By way of contradiction, suppose that is not an increasing function on . Then there exist and in such that , but . Since is a differentiable function over , the Mean Value Theorem guarantees that there is some value such that   Now so . Because , it follows that . It follows that the quotient of and is negative. So, for , . However, for all including . This is a contradiction. The assumption that is not an increasing function on is false. Therefore, is increasing throughout .   "
+},
+{
   "id": "sec_Ch4Sec6",
   "level": "1",
   "url": "sec_Ch4Sec6.html",
   "type": "Section",
-  "number": "4.4",
+  "number": "4.5",
   "title": "Concavity and Curve Sketching (PLACEHOLDER)",
   "body": " Concavity and Curve Sketching (PLACEHOLDER)  "
 },

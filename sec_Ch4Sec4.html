@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Mean Value Theorem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="College of Dupage OER Calculus 1">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.d1480f934b51d4ec.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.fa61545fa3ffbf2f.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">College of Dupage OER Calculus 1</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_Ch4Sec3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_fourth.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_Ch4Sec6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\limit}{\ds\lim} 
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+ 
+ \newcommand\blank[2]{\,\colorbox{gray}{$\phantom{\rule{#1pt}{#2pt}}$}\,}
+    \newcommand{\highlight}[1]{{\color{blue}{#1}}}
+    \newcommand{\fp}{f\hskip.75pt '}
+    \newcommand{\fpp}{f\hskip.75pt ''}
+
+    
+    
+    \newcommand{\lz}[2]{\frac{d#1}{d#2}}
+    
+    
+    
+    \newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+    
+    
+    
+    \newcommand{\lzo}[1]{\frac{d}{d#1}}
+    
+    
+    
+    \newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+    
+    
+    
+    \newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+    
+    
+    
+    \newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+    
+    
+    
+    \newcommand{\plz}[2]{\frac{\partial#1}{\partial#2}}
+    
+    
+    
+    \newcommand{\plzoa}[3]{\left.{\frac{\partial#1}{\partial#2}}\right|_{#3}}
+
+    
+    
+    \newcommand{\inflim}[1][n]{\lim\limits_{#1 \to \infty}}
+
+    
+    
+    \newcommand{\primeskip}{\hskip.75pt }
+    \newcommand{\infser}[1][1]{\sum_{n=#1}^\infty}
+    \newcommand{\Fp}{F\hskip.75pt '}
+    \newcommand{\Fpp}{F\hskip.75pt ''}
+    
+	    \newcommand{\yp}{y'}
+    \newcommand{\gp}{g\hskip.75pt '}
+    \newcommand{\dx}{\Delta x}
+    \newcommand{\dy}{\Delta y}
+    \newcommand{\ddz}{\Delta z}
+    \newcommand{\thet}{\theta}
+    \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+    \newcommand{\vnorm}[1]{\left\lVert\vec #1\right\rVert}
+    \newcommand{\snorm}[1]{\left|\left|\,#1\,\right|\right|}
+    \newcommand{\la}{\left\langle}
+    \newcommand{\ra}{\right\rangle}
+    \newcommand{\dotp}[2]{\vec #1 \cdot \vec #2}
+    \newcommand{\proj}[2]{\text{proj}_{\,\vec #2}{\,\vec #1}}
+    \newcommand{\crossp}[2]{\vec #1 \times \vec #2}
+    \newcommand{\veci}{\vec i}
+    \newcommand{\vecj}{\vec j}
+    \newcommand{\veck}{\vec k}
+    \newcommand{\vecu}{\vec u}
+    \newcommand{\vecv}{\vec v}
+    \newcommand{\vecw}{\vec w}
+    \newcommand{\vecx}{\vec x}
+    \newcommand{\vecy}{\vec y}
+    \newcommand{\vrp}{\vec r\hskip0.75pt '}
+    \newcommand{\vrpp}{\vec r\hskip0.75pt ''}
+    \newcommand{\vsp}{\vec s\hskip0.75pt '}
+    \newcommand{\vrt}{\vec r(t)}
+    \newcommand{\vst}{\vec s(t)}
+    \newcommand{\vvt}{\vec v(t)}
+    \newcommand{\vat}{\vec a(t)}
+    \newcommand{\px}{\partial x}
+    \newcommand{\py}{\partial y}
+    \newcommand{\pz}{\partial z}
+    \newcommand{\pf}{\partial f}
+    \newcommand{\unittangent}{\vec{{}T}}
+    \newcommand{\unitnormal}{\vec{N}}
+    \newcommand{\unittangentprime}{\vec{{}T}\hskip0.75pt '}
+ 
+    \newcommand{\mathN}{\mathbb{N}}
+    \newcommand{\surfaceS}{\mathcal{S}}
+    \newcommand{\zerooverzero}{\displaystyle \raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\textit{ ''}}}
+    \newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+    \newcommand{\sech}{\operatorname{sech}}
+    \newcommand{\csch}{\operatorname{csch}}
+    \newcommand{\curl}{\operatorname{curl}}
+    \newcommand{\divv}{\operatorname{div}}
+    \newcommand{\Hess}{\operatorname{Hess}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_first.html" class="internal"><span class="codenumber">1</span> <span class="title">Functions and Graphs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Review of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#subsec_Ch1Sec1Ss1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Representing Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-3" class="internal"><span class="codenumber">1.1.2.1</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-4" class="internal"><span class="codenumber">1.1.2.2</span> <span class="title">Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-5" class="internal"><span class="codenumber">1.1.2.3</span> <span class="title">Algebraic Formulas</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Combining Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-3" class="internal"><span class="codenumber">1.1.3.1</span> <span class="title">Combining Functions with Mathematical Operators</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-4" class="internal"><span class="codenumber">1.1.3.2</span> <span class="title">Function Composition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetry of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Basic Classes of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear Functions and Slope</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-3" class="internal"><span class="codenumber">1.2.2.1</span> <span class="title">Power Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-4" class="internal"><span class="codenumber">1.2.2.2</span> <span class="title">Behavior at Infinity</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-5" class="internal"><span class="codenumber">1.2.2.3</span> <span class="title">Zeros of Polynomial Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-6" class="internal"><span class="codenumber">1.2.2.4</span> <span class="title">Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Algebraic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Transcendental Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Piecewise-Defined Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Transformations of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-9" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-10" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Mathematical Modeling</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Quadratic Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Inverse Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Existence of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding a Function’s Inverse</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-2" class="internal"><span class="codenumber">1.4.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-3" class="internal"><span class="codenumber">1.4.2.2</span> <span class="title">Graphing Inverse Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-4" class="internal"><span class="codenumber">1.4.2.3</span> <span class="title">Restricting Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Inverse Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-7" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exponential Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-3" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Evaluating Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-4" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">Graphing Exponential Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-4" class="internal"><span class="codenumber">1.5.2</span> <span class="title">The Number <span class="process-math">\(e \)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-5" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Hyperbolic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-3" class="internal"><span class="codenumber">1.5.4.1</span> <span class="title">Graphs of Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-4" class="internal"><span class="codenumber">1.5.4.2</span> <span class="title">Identities Involving Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-5" class="internal"><span class="codenumber">1.5.4.3</span> <span class="title">Inverse Hyperbolic Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-7" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Key Concepts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_second.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">A Preview of Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Tangent Problem and Differential Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Area Problem and Integral Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Other Aspects of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Limit of a Function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Infinite Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.3.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec3.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Limit Laws</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Limit Laws</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Limits of Polynomial and Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-5" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Additional Limit Evaluation Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-onesidedlimits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-7" class="internal"><span class="codenumber">2.4.5</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsubsec-triglimits" class="internal"><span class="codenumber">2.4.6</span> <span class="title">A Few Important Trigonometric Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-LimitLawProofs" class="internal"><span class="codenumber">2.4.7</span> <span class="title">Proofs of the Limit Laws (Optional)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec4.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Continuity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Continuity at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-4" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Types of Discontinuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-5" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Continuity over an Interval</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-6" class="internal"><span class="codenumber">2.5.4</span> <span class="title">The Intermediate Value Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec6.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Limits at Infinity and Asymptotes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Limits at Infinity and Horizontal Asymptotes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Infinite Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-5" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Formal Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-6" class="internal"><span class="codenumber">2.6.4</span> <span class="title">End Behavior for Polynomials Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-7" class="internal"><span class="codenumber">2.6.5</span> <span class="title">End Behavior for Algebraic Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_third.html" class="internal"><span class="codenumber">3</span> <span class="title">Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Defining the Derivative (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Tangent Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The Derivative of a Function at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Velocities and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-6" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-7" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">The Derivative as a Function (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivative Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Graphing a Derivative</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Derivatives and Continuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-6" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Higher-Order Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-7" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-8" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Differentiation Rules (3.3.31-2 Need Chain Rule)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The Basic Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-3" class="internal"><span class="codenumber">3.3.1.1</span> <span class="title">The Constant Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-4" class="internal"><span class="codenumber">3.3.1.2</span> <span class="title">The Power Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">The Sum, Difference, and Constant Multiple Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#subsec-exponentialderivative" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-6" class="internal"><span class="codenumber">3.3.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-7" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The Quotient Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-8" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Combining Differentiation Rules</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Derivatives as Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#subsec-instantaneousrateofchange" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Motion along a Line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Population Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-6" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Changes in Cost and Revenue</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec5.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Derivatives of Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-derivs-sine-cosine" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Derivatives of the Sine and Cosine Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-harmonicmotion" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Harmonic Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-derivatives-other-trig" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Derivatives of Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-higher-trig-derivatives" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Higher-Order Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.6</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-3" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Deriving the Chain Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-4" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Chain and Power Rules Combined</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-5" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Combining the Chain Rule with Other Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-6" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Composites of Three or More Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-7" class="internal"><span class="codenumber">3.6.5</span> <span class="title">The Chain Rule Using Leibniz’s Notation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_imp_deriv.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-3" class="internal"><span class="codenumber">3.7.1</span> <span class="title">The Method of Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-4" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Implicit Differentiation and the Second Derivative</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec8.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Derivatives of Inverse Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec8.html#sec_Ch3Sec8-3" class="internal"><span class="codenumber">3.8.1</span> <span class="title">The Derivative of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec8.html#sec_Ch3Sec8-4" class="internal"><span class="codenumber">3.8.2</span> <span class="title">Derivatives of Inverse Trigonometric Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec9.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Derivatives of Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec9.html#sec_Ch3Sec9-3" class="internal"><span class="codenumber">3.9.1</span> <span class="title">Derivative of the Exponential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec9.html#sec_Ch3Sec9-4" class="internal"><span class="codenumber">3.9.2</span> <span class="title">Derivative of the Logarithmic Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec9.html#sec_Ch3Sec9-5" class="internal"><span class="codenumber">3.9.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_fourth.html" class="internal"><span class="codenumber">4</span> <span class="title">Applications of Derivatives</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Related Rates</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec1.html#sec_Ch4Sec1-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Setting up Related-Rates Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec1.html#sec_Ch4Sec1-4" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Examples of the Process</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec2.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Linear Approximations and Differentials </span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec2.html#sec_Ch4Sec2-3" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Linear Approximation of a Function at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec2.html#sec_Ch4Sec2-4" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Differentials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec2.html#sec_Ch4Sec2-5" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Calculating the Amount of Error</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec3.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Maxima and Minima</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec3.html#sec_Ch4Sec3-3" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Absolute Extrema</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec3.html#sec_Ch4Sec3-4" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Local Extrema and Critical Points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec3.html#sec_Ch4Sec3-5" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Locating Absolute Extrema</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec_Ch4Sec4.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Mean Value Theorem</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec4.html#subsec-rollestheorem" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Rolle’s Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec4.html#sec-MVTmeaning" class="internal"><span class="codenumber">4.4.2</span> <span class="title">The Mean Value Theorem and Its Meaning</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec4.html#subsec-meanvaluetheoremcorollaries" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Corollaries of the Mean Value Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_Ch4Sec6.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Concavity and Curve Sketching (PLACEHOLDER)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_appendix.html" class="internal"><span class="codenumber">5</span> <span class="title">Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_exp_func.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Derivatives of Exponential Functions (check if table headers needed)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Whirlwind Review of Logarithms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3-3" class="internal"><span class="codenumber">5.1.1.1</span> <span class="title">Logarithmic Functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Back to that Limit</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec_Ch4Sec4">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Mean Value Theorem</span>
+</h2>
+<section class="introduction" id="sec_Ch4Sec4-2"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ol class="decimal" id="sec_Ch4Sec4-2-2">
+<li id="sec_Ch4Sec4-2-2-1">
+<div class="para" id="p-derived-sec_Ch4Sec4-2-2-1">Explain the meaning of Rolle’s theorem.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch4Sec4-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch4Sec4-2-2-2">
+<div class="para" id="p-derived-sec_Ch4Sec4-2-2-2">Describe the significance of the Mean Value Theorem.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch4Sec4-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec_Ch4Sec4-2-2-3">
+<div class="para" id="p-derived-sec_Ch4Sec4-2-2-3">State three important consequences of the Mean Value Theorem.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_Ch4Sec4-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="sec_Ch4Sec4-2-3">The <dfn class="terminology">Mean Value Theorem</dfn> is one of the most important theorems in calculus. We look at some of its implications at the end of this section. First, let’s start with a special case of the Mean Value Theorem, called Rolle’s theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="subsec-rollestheorem">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rolle’s Theorem</span>
+</h3>
+<div class="para" id="subsec-rollestheorem-2">Informally, Rolle’s theorem states that if the outputs of a differentiable function <span class="process-math">\(f\)</span> are equal at the endpoints of an interval, then there must be an interior point <span class="process-math">\(c\)</span> where <span class="process-math">\(f'(c)=0\text{.}\)</span> <a href="sec_Ch4Sec4.html#fig-rollestheorem" class="xref" data-knowl="./knowl/xref/fig-rollestheorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.4.1">Figure 4.4.1</a>illustrates this theorem.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-rollestheorem-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-rollestheorem"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch4/CNX_Calc_Figure_04_04_009.jpg" class="contained" alt='"Three graphs, each over an interval from a to b where the y-coordinate is the same at both a and b.  The first graph increases from a to c and decreases from c to a. The second graph descreases from a to c and increases from c to b.  The third graph increases from a to c_1, decreases from c_1 to c_2, and increases from c_2 to b.  A horizontal tangent line is drawn at c, c_1, and c_2 for each graph."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>
+<div class="para" id="fig-rollestheorem-2-1">If a differentiable function <span class="process-math">\(f\)</span> satisfies <span class="process-math">\(f(a)=f(b)\text{,}\)</span> then its derivative must be zero at some point(s) between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fig-rollestheorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Figure 4.4.1"><a href="#fig-rollestheorem" title="Copy heading and permalink for Figure 4.4.1" aria-label="Copy heading and permalink for Figure 4.4.1">🔗</a></div></figcaption>
+</figure>
+<article class="theorem theorem-like" id="thm-rollestheorem"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="thm-rollestheorem-1-1">Let <span class="process-math">\(f\)</span> be a continuous function over the closed interval <span class="process-math">\([a,b]\)</span> and differentiable over the open interval <span class="process-math">\((a,b)\)</span> such that <span class="process-math">\(f(a)=f(b)\text{.}\)</span>  There then exists at least one <span class="process-math">\(c\in (a,b)\)</span> such that <span class="process-math">\(f'(c)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-rollestheorem-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.4.2"><a href="#thm-rollestheorem" title="Copy heading and permalink for Theorem 4.4.2" aria-label="Copy heading and permalink for Theorem 4.4.2">🔗</a></div>
+</article>
+<details id="thm-rollestheorem-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="thm-rollestheorem-2-1">Let <span class="process-math">\(k=f(a)=f(b)\text{.}\)</span>  We consider three cases:<div class="autopermalink" data-description="Paragraph"><a href="#thm-rollestheorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="thm-rollestheorem-2-2">
+<li id="thm-rollestheorem-2-2-1">
+<div class="para" id="p-derived-thm-rollestheorem-2-2-1">
+<span class="process-math">\(f(x)=k\)</span> for all <span class="process-math">\(x\in (a,b)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#thm-rollestheorem-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="thm-rollestheorem-2-2-2">
+<div class="para" id="p-derived-thm-rollestheorem-2-2-2">There exists <span class="process-math">\(x\in(a,b)\)</span> such that <span class="process-math">\(f(x)\gt k\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#thm-rollestheorem-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="thm-rollestheorem-2-2-3">
+<div class="para" id="p-derived-thm-rollestheorem-2-2-3">There exists <span class="process-math">\(x\in(a,b)\)</span> such that <span class="process-math">\(f(x)\lt k\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#thm-rollestheorem-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="thm-rollestheorem-2-3">Case 1: If <span class="process-math">\(f(x)=k\)</span> for all <span class="process-math">\(x\in(a,b)\text{,}\)</span> then <span class="process-math">\(f'(x)=0\)</span> for all <span class="process-math">\(x\in(a,b)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-rollestheorem-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-rollestheorem-2-4">Case 2: Since <span class="process-math">\(f\)</span> is a continuous function over the closed, bounded interval <span class="process-math">\([a,b]\text{,}\)</span> by the extreme value theorem, it has an absolute maximum. Also, since there is a point <span class="process-math">\(x\in(a,b)\)</span> such that <span class="process-math">\(f(x_\gt k\text{,}\)</span> the absolute maximum is greater than <span class="process-math">\(k\text{.}\)</span> Therefore, the absolute maximum does not occur at either endpoint. As a result, the absolute maximum must occur at an interior point <span class="process-math">\(c\in (a,b)\text{.}\)</span>  Because <span class="process-math">\(f\)</span> has a maximum at an interior point <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(c\text{,}\)</span> by Fermat’s Theorem (<a href="sec_Ch4Sec3.html#fs-id1165041796868" class="xref" data-knowl="./knowl/xref/fs-id1165041796868.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.3.9: Fermat’s Theorem">Theorem 4.3.9</a>), <span class="process-math">\(f'(c)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-rollestheorem-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-rollestheorem-2-5">Case 3: The case when there exists a point <span class="process-math">\(x\in(a,b)\)</span> such that <span class="process-math">\(f(x)\lt k\)</span> is analogous to case 2, with maximum replaced by minimum.<div class="autopermalink" data-description="Paragraph"><a href="#thm-rollestheorem-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.4.2.1"><a href="#thm-rollestheorem-2" title="Copy heading and permalink for Proof 4.4.2.1" aria-label="Copy heading and permalink for Proof 4.4.2.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsec-rollestheorem-5">An important point about Rolle’s theorem is that the differentiability of the function <span class="process-math">\(f\)</span> is critical.  If <span class="process-math">\(f\)</span> is not differentiable, even at a single point, the result may not hold. For example, the function <span class="process-math">\(f(x)=|x|-1\)</span> is continuous over <span class="process-math">\([-1,1]\)</span> and <span class="process-math">\(f(-1)=0=f(1)\text{,}\)</span> but <span class="process-math">\(f'(c)\ne 0\)</span> for any <span class="process-math">\(c\in (-1,1)\)</span> as shown in the following figure.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-rollestheorem-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-rollestheoremfailure"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/CNX_Calc_Figure_04_04_002.jpg" class="contained" alt='"A graph of f(x)=|x|-1 on the interval from x=-1 to x=1."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>
+<div class="para" id="fig-rollestheoremfailure-2-1">Since <span class="process-math">\(f(x)=|x|-1\)</span> is not differentiable at <span class="process-math">\(x=0\text{,}\)</span> the conditions of Rolle’s Theorem are not satisfied.  In fact, the conclusion does not hold here; there is no <span class="process-math">\(c\in (-1,1)\)</span> such that <span class="process-math">\(f'(c)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fig-rollestheoremfailure-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Figure 4.4.3"><a href="#fig-rollestheoremfailure" title="Copy heading and permalink for Figure 4.4.3" aria-label="Copy heading and permalink for Figure 4.4.3">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="subsec-rollestheorem-7">Let’s now consider functions that satisfy the conditions of Rolle’s Theorem and calculate explicitly the points <span class="process-math">\(c\)</span> where <span class="process-math">\(f'(c)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-rollestheorem-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-rollestheorem-8"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using Rolle’s Theorem.</span>
+</h4>
+<div class="para" id="subsec-rollestheorem-8-2-1">For each of the following functions, verify that the function satisfies the criteria stated in Rolle’s theorem and find all values <span class="process-math">\(c\)</span> in the given interval where <span class="process-math">\(f'(c)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-rollestheorem-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha ol-marker-3" id="subsec-rollestheorem-8-2-2">
+<li id="subsec-rollestheorem-8-2-2-1">
+<div class="para" id="p-derived-subsec-rollestheorem-8-2-2-1">
+<span class="process-math">\(f(x)=x^2+2x\)</span> over <span class="process-math">\([-2,0]\)</span>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#subsec-rollestheorem-8-2-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="subsec-rollestheorem-8-2-2-2">
+<div class="para" id="p-derived-subsec-rollestheorem-8-2-2-2">
+<span class="process-math">\(f(x)=x^3-4x\)</span> over <span class="process-math">\([-2,2]\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#subsec-rollestheorem-8-2-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="solutions">
+<details id="subsec-rollestheorem-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<ol class="lower-alpha ol-marker-3" id="subsec-rollestheorem-8-3-1">
+<li id="subsec-rollestheorem-8-3-1-1">Since <span class="process-math">\(f\)</span> is a polynomial, it is continuous and differentiable everywhere.  In addition, <span class="process-math">\(f(-2)=0=f(0)\text{.}\)</span>  Therefore, <span class="process-math">\(f\)</span> satisfies teh criteria of Rolle’s Theorem.  We conclude that there exists at least one value <span class="process-math">\(c\in (-2,0)\)</span> such that <span class="process-math">\(f'(c)=0\text{.}\)</span>  Since <span class="process-math">\(f'(x)=2x+2=2(x+1)\text{,}\)</span> we see that <span class="process-math">\(f'(c)=2(c+1)=0\)</span> implies <span class="process-math">\(c=-1\)</span> as shown in the following graph. 
+<figure class="figure figure-like" id="ex-rollestheorema"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch4/CNX_Calc_Figure_04_04_003.jpg" class="contained" alt='"A graph of f(x)=x^2+2x on the interval from x=-2 to x=0 with the tangent line drawn at x=-1."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>
+<div class="para" id="ex-rollestheorema-2-1">This function is continuous and differentiable over <span class="process-math">\([-2,0]\text{,}\)</span> <span class="process-math">\(f'(c)=0\)</span> when <span class="process-math">\(c=-1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-rollestheorema-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Figure 4.4.5"><a href="#ex-rollestheorema" title="Copy heading and permalink for Figure 4.4.5" aria-label="Copy heading and permalink for Figure 4.4.5">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Item a"><a href="#subsec-rollestheorem-8-3-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="subsec-rollestheorem-8-3-1-2">As in part a, <span class="process-math">\(f\)</span> is a polynomial and there is continuous and differentiable everywhere.  Also, <span class="process-math">\(f(-2)=0=f(2)\text{.}\)</span>  That said, <span class="process-math">\(f\)</span> satisfies the criteria of Rolle’s Theorem.  Differentiating, we find that <span class="process-math">\(f'(x)=3x^2-4\text{.}\)</span>  Therefore, <span class="process-math">\(f'(c)=0\)</span> when <span class="process-math">\(x=\ds\pm\frac{2}{\sqrt{3}}\text{.}\)</span>  Both points are in the interval <span class="process-math">\([-2,2]\text{,}\)</span> and therefore, both points satisfy the conclusions of Rolle’s Theorem as shown in the following graph. 
+<figure class="figure figure-like" id="ex-rollestheoremb"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch4/CNX_Calc_Figure_04_04_004.jpg" class="contained" alt='"A graph of f(x)=x^3-4x on the interval from x=-2 to x=2 with the tangent line drawn at x=-1 and x=1."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>
+<div class="para" id="ex-rollestheoremb-2-1">For this polynomial over <span class="process-math">\([-2,2]\text{,}\)</span> <span class="process-math">\(f'(c)=0\)</span> at <span class="process-math">\(x=\pm 2/\sqrt{3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-rollestheoremb-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Figure 4.4.6"><a href="#ex-rollestheoremb" title="Copy heading and permalink for Figure 4.4.6" aria-label="Copy heading and permalink for Figure 4.4.6">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Item b"><a href="#subsec-rollestheorem-8-3-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 4.4.4.1"><a href="#subsec-rollestheorem-8-3" title="Copy heading and permalink for Solution 4.4.4.1" aria-label="Copy heading and permalink for Solution 4.4.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.4.4: Using Rolle’s Theorem"><a href="#subsec-rollestheorem-8" title="Copy heading and permalink for Example 4.4.4: Using Rolle’s Theorem" aria-label="Copy heading and permalink for Example 4.4.4: Using Rolle’s Theorem">🔗</a></div>
+</article>
+<details id="subsec-rollestheorem-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="subsec-rollestheorem-9-1-1">Verify that the function <span class="process-math">\(f(x)=2x^2-8x+6\)</span> defined over the interval <span class="process-math">\([1,3]\)</span> satisfies the conditions of Rolle’s Theorem.  Find all points <span class="process-math">\(c\)</span> guaranteed by Rolle’s Theorem.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-rollestheorem-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-rollestheorem-9-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="subsec-rollestheorem-9-2-1">Solve <span class="process-math">\(f'(c)=0\)</span> for <span class="process-math">\(c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-rollestheorem-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.4.7.1"><a href="#subsec-rollestheorem-9-2" title="Copy heading and permalink for Hint 4.4.7.1" aria-label="Copy heading and permalink for Hint 4.4.7.1">🔗</a></div>
+</div></details>
+<details id="subsec-rollestheorem-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="subsec-rollestheorem-9-3-1">
+<span class="process-math">\(f(x)\)</span> is a polynomial and is thus both continuous and differentiable over any interval.  Also, <span class="process-math">\(f(1)=0=f(3)\text{,}\)</span> so <span class="process-math">\(f(x)\)</span> satisfies the hypotheses of Rolle’s Theorem.  Since <span class="process-math">\(f'(x)=4x-8\text{,}\)</span> then <span class="process-math">\(f'(c)=0\)</span> when <span class="process-math">\(4c-8=0\text{,}\)</span> or when <span class="process-math">\(c=2\text{.}\)</span>  Since <span class="process-math">\(2\in (1,3)\text{,}\)</span> the conclusion to Rolle’s Theorem is satisfied.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-rollestheorem-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.4.7.1"><a href="#subsec-rollestheorem-9-3" title="Copy heading and permalink for Solution 4.4.7.1" aria-label="Copy heading and permalink for Solution 4.4.7.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.4.7"><a href="#subsec-rollestheorem-9" title="Copy heading and permalink for Checkpoint 4.4.7" aria-label="Copy heading and permalink for Checkpoint 4.4.7">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 4.4.1: Rolle’s Theorem"><a href="#subsec-rollestheorem" title="Copy heading and permalink for Subsection 4.4.1: Rolle’s Theorem" aria-label="Copy heading and permalink for Subsection 4.4.1: Rolle’s Theorem">🔗</a></div>
+</section>
+<section class="subsection" id="sec-MVTmeaning">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Mean Value Theorem and Its Meaning</span>
+</h3>
+<div class="para" id="sec-MVTmeaning-2">Rolle’s theorem is a special case of the Mean Value Theorem. In Rolle’s theorem, we consider differentiable functions <span class="process-math">\(f\)</span> defined on the closed interval <span class="process-math">\([a,b]\)</span> with <span class="process-math">\(f(a)=f(b)\text{.}\)</span> The Mean Value Theorem generalizes Rolle’s theorem by considering functions that do not necessarily have equal value at the endpoints. Consequently, we can view the Mean Value Theorem as a slanted version of Rolle’s theorem (<a href="sec_Ch4Sec4.html#fig-meanvaluetheorem" class="xref" data-knowl="./knowl/xref/fig-meanvaluetheorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.4.8">Figure 4.4.8</a>). The Mean Value Theorem states that if <span class="process-math">\(f\)</span> is continuous over the closed interval <span class="process-math">\([a,b]\)</span> and differentiable over the open interval <span class="process-math">\((a,b)\text{,}\)</span> then there exists a point <span class="process-math">\(c\in(a,b)\)</span> such that the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(c\)</span> is parallel to the secant line connecting <span class="process-math">\((a,f(a))\)</span> and <span class="process-math">\((b,f(b))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-MVTmeaning-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-meanvaluetheorem"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch4/CNX_Calc_Figure_04_04_010.jpg" class="contained" alt='"A graph of a function f(x) from a to b.  Between a and b are x-values c1 and c2.  The secant line connecting the points of the graph of the function at a and b is drawn.  Also drawn is the tangent line to the function at c1 and c2.  These tangent lines a parallel to the secant line."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>
+<div class="para" id="fig-meanvaluetheorem-2-1">The Mean Value Theorem says that for a function that meets its conditions, at some point the tangent line has the same slope as the secant line between the ends. For this function, there are two values <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> such that the tangent line to <span class="process-math">\(f\)</span> at <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> has the same slope as the secant line.<div class="autopermalink" data-description="Paragraph"><a href="#fig-meanvaluetheorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Figure 4.4.8"><a href="#fig-meanvaluetheorem" title="Copy heading and permalink for Figure 4.4.8" aria-label="Copy heading and permalink for Figure 4.4.8">🔗</a></div></figcaption>
+</figure>
+<article class="theorem theorem-like" id="thm-meanvaluetheorem"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="thm-meanvaluetheorem-1-1">
+<div class="para">Let <span class="process-math">\(f\)</span> be continuous over the closed interval <span class="process-math">\([a,b]\)</span> and differentiable over the open interval <span class="process-math">\((a,b)\text{.}\)</span>  Then, there exists at least one point <span class="process-math">\(c\in (a,b)\)</span> such that</div>
+<div class="displaymath process-math" id="thm-meanvaluetheorem-1-1-5">
+\begin{equation*}
+f'(c)=\frac{f(b)-f(a)}{b-a}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-meanvaluetheorem-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.4.9"><a href="#thm-meanvaluetheorem" title="Copy heading and permalink for Theorem 4.4.9" aria-label="Copy heading and permalink for Theorem 4.4.9">🔗</a></div>
+</article>
+<details id="thm-meanvaluetheorem-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="thm-meanvaluetheorem-2-1">
+<div class="para">The proof follows from Rolle’s theorem by introducing an appropriate function that satisfies the criteria of Rolle’s theorem. Consider the line connecting <span class="process-math">\((a,f(a))\)</span> and <span class="process-math">\((b,f(b))\text{.}\)</span>  Since the slope of that line is</div>
+<div class="displaymath process-math" id="thm-meanvaluetheorem-2-1-3">
+\begin{equation*}
+\frac{f(b)-f(a)}{b-a}
+\end{equation*}
+</div>
+<div class="para">and the line passes through the point <span class="process-math">\((a,f(a))\text{,}\)</span> the equation of that line can be written as</div>
+<div class="displaymath process-math" id="thm-meanvaluetheorem-2-1-5">
+\begin{equation*}
+y=\frac{f(b)-f(a)}{b-a}(x-a)+f(a)\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-meanvaluetheorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-meanvaluetheorem-2-2">
+<div class="para">Let <span class="process-math">\(g(x)\)</span> denote the vertical different between the point <span class="process-math">\((x,f(x))\)</span> and the point <span class="process-math">\((x,y)\)</span> on that line.  Therefore,</div>
+<div class="displaymath process-math" id="thm-meanvaluetheorem-2-2-4">
+\begin{equation*}
+g(x)=f(x)-\left[\frac{f(b)-f(a)}{b-a}(x-a)+f(a)\right]\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-meanvaluetheorem-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-meanvaluetheoremproof"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch4/CNX_Calc_Figure_04_04_011.jpg" class="contained" alt='"A graph of a function g(x) from a to b.  The secant line connecting the points of the graph at a and b is drawn with the equation of the line labeled as described above."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>
+<div class="para" id="fig-meanvaluetheoremproof-2-1">The value <span class="process-math">\(g(x)\)</span> is the vertical difference between the point <span class="process-math">\((x,f(x))\)</span> and the point <span class="process-math">\((x,y)\)</span> on the secant line connecting <span class="process-math">\((a,f(a))\)</span> and <span class="process-math">\((b,f(b)))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fig-meanvaluetheoremproof-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Figure 4.4.10"><a href="#fig-meanvaluetheoremproof" title="Copy heading and permalink for Figure 4.4.10" aria-label="Copy heading and permalink for Figure 4.4.10">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="thm-meanvaluetheorem-2-4">
+<div class="para">Since the graph of <span class="process-math">\(f\)</span> intersects the secant line when <span class="process-math">\(x=a\)</span> and <span class="process-math">\(x=b\text{,}\)</span> we see that <span class="process-math">\(g(a)=0=g(b)\text{.}\)</span>  Since <span class="process-math">\(f\)</span> is a differentiable function over <span class="process-math">\((a,b)\text{,}\)</span> <span class="process-math">\(g\)</span> is also a differentiable function over <span class="process-math">\((a,b)\text{.}\)</span>  Furthermore, since <span class="process-math">\(f\)</span> is continuous over <span class="process-math">\([a,b]\text{,}\)</span> <span class="process-math">\(g\)</span> is also continuous over <span class="process-math">\([a,b]\text{.}\)</span>  Therefore, <span class="process-math">\(g\)</span> satisfies the criteria of Rolle’s Theorem. Consequently, there exists a point <span class="process-math">\(c\in(a,b)\)</span> such that <span class="process-math">\(g'(c)=0\text{.}\)</span> Since</div>
+<div class="displaymath process-math" id="thm-meanvaluetheorem-2-4-16">
+\begin{equation*}
+g'(x)=f'(x)-\frac{f(b)-f(a)}{b-a}\text{,}
+\end{equation*}
+</div>
+<div class="para">we see that</div>
+<div class="displaymath process-math" id="thm-meanvaluetheorem-2-4-17">
+\begin{equation*}
+g'(c)=f'(c)-\frac{f(b)-f(a)}{b-a}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(g'(c)=0\text{,}\)</span> we conclude that</div>
+<div class="displaymath process-math" id="thm-meanvaluetheorem-2-4-19">
+\begin{equation*}
+f'(c)=\frac{f(b)-f(a)}{b-a}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-meanvaluetheorem-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.4.9.1"><a href="#thm-meanvaluetheorem-2" title="Copy heading and permalink for Proof 4.4.9.1" aria-label="Copy heading and permalink for Proof 4.4.9.1">🔗</a></div>
+</article></details>
+<article class="example example-like" id="ex-verifyingMTV"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Verifying that the Mean Value Theorem Applies.</span>
+</h4>
+<div class="para" id="ex-verifyingMTV-2-1">For <span class="process-math">\(f(x)=\sqrt{x}\)</span> over the interval <span class="process-math">\([0,9]\text{,}\)</span> show that <span class="process-math">\(f\)</span> satisfies the hypothesis of the Mean Value Theorem, and therefore there exists at least one value <span class="process-math">\(c\in(0,9)\)</span> such that <span class="process-math">\(f'(c)\)</span> is equal to the slope of the line connecting <span class="process-math">\((0,f(0))\)</span> and <span class="process-math">\((9,f(9))\text{.}\)</span>  Find these values <span class="process-math">\(c\)</span> guaranteed by the Mean Value Theorem.<div class="autopermalink" data-description="Paragraph"><a href="#ex-verifyingMTV-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex-verifyingMTV-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-verifyingMTV-3-1">
+<div class="para">We know that <span class="process-math">\(f(x)=\sqrt{x}\)</span> is continuous over <span class="process-math">\([0,9]\)</span> and differentiable over <span class="process-math">\((0,9)\text{.}\)</span>  Therefore, <span class="process-math">\(f\)</span> satisfies the hypotheses of the Mean Value Theorem, and there must exist at least one value <span class="process-math">\(c\in (0,9)\)</span> such that <span class="process-math">\(f'(c)\)</span> is equal to the slope of the line connecting <span class="process-math">\((0,f(0))\)</span> and <span class="process-math">\((9,f(9))\)</span> (<a href="sec_Ch4Sec4.html#fig-verifyingMVT" class="xref" data-knowl="./knowl/xref/fig-verifyingMVT.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.4.12">Figure 4.4.12</a>).  To determine the value(s) of <span class="process-math">\(c\)</span> are guaranteed, first calculate the derivative of <span class="process-math">\(f\text{.}\)</span>  The derivative <span class="process-math">\(\ds f'(x)=\frac{1}{2\sqrt{x}}\text{.}\)</span> The slope of the line connecting <span class="process-math">\((0,f(0))\)</span> and <span class="process-math">\((9,f(9))\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-verifyingMVT.html" id="ex-verifyingMTV-3-1-15">
+\begin{equation*}
+\frac{f(9)-f(0)}{9-0}=\frac{\sqrt{9}-\sqrt{0}}{9-0}=\frac{3}{9}=\frac{1}{3}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-verifyingMTV-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-verifyingMTV-3-2">
+<div class="para">We want to find <span class="process-math">\(c\)</span> such that <span class="process-math">\(f'(c)=\ds\frac{1}{3}\text{.}\)</span>  That is, we want to find <span class="process-math">\(c\)</span>  such that</div>
+<div class="displaymath process-math" id="ex-verifyingMTV-3-2-4">
+\begin{equation*}
+\frac{1}{2\sqrt{c}}=\frac{1}{3}\text{.}
+\end{equation*}
+</div>
+<div class="para">Solving this equation for <span class="process-math">\(c\text{,}\)</span> we obtain <span class="process-math">\(c=\ds\frac{9}{4}\text{.}\)</span> At this point, the slope of the tangent line equals the slope of the line joining the endpoints.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-verifyingMTV-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-verifyingMVT"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch4/CNX_Calc_Figure_04_04_006.jpg" class="contained" alt='"A graph of the square root function from 0 to 9. The secant line connects (0,0) to (9,3) and the tangent line to the graph at (9/4,3/2) is drawn and is parallel to the secant line."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>
+<div class="para" id="fig-verifyingMVT-2-1">The slope of the tangent line at <span class="process-math">\(c=9/4\)</span> is the same as the slope of the line segment connecting <span class="process-math">\((0,0)\)</span> and <span class="process-math">\((9,3)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fig-verifyingMVT-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Figure 4.4.12"><a href="#fig-verifyingMVT" title="Copy heading and permalink for Figure 4.4.12" aria-label="Copy heading and permalink for Figure 4.4.12">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 4.4.11.1"><a href="#ex-verifyingMTV-3" title="Copy heading and permalink for Solution 4.4.11.1" aria-label="Copy heading and permalink for Solution 4.4.11.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.4.11: Verifying that the Mean Value Theorem Applies"><a href="#ex-verifyingMTV" title="Copy heading and permalink for Example 4.4.11: Verifying that the Mean Value Theorem Applies" aria-label="Copy heading and permalink for Example 4.4.11: Verifying that the Mean Value Theorem Applies">🔗</a></div>
+</article>
+<div class="para logical" id="sec-MVTmeaning-6">
+<div class="para">One application that helps illustrate the Mean Value Theorem involves velocity. For example, suppose we drive a car for <span class="process-math">\(1\)</span> h down a straight road with an average velocity of <span class="process-math">\(45\)</span> mph.  Let <span class="process-math">\(s(t)\)</span> and <span class="process-math">\(v(t)\)</span> denote the position and velocity of the car, respectively, for <span class="process-math">\(0\le t\le 1\)</span> h.  Assuming that the position functions <span class="process-math">\(s(t)\)</span> is differentiable, we can apply the Mean Value Theorem to conclude that, at some time <span class="process-math">\(c\in (0,1)\text{,}\)</span> the speed of the car was exactly</div>
+<div class="displaymath process-math" id="sec-MVTmeaning-6-8">
+\begin{equation*}
+v(c)=s'(c)=\frac{s(1)-s(0)}{1-0}=45\text{  mph}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-MVTmeaning-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ex-meanvaluetheoremvelocity"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mean Value Theorem and Velocity.</span>
+</h4>
+<div class="para" id="ex-meanvaluetheoremvelocity-2-1">If a rock is dropped from a height of <span class="process-math">\(100\)</span> ft, its position <span class="process-math">\(t\)</span> seconds after it is dropped until it hits the ground is given by the function <span class="process-math">\(s(t)=-16t^2+100\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-meanvaluetheoremvelocity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha ol-marker-3" id="ex-meanvaluetheoremvelocity-2-2">
+<li id="ex-meanvaluetheoremvelocity-2-2-1">
+<div class="para" id="p-derived-ex-meanvaluetheoremvelocity-2-2-1">Determine how long it takes before the rock hits the ground.</div>
+<div class="autopermalink" data-description="Item a"><a href="#ex-meanvaluetheoremvelocity-2-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="ex-meanvaluetheoremvelocity-2-2-2">
+<div class="para" id="p-derived-ex-meanvaluetheoremvelocity-2-2-2">Find the average velocity <span class="process-math">\(v_{\text{avg}}\)</span> of the rock for when the rock is released and the rock hits the ground.</div>
+<div class="autopermalink" data-description="Item b"><a href="#ex-meanvaluetheoremvelocity-2-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="ex-meanvaluetheoremvelocity-2-2-3">
+<div class="para" id="p-derived-ex-meanvaluetheoremvelocity-2-2-3">Find the time <span class="process-math">\(t\)</span> guaranteed by the Mean Value Theorem when the instantaneous velocity of the rock is <span class="process-math">\(v_{\text{avg}}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#ex-meanvaluetheoremvelocity-2-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="solutions">
+<details id="ex-meanvaluetheoremvelocity-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<ol class="lower-alpha ol-marker-3" id="ex-meanvaluetheoremvelocity-3-1">
+<li id="ex-meanvaluetheoremvelocity-3-1-1">
+<div class="para" id="p-derived-ex-meanvaluetheoremvelocity-3-1-1">When the rock hits the ground, its position is <span class="process-math">\(s⁡(t)=0\text{.}\)</span> Solving the equation <span class="process-math">\(−16⁢t^2+100=0\)</span> for <span class="process-math">\(t\text{,}\)</span> we find that <span class="process-math">\(t=\ds\pm\frac{5}{2}\)</span> sec. Since we are only considering <span class="process-math">\(t\ge 0\text{,}\)</span> the ball will hit the ground <span class="process-math">\(\ds\frac{5}{2}\)</span> sec after it is dropped.</div>
+<div class="autopermalink" data-description="Item a"><a href="#ex-meanvaluetheoremvelocity-3-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="ex-meanvaluetheoremvelocity-3-1-2">The instantaneous velocity is given by the derivative of the position function. Therefore, we need to find a time <span class="process-math">\(t\)</span> such that <span class="process-math">\(v(t)=s'(t)=v_{\text{avg}}=-4o\text{ ft/sec}\text{.}\)</span>  Since <span class="process-math">\(s(t)\)</span> is continuous over the interval <span class="process-math">\([0,5/2]\)</span> and differentiable over the interval <span class="process-math">\((0,5/2)\text{,}\)</span> by the Mean Value Theorem, there is guaranteed to be a point <span class="process-math">\(c\in (0,5/2)\)</span> such that<div class="displaymath process-math" id="ex-meanvaluetheoremvelocity-3-1-2-7">
+\begin{equation*}
+s'(c)=\frac{s(5/2)-s(0)}{5/2-0}=-40\text{.}
+\end{equation*}
+</div>Taking the derivative of the position function <span class="process-math">\(s(t)\text{,}\)</span> we find that <span class="process-math">\(s'(t)=-32t\text{.}\)</span>  Therefore the equation reduces to <span class="process-math">\(s'(c)=-32c=-40\text{.}\)</span>  Solving this equation for <span class="process-math">\(c\text{,}\)</span> we have <span class="process-math">\(c=\ds\frac{5}{4}\text{.}\)</span>  Therefore, <span class="process-math">\(\ds\frac{5}{4}\)</span> sec after the rock is dropped, the instantaneous velocity equals the average velocity of the rock during its free fall: <span class="process-math">\(-40\text{ ft/sec}\text{.}\)</span> 
+<figure class="figure figure-like" id="fig-meanvaluetheoremvelocity"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch4/CNX_Calc_Figure_04_04_007.jpg" class="contained" alt='"A graph of s(t)=-16 t squared + 100 from t=0 to t05/2.  A secant line is drawn connecting the endpoints and the tangent line is drawn at t=5/4."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>
+<div class="para" id="fig-meanvaluetheoremvelocity-2-1">At time <span class="process-math">\(\ds t=5/4\)</span> sec, the velocity of the rock is equal to its average velocity from the time it is dropped until it hits the ground.<div class="autopermalink" data-description="Paragraph"><a href="#fig-meanvaluetheoremvelocity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Figure 4.4.14"><a href="#fig-meanvaluetheoremvelocity" title="Copy heading and permalink for Figure 4.4.14" aria-label="Copy heading and permalink for Figure 4.4.14">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Item b"><a href="#ex-meanvaluetheoremvelocity-3-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 4.4.13.1"><a href="#ex-meanvaluetheoremvelocity-3" title="Copy heading and permalink for Solution 4.4.13.1" aria-label="Copy heading and permalink for Solution 4.4.13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.4.13: Mean Value Theorem and Velocity"><a href="#ex-meanvaluetheoremvelocity" title="Copy heading and permalink for Example 4.4.13: Mean Value Theorem and Velocity" aria-label="Copy heading and permalink for Example 4.4.13: Mean Value Theorem and Velocity">🔗</a></div>
+</article>
+<details id="sec-MVTmeaning-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec-MVTmeaning-8-1-1">Suppose a ball is dropped from a height of <span class="process-math">\(200\)</span> ft.  Its position at time <span class="process-math">\(t\)</span> is <span class="process-math">\(s(t)=-16t^2+200\text{.}\)</span>  Find the time <span class="process-math">\(t\)</span> when the instantaneous velocity of the ball equals its average velocity.<div class="autopermalink" data-description="Paragraph"><a href="#sec-MVTmeaning-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec-MVTmeaning-8-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec-MVTmeaning-8-3-1">Find the time when the ball hits the ground, <span class="process-math">\(t_g\)</span> and then solve <span class="process-math">\(\ds s'(c)=\frac{s(t_g)-s(0)}{t_g-0}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-MVTmeaning-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.4.15.1"><a href="#sec-MVTmeaning-8-3" title="Copy heading and permalink for Hint 4.4.15.1" aria-label="Copy heading and permalink for Hint 4.4.15.1">🔗</a></div>
+</div></details>
+<details id="sec-MVTmeaning-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<span class="process-math">\(\ds\frac{5\sqrt{2}}{4}\)</span><div class="autopermalink" data-description="Solution 4.4.15.1"><a href="#sec-MVTmeaning-8-2" title="Copy heading and permalink for Solution 4.4.15.1" aria-label="Copy heading and permalink for Solution 4.4.15.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.4.15"><a href="#sec-MVTmeaning-8" title="Copy heading and permalink for Checkpoint 4.4.15" aria-label="Copy heading and permalink for Checkpoint 4.4.15">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 4.4.2: The Mean Value Theorem and Its Meaning"><a href="#sec-MVTmeaning" title="Copy heading and permalink for Subsection 4.4.2: The Mean Value Theorem and Its Meaning" aria-label="Copy heading and permalink for Subsection 4.4.2: The Mean Value Theorem and Its Meaning">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-meanvaluetheoremcorollaries">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Corollaries of the Mean Value Theorem</span>
+</h3>
+<div class="para" id="subsec-meanvaluetheoremcorollaries-2">Let’s now look at three corollaries of the Mean Value Theorem. These results have important consequences, which we use in upcoming sections.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-meanvaluetheoremcorollaries-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-meanvaluetheoremcorollaries-3">At this point, we know the derivative of any constant function is zero. The Mean Value Theorem allows us to conclude that the converse is also true. In particular, if <span class="process-math">\(f'(x)=0\)</span> for all <span class="process-math">\(x\)</span> in some interval <span class="process-math">\(I\text{,}\)</span> then 𝑓<span class="process-math">\(f(x)\)</span> is constant over that interval. This result may seem intuitively obvious, but it has important implications that are not obvious, and we discuss them shortly.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-meanvaluetheoremcorollaries-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="cor-constantfunctionderivative"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Functions with a Derivative of Zero.</span>
+</h4>
+<div class="para" id="cor-constantfunctionderivative-2-1">Let <span class="process-math">\(f\)</span> be differentiable over an interval <span class="process-math">\(I\text{.}\)</span>  If <span class="process-math">\(f'(x)=0\)</span> for all <span class="process-math">\(x\in I\text{,}\)</span> then <span class="process-math">\(f(x)=\text{constant}\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor-constantfunctionderivative-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 4.4.16: Functions with a Derivative of Zero"><a href="#cor-constantfunctionderivative" title="Copy heading and permalink for Corollary 4.4.16: Functions with a Derivative of Zero" aria-label="Copy heading and permalink for Corollary 4.4.16: Functions with a Derivative of Zero">🔗</a></div>
+</article>
+<details id="cor-constantfunctionderivative-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="cor-constantfunctionderivative-3-1">
+<div class="para">Since <span class="process-math">\(f\)</span> is differentiable over <span class="process-math">\(I\text{,}\)</span> <span class="process-math">\(f\)</span> must be continuous over <span class="process-math">\(I\text{.}\)</span> Suppose <span class="process-math">\(f(x)\)</span> is not constant for all <span class="process-math">\(x\)</span> in <span class="process-math">\(I\text{.}\)</span> Then there exist <span class="process-math">\(a,b\in I\text{,}\)</span> where <span class="process-math">\(a\ne b\)</span> and <span class="process-math">\(f(a)\ne f(b)\text{.}\)</span> Choose the notation so that <span class="process-math">\(a\lt b\text{.}\)</span> Therefore,</div>
+<div class="displaymath process-math" id="cor-constantfunctionderivative-3-1-12">
+\begin{equation*}
+\frac{f(b)-f(a)}{b-a}\ne 0\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(f\)</span>is a differentiable function, by the Mean Value Theorem, there exists <span class="process-math">\(c\in (a,b)\)</span> such that</div>
+<div class="displaymath process-math" id="cor-constantfunctionderivative-3-1-15">
+\begin{equation*}
+f'(c)=\frac{f(b)-f(a)}{b-a}\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, there exists <span class="process-math">\(c\in I\)</span> such that <span class="process-math">\(f'(c)\ne 0\text{,}\)</span> which contradicts the assumption that <span class="process-math">\(f'(x)=0\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor-constantfunctionderivative-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.4.16.1"><a href="#cor-constantfunctionderivative-3" title="Copy heading and permalink for Proof 4.4.16.1" aria-label="Copy heading and permalink for Proof 4.4.16.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsec-meanvaluetheoremcorollaries-5">From <a href="sec_Ch4Sec4.html#cor-constantfunctionderivative" class="xref" data-knowl="./knowl/xref/cor-constantfunctionderivative.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 4.4.16: Functions with a Derivative of Zero">Corollary 4.4.16</a> it follows that if two functions have the same derivative, they differ by at most a constant.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-meanvaluetheoremcorollaries-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="corollary theorem-like" id="cor-constantdifferencederivative"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Functions With Equal Derivatives.</span>
+</h4>
+<div class="para" id="cor-constantdifferencederivative-2-1">If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are differentiable over an interval <span class="process-math">\(I\)</span> and <span class="process-math">\(f'(x)=g'(x)\)</span> for all <span class="process-math">\(x\in I\text{,}\)</span> then <span class="process-math">\(f(x)=g(x)+C\)</span> for some constant <span class="process-math">\(C\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor-constantdifferencederivative-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 4.4.17: Functions With Equal Derivatives"><a href="#cor-constantdifferencederivative" title="Copy heading and permalink for Corollary 4.4.17: Functions With Equal Derivatives" aria-label="Copy heading and permalink for Corollary 4.4.17: Functions With Equal Derivatives">🔗</a></div>
+</article>
+<details id="cor-constantdifferencederivative-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="cor-constantdifferencederivative-3-1">Let <span class="process-math">\(h(x)=f(x)-g(x)\text{.}\)</span>  Then <span class="process-math">\(h'(x)=f'(x)-g'(x)=0\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span>  By <a href="sec_Ch4Sec4.html#cor-constantfunctionderivative" class="xref" data-knowl="./knowl/xref/cor-constantfunctionderivative.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 4.4.16: Functions with a Derivative of Zero">Corollary 4.4.16</a>m there is a constant <span class="process-math">\(C\)</span> such that <span class="process-math">\(h(x)=C\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span>  Therefore, <span class="process-math">\(f(x)=g(x)+C\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor-constantdifferencederivative-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.4.17.1"><a href="#cor-constantdifferencederivative-3" title="Copy heading and permalink for Proof 4.4.17.1" aria-label="Copy heading and permalink for Proof 4.4.17.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsec-meanvaluetheoremcorollaries-7">This fact is important because it means that for a given function <span class="process-math">\(f\text{,}\)</span> if there exists a function <span class="process-math">\(F\)</span> such that <span class="process-math">\(F'(x)=f(x)\text{;}\)</span> then, the only other functions that have a derivative equal to <span class="process-math">\(f\)</span> are 𝐹<span class="process-math">\(F(x)+C\)</span> for some constant <span class="process-math">\(C\text{.}\)</span> We discuss this result in more detail later in the chapter.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-meanvaluetheoremcorollaries-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-meanvaluetheoremcorollaries-8">The third corollary of the Mean Value Theorem discusses when a function is increasing and when it is decreasing. Recall that a function <span class="process-math">\(f\)</span> is increasing over <span class="process-math">\(I\)</span> if <span class="process-math">\(f(x_1)\le f(x_2)\)</span> whenever <span class="process-math">\(x_1\lt x_2\text{,}\)</span> whereas <span class="process-math">\(f\)</span> is decreasing over <span class="process-math">\(I\)</span> if <span class="process-math">\(f(x_1)\gt f(x_2)\)</span> whenever <span class="process-math">\(x_1\lt x_2\text{.}\)</span> Using the Mean Value Theorem, we can show that if the derivative of a function is positive, then the function is increasing; if the derivative is negative, then the function is decreasing (<a href="sec_Ch4Sec4.html#fig-MVTmonotonicity" class="xref" data-knowl="./knowl/xref/fig-MVTmonotonicity.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.4.18">Figure 4.4.18</a>). We make use of this fact in the next section, where we show how to use the derivative of a function to locate local maximum and minimum values of the function, and how to determine the shape of the graph.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-meanvaluetheoremcorollaries-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-MVTmonotonicity"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch4/CNX_Calc_Figure_04_04_008.jpg" class="contained" alt='"A graph of a function that is increasing when x is less than a, decreases between a and b, and is increasing when x is greater than b.  "'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>
+<div class="para" id="fig-MVTmonotonicity-2-1">If a function has a positive derivative over some interval <span class="process-math">\(I\text{,}\)</span> then the function increases over that interval <span class="process-math">\(I\text{;}\)</span> if the derivative is negative over some interval <span class="process-math">\(I\text{,}\)</span> then the function decreases over that interval <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fig-MVTmonotonicity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Figure 4.4.18"><a href="#fig-MVTmonotonicity" title="Copy heading and permalink for Figure 4.4.18" aria-label="Copy heading and permalink for Figure 4.4.18">🔗</a></div></figcaption>
+</figure>
+<article class="corollary theorem-like" id="cor-MVTmonotonicity"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Increasing and Decreasing Functions.</span>
+</h4>
+<div class="para" id="cor-MVTmonotonicity-2-1">Let <span class="process-math">\(f\)</span> be continuous over the closed interval <span class="process-math">\([a,b]\)</span> and differentiable over the open interval <span class="process-math">\((a,b)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor-MVTmonotonicity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-roman ol-marker-4" id="cor-MVTmonotonicity-2-2">
+<li id="cor-MVTmonotonicity-2-2-1">
+<div class="para" id="p-derived-cor-MVTmonotonicity-2-2-1">If <span class="process-math">\(f'(x)\gt 0\)</span> for all <span class="process-math">\(x\in (a,b)\text{,}\)</span> then <span class="process-math">\(f\)</span> is an increasing function over <span class="process-math">\([a,b]\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#cor-MVTmonotonicity-2-2-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="cor-MVTmonotonicity-2-2-2">
+<div class="para" id="p-derived-cor-MVTmonotonicity-2-2-2">If <span class="process-math">\(f'(x)\lt 0\)</span> for all <span class="process-math">\(x\in (a,b)\text{,}\)</span> then <span class="process-math">\(f\)</span> is an decreasing function over <span class="process-math">\([a,b]\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#cor-MVTmonotonicity-2-2-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Corollary 4.4.19: Increasing and Decreasing Functions"><a href="#cor-MVTmonotonicity" title="Copy heading and permalink for Corollary 4.4.19: Increasing and Decreasing Functions" aria-label="Copy heading and permalink for Corollary 4.4.19: Increasing and Decreasing Functions">🔗</a></div>
+</article>
+<details id="cor-MVTmonotonicity-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="cor-MVTmonotonicity-3-1">
+<div class="para">We will prove i.; the proof of ii. is similar. Suppose <span class="process-math">\(f\)</span> is continuous and differentiable over an interval <span class="process-math">\(I\)</span> and <span class="process-math">\(f'(x)\gt 0\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span> By way of contradiction, suppose that <span class="process-math">\(f\)</span> is not an increasing function on <span class="process-math">\(I\text{.}\)</span> Then there exist <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in <span class="process-math">\(I\)</span> such that <span class="process-math">\(a\lt b\text{,}\)</span> but <span class="process-math">\(f(a)\gt f(b)\text{.}\)</span> Since <span class="process-math">\(f\)</span> is a differentiable function over <span class="process-math">\(I\text{,}\)</span> the Mean Value Theorem guarantees that there is some value <span class="process-math">\(c\in (a,b)\)</span> such that</div>
+<div class="displaymath process-math" id="cor-MVTmonotonicity-3-1-15">
+\begin{equation*}
+f'(c)=\frac{f(b)-f(a)}{b-a}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor-MVTmonotonicity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="cor-MVTmonotonicity-3-2">
+<div class="para">Now <span class="process-math">\(a\lt b\)</span> so <span class="process-math">\(b-a\gt 0\text{.}\)</span>  Because <span class="process-math">\(f(a)\gt f(b)\text{,}\)</span> it follows that <span class="process-math">\(f(b)-f(a)\lt 0\text{.}\)</span>  It follows that the quotient of <span class="process-math">\(f(b)-f(a)\)</span> and <span class="process-math">\(b-a\)</span> is negative.  So, for <span class="process-math">\(c\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="cor-MVTmonotonicity-3-2-8">
+\begin{equation*}
+f'(c)=\frac{f(b)-f(a)}{b-a}\lt 0\text{.}
+\end{equation*}
+</div>
+<div class="para">However, <span class="process-math">\(f'(x)\gt 0\)</span> for all <span class="process-math">\(x\in I\)</span> including <span class="process-math">\(c\text{.}\)</span>  This is a contradiction.  The assumption that <span class="process-math">\(f\)</span> is not an increasing function on <span class="process-math">\(I\)</span> is false.  Therefore, <span class="process-math">\(f\)</span> is increasing throughout <span class="process-math">\(I\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor-MVTmonotonicity-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.4.19.1"><a href="#cor-MVTmonotonicity-3" title="Copy heading and permalink for Proof 4.4.19.1" aria-label="Copy heading and permalink for Proof 4.4.19.1">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 4.4.3: Corollaries of the Mean Value Theorem"><a href="#subsec-meanvaluetheoremcorollaries" title="Copy heading and permalink for Subsection 4.4.3: Corollaries of the Mean Value Theorem" aria-label="Copy heading and permalink for Subsection 4.4.3: Corollaries of the Mean Value Theorem">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 4.4: The Mean Value Theorem"><a href="#sec_Ch4Sec4" title="Copy heading and permalink for Section 4.4: The Mean Value Theorem" aria-label="Copy heading and permalink for Section 4.4: The Mean Value Theorem">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec_Ch4Sec3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_Ch4Sec6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
