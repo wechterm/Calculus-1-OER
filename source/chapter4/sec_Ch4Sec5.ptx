@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_Ch4Sec5" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>The First Derivative Test</title>
+  <introduction>
+  <title> Learning Objectives</title>
+  <ul>
+
+<li>Explain how the sign of the first derivative affects the shape of a function's graph.</li>
+<li>State the first derivative test for critical points.</li>
+<li>Explain the relationship between a function and its first derivative.</li>
+<li>State the second derivative test for local extrema.</li>
+</ul>
+
+<p id="fs-id1165043276297">Earlier in this chapter we stated that if a function <m>f</m> has a local extremum at a point <m>c,</m> then <m>c</m> must be a critical point of <m>f.</m> However, a function is not guaranteed to have a local extremum at a critical point. For example, <m>f(x)=x^3</m> has a critical point at <m>x=0</m> since <m>f(x)=3x^2</m> is zero at <m>x=0,</m> but <m>f</m> does not have a local extremum at <m>x=0.</m> Using the results from the previous section, we are now able to determine whether a critical point of a function actually corresponds to a local extreme value. </p>
+</introduction>
+
+<subsection id="fs-id1165043199295">
+<title>The First Derivative Test</title>
+<p id="fs-id1165043093996">Corollary <m>3</m> of the Mean Value Theorem showed that if the derivative of a function is positive over an interval <m>I</m> then the function is increasing over <m>I.</m> On the other hand, if the derivative of the function is negative over an interval <m>I,</m> then the function is decreasing over <m>I</m> as shown in the following figure.</p>
+<figure xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" xml:id="CNX_Calc_Figure_04_05_001">
+	<image source="ch4/CNX_Calc_Figure_04_05_001.jpg" width="80%">
+	<description>"This figure is broken into four figures labeled a, b, c, and d. Figure a shows a function increasing convexly from (a, f(a)) to (b, f(b)). At two points the derivative is taken and it is noted that at both f' \gt  0. In other words, f is increasing. Figure b shows a function increasing concavely from (a, f(a)) to (b, f(b)). At two points the derivative is taken and it is noted that at both f' \gt  0. In other words, f is increasing. Figure c shows a function decreasing concavely from (a, f(a)) to (b, f(b)). At two points the derivative is taken and it is noted that at both f' \lt  0. In other words, f is decreasing. Figure d shows a function decreasing convexly from (a, f(a)) to (b, f(b)). At two points the derivative is taken and it is noted that at both f' \lt  0. In other words, f is decreasing." </description></image> 
+	<caption>The top two functions, (a) and (b), are increasing over the interval <m>(a,b).</m> At each point <m>x,</m> the derivative <m>f(x)\gt 0.</m> The bottom two functions, (c) and (d), are decreasing over the interval <m>(a,b).</m> At each point <m>x,</m> the derivative <m>f(x)\lt 0.</m>
+	</caption>
+</figure>
+
+<p id="fs-id1165042319627">A continuous function <m>f</m> has a local maximum at point <m>c</m> if and only if <m>f</m> switches from increasing to decreasing at point <m>c.</m> Similarly, <m>f</m> has a local minimum at <m>c</m> if and only if <m>f</m> switches from decreasing to increasing at <m>c.</m> If <m>f</m> is a continuous function over an interval <m>I</m> containing <m>c</m> and differentiable over <m>I,</m> except possibly at <m>c,</m> the only way <m>f</m> can switch from increasing to decreasing (or vice versa) at point <m>c</m> is if <m>f'</m> changes sign as <m>x</m> increases through <m>c.</m> If <m>f</m> is differentiable at <m>c,</m> the only way that <m>f'</m> can change sign as <m>x</m> increases through <m>c</m> is if <m>f'(c)=0.</m> Therefore, for a function <m>f</m> that is continuous over an interval <m>I</m> containing <m>c</m> and differentiable over <m>I,</m> except possibly at <m>c,</m> the only way <m>f</m> can switch from increasing to decreasing (or vice versa) is if <m>f(c)=0</m> or <m>f'(c)</m> is undefined. Consequently, to locate local extrema for a function <m>f,</m> we look for points <m>c</m> in the domain of <m>f</m> such that <m>f(c)=0</m> or <m>f'(c)</m> is undefined. Recall that such points are called critical points of <m>f.</m></p>
+<p id="fs-id1165043051419">Note that <m>f</m> need not have a local extrema at a critical point. The critical points are the only candidates for local extrema. In <xref ref="CNX_Calc_Figure_04_05_002"/>, we show that if a continuous function <m>f</m> has a local extremum, it must occur at a critical point, but a function may not have a local extremum at a critical point. We show that if <m>f</m> has a local extremum at a critical point, then the sign of <m>f'</m> switches as <m>x</m> increases through that point.</p>
+<figure xml:id="CNX_Calc_Figure_04_05_002">
+	<image source="ch4/CNX_Calc_Figure_04_05_002.jpg" width="80%">
+	<description>"A function f(x) is graphed. It starts in the second quadrant and increases to x = a, which is too sharp and hence f'(a) is undefined. In this section f' \gt  0. Then, f decreases from x = a to x = b (so f' \lt  0 here), before increasing at x = b. It is noted that f'(b) = 0. While increasing from x = b to x = c, f' \gt  0. The function has an inversion point at c, and it is marked f'(c) = 0. The function increases some more to d (so f' \gt  0), which is the global maximum. It is marked that f'(d) = 0. Then the function decreases and it is marked that f' \gt  0." 
+	</description>
+	</image>
+	<caption>The function <m>f</m> has four critical points: <m>a,b,c, \text{ and } d.</m> The function <m>f</m> has local maxima at <m>a</m> and <m>d,</m> and a local minimum at <m>b.</m> The function <m>f</m> does not have a local extremum at <m>c.</m> The sign of <m>f</m> changes at all local extrema (<m>a</m>, <m>b</m>, and <m>d</m>), but the sign of <m>f</m> does not change at point <m>c</m> 
+	</caption>
+</figure>
+<p id="fs-id1165043095850">Using <xref ref="CNX_Calc_Figure_04_05_002"/>, we summarize the main results regarding local extrema.</p>
+<ul id="fs-id1165043257290" list-type="bulleted" bullet-style="bullet">
+<li>If a continuous function <m>f</m> has a local extremum, it must occur at a critical point <m>c.</m></li>
+<li>The function has a local extremum at the critical point <m>c</m> if and only if the derivative <m>f'</m> switches sign as <m>x</m> increases through <m>c.</m></li>
+<li>Therefore, to test whether a function has a local extremum at a critical point <m>c,</m> we must determine the sign of <m>f'(x)</m> to the left and right of <m>c.</m></li>
+</ul>
+<p id="fs-id1165043262520">This result is known as the <term>first derivative test</term>.</p>
+<theorem xml:id="fs-id1165042327970"> 
+<title>First Derivative Test</title>
+<p id="fs-id1165043067802">Suppose that <m>f</m> is a continuous function over an interval <m>I</m> containing a critical point <m>c.</m> If <m>f</m> is differentiable over <m>I,</m> except possibly at point <m>c,</m> then <m>f(c)</m> satisfies one of the following descriptions:</p>
+<ol id="fs-id1165043068012" list-type="enumerated" number-style="lower-roman">
+<li>If <m>f'</m> changes sign from positive when <m>x\lt c</m> to negative when <m>x\gt c,</m> then <m>f(c)</m> is a local maximum of <m>f.</m></li>
+<li>If <m>f'</m> changes sign from negative when <m>x\lt c</m> to positive when <m>x\gt c,</m> then <m>f(c)</m> is a local minimum of <m>f.</m></li>
+<li>If <m>f</m> has the same sign for <m>x\lt c</m> and <m>x\gt c,</m> then <m>f(c)</m> is neither a local maximum nor a local minimum of <m>f.</m></li>
+</ol>
+</theorem>
+<p id="fs-id1165043354060">We can summarize the first derivative test as a strategy for locating local extrema.</p>
+<problem id="fs-id1165043183681" >
+<title>Using the First Derivative Test</title>
+<p id="fs-id1165042349982">Consider a function <m>f</m> that is continuous over an interval <m>I.</m></p>
+<ol id="fs-id1165042905754" list-type="enumerated" number-style="arabic">
+<li>Find all critical points of <m>f</m> and divide the interval <m>I</m> into smaller intervals using the critical points as endpoints.</li>
+<li>Analyze the sign of <m>f</m> in each of the subintervals. If <m>f</m> is continuous over a given subinterval (which is typically the case), then the sign of <m>f</m> in that subinterval does not change and, therefore, can be determined by choosing an arbitrary test point <m>x</m> in that subinterval and by evaluating the sign of <m>f</m> at that test point. Use the sign analysis to determine whether <m>f</m> is increasing or decreasing over that interval.</li>
+<li>Use <xref ref="fs-id1165042327970"/> and the results of step <m>2</m> to determine whether <m>f</m> has a local maximum, a local minimum, or neither at each of the critical points.</li>
+</ol>
+</problem>
+<p id="fs-id1165043066683">Now let’s look at how to use this strategy to locate all local extrema for particular functions.</p>
+<example xml:id="fs-id1165043423022">
+<title>Using the First Derivative Test to Find Local Extrema</title>
+<statement id="fs-id1165043273079">
+<p id="fs-id1165042946304">Use the first derivative test to find the location of all local extrema for <m>f(x)=x^3-3x^2-9x-1.</m> Use a graphing utility to confirm your results.</p>
+</statement>
+<solution id="fs-id1165042375856">
+<p xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1165043253635">Step 1. The derivative is <m>f'(x)=3x^2-6x-9.</m> To find the critical points, we need to find where <m>f'(x)=0.</m> Factoring the polynomial, we conclude that the critical points must satisfy</p><me>3(x^2-2x-3)=3(x-3)(x+1)=0.</me>
+<p id="fs-id1165043041063">Therefore, the critical points are <m>x=3,-1.</m> Now divide the interval <m>(-\infty,\infty)</m> into the smaller intervals <m>(-\infty,-1),(-1,3) \text{ and } (3,\infty).</m></p>
+<p xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1165043097583">Step 2. Since <m>f</m> is a continuous function, to determine the sign of <m>f'(x)</m> over each subinterval, it suffices to choose a point over each of the intervals <m>(-\infty,-1),(-1,3) \text{ and } (3,\infty)</m> and determine the sign of <m>f'</m> at each of these points. For example, let’s choose <m>x=-2,x=0, \text{ and } x=4</m> as test points.</p>
+
+<table xml:id="fs-id1165042978447" class="unnumbered" summary="This table has four rows and four columns. The first row is a header row, and it reads from left to right Interval, Test Point, Sign of f'(x) = 3(x &#x2212;3)(x + 1) at Test Point, and Conclusion. Below the header, the first column reads (&#x2212;&#x221E;, &#x2212;1), (&#x2212;1, 3), and (3, &#x221E;). The second column reads x = &#x2212;2, x = 0, and x = 4. The third column reads (+)(&#x2212;)(&#x2212;) = +, (+)(&#x2212;)(+) = &#x2212;, and (+)(+)(+) = +. The fourth column reads f is increasing, f is decreasing, and f is increasing.">
+<tabular>
+<row valign="top" header="yes" bottom="major">>
+<cell valign="top" halign ="left">Interval</cell>
+<cell valign="top" halign ="left">Test Point</cell>
+<cell valign="top" halign ="left">Sign of <m>f'(x)=3(x-3)(x+1)</m> at Test Point</cell>
+<cell valign="top" halign ="left">Conclusion</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>(-\infty,-1)</m></cell>
+<cell valign="top" halign ="left"><m>x=-2</m></cell>
+<cell valign="top" halign ="left"><m>(\text{ + })(-)(-)=+</m></cell>
+<cell valign="top" halign ="left"><m>f</m> is increasing.</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>(-1,3)</m></cell>
+<cell valign="top" halign ="left"><m>x=0</m></cell>
+<cell valign="top" halign ="left"><m>(\text{ + })(-)(\text{ + })=-</m></cell>
+<cell valign="top" halign ="left"><m>f</m> is decreasing.</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>(3,\infty)</m></cell>
+<cell valign="top" halign ="left"><m>x=4</m></cell>
+<cell valign="top" halign ="left"><m>(\text{ + })(\text{ + })(\text{ + })=+</m></cell>
+<cell valign="top" halign ="left"><m>f</m> is increasing.</cell>
+</row>
+</tabular>
+</table>
+<p xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1165042931764">Step 3. Since <m>f'</m> switches sign from positive to negative as <m>x</m> increases through <m>1,f</m> has a local maximum at <m>x=-1.</m> Since <m>f'</m> switches sign from negative to positive as <m>x</m> increases through <m>3,f</m> has a local minimum at <m>x=3.</m> These analytical results agree with the following graph.</p><figure xml:id="CNX_Calc_Figure_04_05_003">
+<image source="ch4/CNX_Calc_Figure_04_05_008.jpg" width="50%">
+<description>"The function f(x) = x3 &#x2013; 3x2 &#x2013; 9x &#x2013; 1 is graphed. It has a maximum at x = &#x2212;1 and a minimum at x = 3. The function is increasing before x = &#x2212;1, decreasing until x = 3, and then increasing after that." </description></image> <caption>The function <m>f</m> has a maximum at <m>x=-1</m> and a minimum at <m>x=3</m></caption>
+</figure>
+</solution>
+</example>
+<exercise>  <statement id="fs-id1165043074826">
+<p id="fs-id1165043392317">Use the first derivative test to locate all local extrema for <m>f(x)=-x^3+\frac{3}{2}x^2+18x.</m></p>
+</statement>
+<solution id="fs-id1165043385478">
+<p id="fs-id1165043281485"><m>f</m> has a local minimum at <m>-2</m> and a local maximum at <m>3.</m></p>
+</solution>
+<hint>
+
+<p id="fs-id1165043429519">Find all critical points of <m>f</m> and determine the signs of <m>f'(x)</m> over particular intervals determined by the critical points.</p>
+</hint></exercise>
+<example xml:id="fs-id1165043312782">
+<title>Using the First Derivative Test</title>-> <statement id="fs-id1165042479991">
+<p id="fs-id1165042319589">Use the first derivative test to find the location of all local extrema for <m>f(x)=5x^{1/3}-x^{5/3}.</m> Use a graphing utility to confirm your results.</p>
+</statement>
+<solution id="fs-id1165042369651">
+<p xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1165043109175">Step 1. The derivative is</p><me>f'(x)=\frac{5}{3}x^{-2/3}-\frac{5}{3}x^{2/3}=\frac{5}{3x^{2/3}}-\frac{5x^{2/3}}{3}=\frac{5-5x^{4/3}}{3x^{2/3}}=\frac{5(1-x^{4/3})}{3x^{2/3}}.</me>
+<p id="fs-id1165042514176">The derivative <m>f'(x)=0</m> when <m>1-x^{4/3}=0.</m> Therefore, <m>f'(x)=0</m> at <m>x=\pm1.</m> The derivative <m>f'(x)</m> is undefined at <m>x=0.</m> Therefore, we have three critical points: <m>x=0,</m> <m>x=1,</m> and <m>x=-1.</m> Consequently, divide the interval <m>(-\infty,\infty)</m> into the smaller intervals <m>(-\infty,-1),(-1,0),(0,1),</m> and <m>(1,\infty).</m></p>
+<p id="fs-id1165042354821">Step 2: Since <m>f'</m> is continuous over each subinterval, it suffices to choose a test point <m>x</m> in each of the intervals from step <m>1</m> and determine the sign of <m>f'</m> at each of these points. The points <m>x=-2,x=-\frac{1}{2},x=\frac{1}{2}, \text{ and } x=2</m> are test points for these intervals.</p>
+<table xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1165043032734" class="unnumbered" summary="This table has five rows and four columns. The first row is a header row, and it reads from left to right Interval, Test Point, Sign of f'(x) = 5(1 &#x2013; x4/3)/(3x2/3) at Test Point, and Conclusion. Below the header, the first column reads (&#x2212;&#x221E;, &#x2212;1), (&#x2212;1, 0), (0, 1), and (1, &#x221E;). The second column reads x = &#x2212;2, x = &#x2212;1/2, x = 1/2, and x = 2. The third column reads (+)(&#x2212;)/(+) = &#x2212;, (+)(+)/(+) = +, (+)(+)/(+) = +, and (+)(&#x2212;)/(+) = &#x2212;. The fourth column reads f is decreasing, f is increasing, f is increasing, and f is decreasing."><label/>
+<tabular>
+<row valign="top" header="yes" bottom="major">>
+<cell valign="top" halign ="left">Interval</cell>
+<cell valign="top" halign ="left">Test Point</cell>
+<cell valign="top" halign ="left">Sign of <m>f'(x)=\frac{5(1-x^{4/3})}{3x^{2/3}}</m> at Test Point</cell>
+<cell valign="top" halign ="left">Conclusion</cell>
+</row>
+
+
+<row valign="top">
+<cell valign="top" halign ="left"><m>(-\infty,-1)</m></cell>
+<cell valign="top" halign ="left"><m>x=-2</m></cell>
+<cell valign="top" halign ="center"><m>\frac{(\text{ + })}{(-)+}=-</m></cell>
+<cell valign="top" halign ="left"><m>f</m> is decreasing.</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>(-1,0)</m></cell>
+<cell valign="top" halign ="left"><m>x=-\frac{1}{2}</m></cell>
+<cell valign="top" halign ="center"><m>\frac{(\text{ + })}{(\text{ + })+}=+</m></cell>
+<cell valign="top" halign ="left"><m>f</m> is increasing.</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>(0,1)</m></cell>
+<cell valign="top" halign ="left"><m>x=\frac{1}{2}</m></cell>
+<cell valign="top" halign ="center"><m>\frac{(\text{ + })}{(\text{ + })+}=+</m></cell>
+<cell valign="top" halign ="left"><m>f</m> is increasing.</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>(1,\infty)</m></cell>
+<cell valign="top" halign ="left"><m>x=2</m></cell>
+<cell valign="top" halign ="center"><m>\frac{(\text{ + })}{(-)+}=-</m></cell>
+<cell valign="top" halign ="left"><m>f</m> is decreasing.</cell>
+</row>
+</tabular>
+</table><p id="fs-id1165043062405">Step 3: Since <m>f</m> is decreasing over the interval <m>(-\infty,-1)</m> and increasing over the interval <m>(-1,0),</m> <m>f</m> has a local minimum at <m>x=-1.</m> Since <m>f</m> is increasing over the interval <m>(-1,0)</m> and the interval <m>(0,1),</m> <m>f</m> does not have a local extremum at <m>x=0.</m> Since <m>f</m> is increasing over the interval <m>(0,1)</m> and decreasing over the interval <m>(1,\infty),f</m> has a local maximum at <m>x=1.</m> The analytical results agree with the following graph.</p>
+<figure xml:id="CNX_Calc_Figure_04_05_004">
+<image source="ch4/CNX_Calc_Figure_04_05_009.jpg" width="50%">
+<description>"The function f(x) = 5x1/3 &#x2013; x5/3 is graphed. It decreases to its local minimum at x = &#x2212;1, increases to x = 1, and then decreases after that."> </description></image> <caption>The function <m>f</m> has a local minimum at <m>x=-1</m> and a local maximum at <m>x=1.</m></caption>
+</figure>
+</solution>
+</example>
+<exercise> <statement id="fs-id1165043119394">
+<p id="fs-id1165043119396">Use the first derivative test to find all local extrema for <m>f(x)=\sqrt[3]{x-1}.</m></p>
+</statement>
+<solution id="fs-id1165043305742">
+<p id="fs-id1165042982077"><m>f</m> has no local extrema because <m>f'</m> does not change sign at <m>x=1.</m></p>
+</solution>
+<hint>
+<p id="fs-id1165042608705">The only critical point of <m>f</m> is <m>x=1.</m></p>
+</hint>
+</exercise>
+
+<example>
+	<title>Using the First Derivative Test With Exponential Functions</title>
+	<statement>
+		<p>Find the critical points of <md>f(x)=(x^2-3)e^x</md>.  Identify the open intervals on which <m>f</m> is increasing and those on which it is decreasing. Find the function's local and absolute extreme values.
+		</p>
+	</statement>
+	<solution>
+		<p>The function <m>f</m> is continuous and differentiable for all real numbers, so the critical points occurs only at the zeros of <m>f'</m>.  
+		</p>
+		<p>Using the Product Rule, we find the derivative.
+			<md>
+				<mrow>f'(x)\amp (x^2-3)\cdot \frac{d}{dx}e^x+\frac{d}{dx}(x^2-3)\cdot e^x</mrow>
+				<mrow>\amp =(x^2-3)e^x+(2x)e^x</mrow>
+				<mrow>\amp (x^2+2x-3)e^x</mrow>
+			</md>
+		Since <m>e^x</m> is never zero, the first derivative is zero if and only if 
+			<md>
+				<mrow>x^2+2x-3\amp =0</mrow>
+				<mrow>(x+3)(x-1)\amp =0</mrow>
+			</md>.
+		The zeros <m>x=-3</m> and <m>x=1</m> partition the <m>x</m>-axis into the open intervals as follows: <m>(-\infty,-3),\,(-3,1),\,(1,\infty)</m>.  We make a table to organize our work as before.
+		</p>
+		<table xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1165043032734" class="unnumbered" summary=""><label/>
+		<tabular>
+		<row valign="top" header="yes" bottom="major">
+		<cell valign="top" halign ="left">Interval</cell>
+		<cell valign="top" halign ="left">Test Point</cell>
+		<cell valign="top" halign ="left">Sign of <m>f'(x)=(x^2+2x-3)e^x</m> at Test Point</cell>
+		<cell valign="top" halign ="left">Conclusion</cell>
+		</row>
+		
+		<row valign="top">
+		<cell valign="top" halign ="left"><m>(-\infty,-3)</m></cell>
+		<cell valign="top" halign ="left"><m>x=-4</m></cell>
+		<cell valign="top" halign ="center"><m>(16-8-3)e^{-4}\gt 0</m></cell>
+		<cell valign="top" halign ="left"><m>f</m> is increasing.</cell>
+		</row>
+		
+		<row valign="top">
+		<cell valign="top" halign ="left"><m>(-3,1)</m></cell>
+		<cell valign="top" halign ="left"><m>x=0</m></cell>
+		<cell valign="top" halign ="center"><m>(0+0-3)e^{0}\lt 0</m></cell>
+		<cell valign="top" halign ="left"><m>f</m> is decreasing.</cell>
+		</row>
+		
+		<row valign="top">
+		<cell valign="top" halign ="left"><m>(1,\infty)</m></cell>
+		<cell valign="top" halign ="left"><m>x=4</m></cell>
+		<cell valign="top" halign ="center"><m>(16+8-3)e^{4}\gt 0</m></cell>
+		<cell valign="top" halign ="left"><m>f</m> is increasing.</cell>
+		</row>
+		
+
+
+		</tabular>
+		</table>
+		
+		<p>The function <m>f</m> is increasing on <m>(-\infty,-3)\cup(1,\infty)</m> and decreasing on <m>(-3,1)</m>.  Thus there will be a local maximum at <m>x=-3</m> (with <m>y</m>-value about <m>0.299</m>) and a local minimum when <m>x=1</m> (with <m>y</m>-value about <m>-5.437</m>).  The local minimum value is also an absolute minimum because <m>f(x)\gt 0</m> for <m>|x|\gt \sqrt{3}</m>.  There is no absolute maximum. <xref ref="fig-firstderivativeexponential"/> shows the graph.
+		</p>
+		
+		<figure xml:id="fig-firstderivativeexponential">
+		
+		</figure>
+	</solution>
+</example>
+</subsection>
+
+</section>
