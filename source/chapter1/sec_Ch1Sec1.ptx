@@ -27,9 +27,9 @@
     </p>
 
     <definition>
-      A <term>function</term> <m>f</m> consists of a set of inputs, a set of outputs, and a rule for assigning each input to exactly one
+      <p>A <term>function</term> <m>f</m> consists of a set of inputs, a set of outputs, and a rule for assigning each input to exactly one
       output. The set of inputs is called the <term>domain</term> of the function. The set of outputs is called the <term> range </term>
-      of the function.
+      of the function.</p>
     </definition>
 
 

@@ -1,7 +1,708 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="sec_Ch4Sec6">
-  <title>Concavity and Curve Sketching (PLACEHOLDER)</title>
+  <title>Concavity and Curve Sketching</title>
+  
+ <introduction>
+	<title>Learning Objectives</title>
+<ol>
+	<li> Use concavity and inflection points to explain how the sign of the second derivative affects the shape of a function’s graph.</li>
+	<li>Explain the concavity test for a function over an open interval.</li>
+	<li>Explain the relationship between a function and its first and second derivatives.</li>
+	<li>State the second derivative test for local extrema.</li>
+</ol>
+<p>In this section, we also see how the second derivative provides information about the shape of a graph by describing whether the graph of a function curves upward or curves downward.</p>
+</introduction>
   
   
+<subsection id="fs-id1165043423622">
+<title>Concavity and Points of Inflection</title>
+<p id="fs-id1165042517819">We now know how to determine where a function is increasing or decreasing. However, there is another issue to consider regarding the shape of the graph of a function. If the graph curves, does it curve upward or curve downward? This notion is called the <term>concavity</term> of the function.</p>
+<p id="fs-id1165043256949"><xref ref="CNX_Calc_Figure_04_05_005"/>(a) shows a function <m>f</m> with a graph that curves upward. As <m>x</m> increases, the slope of the tangent line increases. Thus, since the derivative increases as <m>x</m> increases, <m>f'</m> is an increasing function. We say this function <m>f</m> is concave up. <xref ref="CNX_Calc_Figure_04_05_005"/>(b) shows a function <m>f</m> that curves downward. As <m>x</m> increases, the slope of the tangent line decreases. Since the derivative decreases as <m>x</m> increases, <m>f'</m> is a decreasing function. We say this function <m>f</m> is concave down.</p>
+<definition> 
+<p id="fs-id1165042559135">Let <m>f</m> be a function that is differentiable over an open interval <m>I.</m> If <m>f'</m> is increasing over <m>I,</m> we say <m>f</m> is <term>concave up</term> over <m>I.</m> If <m>f'</m> is decreasing over <m>I,</m> we say <m>f</m> is <term>concave down</term> over <m>I.</m></p>
+</definition>
+<figure xml:id="CNX_Calc_Figure_04_05_005">
+<image source="ch4/CNX_Calc_Figure_04_05_010.jpg" width="70%">
+<description>"This figure is broken into four figures labeled a, b, c, and d. Figure a shows a function increasing convexly from (a, f(a)) to (b, f(b)). At two points the derivative is taken and both are increasing, but the one taken further to the right is increasing more. It is noted that f' is increasing and f is concave up. Figure b shows a function increasing concavely from (a, f(a)) to (b, f(b)). At two points the derivative is taken and both are increasing, but the one taken further to the right is increasing less. It is noted that f' is decreasing and f is concave down. Figure c shows a function decreasing concavely from (a, f(a)) to (b, f(b)). At two points the derivative is taken and both are decreasing, but the one taken further to the right is decreasing less. It is noted that f' is increasing and f is concave up. Figure d shows a function decreasing convexly from (a, f(a)) to (b, f(b)). At two points the derivative is taken and both are decreasing, but the one taken further to the right is decreasing more. It is noted that f' is decreasing and f is concave down."</description>
+</image> 
+	<caption>(a), (c) Since <m>f'</m> is increasing over the interval <m>(a,b),</m> we say <m>f</m> is concave up over <m>(a,b).</m> (b), (d) Since <m>f'</m> is decreasing over the interval <m>(a,b),</m> we say <m>f</m> is concave down over <m>(a,b).</m>
+	</caption>
+</figure>
+<p id="fs-id1165042343198">In general, without having the graph of a function <m>f,</m> how can we determine its concavity? By definition, a function <m>f</m> is concave up if <m>f'</m> is increasing. From Corollary <m>3,</m> we know that if <m>f'</m> is a differentiable function, then <m>f'</m> is increasing if its derivative <m>f''(x)\gt 0.</m> Therefore, a function <m>f</m> that is twice differentiable is concave up when <m>f''(x)\gt 0.</m> Similarly, a function <m>f</m> is concave down if <m>f'</m> is decreasing. We know that a differentiable function <m>f'</m> is decreasing if its derivative <m>f''(x)\lt 0.</m> Therefore, a twice-differentiable function <m>f</m> is concave down when <m>f''(x)\lt 0.</m> Applying this logic is known as the <term>concavity test</term>.</p>
+<theorem> <!-- Change next end note to end theorem -->
+<title>Test for Concavity</title>
+<p id="fs-id1165043088519">Let <m>f</m> be a function that is twice differentiable over an interval <m>I.</m></p>
+<ol id="fs-id1165042925616" list-type="enumerated" number-style="lower-roman">
+<li>If <m>f''(x)\gt 0</m> for all <m>x∈I,</m> then <m>f</m> is concave up over <m>I.</m></li>
+<li>If <m>f''(x)\lt 0</m> for all <m>x∈I,</m> then <m>f</m> is concave down over <m>I.</m></li>
+</ol>
+</theorem>
+<p id="fs-id1165043195362">We conclude that we can determine the concavity of a function <m>f</m> by looking at the second derivative of <m>f.</m> In addition, we observe that a function <m>f</m> can switch concavity (<xref ref="CNX_Calc_Figure_04_05_006"/>). However, a continuous function can switch concavity only at a point <m>x</m> if <m>f''(x)=0</m> or <m>f''(x)</m> is undefined. Consequently, to determine the intervals where a function <m>f</m> is concave up and concave down, we look for those values of <m>x</m> where <m>f''(x)=0</m> or <m>f''(x)</m> is undefined. When we have determined these points, we divide the domain of <m>f</m> into smaller intervals and determine the sign of <m>f''</m> over each of these smaller intervals. If <m>f''</m> changes sign as we pass through a point <m>x,</m> then <m>f</m> changes concavity. It is important to remember that a function <m>f</m> may not change concavity at a point <m>x</m> even if <m>f''(x)=0</m> or <m>f''(x)</m> is undefined. If, however, <m>f</m> does change concavity at a point <m>a</m> and <m>f</m> is continuous at <m>a,</m> we say the point <m>(a,f(a))</m> is an inflection point of <m>f.</m></p>
+<definition>
+<p id="fs-id1165043120992">If <m>f</m> is continuous at <m>a</m> and <m>f</m> changes concavity at <m>a,</m> the point <m>(a,f(a))</m> is an <term>inflection point</term> of <m>f.</m></p>
+</definition>
+
+<figure xml:id="CNX_Calc_Figure_04_05_006">
+<image source="ch4/CNX_Calc_Figure_04_05_004.jpg" width="70%">
+<description>"A sinusoidal function is shown that has been shifted into the first quadrant. The function starts decreasing, so f' \lt  0 and f'' \gt  0. The function reaches the local minimum and starts increasing, so f' \gt  0 and f'' \gt  0. It is noted that the slope is increasing for these two intervals. The function then reaches an inflection point (a, f(a)) and from here the slop is decreasing even though the function continues to increase, so f' \gt  0 and f'' \lt  0. The function reaches the maximum and then starts decreasing, so f' \lt  0 and f'' \lt  0." </description></image> <caption>Since <m>f''(x)\gt 0</m> for <m>x\lt a,</m> the function <m>f</m> is concave up over the interval <m>(-\infty,a).</m> Since <m>f''(x)\lt 0</m> for <m>x\gt a,</m> the function <m>f</m> is concave down over the interval <m>(a,\infty).</m> The point <m>(a,f(a))</m> is an inflection point of <m>f.</m></caption>
+</figure>
+
+<example xml:id="fs-id1165042558993">
+<title>Testing for Concavity</title>
+ <statement id="fs-id1165042558998">
+<p id="fs-id1165043197105">For the function <m>f(x)=x^3-6x^2+9x+30,</m> determine all intervals where <m>f</m> is concave up and all intervals where <m>f</m> is concave down. List all inflection points for <m>f.</m> Use a graphing utility to confirm your results.</p>
+</statement>
+<solution id="fs-id1165043306697">
+<p id="fs-id1165043306699">To determine concavity, we need to find the second derivative <m>f''(x).</m> The first derivative is <m>f(x)=3x^2-12x+9,</m> so the second derivative is <m>f''(x)=6x-12.</m> If the function changes concavity, it occurs either when <m>f''(x)=0</m> or <m>f''(x)</m> is undefined. Since <m>f''</m> is defined for all real numbers <m>x,</m> we need only find where <m>f''(x)=0.</m> Solving the equation <m>6x-12=0,</m> we see that <m>x=2</m> is the only place where <m>f</m> could change concavity. We now test points over the intervals <m>(-\infty,2)</m> and <m>(2,\infty)</m> to determine the concavity of <m>f.</m> The points <m>x=0</m> and <m>x=3</m> are test points for these intervals.</p>
+<table xml:id="fs-id1165042960171" class="unnumbered" summary="This table has three rows and four columns. The first row is a header row, and it reads from left to right Interval, Test Point, Sign of f''(x) = 6x &#x2013; 12 at Test Point, and Conclusion. Below the header, the first column reads (&#x2212;&#x221E;, 2) and (2, &#x221E;). The second column reads x = 0 and x = 3. The third column reads &#x2212; and +. The fourth column reads f is concave down and f is concave up.">
+
+<tabular>
+<row valign="top" header="yes" bottom="major">
+<cell valign="top" halign ="left">Interval</cell>
+<cell valign="top" halign ="left">Test Point</cell>
+<cell valign="top" halign ="left">Sign of <m>f''(x)=6x-12</m> at Test Point</cell>
+<cell valign="top" halign ="left">Conclusion</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>(-\infty,2)</m></cell>
+<cell valign="top" halign ="left"><m>x=0</m></cell>
+<cell valign="top" halign ="center"><m>-</m></cell>
+<cell valign="top" halign ="left"><m>f</m> is concave down</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>(2,\infty)</m></cell>
+<cell valign="top" halign ="left"><m>x=3</m></cell>
+<cell valign="top" halign ="center"><m>+</m></cell>
+<cell valign="top" halign ="left"><m>f</m> is concave up.</cell>
+</row>
+</tabular>
+</table>
+<p id="fs-id1165042329993">We conclude that <m>f</m> is concave down over the interval <m>(-\infty,2)</m> and concave up over the interval <m>(2,\infty).</m> Since <m>f</m> changes concavity at <m>x=2,</m> the point <m>(2,f(2))=(2,32)</m> is an inflection point. <xref ref="CNX_Calc_Figure_04_05_007"/> confirms the analytical results.</p>
+<figure xml:id="CNX_Calc_Figure_04_05_007">
+<image source="ch4/CNX_Calc_Figure_04_05_011.jpg" width="50%">
+<description>"The function f(x) = x3 &#x2013; 6x2 + 9x + 30 is graphed. The inflection point (2, 32) is marked, and it is roughly equidistant from the two local extrema." </description></image> <caption>The given function has a point of inflection at <m>(2,32)</m> where the graph changes concavity.</caption>
+</figure>
+</solution>
+</example>
+<exercise> <statement id="fs-id1165042946144">
+<p id="fs-id1165042946146">For <m>f(x)=-x^3+\frac{3}{2}x^2+18x,</m> find all intervals where <m>f</m> is concave up and all intervals where <m>f</m> is concave down.</p>
+</statement>
+<solution id="fs-id1165042369707">
+<p id="fs-id1165042369709"><m>f</m> is concave up over the interval <m>(-\infty,\frac{1}{2})</m> and concave down over the interval <m>(\frac{1}{2},\infty)</m></p>
+</solution>
+<hint>
+<p id="fs-id1165043199180">Find where <m>f''(x)=0.</m></p>
+</hint></exercise>
+<p id="fs-id1165043163933">We now summarize, in <xref ref="fs-id1165043353366"/>, the information that the first and second derivatives of a function <m>f</m> provide about the graph of <m>f,</m> and illustrate this information in <xref ref="CNX_Calc_Figure_04_05_008"/>.</p>
+<table xml:id="fs-id1165043353366" summary="This table has five rows and four columns. The first row is a header row, and it reads from left to right Sign of f', Sign of f'', Is f increasing or decreasing?, and Concavity. Below the header, the first column reads Positive, Positive, Negative, and Negative. The second column reads Positive, Negative, Positive, and Negative. The third column reads Increasing, Increasing, Decreasing, and Decreasing. The fourth column reads Concave up, Concave down, Concave up, and Concave down.">
+<title>What Derivatives Tell Us about Graphs</title>
+<tabular>
+<row valign="top" header="yes" bottom="major">
+<cell valign="top" halign ="left">Sign of <m>f'</m></cell>
+<cell valign="top" halign ="left">Sign of <m>f''</m></cell>
+<cell valign="top" halign ="left">Is <m>f</m> increasing or decreasing?</cell>
+<cell valign="top" halign ="left">Concavity</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left">Positive</cell>
+<cell valign="top" halign ="left">Positive</cell>
+<cell valign="top" halign ="left">Increasing</cell>
+<cell valign="top" halign ="left">Concave up</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left">Positive</cell>
+<cell valign="top" halign ="left">Negative</cell>
+<cell valign="top" halign ="left">Increasing</cell>
+<cell valign="top" halign ="left">Concave down</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left">Negative</cell>
+<cell valign="top" halign ="left">Positive</cell>
+<cell valign="top" halign ="left">Decreasing</cell>
+<cell valign="top" halign ="left">Concave up</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left">Negative</cell>
+<cell valign="top" halign ="left">Negative</cell>
+<cell valign="top" halign ="left">Decreasing</cell>
+<cell valign="top" halign ="left">Concave down</cell>
+</row>
+</tabular>
+</table>
+<figure xml:id="CNX_Calc_Figure_04_05_008">
+<image source="ch4/CNX_Calc_Figure_04_05_005.jpg" width="50%">
+<description>"A function is graphed in the first quadrant. It is broken up into four sections, with the breaks coming at the local minimum, inflection point, and local maximum, respectively. The first section is decreasing and concave up; here, f' \lt  0 and f'' \gt  0. The second section is increasing and concave up; here, f' \gt  0 and f'' \gt  0. The third section is increasing and concave down; here, f' \gt  0 and f'' \lt  0. The fourth section is increasing and concave down; here, f' \lt  0 and f'' \lt  0."  </description></image> 
+<caption>Consider a twice-differentiable function <m>f</m> over an open interval <m>I.</m> If <m>f'(x)\gt 0</m> for all <m>x∈I,</m> the function is increasing over <m>I.</m> If <m>f'(x)\lt 0</m> for all <m>x∈I,</m> the function is decreasing over <m>I.</m> If <m>f''(x)\gt 0</m> for all <m>x∈I,</m> the function is concave up. If <m>f''(x)\lt 0</m> for all <m>x∈I,</m> the function is concave down on <m>I.</m>
+</caption>
+</figure>
+</subsection>
+
+<subsection id="fs-id1165042355740">
+<title>The Second Derivative Test For Local Extrema</title>
+<p id="fs-id1165042621320">The first derivative test provides an analytical tool for finding local extrema, but the second derivative can also be used to locate extreme values. Using the second derivative can sometimes be a simpler method than using the first derivative.</p>
+<p id="fs-id1165042621325">We know that if a continuous function has a local extrema, it must occur at a critical point. However, a function need not have a local extrema at a critical point. Here we examine how the <term>second derivative test for local extrema</term> can be used to determine whether a function has a local extremum at a critical point. Let <m>f</m> be a twice-differentiable function such that <m>f'(a)=0</m> and <m>f''</m> is continuous over an open interval <m>I</m> containing <m>a.</m> Suppose <m>f''(a)\lt 0.</m> Since <m>f''</m> is continuous over <m>I,</m> <m>f''(x)\lt 0</m> for all <m>x∈I</m> (<xref ref="CNX_Calc_Figure_04_05_009"/>). Then, by Corollary <m>3,</m> <m>f'</m> is a decreasing function over <m>I.</m> Since <m>f'(a)=0,</m> we conclude that for all <m>x∈I,f'(x)\gt 0</m> if <m>x\lt a</m> and <m>f'(x)\lt 0</m> if <m>x\gt a.</m> Therefore, by the first derivative test, <m>f</m> has a local maximum at <m>x=a.</m> On the other hand, suppose there exists a point <m>b</m> such that <m>f'(b)=0</m> but <m>f''(b)\gt 0.</m> Since <m>f''</m> is continuous over an open interval <m>I</m> containing <m>b,</m> then <m>f''(x)\gt 0</m> for all <m>x∈I</m> (<xref ref="CNX_Calc_Figure_04_05_009"/>). Then, by Corollary <m>3,f'</m> is an increasing function over <m>I.</m> Since <m>f'(b)=0,</m> we conclude that for all <m>x∈I,</m> <m>f'(x)\lt 0</m> if <m>x\lt b</m> and <m>f'(x)\gt 0</m> if <m>x\gt b.</m> Therefore, by the first derivative test, <m>f</m> has a local minimum at <m>x=b.</m></p>
+<figure xml:id="CNX_Calc_Figure_04_05_009">
+<image source="ch4/CNX_Calc_Figure_04_05_006.jpg" width="50%">
+<description>"A function f(x) is graphed in the first quadrant with a and b marked on the x-axis. The function is vaguely sinusoidal, increasing first to x = a, then decreasing to x = b, and increasing again. At (a, f(a)), the tangent is marked, and it is noted that f'(a) = 0 and f''(a) \lt  0. At (b, f(b)), the tangent is marked, and it is noted f'(b) = 0 and f''(b) \gt  0." </description></image> 
+<caption>Consider a twice-differentiable function <m>f</m> such that <m>f''</m> is continuous. Since <m>f'(a)=0</m> and <m>f''(a)\lt 0,</m> there is an interval <m>I</m> containing <m>a</m> such that for all <m>x</m> in <m>I,</m> <m>f</m> is increasing if <m>x\lt a</m> and <m>f</m> is decreasing if <m>x\gt a.</m> As a result, <m>f</m> has a local maximum at <m>x=a.</m> Since <m>f'(b)=0</m> and <m>f''(b)\gt 0,</m> there is an interval <m>I</m> containing <m>b</m> such that for all <m>x</m> in <m>I,</m> <m>f</m> is decreasing if <m>x\lt b</m> and <m>f</m> is increasing if <m>x\gt b.</m> As a result, <m>f</m> has a local minimum at <m>x=b.</m>
+</caption>
+</figure>
+<theorem> 
+<title>The Second Derivative Test for Local Extrema</title>
+<p id="fs-id1165043254229">Suppose <m>f'(c)=0,f''</m> is continuous over an interval containing <m>c.</m></p>
+<ol id="fs-id1165042319133" list-type="enumerated" number-style="lower-roman">
+<li>If <m>f''(c)\gt 0,</m> then <m>f</m> has a local minimum at <m>c.</m></li>
+<li>If <m>f''(c)\lt 0,</m> then <m>f</m> has a local maximum at <m>c.</m></li>
+<li>If <m>f''(c)=0,</m> then the test is inconclusive.</li>
+</ol>
+</theorem>
+<p id="fs-id1165043180196">Note that for case iii. when <m>f''(c)=0,</m> then <m>f</m> may have a local maximum, local minimum, or neither at <m>c.</m> For example, the functions <m>f(x)=x^3,</m> <m>f(x)=x^4,</m> and <m>f(x)=-x^4</m> all have critical points at <m>x=0.</m> In each case, the second derivative is zero at <m>x=0.</m> However, the function <m>f(x)=x^4</m> has a local minimum at <m>x=0</m> whereas the function <m>f(x)=-x^4</m> has a local maximum at <m>x,</m> and the function <m>f(x)=x^3</m> does not have a local extremum at <m>x=0.</m></p>
+<p id="fs-id1165043425387">Let’s now look at how to use the second derivative test for local extrema to determine whether <m>f</m> has a local maximum or local minimum at a critical point <m>c</m> where <m>f'(c)=0.</m></p>
+<example xml:id="fs-id1165042710827">
+<title>Using the Second Derivative Test For Local Extrema</title>
+<statement id="fs-id1165042710831">
+<p id="fs-id1165042631706">Use the second derivative to find the location of all local extrema for <m>f(x)=x^5-5x^3.</m></p>
+</statement>
+<solution id="fs-id1165042320873">
+<p id="fs-id1165042320876">To apply the second derivative test for local extrema, we first need to find critical points <m>c</m> where <m>f'(c)=0.</m> The derivative is <m>f'(x)=5x^4-15x^2.</m> Therefore, <m>f'(x)=5x^4-15x^2=5x^2(x^2-3)=0</m> when <m>x=0,\pm\sqrt{3}.</m></p>
+<p id="fs-id1165043431475">To determine whether <m>f</m> has a local extrema at any of these points, we need to evaluate the sign of <m>f''</m> at these points. The second derivative is</p>
+<me>f''(x)=20x^3-30x=10x(2x^2-3).</me>
+<p id="fs-id1165042373916">In the following table, we evaluate the second derivative at each of the critical points and use the second derivative test for local extrema to determine whether <m>f</m> has a local maximum or local minimum at any of these points.</p>
+<table xml:id="fs-id1165042705774" class="unnumbered" summary="This table has four rows and three columns. The first row is a header row, and it reads x, f''(x), and Conclusion. After the header, the first column reads negative square root of 3, 0, and square root of 3. The second column reads negative 30 times the square root of 3, 0, and 30 times the square root of 3. The third column reads Local maxiumum, Second derivative test is inconclusive, and Local minimum.">
+<tabular>
+<row valign="top" header="yes">
+<cell valign="top" halign ="left"><m>x</m></cell>
+<cell valign="top" halign ="left"><m>f''(x)</m></cell>
+<cell valign="top" halign ="left">Conclusion</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>-\sqrt{3}</m></cell>
+<cell valign="top" halign ="left"><m>-30\sqrt{3}</m></cell>
+<cell valign="top" halign ="left">Local maximum</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>0</m></cell>
+<cell valign="top" halign ="left"><m>0</m></cell>
+<cell valign="top" halign ="left">Second derivative test is inconclusive</cell>
+</row>
+<row valign="top">
+<cell valign="top" halign ="left"><m>\sqrt{3}</m></cell>
+<cell valign="top" halign ="left"><m>30\sqrt{3}</m></cell>
+<cell valign="top" halign ="left">Local minimum</cell>
+</row>
+</tabular>
+</table>
+<p id="fs-id1165042476082">By the second derivative test for local extrema, we conclude that <m>f</m> has a local maximum at <m>x=-\sqrt{3}</m> and <m>f</m> has a local minimum at <m>x=\sqrt{3}.</m> The second derivative test for local extrema is inconclusive at <m>x=0.</m> To determine whether <m>f</m> has a local extrema at <m>x=0,</m> we apply the first derivative test. To evaluate the sign of <m>f'(x)=5x^2(x^2-3)</m> for <m>x∈(-\sqrt{3},0)</m> and <m>x∈(0,\sqrt{3}),</m> let <m>x=-1</m> and <m>x=1</m> be the two test points. Since <m>f'(-1)\lt 0</m> and <m>f'(1)\lt 0,</m> we conclude that <m>f</m> is decreasing on both intervals and, therefore, <m>f</m> does not have a local extrema at <m>x=0</m> as shown in the following graph.</p>
+<figure xml:id="CNX_Calc_Figure_04_05_010">
+<image source="ch4/CNX_Calc_Figure_04_05_007.jpg" width="50%">
+<description>"The function f(x) = x5 &#x2013; 5x3 is graphed. The function increases to (negative square root of 3, 10), then decreases to an inflection point at 0, continues decreasing to (square root of 3, &#x2212;10), and then increases." </description></image> <caption>The function <m>f</m> has a local maximum at <m>x=-\sqrt{3}</m> and a local minimum at <m>x=\sqrt{3}</m></caption>
+</figure>
+</solution>
+</example>
+<exercise> <statement id="fs-id1165042373298">
+<p id="fs-id1165042373300">Consider the function <m>f(x)=x^3-(\frac{3}{2})x^2-18x.</m> The points <m>c=3,-2</m> satisfy <m>f'(c)=0.</m> Use the second derivative test for local extrema to determine whether <m>f</m> has a local maximum or local minimum at those points.</p>
+</statement>
+<solution id="fs-id1165043173988">
+<p id="fs-id1165043173990"><m>f</m> has a local maximum at <m>-2</m> and a local minimum at <m>3.</m></p>
+</solution>
+<hint>
+<p id="fs-id1165043395285"><m>f''(x)=6x-3</m></p>
+</hint></exercise>
+<!-- <p id="fs-id1165042318777">We have now developed the tools we need to determine where a function is increasing and decreasing, as well as acquired an understanding of the basic shape of the graph. In the next section we discuss what happens to a function as <m>x\to\pm\infty.</m> At that point, we have enough tools to provide accurate graphs of a large variety of functions.</p> -->
+</subsection>
+
+<subsection>
+	<title>Curve Sketching</title>
+	<p>We have been learning how we can understand the behavior of a function based on its first and second derivatives.
+    While we have been treating the properties of a function separately
+    (increasing and decreasing, concave up and concave down, etc.),
+    we combine them here to produce an accurate graph of the function without plotting lots of extraneous points.</p>
+	
+	<problem>
+	<title>Graphing a Function <m>y=f(x)</m></title>
+		<ol>
+			<li>    Identify the domain of <m>f</m> and any symmetries of the function.</li>
+			<li>    Identify any vertical asymptotes and the end behavior of the graph. </li>
+			<li>    Find the derivatives <m>f’</m> and <m>f’’</m>.</li>
+			<li>    Find the critical points and classify any local extrema. </li>
+			<li>    Determine where the curve is increasing and where it is decreasing. (Remember to check each side of any vertical asymptotes.) </li>
+			<li>    Find any inflection points, and determine where the curve is concave up and where it is concave down. (Remember to check each side of any vertical asymptotes.) </li>
+			<li>    Plot the <m>x</m>- and <m>y</m>- intercepts and any local extrema and inflection points found above. Indicate the location of any asymptotes, and sketch the curve. </li>
+		</ol>
+
+	</problem>
+	
+	<example xml:id="APPsketchB"><title>Sketch <m>f(x)=x^4-4x^3</m></title>
+<p>
+<ol marker="1">
+<li><p> Reading from <m>f(x)</m>:
+<ul>
+<li> The function is a polynomial so it is defined everywhere.
+</li>
+<li> Since <m>f(-x) = x^4+4x^3 \neq \pm f(x)</m>, it is not even or odd. Nor is it periodic.
+</li>
+<li> The <m>y</m>-intercept is <m>y=f(0)=0</m>, while the <m>x</m>-intercepts are given by the solution
+of
+<md>
+<mrow>
+  f(x)=x^4-4x^3 &amp;= 0
+</mrow><mrow>
+  x^3(x-4)&amp;=0
+</mrow>
+</md>
+Hence the <m>x</m>-intercepts are <m>0,4</m>.
+</li>
+<li> Since <m>f</m> is a polynomial it does not have any vertical asymptotes.
+</li>
+<li> For very large <m>x</m>, both positive and negative, the <m>x^4</m> term in <m>f(x)</m> dominates
+the other term so that
+<md>
+<mrow>
+f(x)\rightarrow\begin{cases}+\infty &amp;\text{as }x\rightarrow+\infty
+</mrow><mrow>
+                            +\infty &amp;\text{as }x\rightarrow-\infty
+                \end{cases}
+</mrow>
+</md>
+and the function has no horizontal asymptotes.
+</li>
+</ul></p>
+</li>
+<li><p> Now compute the derivative <m>f'(x)</m>:
+<md>
+<mrow>
+f'(x) = 4x^3-12x^2 = 4(x-3)x^2
+</mrow>
+</md>
+<ul>
+<li> The critical points are at <m>x=0,3</m>. Since the function is a polynomial there are
+no singular points. The critical points split the real line into the intervals
+<m>(-\infty,0)</m>, <m>(0,3)</m> and <m>(3,\infty)</m>.
+</li>
+<li> When <m>x \lt 0</m>, <m>x^2 \gt 0</m> and <m>x-3 \lt 0</m>, so <m>f'(x)  \lt  0</m>.
+</li>
+<li> When <m>0 \lt x \lt 3</m>, <m>x^2 \gt 0</m> and <m>x-3 \lt 0</m>, so <m>f'(x)  \lt  0</m>.
+</li>
+<li> When <m>3 \lt x</m>, <m>x^2 \gt 0</m> and <m>x-3 \gt 0</m>, so <m>f'(x)  \gt  0</m>.
+</li>
+<li><p> Summarising all this</p>
+<sidebyside>
+<tabular top="minor" bottom="minor" left="minor" right="minor">
+<row>
+<cell></cell><cell> <m>(-\infty,0)</m> </cell><cell> 0 </cell><cell> (0,3) </cell><cell> 3 </cell><cell> <m>(3,\infty)</m></cell>
+</row><row>
+<cell><m>f'(x)</m>  </cell><cell> negative </cell><cell> 0 </cell><cell> negative </cell><cell> 0 </cell><cell> positive </cell>
+</row><row>
+<cell></cell><cell> decreasing </cell><cell> <line>horizontal</line><line>tangent</line> </cell><cell> decreasing </cell><cell>
+minimum </cell><cell> increasing </cell>
+</row></tabular>
+</sidebyside>
+
+<p>So the point <m>(3,f(3))=(3,-27)</m> is a local minimum. The point <m>(0,f(0))=(0,0)</m>
+is neither a minimum nor a maximum, even though <m>f'(0)=0</m>.</p>
+</li>
+</ul></p>
+</li>
+<li><p> Now examine <m>f''(x)</m>:
+<md>
+<mrow>
+f''(x) = 12x^2-24x=12x(x-2)
+</mrow>
+</md>
+<ul>
+<li> So <m>f''(x)=0</m> when <m>x=0,2</m>. This splits the real line into the intervals
+<m>(-\infty,0),(0,2)</m> and <m>(2,\infty)</m>.
+</li>
+<li> When <m>x \lt 0</m>, <m>x-2 \lt 0</m> and so <m>f''(x) \gt 0</m>.
+</li>
+<li> When <m>0 \lt x \lt 2</m>, <m>x \gt 0</m> and <m>x-2 \lt 0</m> and so <m>f''(x) \lt 0</m>.
+</li>
+<li> When <m>2 \lt x</m>, <m>x \gt 0</m> and <m>x-2 \gt 0</m> and so <m>f''(x) \gt 0</m>.
+</li>
+<li> Thus the function is convex up for <m>x \lt 0</m>, then convex down for <m>0 \lt x \lt 2</m>, and finally
+convex up again for <m>x \gt 2</m>. Hence <m>(0,f(0))=(0,0)</m> and <m>(2,f(2))=(2,-16)</m> are inflection
+points.
+</li>
+</ul></p>
+</li>
+</ol>
+Putting all this information together gives us the following sketch.</p>
+
+<sidebyside width="80%">
+<image source="ch4/j_sketch2">
+	<description>"A graph of f(x)=x^4-4x^3 with x-intercepts labeled along with (2,-16) and (3,-27).  Brackets below the graph show were it is increasing and decreasing"
+</description> 
+</image>
+
+</sidebyside>
+
+</example>
+
+<example>
+	<title>Another Sketching Example</title>
+</example>
+
+<example xml:id="eg_3_6_6"><title><m>f(x) = \dfrac{x}{x^2-4}</m></title>
+<p>
+<ol marker="1">
+<li><p> Reading from <m>f(x)</m>:
+<ul>
+<li> The function is rational so it is defined except where its denominator
+is zero <mdash/> namely at <m>x=\pm2</m>.
+</li>
+<li> Since <m>f(-x) = \dfrac{-x}{x^2-4} = - f(x)</m>, it is odd. Indeed this means
+that we only need to examine what happens to the function for <m>x \geq 0</m> and we
+can then infer what happens for <m>x\leq 0</m> using <m>f(-x) = -f(x)</m>. In
+practice we will sketch the graph for <m>x\geq0</m> and then infer the rest
+from this symmetry.
+</li>
+<li> The <m>y</m>-intercept is <m>y=f(0)=0</m>, while the <m>x</m>-intercepts are given by
+the solution of <m>f(x)=0</m>. So the only <m>x</m>-intercept is <m>0</m>.
+</li>
+<li> Since <m>f</m> is rational, it may have vertical asymptotes where its
+denominator is zero <mdash/> at <m>x=\pm 2</m>. Since the function is odd, we only have
+to analyse the asymptote at <m>x=2</m> and we can then infer what happens at <m>x=-2</m>
+by symmetry.
+<md>
+<mrow>
+  \lim_{x\to 2^+} f(x)
+  &amp;= \lim_{x\to 2^+} \frac{x}{(x-2)(x+2)} = + \infty
+</mrow><mrow>
+  \lim_{x\to 2^-} f(x) &amp;=
+  \lim_{x\to 2^-} \frac{x}{(x-2)(x+2)} = - \infty
+</mrow>
+</md>
+</li>
+<li> We now check for horizontal asymptotes:
+<md>
+<mrow>
+\lim_{x\to +\infty} f(x)
+&amp;= \lim_{x\to +\infty} \frac{x}{x^2-4}
+</mrow><mrow>
+&amp;= \lim_{x\to +\infty} \frac{1}{x-4/x} = 0
+</mrow>
+</md>
+</li>
+</ul></p>
+</li>
+<li><p> Now compute the derivative <m>f'(x)</m>:
+<md>
+<mrow>
+f'(x)
+&amp;= \frac{(x^2-4)\cdot 1 - x\cdot 2x}{(x^2-4)^2}
+</mrow><mrow>
+&amp;= \frac{-(x^2+4)}{(x^2-4)^2}
+</mrow>
+</md>
+<ul>
+<li> Hence there are no critical points. There are singular points
+where the denominator is zero, namely <m>x=\pm2</m>. Before we proceed, notice that
+the numerator is always negative and the denominator is always positive. Hence
+<m>f'(x) \lt 0</m> except at <m>x=\pm 2</m> where it is undefined.
+</li>
+<li> The function is decreasing except at <m>x=\pm 2</m>.
+</li>
+<li> We already know that at <m>x = 2</m> we have a vertical asymptote and that
+<m>f'(x) \lt 0</m> for all <m>x</m>. So
+<md>
+<mrow>
+	\lim_{x\rightarrow 2} f'(x) = -\infty
+</mrow>
+</md>
+</li>
+<li><p> Summarising all this</p>
+
+<sidebyside>
+<tabular top="minor" bottom="minor" left="minor" right="minor">
+<row>
+<cell></cell><cell> [0,2) </cell><cell> 2 </cell><cell> <m>(2,\infty)</m></cell>
+</row><row>
+<cell><m>f'(x)</m>  </cell><cell> negative </cell><cell> DNE </cell><cell> negative </cell>
+</row><row>
+<cell></cell><cell> decreasing </cell><cell><line>vertical</line><line>asymptote</line></cell><cell> decreasing</cell>
+ </row>
+</tabular>
+</sidebyside>
+
+<p> Remember <mdash/> we will draw the graph for <m>x\geq 0</m> and then use the odd symmetry
+to infer the graph for <m>x  \lt  0</m>.</p>
+</li>
+</ul></p>
+</li>
+<li><p> Now examine <m>f''(x)</m>:
+<md>
+<mrow>
+f''(x)
+&amp;=- \frac{(x^2-4)^2\cdot(2x) - (x^2+4)\cdot2\cdot 2x\cdot(x^2-4)}{(x^2-4)^4}
+</mrow><mrow>
+&amp;=- \frac{(x^2-4)\cdot(2x) - (x^2+4)\cdot4x}{(x^2-4)^3}
+</mrow><mrow>
+&amp;=- \frac{2x^3-8x  - 4x^3-16x}{(x^2-4)^3}
+</mrow><mrow>
+&amp;= \frac{2x(x^2+12)}{(x^2-4)^3}
+</mrow>
+</md>
+<ul>
+<li> So <m>f''(x)=0</m> when <m>x=0</m> and does not exist when <m>x=\pm 2</m>. This splits
+the real line into the intervals <m>(-\infty,-2), (-2,0), (0,2)</m> and
+<m>(2,\infty)</m>. However we only need to consider <m>x \geq 0</m> (because of the odd
+symmetry).
+</li>
+<li> When <m>0 \lt x \lt 2</m>, <m>x \gt 0, (x^2+12) \gt 0</m> and <m>(x^2-4) \lt 0</m> so  <m>f''(x) \lt 0</m>.
+</li>
+<li> When <m>x \gt 2</m>, <m>x \gt 0, (x^2+12) \gt 0</m> and <m>(x^2-4) \gt 0</m> so <m>f''(x) \gt 0</m>.
+</li>
+</ul></p>
+</li>
+</ol>
+Putting all this information together gives the following sketch for <m>x \geq 0</m>:</p>
+
+<sidebyside width="33%">
+<image source="ch4/j_sketch5b">
+	<description>"A sketch of the graph of f(x)=x/(x^2-4) when x is positive. To the left of the vertical asymptote at x=2 is a curly bracket showing that f''&lt; 0 and f is convex down and to the right of the vertical asymptote is a curly bracket showing the f''&gt; 0 and f is convex up".
+		</description>
+</image>
+</sidebyside>
+
+<p> We can then draw in the graph for <m>x \lt  0</m> using <m>f(-x) = -f(x)</m>:</p>
+<sidebyside width="75%">
+<image source="ch4/j_sketch5">
+	<description>A graph fo f(x)=x/(x^2-4) over the entire domain.  An arrow points to the inflection point at (0,0).  Curly braces show where the graph is convex up and convex down to the left and right of a vertical asymptote x=2, respectively.
+	</description>
+</image>
+</sidebyside>
+
+<p>Notice that this means that the concavity changes at <m>x=0</m>, so the point
+<m>(0,f(0))=(0,0)</m> is a point of inflection (as indicated).
+</p>
+</example>
+
+<example xml:id="APPsketchC"><title><m>f(x)=\root{3}\of{\frac{x^2}{(x-6)^2}} </m></title>
+<p>
+<ol marker="1">
+<li><p> Reading from <m>f(x)</m>:
+<ul>
+<li> First notice that we can rewrite
+<md>
+<mrow>
+  f(x) &amp;= \root{3}\of{\frac{x^2}{(x-6)^2}}
+  = \root{3}\of{\frac{x^2}{x^2\cdot(1-6/x)^2}}
+  = \root{3}\of{\frac{1}{(1-6/x)^2}}
+</mrow>
+</md>
+</li>
+<li> The function is the cube root of a rational function. The rational
+function is defined except at <m>x=6</m>, so the domain of <m>f</m> is all reals except
+<m>x=6</m>.
+</li>
+<li> Clearly the function is not periodic, and examining
+<md>
+<mrow>
+  f(-x) &amp;= \root{3}\of{\frac{ 1}{(1-6/(-x))^2}}
+</mrow><mrow>
+  &amp;= \root{3}\of{\frac{1}{(1+6/x)^2}} \neq \pm f(x)
+</mrow>
+</md>
+shows the function is neither even nor odd.
+</li>
+<li> To compute horizontal asymptotes we examine the limit of the portion of
+the function inside the cube-root
+<md>
+<mrow>
+\lim_{x\rightarrow\pm\infty} \frac{1}{(1-\frac{6}{x})^2}
+=1
+</mrow>
+</md>
+This means we have
+<md>
+<mrow>
+\lim_{x\rightarrow\pm\infty} f(x)=1
+</mrow>
+</md>
+That is, the line <m>y=1</m> will be a horizontal asymptote to the graph <m>y=f(x)</m>
+both for <m>x\rightarrow+\infty</m> and for <m>x\rightarrow-\infty</m>.
+</li>
+<li> Our function <m>f(x)\rightarrow+\infty</m> as <m>x\rightarrow 6</m>, because of
+the <m>(1-6/x)^2</m> in its denominator. So <m>y=f(x)</m> has <m>x=6</m> as a vertical
+asymptote.
+</li>
+</ul></p>
+</li>
+<li><p> Now compute <m>f'(x)</m>. Since we rewrote
+<md>
+<mrow>
+f(x) &amp;= \root{3}\of{\frac{1}{(1-6/x)^2}}
+=\left(1-\frac{6}{x}\right)^{-\frac{2}{3}}
+</mrow>
+</md>
+we can use the chain rule
+<md>
+<mrow>
+f'(x) =
+-\frac{2}{3}{\left(1-\frac{6}{x}\right)}^{-\frac{5}{3}}\frac{6}{x^2}
+</mrow><mrow>
+=-4 {\left(\frac{x-6}{x}\right)}^{-\frac{5}{3}}\frac{1}{x^2}
+</mrow><mrow>
+=-4 {\left(\frac{1}{x-6}\right)}^{\frac{5}{3}}\frac{1}{x^{\frac{1}{3}}}
+</mrow>
+</md>
+<ul>
+<li> Notice that the derivative is nowhere equal to zero, so the function has
+no critical points. However there are two places the derivative is
+undefined. The terms
+<md>
+<mrow>
+  \left(\frac{1}{x-6}\right)^{\frac{5}{3}} &amp;&amp; \frac{1}{x^{\frac{1}{3}}}
+</mrow>
+</md>
+are undefined at <m>x=6,0</m> respectively. Hence <m>x=0,6</m> are singular points. These
+split the real line into the intervals <m>(-\infty,0), (0,6)</m> and <m>(6,\infty)</m>.
+</li>
+<li> When <m>x \lt 0</m>, <m>(x-6) \lt 0</m>, we have that <m>(x-6)^{-\frac53} \lt 0</m> and
+<m>x^{-\frac13} \lt 0</m> and so <m>f'(x)=-4 \cdot
+(\text{negative})\cdot(\text{negative})  \lt  0 </m>.
+</li>
+<li> When <m>0 \lt x \lt 6</m>, <m>(x-6) \lt 0</m>, we have that <m>(x-6)^{-\frac53} \lt 0</m> and
+<m>x^{-\frac13} \gt 0</m> and so <m>f'(x) \gt 0</m>.
+</li>
+<li> When <m>x \gt 6</m>, <m>(x-6) \gt 0</m>, we have that <m>(x-6)^{-\frac53} \gt 0</m> and
+<m>x^{-\frac13} \gt 0</m> and so <m>f'(x) \lt 0</m>.
+</li>
+<li> We should also examine the behaviour of the derivative as <m>x \to 0</m> and
+<m>x\to 6</m>.
+<md>
+<mrow>
+  \lim_{x \to 0^-} f'(x)
+  &amp;= -4
+  \left( \lim_{x \to 0^-} (x-6)^{-\frac53} \right)
+  \left( \lim_{x \to 0^-} x^{-\frac13} \right)
+  = -\infty
+</mrow><mrow>
+  \lim_{x \to 0^+} f'(x)
+  &amp;= -4
+  \left( \lim_{x \to 0^+} (x-6)^{-\frac53} \right)
+  \left( \lim_{x \to 0^+} x^{-\frac13} \right)
+  = +\infty
+</mrow><mrow>
+  \lim_{x \to 6^-} f'(x)
+  &amp;= -4
+  \left( \lim_{x \to 6^-} (x-6)^{-\frac53} \right)
+  \left( \lim_{x \to 6^-} x^{-\frac13} \right)
+  = +\infty
+</mrow><mrow>
+  \lim_{x \to 6^+} f'(x)
+  &amp;= -4
+  \left( \lim_{x \to 6^+} (x-6)^{-\frac53} \right)
+  \left( \lim_{x \to 6^+} x^{-\frac13} \right)
+  = -\infty
+</mrow>
+</md>
+We already know that <m>x=6</m> is a vertical asymptote of the function, so it is
+not surprising that the lines tangent to the graph become vertical as we
+approach 6. The behavior around <m>x=0</m> is less standard, since the lines tangent
+to the graph become vertical, but <m>x=0</m> is not a vertical asymptote of the
+function. Indeed the function takes a finite value <m>y=f(0)=0</m>.
+</li>
+<li><p> Summarising all this</p>
+
+<sidebyside>
+<tabular top="minor" bottom="minor" left="minor" right="minor">
+<row>
+<cell></cell><cell> <m>(-\infty,0)</m> </cell><cell> 0 </cell><cell> (0,6) </cell><cell> 6 </cell><cell> <m>(6,\infty)</m></cell>
+</row><row>
+<cell><m>f'(x)</m>  </cell><cell> negative </cell><cell> DNE </cell><cell> positive </cell><cell> DNE </cell><cell> negative </cell>
+</row><row>
+<cell></cell><cell> decreasing </cell><cell><line>vertical</line><line>tangents</line></cell><cell>
+increasing </cell><cell> <line>vertical</line><line>asymptote</line> </cell><cell> decreasing</cell>
+</row>
+</tabular>
+</sidebyside>
+</li>
+</ul></p>
+</li>
+<li><p> Now look at <m>f''(x)</m>:
+<md>
+<mrow>
+f''(x)&amp;=-4\diff{}{x}
+    \left[{\left(\frac{1}{x-6}\right)}^{\frac{5}{3}}
+           \frac{1}{x^{\frac{1}{3}}} \right]
+</mrow><mrow>
+\amp=-4 \left[-\frac{5}{3}{\left(\frac{1}{x-6}\right)}^{\frac{8}{3}}
+           \frac{1}{x^{\frac{1}{3}}}
+         -\frac{1}{3} {\left(\frac{1}{x-6}\right)}^{\frac{5}{3}}
+           \frac{1}{x^{\frac{4}{3}}}\right]
+</mrow><mrow>
+&amp;=\frac{4}{3} {\left(\frac{1}{x-6}\right)}^{\frac{8}{3}}
+            \frac{1}{x^{\frac{4}{3}}}\ \left[5x +(x-6)\right]
+</mrow><mrow>
+&amp;=8 {\left(\frac{1}{x-6}\right)}^{\frac{8}{3}}
+            \frac{1}{x^{\frac{4}{3}}}\ \left[x-1\right]
+</mrow>
+</md>
+
+<ul>
+<li><p> Both of the factors
+         <m>{\Big(\frac{1}{x-6}\Big)}^{\frac{8}{3}}
+          ={\Big(\frac{1}{\root{3}\of{x-6}}\Big)}^8</m> and
+            <m>\frac{1}{x^{\frac{4}{3}}}
+             =\Big(\frac{1}{\root{3}\of{x}}\Big)^4</m> are even powers
+and so are positive (though possibly infinite). So the sign of <m>f''(x)</m>
+is the same as the sign of the factor <m>x-1</m>. Thus</p>
+
+<sidebyside>
+<tabular top="minor" bottom="minor" left="minor" right="minor">
+<row>
+<cell></cell><cell> <m>(-\infty,1)</m> </cell><cell> 1 </cell><cell> <m>(1,\infty)</m></cell>
+</row><row>
+<cell><m>f''(x)</m>  </cell><cell> negative </cell><cell> 0 </cell><cell> positive  </cell>
+</row><row>
+<cell></cell><cell> concave down </cell><cell> <line>inflection</line><line> point</line> </cell><cell>
+concave up </cell>
+</row>
+</tabular>
+</sidebyside>
+
+</li>
+</ul></p>
+</li>
+</ol>
+</p>
+
+<p>Here is a sketch of the graph <m>y=f(x)</m>.</p>
+
+<sidebyside width="80%">
+<image source="ch4/j_sketch3">
+	<description>A graph of f(x) equals the cube root of x squared divided by (x-6) squared. Curly braces below the x-axis show on which intervals the derivative is positive or negative and where f is increasing or decreasing.
+	</description>
+</image>
+</sidebyside>
+
+<p> It is hard to see the inflection point at <m>x=1</m>,
+<m>y=f(1)=\frac{1}{ \root{3}\of{25} }</m>
+in the above sketch. So here is a blow up of the part of the sketch
+around <m>x=1</m>.
+</p>
+
+<sidebyside width="66%">
+<image source="ch4/j_sketch3b">
+	<description>A zoomed in graph of f(x) equals the cube root of x squared divided by (x-6) squared around x=1 with the inflection point at (1,1 over the cube root of 25) labeled.
+	</description>
+</image>
+</sidebyside>
+<p> And if we zoom in even more we have</p>
+
+<sidebyside width="66%">
+<image source="ch4/j_sketch3c">
+	<description>A zoomed in graph of f(x) equals the cube root of x squared divided by (x-6) squared around x=1 with the inflection point at (1,1 over the cube root of 25) labeled.
+	</description>
+</image>
+</sidebyside>
+
+
+</example>
+
+</subsection>
+
+
 
 </section>
