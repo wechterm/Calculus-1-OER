@@ -16,3 +16,7 @@
 -create Thomas' Figure 4.5 for Figure 4.3.7
 
 -create Thomas' Figure 4.23 for Figure 4.5.15
+
+-create curve sketching example 4.6.20
+
+-CLP calls things 'convex' instead of concave in 4.6 curve sketching examples
