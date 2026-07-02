@@ -232,7 +232,8 @@
 
 	</problem>
 	
-	<example xml:id="APPsketchB"><title>Sketch <m>f(x)=x^4-4x^3</m></title>
+<example xml:id="APPsketchB"><title>Sketch <m>f(x)=x^4-4x^3</m></title>
+<solution>
 <p>
 <ol marker="1">
 <li><p> Reading from <m>f(x)</m>:
@@ -335,7 +336,7 @@ Putting all this information together gives us the following sketch.</p>
 </image>
 
 </sidebyside>
-
+</solution>
 </example>
 
 <example>
@@ -343,6 +344,7 @@ Putting all this information together gives us the following sketch.</p>
 </example>
 
 <example xml:id="eg_3_6_6"><title><m>f(x) = \dfrac{x}{x^2-4}</m></title>
+<solution>
 <p>
 <ol marker="1">
 <li><p> Reading from <m>f(x)</m>:
@@ -475,9 +477,11 @@ Putting all this information together gives the following sketch for <m>x \geq 0
 <p>Notice that this means that the concavity changes at <m>x=0</m>, so the point
 <m>(0,f(0))=(0,0)</m> is a point of inflection (as indicated).
 </p>
+</solution>
 </example>
 
 <example xml:id="APPsketchC"><title><m>f(x)=\root{3}\of{\frac{x^2}{(x-6)^2}} </m></title>
+<solution>
 <p>
 <ol marker="1">
 <li><p> Reading from <m>f(x)</m>:
@@ -697,7 +701,7 @@ around <m>x=1</m>.
 	</description>
 </image>
 </sidebyside>
-
+</solution>
 
 </example>
 
