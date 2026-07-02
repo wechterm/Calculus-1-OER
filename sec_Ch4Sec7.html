@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Applied Optimization Problems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="College of Dupage OER Calculus 1">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.7';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.39f982db166f319d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="OpenStaxCalculus.html"><span class="title">College of Dupage OER Calculus 1</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_Ch4Sec6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_fourth.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch_appendix.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\limit}{\ds\lim} 
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+ 
+ \newcommand\blank[2]{\,\colorbox{gray}{$\phantom{\rule{#1pt}{#2pt}}$}\,}
+    \newcommand{\highlight}[1]{{\color{blue}{#1}}}
+    \newcommand{\fp}{f\hskip.75pt '}
+    \newcommand{\fpp}{f\hskip.75pt ''}
+
+    
+    
+    \newcommand{\lz}[2]{\frac{d#1}{d#2}}
+    
+    
+    
+    \newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+    
+    
+    
+    \newcommand{\lzo}[1]{\frac{d}{d#1}}
+    
+    
+    
+    \newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+    
+    
+    
+    \newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+    
+    
+    
+    \newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+    
+    
+    
+    \newcommand{\plz}[2]{\frac{\partial#1}{\partial#2}}
+    
+    
+    
+    \newcommand{\plzoa}[3]{\left.{\frac{\partial#1}{\partial#2}}\right|_{#3}}
+
+    
+    
+    \newcommand{\inflim}[1][n]{\lim\limits_{#1 \to \infty}}
+
+    
+    
+    \newcommand{\primeskip}{\hskip.75pt }
+    \newcommand{\infser}[1][1]{\sum_{n=#1}^\infty}
+    \newcommand{\Fp}{F\hskip.75pt '}
+    \newcommand{\Fpp}{F\hskip.75pt ''}
+    
+	    \newcommand{\yp}{y'}
+    \newcommand{\gp}{g\hskip.75pt '}
+    \newcommand{\dx}{\Delta x}
+    \newcommand{\dy}{\Delta y}
+    \newcommand{\ddz}{\Delta z}
+    \newcommand{\thet}{\theta}
+    \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+    \newcommand{\vnorm}[1]{\left\lVert\vec #1\right\rVert}
+    \newcommand{\snorm}[1]{\left|\left|\,#1\,\right|\right|}
+    \newcommand{\la}{\left\langle}
+    \newcommand{\ra}{\right\rangle}
+    \newcommand{\dotp}[2]{\vec #1 \cdot \vec #2}
+    \newcommand{\proj}[2]{\text{proj}_{\,\vec #2}{\,\vec #1}}
+    \newcommand{\crossp}[2]{\vec #1 \times \vec #2}
+    \newcommand{\veci}{\vec i}
+    \newcommand{\vecj}{\vec j}
+    \newcommand{\veck}{\vec k}
+    \newcommand{\vecu}{\vec u}
+    \newcommand{\vecv}{\vec v}
+    \newcommand{\vecw}{\vec w}
+    \newcommand{\vecx}{\vec x}
+    \newcommand{\vecy}{\vec y}
+    \newcommand{\vrp}{\vec r\hskip0.75pt '}
+    \newcommand{\vrpp}{\vec r\hskip0.75pt ''}
+    \newcommand{\vsp}{\vec s\hskip0.75pt '}
+    \newcommand{\vrt}{\vec r(t)}
+    \newcommand{\vst}{\vec s(t)}
+    \newcommand{\vvt}{\vec v(t)}
+    \newcommand{\vat}{\vec a(t)}
+    \newcommand{\px}{\partial x}
+    \newcommand{\py}{\partial y}
+    \newcommand{\pz}{\partial z}
+    \newcommand{\pf}{\partial f}
+    \newcommand{\unittangent}{\vec{{}T}}
+    \newcommand{\unitnormal}{\vec{N}}
+    \newcommand{\unittangentprime}{\vec{{}T}\hskip0.75pt '}
+ 
+    \newcommand{\mathN}{\mathbb{N}}
+    \newcommand{\surfaceS}{\mathcal{S}}
+    \newcommand{\zerooverzero}{\displaystyle \raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\textit{ ''}}}
+    \newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+    \newcommand{\sech}{\operatorname{sech}}
+    \newcommand{\csch}{\operatorname{csch}}
+    \newcommand{\curl}{\operatorname{curl}}
+    \newcommand{\divv}{\operatorname{div}}
+    \newcommand{\Hess}{\operatorname{Hess}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_first.html" class="internal"><span class="codenumber">1</span> <span class="title">Functions and Graphs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Review of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#subsec_Ch1Sec1Ss1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Representing Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-3" class="internal"><span class="codenumber">1.1.2.1</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-4" class="internal"><span class="codenumber">1.1.2.2</span> <span class="title">Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-4-5" class="internal"><span class="codenumber">1.1.2.3</span> <span class="title">Algebraic Formulas</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Combining Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-3" class="internal"><span class="codenumber">1.1.3.1</span> <span class="title">Combining Functions with Mathematical Operators</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-5-4" class="internal"><span class="codenumber">1.1.3.2</span> <span class="title">Function Composition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetry of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec1.html#sec_Ch1Sec1-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Basic Classes of Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Linear Functions and Slope</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-3" class="internal"><span class="codenumber">1.2.2.1</span> <span class="title">Power Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-4" class="internal"><span class="codenumber">1.2.2.2</span> <span class="title">Behavior at Infinity</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-5" class="internal"><span class="codenumber">1.2.2.3</span> <span class="title">Zeros of Polynomial Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-4-6" class="internal"><span class="codenumber">1.2.2.4</span> <span class="title">Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Algebraic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Transcendental Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Piecewise-Defined Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Transformations of Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-9" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec2.html#sec_Ch1Sec2-10" class="internal"><span class="codenumber">1.2.8</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Mathematical Modeling</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Mathematical Models of Cost, Revenue, and Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Mathematical Models of Supply and Demand</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec3.html#sec_Ch1Sec3-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Quadratic Mathematical Models</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Inverse Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Existence of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Finding a Function’s Inverse</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-2" class="internal"><span class="codenumber">1.4.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-3" class="internal"><span class="codenumber">1.4.2.2</span> <span class="title">Graphing Inverse Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-4-4" class="internal"><span class="codenumber">1.4.2.3</span> <span class="title">Restricting Domains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Inverse Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec4.html#sec_Ch1Sec4-7" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exponential Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-3" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Evaluating Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-3-4" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">Graphing Exponential Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-4" class="internal"><span class="codenumber">1.5.2</span> <span class="title">The Number <span class="process-math">\(e \)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-5" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Logarithmic Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Hyperbolic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-3" class="internal"><span class="codenumber">1.5.4.1</span> <span class="title">Graphs of Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-4" class="internal"><span class="codenumber">1.5.4.2</span> <span class="title">Identities Involving Hyperbolic Functions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-6-5" class="internal"><span class="codenumber">1.5.4.3</span> <span class="title">Inverse Hyperbolic Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch1Sec5.html#sec_Ch1Sec5-7" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Key Concepts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_second.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec1.html" class="internal"><span class="codenumber">2.1</span> <span class="title">A Preview of Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Tangent Problem and Differential Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Area Problem and Integral Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Other Aspects of Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec1.html#sec_Ch2Sec1-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec2v2.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Limit of a Function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Intuitive Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Identifying When Limits Do Not Exist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec2v2.html#sec_Ch2Sec2v2-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Infinite Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Ch2Sec3LimitDef.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Formal <span class="process-math">\(\delta-\varepsilon\)</span> Definition of a Limit</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-coreidea" class="internal"><span class="codenumber">2.3.1</span> <span class="title">The Core Idea: Quantifying Closeness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Ch2Sec3LimitDef.html#subsec-onesidedlimit" class="internal"><span class="codenumber">2.3.2</span> <span class="title">One-Sided Limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec3.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Limit Laws</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Limit Laws</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Limits of Polynomial and Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-5" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Additional Limit Evaluation Techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-onesidedlimits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">One-Sided Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#sec_Ch2Sec3-7" class="internal"><span class="codenumber">2.4.5</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsubsec-triglimits" class="internal"><span class="codenumber">2.4.6</span> <span class="title">A Few Important Trigonometric Limits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec3.html#subsec-LimitLawProofs" class="internal"><span class="codenumber">2.4.7</span> <span class="title">Proofs of the Limit Laws (Optional)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec4.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Continuity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-3" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Continuity at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-4" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Types of Discontinuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-5" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Continuity over an Interval</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec4.html#sec_Ch2Sec4-6" class="internal"><span class="codenumber">2.5.4</span> <span class="title">The Intermediate Value Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch2Sec6.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Limits at Infinity and Asymptotes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-3" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Limits at Infinity and Horizontal Asymptotes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Infinite Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-5" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Formal Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-6" class="internal"><span class="codenumber">2.6.4</span> <span class="title">End Behavior for Polynomials Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch2Sec6.html#sec_Ch2Sec6-7" class="internal"><span class="codenumber">2.6.5</span> <span class="title">End Behavior for Algebraic Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_third.html" class="internal"><span class="codenumber">3</span> <span class="title">Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Defining the Derivative (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Tangent Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The Derivative of a Function at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Velocities and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-6" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec1.html#sec_Ch3Sec1-7" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">The Derivative as a Function (not edited)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivative Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Graphing a Derivative</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Derivatives and Continuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-6" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Higher-Order Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-7" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Key Concepts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec2.html#sec_Ch3Sec2-8" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Key Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Differentiation Rules (3.3.31-2 Need Chain Rule)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The Basic Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-3" class="internal"><span class="codenumber">3.3.1.1</span> <span class="title">The Constant Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-3-4" class="internal"><span class="codenumber">3.3.1.2</span> <span class="title">The Power Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">The Sum, Difference, and Constant Multiple Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#subsec-exponentialderivative" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-6" class="internal"><span class="codenumber">3.3.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-7" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The Quotient Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec3.html#sec_Ch3Sec3-8" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Combining Differentiation Rules</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Derivatives as Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#subsec-instantaneousrateofchange" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Motion along a Line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Population Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec4.html#sec_Ch3Sec4-6" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Changes in Cost and Revenue</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec5.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Derivatives of Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-derivs-sine-cosine" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Derivatives of the Sine and Cosine Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-harmonicmotion" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Harmonic Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-derivatives-other-trig" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Derivatives of Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec5.html#subsec-higher-trig-derivatives" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Higher-Order Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec6.html" class="internal"><span class="codenumber">3.6</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-3" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Deriving the Chain Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-4" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Chain and Power Rules Combined</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-5" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Combining the Chain Rule with Other Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-6" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Composites of Three or More Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec6.html#sec_Ch3Sec6-7" class="internal"><span class="codenumber">3.6.5</span> <span class="title">The Chain Rule Using Leibniz’s Notation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_imp_deriv.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-3" class="internal"><span class="codenumber">3.7.1</span> <span class="title">The Method of Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_imp_deriv.html#sec_imp_deriv-4" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Implicit Differentiation and the Second Derivative</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec8.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Derivatives of Inverse Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec8.html#sec_Ch3Sec8-3" class="internal"><span class="codenumber">3.8.1</span> <span class="title">The Derivative of an Inverse Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec8.html#sec_Ch3Sec8-4" class="internal"><span class="codenumber">3.8.2</span> <span class="title">Derivatives of Inverse Trigonometric Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch3Sec9.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Derivatives of Exponential and Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec9.html#sec_Ch3Sec9-3" class="internal"><span class="codenumber">3.9.1</span> <span class="title">Derivative of the Exponential Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec9.html#sec_Ch3Sec9-4" class="internal"><span class="codenumber">3.9.2</span> <span class="title">Derivative of the Logarithmic Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch3Sec9.html#sec_Ch3Sec9-5" class="internal"><span class="codenumber">3.9.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_fourth.html" class="internal"><span class="codenumber">4</span> <span class="title">Applications of Derivatives</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Related Rates</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec1.html#sec_Ch4Sec1-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Setting up Related-Rates Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec1.html#sec_Ch4Sec1-4" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Examples of the Process</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec2.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Linear Approximations and Differentials </span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec2.html#sec_Ch4Sec2-3" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Linear Approximation of a Function at a Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec2.html#sec_Ch4Sec2-4" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Differentials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec2.html#sec_Ch4Sec2-5" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Calculating the Amount of Error</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec3.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Maxima and Minima</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec3.html#sec_Ch4Sec3-3" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Absolute Extrema</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec3.html#sec_Ch4Sec3-4" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Local Extrema and Critical Points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec3.html#sec_Ch4Sec3-5" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Locating Absolute Extrema</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec4.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Mean Value Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec4.html#subsec-rollestheorem" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Rolle’s Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec4.html#sec-MVTmeaning" class="internal"><span class="codenumber">4.4.2</span> <span class="title">The Mean Value Theorem and Its Meaning</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec4.html#subsec-meanvaluetheoremcorollaries" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Corollaries of the Mean Value Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec5.html" class="internal"><span class="codenumber">4.5</span> <span class="title">The First Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec5.html#sec_Ch4Sec5-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">The First Derivative Test</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec6.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Concavity and Curve Sketching</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-3" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Concavity and Points of Inflection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-4" class="internal"><span class="codenumber">4.6.2</span> <span class="title">The Second Derivative Test For Local Extrema</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-5" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Curve Sketching</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec_Ch4Sec7.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Applied Optimization Problems</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec7.html#sec_Ch4Sec7-3" class="internal"><span class="codenumber">4.7.1</span> <span class="title">Solving Optimization Problems over a Closed, Bounded Interval</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec7.html#sec_Ch4Sec7-4" class="internal"><span class="codenumber">4.7.2</span> <span class="title">Solving Optimization Problems when the Interval Is Not Closed or Is Unbounded</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_appendix.html" class="internal"><span class="codenumber">5</span> <span class="title">Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_exp_func.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Derivatives of Exponential Functions (check if table headers needed)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Whirlwind Review of Logarithms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-3-3" class="internal"><span class="codenumber">5.1.1.1</span> <span class="title">Logarithmic Functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_exp_func.html#sec_exp_func-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Back to that Limit</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec_Ch4Sec7">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applied Optimization Problems</span>
+</h2>
+<section class="introduction" id="sec_Ch4Sec7-2"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ol class="decimal" id="sec_Ch4Sec7-2-2">
+<li id="sec_Ch4Sec7-2-2-1">
+<div class="para" id="p-derived-sec_Ch4Sec7-2-2-1">Set up and solve optimization problems in several applied fields.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch4Sec7-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+</ol>
+<div class="para" id="sec_Ch4Sec7-2-3">One common application of calculus is calculating the minimum or maximum value of a function. For example, companies often want to minimize production costs or maximize revenue. In manufacturing, it is often desirable to minimize the amount of material used to package a product with a certain volume. In this section, we show how to set up these types of minimization and maximization problems and solve them by using the tools developed in this chapter.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="sec_Ch4Sec7-3">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving Optimization Problems over a Closed, Bounded Interval</span>
+</h3>
+<div class="para" id="sec_Ch4Sec7-3-2">The basic idea of the <dfn class="terminology">optimization problems</dfn> that follow is the same. We have a particular quantity that we are interested in maximizing or minimizing. However, we also have some auxiliary condition that needs to be satisfied. For example, in <a href="sec_Ch4Sec7.html#fs-id1165043431956" class="xref" data-knowl="./knowl/xref/fs-id1165043431956.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.7.1: Maximizing the Area of a Garden">Example 4.7.1</a>, we are interested in maximizing the area of a rectangular garden. Certainly, if we keep making the side lengths of the garden larger, the area will continue to become larger. However, what if we have some restriction on how much fencing we can use for the perimeter? In this case, we cannot make the garden as large as we like. Let’s look at how we can maximize the area of a rectangle subject to some constraint on the perimeter.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1165043431956"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maximizing the Area of a Garden.</span>
+</h4>
+<div class="para" id="fs-id1165043431956-2-1">A rectangular garden is to be constructed using a rock wall as one side of the garden and wire fencing for the other three sides (<a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.2">Figure 4.7.2</a>). Given <span class="process-math">\(100\)</span> ft of wire fencing, determine the dimensions that would create a garden of maximum area. What is the maximum area?<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_07_001"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/CNX_Calc_Figure_04_07_001.jpg" class="contained" alt='"A drawing of a garden has x and y written on the vertical and horizontal sides, respectively. There is a rock wall running along the entire bottom horizontal length of the drawing."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>We want to determine the measurements <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> that will create a garden with a maximum area using <span class="process-math">\(100\)</span> ft of fencing.<div class="autopermalink" data-description="Figure 4.7.2"><a href="#CNX_Calc_Figure_04_07_001" title="Copy heading and permalink for Figure 4.7.2" aria-label="Copy heading and permalink for Figure 4.7.2">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details id="fs-id1165043431956-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1165043431956-3-1">Let <span class="process-math">\(x\)</span> denote the length of the side of the garden perpendicular to the rock wall and <span class="process-math">\(y\)</span> denote the length of the side parallel to the rock wall. Then the area of the garden is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_001.html ./knowl/xref/CNX_Calc_Figure_04_07_002.html" id="fs-id1165043431956-3-2">
+\begin{equation*}
+A=x\cdot y.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043431956-3-3">We want to find the maximum possible area subject to the constraint that the total fencing is <span class="process-math">\(100 \text{ ft }.\)</span> From <a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.2">Figure 4.7.2</a>, the total amount of fencing used will be <span class="process-math">\(2x+y.\)</span> Therefore, the constraint equation is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_001.html ./knowl/xref/CNX_Calc_Figure_04_07_002.html" id="fs-id1165043431956-3-4">
+\begin{equation*}
+2x+y=100.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043431956-3-5">Solving this equation for <span class="process-math">\(y,\)</span> we have <span class="process-math">\(y=100-2x.\)</span> Thus, we can write the area as<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_001.html ./knowl/xref/CNX_Calc_Figure_04_07_002.html" id="fs-id1165043431956-3-6">
+\begin{equation*}
+A(x)=x\cdot(100-2x)=100x-2x^2.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043431956-3-7">Before trying to maximize the area function <span class="process-math">\(A(x)=100x-2x^2,\)</span> we need to determine the domain under consideration. To construct a rectangular garden, we certainly need the lengths of both sides to be positive. Therefore, we need <span class="process-math">\(x\gt 0\)</span> and <span class="process-math">\(y\gt 0.\)</span> Since <span class="process-math">\(y=100-2x,\)</span> if <span class="process-math">\(y\gt 0,\)</span> then <span class="process-math">\(x\lt 50.\)</span> Therefore, we are trying to determine the maximum value of <span class="process-math">\(A(x)\)</span> for <span class="process-math">\(x\)</span> over the open interval <span class="process-math">\((0,50).\)</span> We do not know that a function necessarily has a maximum value over an open interval. However, we do know that a continuous function has an absolute maximum (and absolute minimum) over a closed interval. Therefore, let’s consider the function <span class="process-math">\(A(x)=100x-2x^2\)</span> over the closed interval <span class="process-math">\([0,50].\)</span> If the maximum value occurs at an interior point, then we have found the value <span class="process-math">\(x\)</span> in the open interval <span class="process-math">\((0,50)\)</span> that maximizes the area of the garden. Therefore, we consider the following problem:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165043431956-3-8">Maximize <span class="process-math">\(A(x)=100x-2x^2\)</span> over the interval <span class="process-math">\([0,50].\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165043431956-3-9">As mentioned earlier, since <span class="process-math">\(A\)</span> is a continuous function on a closed, bounded interval, by the extreme value theorem, it has a maximum and a minimum. These extreme values occur either at endpoints or critical points. At the endpoints, <span class="process-math">\(A(x)=0.\)</span> Since the area is positive for all <span class="process-math">\(x\)</span> in the open interval <span class="process-math">\((0,50),\)</span> the maximum must occur at a critical point. Differentiating the function <span class="process-math">\(A(x),\)</span> we obtain<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_001.html ./knowl/xref/CNX_Calc_Figure_04_07_002.html" id="fs-id1165043431956-3-10">
+\begin{equation*}
+A'(x)=100-4x.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043431956-3-11">Therefore, the only critical point is <span class="process-math">\(x=25\)</span> (<a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_002" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.3">Figure 4.7.3</a>). We conclude that the maximum area must occur when <span class="process-math">\(x=25.\)</span> Then we have <span class="process-math">\(y=100-2x=100-2(25)=50.\)</span> To maximize the area of the garden, let <span class="process-math">\(x=25\)</span> ft and <span class="process-math">\(y=50 \text{ ft }.\)</span> The area of this garden is <span class="process-math">\(1250\text{ft}^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_07_002"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/CNX_Calc_Figure_04_07_002.jpg" class="contained" alt='"The function A(x) = 100x-2x^2 is graphed. At its maximum there is an intersection of two dashed lines and text that reads "Maximum area is 1250 square feet when x = 25 feet.""'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>To maximize the area of the garden, we need to find the maximum value of the function <span class="process-math">\(A(x)=100x-2x^2.\)</span><div class="autopermalink" data-description="Figure 4.7.3"><a href="#CNX_Calc_Figure_04_07_002" title="Copy heading and permalink for Figure 4.7.3" aria-label="Copy heading and permalink for Figure 4.7.3">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 4.7.1.1"><a href="#fs-id1165043431956-3" title="Copy heading and permalink for Solution 4.7.1.1" aria-label="Copy heading and permalink for Solution 4.7.1.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.7.1: Maximizing the Area of a Garden"><a href="#fs-id1165043431956" title="Copy heading and permalink for Example 4.7.1: Maximizing the Area of a Garden" aria-label="Copy heading and permalink for Example 4.7.1: Maximizing the Area of a Garden">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec7-3-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-4-1-1">Determine the maximum area if we want to make the same rectangular garden as in <a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_002" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.3">Figure 4.7.3</a>, but we have <span class="process-math">\(200\)</span> ft of fencing.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec7-3-4-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-4-3-1">We need to maximize the function <span class="process-math">\(A(x)=200x-2x^2\)</span> over the interval <span class="process-math">\([0,100].\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.7.4.1"><a href="#sec_Ch4Sec7-3-4-3" title="Copy heading and permalink for Hint 4.7.4.1" aria-label="Copy heading and permalink for Hint 4.7.4.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec7-3-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-4-2-1">The maximum area is <span class="process-math">\(5000\text{ ft}^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.7.4.1"><a href="#sec_Ch4Sec7-3-4-2" title="Copy heading and permalink for Solution 4.7.4.1" aria-label="Copy heading and permalink for Solution 4.7.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.7.4"><a href="#sec_Ch4Sec7-3-4" title="Copy heading and permalink for Checkpoint 4.7.4" aria-label="Copy heading and permalink for Checkpoint 4.7.4">🔗</a></div>
+</article></details>
+<div class="para" id="sec_Ch4Sec7-3-5">Now let’s look at a general strategy for solving optimization problems similar to <a href="sec_Ch4Sec7.html#fs-id1165043431956" class="xref" data-knowl="./knowl/xref/fs-id1165043431956.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.7.1: Maximizing the Area of a Garden">Example 4.7.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="sec_Ch4Sec7-3-6"><h4 class="heading">
+<span class="type">Problem-Solving Strategy</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving Optimization Problems.</span>
+</h4>
+<ol class="decimal" id="sec_Ch4Sec7-3-6-2">
+<li id="sec_Ch4Sec7-3-6-2-1">
+<div class="para" id="p-derived-sec_Ch4Sec7-3-6-2-1">Introduce all variables. If applicable, draw a figure and label all variables.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec_Ch4Sec7-3-6-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec_Ch4Sec7-3-6-2-2">
+<div class="para" id="p-derived-sec_Ch4Sec7-3-6-2-2">Determine which quantity is to be maximized or minimized, and for what range of values of the other variables (if this can be determined at this time).</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec_Ch4Sec7-3-6-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec_Ch4Sec7-3-6-2-3">
+<div class="para" id="p-derived-sec_Ch4Sec7-3-6-2-3">Write a formula for the quantity to be maximized or minimized in terms of the variables. This formula may involve more than one variable.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec_Ch4Sec7-3-6-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec_Ch4Sec7-3-6-2-4">
+<div class="para" id="p-derived-sec_Ch4Sec7-3-6-2-4">Write any equations relating the independent variables in the formula from step <span class="process-math">\(3.\)</span> Use these equations to write the quantity to be maximized or minimized as a function of one variable.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec_Ch4Sec7-3-6-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="sec_Ch4Sec7-3-6-2-5">
+<div class="para" id="p-derived-sec_Ch4Sec7-3-6-2-5">Identify the domain of consideration for the function in step <span class="process-math">\(4\)</span> based on the physical problem to be solved.</div>
+<div class="autopermalink" data-description="Item 5"><a href="#sec_Ch4Sec7-3-6-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="sec_Ch4Sec7-3-6-2-6">
+<div class="para" id="p-derived-sec_Ch4Sec7-3-6-2-6">Locate the maximum or minimum value of the function from step <span class="process-math">\(4.\)</span> This step typically involves looking for critical points and evaluating a function at endpoints.</div>
+<div class="autopermalink" data-description="Item 6"><a href="#sec_Ch4Sec7-3-6-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Problem-Solving Strategy 4.7.5: Solving Optimization Problems"><a href="#sec_Ch4Sec7-3-6" title="Copy heading and permalink for Problem-Solving Strategy 4.7.5: Solving Optimization Problems" aria-label="Copy heading and permalink for Problem-Solving Strategy 4.7.5: Solving Optimization Problems">🔗</a></div>
+</article>
+<div class="para" id="sec_Ch4Sec7-3-7">Now let’s apply this strategy to maximize the volume of an open-top box given a constraint on the amount of material to be used.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1165043024669"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maximizing the Volume of a Box.</span>
+</h4>
+<div class="para" id="fs-id1165043024669-2-1">An open-top box is to be made from a <span class="process-math">\(24\)</span> in. by <span class="process-math">\(36\)</span> in. piece of cardboard by removing a square from each corner of the box and folding up the flaps on each side. What size square should be cut out of each corner to get a box with the maximum volume?<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043024669-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1165043024669-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1165043024669-3-1">Step 1: Let <span class="process-math">\(x\)</span> be the side length of the square to be removed from each corner (<a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_003" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_003.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.7">Figure 4.7.7</a>). Then, the remaining four flaps can be folded up to form an open-top box. Let <span class="process-math">\(V\)</span> be the volume of the resulting box.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043024669-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_07_003"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/CNX_Calc_Figure_04_07_003.jpg" class="contained" alt='"There are two figures for this figure. The first one is a rectangle with sides 24 in and 36 in, with each corner having a square of side length x taken out of it. In the second picture, there is a box with side lengths x in, 24-2x in, and 36-2x in."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A square with side length <span class="process-math">\(x\)</span> inches is removed from each corner of the piece of cardboard. The remaining flaps are folded to form an open-top box.<div class="autopermalink" data-description="Figure 4.7.7"><a href="#CNX_Calc_Figure_04_07_003" title="Copy heading and permalink for Figure 4.7.7" aria-label="Copy heading and permalink for Figure 4.7.7">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="fs-id1165043024669-3-3">Step 2: We are trying to maximize the volume of a box. Therefore, the problem is to maximize <span class="process-math">\(V.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043024669-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165043024669-3-4">Step 3: As mentioned in step <span class="process-math">\(2,\)</span> are trying to maximize the volume of a box. The volume of a box is <span class="process-math">\(V=L\cdot W\cdot H,\)</span> where <span class="process-math">\(L,W, \text{ and } H\)</span> are the length, width, and height, respectively.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043024669-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165043024669-3-5">Step 4: From <a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_003" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_003.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.7">Figure 4.7.7</a>, we see that the height of the box is <span class="process-math">\(x\)</span> inches, the length is <span class="process-math">\(36-2x\)</span> inches, and the width is <span class="process-math">\(24-2x\)</span> inches. Therefore, the volume of the box is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043024669-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_003.html ./knowl/xref/CNX_Calc_Figure_04_07_003.html ./knowl/xref/CNX_Calc_Figure_04_07_003.html" id="fs-id1165043024669-3-6">
+\begin{equation*}
+V(x)=(36-2x)(24-2x)x=4x^3-120x^2+864x.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043024669-3-7">Step 5: To determine the domain of consideration, let’s examine <a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_003" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_003.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.7">Figure 4.7.7</a>. Certainly, we need <span class="process-math">\(x\gt 0.\)</span> Furthermore, the side length of the square cannot be greater than or equal to half the length of the shorter side, <span class="process-math">\(24\)</span> in.; otherwise, one of the flaps would be completely cut off. Therefore, we are trying to determine whether there is a maximum volume of the box for <span class="process-math">\(x\)</span> over the open interval <span class="process-math">\((0,12).\)</span> Since <span class="process-math">\(V\)</span> is a continuous function over the closed interval <span class="process-math">\([0,12],\)</span> we know <span class="process-math">\(V\)</span> will have an absolute maximum over the closed interval. Therefore, we consider <span class="process-math">\(V\)</span> over the closed interval <span class="process-math">\([0,12]\)</span> and check whether the absolute maximum occurs at an interior point.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043024669-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165043024669-3-8">Step 6: Since <span class="process-math">\(V(x)\)</span> is a continuous function over the closed, bounded interval <span class="process-math">\([0,12],\)</span> <span class="process-math">\(V\)</span> must have an absolute maximum (and an absolute minimum). Since <span class="process-math">\(V(x)=0\)</span> at the endpoints and <span class="process-math">\(V(x)\gt 0\)</span> for <span class="process-math">\(0\lt x\lt 12,\)</span> the maximum must occur at a critical point. The derivative is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043024669-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_003.html ./knowl/xref/CNX_Calc_Figure_04_07_003.html ./knowl/xref/CNX_Calc_Figure_04_07_003.html" id="fs-id1165043024669-3-9">
+\begin{equation*}
+V'(x)=12x^2-240x+864.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043024669-3-10">To find the critical points, we need to solve the equation<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043024669-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_003.html ./knowl/xref/CNX_Calc_Figure_04_07_003.html ./knowl/xref/CNX_Calc_Figure_04_07_003.html" id="fs-id1165043024669-3-11">
+\begin{equation*}
+12x^2-240x+864=0.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043024669-3-12">Dividing both sides of this equation by <span class="process-math">\(12,\)</span> the problem simplifies to solving the equation<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043024669-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_003.html ./knowl/xref/CNX_Calc_Figure_04_07_003.html ./knowl/xref/CNX_Calc_Figure_04_07_003.html" id="fs-id1165043024669-3-13">
+\begin{equation*}
+x^2-20x+72=0.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043024669-3-14">Using the quadratic formula, we find that the critical points are<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043024669-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_003.html ./knowl/xref/CNX_Calc_Figure_04_07_003.html ./knowl/xref/CNX_Calc_Figure_04_07_003.html" id="fs-id1165043024669-3-15">
+\begin{align*}
+x\amp=\frac{20\pm\sqrt{(-20)^2-4(1)(72)}}{2}\\
+x\amp=\frac{20\pm\sqrt{112}}{2}\\
+x\amp=\frac{20\pm 4\sqrt{7}}{2}\\
+x\amp=10\pm 2\sqrt{7}.
+\end{align*}
+</div>
+<div class="para" id="fs-id1165043024669-3-16">Since <span class="process-math">\(10+2\sqrt{7}\)</span> is not in the domain of consideration, the only critical point we need to consider is <span class="process-math">\(10-2\sqrt{7}.\)</span> Therefore, the volume is maximized if we let <span class="process-math">\(x=10-2\sqrt{7} \text{ in }.\)</span> The maximum volume is <span class="process-math">\(V(10-2\sqrt{7})=640+448\sqrt{7}\approx 1825 \text{ in. }^3\)</span> as shown in the following graph.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043024669-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_07_004"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/CNX_Calc_Figure_04_07_004.jpg" class="contained" alt='"The function V(x) = 4x3 – 120x2 + 864x is graphed. At its maximum there is an intersection of two dashed lines and text that reads “Maximum volume is approximately 1825 cubic inches when x ≈ 4.7 inches.”"'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Maximizing the volume of the box leads to finding the maximum value of a cubic polynomial.<div class="autopermalink" data-description="Figure 4.7.8"><a href="#CNX_Calc_Figure_04_07_004" title="Copy heading and permalink for Figure 4.7.8" aria-label="Copy heading and permalink for Figure 4.7.8">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 4.7.6.1"><a href="#fs-id1165043024669-3" title="Copy heading and permalink for Solution 4.7.6.1" aria-label="Copy heading and permalink for Solution 4.7.6.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.7.6: Maximizing the Volume of a Box"><a href="#fs-id1165043024669" title="Copy heading and permalink for Example 4.7.6: Maximizing the Volume of a Box" aria-label="Copy heading and permalink for Example 4.7.6: Maximizing the Volume of a Box">🔗</a></div>
+</article>
+<article class="note remark-like" id="sec_Ch4Sec7-3-9"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec_Ch4Sec7-3-9-1">Watch a <a class="external" href="http://www.openstax.org/l/20_boxvolume" target="_blank">video</a> about optimizing the volume of a box.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 4.7.9"><a href="#sec_Ch4Sec7-3-9" title="Copy heading and permalink for Note 4.7.9" aria-label="Copy heading and permalink for Note 4.7.9">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec7-3-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-10-1-1">Suppose the dimensions of the cardboard in <a href="sec_Ch4Sec7.html#fs-id1165043024669" class="xref" data-knowl="./knowl/xref/fs-id1165043024669.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.7.6: Maximizing the Volume of a Box">Example 4.7.6</a> are 20 in. by 30 in. Let <span class="process-math">\(x\)</span> be the side length of each square and write the volume of the open-top box as a function of <span class="process-math">\(x.\)</span> Determine the domain of consideration for <span class="process-math">\(x.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec7-3-10-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-10-3-1">The volume of the box is <span class="process-math">\(L\cdot W\cdot H.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.7.10.1"><a href="#sec_Ch4Sec7-3-10-3" title="Copy heading and permalink for Hint 4.7.10.1" aria-label="Copy heading and permalink for Hint 4.7.10.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec7-3-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-10-2-1">
+<span class="process-math">\(V(x)=x(20-2x)(30-2x).\)</span> The domain is <span class="process-math">\([0,10].\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.7.10.1"><a href="#sec_Ch4Sec7-3-10-2" title="Copy heading and permalink for Solution 4.7.10.1" aria-label="Copy heading and permalink for Solution 4.7.10.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.7.10"><a href="#sec_Ch4Sec7-3-10" title="Copy heading and permalink for Checkpoint 4.7.10" aria-label="Copy heading and permalink for Checkpoint 4.7.10">🔗</a></div>
+</article></details>
+<article class="example example-like" id="fs-id1165042350080"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Minimizing Travel Time.</span>
+</h4>
+<div class="para" id="fs-id1165042350080-2-1">An island is <span class="process-math">\(2 \text{ mi }\)</span> due north of its closest point along a straight shoreline. A visitor is staying at a cabin on the shore that is <span class="process-math">\(6 \text{ mi }\)</span> west of that point. The visitor is planning to go from the cabin to the island. Suppose the visitor runs at a rate of <span class="process-math">\(8 \text{ mph }\)</span> and swims at a rate of <span class="process-math">\(3 \text{ mph }.\)</span> How far should the visitor run before swimming to minimize the time it takes to reach the island?<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1165042350080-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1165042350080-3-1">Step 1: Let <span class="process-math">\(x\)</span> be the distance running and let <span class="process-math">\(y\)</span> be the distance swimming (<a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_005" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_005.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.12">Figure 4.7.12</a>). Let <span class="process-math">\(T\)</span> be the time it takes to get from the cabin to the island.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_07_005"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/CNX_Calc_Figure_04_07_011.jpg" class="contained" alt='"The cabin is x miles from the shore. From that point on the shore, the island is y miles away. If you were to continue the line from the cabin to the shore (the x miles one) and if you were to draw a line from the island parallel to the shore, then the lines would extend 2 miles from the island and 6 miles from the cabin before intersecting."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>How can we choose <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> to minimize the travel time from the cabin to the island?<div class="autopermalink" data-description="Figure 4.7.12"><a href="#CNX_Calc_Figure_04_07_005" title="Copy heading and permalink for Figure 4.7.12" aria-label="Copy heading and permalink for Figure 4.7.12">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="fs-id1165042350080-3-3">Step 2: The problem is to minimize <span class="process-math">\(T.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165042350080-3-4">Step 3: To find the time spent traveling from the cabin to the island, add the time spent running and the time spent swimming. Since Distance <span class="process-math">\(=\)</span> Rate <span class="process-math">\(\times  \)</span> Time <span class="process-math">\((D=R \times  T),\)</span> the time spent running is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/fs-id1165042343282.html ./knowl/xref/fs-id1165042343282.html" id="fs-id1165042350080-3-5">
+\begin{equation*}
+T_{\text{running}}=\frac{D_{\text{running}}}{R_{\text{running}}}=\frac{x}{8},
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042350080-3-6">and the time spent swimming is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/fs-id1165042343282.html ./knowl/xref/fs-id1165042343282.html" id="fs-id1165042350080-3-7">
+\begin{equation*}
+T_{\text{swimming}}=\frac{D_{\text{swimming}}}{R_{\text{swimming}}}=\frac{y}{3}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042350080-3-8">Therefore, the total time spent traveling is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/fs-id1165042343282.html ./knowl/xref/fs-id1165042343282.html" id="fs-id1165042350080-3-9">
+\begin{equation*}
+T=\frac{x}{8}+\frac{y}{3}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042350080-3-10">Step 4: From <a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_005" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_005.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.12">Figure 4.7.12</a>, the line segment of <span class="process-math">\(y\)</span> miles forms the hypotenuse of a right triangle with legs of length <span class="process-math">\(2 \text{ mi }\)</span> and <span class="process-math">\(6-x \text{ mi }.\)</span> Therefore, by the Pythagorean theorem, <span class="process-math">\(2^2+(6-x)^2=y^2,\)</span> and we obtain <span class="process-math">\(y=\sqrt{(6-x)^2+4}.\)</span> Thus, the total time spent traveling is given by the function<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/fs-id1165042343282.html ./knowl/xref/fs-id1165042343282.html" id="fs-id1165042350080-3-11">
+\begin{equation*}
+T(x)=\frac{x}{8}+\frac{\sqrt{(6-x)^2+4}}{3}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042350080-3-12">Step 5: From <a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_005" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_005.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.12">Figure 4.7.12</a>, we see that <span class="process-math">\(0\leq x\leq 6.\)</span> Therefore, <span class="process-math">\([0,6]\)</span> is the domain of consideration.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165042350080-3-13">Step 6: Since <span class="process-math">\(T(x)\)</span> is a continuous function over a closed, bounded interval, it has a maximum and a minimum. Let’s begin by looking for any critical points of <span class="process-math">\(T\)</span> over the interval <span class="process-math">\([0,6].\)</span> The derivative is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/fs-id1165042343282.html ./knowl/xref/fs-id1165042343282.html" id="fs-id1165042350080-3-14">
+\begin{equation*}
+T'(x)=\frac{1}{8}-\frac{1}{2} \frac{[(6-x)^2+4]^{-1/2}3}\cdot2(6-x)=\frac{1}{8}-\frac{(6-x)}{3\sqrt{(6-x)^2+4}}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042350080-3-15">If <span class="process-math">\(T'(x)=0,\)</span> then<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/fs-id1165042343282.html ./knowl/xref/fs-id1165042343282.html" id="fs-id1165042350080-3-16">
+\begin{equation*}
+\frac{1}{8}=\frac{6-x}{3\sqrt{(6-x)^2+4}}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042350080-3-17">Therefore,<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/fs-id1165042343282.html ./knowl/xref/fs-id1165042343282.html" id="fs-id1165042343282">
+\begin{equation}
+3\sqrt{(6-x)^2+4}=8(6-x).\tag{4.7.1}
+\end{equation}
+</div>
+<div class="para" id="fs-id1165042350080-3-19">Squaring both sides of this equation, we see that if <span class="process-math">\(x\)</span> satisfies this equation, then <span class="process-math">\(x\)</span> must satisfy<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/fs-id1165042343282.html ./knowl/xref/fs-id1165042343282.html" id="fs-id1165042350080-3-20">
+\begin{equation*}
+9[(6-x)^2+4]=64(6-x)^2,
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042350080-3-21">which implies<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/fs-id1165042343282.html ./knowl/xref/fs-id1165042343282.html" id="fs-id1165042350080-3-22">
+\begin{equation*}
+55(6-x)^2=36.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042350080-3-23">We conclude that if <span class="process-math">\(x\)</span> is a critical point, then <span class="process-math">\(x\)</span> satisfies<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/fs-id1165042343282.html ./knowl/xref/fs-id1165042343282.html" id="fs-id1165042350080-3-24">
+\begin{equation*}
+(x-6)^2=\frac{3}{6}{55}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042350080-3-25">Therefore, the possibilities for critical points are<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/CNX_Calc_Figure_04_07_005.html ./knowl/xref/fs-id1165042343282.html ./knowl/xref/fs-id1165042343282.html" id="fs-id1165042350080-3-26">
+\begin{equation*}
+x=6\pm\frac{6\sqrt{55}}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042350080-3-27">Since <span class="process-math">\(x=6+6/\sqrt{55}\)</span> is not in the domain, it is not a possibility for a critical point. On the other hand, <span class="process-math">\(x=6-6/\sqrt{55}\)</span> is in the domain. Since we squared both sides of <a href="sec_Ch4Sec7.html#fs-id1165042343282" class="xref" data-knowl="./knowl/xref/fs-id1165042343282.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.7.1">(4.7.1)</a> to arrive at the possible critical points, it remains to verify that <span class="process-math">\(x=6-6/\sqrt{55}\)</span> satisfies <a href="sec_Ch4Sec7.html#fs-id1165042343282" class="xref" data-knowl="./knowl/xref/fs-id1165042343282.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.7.1">(4.7.1)</a>. Since <span class="process-math">\(x=6-6/\sqrt{55}\)</span> does satisfy that equation, we conclude that <span class="process-math">\(x=6-6/\sqrt{55}\)</span> is a critical point, and it is the only one. To justify that the time is minimized for this value of <span class="process-math">\(x,\)</span> we just need to check the values of <span class="process-math">\(T(x)\)</span> at the endpoints <span class="process-math">\(x=0\)</span> and <span class="process-math">\(x=6,\)</span> and compare them with the value of <span class="process-math">\(T(x)\)</span> at the critical point <span class="process-math">\(x=6-6/\sqrt{55}.\)</span> We find that <span class="process-math">\(T(0)\approx 2.108 \text{ h }\)</span> and <span class="process-math">\(T(6)\approx 1.417 \text{ h, }\)</span> whereas <span class="process-math">\(T(6-6/\sqrt{55})\approx 1.368 \text{ h }.\)</span> Therefore, we conclude that <span class="process-math">\(T\)</span> has a local minimum at <span class="process-math">\(x\approx 5.19\)</span> mi.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042350080-3-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.7.11.1"><a href="#fs-id1165042350080-3" title="Copy heading and permalink for Solution 4.7.11.1" aria-label="Copy heading and permalink for Solution 4.7.11.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.7.11: Minimizing Travel Time"><a href="#fs-id1165042350080" title="Copy heading and permalink for Example 4.7.11: Minimizing Travel Time" aria-label="Copy heading and permalink for Example 4.7.11: Minimizing Travel Time">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec7-3-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-12-1-1">Suppose the island is <span class="process-math">\(1\)</span> mi from shore, and the distance from the cabin to the point on the shore closest to the island is <span class="process-math">\(15 \text{ mi }.\)</span> Suppose a visitor swims at the rate of <span class="process-math">\(2.5 \text{ mph }\)</span> and runs at a rate of <span class="process-math">\(6 \text{ mph }.\)</span> Let <span class="process-math">\(x\)</span> denote the distance the visitor will run before swimming, and find a function for the time it takes the visitor to get from the cabin to the island.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec7-3-12-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-12-3-1">The time <span class="process-math">\(T=T_{\text{running}}+T_{\text{swimming}}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-12-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.7.13.1"><a href="#sec_Ch4Sec7-3-12-3" title="Copy heading and permalink for Hint 4.7.13.1" aria-label="Copy heading and permalink for Hint 4.7.13.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec7-3-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-12-2-1">
+<span class="process-math">\(T(x)=\frac{x}{6}+\frac{\sqrt{(15-x)^2+1}}{2.5}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.7.13.1"><a href="#sec_Ch4Sec7-3-12-2" title="Copy heading and permalink for Solution 4.7.13.1" aria-label="Copy heading and permalink for Solution 4.7.13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.7.13"><a href="#sec_Ch4Sec7-3-12" title="Copy heading and permalink for Checkpoint 4.7.13" aria-label="Copy heading and permalink for Checkpoint 4.7.13">🔗</a></div>
+</article></details>
+<div class="para" id="sec_Ch4Sec7-3-13">In business, companies are interested in <dfn class="terminology">maximizing revenue</dfn>. In the following example, we consider a scenario in which a company has collected data on how many cars it is able to lease, depending on the price it charges its customers to rent a car. Let’s use these data to determine the price the company should charge to maximize the amount of money it brings in.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1165043353574"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maximizing Revenue.</span>
+</h4>
+<div class="para" id="fs-id1165043353574-2-1">Owners of a car rental company have determined that if they charge customers <span class="process-math">\(p\)</span> dollars per day to rent a car, where <span class="process-math">\(50\leq p\leq 200,\)</span> the number of cars <span class="process-math">\(n\)</span> they rent per day can be modeled by the linear function <span class="process-math">\(n(p)=1000-5p.\)</span> If they charge <span class="process-math">\(\$ 50\)</span> per day or less, they will rent all their cars. If they charge <span class="process-math">\(\$ 200\)</span> per day or more, they will not rent any cars. Assuming the owners plan to charge customers between $50 per day and <span class="process-math">\(\$ 200\)</span> per day to rent a car, how much should they charge to maximize their revenue?<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043353574-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1165043353574-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1165043353574-3-1">Step 1: Let <span class="process-math">\(p\)</span> be the price charged per car per day and let <span class="process-math">\(n\)</span> be the number of cars rented per day. Let <span class="process-math">\(R\)</span> be the revenue per day.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043353574-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165043353574-3-2">Step 2: The problem is to maximize <span class="process-math">\(R.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043353574-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165043353574-3-3">Step 3: The revenue (per day) is equal to the number of cars rented per day times the price charged per car per day—that is, <span class="process-math">\(R=n \times  p.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043353574-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165043353574-3-4">Step 4: Since the number of cars rented per day is modeled by the linear function <span class="process-math">\(n(p)=1000-5p,\)</span> the revenue <span class="process-math">\(R\)</span> can be represented by the function<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043353574-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1165043353574-3-5">
+\begin{equation*}
+R(p)=n \times  p=(1000-5p)p=-5p^2+1000p.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043353574-3-6">Step 5: Since the owners plan to charge between <span class="process-math">\(\$ 50\)</span> per car per day and <span class="process-math">\(\$ 200\)</span> per car per day, the problem is to find the maximum revenue <span class="process-math">\(R(p)\)</span> for <span class="process-math">\(p\)</span> in the closed interval <span class="process-math">\([50,200].\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043353574-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165043353574-3-7">Step 6: Since <span class="process-math">\(R\)</span> is a continuous function over the closed, bounded interval <span class="process-math">\([50,200],\)</span> it has an absolute maximum (and an absolute minimum) in that interval. To find the maximum value, look for critical points. The derivative is <span class="process-math">\(R'(p)=-10p+1000.\)</span> Therefore, the critical point is <span class="process-math">\(p=100\)</span> When <span class="process-math">\(p=100,\)</span> <span class="process-math">\(R(100)=\$ 50,000.\)</span> When <span class="process-math">\(p=50,\)</span> <span class="process-math">\(R(p)=\$ 37,500.\)</span> When <span class="process-math">\(p=200,\)</span> <span class="process-math">\(R(p)=\$ 0.\)</span> Therefore, the absolute maximum occurs at <span class="process-math">\(p=\$ 100.\)</span> The car rental company should charge <span class="process-math">\(\$ 100\)</span> per day per car to maximize revenue as shown in the following figure.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043353574-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_07_010"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/CNX_Calc_Figure_04_07_010.jpg" class="contained" alt='"The function R(p) is graphed. At its maximum there is an intersection of two dashed lines and text that reads "Maximum revenue is $50,000 per day when the price charged per car is $100 per day.""'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>To maximize revenue, a car rental company has to balance the price of a rental against the number of cars people will rent at that price.<div class="autopermalink" data-description="Figure 4.7.15"><a href="#CNX_Calc_Figure_04_07_010" title="Copy heading and permalink for Figure 4.7.15" aria-label="Copy heading and permalink for Figure 4.7.15">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 4.7.14.1"><a href="#fs-id1165043353574-3" title="Copy heading and permalink for Solution 4.7.14.1" aria-label="Copy heading and permalink for Solution 4.7.14.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.7.14: Maximizing Revenue"><a href="#fs-id1165043353574" title="Copy heading and permalink for Example 4.7.14: Maximizing Revenue" aria-label="Copy heading and permalink for Example 4.7.14: Maximizing Revenue">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec7-3-15" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-15-1-1">A car rental company charges its customers <span class="process-math">\(p\)</span> dollars per day, where <span class="process-math">\(60\leq p\leq 150.\)</span> It has found that the number of cars rented per day can be modeled by the linear function <span class="process-math">\(n(p)=750-5p.\)</span> How much should the company charge each customer to maximize revenue?<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec7-3-15-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-15-3-1">
+<span class="process-math">\(R(p)=n \times  p,\)</span> where <span class="process-math">\(n\)</span> is the number of cars rented and <span class="process-math">\(p\)</span> is the price charged per car.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-15-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.7.16.1"><a href="#sec_Ch4Sec7-3-15-3" title="Copy heading and permalink for Hint 4.7.16.1" aria-label="Copy heading and permalink for Hint 4.7.16.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec7-3-15-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-15-2-1">The company should charge <span class="process-math">\(\$ 75\)</span> per car per day.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-15-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.7.16.1"><a href="#sec_Ch4Sec7-3-15-2" title="Copy heading and permalink for Solution 4.7.16.1" aria-label="Copy heading and permalink for Solution 4.7.16.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.7.16"><a href="#sec_Ch4Sec7-3-15" title="Copy heading and permalink for Checkpoint 4.7.16" aria-label="Copy heading and permalink for Checkpoint 4.7.16">🔗</a></div>
+</article></details>
+<article class="example example-like" id="fs-id1165043350161"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maximizing the Area of an Inscribed Rectangle.</span>
+</h4>
+<div class="para" id="fs-id1165043350161-2-1">A rectangle is to be inscribed in the ellipse<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043350161-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="fs-id1165043350161-2-2">
+\begin{equation*}
+\frac{x^2}{4}+y^2=1.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043350161-2-3">What should the dimensions of the rectangle be to maximize its area? What is the maximum area?<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043350161-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1165043350161-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1165043350161-3-1">Step 1: For a rectangle to be inscribed in the ellipse, the sides of the rectangle must be parallel to the axes. Let <span class="process-math">\(L\)</span> be the length of the rectangle and <span class="process-math">\(W\)</span> be its width. Let <span class="process-math">\(A\)</span> be the area of the rectangle.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043350161-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_07_007"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/CNX_Calc_Figure_04_07_007.jpg" class="contained" alt='"The ellipse x2/4 + y2 = 1 is drawn with its x intercepts being ±2 and its y intercepts being ±1. There is a rectangle inscribed in the ellipse with length L (in the x-direction) and width W."&gt;'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>We want to maximize the area of a rectangle inscribed in an ellipse.<div class="autopermalink" data-description="Figure 4.7.18"><a href="#CNX_Calc_Figure_04_07_007" title="Copy heading and permalink for Figure 4.7.18" aria-label="Copy heading and permalink for Figure 4.7.18">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="fs-id1165043350161-3-3">Step 2: The problem is to maximize <span class="process-math">\(A.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043350161-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165043350161-3-4">Step 3: The area of the rectangle is <span class="process-math">\(A=LW.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043350161-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165043350161-3-5">Step 4: Let <span class="process-math">\((x,y)\)</span> be the corner of the rectangle that lies in the first quadrant, as shown in <a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_007" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_007.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.18">Figure 4.7.18</a>. We can write length <span class="process-math">\(L=2x\)</span> and width <span class="process-math">\(W=2y.\)</span> Since <span class="process-math">\(\frac{x^2}{4}+y^2=1\)</span> and <span class="process-math">\(y\gt 0,\)</span> we have <span class="process-math">\(y=\sqrt{1-\frac{x^2}{4}}.\)</span> Therefore, the area is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043350161-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_007.html ./knowl/xref/CNX_Calc_Figure_04_07_007.html ./knowl/xref/fs-id1165043354675.html ./knowl/xref/fs-id1165043354675.html ./knowl/xref/fs-id1165043354675.html" id="fs-id1165043350161-3-6">
+\begin{equation*}
+A=LW=(2x)}{(2y)=4x\sqrt{1-\frac{x^2}{4}}=2x\sqrt{4-x^2}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043350161-3-7">Step 5: From <a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_007" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_007.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.18">Figure 4.7.18</a>, we see that to inscribe a rectangle in the ellipse, the <span class="process-math">\(x\)</span>-coordinate of the corner in the first quadrant must satisfy <span class="process-math">\(0\lt x\lt 2.\)</span> Therefore, the problem reduces to looking for the maximum value of <span class="process-math">\(A(x)\)</span> over the open interval <span class="process-math">\((0,2).\)</span> Since <span class="process-math">\(A(x)\)</span> will have an absolute maximum (and absolute minimum) over the closed interval <span class="process-math">\([0,2],\)</span> we consider <span class="process-math">\(A(x)=2x\sqrt{4-x^2}\)</span> over the interval <span class="process-math">\([0,2].\)</span> If the absolute maximum occurs at an interior point, then we have found an absolute maximum in the open interval.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043350161-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165043350161-3-8">Step 6: As mentioned earlier, <span class="process-math">\(A(x)\)</span> is a continuous function over the closed, bounded interval <span class="process-math">\([0,2].\)</span> Therefore, it has an absolute maximum (and absolute minimum). At the endpoints <span class="process-math">\(x=0\)</span> and <span class="process-math">\(x=2,\)</span> <span class="process-math">\(A(x)=0.\)</span> For <span class="process-math">\(0\lt x\lt 2,\)</span> <span class="process-math">\(A(x)\gt 0.\)</span> Therefore, the maximum must occur at a critical point. Taking the derivative of <span class="process-math">\(A(x),\)</span> we obtain<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043350161-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_007.html ./knowl/xref/CNX_Calc_Figure_04_07_007.html ./knowl/xref/fs-id1165043354675.html ./knowl/xref/fs-id1165043354675.html ./knowl/xref/fs-id1165043354675.html" id="fs-id1165043350161-3-9">
+\begin{align*}
+A(x)\amp =2\sqrt{4-x^2}+2x\cdot\frac{1}{2\sqrt{4-x^2}}(-2x)\\
+\amp =2\sqrt{4-x^2}-\frac{2x^2}{\sqrt{4-x^2}}\\
+\amp =\frac{8-4x^2}{\sqrt{4-x^2}}.
+\end{align*}
+</div>
+<div class="para" id="fs-id1165043350161-3-10">To find critical points, we need to find where <span class="process-math">\(A(x)=0.\)</span> We can see that if <span class="process-math">\(x\)</span> is a solution of<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043350161-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_007.html ./knowl/xref/CNX_Calc_Figure_04_07_007.html ./knowl/xref/fs-id1165043354675.html ./knowl/xref/fs-id1165043354675.html ./knowl/xref/fs-id1165043354675.html" id="fs-id1165043354675">
+\begin{equation}
+\frac{8-4x^2}{\sqrt{4-x^2}}=0,\tag{4.7.2}
+\end{equation}
+</div>
+<div class="para" id="fs-id1165043350161-3-12">then <span class="process-math">\(x\)</span> must satisfy<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043350161-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_007.html ./knowl/xref/CNX_Calc_Figure_04_07_007.html ./knowl/xref/fs-id1165043354675.html ./knowl/xref/fs-id1165043354675.html ./knowl/xref/fs-id1165043354675.html" id="fs-id1165043350161-3-13">
+\begin{equation*}
+8-4x^2=0.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043350161-3-14">Therefore, <span class="process-math">\(x^2=2.\)</span> Thus, <span class="process-math">\(x=\pm\sqrt{2}\)</span> are the possible solutions of <a href="sec_Ch4Sec7.html#fs-id1165043354675" class="xref" data-knowl="./knowl/xref/fs-id1165043354675.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.7.2">(4.7.2)</a>. Since we are considering <span class="process-math">\(x\)</span> over the interval <span class="process-math">\([0,2],\)</span> <span class="process-math">\(x=\sqrt{2}\)</span> is a possibility for a critical point, but <span class="process-math">\(x=-\sqrt{2}\)</span> is not. Therefore, we check whether <span class="process-math">\(\sqrt{2}\)</span> is a solution of <a href="sec_Ch4Sec7.html#fs-id1165043354675" class="xref" data-knowl="./knowl/xref/fs-id1165043354675.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.7.2">(4.7.2)</a>. Since <span class="process-math">\(x=\sqrt{2}\)</span> is a solution of <a href="sec_Ch4Sec7.html#fs-id1165043354675" class="xref" data-knowl="./knowl/xref/fs-id1165043354675.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.7.2">(4.7.2)</a>, we conclude that <span class="process-math">\(\sqrt{2}\)</span> is the only critical point of <span class="process-math">\(A(x)\)</span> in the interval <span class="process-math">\([0,2].\)</span> Therefore, <span class="process-math">\(A(x)\)</span> must have an absolute maximum at the critical point <span class="process-math">\(x=\sqrt{2}.\)</span> To determine the dimensions of the rectangle, we need to find the length <span class="process-math">\(L\)</span> and the width <span class="process-math">\(W.\)</span> If <span class="process-math">\(x=\sqrt{2}\)</span> then<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043350161-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_007.html ./knowl/xref/CNX_Calc_Figure_04_07_007.html ./knowl/xref/fs-id1165043354675.html ./knowl/xref/fs-id1165043354675.html ./knowl/xref/fs-id1165043354675.html" id="fs-id1165043350161-3-15">
+\begin{equation*}
+y=\sqrt{1-\frac{(\sqrt{2})^2}{4}}=\sqrt{1-\frac{1}{2}}=\frac{1}{\sqrt{2}}.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165043350161-3-16">Therefore, the dimensions of the rectangle are <span class="process-math">\(L=2x=2\sqrt{2}\)</span> and <span class="process-math">\(W=2y=\frac{2}{\sqrt{2}}=\sqrt{2}.\)</span> The area of this rectangle is <span class="process-math">\(A=LW=(2\sqrt{2})(\sqrt{2})=4.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043350161-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.7.17.1"><a href="#fs-id1165043350161-3" title="Copy heading and permalink for Solution 4.7.17.1" aria-label="Copy heading and permalink for Solution 4.7.17.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.7.17: Maximizing the Area of an Inscribed Rectangle"><a href="#fs-id1165043350161" title="Copy heading and permalink for Example 4.7.17: Maximizing the Area of an Inscribed Rectangle" aria-label="Copy heading and permalink for Example 4.7.17: Maximizing the Area of an Inscribed Rectangle">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec7-3-17" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-17-1-1">Modify the area function <span class="process-math">\(A\)</span> if the rectangle is to be inscribed in the unit circle <span class="process-math">\(x^2+y^2=1.\)</span> What is the domain of consideration?<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec7-3-17-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-17-3-1">If <span class="process-math">\((x,y)\)</span> is the vertex of the square that lies in the first quadrant, then the area of the square is <span class="process-math">\(A=(2x)(2y)=4xy.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-17-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.7.19.1"><a href="#sec_Ch4Sec7-3-17-3" title="Copy heading and permalink for Hint 4.7.19.1" aria-label="Copy heading and permalink for Hint 4.7.19.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec7-3-17-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-3-17-2-1">
+<span class="process-math">\(A(x)=4x\sqrt{1-x^2}.\)</span> The domain of consideration is <span class="process-math">\([0,1].\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-3-17-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.7.19.1"><a href="#sec_Ch4Sec7-3-17-2" title="Copy heading and permalink for Solution 4.7.19.1" aria-label="Copy heading and permalink for Solution 4.7.19.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.7.19"><a href="#sec_Ch4Sec7-3-17" title="Copy heading and permalink for Checkpoint 4.7.19" aria-label="Copy heading and permalink for Checkpoint 4.7.19">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 4.7.1: Solving Optimization Problems over a Closed, Bounded Interval"><a href="#sec_Ch4Sec7-3" title="Copy heading and permalink for Subsection 4.7.1: Solving Optimization Problems over a Closed, Bounded Interval" aria-label="Copy heading and permalink for Subsection 4.7.1: Solving Optimization Problems over a Closed, Bounded Interval">🔗</a></div>
+</section>
+<section class="subsection" id="sec_Ch4Sec7-4">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving Optimization Problems when the Interval Is Not Closed or Is Unbounded</span>
+</h3>
+<div class="para" id="sec_Ch4Sec7-4-2">In the previous examples, we considered functions on closed, bounded domains. Consequently, by the extreme value theorem, we were guaranteed that the functions had absolute extrema. Let’s now consider functions for which the domain is neither closed nor bounded.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch4Sec7-4-3">Many functions still have at least one absolute extrema, even if the domain is not closed or the domain is unbounded. For example, the function <span class="process-math">\(f(x)=x^2+4\)</span> over <span class="process-math">\((-\infty,\infty)\)</span> has an absolute minimum of <span class="process-math">\(4\)</span> at <span class="process-math">\(x=0.\)</span> Therefore, we can still consider functions over unbounded domains or open intervals and determine whether they have any absolute extrema. In the next example, we try to minimize a function over an unbounded domain. We will see that, although the domain of consideration is <span class="process-math">\((0,\infty),\)</span> the function has an absolute minimum.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch4Sec7-4-4">In the following example, we look at constructing a box of least surface area with a prescribed volume. It is not difficult to show that for a closed-top box, by symmetry, among all boxes with a specified volume, a cube will have the smallest surface area. Consequently, we consider the modified problem of determining which open-topped box with a specified volume has the smallest surface area.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="fs-id1165042327673"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Minimizing Surface Area.</span>
+</h4>
+<div class="para" id="fs-id1165042327673-2-1">A rectangular box with a square base, an open top, and a volume of <span class="process-math">\(216\)</span> in.3 is to be constructed. What should the dimensions of the box be to minimize the surface area of the box? What is the minimum surface area?<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042327673-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="fs-id1165042327673-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="fs-id1165042327673-3-1">Step 1: Draw a rectangular box and introduce the variable <span class="process-math">\(x\)</span> to represent the length of each side of the square base; let <span class="process-math">\(y\)</span> represent the height of the box. Let <span class="process-math">\(S\)</span> denote the surface area of the open-top box.<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042327673-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_07_008"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/CNX_Calc_Figure_04_07_008.jpg" class="contained" alt='"A box with square base is shown. The base has side length x, and the height is y."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>We want to minimize the surface area of a square-based box with a given volume.<div class="autopermalink" data-description="Figure 4.7.21"><a href="#CNX_Calc_Figure_04_07_008" title="Copy heading and permalink for Figure 4.7.21" aria-label="Copy heading and permalink for Figure 4.7.21">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="fs-id1165042327673-3-3">Step 2: We need to minimize the surface area. Therefore, we need to minimize <span class="process-math">\(S.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042327673-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165042327673-3-4">Step 3: Since the box has an open top, we need only determine the area of the four vertical sides and the base. The area of each of the four vertical sides is <span class="process-math">\(x\cdot y.\)</span> The area of the base is <span class="process-math">\(x^2.\)</span> Therefore, the surface area of the box is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042327673-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_009.html" id="fs-id1165042327673-3-5">
+\begin{equation*}
+S=4xy+x^2.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042327673-3-6">Step 4: Since the volume of this box is <span class="process-math">\(x^2y\)</span> and the volume is given as <span class="process-math">\(216 \text{ in. }^3,\)</span> the constraint equation is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042327673-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_009.html" id="fs-id1165042327673-3-7">
+\begin{equation*}
+x^2y=216.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042327673-3-8">Solving the constraint equation for <span class="process-math">\(y,\)</span> we have <span class="process-math">\(y=\frac{216}{x^2}.\)</span> Therefore, we can write the surface area as a function of <span class="process-math">\(x\)</span> only:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042327673-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_009.html" id="fs-id1165042327673-3-9">
+\begin{equation*}
+S(x)=4x\left(\frac{216}{x^2}\right)+x^2.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042327673-3-10">Therefore, <span class="process-math">\(S(x)=\frac{864}{x}+x^2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042327673-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165042327673-3-11">Step 5: Since we are requiring that <span class="process-math">\(x^2y=216,\)</span> we cannot have <span class="process-math">\(x=0.\)</span> Therefore, we need <span class="process-math">\(x\gt 0.\)</span> On the other hand, <span class="process-math">\(x\)</span> is allowed to have any positive value. Note that as <span class="process-math">\(x\)</span> becomes large, the height of the box <span class="process-math">\(y\)</span> becomes correspondingly small so that <span class="process-math">\(x^2y=216.\)</span> Similarly, as <span class="process-math">\(x\)</span> becomes small, the height of the box becomes correspondingly large. We conclude that the domain is the open, unbounded interval <span class="process-math">\((0,\infty).\)</span> Note that, unlike the previous examples, we cannot reduce our problem to looking for an absolute maximum or absolute minimum over a closed, bounded interval. However, in the next step, we discover why this function must have an absolute minimum over the interval <span class="process-math">\((0,\infty).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042327673-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="fs-id1165042327673-3-12">Step 6: Note that as <span class="process-math">\(x\to0^+,\)</span> <span class="process-math">\(S(x)\to\infty.\)</span> Also, as <span class="process-math">\(x\to\infty,\)</span> <span class="process-math">\(S(x)\to\infty.\)</span> Since <span class="process-math">\(S\)</span> is a continuous function that approaches infinity at the ends, it must have an absolute minimum at some <span class="process-math">\(x\in(0,\infty).\)</span> This minimum must occur at a critical point of <span class="process-math">\(S.\)</span> The derivative is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042327673-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_009.html" id="fs-id1165042327673-3-13">
+\begin{equation*}
+S'(x)=-\frac{864}{x^2}+2x.
+\end{equation*}
+</div>
+<div class="para" id="fs-id1165042327673-3-14">Therefore, <span class="process-math">\(S'(x)=0\)</span> when <span class="process-math">\(2x=\frac{864}{x^2}.\)</span> Solving this equation for <span class="process-math">\(x,\)</span> we obtain <span class="process-math">\(x^3=432,\)</span> so <span class="process-math">\(x=\sqrt[3]{432}=6\sqrt[3]{2}.\)</span> Since this is the only critical point of <span class="process-math">\(S,\)</span> the absolute minimum must occur at <span class="process-math">\(x=6\sqrt[3]{2}\)</span> (see <a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_009" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_009.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.22">Figure 4.7.22</a>). When <span class="process-math">\(x=6\sqrt[3]{2},\)</span> <span class="process-math">\(y=\frac{216}{(6\sqrt[3]{2})^2}=3\sqrt[3]{2} \text{ in }.\)</span> Therefore, the dimensions of the box should be <span class="process-math">\(x=6\sqrt[3]{2} \text{ in }.\)</span> and <span class="process-math">\(y=3\sqrt[3]{2} \text{ in }.\)</span> With these dimensions, the surface area is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165042327673-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_009.html" id="fs-id1165042327673-3-15">
+\begin{equation*}
+S(6\sqrt[3]{2})=\frac{864}{6\sqrt[3]{2}}+(6\sqrt[3]{2})^2=108\sqrt[3]{4} \text{ in. }^2&gt;
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="CNX_Calc_Figure_04_07_009"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;">
+<img src="external/ch4/CNX_Calc_Figure_04_07_009.jpg" class="contained" alt="described in detail following the image" aria-describedby="CNX_Calc_Figure_04_07_009-1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="CNX_Calc_Figure_04_07_009-1-description">"The function <span class="process-math">\(S(x) = 864/x + x^2\)</span> is graphed. At its minimum there is a dashed line and text that reads "Minimum surface area is 108 times the cube root of 4 square inches when x = 6 times the cube root of 2 inches.""</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>We can use a graph to determine the dimensions of a box of given the volume and the minimum surface area.<div class="autopermalink" data-description="Figure 4.7.22"><a href="#CNX_Calc_Figure_04_07_009" title="Copy heading and permalink for Figure 4.7.22" aria-label="Copy heading and permalink for Figure 4.7.22">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 4.7.20.1"><a href="#fs-id1165042327673-3" title="Copy heading and permalink for Solution 4.7.20.1" aria-label="Copy heading and permalink for Solution 4.7.20.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.7.20: Minimizing Surface Area"><a href="#fs-id1165042327673" title="Copy heading and permalink for Example 4.7.20: Minimizing Surface Area" aria-label="Copy heading and permalink for Example 4.7.20: Minimizing Surface Area">🔗</a></div>
+</article>
+<article class="example example-like" id="sec_Ch4Sec7-4-6"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Minimizing Cost.</span>
+</h4>A company must produce a sturdy rectangular container with a square base and a volume of 128 cubic ft. The cost to produce the top and sides of this box is $2 per square foot and the cost to produce the bottom is $6 per square foot. FInd the dimensions of the box that will minimize cost.<div class="solutions">
+<details id="sec_Ch4Sec7-4-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-4-6-3-1">Step 1: Draw a rectangular box and introduce the variable <span class="process-math">\(x\)</span> to represent the length of each side of the square base; let <span class="process-math">\(h\)</span> represent the height of the box. Let <span class="process-math">\(C\)</span> denote the cost of producing the box.<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="Busi_Calc_Figure_04_07_003"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/Busi_Calc_Figure_04_07_003.jpg" class="contained" alt='"A box with square base is shown. The base has side length x, and the height is h."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>We want to minimize the cost to produce a square-based box with a given volume.<div class="autopermalink" data-description="Figure 4.7.24"><a href="#Busi_Calc_Figure_04_07_003" title="Copy heading and permalink for Figure 4.7.24" aria-label="Copy heading and permalink for Figure 4.7.24">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="sec_Ch4Sec7-4-6-3-3">Step 2: We need to minimize the cost. Therefore, we need to minimize <span class="process-math">\(C.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-6-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch4Sec7-4-6-3-4">Step 3: We need to determine the cost of the four vertical sides, the top, and the base. In order to find the cost, we must first find the surface area of the box. The area of each of the four vertical sides is <span class="process-math">\(x\cdot h.\)</span> The area of the base and top are both <span class="process-math">\(x^2.\)</span> Since the cost to produce the top and sides of this box is $2 per square foot and the cost to produce the bottom is $6 per square foot, then the cost is<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-6-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Busi_Calc_Figure_04_07_002.html" id="sec_Ch4Sec7-4-6-3-5">
+\begin{equation*}
+C=2x^2+8xh+6x^2=8x^2+8xh
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec7-4-6-3-6">Step 4: Since the volume of this box is <span class="process-math">\(x^2h\)</span> and the volume is given as <span class="process-math">\(128\)</span> cubic ft, the constraint equation is<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-6-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Busi_Calc_Figure_04_07_002.html" id="sec_Ch4Sec7-4-6-3-7">
+\begin{equation*}
+x^2h=128.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec7-4-6-3-8">Solving the constraint equation for <span class="process-math">\(h,\)</span> we have <span class="process-math">\(h=\frac{128}{x^2}.\)</span> Therefore, we can write the cost as a function of <span class="process-math">\(x\)</span> only:<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-6-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Busi_Calc_Figure_04_07_002.html" id="sec_Ch4Sec7-4-6-3-9">
+\begin{equation*}
+C(x)=8x^2+8x\cdot\frac{128}{x^2}=8x^2+\frac{1024}{x}.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec7-4-6-3-10">Step 5: Since we are requiring that <span class="process-math">\(x^2h=128,\)</span> we cannot have <span class="process-math">\(x=0.\)</span> Therefore, we need <span class="process-math">\(x\gt 0.\)</span> On the other hand, <span class="process-math">\(x\)</span> is allowed to have any positive value. Note that as <span class="process-math">\(x\)</span> becomes large, the height of the box <span class="process-math">\(h\)</span> becomes correspondingly small so that <span class="process-math">\(x^2h=128.\)</span> Similarly, as <span class="process-math">\(x\)</span> becomes small, the height of the box becomes correspondingly large. We conclude that the domain is the open, unbounded interval <span class="process-math">\((0,\infty).\)</span> Note that, unlike the previous examples, we cannot reduce our problem to looking for an absolute maximum or absolute minimum over a closed, bounded interval. However, in the next step, we discover why this function must have an absolute minimum over the interval <span class="process-math">\((0,\infty).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-6-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_Ch4Sec7-4-6-3-11">Step 6: Note that as <span class="process-math">\(x\to0^+,\)</span> <span class="process-math">\(C(x)\to\infty.\)</span> Also, as <span class="process-math">\(x\to\infty,\)</span> <span class="process-math">\(C(x)\to\infty.\)</span> Since <span class="process-math">\(C\)</span> is a continuous function that approaches infinity at the ends, it must have an absolute minimum at some <span class="process-math">\(x\in(0,\infty).\)</span> This minimum must occur at a critical point of <span class="process-math">\(C.\)</span> The derivative is<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-6-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Busi_Calc_Figure_04_07_002.html" id="sec_Ch4Sec7-4-6-3-12">
+\begin{equation*}
+C'(x)=16x-\frac{1024}{x^2}.
+\end{equation*}
+</div>
+<div class="para" id="sec_Ch4Sec7-4-6-3-13">Therefore, <span class="process-math">\(C'(x)=0\)</span> when <span class="process-math">\(16x=\frac{1024}{x^2}.\)</span> Solving this equation for <span class="process-math">\(x,\)</span> we obtain <span class="process-math">\(x^3=64,\)</span> so <span class="process-math">\(x=4.\)</span> Since this is the only critical point of <span class="process-math">\(C,\)</span> the absolute minimum must occur at <span class="process-math">\(x=4\)</span> (see <a href="sec_Ch4Sec7.html#Busi_Calc_Figure_04_07_002" class="xref" data-knowl="./knowl/xref/Busi_Calc_Figure_04_07_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.25">Figure 4.7.25</a>). When <span class="process-math">\(x=4,\)</span> <span class="process-math">\(h=\frac{128}{4^2}=8\)</span> feet. Therefore, the dimensions of the box should be <span class="process-math">\(x=4\)</span> feet and <span class="process-math">\(h=8\)</span> feet. With these dimensions, the cost is<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-6-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Busi_Calc_Figure_04_07_002.html" id="sec_Ch4Sec7-4-6-3-14">
+\begin{equation*}
+C(4)=8(4)^2+\frac{1024}{4}=\$384.
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="Busi_Calc_Figure_04_07_002"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;">
+<img src="external/ch4/Busi_Calc_Figure_04_07_002.png" class="contained" alt="described in detail following the image" aria-describedby="Busi_Calc_Figure_04_07_002-1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="Busi_Calc_Figure_04_07_002-1-description">"The function <span class="process-math">\(C(x)=8x^2+\frac{1024}{x}\)</span> is graphed on the interval <span class="process-math">\((0,\infty)\)</span> and has an absolute minimum at (4,384)."</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.25<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(C(x)=8x^2+\frac{1024}{x}\)</span> has an absolute minimum at (4,384).<div class="autopermalink" data-description="Figure 4.7.25"><a href="#Busi_Calc_Figure_04_07_002" title="Copy heading and permalink for Figure 4.7.25" aria-label="Copy heading and permalink for Figure 4.7.25">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 4.7.23.1"><a href="#sec_Ch4Sec7-4-6-3" title="Copy heading and permalink for Solution 4.7.23.1" aria-label="Copy heading and permalink for Solution 4.7.23.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.7.23: Minimizing Cost"><a href="#sec_Ch4Sec7-4-6" title="Copy heading and permalink for Example 4.7.23: Minimizing Cost" aria-label="Copy heading and permalink for Example 4.7.23: Minimizing Cost">🔗</a></div>
+</article>
+<details id="sec_Ch4Sec7-4-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-4-7-1-1">Consider the an open-top box, which is to have volume <span class="process-math">\(216 \text{ in. }^3.\)</span> Suppose the cost of the material for the base is <span class="process-math">\(20\text{ cents }/\text{ in. }^2 \)</span> and the cost of the material for the sides is <span class="process-math">\(30\text{ cents }/\text{ in. }^2 \)</span> and we are trying to minimize the cost of this box. Write the cost as a function of the side lengths of the base. (Let <span class="process-math">\(x\)</span> be the side length of the base and <span class="process-math">\(y\)</span> be the height of the box.)<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="sec_Ch4Sec7-4-7-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-4-7-3-1">If the cost of one of the sides is <span class="process-math">\(30\text{ cents }/\text{ in. }^2 ,\)</span> the cost of that side is <span class="process-math">\(0.30xy.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.7.26.1"><a href="#sec_Ch4Sec7-4-7-3" title="Copy heading and permalink for Hint 4.7.26.1" aria-label="Copy heading and permalink for Hint 4.7.26.1">🔗</a></div>
+</div></details>
+<details id="sec_Ch4Sec7-4-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="sec_Ch4Sec7-4-7-2-1">
+<span class="process-math">\(C(x)=\frac{259.2}{x}+0.2x^2\)</span> dollars<div class="autopermalink" data-description="Paragraph"><a href="#sec_Ch4Sec7-4-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.7.26.1"><a href="#sec_Ch4Sec7-4-7-2" title="Copy heading and permalink for Solution 4.7.26.1" aria-label="Copy heading and permalink for Solution 4.7.26.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.7.26"><a href="#sec_Ch4Sec7-4-7" title="Copy heading and permalink for Checkpoint 4.7.26" aria-label="Copy heading and permalink for Checkpoint 4.7.26">🔗</a></div>
+</article></details>
+<article class="example example-like" id="APPglobalMaxMinG"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding the best viewing angle.</span>
+</h4>
+<div class="para" id="APPglobalMaxMinG-2-1">The Statue of Liberty has height <span class="process-math">\(46\)</span>m and stands on a <span class="process-math">\(47\)</span>m tall pedestal. How far from the statue should an observer stand to maximize the angle subtended by the statue at the observer’s eye, which is <span class="process-math">\(1.5\)</span>m above the base of the pedestal?<div class="autopermalink" data-description="Paragraph"><a href="#APPglobalMaxMinG-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="APPglobalMaxMinG-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="APPglobalMaxMinG-3-1">
+<div class="para">Obviously if we stand too close then all the observer sees is the pedestal, while if they stand too far then everything is tiny. The best spot for taking a photograph is somewhere in between.</div>
+<ul class="disc" id="APPglobalMaxMinG-3-1-1">
+<li id="APPglobalMaxMinG-3-1-1-1">
+<div class="para" id="APPglobalMaxMinG-3-1-1-1-1">Draw a careful picture <details class="ptx-footnote" aria-live="polite" id="APPglobalMaxMinG-3-1-1-1-1-1"><summary class="ptx-footnote__number" title="Footnote 4.7.1"><sup> 1 </sup></summary>
+<div class="ptx-footnote__contents" id="APPglobalMaxMinG-3-1-1-1-1-1">And make some healthy use of public domain clip art.
+</div></details><div class="autopermalink" data-description="Paragraph"><a href="#APPglobalMaxMinG-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:5%;margin-right:5%;grid-template-columns:100%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/ch4/liberty.svg" role="img" class="contained"></div></div>
+</div>
+</div>
+<div class="para" id="APPglobalMaxMinG-3-1-1-1-3">and we can put in the relevant lengths and angles.<div class="autopermalink" data-description="Paragraph"><a href="#APPglobalMaxMinG-3-1-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#APPglobalMaxMinG-3-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="APPglobalMaxMinG-3-1-1-2">
+<div class="para" id="p-derived-APPglobalMaxMinG-3-1-1-2">The height of the statue is <span class="process-math">\(h = 46\)</span>m, and the height of the pedestal (above the eye) is <span class="process-math">\(p = 47-1.5 = 45.5\)</span>m. The horizontal distance from the statue to the eye is <span class="process-math">\(x\text{.}\)</span> There are two relevant angles. First <span class="process-math">\(\theta\)</span> is the angle subtended by the statue, while <span class="process-math">\(\varphi\)</span> is the angle subtended by the portion of the pedestal above the eye.</div>
+<div class="autopermalink" data-description="Item"><a href="#APPglobalMaxMinG-3-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="APPglobalMaxMinG-3-1-1-3">
+<div class="para" id="p-derived-APPglobalMaxMinG-3-1-1-3">Some trigonometry gives us<div class="displaymath process-math" id="APPglobalMaxMinG-3-1-1-3-1">
+\begin{align*}
+\tan \varphi &amp;= \frac{p}{x}\\
+\tan (\varphi+\theta) &amp;= \frac{p+h}{x}
+\end{align*}
+</div>Thus<div class="displaymath process-math" id="APPglobalMaxMinG-3-1-1-3-2">
+\begin{align*}
+\varphi &amp;= \arctan \frac{p}{x}\\
+\varphi+\theta &amp;= \arctan \frac{p+h}{x}
+\end{align*}
+</div>and so<div class="displaymath process-math" id="APPglobalMaxMinG-3-1-1-3-3">
+\begin{align*}
+\theta &amp;= \arctan \frac{p+h}{x} - \arctan\frac{p}{x}.
+\end{align*}
+</div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#APPglobalMaxMinG-3-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="APPglobalMaxMinG-3-1-1-4">
+<div class="para logical" id="APPglobalMaxMinG-3-1-1-4-1">
+<div class="para">If we allow the viewer to stand at any point in front of the statue, then <span class="process-math">\(0\le x
+\lt \infty\text{.}\)</span> Further observe that as <span class="process-math">\(x \rightarrow \infty\)</span> or <span class="process-math">\(x \rightarrow 0\)</span> the angle <span class="process-math">\(\theta \rightarrow 0\text{,}\)</span>  since</div>
+<div class="displaymath process-math" id="APPglobalMaxMinG-3-1-1-4-1-5">
+\begin{equation*}
+\lim_{x\rightarrow\infty} \arctan \frac{p+h}{x} =
+\lim_{x\rightarrow\infty} \arctan \frac{p}{x} = 0
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="APPglobalMaxMinG-3-1-1-4-1-6">
+\begin{equation*}
+\lim_{x\rightarrow 0^+} \arctan \frac{p+h}{x} =
+\lim_{x\rightarrow 0^+} \arctan \frac{p}{x} = \frac{\pi}{2}
+\end{equation*}
+</div>
+<div class="para">Clearly the largest value of <span class="process-math">\(\theta\)</span> will be strictly positive and so has to be taken for some <span class="process-math">\(0 \lt x \lt \infty\text{.}\)</span> (Note the strict inequalities.) This <span class="process-math">\(x\)</span> will be a local maximum as well as a global maximum. As <span class="process-math">\(\theta\)</span> is not singular at any <span class="process-math">\(0 \lt x \lt \infty\text{,}\)</span> we need only search for critical points.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APPglobalMaxMinG-3-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="APPglobalMaxMinG-3-1-1-4-2">
+<div class="para">A careful application of the chain rule shows that the derivative is</div>
+<div class="displaymath process-math" id="APPglobalMaxMinG-3-1-1-4-2-1">
+\begin{align*}
+\diff{\theta}{x}
+&amp;=
+\frac{1}{1+(\frac{p+h}{x})^2}\cdot \left(\frac{-(p+h)}{x^2}\right) -
+\frac{1}{1+(\frac{p}{x})^2}\cdot \left(\frac{-p}{x^2}\right)\\
+&amp;= \frac{-(p+h)}{x^2+(p+h)^2} + \frac{p}{x^2+p^2}
+\end{align*}
+</div>
+<div class="para">So a critical point occurs when</div>
+<div class="displaymath process-math" id="APPglobalMaxMinG-3-1-1-4-2-2">
+\begin{align*}
+\frac{(p+h)}{x^2+(p+h)^2} &amp;= \frac{p}{x^2+p^2} &amp; \text{cross multiply}\\
+(p+h)(x^2+p^2) &amp;= p(x^2+(p+h)^2) &amp; \text{collect $x$ terms}\\
+x^2 (p+h-p) &amp;= p(p+h)^2 - p^2 (p+h) &amp; \text{clean up}\\
+h x^2 &amp;= p(p+h)(p+h-p) = ph(p+h) \\
+\amp\hskip1in \text{cancel common factors}\\
+x^2 &amp;= p(p+h)\\
+x &amp;= \pm\sqrt{p(p+h)} \approx \pm 64.9m
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APPglobalMaxMinG-3-1-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#APPglobalMaxMinG-3-1-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="APPglobalMaxMinG-3-1-1-5">
+<div class="para" id="p-derived-APPglobalMaxMinG-3-1-1-5">Thus the best place to stand approximately <span class="process-math">\(64.9\)</span>m in front or behind the statue. At that point <span class="process-math">\(\theta \approx 0.348\)</span> radians or <span class="process-math">\(19.9^\circ\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#APPglobalMaxMinG-3-1-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#APPglobalMaxMinG-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.7.27.1"><a href="#APPglobalMaxMinG-3" title="Copy heading and permalink for Solution 4.7.27.1" aria-label="Copy heading and permalink for Solution 4.7.27.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.7.27: Finding the best viewing angle"><a href="#APPglobalMaxMinG" title="Copy heading and permalink for Example 4.7.27: Finding the best viewing angle" aria-label="Copy heading and permalink for Example 4.7.27: Finding the best viewing angle">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 4.7.2: Solving Optimization Problems when the Interval Is Not Closed or Is Unbounded"><a href="#sec_Ch4Sec7-4" title="Copy heading and permalink for Subsection 4.7.2: Solving Optimization Problems when the Interval Is Not Closed or Is Unbounded" aria-label="Copy heading and permalink for Subsection 4.7.2: Solving Optimization Problems when the Interval Is Not Closed or Is Unbounded">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 4.7: Applied Optimization Problems"><a href="#sec_Ch4Sec7" title="Copy heading and permalink for Section 4.7: Applied Optimization Problems" aria-label="Copy heading and permalink for Section 4.7: Applied Optimization Problems">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec_Ch4Sec6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch_appendix.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

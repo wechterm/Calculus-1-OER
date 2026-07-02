@@ -53,14 +53,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.6';
+eBookConfig.runestone_version = '8.1.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.53a23d1b65c1dce2.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.4787412a251795e3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.39f982db166f319d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -81,7 +81,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_Ch4Sec5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_fourth.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch_appendix.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec_Ch4Sec5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_fourth.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_Ch4Sec7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -493,6 +493,13 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec6.html#sec_Ch4Sec6-5" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Curve Sketching</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_Ch4Sec7.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Applied Optimization Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec7.html#sec_Ch4Sec7-3" class="internal"><span class="codenumber">4.7.1</span> <span class="title">Solving Optimization Problems over a Closed, Bounded Interval</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_Ch4Sec7.html#sec_Ch4Sec7-4" class="internal"><span class="codenumber">4.7.2</span> <span class="title">Solving Optimization Problems when the Interval Is Not Closed or Is Unbounded</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -853,82 +860,84 @@ f''(x)=20x^3-30x=10x(2x^2-3).
 <article class="example example-like" id="APPsketchB"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sketch <span class="process-math">\(f(x)=x^4-4x^3\)</span>.</span>
 </h4>
-<div class="para logical" id="APPsketchB-2">
-<ol class="decimal ol-marker-5" id="APPsketchB-2-1">
-<li id="APPsketchB-2-1-1">
-<div class="para logical" id="APPsketchB-2-1-1-1">
+<details id="APPsketchB-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="APPsketchB-2-1">
+<ol class="decimal ol-marker-5" id="APPsketchB-2-1-1">
+<li id="APPsketchB-2-1-1-1">
+<div class="para logical" id="APPsketchB-2-1-1-1-1">
 <div class="para">Reading from <span class="process-math">\(f(x)\text{:}\)</span>
 </div>
-<ul class="disc" id="APPsketchB-2-1-1-1-2">
-<li id="APPsketchB-2-1-1-1-2-1">
-<div class="para" id="p-derived-APPsketchB-2-1-1-1-2-1">The function is a polynomial so it is defined everywhere.</div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<ul class="disc" id="APPsketchB-2-1-1-1-1-2">
+<li id="APPsketchB-2-1-1-1-1-2-1">
+<div class="para" id="p-derived-APPsketchB-2-1-1-1-1-2-1">The function is a polynomial so it is defined everywhere.</div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-1-1-2-2">
-<div class="para" id="p-derived-APPsketchB-2-1-1-1-2-2">Since <span class="process-math">\(f(-x) = x^4+4x^3 \neq \pm f(x)\text{,}\)</span> it is not even or odd. Nor is it periodic.</div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<li id="APPsketchB-2-1-1-1-1-2-2">
+<div class="para" id="p-derived-APPsketchB-2-1-1-1-1-2-2">Since <span class="process-math">\(f(-x) = x^4+4x^3 \neq \pm f(x)\text{,}\)</span> it is not even or odd. Nor is it periodic.</div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-1-1-2-3">
-<div class="para" id="p-derived-APPsketchB-2-1-1-1-2-3">The <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(y=f(0)=0\text{,}\)</span> while the <span class="process-math">\(x\)</span>-intercepts are given by the solution of<div class="displaymath process-math" id="APPsketchB-2-1-1-1-2-3-4">
+<li id="APPsketchB-2-1-1-1-1-2-3">
+<div class="para" id="p-derived-APPsketchB-2-1-1-1-1-2-3">The <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(y=f(0)=0\text{,}\)</span> while the <span class="process-math">\(x\)</span>-intercepts are given by the solution of<div class="displaymath process-math" id="APPsketchB-2-1-1-1-1-2-3-4">
 \begin{align*}
 f(x)=x^4-4x^3 &amp;= 0\\
 x^3(x-4)&amp;=0
 \end{align*}
 </div>Hence the <span class="process-math">\(x\)</span>-intercepts are <span class="process-math">\(0,4\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-1-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-1-1-2-4">
-<div class="para" id="p-derived-APPsketchB-2-1-1-1-2-4">Since <span class="process-math">\(f\)</span> is a polynomial it does not have any vertical asymptotes.</div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-1-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<li id="APPsketchB-2-1-1-1-1-2-4">
+<div class="para" id="p-derived-APPsketchB-2-1-1-1-1-2-4">Since <span class="process-math">\(f\)</span> is a polynomial it does not have any vertical asymptotes.</div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-1-1-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-1-1-2-5">
-<div class="para" id="p-derived-APPsketchB-2-1-1-1-2-5">For very large <span class="process-math">\(x\text{,}\)</span> both positive and negative, the <span class="process-math">\(x^4\)</span> term in <span class="process-math">\(f(x)\)</span> dominates the other term so that<div class="displaymath process-math" id="APPsketchB-2-1-1-1-2-5-4">
+<li id="APPsketchB-2-1-1-1-1-2-5">
+<div class="para" id="p-derived-APPsketchB-2-1-1-1-1-2-5">For very large <span class="process-math">\(x\text{,}\)</span> both positive and negative, the <span class="process-math">\(x^4\)</span> term in <span class="process-math">\(f(x)\)</span> dominates the other term so that<div class="displaymath process-math" id="APPsketchB-2-1-1-1-1-2-5-4">
 \begin{align*}
 f(x)\rightarrow\begin{cases}+\infty &amp;\text{as }x\rightarrow+\infty\\
 +\infty &amp;\text{as }x\rightarrow-\infty
 \end{cases}
 \end{align*}
 </div>and the function has no horizontal asymptotes.</div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-1-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-1-1-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchB-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchB-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#APPsketchB-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#APPsketchB-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-2">
-<div class="para logical" id="APPsketchB-2-1-2-1">
+<li id="APPsketchB-2-1-1-2">
+<div class="para logical" id="APPsketchB-2-1-1-2-1">
 <div class="para">Now compute the derivative <span class="process-math">\(f'(x)\text{:}\)</span>
 </div>
-<div class="displaymath process-math" id="APPsketchB-2-1-2-1-2">
+<div class="displaymath process-math" id="APPsketchB-2-1-1-2-1-2">
 \begin{gather*}
 f'(x) = 4x^3-12x^2 = 4(x-3)x^2
 \end{gather*}
 </div>
-<ul class="disc" id="APPsketchB-2-1-2-1-3">
-<li id="APPsketchB-2-1-2-1-3-1">
-<div class="para" id="p-derived-APPsketchB-2-1-2-1-3-1">The critical points are at <span class="process-math">\(x=0,3\text{.}\)</span> Since the function is a polynomial there are no singular points. The critical points split the real line into the intervals <span class="process-math">\((-\infty,0)\text{,}\)</span> <span class="process-math">\((0,3)\)</span> and <span class="process-math">\((3,\infty)\text{.}\)</span>
+<ul class="disc" id="APPsketchB-2-1-1-2-1-3">
+<li id="APPsketchB-2-1-1-2-1-3-1">
+<div class="para" id="p-derived-APPsketchB-2-1-1-2-1-3-1">The critical points are at <span class="process-math">\(x=0,3\text{.}\)</span> Since the function is a polynomial there are no singular points. The critical points split the real line into the intervals <span class="process-math">\((-\infty,0)\text{,}\)</span> <span class="process-math">\((0,3)\)</span> and <span class="process-math">\((3,\infty)\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-2-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-2-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-2-1-3-2">
-<div class="para" id="p-derived-APPsketchB-2-1-2-1-3-2">When <span class="process-math">\(x \lt 0\text{,}\)</span> <span class="process-math">\(x^2 \gt 0\)</span> and <span class="process-math">\(x-3 \lt 0\text{,}\)</span> so <span class="process-math">\(f'(x)  \lt  0\text{.}\)</span>
+<li id="APPsketchB-2-1-1-2-1-3-2">
+<div class="para" id="p-derived-APPsketchB-2-1-1-2-1-3-2">When <span class="process-math">\(x \lt 0\text{,}\)</span> <span class="process-math">\(x^2 \gt 0\)</span> and <span class="process-math">\(x-3 \lt 0\text{,}\)</span> so <span class="process-math">\(f'(x)  \lt  0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-2-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-2-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-2-1-3-3">
-<div class="para" id="p-derived-APPsketchB-2-1-2-1-3-3">When <span class="process-math">\(0 \lt x \lt 3\text{,}\)</span> <span class="process-math">\(x^2 \gt 0\)</span> and <span class="process-math">\(x-3 \lt 0\text{,}\)</span> so <span class="process-math">\(f'(x)  \lt  0\text{.}\)</span>
+<li id="APPsketchB-2-1-1-2-1-3-3">
+<div class="para" id="p-derived-APPsketchB-2-1-1-2-1-3-3">When <span class="process-math">\(0 \lt x \lt 3\text{,}\)</span> <span class="process-math">\(x^2 \gt 0\)</span> and <span class="process-math">\(x-3 \lt 0\text{,}\)</span> so <span class="process-math">\(f'(x)  \lt  0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-2-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-2-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-2-1-3-4">
-<div class="para" id="p-derived-APPsketchB-2-1-2-1-3-4">When <span class="process-math">\(3 \lt x\text{,}\)</span> <span class="process-math">\(x^2 \gt 0\)</span> and <span class="process-math">\(x-3 \gt 0\text{,}\)</span> so <span class="process-math">\(f'(x)  \gt  0\text{.}\)</span>
+<li id="APPsketchB-2-1-1-2-1-3-4">
+<div class="para" id="p-derived-APPsketchB-2-1-1-2-1-3-4">When <span class="process-math">\(3 \lt x\text{,}\)</span> <span class="process-math">\(x^2 \gt 0\)</span> and <span class="process-math">\(x-3 \gt 0\text{,}\)</span> so <span class="process-math">\(f'(x)  \gt  0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-2-1-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-2-1-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-2-1-3-5">
-<div class="para" id="APPsketchB-2-1-2-1-3-5-1">Summarising all this<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchB-2-1-2-1-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="APPsketchB-2-1-1-2-1-3-5">
+<div class="para" id="APPsketchB-2-1-1-2-1-3-5-1">Summarising all this<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchB-2-1-1-2-1-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;">
@@ -960,64 +969,65 @@ f'(x) = 4x^3-12x^2 = 4(x-3)x^2
 </table></div>
 </div>
 </div>
-<div class="para" id="APPsketchB-2-1-2-1-3-5-3">So the point <span class="process-math">\((3,f(3))=(3,-27)\)</span> is a local minimum. The point <span class="process-math">\((0,f(0))=(0,0)\)</span> is neither a minimum nor a maximum, even though <span class="process-math">\(f'(0)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#APPsketchB-2-1-2-1-3-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="APPsketchB-2-1-1-2-1-3-5-3">So the point <span class="process-math">\((3,f(3))=(3,-27)\)</span> is a local minimum. The point <span class="process-math">\((0,f(0))=(0,0)\)</span> is neither a minimum nor a maximum, even though <span class="process-math">\(f'(0)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#APPsketchB-2-1-1-2-1-3-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-2-1-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-2-1-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchB-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchB-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#APPsketchB-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#APPsketchB-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-3">
-<div class="para logical" id="APPsketchB-2-1-3-1">
+<li id="APPsketchB-2-1-1-3">
+<div class="para logical" id="APPsketchB-2-1-1-3-1">
 <div class="para">Now examine <span class="process-math">\(f''(x)\text{:}\)</span>
 </div>
-<div class="displaymath process-math" id="APPsketchB-2-1-3-1-2">
+<div class="displaymath process-math" id="APPsketchB-2-1-1-3-1-2">
 \begin{gather*}
 f''(x) = 12x^2-24x=12x(x-2)
 \end{gather*}
 </div>
-<ul class="disc" id="APPsketchB-2-1-3-1-3">
-<li id="APPsketchB-2-1-3-1-3-1">
-<div class="para" id="p-derived-APPsketchB-2-1-3-1-3-1">So <span class="process-math">\(f''(x)=0\)</span> when <span class="process-math">\(x=0,2\text{.}\)</span> This splits the real line into the intervals <span class="process-math">\((-\infty,0),(0,2)\)</span> and <span class="process-math">\((2,\infty)\text{.}\)</span>
+<ul class="disc" id="APPsketchB-2-1-1-3-1-3">
+<li id="APPsketchB-2-1-1-3-1-3-1">
+<div class="para" id="p-derived-APPsketchB-2-1-1-3-1-3-1">So <span class="process-math">\(f''(x)=0\)</span> when <span class="process-math">\(x=0,2\text{.}\)</span> This splits the real line into the intervals <span class="process-math">\((-\infty,0),(0,2)\)</span> and <span class="process-math">\((2,\infty)\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-3-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-3-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-3-1-3-2">
-<div class="para" id="p-derived-APPsketchB-2-1-3-1-3-2">When <span class="process-math">\(x \lt 0\text{,}\)</span> <span class="process-math">\(x-2 \lt 0\)</span> and so <span class="process-math">\(f''(x) \gt 0\text{.}\)</span>
+<li id="APPsketchB-2-1-1-3-1-3-2">
+<div class="para" id="p-derived-APPsketchB-2-1-1-3-1-3-2">When <span class="process-math">\(x \lt 0\text{,}\)</span> <span class="process-math">\(x-2 \lt 0\)</span> and so <span class="process-math">\(f''(x) \gt 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-3-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-3-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-3-1-3-3">
-<div class="para" id="p-derived-APPsketchB-2-1-3-1-3-3">When <span class="process-math">\(0 \lt x \lt 2\text{,}\)</span> <span class="process-math">\(x \gt 0\)</span> and <span class="process-math">\(x-2 \lt 0\)</span> and so <span class="process-math">\(f''(x) \lt 0\text{.}\)</span>
+<li id="APPsketchB-2-1-1-3-1-3-3">
+<div class="para" id="p-derived-APPsketchB-2-1-1-3-1-3-3">When <span class="process-math">\(0 \lt x \lt 2\text{,}\)</span> <span class="process-math">\(x \gt 0\)</span> and <span class="process-math">\(x-2 \lt 0\)</span> and so <span class="process-math">\(f''(x) \lt 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-3-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-3-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-3-1-3-4">
-<div class="para" id="p-derived-APPsketchB-2-1-3-1-3-4">When <span class="process-math">\(2 \lt x\text{,}\)</span> <span class="process-math">\(x \gt 0\)</span> and <span class="process-math">\(x-2 \gt 0\)</span> and so <span class="process-math">\(f''(x) \gt 0\text{.}\)</span>
+<li id="APPsketchB-2-1-1-3-1-3-4">
+<div class="para" id="p-derived-APPsketchB-2-1-1-3-1-3-4">When <span class="process-math">\(2 \lt x\text{,}\)</span> <span class="process-math">\(x \gt 0\)</span> and <span class="process-math">\(x-2 \gt 0\)</span> and so <span class="process-math">\(f''(x) \gt 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-3-1-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-3-1-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchB-2-1-3-1-3-5">
-<div class="para" id="p-derived-APPsketchB-2-1-3-1-3-5">Thus the function is convex up for <span class="process-math">\(x \lt 0\text{,}\)</span> then convex down for <span class="process-math">\(0 \lt x \lt 2\text{,}\)</span> and finally convex up again for <span class="process-math">\(x \gt 2\text{.}\)</span> Hence <span class="process-math">\((0,f(0))=(0,0)\)</span> and <span class="process-math">\((2,f(2))=(2,-16)\)</span> are inflection points.</div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-3-1-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<li id="APPsketchB-2-1-1-3-1-3-5">
+<div class="para" id="p-derived-APPsketchB-2-1-1-3-1-3-5">Thus the function is convex up for <span class="process-math">\(x \lt 0\text{,}\)</span> then convex down for <span class="process-math">\(0 \lt x \lt 2\text{,}\)</span> and finally convex up again for <span class="process-math">\(x \gt 2\text{.}\)</span> Hence <span class="process-math">\((0,f(0))=(0,0)\)</span> and <span class="process-math">\((2,f(2))=(2,-16)\)</span> are inflection points.</div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchB-2-1-1-3-1-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchB-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchB-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#APPsketchB-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 3"><a href="#APPsketchB-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
 <div class="para">Putting all this information together gives us the following sketch.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchB-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchB-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;">
 <div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/ch4/j_sketch2.svg" role="img" class="contained" alt='"A graph of f(x)=x^4-4x^3 with x-intercepts labeled along with (2,-16) and (3,-27).  Brackets below the graph show were it is increasing and decreasing"'></div></div>
 </div>
 </div>
-<div class="autopermalink" data-description="Example 4.6.19: Sketch f(x)=x^4-4x^3"><a href="#APPsketchB" title="Copy heading and permalink for Example 4.6.19: Sketch f(x)=x^4-4x^3" aria-label="Copy heading and permalink for Example 4.6.19: Sketch f(x)=x^4-4x^3">🔗</a></div>
+<div class="autopermalink" data-description="Solution 4.6.19.1"><a href="#APPsketchB-2" title="Copy heading and permalink for Solution 4.6.19.1" aria-label="Copy heading and permalink for Solution 4.6.19.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 4.6.19: Sketch f(x)=x^4-4x^3"><a href="#APPsketchB" title="Copy heading and permalink for Example 4.6.19: Sketch f(x)=x^4-4x^3" aria-label="Copy heading and permalink for Example 4.6.19: Sketch f(x)=x^4-4x^3">🔗</a></div>
 </article>
 <article class="example example-like" id="sec_Ch4Sec6-5-5"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Another Sketching Example.</span>
@@ -1027,29 +1037,31 @@ f''(x) = 12x^2-24x=12x(x-2)
 <article class="example example-like" id="eg_3_6_6"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(f(x) = \dfrac{x}{x^2-4}\)</span>.</span>
 </h4>
-<div class="para logical" id="eg_3_6_6-2">
-<ol class="decimal ol-marker-5" id="eg_3_6_6-2-1">
-<li id="eg_3_6_6-2-1-1">
-<div class="para logical" id="eg_3_6_6-2-1-1-1">
+<details id="eg_3_6_6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_3_6_6-2-1">
+<ol class="decimal ol-marker-5" id="eg_3_6_6-2-1-1">
+<li id="eg_3_6_6-2-1-1-1">
+<div class="para logical" id="eg_3_6_6-2-1-1-1-1">
 <div class="para">Reading from <span class="process-math">\(f(x)\text{:}\)</span>
 </div>
-<ul class="disc" id="eg_3_6_6-2-1-1-1-2">
-<li id="eg_3_6_6-2-1-1-1-2-1">
-<div class="para" id="p-derived-eg_3_6_6-2-1-1-1-2-1">The function is rational so it is defined except where its denominator is zero — namely at <span class="process-math">\(x=\pm2\text{.}\)</span>
+<ul class="disc" id="eg_3_6_6-2-1-1-1-1-2">
+<li id="eg_3_6_6-2-1-1-1-1-2-1">
+<div class="para" id="p-derived-eg_3_6_6-2-1-1-1-1-2-1">The function is rational so it is defined except where its denominator is zero — namely at <span class="process-math">\(x=\pm2\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="eg_3_6_6-2-1-1-1-2-2">
-<div class="para" id="p-derived-eg_3_6_6-2-1-1-1-2-2">Since <span class="process-math">\(f(-x) = \dfrac{-x}{x^2-4} = - f(x)\text{,}\)</span> it is odd. Indeed this means that we only need to examine what happens to the function for <span class="process-math">\(x \geq 0\)</span> and we can then infer what happens for <span class="process-math">\(x\leq 0\)</span> using <span class="process-math">\(f(-x) = -f(x)\text{.}\)</span> In practice we will sketch the graph for <span class="process-math">\(x\geq0\)</span> and then infer the rest from this symmetry.</div>
-<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<li id="eg_3_6_6-2-1-1-1-1-2-2">
+<div class="para" id="p-derived-eg_3_6_6-2-1-1-1-1-2-2">Since <span class="process-math">\(f(-x) = \dfrac{-x}{x^2-4} = - f(x)\text{,}\)</span> it is odd. Indeed this means that we only need to examine what happens to the function for <span class="process-math">\(x \geq 0\)</span> and we can then infer what happens for <span class="process-math">\(x\leq 0\)</span> using <span class="process-math">\(f(-x) = -f(x)\text{.}\)</span> In practice we will sketch the graph for <span class="process-math">\(x\geq0\)</span> and then infer the rest from this symmetry.</div>
+<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="eg_3_6_6-2-1-1-1-2-3">
-<div class="para" id="p-derived-eg_3_6_6-2-1-1-1-2-3">The <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(y=f(0)=0\text{,}\)</span> while the <span class="process-math">\(x\)</span>-intercepts are given by the solution of <span class="process-math">\(f(x)=0\text{.}\)</span> So the only <span class="process-math">\(x\)</span>-intercept is <span class="process-math">\(0\text{.}\)</span>
+<li id="eg_3_6_6-2-1-1-1-1-2-3">
+<div class="para" id="p-derived-eg_3_6_6-2-1-1-1-1-2-3">The <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(y=f(0)=0\text{,}\)</span> while the <span class="process-math">\(x\)</span>-intercepts are given by the solution of <span class="process-math">\(f(x)=0\text{.}\)</span> So the only <span class="process-math">\(x\)</span>-intercept is <span class="process-math">\(0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-1-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="eg_3_6_6-2-1-1-1-2-4">
-<div class="para" id="p-derived-eg_3_6_6-2-1-1-1-2-4">Since <span class="process-math">\(f\)</span> is rational, it may have vertical asymptotes where its denominator is zero — at <span class="process-math">\(x=\pm 2\text{.}\)</span> Since the function is odd, we only have to analyse the asymptote at <span class="process-math">\(x=2\)</span> and we can then infer what happens at <span class="process-math">\(x=-2\)</span> by symmetry.<div class="displaymath process-math" id="eg_3_6_6-2-1-1-1-2-4-6">
+<li id="eg_3_6_6-2-1-1-1-1-2-4">
+<div class="para" id="p-derived-eg_3_6_6-2-1-1-1-1-2-4">Since <span class="process-math">\(f\)</span> is rational, it may have vertical asymptotes where its denominator is zero — at <span class="process-math">\(x=\pm 2\text{.}\)</span> Since the function is odd, we only have to analyse the asymptote at <span class="process-math">\(x=2\)</span> and we can then infer what happens at <span class="process-math">\(x=-2\)</span> by symmetry.<div class="displaymath process-math" id="eg_3_6_6-2-1-1-1-1-2-4-6">
 \begin{align*}
 \lim_{x\to 2^+} f(x)
 &amp;= \lim_{x\to 2^+} \frac{x}{(x-2)(x+2)} = + \infty\\
@@ -1058,10 +1070,10 @@ f''(x) = 12x^2-24x=12x(x-2)
 \end{align*}
 </div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-1-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-1-1-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="eg_3_6_6-2-1-1-1-2-5">
-<div class="para" id="p-derived-eg_3_6_6-2-1-1-1-2-5">We now check for horizontal asymptotes:<div class="displaymath process-math" id="eg_3_6_6-2-1-1-1-2-5-1">
+<li id="eg_3_6_6-2-1-1-1-1-2-5">
+<div class="para" id="p-derived-eg_3_6_6-2-1-1-1-1-2-5">We now check for horizontal asymptotes:<div class="displaymath process-math" id="eg_3_6_6-2-1-1-1-1-2-5-1">
 \begin{align*}
 \lim_{x\to +\infty} f(x)
 &amp;= \lim_{x\to +\infty} \frac{x}{x^2-4}\\
@@ -1069,45 +1081,45 @@ f''(x) = 12x^2-24x=12x(x-2)
 \end{align*}
 </div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-1-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-1-1-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#eg_3_6_6-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#eg_3_6_6-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="eg_3_6_6-2-1-2">
-<div class="para logical" id="eg_3_6_6-2-1-2-1">
+<li id="eg_3_6_6-2-1-1-2">
+<div class="para logical" id="eg_3_6_6-2-1-1-2-1">
 <div class="para">Now compute the derivative <span class="process-math">\(f'(x)\text{:}\)</span>
 </div>
-<div class="displaymath process-math" id="eg_3_6_6-2-1-2-1-2">
+<div class="displaymath process-math" id="eg_3_6_6-2-1-1-2-1-2">
 \begin{align*}
 f'(x)
 &amp;= \frac{(x^2-4)\cdot 1 - x\cdot 2x}{(x^2-4)^2}\\
 &amp;= \frac{-(x^2+4)}{(x^2-4)^2}
 \end{align*}
 </div>
-<ul class="disc" id="eg_3_6_6-2-1-2-1-3">
-<li id="eg_3_6_6-2-1-2-1-3-1">
-<div class="para" id="p-derived-eg_3_6_6-2-1-2-1-3-1">Hence there are no critical points. There are singular points where the denominator is zero, namely <span class="process-math">\(x=\pm2\text{.}\)</span> Before we proceed, notice that the numerator is always negative and the denominator is always positive. Hence <span class="process-math">\(f'(x) \lt 0\)</span> except at <span class="process-math">\(x=\pm 2\)</span> where it is undefined.</div>
-<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-2-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<ul class="disc" id="eg_3_6_6-2-1-1-2-1-3">
+<li id="eg_3_6_6-2-1-1-2-1-3-1">
+<div class="para" id="p-derived-eg_3_6_6-2-1-1-2-1-3-1">Hence there are no critical points. There are singular points where the denominator is zero, namely <span class="process-math">\(x=\pm2\text{.}\)</span> Before we proceed, notice that the numerator is always negative and the denominator is always positive. Hence <span class="process-math">\(f'(x) \lt 0\)</span> except at <span class="process-math">\(x=\pm 2\)</span> where it is undefined.</div>
+<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-2-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="eg_3_6_6-2-1-2-1-3-2">
-<div class="para" id="p-derived-eg_3_6_6-2-1-2-1-3-2">The function is decreasing except at <span class="process-math">\(x=\pm 2\text{.}\)</span>
+<li id="eg_3_6_6-2-1-1-2-1-3-2">
+<div class="para" id="p-derived-eg_3_6_6-2-1-1-2-1-3-2">The function is decreasing except at <span class="process-math">\(x=\pm 2\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-2-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-2-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="eg_3_6_6-2-1-2-1-3-3">
-<div class="para" id="p-derived-eg_3_6_6-2-1-2-1-3-3">We already know that at <span class="process-math">\(x = 2\)</span> we have a vertical asymptote and that <span class="process-math">\(f'(x) \lt 0\)</span> for all <span class="process-math">\(x\text{.}\)</span> So<div class="displaymath process-math" id="eg_3_6_6-2-1-2-1-3-3-4">
+<li id="eg_3_6_6-2-1-1-2-1-3-3">
+<div class="para" id="p-derived-eg_3_6_6-2-1-1-2-1-3-3">We already know that at <span class="process-math">\(x = 2\)</span> we have a vertical asymptote and that <span class="process-math">\(f'(x) \lt 0\)</span> for all <span class="process-math">\(x\text{.}\)</span> So<div class="displaymath process-math" id="eg_3_6_6-2-1-1-2-1-3-3-4">
 \begin{gather*}
 \lim_{x\rightarrow 2} f'(x) = -\infty
 \end{gather*}
 </div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-2-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-2-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="eg_3_6_6-2-1-2-1-3-4">
-<div class="para" id="eg_3_6_6-2-1-2-1-3-4-1">Summarising all this<div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-1-2-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="eg_3_6_6-2-1-1-2-1-3-4">
+<div class="para" id="eg_3_6_6-2-1-1-2-1-3-4-1">Summarising all this<div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-1-1-2-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;">
@@ -1133,20 +1145,20 @@ f'(x)
 </table></div>
 </div>
 </div>
-<div class="para" id="eg_3_6_6-2-1-2-1-3-4-3">Remember — we will draw the graph for <span class="process-math">\(x\geq 0\)</span> and then use the odd symmetry to infer the graph for <span class="process-math">\(x  \lt  0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-1-2-1-3-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="eg_3_6_6-2-1-1-2-1-3-4-3">Remember — we will draw the graph for <span class="process-math">\(x\geq 0\)</span> and then use the odd symmetry to infer the graph for <span class="process-math">\(x  \lt  0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-1-1-2-1-3-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-2-1-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-2-1-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#eg_3_6_6-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#eg_3_6_6-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="eg_3_6_6-2-1-3">
-<div class="para logical" id="eg_3_6_6-2-1-3-1">
+<li id="eg_3_6_6-2-1-1-3">
+<div class="para logical" id="eg_3_6_6-2-1-1-3-1">
 <div class="para">Now examine <span class="process-math">\(f''(x)\text{:}\)</span>
 </div>
-<div class="displaymath process-math" id="eg_3_6_6-2-1-3-1-2">
+<div class="displaymath process-math" id="eg_3_6_6-2-1-1-3-1-2">
 \begin{align*}
 f''(x)
 &amp;=- \frac{(x^2-4)^2\cdot(2x) - (x^2+4)\cdot2\cdot 2x\cdot(x^2-4)}{(x^2-4)^4}\\
@@ -1155,59 +1167,62 @@ f''(x)
 &amp;= \frac{2x(x^2+12)}{(x^2-4)^3}
 \end{align*}
 </div>
-<ul class="disc" id="eg_3_6_6-2-1-3-1-3">
-<li id="eg_3_6_6-2-1-3-1-3-1">
-<div class="para" id="p-derived-eg_3_6_6-2-1-3-1-3-1">So <span class="process-math">\(f''(x)=0\)</span> when <span class="process-math">\(x=0\)</span> and does not exist when <span class="process-math">\(x=\pm 2\text{.}\)</span> This splits the real line into the intervals <span class="process-math">\((-\infty,-2), (-2,0), (0,2)\)</span> and <span class="process-math">\((2,\infty)\text{.}\)</span> However we only need to consider <span class="process-math">\(x \geq 0\)</span> (because of the odd symmetry).</div>
-<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-3-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<ul class="disc" id="eg_3_6_6-2-1-1-3-1-3">
+<li id="eg_3_6_6-2-1-1-3-1-3-1">
+<div class="para" id="p-derived-eg_3_6_6-2-1-1-3-1-3-1">So <span class="process-math">\(f''(x)=0\)</span> when <span class="process-math">\(x=0\)</span> and does not exist when <span class="process-math">\(x=\pm 2\text{.}\)</span> This splits the real line into the intervals <span class="process-math">\((-\infty,-2), (-2,0), (0,2)\)</span> and <span class="process-math">\((2,\infty)\text{.}\)</span> However we only need to consider <span class="process-math">\(x \geq 0\)</span> (because of the odd symmetry).</div>
+<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-3-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="eg_3_6_6-2-1-3-1-3-2">
-<div class="para" id="p-derived-eg_3_6_6-2-1-3-1-3-2">When <span class="process-math">\(0 \lt x \lt 2\text{,}\)</span> <span class="process-math">\(x \gt 0, (x^2+12) \gt 0\)</span> and <span class="process-math">\((x^2-4) \lt 0\)</span> so  <span class="process-math">\(f''(x) \lt 0\text{.}\)</span>
+<li id="eg_3_6_6-2-1-1-3-1-3-2">
+<div class="para" id="p-derived-eg_3_6_6-2-1-1-3-1-3-2">When <span class="process-math">\(0 \lt x \lt 2\text{,}\)</span> <span class="process-math">\(x \gt 0, (x^2+12) \gt 0\)</span> and <span class="process-math">\((x^2-4) \lt 0\)</span> so  <span class="process-math">\(f''(x) \lt 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-3-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-3-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="eg_3_6_6-2-1-3-1-3-3">
-<div class="para" id="p-derived-eg_3_6_6-2-1-3-1-3-3">When <span class="process-math">\(x \gt 2\text{,}\)</span> <span class="process-math">\(x \gt 0, (x^2+12) \gt 0\)</span> and <span class="process-math">\((x^2-4) \gt 0\)</span> so <span class="process-math">\(f''(x) \gt 0\text{.}\)</span>
+<li id="eg_3_6_6-2-1-1-3-1-3-3">
+<div class="para" id="p-derived-eg_3_6_6-2-1-1-3-1-3-3">When <span class="process-math">\(x \gt 2\text{,}\)</span> <span class="process-math">\(x \gt 0, (x^2+12) \gt 0\)</span> and <span class="process-math">\((x^2-4) \gt 0\)</span> so <span class="process-math">\(f''(x) \gt 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-3-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#eg_3_6_6-2-1-1-3-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#eg_3_6_6-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 3"><a href="#eg_3_6_6-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
 <div class="para">Putting all this information together gives the following sketch for <span class="process-math">\(x \geq 0\text{:}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;grid-template-columns:100%;column-gap:0%;">
 <div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/ch4/j_sketch5b.svg" role="img" class="contained" alt='"A sketch of the graph of f(x)=x/(x^2-4) when x is positive. To the left of the vertical asymptote at x=2 is a curly bracket showing that f’’&lt; 0 and f is convex down and to the right of the vertical asymptote is a curly bracket showing the f’’&gt; 0 and f is convex up".'></div></div>
 </div>
 </div>
-<div class="para" id="eg_3_6_6-4">We can then draw in the graph for <span class="process-math">\(x \lt  0\)</span> using <span class="process-math">\(f(-x) = -f(x)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="eg_3_6_6-2-3">We can then draw in the graph for <span class="process-math">\(x \lt  0\)</span> using <span class="process-math">\(f(-x) = -f(x)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;grid-template-columns:100%;column-gap:0%;">
 <div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/ch4/j_sketch5.svg" role="img" class="contained" alt="A graph fo f(x)=x/(x^2-4) over the entire domain.  An arrow points to the inflection point at (0,0).  Curly braces show where the graph is convex up and convex down to the left and right of a vertical asymptote x=2, respectively."></div></div>
 </div>
 </div>
-<div class="para" id="eg_3_6_6-6">Notice that this means that the concavity changes at <span class="process-math">\(x=0\text{,}\)</span> so the point <span class="process-math">\((0,f(0))=(0,0)\)</span> is a point of inflection (as indicated).<div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="eg_3_6_6-2-5">Notice that this means that the concavity changes at <span class="process-math">\(x=0\text{,}\)</span> so the point <span class="process-math">\((0,f(0))=(0,0)\)</span> is a point of inflection (as indicated).<div class="autopermalink" data-description="Paragraph"><a href="#eg_3_6_6-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.6.21: f(x) = \dfrac{x}{x^2-4}"><a href="#eg_3_6_6" title="Copy heading and permalink for Example 4.6.21: f(x) = \dfrac{x}{x^2-4}" aria-label="Copy heading and permalink for Example 4.6.21: f(x) = \dfrac{x}{x^2-4}">🔗</a></div>
+<div class="autopermalink" data-description="Solution 4.6.21.1"><a href="#eg_3_6_6-2" title="Copy heading and permalink for Solution 4.6.21.1" aria-label="Copy heading and permalink for Solution 4.6.21.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 4.6.21: f(x) = \dfrac{x}{x^2-4}"><a href="#eg_3_6_6" title="Copy heading and permalink for Example 4.6.21: f(x) = \dfrac{x}{x^2-4}" aria-label="Copy heading and permalink for Example 4.6.21: f(x) = \dfrac{x}{x^2-4}">🔗</a></div>
 </article>
 <article class="example example-like" id="APPsketchC"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(f(x)=\root{3}\of{\frac{x^2}{(x-6)^2}} \)</span>.</span>
 </h4>
-<div class="para logical" id="APPsketchC-2">
-<ol class="decimal ol-marker-5" id="APPsketchC-2-1">
-<li id="APPsketchC-2-1-1">
-<div class="para logical" id="APPsketchC-2-1-1-1">
+<details id="APPsketchC-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="APPsketchC-2-1">
+<ol class="decimal ol-marker-5" id="APPsketchC-2-1-1">
+<li id="APPsketchC-2-1-1-1">
+<div class="para logical" id="APPsketchC-2-1-1-1-1">
 <div class="para">Reading from <span class="process-math">\(f(x)\text{:}\)</span>
 </div>
-<ul class="disc" id="APPsketchC-2-1-1-1-2">
-<li id="APPsketchC-2-1-1-1-2-1">
-<div class="para" id="p-derived-APPsketchC-2-1-1-1-2-1">First notice that we can rewrite<div class="displaymath process-math" id="APPsketchC-2-1-1-1-2-1-1">
+<ul class="disc" id="APPsketchC-2-1-1-1-1-2">
+<li id="APPsketchC-2-1-1-1-1-2-1">
+<div class="para" id="p-derived-APPsketchC-2-1-1-1-1-2-1">First notice that we can rewrite<div class="displaymath process-math" id="APPsketchC-2-1-1-1-1-2-1-1">
 \begin{align*}
 f(x) &amp;= \root{3}\of{\frac{x^2}{(x-6)^2}}
 = \root{3}\of{\frac{x^2}{x^2\cdot(1-6/x)^2}}
@@ -1215,56 +1230,56 @@ f(x) &amp;= \root{3}\of{\frac{x^2}{(x-6)^2}}
 \end{align*}
 </div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchC-2-1-1-1-2-2">
-<div class="para" id="p-derived-APPsketchC-2-1-1-1-2-2">The function is the cube root of a rational function. The rational function is defined except at <span class="process-math">\(x=6\text{,}\)</span> so the domain of <span class="process-math">\(f\)</span> is all reals except <span class="process-math">\(x=6\text{.}\)</span>
+<li id="APPsketchC-2-1-1-1-1-2-2">
+<div class="para" id="p-derived-APPsketchC-2-1-1-1-1-2-2">The function is the cube root of a rational function. The rational function is defined except at <span class="process-math">\(x=6\text{,}\)</span> so the domain of <span class="process-math">\(f\)</span> is all reals except <span class="process-math">\(x=6\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchC-2-1-1-1-2-3">
-<div class="para" id="p-derived-APPsketchC-2-1-1-1-2-3">Clearly the function is not periodic, and examining<div class="displaymath process-math" id="APPsketchC-2-1-1-1-2-3-1">
+<li id="APPsketchC-2-1-1-1-1-2-3">
+<div class="para" id="p-derived-APPsketchC-2-1-1-1-1-2-3">Clearly the function is not periodic, and examining<div class="displaymath process-math" id="APPsketchC-2-1-1-1-1-2-3-1">
 \begin{align*}
 f(-x) &amp;= \root{3}\of{\frac{ 1}{(1-6/(-x))^2}}\\
 &amp;= \root{3}\of{\frac{1}{(1+6/x)^2}} \neq \pm f(x)
 \end{align*}
 </div>shows the function is neither even nor odd.</div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-1-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchC-2-1-1-1-2-4">
-<div class="para" id="p-derived-APPsketchC-2-1-1-1-2-4">To compute horizontal asymptotes we examine the limit of the portion of the function inside the cube-root<div class="displaymath process-math" id="APPsketchC-2-1-1-1-2-4-1">
+<li id="APPsketchC-2-1-1-1-1-2-4">
+<div class="para" id="p-derived-APPsketchC-2-1-1-1-1-2-4">To compute horizontal asymptotes we examine the limit of the portion of the function inside the cube-root<div class="displaymath process-math" id="APPsketchC-2-1-1-1-1-2-4-1">
 \begin{gather*}
 \lim_{x\rightarrow\pm\infty} \frac{1}{(1-\frac{6}{x})^2}
 =1
 \end{gather*}
-</div>This means we have<div class="displaymath process-math" id="APPsketchC-2-1-1-1-2-4-2">
+</div>This means we have<div class="displaymath process-math" id="APPsketchC-2-1-1-1-1-2-4-2">
 \begin{gather*}
 \lim_{x\rightarrow\pm\infty} f(x)=1
 \end{gather*}
 </div>That is, the line <span class="process-math">\(y=1\)</span> will be a horizontal asymptote to the graph <span class="process-math">\(y=f(x)\)</span> both for <span class="process-math">\(x\rightarrow+\infty\)</span> and for <span class="process-math">\(x\rightarrow-\infty\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-1-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-1-1-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchC-2-1-1-1-2-5">
-<div class="para" id="p-derived-APPsketchC-2-1-1-1-2-5">Our function <span class="process-math">\(f(x)\rightarrow+\infty\)</span> as <span class="process-math">\(x\rightarrow 6\text{,}\)</span> because of the <span class="process-math">\((1-6/x)^2\)</span> in its denominator. So <span class="process-math">\(y=f(x)\)</span> has <span class="process-math">\(x=6\)</span> as a vertical asymptote.</div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-1-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<li id="APPsketchC-2-1-1-1-1-2-5">
+<div class="para" id="p-derived-APPsketchC-2-1-1-1-1-2-5">Our function <span class="process-math">\(f(x)\rightarrow+\infty\)</span> as <span class="process-math">\(x\rightarrow 6\text{,}\)</span> because of the <span class="process-math">\((1-6/x)^2\)</span> in its denominator. So <span class="process-math">\(y=f(x)\)</span> has <span class="process-math">\(x=6\)</span> as a vertical asymptote.</div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-1-1-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#APPsketchC-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#APPsketchC-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="APPsketchC-2-1-2">
-<div class="para logical" id="APPsketchC-2-1-2-1">
+<li id="APPsketchC-2-1-1-2">
+<div class="para logical" id="APPsketchC-2-1-1-2-1">
 <div class="para">Now compute <span class="process-math">\(f'(x)\text{.}\)</span> Since we rewrote</div>
-<div class="displaymath process-math" id="APPsketchC-2-1-2-1-2">
+<div class="displaymath process-math" id="APPsketchC-2-1-1-2-1-2">
 \begin{align*}
 f(x) &amp;= \root{3}\of{\frac{1}{(1-6/x)^2}}
 =\left(1-\frac{6}{x}\right)^{-\frac{2}{3}}
 \end{align*}
 </div>
 <div class="para">we can use the chain rule</div>
-<div class="displaymath process-math" id="APPsketchC-2-1-2-1-3">
+<div class="displaymath process-math" id="APPsketchC-2-1-1-2-1-3">
 \begin{gather*}
 f'(x) =
 -\frac{2}{3}{\left(1-\frac{6}{x}\right)}^{-\frac{5}{3}}\frac{6}{x^2}\\
@@ -1272,34 +1287,34 @@ f'(x) =
 =-4 {\left(\frac{1}{x-6}\right)}^{\frac{5}{3}}\frac{1}{x^{\frac{1}{3}}}
 \end{gather*}
 </div>
-<ul class="disc" id="APPsketchC-2-1-2-1-4">
-<li id="APPsketchC-2-1-2-1-4-1">
-<div class="para" id="p-derived-APPsketchC-2-1-2-1-4-1">Notice that the derivative is nowhere equal to zero, so the function has no critical points. However there are two places the derivative is undefined. The terms<div class="displaymath process-math" id="APPsketchC-2-1-2-1-4-1-1">
+<ul class="disc" id="APPsketchC-2-1-1-2-1-4">
+<li id="APPsketchC-2-1-1-2-1-4-1">
+<div class="para" id="p-derived-APPsketchC-2-1-1-2-1-4-1">Notice that the derivative is nowhere equal to zero, so the function has no critical points. However there are two places the derivative is undefined. The terms<div class="displaymath process-math" id="APPsketchC-2-1-1-2-1-4-1-1">
 \begin{align*}
 \left(\frac{1}{x-6}\right)^{\frac{5}{3}} &amp;&amp; \frac{1}{x^{\frac{1}{3}}}
 \end{align*}
 </div>are undefined at <span class="process-math">\(x=6,0\)</span> respectively. Hence <span class="process-math">\(x=0,6\)</span> are singular points. These split the real line into the intervals <span class="process-math">\((-\infty,0), (0,6)\)</span> and <span class="process-math">\((6,\infty)\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-2-1-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-2-1-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchC-2-1-2-1-4-2">
-<div class="para" id="p-derived-APPsketchC-2-1-2-1-4-2">When <span class="process-math">\(x \lt 0\text{,}\)</span> <span class="process-math">\((x-6) \lt 0\text{,}\)</span> we have that <span class="process-math">\((x-6)^{-\frac53} \lt 0\)</span> and <span class="process-math">\(x^{-\frac13} \lt 0\)</span> and so <span class="process-math">\(f'(x)=-4 \cdot
+<li id="APPsketchC-2-1-1-2-1-4-2">
+<div class="para" id="p-derived-APPsketchC-2-1-1-2-1-4-2">When <span class="process-math">\(x \lt 0\text{,}\)</span> <span class="process-math">\((x-6) \lt 0\text{,}\)</span> we have that <span class="process-math">\((x-6)^{-\frac53} \lt 0\)</span> and <span class="process-math">\(x^{-\frac13} \lt 0\)</span> and so <span class="process-math">\(f'(x)=-4 \cdot
 (\text{negative})\cdot(\text{negative})  \lt  0 \text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-2-1-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-2-1-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchC-2-1-2-1-4-3">
-<div class="para" id="p-derived-APPsketchC-2-1-2-1-4-3">When <span class="process-math">\(0 \lt x \lt 6\text{,}\)</span> <span class="process-math">\((x-6) \lt 0\text{,}\)</span> we have that <span class="process-math">\((x-6)^{-\frac53} \lt 0\)</span> and <span class="process-math">\(x^{-\frac13} \gt 0\)</span> and so <span class="process-math">\(f'(x) \gt 0\text{.}\)</span>
+<li id="APPsketchC-2-1-1-2-1-4-3">
+<div class="para" id="p-derived-APPsketchC-2-1-1-2-1-4-3">When <span class="process-math">\(0 \lt x \lt 6\text{,}\)</span> <span class="process-math">\((x-6) \lt 0\text{,}\)</span> we have that <span class="process-math">\((x-6)^{-\frac53} \lt 0\)</span> and <span class="process-math">\(x^{-\frac13} \gt 0\)</span> and so <span class="process-math">\(f'(x) \gt 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-2-1-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-2-1-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchC-2-1-2-1-4-4">
-<div class="para" id="p-derived-APPsketchC-2-1-2-1-4-4">When <span class="process-math">\(x \gt 6\text{,}\)</span> <span class="process-math">\((x-6) \gt 0\text{,}\)</span> we have that <span class="process-math">\((x-6)^{-\frac53} \gt 0\)</span> and <span class="process-math">\(x^{-\frac13} \gt 0\)</span> and so <span class="process-math">\(f'(x) \lt 0\text{.}\)</span>
+<li id="APPsketchC-2-1-1-2-1-4-4">
+<div class="para" id="p-derived-APPsketchC-2-1-1-2-1-4-4">When <span class="process-math">\(x \gt 6\text{,}\)</span> <span class="process-math">\((x-6) \gt 0\text{,}\)</span> we have that <span class="process-math">\((x-6)^{-\frac53} \gt 0\)</span> and <span class="process-math">\(x^{-\frac13} \gt 0\)</span> and so <span class="process-math">\(f'(x) \lt 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-2-1-4-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-2-1-4-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchC-2-1-2-1-4-5">
-<div class="para" id="p-derived-APPsketchC-2-1-2-1-4-5">We should also examine the behaviour of the derivative as <span class="process-math">\(x \to 0\)</span> and <span class="process-math">\(x\to 6\text{.}\)</span><div class="displaymath process-math" id="APPsketchC-2-1-2-1-4-5-3">
+<li id="APPsketchC-2-1-1-2-1-4-5">
+<div class="para" id="p-derived-APPsketchC-2-1-1-2-1-4-5">We should also examine the behaviour of the derivative as <span class="process-math">\(x \to 0\)</span> and <span class="process-math">\(x\to 6\text{.}\)</span><div class="displaymath process-math" id="APPsketchC-2-1-1-2-1-4-5-3">
 \begin{align*}
 \lim_{x \to 0^-} f'(x)
 &amp;= -4
@@ -1324,10 +1339,10 @@ f'(x) =
 \end{align*}
 </div>We already know that <span class="process-math">\(x=6\)</span> is a vertical asymptote of the function, so it is not surprising that the lines tangent to the graph become vertical as we approach 6. The behavior around <span class="process-math">\(x=0\)</span> is less standard, since the lines tangent to the graph become vertical, but <span class="process-math">\(x=0\)</span> is not a vertical asymptote of the function. Indeed the function takes a finite value <span class="process-math">\(y=f(0)=0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-2-1-4-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-2-1-4-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="APPsketchC-2-1-2-1-4-6">
-<div class="para" id="APPsketchC-2-1-2-1-4-6-1">Summarising all this<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-1-2-1-4-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="APPsketchC-2-1-1-2-1-4-6">
+<div class="para" id="APPsketchC-2-1-1-2-1-4-6-1">Summarising all this<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-1-1-2-1-4-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;">
@@ -1359,18 +1374,18 @@ f'(x) =
 </table></div>
 </div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-2-1-4-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-2-1-4-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#APPsketchC-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#APPsketchC-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="APPsketchC-2-1-3">
-<div class="para logical" id="APPsketchC-2-1-3-1">
+<li id="APPsketchC-2-1-1-3">
+<div class="para logical" id="APPsketchC-2-1-1-3-1">
 <div class="para">Now look at <span class="process-math">\(f''(x)\text{:}\)</span>
 </div>
-<div class="displaymath process-math" id="APPsketchC-2-1-3-1-2">
+<div class="displaymath process-math" id="APPsketchC-2-1-1-3-1-2">
 \begin{align*}
 f''(x)&amp;=-4\diff{}{x}
 \left[{\left(\frac{1}{x-6}\right)}^{\frac{5}{3}}
@@ -1385,11 +1400,11 @@ f''(x)&amp;=-4\diff{}{x}
 \frac{1}{x^{\frac{4}{3}}}\ \left[x-1\right]
 \end{align*}
 </div>
-<ul class="disc" id="APPsketchC-2-1-3-1-3">
-<li id="APPsketchC-2-1-3-1-3-1">
-<div class="para" id="APPsketchC-2-1-3-1-3-1-1">Both of the factors <span class="process-math">\({\Big(\frac{1}{x-6}\Big)}^{\frac{8}{3}}
+<ul class="disc" id="APPsketchC-2-1-1-3-1-3">
+<li id="APPsketchC-2-1-1-3-1-3-1">
+<div class="para" id="APPsketchC-2-1-1-3-1-3-1-1">Both of the factors <span class="process-math">\({\Big(\frac{1}{x-6}\Big)}^{\frac{8}{3}}
 ={\Big(\frac{1}{\root{3}\of{x-6}}\Big)}^8\)</span> and <span class="process-math">\(\frac{1}{x^{\frac{4}{3}}}
-=\Big(\frac{1}{\root{3}\of{x}}\Big)^4\)</span> are even powers and so are positive (though possibly infinite). So the sign of <span class="process-math">\(f''(x)\)</span> is the same as the sign of the factor <span class="process-math">\(x-1\text{.}\)</span> Thus<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-1-3-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+=\Big(\frac{1}{\root{3}\of{x}}\Big)^4\)</span> are even powers and so are positive (though possibly infinite). So the sign of <span class="process-math">\(f''(x)\)</span> is the same as the sign of the factor <span class="process-math">\(x-1\text{.}\)</span> Thus<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-1-1-3-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;">
@@ -1415,44 +1430,45 @@ f''(x)&amp;=-4\diff{}{x}
 </table></div>
 </div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-3-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#APPsketchC-2-1-1-3-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#APPsketchC-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 3"><a href="#APPsketchC-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="APPsketchC-3">Here is a sketch of the graph <span class="process-math">\(y=f(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="APPsketchC-2-2">Here is a sketch of the graph <span class="process-math">\(y=f(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;">
 <div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/ch4/j_sketch3.svg" role="img" class="contained" alt="A graph of f(x) equals the cube root of x squared divided by (x-6) squared. Curly braces below the x-axis show on which intervals the derivative is positive or negative and where f is increasing or decreasing."></div></div>
 </div>
 </div>
-<div class="para" id="APPsketchC-5">It is hard to see the inflection point at <span class="process-math">\(x=1\text{,}\)</span> <span class="process-math">\(y=f(1)=\frac{1}{ \root{3}\of{25} }\)</span> in the above sketch. So here is a blow up of the part of the sketch around <span class="process-math">\(x=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="APPsketchC-2-4">It is hard to see the inflection point at <span class="process-math">\(x=1\text{,}\)</span> <span class="process-math">\(y=f(1)=\frac{1}{ \root{3}\of{25} }\)</span> in the above sketch. So here is a blow up of the part of the sketch around <span class="process-math">\(x=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:17%;margin-right:17%;grid-template-columns:100%;column-gap:0%;">
 <div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/ch4/j_sketch3b.svg" role="img" class="contained" alt="A zoomed in graph of f(x) equals the cube root of x squared divided by (x-6) squared around x=1 with the inflection point at (1,1 over the cube root of 25) labeled."></div></div>
 </div>
 </div>
-<div class="para" id="APPsketchC-7">And if we zoom in even more we have<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="APPsketchC-2-6">And if we zoom in even more we have<div class="autopermalink" data-description="Paragraph"><a href="#APPsketchC-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:17%;margin-right:17%;grid-template-columns:100%;column-gap:0%;">
 <div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/ch4/j_sketch3c.svg" role="img" class="contained" alt="A zoomed in graph of f(x) equals the cube root of x squared divided by (x-6) squared around x=1 with the inflection point at (1,1 over the cube root of 25) labeled."></div></div>
 </div>
 </div>
-<div class="autopermalink" data-description="Example 4.6.22: f(x)=\root{3}\of{\frac{x^2}{(x-6)^2}} "><a href="#APPsketchC" title="Copy heading and permalink for Example 4.6.22: f(x)=\root{3}\of{\frac{x^2}{(x-6)^2}} " aria-label="Copy heading and permalink for Example 4.6.22: f(x)=\root{3}\of{\frac{x^2}{(x-6)^2}} ">🔗</a></div>
+<div class="autopermalink" data-description="Solution 4.6.22.1"><a href="#APPsketchC-2" title="Copy heading and permalink for Solution 4.6.22.1" aria-label="Copy heading and permalink for Solution 4.6.22.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 4.6.22: f(x)=\root{3}\of{\frac{x^2}{(x-6)^2}} "><a href="#APPsketchC" title="Copy heading and permalink for Example 4.6.22: f(x)=\root{3}\of{\frac{x^2}{(x-6)^2}} " aria-label="Copy heading and permalink for Example 4.6.22: f(x)=\root{3}\of{\frac{x^2}{(x-6)^2}} ">🔗</a></div>
 </article><div class="autopermalink" data-description="Subsection 4.6.3: Curve Sketching"><a href="#sec_Ch4Sec6-5" title="Copy heading and permalink for Subsection 4.6.3: Curve Sketching" aria-label="Copy heading and permalink for Subsection 4.6.3: Curve Sketching">🔗</a></div>
 </section><div class="autopermalink" data-description="Section 4.6: Concavity and Curve Sketching"><a href="#sec_Ch4Sec6" title="Copy heading and permalink for Section 4.6: Concavity and Curve Sketching" aria-label="Copy heading and permalink for Section 4.6: Concavity and Curve Sketching">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec_Ch4Sec5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch_appendix.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec_Ch4Sec5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_Ch4Sec7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

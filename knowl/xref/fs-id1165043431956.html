@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maximizing the Area of a Garden.</span>
+</h2>
+<div class="para">A rectangular garden is to be constructed using a rock wall as one side of the garden and wire fencing for the other three sides (<a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.2">Figure 4.7.2</a>). Given <span class="process-math">\(100\)</span> ft of wire fencing, determine the dimensions that would create a garden of maximum area. What is the maximum area?<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/CNX_Calc_Figure_04_07_001.jpg" class="contained" alt='"A drawing of a garden has x and y written on the vertical and horizontal sides, respectively. There is a rock wall running along the entire bottom horizontal length of the drawing."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>We want to determine the measurements <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> that will create a garden with a maximum area using <span class="process-math">\(100\)</span> ft of fencing.<div class="autopermalink" data-description="Figure 4.7.2"><a href="#CNX_Calc_Figure_04_07_001" title="Copy heading and permalink for Figure 4.7.2" aria-label="Copy heading and permalink for Figure 4.7.2">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Let <span class="process-math">\(x\)</span> denote the length of the side of the garden perpendicular to the rock wall and <span class="process-math">\(y\)</span> denote the length of the side parallel to the rock wall. Then the area of the garden is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_001.html ./knowl/xref/CNX_Calc_Figure_04_07_002.html">
+\begin{equation*}
+A=x\cdot y.
+\end{equation*}
+</div>
+<div class="para">We want to find the maximum possible area subject to the constraint that the total fencing is <span class="process-math">\(100 \text{ ft }.\)</span> From <a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_001" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.2">Figure 4.7.2</a>, the total amount of fencing used will be <span class="process-math">\(2x+y.\)</span> Therefore, the constraint equation is<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_001.html ./knowl/xref/CNX_Calc_Figure_04_07_002.html">
+\begin{equation*}
+2x+y=100.
+\end{equation*}
+</div>
+<div class="para">Solving this equation for <span class="process-math">\(y,\)</span> we have <span class="process-math">\(y=100-2x.\)</span> Thus, we can write the area as<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_001.html ./knowl/xref/CNX_Calc_Figure_04_07_002.html">
+\begin{equation*}
+A(x)=x\cdot(100-2x)=100x-2x^2.
+\end{equation*}
+</div>
+<div class="para">Before trying to maximize the area function <span class="process-math">\(A(x)=100x-2x^2,\)</span> we need to determine the domain under consideration. To construct a rectangular garden, we certainly need the lengths of both sides to be positive. Therefore, we need <span class="process-math">\(x\gt 0\)</span> and <span class="process-math">\(y\gt 0.\)</span> Since <span class="process-math">\(y=100-2x,\)</span> if <span class="process-math">\(y\gt 0,\)</span> then <span class="process-math">\(x\lt 50.\)</span> Therefore, we are trying to determine the maximum value of <span class="process-math">\(A(x)\)</span> for <span class="process-math">\(x\)</span> over the open interval <span class="process-math">\((0,50).\)</span> We do not know that a function necessarily has a maximum value over an open interval. However, we do know that a continuous function has an absolute maximum (and absolute minimum) over a closed interval. Therefore, let’s consider the function <span class="process-math">\(A(x)=100x-2x^2\)</span> over the closed interval <span class="process-math">\([0,50].\)</span> If the maximum value occurs at an interior point, then we have found the value <span class="process-math">\(x\)</span> in the open interval <span class="process-math">\((0,50)\)</span> that maximizes the area of the garden. Therefore, we consider the following problem:<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Maximize <span class="process-math">\(A(x)=100x-2x^2\)</span> over the interval <span class="process-math">\([0,50].\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">As mentioned earlier, since <span class="process-math">\(A\)</span> is a continuous function on a closed, bounded interval, by the extreme value theorem, it has a maximum and a minimum. These extreme values occur either at endpoints or critical points. At the endpoints, <span class="process-math">\(A(x)=0.\)</span> Since the area is positive for all <span class="process-math">\(x\)</span> in the open interval <span class="process-math">\((0,50),\)</span> the maximum must occur at a critical point. Differentiating the function <span class="process-math">\(A(x),\)</span> we obtain<div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CNX_Calc_Figure_04_07_001.html ./knowl/xref/CNX_Calc_Figure_04_07_002.html">
+\begin{equation*}
+A'(x)=100-4x.
+\end{equation*}
+</div>
+<div class="para">Therefore, the only critical point is <span class="process-math">\(x=25\)</span> (<a href="sec_Ch4Sec7.html#CNX_Calc_Figure_04_07_002" class="xref" data-knowl="./knowl/xref/CNX_Calc_Figure_04_07_002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.7.3">Figure 4.7.3</a>). We conclude that the maximum area must occur when <span class="process-math">\(x=25.\)</span> Then we have <span class="process-math">\(y=100-2x=100-2(25)=50.\)</span> To maximize the area of the garden, let <span class="process-math">\(x=25\)</span> ft and <span class="process-math">\(y=50 \text{ ft }.\)</span> The area of this garden is <span class="process-math">\(1250\text{ft}^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fs-id1165043431956-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/CNX_Calc_Figure_04_07_002.jpg" class="contained" alt='"The function A(x) = 100x-2x^2 is graphed. At its maximum there is an intersection of two dashed lines and text that reads "Maximum area is 1250 square feet when x = 25 feet.""'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>To maximize the area of the garden, we need to find the maximum value of the function <span class="process-math">\(A(x)=100x-2x^2.\)</span><div class="autopermalink" data-description="Figure 4.7.3"><a href="#CNX_Calc_Figure_04_07_002" title="Copy heading and permalink for Figure 4.7.3" aria-label="Copy heading and permalink for Figure 4.7.3">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 4.7.1.1"><a href="#fs-id1165043431956-3" title="Copy heading and permalink for Solution 4.7.1.1" aria-label="Copy heading and permalink for Solution 4.7.1.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.7.1: Maximizing the Area of a Garden"><a href="#fs-id1165043431956" title="Copy heading and permalink for Example 4.7.1: Maximizing the Area of a Garden" aria-label="Copy heading and permalink for Example 4.7.1: Maximizing the Area of a Garden">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="sec_Ch4Sec7.html#fs-id1165043431956">In Context</a></span>
+</body>
+</html>
