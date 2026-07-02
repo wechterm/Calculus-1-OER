@@ -6607,6 +6607,51 @@ var ptx_lunr_docs = [
   "body": "Finding the best viewing angle   The Statue of Liberty has height m and stands on a m tall pedestal. How far from the statue should an observer stand to maximize the angle subtended by the statue at the observer's eye, which is m above the base of the pedestal?    Obviously if we stand too close then all the observer sees is the pedestal, while if they stand too far then everything is tiny. The best spot for taking a photograph is somewhere in between.  Draw a careful picture And make some healthy use of public domain clip art.     and we can put in the relevant lengths and angles.   The height of the statue is m, and the height of the pedestal (above the eye) is m. The horizontal distance from the statue to the eye is . There are two relevant angles. First is the angle subtended by the statue, while is the angle subtended by the portion of the pedestal above the eye.  Some trigonometry gives us Thus and so   If we allow the viewer to stand at any point in front of the statue, then . Further observe that as or the angle , since and Clearly the largest value of will be strictly positive and so has to be taken for some . (Note the strict inequalities.) This will be a local maximum as well as a global maximum. As is not singular at any , we need only search for critical points.  A careful application of the chain rule shows that the derivative is So a critical point occurs when   Thus the best place to stand approximately m in front or behind the statue. At that point radians or .    "
 },
 {
+  "id": "sec_Ch4Sec8",
+  "level": "1",
+  "url": "sec_Ch4Sec8.html",
+  "type": "Section",
+  "number": "4.8",
+  "title": "L’Hôpital’s Ruleô",
+  "body": " L'Hôpital's Ruleô   Learning Objectives   Recognize when to apply L’Hôpital’s rule.  Identify indeterminate forms produced by quotients, products, subtractions, and powers, and apply L’Hôpital’s rule in each case.  Describe the relative growth rates of functions.   In this section, we examine a powerful tool for evaluating limits. This tool, known as L’Hôpital’s rule , uses derivatives to calculate limits. With this rule, we will be able to evaluate many limits we have not yet been able to determine. Instead of relying on numerical evidence to conjecture that a limit exists, we will be able to show definitively that a limit exists and to determine its exact value.    Applying L'Hôpital's Rule  L’Hôpital’s rule can be used to evaluate limits involving the quotient of two functions. Consider . If and , then . However, what happens if and ? We call this one of the indeterminate forms , of type . This is considered an indeterminate form because we cannot determine the exact behavior of as without further analysis. We have seen examples of this earlier in the text. For example, consider . For the first of these examples, we can evaluate the limit by factoring the numerator and writing . For we are able to show, using a geometric argument, that . Here we use a different technique for evaluating limits such as these. Not only does this technique provide an easier way to evaluate these limits, but also, and more important, it provides us with a way to evaluate many other limits that we could not calculate previously.  The idea behind L’Hôpital’s rule can be explained using local linear approximations. Consider two differentiable functions and such that and such that . For near , we can write and \/ Therefore, .    \"A graph of f(x) and g(x) intersecting when x=a. The tangent lines to f(x) and g(x) are drawn at x=a.\"   If , then the ratio is approximately equal to the ratio of their linear approximations near .   Since is differentiable at , then is continuous at , and therefore . Similarly, . If we also assume that and are continuous at , then and . Using these ideas, we conclude that . Note that the assumption that and are continuous at and can be loosened. We state L'Hôpital's rule formally for the indeterminate form . Also note that the notation does not mean we are actually dividing zero by zero. Rather, we are using the notation to represent a quotient of limits, each of which is zero.   L'Hôpital's Rule ( Case)   Suppose and are differentiable functions over an open interval containing , except possibly at . If and , then , assuming the limit on the right exists or is or . This result also holds if we are considering one-sided limits, or it and .    We provide a proof of this theorem in the special case when and are all continuous over an open interval containing . In that case, since and and are continuous at , it follows that . Therefore, . Note that L'Hôpital's rule states we can calculate the limit of a quotient by considering the limit of the quotient of the derivatives . It is important to realize that we are not calculating the derivative of the quotient .     "
+},
+{
+  "id": "sec_Ch4Sec8-2-3",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#sec_Ch4Sec8-2-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "L’Hôpital’s rule "
+},
+{
+  "id": "subsec-applyLHop-2",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-applyLHop-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "indeterminate forms "
+},
+{
+  "id": "CNX_Calc_Figure_04_08_003",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#CNX_Calc_Figure_04_08_003",
+  "type": "Figure",
+  "number": "4.8.1",
+  "title": "",
+  "body": "  \"A graph of f(x) and g(x) intersecting when x=a. The tangent lines to f(x) and g(x) are drawn at x=a.\"   If , then the ratio is approximately equal to the ratio of their linear approximations near .  "
+},
+{
+  "id": "thm-LHopital",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#thm-LHopital",
+  "type": "Theorem",
+  "number": "4.8.2",
+  "title": "L’Hôpital’s Rule (<span class=\"process-math\">\\(0\/0\\)<\/span> Case).",
+  "body": " L'Hôpital's Rule ( Case)   Suppose and are differentiable functions over an open interval containing , except possibly at . If and , then , assuming the limit on the right exists or is or . This result also holds if we are considering one-sided limits, or it and .    We provide a proof of this theorem in the special case when and are all continuous over an open interval containing . In that case, since and and are continuous at , it follows that . Therefore, . Note that L'Hôpital's rule states we can calculate the limit of a quotient by considering the limit of the quotient of the derivatives . It is important to realize that we are not calculating the derivative of the quotient .   "
+},
+{
   "id": "sec_exp_func",
   "level": "1",
   "url": "sec_exp_func.html",
