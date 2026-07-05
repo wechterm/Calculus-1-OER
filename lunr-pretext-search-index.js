@@ -6612,8 +6612,8 @@ var ptx_lunr_docs = [
   "url": "sec_Ch4Sec8.html",
   "type": "Section",
   "number": "4.8",
-  "title": "L’Hôpital’s Ruleô",
-  "body": " L'Hôpital's Ruleô   Learning Objectives   Recognize when to apply L’Hôpital’s rule.  Identify indeterminate forms produced by quotients, products, subtractions, and powers, and apply L’Hôpital’s rule in each case.  Describe the relative growth rates of functions.   In this section, we examine a powerful tool for evaluating limits. This tool, known as L’Hôpital’s rule , uses derivatives to calculate limits. With this rule, we will be able to evaluate many limits we have not yet been able to determine. Instead of relying on numerical evidence to conjecture that a limit exists, we will be able to show definitively that a limit exists and to determine its exact value.    Applying L'Hôpital's Rule  L’Hôpital’s rule can be used to evaluate limits involving the quotient of two functions. Consider . If and , then . However, what happens if and ? We call this one of the indeterminate forms , of type . This is considered an indeterminate form because we cannot determine the exact behavior of as without further analysis. We have seen examples of this earlier in the text. For example, consider . For the first of these examples, we can evaluate the limit by factoring the numerator and writing . For we are able to show, using a geometric argument, that . Here we use a different technique for evaluating limits such as these. Not only does this technique provide an easier way to evaluate these limits, but also, and more important, it provides us with a way to evaluate many other limits that we could not calculate previously.  The idea behind L’Hôpital’s rule can be explained using local linear approximations. Consider two differentiable functions and such that and such that . For near , we can write and \/ Therefore, .    \"A graph of f(x) and g(x) intersecting when x=a. The tangent lines to f(x) and g(x) are drawn at x=a.\"   If , then the ratio is approximately equal to the ratio of their linear approximations near .   Since is differentiable at , then is continuous at , and therefore . Similarly, . If we also assume that and are continuous at , then and . Using these ideas, we conclude that . Note that the assumption that and are continuous at and can be loosened. We state L'Hôpital's rule formally for the indeterminate form . Also note that the notation does not mean we are actually dividing zero by zero. Rather, we are using the notation to represent a quotient of limits, each of which is zero.   L'Hôpital's Rule ( Case)   Suppose and are differentiable functions over an open interval containing , except possibly at . If and , then , assuming the limit on the right exists or is or . This result also holds if we are considering one-sided limits, or it and .    We provide a proof of this theorem in the special case when and are all continuous over an open interval containing . In that case, since and and are continuous at , it follows that . Therefore, . Note that L'Hôpital's rule states we can calculate the limit of a quotient by considering the limit of the quotient of the derivatives . It is important to realize that we are not calculating the derivative of the quotient .     "
+  "title": "L’Hôpital’s Rule",
+  "body": " L'Hôpital's Rule   Learning Objectives   Recognize when to apply L’Hôpital’s rule.  Identify indeterminate forms produced by quotients, products, subtractions, and powers, and apply L’Hôpital’s rule in each case.  Describe the relative growth rates of functions.   In this section, we examine a powerful tool for evaluating limits. This tool, known as L’Hôpital’s rule , uses derivatives to calculate limits. With this rule, we will be able to evaluate many limits we have not yet been able to determine. Instead of relying on numerical evidence to conjecture that a limit exists, we will be able to show definitively that a limit exists and to determine its exact value.    Applying L'Hôpital's Rule  L’Hôpital’s rule can be used to evaluate limits involving the quotient of two functions. Consider . If and , then . However, what happens if and ? We call this one of the indeterminate forms , of type . This is considered an indeterminate form because we cannot determine the exact behavior of as without further analysis. We have seen examples of this earlier in the text. For example, consider . For the first of these examples, we can evaluate the limit by factoring the numerator and writing . For we are able to show, using a geometric argument, that . Here we use a different technique for evaluating limits such as these. Not only does this technique provide an easier way to evaluate these limits, but also, and more important, it provides us with a way to evaluate many other limits that we could not calculate previously.  The idea behind L’Hôpital’s rule can be explained using local linear approximations. Consider two differentiable functions and such that and such that . For near , we can write and \/ Therefore, .    \"A graph of f(x) and g(x) intersecting when x=a. The tangent lines to f(x) and g(x) are drawn at x=a.\"   If , then the ratio is approximately equal to the ratio of their linear approximations near .   Since is differentiable at , then is continuous at , and therefore . Similarly, . If we also assume that and are continuous at , then and . Using these ideas, we conclude that . Note that the assumption that and are continuous at and can be loosened. We state L'Hôpital's rule formally for the indeterminate form . Also note that the notation does not mean we are actually dividing zero by zero. Rather, we are using the notation to represent a quotient of limits, each of which is zero.   L'Hôpital's Rule ( Case)   Suppose and are differentiable functions over an open interval containing , except possibly at . If and , then , assuming the limit on the right exists or is or . This result also holds if we are considering one-sided limits, or it and .    We provide a proof of this theorem in the special case when and are all continuous over an open interval containing . In that case, since and and are continuous at , it follows that . Therefore, . Note that L'Hôpital's rule states we can calculate the limit of a quotient by considering the limit of the quotient of the derivatives . It is important to realize that we are not calculating the derivative of the quotient .     Applying L'Hôpital's Rule ( Case)  Evaluate each of the following limits by applying L'Hôpital's rule.           Since the numerator and the denominator , we can apply L'Hôpital's rule to evaluate this limit. We have   As , the numerator and the denominator . Therefore, we can apply L'Hôpital's rule. We obtain   As , the numerator and the denominator . Therefore, we can apply L'Hôpital's rule. We obtain   As , both the numerator and denominator approach zero. Therefore, we can apply L'Hôpital's rule. We obtain . Since the numerator and denominator of this new quotient both approach zero as , we apply L'Hôpital's rule again. In doing so, we see that . Therefore, we conclude that .       Evaluate .       Apply L'Hôpital's rule.    We can also use L'Hôpital's rule to evaluate limits of quotients in which and . Limits of this forms are classified as indeterminate forms of type . Again, note that we are not actually dividing by . Since is not a real number, that is impossible; rather, is used to represent a quotient of limits, each of which is or .   L'Hôpital's Rule ( Case)   Suppose and are differentiable functions over an open interval containing , except possibly at . If and . Then, , assuming the limit on the right exists or is or . This result also holds if the limit is infinite, if or , or the limit is one-sided.     Applying L'Hôpital's Rule ( Case)  Evaluate each of the following limits by applying L'Hôpital's rule.         Since and are first-degree polynomials with positive leading coefficients, and . Therefore, we apply L'Hôpital's rule and obtain . Note that this limit can also be calculated without invoking L’Hôpital’s rule. Earlier in the chapter we showed how to evaluate such a limit by dividing the numerator and denominator by the highest power of in the denominator. In doing so, we saw that . L'Hôpital's rule provides us with an alternative means of evaluating this type of limit.  Here, and . Therefore, we can apply L'Hôpital's rule and obtain . Now as . Therefore, the first term in the denominator is approaching zero and the second term is getting really large. In such a case, anything can happen with the product. Therefore, we cannot make any conclusion yet. To evaluate the limit, we use the definition of to write . Now and , so we apply L'Hôpital's rule again. We find . We conclude that .       Evaluate .       Simplify after applying L'Hôpital's rule.    As mentioned, L'Hôpital's rule is an extremely useful tool for evaluating limits. It is important to remember, however, that to apply L'Hôpital's rule to a quotient , it is essential that the limit of be of the form or . Consider the following example.   When L'Hôpital's Rule Does Not Apply   Consider . Show that the limit cannot be evaluated by applying L’Hôpital’s rule.    Because the limits of the numerator and denominator are not both zero and are not both infinite, we cannot apply L’Hôpital’s rule. If we try to do so, we get and . At which point we woudl conclude erroneously that . However, since and , we actually have . We can conclude that .      Explain why we cannot apply L’Hôpital’s rule to evaluate . Evaluate by other means.    while . .      Other Indeterminate Forms   L’Hôpital’s rule is very useful for evaluating limits involving the indeterminate forms and . However, we can also use L’Hôpital’s rule to help evaluate limits involving other indeterminate forms that arise when evaluating limits. The expressions and are all considered indeterminate forms. These expressions are not real numbers. Rather, they represent forms that arise when trying to evaluate certain limits. Next we realize why these are indeterminate forms and then understand how to use L’Hôpital’s rule in these cases. The key idea is that we must rewrite the indeterminate forms in such a way that we arrive at the indeterminate form or .    Indeterminate Form of Type  Suppose we want to evaluate , where and (or ) as . Since one term in the product is approaching zero but the other term is becoming arbitrarily large (in magnitude), anything can happen to the product. We use the notation to denote the form that arises in this situation. The expression is considered indeterminate because we cannot determine without further analysis the exact behavior of the product as . For example, let be a positive integer and consider . As , and . However, the limit as of varies, depending on . If , then . If , then . If , then . Here we consider another limit involving the indeterminate form and show how to rewrite the function as a quotient to use L'Hôpital's rule.   Indeterminate Form of Type   Evaluate    First, rewrite the function as a quotient to apply L'Hôpital's rule. If we write , we see that as and as . Therefore, we can apply L'Hôpital's rule and obtain We conclude that     \"A graph of y=x ln x on the interval from 0 to 8.\"    Find the limit at of the function         Evaluate .       Rewrite the function as .      Indeterminate Form of Type  Another type of indeterminate form is . Consider the following example. Let be a positive integer and let and . As , and . We are interested in . Depending on whether grows faster, grows faster, or they grow at the same rate, as we see next, anything can happen in this limit. Since and , we write to denote the form of this limit. As with our other indeterminate forms, has no meaning on its own and we must do more analysis to determine the value of the limit. For example, suppose the exponent in the function is , Then . On the other hand, if , then . However, if , then . Therefore, the limit cannot be determined by considering only . Next we see how to rewrite an expression involving the indeterminate form as a fraction to apply L'Hôpital's rule.   Indeterminate Form of Type   Evaluate    By combining the fractions, we can write the function as a quotient. Since the least common denominator is , we have . As , the numerator and the denominator . Therefore, we can apply L’Hôpital’s rule. Taking the derivatives of the numerator and the denominator, we have As , and . Since the denominator is positive as approaches zero from the right, we conclude that . Therefore, .      Evaluate .       Apply L'Hôpital's rule twice.      Other Types of Indeterminate Forms  Another type of indeterminate form that arises when evaluating limits involves exponents. The expressions and are all indeterminate forms. On their own, these expressions are meaningless because we cannot actually evaluate these expressions as we would evaluate an expression involving real numbers. Rather, these expressions represent forms that arise when finding limits. Now we examine how L’Hôpital’s rule can be used to evaluate limits involving these indeterminate forms.  Since L’Hôpital’s rule applies to quotients, we use the natural logarithm function and its properties to reduce a problem evaluating a limit involving exponents to a related problem involving a limit of a quotient. For example, suppose we want to evaluate and we arrive at the indeterminate form . (The indeterminate forms and can be handled similarly.) We proceed as follows. Let . Then, . Therefore, . Since , we know that . Therefore, is of the indeterminate form , and we can use the techniques discussed earlier to rewrite the expression in a form so that we can apply L’Hôpital’s rule. Suppose , where may be or . Then . Since the natural logarithm function is continuous, we conclude that , which gives us .   Indeterminate Form of Type   Evaluate     Let . Then, . We need to evaluate . Applying L’Hôpital’s rule, we obtain . Therefore, . Since the natural logarithm function is continuous, we conclude that , which leads to . Hence, .      Evaluate .           Indeterminate Form of Type   Evaluate .    Let . Therefore, . We now evaluate . Since , and , we have the indeterminate form . To apply L'Hôpital's rule, we need to rewrite as a fraction. We could write or . Let's consider the first option. In this case, applying L’Hôpital’s rule, we would obtain . Unfortunately, we not only have another expression involving the indeterminate form , but the new limit is even more complicated to evaluate than the one with which we started. Instead, we try the second option. By writing , and applying L'Hôpital's rule, we obtain . Using the fact that and , we can rewrite the expression on the right-hand side as . We conclude that . Therefore, and we have . Hence, .      Evaluate .       Compute .       Growth Rates of Functions  Supoose the functions and both approach infinity as . Although the values of both functions become arbitrarily large as the values of become sufficiently large, sometimes one function is growing more quickly than the other. For example, and both approach infinity as . However, as shown in the following table, the values of are growing much faster than the values of .                          Comparing the Growth Rates of and   In fact, or, equivalently, . As a result, we say is growing more rapidly than as . On the other hand, for and , although the values of are always greater than the values of for , each value of is roughly three times the corresponding value of as , as showin the following table. In fact, .                          Comparing the Growth Rates of and   In this case, we say that and are growing at the same rate as .    Let and be two functions that approach infinity as .   grows faster than  as if ; or, equivalently, if . We say that  grows slower than  as .   and  grow at the same rate as if , where is finite and positive.      Next we see how to use L'Hôpital's rule to compare the growth rates of power, exponential, and logarithmic functions.   Comparing the Growth Rates of and    For each of the following pairs of functions, use L'Hôpital's rule to evaluate .   and .  and      Since and , we can use L'Hôpital's rule to evaluate . We obtain . Since and , we can apply L'Hôpital's rule again. Since , we conclude that . Therefore, grows more rapidly than as . (See and ).   \"A graph of f(x) = x squared and g(x) = e to the x on the interval from 0 to 6.\"    An exponential function grows at a faster rate than a power function.                            Growth rates of a power function and an exponential function.    Since and , we can use L'Hôpital's rule to evaluate . We obtain . Thus, grows more rapidly than as (See and ).   \"A graph of f(x) = ln(x) and g(x) = x squared on the interval from -2 to 8.\"    A power function grows at a faster rate than a logarithmic function.                            Growth rates of a power function and a logarithmic function.         Compare the growth rates of and .    grows more rapidly than .    Use L'Hôpital's rule to evaluate .    Using the same ideas as in a., it is not difficult to show that grows more rapidly than for any . In and , we compare with and as .    \"Two graphs. The left one displays y=e^x and y=x^3 on the Cartesian plane. The right graph displays y=e^x and y=x^4 on the Cartesian plane.\"    The exponential function grows faster than for any . (a) A comparison of with . (b) A comparison of with .                                   An exponential function grows at a faster rate than any power function.   Similarly, it is not difficult to that grows more rapidly than for any . In and , we compare with and .    \"Three graphs displayed on the same Cartesian plane. the square root of x, the cube root of x, and the natural log of x\"    The function grows more slowly than for any as .                                   A logarithmic function grows at a slower rate than any root function.   These examples illustrate an important principle: as becomes large, exponential functions eventually outgrow every polynomial function , while logarithmic functions grow more slowly than every root function, . Thus, as , the functions increase in the following order of growth: .   "
 },
 {
   "id": "sec_Ch4Sec8-2-3",
@@ -6650,6 +6650,222 @@ var ptx_lunr_docs = [
   "number": "4.8.2",
   "title": "L’Hôpital’s Rule (<span class=\"process-math\">\\(0\/0\\)<\/span> Case).",
   "body": " L'Hôpital's Rule ( Case)   Suppose and are differentiable functions over an open interval containing , except possibly at . If and , then , assuming the limit on the right exists or is or . This result also holds if we are considering one-sided limits, or it and .    We provide a proof of this theorem in the special case when and are all continuous over an open interval containing . In that case, since and and are continuous at , it follows that . Therefore, . Note that L'Hôpital's rule states we can calculate the limit of a quotient by considering the limit of the quotient of the derivatives . It is important to realize that we are not calculating the derivative of the quotient .   "
+},
+{
+  "id": "subsec-applyLHop-7",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-applyLHop-7",
+  "type": "Example",
+  "number": "4.8.3",
+  "title": "Applying L’Hôpital’s Rule (<span class=\"process-math\">\\(0\/0\\)<\/span> Case).",
+  "body": " Applying L'Hôpital's Rule ( Case)  Evaluate each of the following limits by applying L'Hôpital's rule.           Since the numerator and the denominator , we can apply L'Hôpital's rule to evaluate this limit. We have   As , the numerator and the denominator . Therefore, we can apply L'Hôpital's rule. We obtain   As , the numerator and the denominator . Therefore, we can apply L'Hôpital's rule. We obtain   As , both the numerator and denominator approach zero. Therefore, we can apply L'Hôpital's rule. We obtain . Since the numerator and denominator of this new quotient both approach zero as , we apply L'Hôpital's rule again. In doing so, we see that . Therefore, we conclude that .    "
+},
+{
+  "id": "subsec-applyLHop-8",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-applyLHop-8",
+  "type": "Checkpoint",
+  "number": "4.8.4",
+  "title": "",
+  "body": "  Evaluate .       Apply L'Hôpital's rule.   "
+},
+{
+  "id": "thm-LHopitalinfinite",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#thm-LHopitalinfinite",
+  "type": "Theorem",
+  "number": "4.8.5",
+  "title": "L’Hôpital’s Rule (<span class=\"process-math\">\\(\\infty\/\\infty\\)<\/span> Case).",
+  "body": " L'Hôpital's Rule ( Case)   Suppose and are differentiable functions over an open interval containing , except possibly at . If and . Then, , assuming the limit on the right exists or is or . This result also holds if the limit is infinite, if or , or the limit is one-sided.   "
+},
+{
+  "id": "subsec-applyLHop-11",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-applyLHop-11",
+  "type": "Example",
+  "number": "4.8.6",
+  "title": "Applying L’Hôpital’s Rule (<span class=\"process-math\">\\(\\infty\/\\infty\\)<\/span> Case).",
+  "body": " Applying L'Hôpital's Rule ( Case)  Evaluate each of the following limits by applying L'Hôpital's rule.         Since and are first-degree polynomials with positive leading coefficients, and . Therefore, we apply L'Hôpital's rule and obtain . Note that this limit can also be calculated without invoking L’Hôpital’s rule. Earlier in the chapter we showed how to evaluate such a limit by dividing the numerator and denominator by the highest power of in the denominator. In doing so, we saw that . L'Hôpital's rule provides us with an alternative means of evaluating this type of limit.  Here, and . Therefore, we can apply L'Hôpital's rule and obtain . Now as . Therefore, the first term in the denominator is approaching zero and the second term is getting really large. In such a case, anything can happen with the product. Therefore, we cannot make any conclusion yet. To evaluate the limit, we use the definition of to write . Now and , so we apply L'Hôpital's rule again. We find . We conclude that .    "
+},
+{
+  "id": "subsec-applyLHop-12",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-applyLHop-12",
+  "type": "Checkpoint",
+  "number": "4.8.7",
+  "title": "",
+  "body": "  Evaluate .       Simplify after applying L'Hôpital's rule.   "
+},
+{
+  "id": "subsec-applyLHop-14",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-applyLHop-14",
+  "type": "Example",
+  "number": "4.8.8",
+  "title": "When L’Hôpital’s Rule Does Not Apply.",
+  "body": " When L'Hôpital's Rule Does Not Apply   Consider . Show that the limit cannot be evaluated by applying L’Hôpital’s rule.    Because the limits of the numerator and denominator are not both zero and are not both infinite, we cannot apply L’Hôpital’s rule. If we try to do so, we get and . At which point we woudl conclude erroneously that . However, since and , we actually have . We can conclude that .   "
+},
+{
+  "id": "subsec-applyLHop-15",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-applyLHop-15",
+  "type": "Checkpoint",
+  "number": "4.8.9",
+  "title": "",
+  "body": "  Explain why we cannot apply L’Hôpital’s rule to evaluate . Evaluate by other means.    while . .   "
+},
+{
+  "id": "subsec-otherindeterminateforms-3-3",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-otherindeterminateforms-3-3",
+  "type": "Example",
+  "number": "4.8.10",
+  "title": "Indeterminate Form of Type <span class=\"process-math\">\\(0\\cdot \\infty\\)<\/span>.",
+  "body": " Indeterminate Form of Type   Evaluate    First, rewrite the function as a quotient to apply L'Hôpital's rule. If we write , we see that as and as . Therefore, we can apply L'Hôpital's rule and obtain We conclude that     \"A graph of y=x ln x on the interval from 0 to 8.\"    Find the limit at of the function      "
+},
+{
+  "id": "subsec-otherindeterminateforms-3-4",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-otherindeterminateforms-3-4",
+  "type": "Checkpoint",
+  "number": "4.8.12",
+  "title": "",
+  "body": "  Evaluate .       Rewrite the function as .   "
+},
+{
+  "id": "subsec-otherindeterminateforms-4-3",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-otherindeterminateforms-4-3",
+  "type": "Example",
+  "number": "4.8.13",
+  "title": "Indeterminate Form of Type <span class=\"process-math\">\\(\\infty-\\infty\\)<\/span>.",
+  "body": " Indeterminate Form of Type   Evaluate    By combining the fractions, we can write the function as a quotient. Since the least common denominator is , we have . As , the numerator and the denominator . Therefore, we can apply L’Hôpital’s rule. Taking the derivatives of the numerator and the denominator, we have As , and . Since the denominator is positive as approaches zero from the right, we conclude that . Therefore, .   "
+},
+{
+  "id": "subsec-otherindeterminateforms-4-4",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-otherindeterminateforms-4-4",
+  "type": "Checkpoint",
+  "number": "4.8.14",
+  "title": "",
+  "body": "  Evaluate .       Apply L'Hôpital's rule twice.   "
+},
+{
+  "id": "subsec-otherindeterminateforms-5-4",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-otherindeterminateforms-5-4",
+  "type": "Example",
+  "number": "4.8.15",
+  "title": "Indeterminate Form of Type <span class=\"process-math\">\\(\\infty^0\\)<\/span>.",
+  "body": " Indeterminate Form of Type   Evaluate     Let . Then, . We need to evaluate . Applying L’Hôpital’s rule, we obtain . Therefore, . Since the natural logarithm function is continuous, we conclude that , which leads to . Hence, .   "
+},
+{
+  "id": "subsec-otherindeterminateforms-5-5",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-otherindeterminateforms-5-5",
+  "type": "Checkpoint",
+  "number": "4.8.16",
+  "title": "",
+  "body": "  Evaluate .         "
+},
+{
+  "id": "subsec-otherindeterminateforms-5-6",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-otherindeterminateforms-5-6",
+  "type": "Example",
+  "number": "4.8.17",
+  "title": "Indeterminate Form of Type <span class=\"process-math\">\\(0^0\\)<\/span>.",
+  "body": " Indeterminate Form of Type   Evaluate .    Let . Therefore, . We now evaluate . Since , and , we have the indeterminate form . To apply L'Hôpital's rule, we need to rewrite as a fraction. We could write or . Let's consider the first option. In this case, applying L’Hôpital’s rule, we would obtain . Unfortunately, we not only have another expression involving the indeterminate form , but the new limit is even more complicated to evaluate than the one with which we started. Instead, we try the second option. By writing , and applying L'Hôpital's rule, we obtain . Using the fact that and , we can rewrite the expression on the right-hand side as . We conclude that . Therefore, and we have . Hence, .   "
+},
+{
+  "id": "subsec-otherindeterminateforms-5-7",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-otherindeterminateforms-5-7",
+  "type": "Checkpoint",
+  "number": "4.8.18",
+  "title": "",
+  "body": "  Evaluate .       Compute .   "
+},
+{
+  "id": "subsec-growthrates-3",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-growthrates-3",
+  "type": "Table",
+  "number": "4.8.19",
+  "title": "Comparing the Growth Rates of <span class=\"process-math\">\\(x^2\\)<\/span> and <span class=\"process-math\">\\(x^3\\)<\/span>",
+  "body": "                        Comparing the Growth Rates of and  "
+},
+{
+  "id": "subsec-growthrates-5",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-growthrates-5",
+  "type": "Table",
+  "number": "4.8.20",
+  "title": "Comparing the Growth Rates of <span class=\"process-math\">\\(x^2\\)<\/span> and <span class=\"process-math\">\\(3x^2+4x+1\\)<\/span>",
+  "body": "                        Comparing the Growth Rates of and  "
+},
+{
+  "id": "subsec-growthrates-7",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-growthrates-7",
+  "type": "Definition",
+  "number": "4.8.21",
+  "title": "",
+  "body": "  Let and be two functions that approach infinity as .   grows faster than  as if ; or, equivalently, if . We say that  grows slower than  as .   and  grow at the same rate as if , where is finite and positive.     "
+},
+{
+  "id": "ex-ratesofgrowth",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#ex-ratesofgrowth",
+  "type": "Example",
+  "number": "4.8.22",
+  "title": "Comparing the Growth Rates of <span class=\"process-math\">\\(\\ln(x), x^2,\\)<\/span> and <span class=\"process-math\">\\(e^x\\)<\/span>.",
+  "body": " Comparing the Growth Rates of and    For each of the following pairs of functions, use L'Hôpital's rule to evaluate .   and .  and      Since and , we can use L'Hôpital's rule to evaluate . We obtain . Since and , we can apply L'Hôpital's rule again. Since , we conclude that . Therefore, grows more rapidly than as . (See and ).   \"A graph of f(x) = x squared and g(x) = e to the x on the interval from 0 to 6.\"    An exponential function grows at a faster rate than a power function.                            Growth rates of a power function and an exponential function.    Since and , we can use L'Hôpital's rule to evaluate . We obtain . Thus, grows more rapidly than as (See and ).   \"A graph of f(x) = ln(x) and g(x) = x squared on the interval from -2 to 8.\"    A power function grows at a faster rate than a logarithmic function.                            Growth rates of a power function and a logarithmic function.      "
+},
+{
+  "id": "subsec-growthrates-10",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#subsec-growthrates-10",
+  "type": "Checkpoint",
+  "number": "4.8.27",
+  "title": "",
+  "body": "  Compare the growth rates of and .    grows more rapidly than .    Use L'Hôpital's rule to evaluate .   "
+},
+{
+  "id": "fig-exprateofgrowth2",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#fig-exprateofgrowth2",
+  "type": "Figure",
+  "number": "4.8.28",
+  "title": "",
+  "body": "  \"Two graphs. The left one displays y=e^x and y=x^3 on the Cartesian plane. The right graph displays y=e^x and y=x^4 on the Cartesian plane.\"    The exponential function grows faster than for any . (a) A comparison of with . (b) A comparison of with .   "
+},
+{
+  "id": "tab-exprateofgrowth2",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#tab-exprateofgrowth2",
+  "type": "Table",
+  "number": "4.8.29",
+  "title": "An exponential function grows at a faster rate than any power function.",
+  "body": "                               An exponential function grows at a faster rate than any power function.  "
+},
+{
+  "id": "fig-lograteofgrowth2",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#fig-lograteofgrowth2",
+  "type": "Figure",
+  "number": "4.8.30",
+  "title": "",
+  "body": "  \"Three graphs displayed on the same Cartesian plane. the square root of x, the cube root of x, and the natural log of x\"    The function grows more slowly than for any as .   "
+},
+{
+  "id": "tab-lograteofgrowth2",
+  "level": "2",
+  "url": "sec_Ch4Sec8.html#tab-lograteofgrowth2",
+  "type": "Table",
+  "number": "4.8.31",
+  "title": "A logarithmic function grows at a slower rate than any root function.",
+  "body": "                               A logarithmic function grows at a slower rate than any root function.  "
 },
 {
   "id": "sec_exp_func",
