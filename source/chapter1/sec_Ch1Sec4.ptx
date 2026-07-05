@@ -22,7 +22,7 @@
 
 <definition> <!-- Change next /note to /definition-->
 <p id="fs-id1170572110489">Given a function <m>f</m> with domain <m>D</m> and range <m>R,</m> its <term>inverse function</term> (if it exists) is the function <m>f^{-1} </m> with domain <m>R</m> and range <m>D</m> such that <m>f^{-1} (y)=x</m> if <m>f(x)=y.</m> In other words, for a function <m>f</m> and its inverse <m>f^{-1} ,</m></p>
-<me>f^{-1} (f(x))=x \text{ for all } x \text{ in } D,\text{ and } f(f^{-1} (y))=y \text{ for all } y \text{ in } R.</me>
+<md>f^{-1} (f(x))=x \text{ for all } x \text{ in } D,\text{ and } f(f^{-1} (y))=y \text{ for all } y \text{ in } R.</md>
 </definition>
 <p id="fs-id1170572548323">Note that <m>f^{-1} </m> is read as “f inverse.” Here, the <m>-1</m> is not used as an exponent and <m>f^{-1} (x)\neq 1/f(x).</m> <xref ref="CNX_Calc_Figure_01_04_001"/> shows the relationship between the domain and range of <m>f</m> and the domain and range of <m>f^{-1} .</m></p>
 <figure xml:id="CNX_Calc_Figure_01_04_001">
@@ -113,7 +113,7 @@
 <p id="fs-id1170572453043">Therefore, <m>f^{-1} (x)= \frac{1}{3}x+ \frac{4}{3}.</m></p>
 <p id="fs-id1170572240611">Since the domain of <m>f</m> is <m>(-\infty ,\infty ),</m> the range of <m>f^{-1} </m> is <m>(-\infty ,\infty ).</m> Since the range of <m>f</m> is <m>(-\infty ,\infty ),</m> the domain of <m>f^{-1} </m> is <m>(-\infty ,\infty ).</m></p>
 <p id="fs-id1170572222969">You can verify that <m>f^{-1} (f(x))=x</m> by writing</p>
-<me>f^{-1} (f(x))=f^{-1} (3x-4)= \frac{1}{3}(3x-4)+ \frac{4}{3}=x- \frac{4}{3}+ \frac{4}{3}=x.</me>
+<md>f^{-1} (f(x))=f^{-1} (3x-4)= \frac{1}{3}(3x-4)+ \frac{4}{3}=x- \frac{4}{3}+ \frac{4}{3}=x.</md>
 <p id="fs-id1170572546429">Note that for <m>f^{-1} (x)</m> to be the inverse of <m>f(x),</m> both <m>f^{-1} (f(x))=x</m> and <m>f(f^{-1} (x))=x</m> for all <m>x</m> in the domain of the inside function.</p>
 </solution>
 </example>
@@ -254,18 +254,18 @@ The domain and range of <m>f^{-1} </m> are given by the range and domain of <m>f
 </note>
 <p id="fs-id1170572366201">When evaluating an inverse trigonometric function, the output is an angle. For example, to evaluate <m>\cos^{-1}(\frac{1}{2}),</m> we need to find an angle <m>\theta </m> such that <m>\text{ cos }\,\theta =\frac{1}{2}.</m> Clearly, many angles have this property. However, given the definition of <m>\cos^{-1},</m> we need the angle <m>\theta </m> that not only solves this equation, but also lies in the interval <m>[0,\pi].</m> We conclude that <m>\cos^{-1}(\frac{1}{2})=\frac{\pi}{3}.</m></p>
 <p id="fs-id1170572472189">We now consider a composition of a trigonometric function and its inverse. For example, consider the two expressions <m>\sin(\sin^{-1} (\frac{\sqrt{2}}{2}))</m> and <m>\sin^{-1} (\sin(\pi)).</m> For the first one, we simplify as follows:</p>
-<me>\sin(\sin^{-1} ( \frac{\sqrt{2}}{2}))=\sin( \frac{\pi}{4})= \frac{\sqrt{2}}{2}.</me>
+<md>\sin(\sin^{-1} ( \frac{\sqrt{2}}{2}))=\sin( \frac{\pi}{4})= \frac{\sqrt{2}}{2}.</md>
 <p id="fs-id1170572548620">For the second one, we have</p>
-<me>\sin^{-1} (\sin(\pi))=\sin^{-1} (0)=0.</me>
+<md>\sin^{-1} (\sin(\pi))=\sin^{-1} (0)=0.</md>
 <p id="fs-id1170572548676">The inverse function is supposed to “undo” the original function, so why isn’t <m>\sin^{-1} (\sin(\pi))=\pi?</m> Recalling our definition of inverse functions, a function <m>f</m> and its inverse <m>f^{-1} </m> satisfy the conditions <m>f(f^{-1} (y))=y</m> for all <m>y</m> in the domain of <m>f^{-1} </m> and <m>f^{-1} (f(x))=x</m> for all <m>x</m> in the domain of <m>f,</m> so what happened here? The issue is that the inverse sine function, <m>\sin^{-1} ,</m> is the inverse of the <emphasis effect="italics">restricted</emphasis> sine function defined on the domain <m>[-\frac{\pi}{2},\frac{\pi}{2}].</m> Therefore, for <m>x</m> in the interval <m>[-\frac{\pi}{2},\frac{\pi}{2}]\text{ , }</m> it is true that <m>\sin^{-1} (\sin\,x)=x.</m> However, for values of <m>x</m> outside this interval, the equation does not hold, even though <m>\sin^{-1} (\sin\,x)</m> is defined for all real numbers <m>x.</m></p>
 <p id="fs-id1170572089863">What about <m>\sin(\sin^{-1} y)?</m> Does that have a similar issue? The answer is <emphasis effect="italics">no</emphasis>. Since the domain of <m>\sin^{-1} </m> is the interval <m>[-1,1],</m> we conclude that <m>\sin(\sin^{-1} y)=y</m> if <m>-1\leq y\leq 1</m> and the expression is not defined for other values of <m>y.</m> To summarize,</p>
-<me>\sin(\sin^{-1} y)=y \text{ if } -1\leq y\leq 1</me>
+<md>\sin(\sin^{-1} y)=y \text{ if } -1\leq y\leq 1</md>
 <p id="fs-id1170572550837">and</p>
-<me>\sin^{-1} (\sin\,x)=x \text{ if } -\frac{\pi}{2}\leq x\leq \frac{\pi}{2}.</me>
+<md>\sin^{-1} (\sin\,x)=x \text{ if } -\frac{\pi}{2}\leq x\leq \frac{\pi}{2}.</md>
 <p id="fs-id1170572550900">Similarly, for the cosine function,</p>
-<me>\text{ cos }(\cos^{-1}y)=y \text{ if } -1\leq y\leq 1</me>
+<md>\text{ cos }(\cos^{-1}y)=y \text{ if } -1\leq y\leq 1</md>
 <p id="fs-id1170572549577">and</p>
-<me>\cos^{-1}(\text{ cos }\,x)=x \text{ if } 0\leq x\leq \pi.</me>
+<md>\cos^{-1}(\text{ cos }\,x)=x \text{ if } 0\leq x\leq \pi.</md>
 <p id="fs-id1170572549631">Similar properties hold for the other trigonometric functions and their inverses.</p>
 <example id="fs-id1170572549634">
 <title>Evaluating Expressions Involving Inverse Trigonometric Functions</title>

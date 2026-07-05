@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_Ch4Sec8" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>L'Hôpital's Rule</title>
+  <introduction>
+  <title> Learning Objectives</title>
+	<ol>
+	<li>Recognize when to apply L’Hôpital’s rule.</li>
+	<li>Identify indeterminate forms produced by quotients, products, subtractions, and powers, and apply L’Hôpital’s rule in each case.</li>
+	<li>Describe the relative growth rates of functions.</li>
+	</ol>
+<p>In this section, we examine a powerful tool for evaluating limits. This tool, known as <term>L’Hôpital’s rule</term>, uses derivatives to calculate limits. With this rule, we will be able to evaluate many limits we have not yet been able to determine. Instead of relying on numerical evidence to conjecture that a limit exists, we will be able to show definitively that a limit exists and to determine its exact value.</p>
+</introduction>
+
+<subsection xml:id="subsec-applyLHop">
+	<title>Applying L'H&#244;pital's Rule</title>
+	<p>L’Hôpital’s rule can be used to evaluate limits involving the quotient of two functions. Consider
+		<md>\lim_{x\to a}\frac{f(x)}{g(x)}</md>.
+	If <m>\ds\lim_{x\to a}f(x)=L_1</m> and <m>\ds \lim_{x\to a}g(x)=L_2\ne 0</m>, then 
+		<md>\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L_1}{L_2}</md>.
+	However, what happens if <m>\ds\lim_{x\to a}f(x)=0</m> and <m>\ds\lim_{X\to a}g(x)=0</m>?  We call this one of the <term>indeterminate forms</term>, of type <m>\ds\frac{0}{0}</m>. This is considered an indeterminate form because we cannot determine the exact behavior of <m>\ds\frac{f(x)}{g(x)}</m> as <m>x\to a</m> without further analysis. We have seen examples of this earlier in the text. For example, consider 
+		<md>\lim_{x\to 2}\frac{x^2-4}{x-2}\text{ and }\lim_{x\to 0}\frac{\sin{x}}{x}</md>.
+	For the first of these examples, we can evaluate the limit by factoring the numerator and writing
+		<md>\lim_{X\to 2}\frac{x^2-4}{x-2}=\lim_{x\to 2}\frac{(x+2)(x-2)}{x-2}=\lim_{x\to 2}(x+2)=2+2=4</md>.
+	For <m>\ds\lim_{x\to 0}\frac{\sin{x}}{x}</m> we are able to show, using a geometric argument, that 
+		<md>\lim_{x\to 0}\frac{\sin{x}}{x}=1</md>.
+	Here we use a different technique for evaluating limits such as these. Not only does this technique provide an easier way to evaluate these limits, but also, and more important, it provides us with a way to evaluate many other limits that we could not calculate previously.
+	</p>
+	<p>
+	The idea behind L’Hôpital’s rule can be explained using local linear approximations. Consider two differentiable functions <m>f</m> and <m>g</m> such that <m>\ds\lim_{X\to a}f(x)=0=\lim_{x\to a}g(x)</m> and such that <m>g'(a)\ne 0</m>.  For <m>x</m> near <m>a</m>, we can write 
+		<md>f(x)\approx f(a)+f'(a)(x-a)</md>
+	and
+		<md>g(x)\approx g(a)+g'(a)(x-a)</md>/
+	Therefore,
+		<md>\frac{f(x)}{g(x)}\approx \frac{f(a)+f'(a)(x-a)}{g(a)+g'(a)(x-a)}</md>.
+	</p>
+	<figure xml:id="CNX_Calc_Figure_04_08_003">
+		<image source="ch4/CNX_Calc_Figure_04_08_003.jpg" width="80%">
+		<description>"A graph of f(x) and g(x) intersecting when x=a.  The tangent lines to f(x) and g(x) are drawn at x=a." </description>
+		</image> 
+		<caption>If <m>\ds\lim_{x\to a}f(x)=\lim_{x\to a}g(x)</m>, then the ratio <m>f(x)/g(x)</m> is approximately equal to the ratio of their linear approximations near <m>a</m>.</caption>
+	</figure>
+	<p>
+	Since <m>f</m> is differentiable at <m>a</m>, then <m>f</m> is continuous at <m>a</m>, and therefore <m>f(a)=\ds\lim_{x\to a}f(x)=0</m>.  Similarly, <m>g(a)=\ds\lim_{x\to a}g(x)=0</m>.  If we also assume that <m>f'</m> and <m>g'</m> are continuous at <m>x=a</m>, then <m>f'(a)=\ds\lim_{x\to a}f'(x)</m> and <m>g'(a)=\ds\lim_{x\to a}g'(x)</m>.  Using these ideas, we conclude that
+		<md>\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)(x-a)}{g'(x)(x-a)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}</md>.
+	Note that the assumption that <m>f'</m> and <m>g'</m> are continuous at <m>a</m> and <m>g'(a)\ne 0</m> can be loosened.  We state L'H&#244;pital's rule formally for the indeterminate form <m>\ds\frac{0}{0}</m>.  Also note that the notation <m>\ds\frac{0}{0}</m> does not mean we are actually dividing zero by zero.  Rather, we are using the notation <m>\ds\frac{0}{0}</m> to represent a quotient of limits, each of which is zero.
+	</p>
+	<theorem xml:id="thm-LHopital">
+		<title>L'H&#244;pital's Rule (<m>0/0</m> Case)</title>
+		<statement>
+			<p>Suppose <m>f</m> and <m>g</m> are differentiable functions over an open interval containing <m>a</m>, except possibly at <m>a</m>.  If <m>\ds\lim_{x\to a}f(x)=0</m> and <m>\ds\lim_{x\to a}g(x)=0</m>, then
+				<md>\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}</md>,
+			assuming the limit on the right exists or is <m>\infty</m> or <m>-\infty</m>.  This result also holds if we are considering one-sided limits, or it <m>a=\infty</m> and <m>-\infty</m>.
+			</p>
+		</statement>
+		<proof>
+			<p>We provide a proof of this theorem in the special case when <m>f,g,f',</m> and <m>g'</m> are all continuous over an open interval containing <m>a</m>.  In that case, since <m>\ds\lim_{x\to a}f(x)=0=\lim_{x\to a}g(x)</m> and <m>f</m> and <m>g</m> are continuous at <m>a</m>, it follows that <m>f(a)=0=g(a)</m>.  Therefore,
+				<md>
+					<mrow>\lim_{x\to a}\frac{f(x)}{g(x)}&amp;=\lim_{x\to a}\frac{f(x)-f(a)}{g(x)-g(a)}&amp;&amp;\text{ since }f(a)=0=g(a)</mrow>
+					<mrow>&amp;=\lim_{x\to a}\frac{\left(\ds\frac{f(x)-f(a)}{x-a}\right)}{\left(\ds\frac{ g(x)-g(a)}{x-a}\right)}&amp;&amp;\text{algebra}</mrow>
+					<mrow>&amp;=\frac{\ds\lim_{x\to a}\left(\frac{f(x)-f(a)}{x-a}\right)}{\ds\lim_{x\to a}\left(\frac{g(x)-g(a)}{x-a}\right)}&amp;&amp;\text{limit of a quotient}</mrow>
+					<mrow>&amp;=\frac{f'(a)}{g'(a)}&amp;&amp;\text{definition of the derivative}</mrow>
+					<mrow>&amp;=\frac{\ds\lim_{x\to a}f'(x)}{\ds\lim_{x\to a}g'(x)}&amp;&amp;\text{continuity of }f'\text{ and }g'</mrow>
+					<mrow>&amp;=\lim_{x\to a}\frac{f'(x)}{g'(x)}&amp;&amp;\text{limit of a quotient}</mrow>
+				</md>.
+			Note that L'H&#244;pital's rule states we can calculate the limit of a quotient <m>\ds\frac{f}{g}</m> by considering the limit of the quotient of the derivatives <m>\ds\frac{f'}{g'}</m>.  It is important to realize that we are not calculating the derivative of the quotient <m>\ds\frac{f}{g}</m>.
+			</p>
+		</proof>
+	</theorem>
+	
+	<example>
+		<title>Applying L'H&#244;pital's Rule (<m>0/0</m> Case)</title>
+		<statement><p>Evaluate each of the following limits by applying L'H&#244;pital's rule.</p>
+		<ol marker="a.">
+			<li><m>\ds\lim_{x\to 0}\frac{1-\cos{x}}{x}</m></li>
+			<li><m>\ds\lim_{x\to 1}\frac{\sin(\pi x)}{\ln{x}}</m></li>
+			<li><m>\ds\lim_{x\to \infty}\frac{e^{1/x}-1}{1/x}</m></li>
+			<li><m>\ds\lim_{x\to 0}\frac{\sin{x}-x}{x^2}</m></li>
+		</ol>
+		</statement>
+		<solution>
+			<ol>
+				<li>Since the numerator <m>1-\cos{x}\to 0</m> and the denominator <m>x\to 0</m>, we can apply L'H&#244;pital's rule to evaluate this limit.  We have
+					<md>
+						<mrow>\lim_{x\to 0}\frac{1-\cos{x}}{x}&amp; =\lim_{x\to 0}\frac{\frac{d}{dx}(1-\cos{x})}{\frac{d}{dx}(x)}</mrow>
+						<mrow>&amp;=\lim_{x\to 0}\frac{\sin{x}}{1}</mrow>
+						<mrow>&amp;=\frac{\ds\lim_{x\to 0}(\sin{x})}{\ds\lim_{x\to 0}(1)}</mrow>
+						<mrow>&amp;=\frac{0}{1}=0</mrow>
+					</md>
+				</li>
+				<li>As <m>x\to 1</m>, the numerator <m>\sin(\pi x)\to 0</m> and the denominator <m>\ln(x)\to 0</m>.  Therefore, we can apply L'H&#244;pital's rule.  We obtain
+					<md>
+						<mrow>\lim_{x\to 1}\frac{\sin(\pi x)}{\ln{x}}&amp;=\lim_{x\to 1}\frac{\pi\cos(\pi x)}{1/x}</mrow>
+						<mrow>&amp;=\lim_{x\to 1}(\pi x)\cos(\pi x)</mrow>
+						<mrow>&amp;=(\pi\cdot 1)(-1)=-\pi</mrow>
+					</md>
+				</li>
+				<li>As <m>x\to \infty</m>, the numerator <m>e^{1/x}-1\to 0</m> and the denominator <m>\ds\left(\frac{1}{x}\right)\to 0</m>.  Therefore, we can apply L'H&#244;pital's rule.  We obtain
+					<md>
+						\lim_{x\to \infty}\frac{e^{1/x}-1}{\frac{1}{x}}=\lim_{x\to\infty}\frac{e^{1/x}\left(\frac{-1}{x^2}\right)}{\left(\frac{-1}{x^2}\right)}=\lim_{x\to \infty} e^{1/x}=e^0=1
+					</md>
+				</li>
+				<li>As <m>x\to 0</m>, both the numerator and denominator approach zero.  Therefore, we can apply L'H&#244;pital's rule.  We obtain
+					<md>
+						\lim_{x\to 0}\frac{\sin{x}-x}{x^2}=\lim_{x\to 0}\frac{\cos{x}-1}{2x}
+					</md>.
+				Since the numerator and denominator of this new quotient both approach zero as <m>x\to 0</m>, we apply L'H&#244;pital's rule again.  In doing so, we see that
+					<md>\lim_{x\to 0}\frac{\cos{x}-1}{2x}=\lim_{x\to 0}\frac{-\sin{x}}{2}=0</md>.
+				Therefore, we conclude that
+					<md>\lim_{x\to 0}\frac{\sin{x}-x}{x^2}=0</md>.
+				</li>
+			</ol>
+		</solution>
+	</example>
+	<exercise>
+		<statement>
+			<p>Evaluate <m>\ds\lim_{x\to 0}\frac{x}{\tan{x}}</m>.</p>
+		</statement>
+		<solution>
+			<m>1</m>
+		</solution>
+		<hint>
+			<p>Apply L'H&#244;pital's rule.</p>
+		</hint>
+	</exercise>
+	<p>We can also use L'H&#244;pital's rule to evaluate limits of quotients <m>\ds\frac{f(x)}{g(x)}</m> in which <m>f(x)\to \pm\infty</m> and <m>g(x)\to \pm\infty</m>.  Limits of this forms are classified as <em>indeterminate forms of type <m>\infty/\infty</m></em>. Again, note that we are not actually dividing <m>\infty</m> by <m>\infty</m>.  Since <m>\infty</m> is not a real number, that is impossible; rather, <m>\infty/\infty</m> is used to represent a quotient of limits, each of which is <m>\infty</m> or <m>-\infty</m>.
+	</p>
+	<theorem xml:id="thm-LHopitalinfinite">
+		<title>L'H&#244;pital's Rule (<m>\infty/\infty</m> Case)</title>
+		<statement>
+			<p>Suppose <m>f</m> and <m>g</m> are differentiable functions over an open interval containing <m>a</m>, except possibly at <m>a</m>.  If <m>\ds\lim_{x\to a}f(x)=\infty\ (\text{or }-\infty)</m> and <m>\ds\lim_{x\to a}g(x)=\infty\ (\text{or }-\infty)</m>. Then,
+				<md>\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}</md>,
+			assuming the limit on the right exists or is <m>\infty</m> or <m>-\infty</m>.  This result also holds if the limit is infinite, if <m>a=\infty</m> or <m>-\infty</m>, or the limit is one-sided.
+			</p>
+		</statement>
+	</theorem>
+	<example>
+		<title>Applying L'H&#244;pital's Rule (<m>\infty/\infty</m> Case)</title>
+		<statement><p>Evaluate each of the following limits by applying L'H&#244;pital's rule.</p>
+		<ol marker="a.">
+			<li><m>\ds\lim_{x\to \infty}\frac{3x+5}{2x+1}</m></li>
+			<li><m>\ds\lim_{x\to 0^+}\frac{\ln{x}}{\cot{x}}</m></li>
+		</ol>
+		</statement>
+		<solution>
+			<ol>
+				<li>Since <m>3x+5</m> and <m>2x+1</m> are first-degree polynomials with positive leading coefficients, <m>\ds\lim_{x\to \infty}(3x+5)=\infty</m> and <m>\ds\lim_{x\to \infty}(2x+1)=\infty</m>.  Therefore, we apply L'H&#244;pital's rule and obtain
+						<md>\lim_{x\to\infty}\frac{3x+5}{2x+1}=\lim_{x\to\infty}\frac{3}{2}=\frac{3}{2}
+						</md>.
+					Note that this limit can also be calculated without invoking L’Hôpital’s rule. Earlier in the chapter we showed how to evaluate such a limit by dividing the numerator and denominator by the highest power of <m>x</m> in the denominator. In doing so, we saw that
+						<md>	\lim_{x\to\infty}\frac{3x+5}{2x+1}=\lim_{x\to\infty}\frac{3+5/x}{2+1/x}=\frac{3}{2}
+						</md>.
+					L'H&#244;pital's rule provides us with an alternative means of evaluating this type of limit.
+				</li>
+				<li>Here, <m>\ds\lim_{x\to 0^+}\ln{x}=-\infty</m> and <m>\ds\lim_{x\to 0^+}\cot{x}=\infty</m>.  Therefore, we can apply L'H&#244;pital's rule and obtain
+					<md>
+					\lim_{x\to 0^+}\frac{\ln{x}}{\cot{x}}=\lim_{x\to 0^+}\frac{1/x}{-\csc^2{x}}=\lim_{x\to 0^+}\frac{1}{-x\csc^2{x}}
+					</md>.
+				Now as <m>x\to 0^+,\csc^2{x}\to\infty</m>.  Therefore, the first term in the denominator is approaching zero and the second term is getting really large. In such a case, anything can happen with the product. Therefore, we cannot make any conclusion yet. To evaluate the limit, we use the definition of <m>\csc{x}</m> to write	
+					<md>
+					\lim_{x\to 0^+}\frac{1}{-x\csc^2{x}}=\lim_{x\to 0^+}\frac{\sin^2{x}}{-x}
+					</md>.
+				Now <m>\ds\lim_{x\to 0^+}\sin^2{x}=0</m> and <m>\ds\lim_{x\to 0^+}x=0</m>, so we apply L'H&#244;pital's rule again.  We find
+					<md>
+					\lim_{x\to 0^+}\frac{\sin^2{x}}{-x}=\lim_{x\to 0^+}\frac{2\sin{x}\cos{x}}{-1}=\frac{0}{-1}=0
+					</md>.
+				We conclude that 
+					<md>
+					\lim_{x\to 0^+}\frac{\ln{x}}{\cot{x}}=0
+					</md>.
+				</li>
+			</ol>
+		</solution>
+	</example>
+	<exercise>
+		<statement>
+			<p>Evaluate <m>\ds\lim_{x\to \infty}\frac{\ln{x}}{5x}</m>.</p>
+		</statement>
+		<solution>
+			<p><m>0</m></p>
+		</solution>
+		<hint>
+			<p>Simplify after applying L'H&#244;pital's rule.</p>
+		</hint>
+	</exercise>
+	<p>As mentioned, L'H&#244;pital's rule is an extremely useful tool for evaluating limits.  It is important to remember, however, that to apply L'H&#244;pital's rule to a quotient <m>\ds\frac{f(x)}{g(x)}</m>, it is essential that the limit of <m>\ds\frac{f(x)}{g(x)}</m> be of the form <m>\ds\frac{0}{0}</m> or <m>\ds\infty/\infty</m>.  Consider the following example.</p>
+	<example>
+		<title>When L'H&#244;pital's Rule Does Not Apply</title>
+		<statement>
+			<p>Consider <m>\ds\lim_{x\to 1}\frac{x^2+5}{3x+4}</m>. Show that the limit cannot be evaluated by applying L’Hôpital’s rule.</p>
+		</statement>
+		<solution>
+			<p>Because the limits of the numerator and denominator are not both zero and are not both infinite, we cannot apply L’Hôpital’s rule. If we try to do so, we get
+				<md>
+				\frac{d}{dx}(x^2+5)=2x
+				</md>
+			and
+				<md>
+				\frac{d}{dx}(3x+4)=3
+				</md>.
+			At which point we woudl conclude erroneously that 
+				<md>
+				\lim_{x\to 1}\frac{x^2+5}{3x+4}=\lim_{x\to 1}\frac{2x}{3}=\frac{2}{3}
+				</md>.
+			However, since <m>\ds\lim_{x\to 1}(x^2+5)=6</m> and <m>\ds\lim_{x\to 1}(3x+4)=7</m>, we actually have
+				<md>
+				\lim_{x\to 1}\frac{x^2+5}{3x+4}=\frac{6}{7}
+				</md>.
+			We can conclude that
+				<md>
+				\lim_{x\to 1}\frac{x^2+5}{3x+4}\ne\lim_{x\to 1}\frac{\frac{d}{dx}(x^2+5)}{\frac{d}{dx}(3x+4)}
+				</md>.
+			</p>
+		</solution>
+	</example>
+	<exercise>
+		<statement>
+			<p>Explain why we cannot apply L’Hôpital’s rule to evaluate <m>\ds\lim_{x\to 0^+}\frac{\cos{x}}{x}</m>.  Evaluate <m>\ds\lim_{x\to 0^+}\frac{\cos{x}}{x}</m> by other means.</p>
+		</statement>
+		<solution>
+			<p><m>\ds\lim_{x\to 0^+}\cos{x}\to 1</m> while <m>\ds\lim_{x\to 0^+}x\to 0</m>.</p>.
+			<md>
+				\lim_{x\to 0^+}\frac{\cos{x}}{x}=\infty
+			</md>
+		</solution>
+	</exercise>
+</subsection>
+<subsection xml:id="subsec-otherindeterminateforms">
+	<title>Other Indeterminate Forms</title>
+	<introduction>
+		<p>L’Hôpital’s rule is very useful for evaluating limits involving the indeterminate forms <m>\ds\frac{0}{0}</m> and <m>\infty/\infty</m>. However, we can also use L’Hôpital’s rule to help evaluate limits involving other indeterminate forms that arise when evaluating limits. The expressions <m>0\cdot \infty,\infty-\infty,1^\infty,\infty^0,</m> and <m>0^0</m> are all considered indeterminate forms. These expressions are not real numbers. Rather, they represent forms that arise when trying to evaluate certain limits. Next we realize why these are indeterminate forms and then understand how to use L’Hôpital’s rule in these cases. The key idea is that we must rewrite the indeterminate forms in such a way that we arrive at the indeterminate form <m>\ds\frac{0}{0}</m> or <m>\infty/\infty</m>.  
+		</p>
+	</introduction>
+	<subsubsection>
+		<title>Indeterminate Form of Type <m>0\cdot \infty</m></title>
+		<p>Suppose we want to evaluate <m>\ds\lim_{x\to a}\left(f(x)\cdot g(x)\right)</m>, where <m>f(x)\to 0</m> and <m>g(x)\to\infty</m> (or <m>-\infty</m>) as <m>x\to a</m>. Since one term in the product is approaching zero but the other term is becoming arbitrarily large (in magnitude), anything can happen to the product. We use the notation <m>0\cdot \infty</m> to denote the form that arises in this situation.  The expression <m>0\cdot \infty</m> is considered indeterminate because we cannot determine without further analysis the exact behavior of the product <m>f(x)g(x)</m> as <m>x\to a</m>.  For example, let <m>n</m> be a positive integer and consider
+			<md>
+			f(x)=\frac{1}{(x^n+1)}\text{ and }g(x)=3x^2
+			</md>.
+		As <m>x\to \infty</m>, <m>f(x)\to 0</m> and <m>g(x)\to\infty</m>.  However, the limit as <m>x\to\infty</m> of <m>f(x)g(x)=\ds\frac{3x^2}{(x^n+1)}</m> varies, depending on <m>n</m>.  If <m>n=2</m>, then <m>\ds\lim_{x\to\infty}f(x)g(x)=3</m>.  If <m>n=1</m>, then <m>\ds\lim_{x\to\infty}f(x)g(x)=\infty</m>. If <m>n=3</m>, then <m>\ds\lim_{x\to\infty}f(x)g(x)=0</m>.  Here we consider another limit involving the indeterminate form <m>0\cdot \infty</m> and show how to rewrite the function as a quotient to use L'H&#244;pital's rule.
+		</p>
+		
+		<example>
+			<title>Indeterminate Form of Type <m>0\cdot \infty</m></title>
+			<statement>
+				<p>Evaluate <m>\ds\lim_{x\to 0^+}x\ln{x}</m></p>
+			</statement>
+			<solution>
+				<p>First, rewrite the function <m>x\ln{x}</m> as a quotient to apply L'H&#244;pital's rule.  If we write	
+					<md>x\ln{x}=\frac{\ln{x}}{1/x}</md>,
+				we see that <m>\ln{x}\to -\infty</m> as <m>x\to 0^+</m> and <m>\ds\frac{1}{x}\to\infty</m> as <m>x\to 0^+</m>. Therefore, we can apply L'H&#244;pital's rule and obtain
+					<md>\lim_{x\to 0^+}\frac{\ln{x}}{1/x}=\lim_{x\to 0^+}\frac{\frac{d}{dx}(\ln{x})}{\frac{d}{dx}(1/x)}=\lim_{x\to 0^+}\frac{1/x}{-1/x^2}=\lim_{x\to 0^+}(-x)=0</md>
+				We conclude that 
+					<md>\lim_{x\to 0^+}x\ln{x}=0</md>
+				</p>
+			<figure xml:id="CNX_Calc_Figure_04_08_004">
+				<image source="ch4/CNX_Calc_Figure_04_08_004.jpg" width="80%">
+				<description>"A graph of y=x ln x on the interval from 0 to 8." </description>
+				</image> 
+				<caption>
+					<p>Find the limit at <m>x=0</m> of the function <m>f(x)=x\ln{x}.</m>
+					</p>
+				</caption>
+			</figure>
+			</solution>
+		</example>
+		<exercise>
+			<statement>
+				<p>Evaluate <m>\ds\lim_{x\to 0}x\cot{x}</m>.</p>
+			</statement>
+			<solution>
+				<m>0</m>
+			</solution>
+			<hint>
+				<p>Rewrite the function as <m>\ds\frac{x}{\tan{x}}</m>.</p>
+			</hint>
+		</exercise>
+	</subsubsection>
+	<subsubsection>
+		<title>Indeterminate Form of Type <m>\infty-\infty</m></title>
+		<p>Another type of indeterminate form is <m>\infty-\infty</m>.  Consider the following example.  Let <m>n</m> be a positive integer and let <m>f(x)=3x^n</m> and <m>g(x)=3x^2+5</m>.  As <m>x\to \infty</m>, <m>f(x)\to\infty</m> and <m>g(x)\to\infty</m>.  We are interested in <m>\ds\lim_{x\to \infty}\left(f(x)-g(x)\right)</m>.  Depending on whether <m>f(x)</m> grows faster, <m>g(x)</m> grows faster, or they grow at the same rate, as we see next, anything can happen in this limit.  Since <m>f(x)\to\infty</m> and <m>g(x)\to\infty</m>, we write <m>\infty-\infty</m> to denote the form of this limit.  As with our other indeterminate forms, <m>\infty-\infty</m> has no meaning on its own and we must do more analysis to determine the value of the limit. For example, suppose the exponent <m>n</m> in the function <m>f(x)=3x^n</m> is <m>n=3</m>, Then
+			<md>\lim_{x\to\infty}\left(f(x)-g(x)\right)=\lim_{x\to\infty}\left(3x^3-3x^2-5\right)=\infty
+			</md>.
+		On the other hand, if <m>n=2</m>, then 
+			<md>\lim_{x\to\infty}\left(f(x)-g(x)\right)=\lim_{x\to\infty}\left(3x^2-3x^2-5\right)=-5
+			</md>.
+		However, if <m>n=1</m>, then
+			<md>\lim_{x\to\infty}\left(f(x)-g(x)\right)=\lim_{x\to\infty}\left(3x-3x^2-5\right)=-\infty
+			</md>.
+		Therefore, the limit cannot be determined by considering only <m>\infty-\infty</m>. Next we see how to rewrite an expression involving the indeterminate form <m>\infty-\infty</m> as a fraction to apply L'H&#244;pital's rule.
+		</p>
+		<example>
+			<title>Indeterminate Form of Type <m>\infty-\infty</m></title>
+			<statement>
+				<p>Evaluate <m>\ds\lim_{x\to 0^+}\left(\frac{1}{x^2}-\frac{1}{\tan{x}}\right)</m></p>
+			</statement>
+			<solution>
+				<p>By combining the fractions, we can write the function as a quotient. Since the least common denominator is <m>x^2\tan{x}</m>, we have
+					<md>
+					\frac{1}{x^2}-\tan{x}=\frac{(\tan{x})=x^2}{x^2\tan{x}}
+					</md>.
+				As <m>x\to 0^+</m>, the numerator <m>\tan{x}-x^2\to0</m> and the denominator <m>x^2\tan{x}\to 0</m>. Therefore, we can apply L’Hôpital’s rule. Taking the derivatives of the numerator and the denominator, we have 
+					<md>
+					\lim_{x\to 0^+}\frac{(\tan{x})=x^2}{x^2\tan{x}}=\lim_{x\to 0^+}\frac{(\sec^2{x})-2x}{x^2\sec^2{x}+2x\tan{x}}
+					</md>
+				As <m>x\to 0^+</m>, <m>(\sec^2{x})-2x\to 1</m> and <m>x^2\sec^2{x}+2x\tan{x}\to 0</m>.  Since the denominator is positive as <m>x</m> approaches zero from the right, we conclude that
+					<md>
+					\lim_{x\to 0^+}\frac{(\sec^2{x})-2x}{x^2\sec^2{x}+2x\tan{x}}=\infty
+					</md>.
+				Therefore,
+					<md>
+					\lim_{x\to 0^+}\left(\frac{1}{x^2}-\frac{1}{\tan{x}}\right)=\infty
+					</md>.
+				</p>
+			</solution>
+		</example>
+		<exercise>
+			<statement>
+				<p>Evaluate <m>\ds\lim_{x\to 0^+}\left(\frac{1}{x}-\frac{1}{\sin{x}}\right)</m>.
+				</p>
+			</statement>
+			<solution>
+				<m>0</m>
+			</solution>
+			<hint>
+				<p>Apply L'H&#244;pital's rule twice.</p>
+			</hint>
+		</exercise>
+	</subsubsection>
+	<subsubsection>
+		<title>Other Types of Indeterminate Forms</title>
+		<p>Another type of indeterminate form that arises when evaluating limits involves exponents. The expressions <m>0^0,\infty^0,</m> and <m>1^\infty</m>are all indeterminate forms. On their own, these expressions are meaningless because we cannot actually evaluate these expressions as we would evaluate an expression involving real numbers. Rather, these expressions represent forms that arise when finding limits. Now we examine how L’Hôpital’s rule can be used to evaluate limits involving these indeterminate forms.
+		</p>
+		<p>Since L’Hôpital’s rule applies to quotients, we use the natural logarithm function and its properties to reduce a problem evaluating a limit involving exponents to a related problem involving a limit of a quotient. For example, suppose we want to evaluate <m>\ds\lim_{x\to a}f(x)^{g(x)}</m> and we arrive at the indeterminate form <m>\infty^0</m>. (The indeterminate forms <m>0^0</m> and <m>1^\infty</m> can be handled similarly.) We proceed as follows. Let
+			<md>
+			y=f(x)^{g(x)}
+			</md>.
+		Then,
+			<md>
+			\ln{y}=\ln\left(f(x)^{g(x)}\right)=g(x)\ln\left(f(x)\right)
+			</md>.
+		Therefore,
+			<md>
+			\lim_{x\to a}\left[\ln(y)\right]=\lim_{x\to a}\left[g(x)\ln\left(f(x)\right)\right]
+			</md>.
+		Since <m>\ds\lim_{x\to a}f(x)=\infty</m>, we know that <m>\ds\lim_{x\to a}\ln\left(f(x)\right)=\infty</m>.  Therefore, <m>\ds\lim_{x\to a}g(x)\ln\left(f(x)\right)</m> is of the indeterminate form <m>0\cdot \infty</m>, and we can use the techniques discussed earlier to rewrite the expression <m>g(x)\ln\left(f(x)\right)</m> in a form so that we can apply L’Hôpital’s rule. Suppose <m>\ds\lim_{x\to a}g(x)\ln\left(f(x)\right)=L</m>, where <m>L</m> may be <m>\infty</m> or <m>-\infty</m>.  Then 
+			<md>
+			\lim_{x\to a}\left[\ln(y)\right]=L
+			</md>.
+		Since the natural logarithm function is continuous, we conclude that
+			<md>
+			\ln\left(\lim_{x\to a}{y}\right)=L
+			</md>,
+		which gives us
+			<md>
+			\lim_{x\to a}{y}=\lim_{x\to a}f(x)^{g(x)}=e^L
+			</md>.
+		</p>
+		<example>
+			<title>Indeterminate Form of Type <m>\infty^0</m></title>
+			<statement>
+				<p>Evaluate <m>\ds\lim_{x\to \infty}x^{1/x}</m>
+				</p>
+			</statement>
+			<solution>
+			<p>Let <m>y=x^{1/x}</m>.  Then,
+				<md>
+				\ln{y}=\ln\left(x^{1/x}\right)=\frac{1}{x}\ln{x}=\frac{\ln{x}}{x}
+				</md>.
+			We need to evaluate <m>\ds\lim_{x\to \infty}\frac{\ln{x}}{x}</m>. Applying L’Hôpital’s rule, we obtain
+				<md>
+				\lim_{x\to \infty}\ln{y}=\lim_{x\to \infty}\frac{\ln{x}}{x}=\lim_{x\to \infty}\frac{1/x}{1}=0
+				</md>.
+			Therefore, <m>\ds\lim_{x\to \infty}\ln{y}=0</m>. Since the natural logarithm function is continuous, we conclude that 
+				<md>
+				\ln\left(\lim_{x\to \infty}{y}\right)=0
+				</md>,
+			which leads to 
+				<md>
+				\lim_{x\to \infty}{y}=\lim_{x\to \infty}e^{\ds\ln(y)}=e^{\left(\ds\lim_{x\to \infty}{\ln{y}}\right)}=e^0=1
+				</md>.
+			Hence,
+				<md>
+				\lim_{x\to \infty}x^{1/x}=1
+				</md>.
+			</p>
+			</solution>
+		</example>
+		<exercise>
+			<statement>
+				<p>Evaluate <m>\ds\lim_{x\to \infty}x^{1/\ln(x)}</m>.
+				</p>
+			</statement>
+			<solution>
+				<m>e</m>
+			</solution>
+			<hint>
+				<m>\ds\ln{x^{1/\ln(x)}}=\frac{\ln{x}}{\ln{x}}</m>
+			</hint>
+		</exercise>
+		<example>
+			<title>Indeterminate Form of Type <m>0^0</m></title>
+			<statement>
+				<p>Evaluate <m>\ds\lim_{x\to 0^+}x^{\sin{x}}</m>.</p>
+			</statement>
+			<solution>
+				<p>Let 
+					<md>
+					y=x^{\sin{x}}
+					</md>.
+				Therefore,
+					<md>
+					\ln{y}=\ln\left(x^{\sin{x}}\right)=\sin{x}\ln{x}
+					</md>.
+				We now evaluate <m>\ds\lim_{x\to 0^+}\sin{x}\ln{x}</m>.  Since <m>\ds\lim_{x\to 0^+}\sin{x}=0</m>, and <m>\ds\lim_{x\to 0^+}\ln{x}=-\infty</m>, we have the indeterminate form <m>0\cdot \infty</m>.  To apply L'H&#244;pital's rule, we need to rewrite <m>\sin{x}\ln{x}</m> as a fraction.  We could write
+					<md>
+					\sin{x}\ln{x}=\frac{\sin{x}}{1/\ln{x}}
+					</md>
+				or
+					<md>
+					\sin{x}\ln{x}=\frac{\ln{x}}{1/\sin{x}}=\frac{\ln{x}}{\csc{x}}
+					</md>.
+				Let's consider the first option. In this case, applying L’Hôpital’s rule, we would obtain
+					<md>
+					\lim_{x\to 0^+}\sin{x}\ln{x}=\lim_{x\to 0^+}\frac{\sin{x}}{1/\ln{x}}=\lim_{x\to 0^+}\frac{\cos{x}}{-1/\left(x(\ln{x})^2\right)}=\lim_{x\to 0^+}\left(-x(\ln{x})^2\cos{x}\right)
+					</md>.
+				Unfortunately, we not only have another expression involving the indeterminate form <m>0\cdot \infty</m>, but the new limit is even more complicated to evaluate than the one with which we started. Instead, we try the second option. By writing
+					<md>
+					\sin{x}\ln{x}=\frac{\ln{x}}{1/\sin{x}}=\frac{\ln{x}}{\csc{x}}
+					</md>,
+				and applying L'H&#244;pital's rule, we obtain
+					<md>
+					\lim_{x\to 0^+}\sin{x}\ln{x}=\lim_{x\to0^+}\frac{\ln{x}}{\csc{x}}=\lim_{x\to 0^+}\frac{1/x}{-\csc{x}\cot{x}}=\lim_{x\to 0^+}\frac{-1}{x\csc{x}\cot{x}}
+					</md>.
+				Using the fact that <m>\ds\csc{x}=\frac{1}{\sin{x}}</m> and <m>\ds\cot{x}=\frac{\cos{x}}{\sin{x}}</m>, we can rewrite the expression on the right-hand side as
+					<md>
+					\lim_{x\to 0^+}\frac{-\sin^2{x}}{x\cos{x}}=\lim_{x\to 0^+}\left[\frac{\sin{x}}{x}\cdot(-\tan{x})\right]=\left(\lim_{x\to 0^+}\frac{\sin{x}}{x}\right)\cdot\left(\lim_{x\to 0^+}(-\tan{x})\right)=1\cdot 0=0
+					</md>.
+				We conclude that <m>\ds\lim_{x\to 0^+}\ln{y}=0</m>.  Therefore, <m>\ds\ln\left(\lim_{x\to 0^+}y\right)=0</m> and we have
+					<md>
+					\lim_{x\to 0^+}y=\lim_{x\to 0^+}x^{\sin{x}}=e^0=1
+					</md>.
+				Hence,
+					<md>
+					\lim_{x\to 0^+}x^{\sin{x}}=1
+					</md>.
+				</p>
+			</solution>
+		</example>
+		<exercise>
+			<statement>
+				<p>Evaluate <m>\ds\lim_{x\to 0^+}x^x</m>.</p>
+			</statement>
+			<solution>
+				<m>1</m>
+			</solution>
+			<hint>
+				<p> Compute <m>\ds\lim_{x\to 0^+}\frac{\ln{x}}{1/x}</m>.</p>
+			</hint>
+		</exercise>
+	</subsubsection>
+</subsection>
+<subsection xml:id="subsec-growthrates">
+	<title>Growth Rates of Functions</title>
+	<p>Supoose the functions <m>f</m> and <m>g</m> both approach infinity as <m>x\to \infty</m>.  Although the values of both functions become arbitrarily large as the values of <m>x</m> become sufficiently large, sometimes one function is growing more quickly than the other. For example, <m>f(x)=x^2</m> and <m>g(x)=x^3</m> both approach infinity as <m>x\to\infty</m>.  However, as shown in the following table, the values of <m>x^3</m> are growing much faster than the values of <m>x^2</m>.
+	</p>
+	<table>
+		<tabular halign="center">
+			<row header="yes" bottom="minor">
+				<cell><m>x</m></cell>
+				<cell><m>10</m></cell>
+				<cell><m>100</m></cell>
+				<cell><m>1000</m></cell>
+				<cell><m>10{,}000</m></cell>
+			</row>
+			<row>
+				<cell><m>f(x)=x^2</m></cell>
+				<cell><m>100</m></cell>
+				<cell><m>10{,}000</m></cell>
+				<cell><m>1{,}000{,}000</m></cell>
+				<cell><m>100{,}000{,}000</m></cell>
+			</row>
+			<row>
+				<cell><m>g(x)=x^3</m></cell>
+				<cell><m>1000</m></cell>
+				<cell><m>1{,}000{,}000</m></cell>
+				<cell><m>1{,}000{,}000{,}000</m></cell>
+				<cell><m>1{,}000{,}000{,}000{,}000</m></cell>
+			</row>
+		</tabular>
+	<title>Comparing the Growth Rates of <m>x^2</m> and <m>x^3</m></title>
+	</table>
+	<p>In fact,
+		<md>
+		\lim_{x\to \infty}\frac{x^3}{x^2}=\lim_{x\to\infty}x=\infty
+		</md>
+	or, equivalently,
+		<md>
+		\lim_{x\to\infty}\frac{x^2}{x^3}=\lim_{x\to\infty}\frac{1}{x}=0
+		</md>.
+	As a result, we say <m>x^3</m> is growing more rapidly than <m>x^2</m> as <m>x\to\infty</m>.  On the other hand, for <m>f(x)=x^2</m> and <m>g(x)=3x^2+4x+1</m>, although the values of <m>g(x)</m> are always greater than the values of <m>f(x)</m> for <m>x\gt 0</m>, each value of <m>g(x)</m> is roughly three times the corresponding value of <m>f(x)</m> as <m>x\to\infty</m>, as showin the following table.  In fact,
+		<md>
+		\lim_{x\to \infty}\frac{x^2}{3x^2+4x+1}=\frac{1}{3}
+		</md>.
+	</p>
+	<table>
+		<tabular halign="center">
+			<row header="yes" bottom="minor">
+				<cell><m>x</m></cell>
+				<cell><m>10</m></cell>
+				<cell><m>100</m></cell>
+				<cell><m>1000</m></cell>
+				<cell><m>10{,}000</m></cell>
+			</row>
+			<row>
+				<cell><m>f(x)=x^2</m></cell>
+				<cell><m>100</m></cell>
+				<cell><m>10{,}000</m></cell>
+				<cell><m>1{,}000{,}000</m></cell>
+				<cell><m>100{,}000{,}000</m></cell>
+			</row>
+			<row>
+				<cell><m>g(x)=3x^2+4x+1</m></cell>
+				<cell><m>341</m></cell>
+				<cell><m>30{,}401</m></cell>
+				<cell><m>3{,}004{,}001</m></cell>
+				<cell><m>300{,}040{,}001</m></cell>
+			</row>
+		</tabular>
+	<title>Comparing the Growth Rates of <m>x^2</m> and <m>3x^2+4x+1</m></title>
+	</table>
+	<p>In this case, we say that <m>x^2</m> and <m>3x^2+4x+1</m> are growing at the same rate as <m>x\to \infty</m>. 
+	</p>
+	<definition>
+		<statement>
+			<p>Let <m>f(x)</m> and <m>g(x)</m> be two functions that approach infinity as <m>x\to\infty</m>.
+			<ol>
+				<li><m>f</m> <term>grows faster than</term> <m>g</m> as <m>x\to\infty</m> if 
+					<md>
+					\lim_{x\to\infty}\frac{f(x)}{g(x)}=\infty
+					</md>;
+				or, equivalently, if
+					<md>
+					\lim_{x\to\infty}\frac{g(x)}{f(x)}=0
+					</md>.
+				We say that <m>g</m> <term>grows slower than</term> <m>f</m> as <m>x\to\infty</m>.
+				</li>
+				<li>
+				<m>f</m> and <m>g</m> <term>grow at the same rate</term> as <m>x\to\infty</m> if 
+					<md>
+					\lim_{x\to\infty}\frac{f(x)}{g(x)}=M
+					</md>,
+					where <m>M</m> is finite and positive.
+				</li>
+			</ol>
+			</p>
+		</statement>
+	</definition>
+
+	<p>Next we see how to use L'H&#244;pital's rule to compare the growth rates of power, exponential, and logarithmic functions.
+	</p>
+	<example xml:id="ex-ratesofgrowth">
+		<title>Comparing the Growth Rates of <m>\ln(x), x^2,</m> and <m>e^x</m>
+		</title>
+		<statement>
+			<p>For each of the following pairs of functions, use L'H&#244;pital's rule to evaluate <m>\ds\lim_{x\to\infty}\frac{f(x)}{g(x)}</m>.
+			</p>
+			<ol marker="a.">
+				<li><m>f(x)=x^2</m> and <m>g(x)=e^x</m>.</li>
+				<li><m>f(x)=\ln(x)</m> and <m>g(x)=x^2</m></li>
+			</ol>
+		</statement>
+		<solution>
+			<ol marker="a.">
+				<li>Since <m>\ds\lim_{x\to\infty}x^2=\infty</m> and <m>\ds\lim_{x\to\infty}e^x=\infty</m>, we can use L'H&#244;pital's rule to evaluate <m>\ds\lim_{x\to\infty}\frac{x^2}{e^x}</m>.  We obtain
+					<md>
+					\lim_{x\to\infty}\frac{x^2}{e^x}=\lim_{x\to\infty}\frac{2x}{e^x}
+					</md>.
+				Since <m>\ds\lim_{x\to\infty}2x=\infty</m> and <m>\ds\lim_{x\to\infty}e^x=\infty</m>, we can apply L'H&#244;pital's rule again.  Since
+					<md>
+					\lim_{x\to\infty}\frac{2x}{e^x}=\lim_{x\to\infty}\frac{2}{e^x}=0
+					</md>,
+				we conclude that
+					<md>
+					\lim_{x\to\infty}\frac{x^2}{e^x}=0
+					</md>.
+				Therefore, <m>e^x</m> grows more rapidly than <m>x^2</m> as <m>x\to\infty</m>. (See <xref ref="fig-exprateofgrowth"/> and <xref ref="tab-exprateofgrowth"/>).
+				
+				<figure xml:id="fig-exprateofgrowth">
+					<image source="ch4/CNX_Calc_Figure_04_08_005.jpg" width="80%">
+					<description>"A graph of f(x) = x squared and g(x) = e to the x on the interval from 0 to 6." </description>
+					</image> 
+					<caption>
+						<p>An exponential function grows at a faster rate than a power function.
+						</p>
+					</caption>
+				</figure>
+				<table xml:id="tab-exprateofgrowth">
+					<tabular halign="center">
+						<row header="yes" bottom="minor">
+							<cell><m>x</m></cell>
+							<cell><m>5</m></cell>
+							<cell><m>10</m></cell>
+							<cell><m>15</m></cell>
+							<cell><m>20</m></cell>
+						</row>
+						<row>
+							<cell><m>x^2</m></cell>
+							<cell><m>25</m></cell>
+							<cell><m>100</m></cell>
+							<cell><m>225</m></cell>
+							<cell><m>400</m></cell>
+						</row>
+						<row>
+							<cell><m>e^x</m></cell>
+							<cell><m>148</m></cell>
+							<cell><m>22{,}026</m></cell>
+							<cell><m>3{,}269{,}017</m></cell>
+							<cell><m>485{,}165{,}195</m></cell>
+						</row>
+					</tabular>
+					<title>Growth rates of a power function and an exponential function.</title>
+				</table>
+				</li>
+				<li>Since <m>\ds\lim_{x\to\infty}\ln{x}=\infty</m> and <m>\lim_{x\to\infty}x^2=\infty</m>, we can use L'H&#244;pital's rule to evaluate <m>\ds\lim_{x\to\infty}\frac{\ln{x}}{x^2}</m>.  We obtain
+					<md>	\lim_{x\to\infty}\frac{\ln{x}}{x^2}=\lim_{x\to\infty}\frac{1/x}{2x}=\lim_{x\to\infty}\frac{1}{2x^2}=0
+					</md>.
+				Thus, <m>x^2</m> grows more rapidly than <m>\ln{x}</m> as <m>x\to\infty</m> (See <xref ref="fig-lograteofgrowth"/> and <xref ref="tab-lograteofgrowth"/>).
+				<figure xml:id="fig-lograteofgrowth">
+					<image source="ch4/CNX_Calc_Figure_04_08_006.jpg" width="80%">
+					<description>"A graph of f(x) = ln(x) and g(x) = x squared on the interval from -2 to 8." </description>
+					</image> 
+					<caption>
+						<p>A power function grows at a faster rate than a logarithmic function.
+						</p>
+					</caption>
+				</figure>
+				<table xml:id="tab-lograteofgrowth">
+					<tabular halign="center">
+						<row header="yes" bottom="minor">
+							<cell><m>x</m></cell>
+							<cell><m>10</m></cell>
+							<cell><m>100</m></cell>
+							<cell><m>1000</m></cell>
+							<cell><m>10{,}000</m></cell>
+						</row>
+						<row>
+							<cell><m>\ln(x)</m></cell>
+							<cell><m>2.303</m></cell>
+							<cell><m>4.605</m></cell>
+							<cell><m>6.908</m></cell>
+							<cell><m>9.210</m></cell>
+						</row>
+						<row>
+							<cell><m>x^2</m></cell>
+							<cell><m>100</m></cell>
+							<cell><m>10{,}000</m></cell>
+							<cell><m>1{,}000{,}000</m></cell>
+							<cell><m>100{,}000{,}000</m></cell>
+						</row>
+					</tabular>
+					<title>Growth rates of a power function and a logarithmic function.</title>
+				</table>
+				</li>
+			</ol>
+		</solution>
+	</example>
+	<exercise>
+		<statement>
+			<p>Compare the growth rates of <m>x^{100}</m> and <m>2^x</m>.
+			</p>
+		</statement>
+		<solution>
+			<p><m>2^x</m> grows more rapidly than <m>x^{100}</m>.
+			</p>
+		</solution>
+		<hint>
+			<p>Use L'H&#244;pital's rule to evaluate <m>\ds\lim_{x\to\infty}\frac{2^x}{x^{100}}</m>.
+			</p>
+		</hint>
+	</exercise>
+	<p>Using the same ideas as in <xref ref="ex-ratesofgrowth"/>a., it is not difficult to show that <m>e^x</m> grows more rapidly than <m>x^P</m> for any <m>p\gt 0</m>.  In <xref ref="fig-exprateofgrowth2"/> and <xref ref="tab-exprateofgrowth2"/>, we compare <m>e^x</m> with <m>x^3</m> and <m>x^4</m> as <m>x\to\infty</m>.
+	</p>
+	<figure xml:id="fig-exprateofgrowth2">
+		<image source="ch4/CNX_Calc_Figure_04_08_001.jpg" width="80%">
+		<description>"Two graphs. The left one displays y=e^x and y=x^3 on the Cartesian plane.  The right graph displays y=e^x and y=x^4 on the Cartesian plane." </description>
+		</image> 
+		<caption>
+			<p>The exponential function <m>e^x</m> grows faster than <m>x^p</m> for any <m>p\gt 0</m>.  (a) A comparison of <m>e^x</m> with <m>x^3</m>. (b) A comparison of <m>e^x</m> with <m>x^4</m>.
+			</p>
+		</caption>
+	</figure>
+	<table xml:id="tab-exprateofgrowth2">
+		<tabular halign="center">
+			<row header="yes" bottom="minor">
+				<cell><m>x</m></cell>
+				<cell><m>5</m></cell>
+				<cell><m>10</m></cell>
+				<cell><m>15</m></cell>
+				<cell><m>20</m></cell>
+			</row>
+			<row>
+				<cell><m>x^3</m></cell>
+				<cell><m>125</m></cell>
+				<cell><m>1000</m></cell>
+				<cell><m>3375</m></cell>
+				<cell><m>8000</m></cell>
+			</row>
+			<row>
+				<cell><m>x^4</m></cell>
+				<cell><m>625</m></cell>
+				<cell><m>10{,}000</m></cell>
+				<cell><m>50{,}625</m></cell>
+				<cell><m>160{,}000</m></cell>
+			</row>
+			<row>
+				<cell><m>e^x</m></cell>
+				<cell><m>148</m></cell>
+				<cell><m>22{,}026</m></cell>
+				<cell><m>3{,}269{,}017</m></cell>
+				<cell><m>485{,}165{,}195</m></cell>
+			</row>
+		</tabular>
+		<title>An exponential function grows at a faster rate than any power function.</title>
+	</table>
+	<p>Similarly, it is not difficult to that <m>x^p</m> grows more rapidly than <m>\ln{x}</m> for any <m>p\gt 0</m>. In <xref ref="fig-lograteofgrowth2"/> and <xref ref="tab-lograteofgrowth2"/>, we compare <m>\ln{x}</m> with <m>\sqrt[3]{x}</m> and <m>\sqrt{x}</m>.
+	</p>
+	<figure xml:id="fig-lograteofgrowth2">
+		<image source="ch4/CNX_Calc_Figure_04_08_007.jpg" width="80%">
+		<description>"Three graphs displayed on the same Cartesian plane. the square root of x, the cube root of x, and the natural log of x" </description>
+		</image> 
+		<caption>
+			<p>The function <m>y=\ln(x)</m> grows more slowly than <m>x^p</m> for any <m>p\gt 0</m> as <m>x\to\infty</m>.
+			</p>
+		</caption>
+	</figure>
+	<table xml:id="tab-lograteofgrowth2">
+		<tabular halign="center">
+			<row header="yes" bottom="minor">
+				<cell><m>x</m></cell>
+				<cell><m>10</m></cell>
+				<cell><m>100</m></cell>
+				<cell><m>1000</m></cell>
+				<cell><m>10{,}000</m></cell>
+			</row>
+			<row>
+				<cell><m>\ln(x)</m></cell>
+				<cell><m>2.303</m></cell>
+				<cell><m>4.605</m></cell>
+				<cell><m>6.908</m></cell>
+				<cell><m>9.210</m></cell>
+			</row>
+			<row>
+				<cell><m>\sqrt[3]{x}</m></cell>
+				<cell><m>2.154</m></cell>
+				<cell><m>4.642</m></cell>
+				<cell><m>10</m></cell>
+				<cell><m>21.544</m></cell>
+			</row>
+			<row>
+				<cell><m>\sqrt{x}</m></cell>
+				<cell><m>3.162</m></cell>
+				<cell><m>10</m></cell>
+				<cell><m>31.623</m></cell>
+				<cell><m>100</m></cell>
+			</row>
+		</tabular>
+		<title>A logarithmic function grows at a slower rate than any root function.</title>
+	</table>
+	<p>These examples illustrate an important principle: as <m>x</m> becomes large, exponential functions <m>a^x</m> eventually outgrow every polynomial function <m>x^p</m>, while logarithmic functions <m>\log_a(x)</m> grow more slowly than every root function,<m>\sqrt[p]{x}</m>. Thus, as <m>x \rightarrow\infty</m>, the functions increase in the following order of growth: 
+		<md>
+		\log_a(x),\ \sqrt[p]{x},\ x^p,\ a^x 
+		</md>.
+	</p>
+
+</subsection>
+</section>
+

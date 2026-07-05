@@ -84,26 +84,26 @@
       <p id="fs-id1170572280787">Every function has a domain. However, sometimes a function is described by an equation, as in <m>f(x)=x^2,</m> with no specific domain given. In this case, the domain is taken to be the set of all real numbers <m>x</m> for which <m>f(x)</m> is a real number. For example, since any real number can be squared, if no other domain is specified, we consider the domain of <m>f(x)=x^2</m> to be the set of all real numbers. On the other hand, the square root function <m>f(x)=\sqrt{x}</m> only gives a real output if <m>x</m> is nonnegative. Therefore, the domain of the function <m>f(x)=\sqrt{x}</m> is the set of nonnegative real numbers, sometimes called the <term> natural domain</term>.</p>
 
       <p id="fs-id1170572163630">For the functions <m>f(x)=x^2</m> and <m>f(x)=\sqrt{x},</m> the domains are sets with an infinite number of elements. Clearly we cannot list all these elements. When describing a set with an infinite number of elements, it is often helpful to use set-builder or interval notation. When using set-builder notation to describe a subset of all real numbers, denoted <m>\mathbb{R}],</m> we write</p>
-      <me>\{x|x \text{ has some property} \}.</me>
+      <md>\{x|x \text{ has some property} \}.</md>
       <p id="fs-id1170572209639">We read this as the set of real numbers <m>x</m> such that <m>x</m> has some property. For example, if we were interested in the set of real numbers that are greater than one but less than five, we could denote this set using set-builder notation by writing</p>
-      <me>\{x | 1 &lt; x &lt; 5 \}.</me>
+      <md>\{x | 1 &lt; x &lt; 5 \}.</md>
 
       <p id="fs-id1170572225804">A set such as this, which contains all numbers greater than <m>a</m> and less than <m>b,</m> can also be denoted using the <term>interval notation</term> <m>(a,b).</m> Therefore,</p>
       <m>(1,5)=\{x| 1\leq x \leq 5\}.</m>
       <p id="fs-id1170573392876">The numbers <m>1</m> and <m>5</m> are called the <term>endpoints</term> of this set. If we want to consider the set that includes the endpoints, we would denote this set by writing</p>
-      <me>[1,5]=\{x|1\leq x\leq5\}.</me>
+      <md>[1,5]=\{x|1\leq x\leq5\}.</md>
       <p id="fs-id1170572181683">We can use similar notation if we want to include one of the endpoints, but not the other. To denote the set of nonnegative real numbers, we would use the set-builder notation</p>
-      <me>\{x|0\leq x\}.</me>
+      <md>\{x|0\leq x\}.</md>
       <p id="fs-id1170572130057">The smallest number in this set is zero, but this set does not have a largest number. Using interval notation, we would use the symbol <m>\infty ,</m> which refers to positive infinity, and we would write the set as</p>
-      <me>[0,\infty)=\{x|0 \leq x\}.</me>
+      <md>[0,\infty)=\{x|0 \leq x\}.</md>
       <p id="fs-id1170572107282">It is important to note that <m>\infty</m> is not a real number. It is used symbolically here to indicate that this set includes all real numbers greater than or equal to zero. Similarly, if we wanted to describe the set of all nonpositive numbers, we could write</p>
-      <me>(-\infty,0]=\{x|x \leq 0\}.</me>
+      <md>(-\infty,0]=\{x|x \leq 0\}.</md>
       <p id="fs-id1170572168622">Here, the notation <m>-\infty</m> refers to negative infinity, and it indicates that we are including all numbers less than or equal to zero, no matter how small. The set</p>
-      <me>(-\infty,\infty)=\{x|x \text{ is any real number }\}</me>
+      <md>(-\infty,\infty)=\{x|x \text{ is any real number }\}</md>
       <p id="fs-id1170572482419">refers to the set of all real numbers.</p>
 
       <p id="fs-id1170572150626">Some functions are defined using different equations for different parts of their domain. These types of functions are known as <term>piecewise-defined functions</term>. For example, suppose we want to define a function <m>f</m> with a domain that is the set of all real numbers such that <m>f(x)=3x+1</m> for <m>x \geq 2</m> and <m>f(x)=x^2</m> for <m>x &lt; 2.</m> We denote this function by writing</p>
-      <me>f(x)=\begin{cases} 3x+1 \amp x \geq 2 \\ x^2 \amp x &lt; 2 .\end{cases}</me>
+      <md>f(x)=\begin{cases} 3x+1 \amp x \geq 2 \\ x^2 \amp x &lt; 2 .\end{cases}</md>
       <p id="fs-id1170572129919">When evaluating this function for an input <m>x,</m> the equation to use depends on whether <m>x \geq 2</m> or <m>x &lt; 2.</m> For example, since <m>5 \ge 2,</m> we use the fact that <m>f(x)=3x+1</m> for <m>x \geq 2</m> and see that <m>f(5)=3(5)+1=16.</m> On the other hand, for <m>x=-1,</m> we use the fact that <m>f(x)=x^2</m> for <m>x &lt; 2</m> and see that <m>f(-1)=1.</m></p>
 
       <example id="fs-id1170572479293">
@@ -157,9 +157,9 @@
     <ol id="fs-id1170572133213">
     <li>Since <m>f(x)=(x-4)^2+5</m> is a real number for any real number <m>x,</m> the domain of <m>f</m> is the interval <m>(-\infty, \infty).</m></li>
     <li>Since <m>(x-4)^2 \geq 0,</m> we know <m>f(x)=(x-4)^2+5 \geq 5.</m> Therefore, the range must be a subset of <m>\{y|y \geq 5\}.</m> To show that every element in this set is in the range, we need to show that for a given <m>y</m> in that set, there is a real number <m>x</m> such that <m>f(x)=(x-4)^2+5=y.</m> Solving this equation for <m>x,</m> we see that we need <m>x</m> such that
-    <me>(x-4)^2=y-5.</me>
+    <md>(x-4)^2=y-5.</md>
     This equation is satisfied as long as there exists a real number <m>x</m> such that
-   <me>x-4= \pm \sqrt{y-5}.</me>
+   <md>x-4= \pm \sqrt{y-5}.</md>
     Since <m>y \geq 5,</m> the square root is well-defined. We conclude that for <m>x=4 \pm \sqrt{y-5},f(x)=y,</m> and therefore the range is <m>\{y|y \geq 5\}.</m></li>
     </ol></li>
 
@@ -167,24 +167,24 @@
     <ol id="fs-id1170572451982">
     <li>To find the domain of <m>f,</m> we need the expression <m>3x+2 \geq 0.</m> Solving this inequality, we conclude that the domain is <m>\{x|x\geq-2/3\}.</m></li>
     <li><p> To find the range of <m>f,</m> we note that since <m>\sqrt{3x+2}\geq 0,f(x)=\sqrt{3x+2}-1\geq -1.</m> Therefore, the range of <m>f</m> must be a subset of the set <m>\{y|y\geq-1\}.</m> To show that every element in this set is in the range of <m>f,</m> we need to show that for all <m>y</m> in this set, there exists a real number <m>x</m> in the domain such that <m>f(x)=y.</m> Let <m>y\geq-1.</m> Then, <m>f(x)=y</m> if and only if
-<me>\sqrt{3x+2}-1=y.</me>
+<md>\sqrt{3x+2}-1=y.</md>
     Solving this equation for <m>x,</m> we see that <m>x</m> must solve the equation
-   <me>\sqrt{3x+2}=y+1.</me>
-    Since <m>y\geq-1,</m> such an <m>x</m> could exist. Squaring both sides of this equation, we have <me>3x+2=(y+1)^2.</me>    Therefore, we need
-    <me>3x=(y+1)^2-2,</me>
+   <md>\sqrt{3x+2}=y+1.</md>
+    Since <m>y\geq-1,</m> such an <m>x</m> could exist. Squaring both sides of this equation, we have <md>3x+2=(y+1)^2.</md>    Therefore, we need
+    <md>3x=(y+1)^2-2,</md>
     which implies
-   <me>x=\frac{1}{3}(y+1)^2-\frac{2}{3}.</me>
+   <md>x=\frac{1}{3}(y+1)^2-\frac{2}{3}.</md>
     We just need to verify that <m>x</m> is in the domain of <m>f.</m> Since the domain of <m>f</m> consists of all real numbers greater than or equal to <m>-2/3,</m> and
-    <me>\frac{1}{3}(y+1)^2-\frac{2}{3}\geq -\frac{2}{3},</me>
+    <md>\frac{1}{3}(y+1)^2-\frac{2}{3}\geq -\frac{2}{3},</md>
     there does exist an <m>x</m> in the domain of <m>f.</m> We conclude that the range of <m>f</m> is <m>\{y|y\geq-1\}.</m></p></li>
     </ol></li>
     <li> <p>Consider <m>f(x)=3/(x-2).</m>
     <ol id="fs-id1170572250495">
     <li>Since <m>3/(x-2)</m> is defined when the denominator is nonzero, the domain is <m>\{x|x \neq 2\}.</m></li>
     <li>To find the range of <m>f,</m> we need to find the values of <m>y</m> such that there exists a real number <m>x</m> in the domain with the property that
-    <me>\frac{3}{x-2}=y.</me>
+    <md>\frac{3}{x-2}=y.</md>
     Solving this equation for <m>x,</m> we find that
-    <me>x=\frac{3}{y}+2.</me>
+    <md>x=\frac{3}{y}+2.</md>
     Therefore, as long as <m>y\neq 0,</m> there exists a real number <m>x</m> in the domain such that <m>f(x)=y.</m> Thus, the range is <m>\{y|y \neq 0\}.</m></li>
     </ol></p></li>
     </ol>
@@ -466,13 +466,13 @@
   <p id="fs-id1170572481834">Note that for this function and the function <m>f(x)=-4x+2</m> graphed in <xref ref="CNX_Calc_Figure_01_01_007"/>, the values of <m>f(x)</m> are getting smaller as <m>x</m> is getting larger. A function with this property is said to be decreasing. On the other hand, for the function <m>f(x)=\sqrt{x+3}+1</m> graphed in <xref ref="CNX_Calc_Figure_01_01_008"/>, the values of <m>f(x)</m> are getting larger as the values of <m>x</m> are getting larger. A function with this property is said to be increasing. It is important to note, however, that a function can be increasing on some interval or intervals and decreasing over a different interval or intervals. For example, using our temperature function in <xref ref="CNX_Calc_Figure_01_01_005"/>, we can see that the function is decreasing on the interval <m>(0,4),</m> increasing on the interval <m>(4,14),</m> and then decreasing on the interval <m>(14,23).</m> We make the idea of a function increasing or decreasing over a particular interval more precise in the next definition.</p>
     <definition>
     <p id="fs-id1170572245920">We say that a function <m>f</m> is <term>increasing on the interval <m>I</m></term> if for all <m>x_1,x_2\in I,</m></p>
-   <me>f(x_1) \leq f(x_2) \text{ when } x_1 &lt; x_2.</me>
+   <md>f(x_1) \leq f(x_2) \text{ when } x_1 &lt; x_2.</md>
     <p id="fs-id1170572243705">We say <m>f</m> is <term> strictly increasing on the interval <m>I</m> </term> if for all <m>x_1,x_2\in I,</m></p>
-  <me>f(x_1) &lt; f(x_2) \text{ when } x_1 &lt; x_2.</me>
+  <md>f(x_1) &lt; f(x_2) \text{ when } x_1 &lt; x_2.</md>
     <p id="fs-id1170572228001">We say that a function <m>f</m> is <term>decreasing on the interval <m>I</m></term> if for all <m>x_1,x_2\in I,</m></p>
-   <me>f(x_1)\geq f(x_2) \text{ when }x_1 &lt; x_2.</me>
+   <md>f(x_1)\geq f(x_2) \text{ when }x_1 &lt; x_2.</md>
     <p id="fs-id1170572544718">We say that a function <m>f</m> is <term> strictly decreasing on the interval <m>I</m> </term> if for all <m>x_1,x_2\in I,</m></p>
-   <me>f(x_1) > f(x_2) \text{ when }x_1 &lt; x_2.</me>
+   <md>f(x_1) > f(x_2) \text{ when }x_1 &lt; x_2.</md>
     </definition>
 
     <p id="fs-id1170572244835">For example, the function <m>f(x)=3x</m> is increasing on the interval <m>(-\infty, \infty)</m> because <m>3x_1 &lt; 3x_2</m> whenever <m>x_1 &lt; x_2.</m> On the other hand, the function <m>f(x)=-x^3</m> is decreasing on the interval <m>(-\infty, \infty)</m> because <m>-(x_1)^3 &gt; -(x_2)^3</m> whenever <m>x_1 &lt; x_2</m> (<xref ref="CNX_Calc_Figure_01_01_010"/>).</p>
@@ -491,9 +491,9 @@
       <introduction>
     <p id="fs-id1170572234066">Now that we have reviewed the basic characteristics of functions, we can see what happens to these properties when we combine functions in different ways, using basic mathematical operations to create new functions. For example, if the cost for a company to manufacture <m>x</m> items is described by the function <m>C(x)</m> and the revenue created by the sale of <m>x</m> items is described by the function <m>R(x),</m> then the profit on the manufacture and sale of <m>x</m> items is defined as <m>P(x)=R(x)-C(x).</m> Using the difference between two functions, we created a new function.</p>
     <p id="fs-id1170572135596">Alternatively, we can create a new function by composing two functions. For example, given the functions <m>f(x)=x^2</m> and <m>g(x)=3x+1,</m> the composite function <m>f\circ g</m> is defined such that</p>
-    <me>(f\circ g)(x)=f(g(x))=(g(x))^2=(3x+1)^2.</me>
+    <md>(f\circ g)(x)=f(g(x))=(g(x))^2=(3x+1)^2.</md>
     <p id="fs-id1170572140952">The composite function <m>g\circ f</m> is defined such that</p>
-    <me>(g\circ f)(x)=g(f(x))=3f(x)+1=3x^2+1.</me>
+    <md>(g\circ f)(x)=g(f(x))=3f(x)+1=3x^2+1.</md>
     <p id="fs-id1170572450916">Note that these two new functions are different from each other.</p>
 </introduction>
     <subsubsection id="fs-id1170572450919">
@@ -544,7 +544,7 @@
     <p id="fs-id1170572212500">When we compose functions, we take a function of a function. For example, suppose the temperature <m>T</m> on a given day is described as a function of time <m>t</m> (measured in hours after midnight) as in <xref ref="fs-id1170572114646"/>. Suppose the cost <m>C,</m> to heat or cool a building for 1 hour, can be described as a function of the temperature <m>T.</m> Combining these two functions, we can describe the cost of heating or cooling a building as a function of time by evaluating <m>C(T(t)).</m> We have defined a new function, denoted <m>C\circ T,</m> which is defined such that <m>(C\circ T)(t)=C(T(t))</m> for all <m>t</m> in the domain of <m>T.</m> This new function is called a composite function. We note that since cost is a function of temperature and temperature is a function of time, it makes sense to define this new function <m>(C\circ T)(t).</m> It does not make sense to consider <m>(T\circ C)(t),</m> because temperature is not a function of cost.</p>
     <definition id="fs-id1170572479272">
     <p id="fs-id1170572479276">Consider the function <m>f</m> with domain <m>A</m> and range <m>B,</m> and the function <m>g</m> with domain <m>D</m> and range <m>E.</m> If <m>B</m> is a subset of <m>D,</m> then the <term>composite function</term> <m>(g\circ  f)(x)</m> is the function with domain <m>A</m> such that</p>
-    <me>(g\circ f)(x)=g(f(x)).</me>
+    <md>(g\circ f)(x)=g(f(x)).</md>
     </definition>
     <p id="fs-id1170572217742">A composite function <m>g\circ f</m> can be viewed in two steps. First, the function <m>f</m> maps each input <m>x</m> in the domain of <m>f</m> to its output <m>f(x)</m> in the range of <m>f.</m> Second, since the range of <m>f</m> is a subset of the domain of <m>g,</m> the output <m>f(x)</m> is an element in the domain of <m>g,</m> and therefore it is mapped to an output <m>g(f(x))</m> in the range of <m>g.</m> In <xref ref="CNX_Calc_Figure_01_01_011"/>, we see a visual image of a composite function.</p>
     <figure xml:id="CNX_Calc_Figure_01_01_011">
@@ -568,26 +568,26 @@
     </statement>
     <solution xml:id="fs-id1170572222941">
     <ol xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1170572222946" list-type="enumerated" number-style="lower-alpha"><li>We can find the formula for <m>(g\circ f)(x)</m> in two different ways. We could write
-    <me>(g\circ f)(x)=g(f(x))=g(x^2+1)=\frac{1}{x^2+1}.</me>
+    <md>(g\circ f)(x)=g(f(x))=g(x^2+1)=\frac{1}{x^2+1}.</md>
     Alternatively, we could write
-    <me>(g\circ f)(x)=g(f(x))=\frac{1}{f(x)}=\frac{1}{x^2+1}.</me>
+    <md>(g\circ f)(x)=g(f(x))=\frac{1}{f(x)}=\frac{1}{x^2+1}.</md>
     Since <m>x^2+1\neq 0</m> for all real numbers <m>x,</m> the domain of <m>(g\circ f)(x)</m> is the set of all real numbers. Since <m>0 \lt 1/(x^2+1) \leq 1,</m> the range is, at most, the interval <m>(0,1].</m> To show that the range is this entire interval, we let <m>y=1/(x^2+1)</m> and solve this equation for <m>x</m> to show that for all <m>y</m> in the interval <m>(0,1],</m> there exists a real number <m>x</m> such that <m>y=1/(x^2+1).</m> Solving this equation for <m>x,</m> we see that <m>x^2+1=1/y,</m> which implies that
-    <me>x=\pm\sqrt{\frac{1}{y}-1}.</me>
+    <md>x=\pm\sqrt{\frac{1}{y}-1}.</md>
     If <m>y</m> is in the interval <m>(0,1],</m> the expression under the radical is nonnegative, and therefore there exists a real number <m>x</m> such that <m>1/(x^2+1)=y.</m> We conclude that the range of <m>g\circ f</m> is the interval <m>(0,1].</m></li>
     <li><m>(g\circ f)(4)=g(f(4))=g(4^2+1)=g(17)=\frac{1}{17}</m>  and
     <m> (g\circ f)(-\frac{1}{2})=g(f(-\frac{1}{2}))=g((-\frac{1}{2})^2+1)=g(\frac{5}{4})=\frac{4}{5}</m></li>
     <li>We can find a formula for <m>(f\circ g)(x)</m> in two ways. First, we could write
-    <me>(f\circ g)(x)=f(g(x))=f\left(\frac{1}{x}\right)=\left(\frac{1}{x}\right)^2+1.</me>
+    <md>(f\circ g)(x)=f(g(x))=f\left(\frac{1}{x}\right)=\left(\frac{1}{x}\right)^2+1.</md>
     Alternatively, we could write
-    <me>(f\circ g)(x)=f(g(x))=(g(x))^2+1=\left(\frac{1}{x}\right)^2+1.</me>
+    <md>(f\circ g)(x)=f(g(x))=(g(x))^2+1=\left(\frac{1}{x}\right)^2+1.</md>
     The domain of <m>f\circ g</m> is the set of all real numbers <m>x</m> such that <m>x\neq 0.</m> To find the range of <m>f,</m> we need to find all values <m>y</m> for which there exists a real number <m>x\neq0</m> such that
-    <me>\left(\frac{1}{x}\right)^2+1=y.</me>
+    <md>\left(\frac{1}{x}\right)^2+1=y.</md>
     Solving this equation for <m>x,</m> we see that we need <m>x</m> to satisfy
-    <me>\left(\frac{1}{x}\right)^2=y-1,</me>
+    <md>\left(\frac{1}{x}\right)^2=y-1,</md>
     which simplifies to
-    <me>\frac{1}{x}=\pm\sqrt{y-1}.</me>
+    <md>\frac{1}{x}=\pm\sqrt{y-1}.</md>
     Finally, we obtain
-    <me>x=\pm\frac{1}{\sqrt{y-1}}.</me>
+    <md>x=\pm\frac{1}{\sqrt{y-1}}.</md>
     Since <m>1/\sqrt{y-1}</m> is a real number if and only if <m>y\gt 1,</m> the range of <m>f</m> is the set <m>\{y|y\gt 1\}.</m></li>
     <li><m>(f\circ g)(4)=f(g(4))=f(\frac{1}{4})=(\frac{1}{4})^2+1=\frac{17}{16}</m>
     <m>(f\circ g)(-\frac{1}{2})=f(g(-\frac{1}{2}))=f(-2)=(-2)^2+1=5</m></li>
@@ -708,9 +708,9 @@
     <caption>(a) A graph that is symmetric about the <m>y</m>-axis. (b) A graph that is symmetric about the origin.</caption>
     </figure>
     <p id="fs-id1170572173116">If we are given the graph of a function, it is easy to see whether the graph has one of these symmetry properties. But without a graph, how can we determine algebraically whether a function <m>f</m> has symmetry? Looking at <xref ref="CNX_Calc_Figure_01_01_012"/>(a) again, we see that since <m>f</m> is symmetric about the <m>y</m>-axis, if the point <m>(x,y)</m> is on the graph, the point <m>(-x,y)</m> is on the graph. In other words, <m>f(-x)=f(x).</m> If a function <m>f</m> has this property, we say <m>f</m> is an even function, which has symmetry about the <m>y</m>-axis. For example, <m>f(x)=x^2</m> is even because</p>
-    <me>f(-x)=(-x)^2=x^2=f(x).</me>
+    <md>f(-x)=(-x)^2=x^2=f(x).</md>
     <p id="fs-id1170572552328">In contrast, looking at <xref ref="CNX_Calc_Figure_01_01_012"/>(b) again, if a function <m>f</m> is symmetric about the origin, then whenever the point <m>(x,y)</m> is on the graph, the point <m>(-x,-y)</m> is also on the graph. In other words, <m>f(-x)=-f(x).</m> If <m>f</m> has this property, we say <m>f</m> is an odd function, which has symmetry about the origin. For example, <m>f(x)=x^3</m> is odd because</p>
-    <me>f(-x)=(-x)^3=-x^3=-f(x).</me>
+    <md>f(-x)=(-x)^3=-x^3=-f(x).</md>
     <definition id="fs-id1170572549460">
     <p id="fs-id1170572549464">If <m>f(x)=f(-x)</m> for all <m>x</m> in the domain of <m>f,</m> then <m>f</m> is an <term>even function</term>. An even function is symmetric about the <m>y</m>-axis.</p>
     <p id="fs-id1170572169613">If <m>f(-x)=-f(x)</m> for all <m>x</m> in the domain of <m>f,</m> then <m>f</m> is an <term>odd function</term>. An odd function is symmetric about the origin.</p>
@@ -746,7 +746,7 @@
     </hint>
     </exercise>
     <p id="fs-id1170572547400">One symmetric function that arises frequently is the <term>absolute value function</term>, written as <m>|x|.</m> The absolute value function is defined as</p>
-    <me>f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}</me>.
+    <md>f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}</md>.
     <p id="fs-id1170572547473">Some students describe this function by stating that it “makes everything positive.” By the definition of the absolute value function, we see that if <m>x \lt 0,</m> then <m>|x|=-x \gt 0,</m> and if <m>x\gt 0,</m> then <m>|x|=x\gt 0.</m> However, for <m>x=0,|x|=0.</m> Therefore, it is more accurate to say that for all nonzero inputs, the output is positive, but if <m>x=0,</m> the output <m>|x|=0.</m> We conclude that the range of the absolute value function is <m>\{y|y \geq 0\}.</m> In <xref ref="CNX_Calc_Figure_01_01_013"/>, we see that the absolute value function is symmetric about the <m>y</m>-axis and is therefore an even function.</p>
     <figure xml:id="CNX_Calc_Figure_01_01_013">
 
@@ -763,13 +763,13 @@
     </statement>
     <solution id="fs-id1170572548716">
     <p id="fs-id1170572548722">Since the absolute value function is defined for all real numbers, the domain of this function is <m>(-\infty,\infty).</m> Since <m>|x-3|\geq 0</m> for all <m>x,</m> the function <m>f(x)=2|x-3|+4\geq 4.</m> Therefore, the range is, at most, the set <m>\{y|y\geq 4\}.</m> To see that the range is, in fact, this whole set, we need to show that for <m>y\geq 4</m> there exists a real number <m>x</m> such that</p>
-    <me>2|x-3|+4=y.</me>
+    <md>2|x-3|+4=y.</md>
     <p id="fs-id1170572551143">A real number <m>x</m> satisfies this equation as long as</p>
-    <me>|x-3|=\frac{1}{2}(y-4).</me>
+    <md>|x-3|=\frac{1}{2}(y-4).</md>
     <p id="fs-id1170572551193">Since <m>y\geq 4,</m> we know <m>y-4\geq 0,</m> and thus the right-hand side of the equation is nonnegative, so it is possible that there is a solution. Furthermore,</p>
-    <me>|x-3|=\begin{cases}-(x-3) \amp \text{ if } x\lt  3 \\x-3 \amp \text{ if }x \geq 3. \end{cases}</me>
+    <md>|x-3|=\begin{cases}-(x-3) \amp \text{ if } x\lt  3 \\x-3 \amp \text{ if }x \geq 3. \end{cases}</md>
     <p id="fs-id1170572366286">Therefore, we see there are two solutions:</p>
-    <me>x=\pm\frac{1}{2}(y-4)+3.</me>
+    <md>x=\pm\frac{1}{2}(y-4)+3.</md>
     <p id="fs-id1170572548588">The range of this function is <m>\{y|y\geq 4\}.</m></p>
     </solution>
   </example>
@@ -803,7 +803,7 @@
   <li><emphasis effect="bold">Composition of two functions</emphasis><newline/>
   <m>(g\circ f)(x)=g(f(x))</m></li>
   <li><emphasis effect="bold">Absolute value function</emphasis><newline/>
-  <me>f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}</me>.</li>
+  <md>f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}</md>.</li>
 </ol>
 </subsection>
 

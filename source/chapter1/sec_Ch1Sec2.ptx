@@ -37,30 +37,30 @@
     </figure>
     <definition> <!-- Change next /note to /definition-->
     <p id="fs-id1170573356648">Consider line <m>L</m> passing through points <m>(x_1,y_1)</m> and <m>(x_2,y_2).</m> Let <m>\Delta y=y_2-y_1</m> and <m>\Delta x=x_2-x_1</m> denote the changes in <m>y</m> and <m>x,</m> respectively. The <term>slope</term> of the line is</p>
-    <me>m=<!-- Edit FRAC!--> \frac{y_2-y_1}{x_2-x_1}=<!-- Edit FRAC!--> \frac{\Delta y}{\Delta x}.</me>
+    <md>m=<!-- Edit FRAC!--> \frac{y_2-y_1}{x_2-x_1}=<!-- Edit FRAC!--> \frac{\Delta y}{\Delta x}.</md>
   </definition>
     <p id="fs-id1170573306278">We now examine the relationship between slope and the formula for a linear function. Consider the linear function given by the formula <m>f(x)=ax+b.</m> As discussed earlier, we know the graph of a linear function is given by a line. We can use our definition of slope to calculate the slope of this line. As shown, we can determine the slope by calculating <m>(y_2-y_1) /(x_2-x_1)</m> for any points <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m> on the line. Evaluating the function <m>f</m> at <m>x= 0 ,</m> we see that <m>( 0 ,b)</m> is a point on this line. Evaluating this function at <m>x= 1 ,</m> we see that <m>( 1 ,a+b)</m> is also a point on this line. Therefore, the slope of this line is</p>
-    <me><!-- Edit FRAC!--> \frac{(a+b)-b}{1 - 0}=a.</me>
+    <md><!-- Edit FRAC!--> \frac{(a+b)-b}{1 - 0}=a.</md>
     <p id="fs-id1170573409038">We have shown that the coefficient <m>a</m> is the slope of the line. We can conclude that the formula <m>f(x)=ax+b</m> describes a line with slope <m>a.</m> Furthermore, because this line intersects the <m>y</m>-axis at the point <m>( 0 ,b),</m> we see that the <m>y</m>-intercept for this linear function is <m>( 0 ,b).</m> We conclude that the formula <m>f(x)=ax+b</m> tells us the slope, <m>a,</m> and the <m>y</m>-intercept, <m>( 0 ,b),</m> for this line. Since we often use the symbol <m> m </m> to denote the slope of a line, we can write</p>
-    <me>f(x)=mx+b</me>
+    <md>f(x)=mx+b</md>
     <p id="fs-id1170573257414">to denote the <term>slope-intercept form</term> of a linear function.</p>
     <p id="fs-id1170573381114">Sometimes it is convenient to express a linear function in different ways. For example, suppose the graph of a linear function passes through the point <m>(x_1,y_1)</m> and the slope of the line is <m>m.</m> Since any other point <m>(x,f(x))</m> on the graph of <m>f</m> must satisfy the equation</p>
-    <me>m=<!-- Edit FRAC!--> \frac{f(x)-y_1}{x-x_1},</me>
+    <md>m=<!-- Edit FRAC!--> \frac{f(x)-y_1}{x-x_1},</md>
     <p id="fs-id1170573569154">this linear function can be expressed by writing</p>
-    <me>f(x)-y_1=m(x-x_1).</me>
+    <md>f(x)-y_1=m(x-x_1).</md>
     <p id="fs-id1170573309782">We call this equation the <term>point-slope equation</term> for that linear function.</p>
     <p id="fs-id1170573309900">Since every nonvertical line is the graph of a linear function, the points on a nonvertical line can be described using the slope-intercept or point-slope equations. However, a vertical line does not represent the graph of a function and cannot be expressed in either of these forms. Instead, a vertical line is described by the equation <m>x=k</m> for some constant <m>k.</m> Since neither the slope-intercept form nor the point-slope form allows for vertical lines, we use the notation</p>
-    <me>ax+by=c,</me>
+    <md>ax+by=c,</md>
     <p id="fs-id1170573425137">where <m>a,b</m> are both not zero, to denote the <term>standard form of a line</term>.</p>
     <definition> <!-- Change next /note to /definition-->
     <p id="fs-id1170573328429">Consider a line passing through the point <m>(x_1,y_1)</m> with slope <m>m.</m> The equation</p>
-    <me>y-y_1=m(x-x_1)</me>
+    <md>y-y_1=m(x-x_1)</md>
     <p id="fs-id1170573397934">is the <term>point-slope equation</term> for that line.</p>
     <p id="fs-id1170573425678">Consider a line with slope <m>m</m> and <m>y</m>-intercept <m>( 0 ,b).</m> The equation</p>
-    <me>y=mx+b</me>
+    <md>y=mx+b</md>
     <p id="fs-id1170573336985">is an equation for that line in <term>slope-intercept form</term>.</p>
     <p id="fs-id1170573334038">The <term>standard form of a line</term> is given by the equation</p>
-    <me>ax+by=c,</me>
+    <md>ax+by=c,</md>
     <p id="fs-id1170573392539">where <m>a</m> and <m>b</m> are both not zero. This form is more general because it allows for a vertical line, <m>x=k.</m></p>
     </definition>
 
@@ -81,9 +81,9 @@
     </statement>
     <solution id="fs-id1170573281571">
     <ol>
-    <li>The slope of the line is<me>m=\frac{y_2-y_1}{x_2-x_1}=\frac{ 5 -( -4 )}{-4 - 11}= \frac{ 9 }{-15 }=- \frac{ 3 }{ 5 }.</me></li>
-    <li>To find an equation for the linear function in point-slope form, use the slope <m>m= -3  / 5 </m> and choose any point on the line. If we choose the point <m>( 11 , -4 ),</m> we get the equation<me>f(x)+ 4 =- \frac{ 3 }{ 5 }(x- 11 ).</me></li>
-    <li>To find an equation for the linear function in slope-intercept form, solve the equation in part b. for <m>f(x).</m> When we do this, we get the equation<me>f(x)=- \frac{ 3}{ 5 }x+ \frac{ 13}{ 5 }.</me></li>
+    <li>The slope of the line is<md>m=\frac{y_2-y_1}{x_2-x_1}=\frac{ 5 -( -4 )}{-4 - 11}= \frac{ 9 }{-15 }=- \frac{ 3 }{ 5 }.</md></li>
+    <li>To find an equation for the linear function in point-slope form, use the slope <m>m= -3  / 5 </m> and choose any point on the line. If we choose the point <m>( 11 , -4 ),</m> we get the equation<md>f(x)+ 4 =- \frac{ 3 }{ 5 }(x- 11 ).</md></li>
+    <li>To find an equation for the linear function in slope-intercept form, solve the equation in part b. for <m>f(x).</m> When we do this, we get the equation<md>f(x)=- \frac{ 3}{ 5 }x+ \frac{ 13}{ 5 }.</md></li>
     </ol>
     </solution>
     </example>
@@ -115,8 +115,8 @@
     </statement>
     <solution id="fs-id1170573363707">
     <ol>
-    <li>At time <m>t= 0 ,</m> Jessica is at her house, so <m>D( 0 )= 0 .</m> At time <m>t= 78 </m> minutes, Jessica has finished running <m> 9 </m> mi, so <m>D( 78 )= 9 .</m> The slope of the linear function is<me>m= \frac{ 9 - 0 }{ 78 - 0 }=\frac{ 3 }{ 26 }.</me><newline/>
-    The <m>y</m>-intercept is <m>( 0 , 0 ),</m> so the equation for this linear function is<me>D(t)=\frac{ 3 }{ 26 }t.</me></li>
+    <li>At time <m>t= 0 ,</m> Jessica is at her house, so <m>D( 0 )= 0 .</m> At time <m>t= 78 </m> minutes, Jessica has finished running <m> 9 </m> mi, so <m>D( 78 )= 9 .</m> The slope of the linear function is<md>m= \frac{ 9 - 0 }{ 78 - 0 }=\frac{ 3 }{ 26 }.</md><newline/>
+    The <m>y</m>-intercept is <m>( 0 , 0 ),</m> so the equation for this linear function is<md>D(t)=\frac{ 3 }{ 26 }t.</md></li>
     <li>To graph <m>D,</m> use the fact that the graph passes through the origin and has slope <m>m= 3  / 26 .</m><newline/>
     <image source="CNX_Calc_Figure_01_02_003.jpg" width="50%">
     <description>"An image of a graph. The y axis is labeled &#x201C;y, distance in miles&#x201D;. The x axis is labeled &#x201C;t, time in minutes&#x201D;. The graph is of the function &#x201C;D(t) = 3t/26&#x201D;, which is an increasing straight line that starts at the origin. The function ends at the plotted point (78, 9)."</description> </image>
@@ -130,7 +130,7 @@
   <title>Polynomials</title>
   <introduction>
   <p id="fs-id1170573363307">A linear function is a special type of a more general class of functions: polynomials. A <term>polynomial function</term> is any function that can be written in the form</p>
-  <me>f(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0</me>
+  <md>f(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0</md>
   <p id="fs-id1170573419332">for some integer <m>n\geq  0 </m> and constants <m>a_n,a_{n-1}, \dots ,a_0,</m> where <m>a_n\neq  0 .</m> In the case when <m>n= 0 ,</m> we allow for <m>a_0= 0 ;</m> if <m>a_0= 0 ,</m> the function <m>f(x)= 0 </m> is called the <term>zero function</term>. The value <m>n</m> is called the <term>degree</term> of the polynomial; the constant <m>a_n</m> is called the <term>leading coefficient </term>. A linear function of the form <m>f(x)=mx+b</m> is a polynomial of degree 1 if <m>m\neq  0 </m> and degree 0 if <m>m= 0 .</m> A polynomial of degree 0 is also called a <term>constant function</term>. A polynomial function of degree 2 is called a <term>quadratic function</term>. In particular, a quadratic function has the form <m>f(x)=ax^2 +bx+c,</m> where <m>a\neq  0 .</m> A polynomial function of degree <m> 3 </m> is called a <term>cubic function</term>.</p>
 </introduction>
   <subsubsection id="fs-id1170573414780">
@@ -161,9 +161,9 @@
   <note id="fs-id1170573507503">
   <title>Rule: The Quadratic Formula</title>
   <p id="fs-id1170573325406">Consider the quadratic equation</p>
-  <me>ax^2 +bx+c= 0 ,</me>
+  <md>ax^2 +bx+c= 0 ,</md>
   <p id="fs-id1170573362890">where <m>a\neq  0 .</m> The solutions of this equation are given by the quadratic formula</p>
-  <me>x=\frac{-b\pm \sqrt{b^2- 4 ac}}{ 2 a}.</me>
+  <md>x=\frac{-b\pm \sqrt{b^2- 4 ac}}{ 2 a}.</md>
   <p id="fs-id1170573360387">If the discriminant <m>b^2- 4 ac\gt  0 ,</m> this formula tells us there are two real numbers that satisfy the quadratic equation. If <m>b^2- 4 ac= 0 ,</m> this formula tells us there is only one solution, and it is a real number. If <m>b^2- 4 ac\lt  0 ,</m> no real numbers satisfy the quadratic equation.</p>
   </note>
   <p id="fs-id1170573359217">In the case of higher-degree polynomials, it may be more complicated to determine where the graph intersects the <m>x</m>-axis. In some instances, it is possible to find the <m>x</m>-intercepts by factoring the polynomial to find its zeros. In other cases, it is impossible to calculate the exact values of the <m>x</m>-intercepts. However, as we see later in the text, in cases such as this, we can use analytical tools to approximate (to a very high degree) where the <m>x</m>-intercepts are located. Here we focus on the graphs of polynomials for which we can calculate their zeros explicitly.</p>
@@ -181,7 +181,7 @@
   <li><p>The function <m>f(x)= -2 x^2 + 4 x- 1 </m> is a quadratic function.</p>
   <ol id="fs-id1170573574907" list-type="enumerated" number-style="lower-roman">
   <li><p>Because <m>a= -2 \lt  0 ,\text{ as } x\to \pm\infty,f(x)\to -\infty.</m></p></li>
-  <li><p>To find the zeros of <m>f,</m> use the quadratic formula. The zeros are<me>x= \frac{ -4 \pm \sqrt{ 4^2- 4 ( -2 )( -1 )}}{ 2 ( -2 )}= \frac{ -4 \pm \sqrt{ 8 }}{ -4 }= \frac{ -4 \pm  2 \sqrt{ 2 }}{ -4 }=\frac{ 2 \pm \sqrt{ 2 }}{ 2 }.</me></p></li>
+  <li><p>To find the zeros of <m>f,</m> use the quadratic formula. The zeros are<md>x= \frac{ -4 \pm \sqrt{ 4^2- 4 ( -2 )( -1 )}}{ 2 ( -2 )}= \frac{ -4 \pm \sqrt{ 8 }}{ -4 }= \frac{ -4 \pm  2 \sqrt{ 2 }}{ -4 }=\frac{ 2 \pm \sqrt{ 2 }}{ 2 }.</md></p></li>
   <li><p>To sketch the graph of <m>f,</m> use the information from your previous answers and combine it with the fact that the graph is a parabola opening downward.</p><newline/>
   <image source="CNX_Calc_Figure_01_02_006.jpg" width="50%">
   <description>"An image of a graph. The x axis runs from -2 to 5 and the y axis runs from -8 to 2. The graph is of the function &#x201C;f(x) = -2(x squared) + 4x - 1&#x201D;, which is a parabola. The function increases until the maximum point at (1, 1) and then decreases. Both x intercept points are plotted on the function, at approximately (0.2929, 0) and (1.7071, 0). The y intercept is at the point (0, -1)."
@@ -192,8 +192,8 @@
   <li><p> The function <m>f(x)=x^3 - 3 x^2 - 4 x</m> is a cubic function.</p>
   <ol id="fs-id1170573494374" list-type="enumerated" number-style="lower-roman">
   <li><p> Because <m>a= 1 \gt  0 ,\text{ as } x\to \infty,f(x)\to \infty.</m> As <m>x\to -\infty,f(x)\to -\infty.</m></p></li>
-  <li><p>To find the zeros of <m>f,</m> we need to factor the polynomial. First, when we factor <m>x</m> out of all the terms, we find<me>f(x)=x(x^2 - 3 x- 4 ).</me><newline/>
-  Then, when we factor the quadratic function <m>x^2 - 3 x- 4 ,</m> we find<me>f(x)=x(x- 4 )(x+ 1 ).</me><newline/>
+  <li><p>To find the zeros of <m>f,</m> we need to factor the polynomial. First, when we factor <m>x</m> out of all the terms, we find<md>f(x)=x(x^2 - 3 x- 4 ).</md><newline/>
+  Then, when we factor the quadratic function <m>x^2 - 3 x- 4 ,</m> we find<md>f(x)=x(x- 4 )(x+ 1 ).</md><newline/>
   Therefore, the zeros of <m>f</m> are <m>x= 0 , 4 , -1 .</m></p></li>
   <li><p>Combining the results from parts i. and ii., draw a rough sketch of <m>f.</m><newline/>
     <image source="CNX_Calc_Figure_01_02_007.jpg" width="50%">
@@ -245,7 +245,7 @@
   </tabular>
   </table>
   <p id="fs-id1170573355032">In <xref ref="CNX_Calc_Figure_01_02_008"/>, we see the graph the number of units sold (in thousands) as a function of price (in dollars). We note from the shape of the graph that the number of units sold is likely a linear function of price per item, and the data can be closely approximated by the linear function <m>n= -1.04 p+ 26 </m> for <m> 0 \leq p\leq  25 ,</m> where <m>n</m> predicts the number of units sold in thousands. Using this linear function, the revenue (in thousands of dollars) can be estimated by the quadratic function</p>
-  <me>R(p)=p\cdot( -1.04 p+ 26 )= -1.04p^2+ 26 p</me>
+  <md>R(p)=p\cdot( -1.04 p+ 26 )= -1.04p^2+ 26 p</md>
   <p id="fs-id1170573419099">for <m> 0 \leq p\leq  25 .</m> In <xref ref="fs-id1170573569241"/>, we use this quadratic function to predict the amount of revenue the company receives depending on the price the company charges per item. Note that we cannot conclude definitively the actual number of units sold for values of <m>p,</m> for which no data are collected. However, given the other data values and the graph shown, it seems reasonable that the number of units sold (in thousands) if the price charged is <m>p</m> dollars may be close to the values predicted by the linear function <m>n= -1.04 p+ 26 .</m></p>
   <figure id="CNX_Calc_Figure_01_02_008">
     <image source="CNX_Calc_Figure_01_02_008.jpg" width="50%">
@@ -256,7 +256,7 @@
   <title>Maximizing Revenue</title>
    <statement id="fs-id1170573417595">
   <p id="fs-id1170573417597">A company is interested in predicting the amount of revenue it will receive depending on the price it charges for a particular item. Using the data from <xref ref="fs-id1170573493744"/>, the company arrives at the following quadratic function to model revenue <m>R</m> (in thousands of dollars) as a function of price per item <m>p:</m></p>
-  <me>R(p)=p\cdot( -1.04 p+ 26 )= -1.04p^2+ 26 p</me>
+  <md>R(p)=p\cdot( -1.04 p+ 26 )= -1.04p^2+ 26 p</md>
   <p id="fs-id1170573398640">for <m> 0 \leq p\leq  25 .</m></p>
   <ol>
   <li>Predict the revenue if the company sells the item at a price of <m>p=\$ 5 </m> and <m>p=\$ 17 .</m></li>
@@ -288,7 +288,7 @@
   <title>Algebraic Functions</title>
   <p id="fs-id1170573581900">By allowing for quotients and fractional powers in polynomial functions, we create a larger class of functions. An <term>algebraic function</term> is one that involves addition, subtraction, multiplication, division, rational powers, and roots. Two types of algebraic functions are rational functions and root functions.</p>
   <p id="fs-id1170573420004">Just as rational numbers are quotients of integers, rational functions are quotients of polynomials. In particular, a <term>rational function</term> is any function of the form <m>f(x)=p(x) /q(x),</m> where <m>p(x)</m> and <m>q(x)</m> are polynomials. For example,</p>
-  <me>f(x)= \frac{ 3 x- 1}{  5 x+ 2 } \text{ and } g(x)=\frac{ 4}{x^2 + 1 }</me>
+  <md>f(x)= \frac{ 3 x- 1}{  5 x+ 2 } \text{ and } g(x)=\frac{ 4}{x^2 + 1 }</md>
   <p id="fs-id1170573362465">are rational functions. A <term>root function</term> is a power function of the form <m>f(x)= x^{1/n},</m> where <m>n</m> is a positive integer greater than one. For example, <m>f(x)=x^{1/2}=\sqrt{x}</m> is the square-root function and <m>g(x)=x^{1/3}=\sqrt[3]{x}</m> is the cube-root function. By allowing for compositions of root functions and rational functions, we can create other algebraic functions. For example, <m>f(x)=\sqrt{ 4 -x^2 }</m> is an algebraic function.</p>
   <example id="fs-id1170573533981">
   <title>Finding Domain and Range for Algebraic Functions</title>
@@ -306,14 +306,14 @@
   </statement>
   <solution id="fs-id1170573442524">
   <ol>
-  <li><p>It is not possible to divide by zero, so the domain is the set of real numbers <m>x</m> such that <m>x\neq - 2  / 5 .</m> To find the range, we need to find the values <m>y</m> for which there exists a real number <m>x</m> such that<me>y=\frac{ 3 x- 1}{ 5 x+ 2 }.</me>
-  When we multiply both sides of this equation by <m> 5 x+ 2 ,</m> we see that <m>x</m> must satisfy the equation<me> 5 xy+ 2 y= 3 x- 1 .</me>
+  <li><p>It is not possible to divide by zero, so the domain is the set of real numbers <m>x</m> such that <m>x\neq - 2  / 5 .</m> To find the range, we need to find the values <m>y</m> for which there exists a real number <m>x</m> such that<md>y=\frac{ 3 x- 1}{ 5 x+ 2 }.</md>
+  When we multiply both sides of this equation by <m> 5 x+ 2 ,</m> we see that <m>x</m> must satisfy the equation<md> 5 xy+ 2 y= 3 x- 1 .</md>
   <p id="fs-id1170573361465">From this equation, we can see that <m>x</m> must satisfy</p>
-  <me> 2 y+ 1 =x( 3 - 5 y).</me>
-  If <m>y= 3  / 5 ,</m> this equation has no solution. On the other hand, as long as <m>y\neq  3  / 5 ,</m><me>x=\frac{ 2 y+ 1 }{ 3 - 5 y}</me>
+  <md> 2 y+ 1 =x( 3 - 5 y).</md>
+  If <m>y= 3  / 5 ,</m> this equation has no solution. On the other hand, as long as <m>y\neq  3  / 5 ,</m><md>x=\frac{ 2 y+ 1 }{ 3 - 5 y}</md>
   satisfies this equation. We can conclude that the range of <m>f</m> is <m>{y|y\neq  3  / 5 }.</m></p></li>
-  <li><p>To find the domain of <m>f,</m> we need <m> 4 -x^2 \geq  0 .</m> When we factor, we write <m> 4 -x^2 =( 2 -x)( 2 +x)\geq  0 .</m> This inequality holds if and only if both terms are positive or both terms are negative. For both terms to be positive, we need to find <m>x</m> such that<me> 2 -x\geq  0  \text{ and }  2 +x\geq  0 .</me>
-  These two inequalities reduce to <m> 2 \geq x</m> and <m>x\geq  -2 .</m> Therefore, the set <m>{x|- 2 \leq x\leq  2 }</m> must be part of the domain. For both terms to be negative, we need<me> 2 -x\leq  0  \text{ and }  2 +x\geq  0 .</me>
+  <li><p>To find the domain of <m>f,</m> we need <m> 4 -x^2 \geq  0 .</m> When we factor, we write <m> 4 -x^2 =( 2 -x)( 2 +x)\geq  0 .</m> This inequality holds if and only if both terms are positive or both terms are negative. For both terms to be positive, we need to find <m>x</m> such that<md> 2 -x\geq  0  \text{ and }  2 +x\geq  0 .</md>
+  These two inequalities reduce to <m> 2 \geq x</m> and <m>x\geq  -2 .</m> Therefore, the set <m>{x|- 2 \leq x\leq  2 }</m> must be part of the domain. For both terms to be negative, we need<md> 2 -x\leq  0  \text{ and }  2 +x\geq  0 .</md>
   These two inequalities also reduce to <m> 2 \leq x</m> and <m>x\geq  -2 .</m> There are no values of <m>x</m> that satisfy both of these inequalities. Thus, we can conclude the domain of this function is <m>{x|- 2 \leq x\leq  2 }.</m><newline/>
   If <m> -2 \leq x\leq  2 ,</m> then <m> 0 \leq  4 -x^2 \leq  4 .</m> Therefore, <m> 0 \leq \sqrt{ 4 -x^2 }\leq  2 ,</m> and the range of <m>f</m> is <m>{y| 0 \leq y\leq  2 }.</m></p></li>
   </ol>
@@ -402,13 +402,13 @@
   <subsection id="fs-id1170573534040">
   <title>Piecewise-Defined Functions</title>
   <p id="fs-id1170573534045">Sometimes a function is defined by different formulas on different parts of its domain. A function with this property is known as a <term>piecewise-defined function</term>. The absolute value function is an example of a piecewise-defined function because the formula changes with the sign of <m> x</m>:</p>
-    <me>f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}</me>.
+    <md>f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}</md>.
   <p id="fs-id1170573439264">Other piecewise-defined functions may be represented by completely different formulas, depending on the part of the domain in which a point falls. To graph a piecewise-defined function, we graph each part of the function in its respective domain, on the same coordinate system. If the formula for a function is different for <m>x\lt a</m> and <m>x\gt a,</m> we need to pay special attention to what happens at <m>x=a</m> when we graph the function. Sometimes the graph needs to include an open or closed circle to indicate the value of the function at <m>x=a.</m> We examine this in the next example.</p>
   <example id="fs-id1170573574369">
   <title>Graphing a Piecewise-Defined Function</title>
   <statement id="fs-id1170573574377">
   <p id="fs-id1170573574379">Sketch a graph of the following piecewise-defined function:</p>
-  <me>f(x)=\begin{cases}x+ 3 \amp x\lt  1 \\(x- 2 )^2 \amp x\geq  1 \end{cases}.</me>
+  <md>f(x)=\begin{cases}x+ 3 \amp x\lt  1 \\(x- 2 )^2 \amp x\geq  1 \end{cases}.</md>
   </statement>
   <solution id="fs-id1170573569580">
   <p id="fs-id1170573569585">Graph the linear function <m>y=x+ 3 </m> on the interval <m>(-\infty, 1 )</m> and graph the quadratic function <m>y=(x- 2 )^2</m> on the interval <m>[ 1 ,\infty).</m> Since the value of the function at <m>x= 1 </m> is given by the formula <m>f(x)=(x- 2 )^2,</m> we see that <m>f( 1 )= 1 .</m> To indicate this on the graph, we draw a closed circle at the point <m>( 1 , 1 ).</m> The value of the function is given by <m>f(x)=x+ 2 </m> for all <m>x\lt  1 ,</m> but not at <m>x= 1 .</m> To indicate this on the graph, we draw an open circle at <m>( 1 , 4 ).</m></p>
@@ -423,7 +423,7 @@
   <exercise>
    <statement id="fs-id1170573569348">
   <p id="fs-id1170573569350">Sketch a graph of the function</p>
-  <me>f(x)=\begin{cases}2 -x \amp x\leq  2 \\ x+ 2  \amp x\gt  2 .\end{cases}</me>
+  <md>f(x)=\begin{cases}2 -x \amp x\leq  2 \\ x+ 2  \amp x\gt  2 .\end{cases}</md>
   </statement>
   <solution id="fs-id1170573351774">
   <p id="fs-id1170573351776">
@@ -447,7 +447,7 @@
   </statement>
   <solution id="fs-id1170573419085">
   <ol>
-  <li>Since the parking garage is open 18 hours each day, the domain for this function is <m>\{x| 0 \lt x\leq  18 \}.</m> The cost to park a car at this parking garage can be described piecewise by the function<me>C(x)=\begin{cases} 10 \amp 0 \lt x\leq  1 \\ 12 \amp 1 \lt x\leq  2 \\ 14 \amp 2 \lt x\leq  3 \\ 16 \amp 3 \lt x\leq  4 \\ \vdots \\ 30 \amp 10 \lt x\leq  18 \end{cases}.</me></li>
+  <li>Since the parking garage is open 18 hours each day, the domain for this function is <m>\{x| 0 \lt x\leq  18 \}.</m> The cost to park a car at this parking garage can be described piecewise by the function<md>C(x)=\begin{cases} 10 \amp 0 \lt x\leq  1 \\ 12 \amp 1 \lt x\leq  2 \\ 14 \amp 2 \lt x\leq  3 \\ 16 \amp 3 \lt x\leq  4 \\ \vdots \\ 30 \amp 10 \lt x\leq  18 \end{cases}.</md></li>
   <li>The graph of the function consists of several horizontal line segments.
   <image source="CNX_Calc_Figure_01_02_013.jpg" width="50%">
   <description>"An image of a graph. The x axis runs from 0 to 18 and is labeled &#x201C;x, hours&#x201D;. The y axis runs from 0 to 32 and is labeled &#x201C;y, cost in dollars&#x201D;. The function consists 11 pieces, all horizontal line segments that begin with an open circle and end with a closed circle. The first piece starts at x = 0 and ends at x = 1 and is at y = 10. The second piece starts at x = 1 and ends at x = 2 and is at y = 12. The third piece starts at x = 2 and ends at x = 3 and is at y = 14. The fourth piece starts at x = 3 and ends at x = 4 and is at y = 16. The fifth piece starts at x = 4 and ends at x = 5 and is at y = 18. The sixth piece starts at x = 5 and ends at x = 6 and is at y = 20. The seventh piece starts at x = 6 and ends at x = 7 and is at y = 22. The eighth piece starts at x = 7 and ends at x = 8 and is at y = 24. The ninth piece starts at x = 8 and ends at x = 9 and is at y = 26. The tenth piece starts at x = 9 and ends at x = 10 and is at y = 28. The eleventh piece starts at x = 10 and ends at x = 18 and is at y = 30." </description>
