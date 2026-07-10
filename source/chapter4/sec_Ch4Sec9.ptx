@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_Ch4Sec9" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Newton's Method</title>
+
+<introduction>
+<title>Learning Objectives</title>
+	<ol>
+		<li>Describe the steps of Newton's method.</li>
+		<li>Explain what an iterative process means.</li>
+		<li>Recognize when Newton's method does not work.</li>
+		<li>Apply iterative processes to various situations.</li>
+	</ol>
+	
+<p>In many areas of pure and applied mathematics, we are interested in finding solutions to an equation of the form <m>f(x)=0</m>. For most functions, however, it is difficult—if not impossible—to calculate their zeroes explicitly. In this section, we take a look at a technique that provides a very efficient way of approximating the zeroes of functions. This technique makes use of tangent line approximations and is behind the method used often by calculators and computers to find zeroes. </p>
+</introduction>
+
+<subsection xml:id="subsec-describeNewtonsMethod">
+	<title>Describing Newton's Method</title>
+	<p>Consider the task of finding solutions of <m>f(x)=0</m>.  If <m>f</m> is the first-degree polynomial <m>f(x)=ax+b</m>, then the solution of <m>f(x)=0</m> is given by the formula <m>x=\ds-\frac{b}{a}</m>.  If <m>f</m> is the second-degree polynomial <m>f(x)=ax^2+bx+c</m>, the solutions of <m>f(x)=0</m> can be found by using the quadratic formula.  However, for polynomials of degree <m>3</m> or more, finding roots of <m>f</m> becomes more complicated. Although formulas exist for third- and fourth-degree polynomials, they are quite complicated. Also, if <m>f</m> is a polynomial of degree <m>5</m> or greater, it is known that no such formulas exist. For example, consider the function
+		<md>
+		f(x)=x^5+8x^4+4x^3-2x-8
+		</md>.
+	No formula exists that allows us to find the solutions of <m>f(x)=0</m>. Similar difficulties exist for nonpolynomial functions. For example, consider the task of finding solutions of <m>\tan{x}-x=0</m>. No simple formula exists for the solutions of this equation. In cases such as these, we can use Newton’s method to approximate the roots.
+	</p>
+	<p><term>Newton's Method</term> makes use of the following idea to approximate the solutions of <m>f(x)=0</m>. By sketching a graph of <m>f</m>, we can estimate a root of <m>f(x)=0</m>. Let's call this estimate <m>x_0</m>.  We then draw the tangent line to <m>f</m> at <m>x_0</m>.  If <m>f'(x_0)\ne 0</m>, this tangent line intersects the <m>x</m>-axis at some point <m>(x_1,0)</m>.  Now let <m>x_1</m> be the next approximation to the actual root.  Typically, <m>x_1</m> is closer than <m>x_0</m> to an actual root.  Next we draw the tangent line to <m>f</m> at <m>x_1</m>.  If <m>f'(x_1)\ne 0</m>, this tangent line also intersects the <m>x</m>-axis, producing another approximation, <m>x_2</m>.  We continue in this way, deriving a list of approximations: <m>x_0,x_1,x_2,\ldots</m>.  Typically, the numbers <m>x_0,x_1,x_2,\ldots</m> quickly approach an actual root <m>x^*</m>, as shown in the following figure.
+	</p>
+	<figure>
+		<image source="ch4/CNX_Calc_Figure_04_09_001.jpg" width="70%">
+			<description>"A graph of an increasing function f(x) on the xy-plane.  The points at x_0, x_1, and x_2 are labeled with tangent lines drawn.  Each tangent line intersects the x-axis at the next x-value.  The actual root at x* is labeled"
+			</description>
+		</image>
+		<caption>The approximations <m>x_0,x_1,x_2,\ldots</m> approach the actual root <m>x*</m>.  the approximations are derived by looking at tangent lines to the graph of <m>f</m>
+		</caption>
+	</figure>
+	<p>Now let's look at how to calculate the approximations <m>x_0,x_1,x_2,\ldots</m>. If <m>x_0</m> is our first approximation, the approximation <m>x_1</m> is defined by letting <m>(x_1,0)</m> be the <m>x</m>intercept of the tangent line to <m>f</m> at <m>x_0</m>. The equation of this tangent line is given by
+		<md>
+		y=f(x_0)+f'(x_0)(x-x_0)
+		</md>.
+	Therefore, <m>x_1</m> must satisfy
+		<md>
+		f(x_0)+f'(x_0)(x_1-x_0)=0
+		</md>.
+	Solving this equation for <m>x_1</m>, we conclude that 
+		<md>
+		x_1=x_0-\frac{f(x_0)}{f'(x_0)}
+		</md>.
+	Similarly, the point <m>(x_2,0</m> is the <m>x</m>-intercept of the tangent line to <m>f</m> at <m>x_1</m>. Therefore, <m>x_2</m> satisfies the equation
+		<md>
+		x_2=x_1-\frac{f(x_1)}{f'(x_1)}
+		</md>.
+	In general, for <m>n\gt 0</m>, <m>x_n</m> satisfies
+		<md number="yes" xml:id="eq-newtonsmethod">
+		x_n=x_{n-1}-\frac{f(x_{n-1})}{f'(x_{n-1})}
+		</md>.
+	Next we see how to make use of this technique to approximate the root of the polynomial <m>f(x)=x^3-3x+1</m>.
+	</p>
+	<example>
+		<title>Finding a Root of a Polynomial</title>
+		<statement>
+			<p>Use Newton's method to approximate a root of <m>f(x)=x^3-3x+1</m> in the interval <m>[1,2]</m>.  Let <m>x_0=2</m> and find <m>x_1,x_2,x_3,x_4</m>, and <m>x_5</m>.
+			</p>
+		</statement>
+		<solution>
+			<p>From <xref ref="fig-newtonsmethodex1"/>, we see that <m>f</m> has one root over the interval <m>(1,2)</m>.  Therefore, <m>x_0=2</m> seems like a reasonable first approximation. To find the next approximation, we use <xref ref="eq-newtonsmethod"/>.  Since <m>f(x)=x^3-3x+1</m>, the derivative is <m>f'(x)=3x^3-2</m>.  Using <xref ref="eq-newtonsmethod"/>with <m>n=1</m> (and a calculator that display <m>10</m> digits, we obtain
+				<md>x_1=x_0-\frac{f(x_0)}{f'(x_0)}=2-\frac{f(2)}{f'(2)}=2-\frac{3}{9}\approx 1.666666667
+				</md>.
+			</p>
+			<p>To find the next approximation, <m>x_2</m>, we use <xref ref="eq-newtonsmethod"/> with <m>n=2</m> and the value of <m>x_1</m> stored on the calculator. We find that 
+				<md>
+				x_2=x_1-\frac{f(x_1)}{f'(x_1)}\approx 1.548611111
+				</md>.
+			Continuing in this way, we obtain the results:
+				<md>
+					<mrow>x_1&amp;\approx 1.666666667</mrow>
+					<mrow>x_2&amp;\approx 1.548611111</mrow>
+					<mrow>x_3&amp;\approx 1.532390162</mrow>
+					<mrow>x_4&amp;\approx 1.532088989</mrow>
+					<mrow>x_5&amp;\approx 1.532088886</mrow>
+					<mrow>x_6&amp;\approx 1.532088886</mrow>
+				</md>.
+			We note that we obtained the same value for <m>x_5</m> and <m>x_6</m>. Therefore, any subsequent application of Newton’s method will most likely give the same value for <m>x_n</m>.
+			</p>
+			
+			<figure xml:id="fig-newtonsmethodex1">
+			<image source="ch4/CNX_Calc_Figure_04_09_002.jpg" width="70%">
+				<description>"A graph of f(x)=x^3-3x+1 over the interval from -2 to 2.  There are three roots.  One between -2 and -1, one between 0 and 1, and the third between 1 and 2"
+				</description>
+			</image>
+			<caption>The function <m>f(x)=x^3-3x+1</m> has one root over the interval <m>[1,2[</m>.
+			</caption>
+			</figure>
+		</solution>
+	</example>
+	<exercise>
+		<statement>
+			<p>Letting <m>x_0=0</m>, let's use Newton's method to approximate the root of <m>f(x)=x^3-3x+1</m> over the interval <m>[0,1]</m> by calculating <m>x_1</m> and <m>x_2</m>.
+			</p>
+		</statement>
+		<hint>
+			<p>Use <m>f'(x)=3x^2-3</m> in the Newton's method formula.
+			</p>
+		</hint>
+		<solution>
+			<p><m>x_1\approx-0.333333333</m> and <m>x_2\approx 0.402777778</m>.
+			</p>
+		</solution>
+	</exercise>
+	<p>Newton’s method can also be used to approximate square roots. Here we show how to approximate <m>\sqrt{2}</m>. This method can be modified to approximate the square root of any positive number.
+	</p>
+	<example xml:id="ex-newtondsmethodex2">
+		<title>Finding a Square Root</title>
+		<statement>
+			<p>Use Newton's method to approximate <m>\sqrt{2}</m> (<xref ref="fig-newtonsmethodex2"/>).  Let <m>f(x)=x^2-2</m>, let <m>x_0=2</m>, and calculate <m>x_1,x_2,x_3,x_4,x_5</m>. (We note that since <m>f(x)=x^2-2</m> has a zero at <m>\sqrt{2}</m>, the initial value <m>x_0=2</m> is a reasonable choice to approximate <m>\sqrt{2}</m>.)
+			</p>
+		</statement>
+		<solution>
+			<p>Let <m>f(x)=x^2-2,\ f'(x)=2x</m>.  From <xref ref="eq-newtonsmethod"/>, we know that 
+				<md>
+					<mrow>x_n&amp;=x_{n-1}-\frac{f(x_{n-1})}{f'(x_{n-1})}</mrow>
+					<mrow>&amp;=x_{n-1}-\frac{x^2_{n-1}-2}{2x_{n-1}}</mrow>
+					<mrow>&amp;=\frac{1}{2}x_{n-1}+\frac{1}{x_{n-1}}</mrow>
+					<mrow>&amp;=\frac{1}{2}\left(x_{n-1}+\frac{2}{x_{n-1}}\right)</mrow>
+				</md>.
+			Therefore,
+				<md>
+					<mrow>x_1&amp;=\frac{1}{2}\left(x_0+\frac{2}{x_0}\right)=\frac{1}{2}\left(2+\frac{2}{2}\right)=1.5</mrow>
+					<mrow>x_2&amp;=\frac{1}{2}\left(x_1+\frac{2}{x_1}\right)=\frac{1}{2}\left(1.5+\frac{2}{1.5}\right)\approx 1.416666667</mrow>
+				</md>.
+			Continuing in this way, we find that
+				<md>
+					<mrow>x_1&amp;=1.5</mrow>
+					<mrow>x_2&amp;=1.416666667</mrow>
+					<mrow>x_3&amp;=1.414215686</mrow>
+					<mrow>x_4&amp;=1.414213562</mrow>
+					<mrow>x_5&amp;=1.414213562</mrow>
+				</md>.
+			Since we obtained the same value for <m>x_4</m> and <m>x_5</m>, it is unlikely that the value <m>x_n</m> will change on any subsequent application of Newton’s method. We conclude that <m>\sqrt{2}\approx1.414213562</m>.
+			</p>
+			<figure xml:id="fig-newtonsmethodex2">
+			<image source="ch4/CNX_Calc_Figure_04_09_003.jpg" width="70%">
+				<description>"A graph of f(x)=x^2-2 over the interval from 0 to 2.  The tangent line is drawn at x_0=2, which intersects the x-axis at x_1=1.5"
+				</description>
+			</image>
+			<caption>
+				We can use Newton's method to find <m>\sqrt{2}</m>.
+			</caption>
+			</figure>
+		</solution>
+	</example>
+	<exercise>
+		<statement>
+			<p>Use Newton's method to approximate <m>\sqrt{3}</m> by letting <m>f(x)=x^2-3</m> and <m>x_0=3</m>.  Find <m>x_1</m> and <m>x_2</m>.
+			</p>
+		</statement>
+		<hint>
+			<p><m>f'(x)=2x</m> just like in <xref ref="ex-newtondsmethodex2"/>
+			</p>
+		</hint>
+		<solution>
+			<p><m>x_1=2</m> and <m>x_2=1.75</m>
+			</p>
+		</solution>
+	</exercise>
+	<p>When using Newton’s method, each approximation after the initial guess is defined in terms of the previous approximation by using the same formula. In particular, by defining the function <m>\ds F(x)=x-\left[\frac{f(x)}{f'(x)}\right]</m>, we can rewrite <xref ref="eq-newtonsmethod"/> as <m>x_n=F(x_{n-1})</m>. This type of process, where each <m>x_n</m> is defined in terms of <m>x_{n-1}</m> by repeating the same function, is an example of an iterative process. Shortly, we examine other iterative processes. First, let’s look at the reasons why Newton’s method could fail to find a root. 
+	</p>
+</subsection>
+<subsection>
+	<title>Failure of Newton's Method</title>
+	<p>Typically, Newton’s method is used to find roots fairly quickly. However, things can go wrong. Some reasons why Newton’s method might fail include the following:
+		<ol>
+			<li>At one of the approximations <m>x_n</m>, the derivative <m>f'</m> is zero at <m>x_n</m>, but 𝑓<m>f(x_n)\ne 0</m>. As a result, the tangent line of <m>f</m> at <m>x_n</m> does not intersect the <m>x</m>-axis. Therefore, we cannot continue the iterative process.</li>
+			<li>The approximations <m>x_0,x_1,x_2,\ldots</m> may approach a different root. If the function <m>f</m> has more than one root, it is possible that our approximations do not approach the one for which we are looking, but approach a different root (see <xref ref="fig-newtonsmethodfailure"/>). This event most often occurs when we do not choose the approximation <m>x_0</m> close enough to the desired root.</li>
+			<li>The approximations may fail to approach a root entirely. In <xref ref="ex-newtonsmethodex3"/>, we provide an example of a function and an initial guess <m>x_0</m> such that the successive approximations never approach a root because the successive approximations continue to alternate back and forth between two values.</li>
+		</ol>
+		<figure xml:id="fig-newtonsmethodfailure">
+			<image source="ch4/CNX_Calc_Figure_04_09_004.jpg" width="70%">
+				<description>"A graph of a function over an interval with two roots.  x_0 is to the left of the root sought, but the tangent line at x_0 intersects the x-axis at the root found."
+				</description>
+			</image>
+			<caption>
+				 If the initial guess <m>x_0</m> is too far from the root sought, it may lead to approximations that approach a different root.
+			</caption>
+		</figure>
+	</p>
+	<example xml:id="ex-newtonsmethodex3">
+		<title>When Newton's Method Fails</title>
+		<statement>
+			<p>Consider the function <m>f(x)=x^3-2x+2</m>.  Let <m>x_0=0</m>.  Show that the sequence <m>x_1,x_2,\ldots</m> fails to approach a root of <m>f</m>.
+			</p>
+		</statement>
+		<solution>
+		<p>For <m>f(x)=x^3-2x+2</m>, the derivative is <m>f'(x)=3x^2-2</m>.  Therefore, 
+			<md>
+			x_1=x_0-\frac{f(x_0)}{f'(x_0)}=1-\frac{f(1)}{f'(1)}=1-\frac{1}{1}=0
+			</md>.
+		In the next step,
+			<md>
+			x_2=x_1-\frac{f(x_1)}{f'(x_1)}=1-\frac{f(1)}{f'(1)}=1-\frac{1}{1}=0
+			</md>.
+		Consequently, the numbers <m>x_0,x_1,x_2,\ldots</m> continue to bounce back and forth between <m>0</m> and <m>1</m> and never get closer to the root of <m>f</m> which is over the interval <m>[−2,−1]</m> (see <xref ref="fig-newtonsmethodfailureex1"/>). Fortunately, if we choose an initial approximation <m>x_0</m> closer to the actual root, we can avoid this situation.
+		</p>
+			<figure xml:id="fig-newtonsmethodfailureex1">
+				<image source="ch4/CNX_Calc_Figure_04_09_005.jpg" width="70%">
+					<description>"A graph of f(x)=x^3-2x+2 on the interval from -2 to 2. A zero exists between -1 and -2. The tangent line at x=2 intersects the x-axis at 1 and the tangent line at x=1 intersects the x-axis at 0."
+					</description>
+				</image>
+				<caption>
+					 The approximations continue to alternate between <m>0</m> and <m>1</m> and never approach the root of <m>f</m>.
+				</caption>
+			</figure>
+		</solution>
+	</example>
+	<exercise>
+		<statement>
+			<p>For <m>f(x)=2^3-2x+2</m>, let <m>x_0=-1.5</m> and find <m>x_1</m> and <m>x_2</m>.
+			</p>
+		</statement>
+		<solution>
+			<p><m>x_1\approx-1.842105263</m> and <m>x_2\approx -1.795578325</m>.
+			</p>
+		</solution>
+		<hint>
+			<p>In <xref ref="fig-newtonsmethodfailureex1"/>, use <m>x=-1.5</m> and follow the Newton's method algorithm.
+			</p>
+		</hint>
+	</exercise>
+	<p>For <xref ref="fig-newtonsmethodfailureex1"/> we see that Newton’s method does not always work. However, when it does work, the sequence of approximations approaches the root very quickly. Discussions of how quickly the sequence of approximations approach a root found using Newton’s method are included in texts on numerical analysis.
+	</p>.
+</subsection>
+<subsection>
+	<title>Student Project</title>
+	<subsubsection>
+		<title>Other Iterative Processes</title>
+		<p>As mentioned earlier, Newton’s method is a type of iterative process. We now look at an example of a different type of iterative process.
+		</p>
+		<p>Consider a function <m>F</m> and an initial number <m>x_0</m>. Define the subsequent numbers <m>x_n</m> by the formula <m>x_n=F(x_{n-1})</m>. This process is an iterative process that creates a list of numbers <m>x_0,x_1,x_2,\ldots,x_n,\ldots</m>. This list of numbers may approach a finite number <m>x^*</m> as <m>n</m> gets larger, or it may not. In <xref ref="ex-iterativeprocesslimit"/>, we see an example of a function <m>F</m> and an initial guess <m>x_0</m> such that the resulting list of numbers approaches a finite value.
+		</p>
+		<example xml:id="ex-iterativeprocesslimit">
+			<title>Finding a Limit for an Iterative Process</title>
+			<statement>
+				<p>Let <m>F(x)=\ds\frac{1}{2}x+4</m> and let <m>x_0=0</m>.  for all <m>n\ge 1</m>, let <m>x_n=F(x_{n-1)}</m>.  Find the values <m>x_1,x_2,x_3,x_4,x_5</m>.  Make a conjecture about what happens to this list of numbers <m>x_1,x_2,x_3,\ldots,x_n,\ldots</m> as <m>n\to\infty</m>.  If the list of numbers <m>x_1,x_2,x_3,\ldots</m> approaches a finite number <m>x^*</m>, then <m>x^*</m> satisfies <m>x^*=F(x^*)</m>, and <m>x^*</m> is called a fixed point of <m>F</m>.
+				</p>
+			</statement>
+			<solution>
+				<p>If <m>x_0=0</m>, then
+					<md>
+						<mrow>x_1&amp;=\frac{1}{2}(0)+4=4	</mrow>
+						<mrow>x_2&amp;=\frac{1}{2}(4)+4=6	</mrow>
+						<mrow>x_3&amp;=\frac{1}{2}(6)+4=7	</mrow>
+						<mrow>x_4&amp;=\frac{1}{2}(7)+4=7.5	</mrow>
+						<mrow>x_5&amp;=\frac{1}{2}(7.5)+4=7.75	</mrow>
+						<mrow>x_6&amp;=\frac{1}{2}(7.75)+4=7.875	</mrow>
+						<mrow>x_7&amp;=\frac{1}{2}(7.875)+4=7.9375	</mrow>
+						<mrow>x_8&amp;=\frac{1}{2}(7.9375)+4=7.96875	</mrow>
+						<mrow>x_9&amp;=\frac{1}{2}(7.96875)+4=7.984375	</mrow>
+					</md>
+				From this list, we conjecture that the values <m>x_n</m> approach <m>8</m>.
+				</p>
+				<p>
+				<xref ref="fig-iterativemethod"/> provides a graphical argument that the values approach <m>8</m> as <m>n\to\infty</m>. Starting at the point <m>(x_0,x_0)</m>, we draw a vertical line to the point <m>(x_0,F(x_0))</m>. The next number in our list is <m>x_1=F(x_0)</m>. We use <m>x_1</m> to calculate <m>x_2</m>. Therefore, we draw a horizontal line connecting <m>(x_0,x_1)</m> to the point <m>x_1,x_1</m> on the line <m>y=x</m>, and then draw a vertical line connecting <m>(x_1,x_1)</m> to the point <m>(x_1,F(x_1))</m>. The output <m>F(x_1)</m> becomes <m>x_2</m>. Continuing in this way, we could create an infinite number of line segments. These line segments are trapped between the lines <m>\ds F(x)=\frac{x}{2}+4</m> and <m>y=x</m>. The line segments get closer to the intersection point of these two lines, which occurs when <m>x=F(x)</m>. Solving the equation <m>x=\ds\frac{x}{2}+4</m>, we conclude they intersect at <m>x=8</m>. Therefore, our graphical evidence agrees with our numerical evidence that the list of numbers <m>x_0,x_1,x_2,\ldots</m> approaches <m>x^*=8</m> as <m>n\to\infty</m>.
+				</p>
+				<figure xml:id="fig-iterativemethod">
+					<image source="ch4/CNX_Calc_Figure_04_09_006.jpg" width="70%">
+						<description>"A graph of the line F(x)=1/2x+4.  x0 is at the orign, with an arrow point up to x1 on the y-axis.  Another arrow points to the point on y=x at x1.  Then an arrow up to the point on F(x).  The arrows keep moving up and to the right, reflecting at right angles to stay between y=x and F(x).  x^* is where the points intersect, and where the arrows approach."
+						</description>
+					</image>
+					<caption>
+						 This iterative process approaches the value <m>x^*=8</m>.
+					</caption>
+				</figure>
+			</solution>
+		</example>
+		<project>
+			<title>Iterative Processes and Chaos</title>
+				<p>Iterative processes can yield some very interesting behavior. In this section, we have seen several examples of iterative processes that converge to a fixed point. We also saw in <xref ref="ex-iterativeprocesslimit"/> that the iterative process bounced back and forth between two values. We call this kind of behavior a a <m>2</m>-cycle. Iterative processes can converge to cycles with various periodicities, such as <m>2</m>−cycles,<m>4</m>−cycles (where the iterative process repeats a sequence of four values), <m>8</m>-cycles, and so on.
+				</p>
+				<p>Some iterative processes yield what mathematicians call <em>chaos</em>. In this case, the iterative process jumps from value to value in a seemingly random fashion and never converges or settles into a cycle. Although a complete exploration of chaos is beyond the scope of this text, in this project we look at one of the key properties of a chaotic iterative process: sensitive dependence on initial conditions. This property refers to the concept that small changes in initial conditions can generate drastically different behavior in the iterative process.
+				</p>
+				<p>Probably the best-known example of chaos is the Mandelbrot set (see <xref ref="fig-mandelbrot"/>), named after Benoit Mandelbrot (1924–2010), who investigated its properties and helped popularize the field of chaos theory. The Mandelbrot set is usually generated by computer and shows fascinating details on enlargement, including self-replication of the set. Several colorized versions of the set have been shown in museums and can be found online and in popular books on the subject.
+				</p>
+				<figure xml:id="fig-mandelbrot">
+					<image source="ch4/CNX_Calc_Figure_04_09_007.jpg" width="70%">
+						<description>"The Mandelbrot set, colorized, in the complex plane."
+						</description>
+					</image>
+					<caption>
+						 The Mandelbrot set is a well-known example of a set of points generated by the iterative chaotic behavior of a relatively simple function.
+					</caption>
+				</figure>
+				<p>In this project, we use the logistic map
+					<md>
+						f(x)=rx(1-x),\quad\text{where }x\in[0,1]\text{ and }r\gt 0
+					</md>
+				as the function in our iterative process. The logistic map is a deceptively simple function; but, depending on the value of <m>r</m>, the resulting iterative process displays some very interesting behavior. It can lead to fixed points, cycles, and even chaos.
+				</p>
+				<p>To visualize the long-term behavior of the iterative process associated with the logistic map, we will use a tool called a cobweb diagram. As we did with the iterative process we examined earlier in this section, we first draw a vertical line from the point <m>(x_0,0)</m> to the point <m>(x_0,f(x_0))=(x_0,x_1)</m>. We then draw a horizontal line from that point to the point <m>(x_1,x_1)</m>, then draw a vertical line to <m>(x_1,f(x_1))=(x_1,x_2)</m>, and continue the process until the long-term behavior of the system becomes apparent. <xref ref="fig-iterativeproject"/> shows the long-term behavior of the logistic map when <m>r=3.55</m> and <m>x_0=0.2</m>. (The first <m>100</m> iterations are not plotted.) The long-term behavior of this iterative process is an <m>8</m>-cycle.
+				</p>
+
+				<figure xml:id="fig-iterativeproject">
+						<image source="ch4/CNX_Calc_Figure_04_09_008.jpg" width="70%">
+							<description>"A graph of y=x and a downward opening parabolx, intersecting at x=0 and another positive x-value.  Line segments emanate up from the line to the parabola.  When they intersect the parabola, they reflect perpendicular and intersect the line at a point further down the x-axis"
+							</description>
+						</image>
+						<caption>
+							 A cobweb diagram for <m>f(x)=3.55x(1-x)</m> presented here. The sequence of values result in an <m>8</m>-cycle.
+						</caption>
+				</figure>
+
+			<ol>
+				<li>Let <m>r=0.5</m> and choose <m>x_0=0.2</m>.  Either by hand or by using a computer, calculate the first <m>10</m> values in the sequence. Does the sequence appear to converge? If so, to what value? Does it result in a cycle? If so, what kind of cycle (for example, <m>2</m>−cycle,<m>4</m>−cycle.)?</li>
+				<li>What happens when <m>r=2</m>?</li>
+				<li>For <m>r=3.2</m> and <m>r=3.5</m>, calculate the first <m>100</m> sequence values. Generate a cobweb diagram for each iterative process. (Several free applets are available online that generate cobweb diagrams for the logistic map.) What is the long-term behavior in each of these cases?</li>
+				<li>Now let <m>r=4</m>. Calculate the first <m>100</m> sequence values and generate a cobweb diagram. What is the long-term behavior in this case?</li>
+				<li>Repeat the process for <m>r=4</m>, but let <m>x_0=0.201</m>. How does this behavior compare with the behavior for <m>x_0=0.2</m>?</li>
+			</ol>
+		</project>
+	</subsubsection>
+
+</subsection>
+
+</section>
