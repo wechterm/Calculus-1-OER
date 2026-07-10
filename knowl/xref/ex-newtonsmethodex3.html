@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.9.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">When Newton’s Method Fails.</span>
+</h2>
+<div class="para">Consider the function <span class="process-math">\(f(x)=x^3-2x+2\text{.}\)</span>  Let <span class="process-math">\(x_0=0\text{.}\)</span>  Show that the sequence <span class="process-math">\(x_1,x_2,\ldots\)</span> fails to approach a root of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-newtonsmethodex3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">For <span class="process-math">\(f(x)=x^3-2x+2\text{,}\)</span> the derivative is <span class="process-math">\(f'(x)=3x^2-2\text{.}\)</span>  Therefore,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-newtonsmethodfailureex1.html">
+\begin{equation*}
+x_1=x_0-\frac{f(x_0)}{f'(x_0)}=1-\frac{f(1)}{f'(1)}=1-\frac{1}{1}=0\text{.}
+\end{equation*}
+</div>
+<div class="para">In the next step,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-newtonsmethodfailureex1.html">
+\begin{equation*}
+x_2=x_1-\frac{f(x_1)}{f'(x_1)}=1-\frac{f(1)}{f'(1)}=1-\frac{1}{1}=0\text{.}
+\end{equation*}
+</div>
+<div class="para">Consequently, the numbers <span class="process-math">\(x_0,x_1,x_2,\ldots\)</span> continue to bounce back and forth between <span class="process-math">\(0\)</span> and <span class="process-math">\(1\)</span> and never get closer to the root of <span class="process-math">\(f\)</span> which is over the interval <span class="process-math">\([−2,−1]\)</span> (see <a href="sec_Ch4Sec9.html#fig-newtonsmethodfailureex1" class="xref" data-knowl="./knowl/xref/fig-newtonsmethodfailureex1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.9.10">Figure 4.9.10</a>). Fortunately, if we choose an initial approximation <span class="process-math">\(x_0\)</span> closer to the actual root, we can avoid this situation.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-newtonsmethodex3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/ch4/CNX_Calc_Figure_04_09_005.jpg" class="contained" alt='"A graph of f(x)=x^3-2x+2 on the interval from -2 to 2. A zero exists between -1 and -2. The tangent line at x=2 intersects the x-axis at 1 and the tangent line at x=1 intersects the x-axis at 0."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.9.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The approximations continue to alternate between <span class="process-math">\(0\)</span> and <span class="process-math">\(1\)</span> and never approach the root of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Figure 4.9.10"><a href="#fig-newtonsmethodfailureex1" title="Copy heading and permalink for Figure 4.9.10" aria-label="Copy heading and permalink for Figure 4.9.10">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Solution 4.9.9.1"><a href="#ex-newtonsmethodex3-3" title="Copy heading and permalink for Solution 4.9.9.1" aria-label="Copy heading and permalink for Solution 4.9.9.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 4.9.9: When Newton’s Method Fails"><a href="#ex-newtonsmethodex3" title="Copy heading and permalink for Example 4.9.9: When Newton’s Method Fails" aria-label="Copy heading and permalink for Example 4.9.9: When Newton’s Method Fails">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="sec_Ch4Sec9.html#ex-newtonsmethodex3">In Context</a></span>
+</body>
+</html>
