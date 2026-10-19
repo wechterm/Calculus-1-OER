@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec_Ch3Sec1" xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Defining the Derivative (not edited)</title>
+<title>Defining the Derivative</title>
   <introduction>
   <title> Learning Objectives</title>
   <ul>
@@ -14,7 +14,11 @@
 <li>Estimate the derivative from a table of values.</li>
 </ul>
 
-<p id="fs-id1169739300479">Now that we have both a conceptual understanding of a limit and the practical ability to compute limits, we have established the foundation for our study of calculus, the branch of mathematics in which we compute derivatives and integrals. Most mathematicians and historians agree that calculus was developed independently by the Englishman Isaac <term class="no-emphasis">Newton</term> <m>\text{ (1643–1727) }</m> and the German Gottfried <term class="no-emphasis">Leibniz</term> <m>\text{ (1646–1716), }</m> whose images appear in <xref ref="CNX_Calc_Figure_03_01_001"/>. When we credit Newton and Leibniz with developing calculus, we are really referring to the fact that Newton and Leibniz were the first to understand the relationship between the derivative and the integral. Both mathematicians benefited from the work of predecessors, such as Barrow, Fermat, and Cavalieri. The initial relationship between the two mathematicians appears to have been amicable; however, in later years a bitter controversy erupted over whose work took precedence. Although it seems likely that Newton did, indeed, arrive at the ideas behind calculus first, we are indebted to Leibniz for the notation that we commonly use today.</p>
+	<p id="fs-id1169739300479">Now that we have both a conceptual understanding of a limit and the practical ability to compute limits, we have established the foundation for our study of calculus, the branch of mathematics in which we compute derivatives and integrals. Most mathematicians and historians agree that calculus was developed independently by the Englishman Isaac Newton (1643–1727) and the German Gottfried Leibniz (1646–1716) whose images appear in <xref ref="CNX_Calc_Figure_03_01_001"/>. When we credit Newton and Leibniz with developing calculus, we are really referring to the fact that Newton and Leibniz were the first to understand the relationship between the derivative and the integral. 
+	</p>
+	<p>
+	Both mathematicians benefited from the work of predecessors, such as Barrow, Fermat, and Cavalieri. The initial relationship between the two mathematicians appears to have been amicable; however, in later years a bitter controversy erupted over whose work took precedence. Although it seems likely that Newton did, indeed, arrive at the ideas behind calculus first, we are indebted to Leibniz for the notation that we commonly use today.
+	</p>
 <figure xml:id="CNX_Calc_Figure_03_01_001">
 <image source="ch3/CNX_Calc_Figure_03_01_001.jpg" width="50%">
 <description>"Photos of Newton and Leibniz."
@@ -23,49 +27,59 @@
 </introduction>
 <subsection id="fs-id1169739218205">
 <title>Tangent Lines</title>
-<p id="fs-id1169739302308">We begin our study of calculus by revisiting the notion of secant lines and tangent lines. Recall that we used the slope of a secant line to a function at a point <m>(a,f(a))</m> to estimate the rate of change, or the rate at which one variable changes in relation to another variable. We can obtain the slope of the secant by choosing a value of <m>x</m> near <m>a</m> and drawing a line through the points <m>(a,f(a))</m> and <m>(x,f(x)),</m> as shown in <xref ref="CNX_Calc_Figure_03_01_002"/>. The slope of this line is given by an equation in the form of a difference quotient:</p>
+<p id="fs-id1169739302308">We begin our study of calculus by revisiting the notion of secant lines and tangent lines. Recall that we used the slope of a secant line to a function at a point <m>(a,f(a))</m> to estimate the rate of change, or the rate at which one variable changes in relation to another variable. We can obtain the slope of the secant by choosing a value of <m>x</m> near <m>a</m> and drawing a line through the points <m>(a,f(a))</m> and <m>(x,f(x)),</m> as shown in <xref ref="CNX_Calc_Figure_03_01_002"/>. The slope of this line is given by an equation in the form of a <emph> difference quotient</emph>:</p>
 <me>m_{\text{ sec }}=\frac{f(x)-f(a)}{x-a}.</me>
+
 <p xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1169738929481">We can also calculate the slope of a secant line to a function at a value <m>a</m> by using this equation and replacing <m>x</m> with <m>a+h,</m> where <m>h</m> is a value close to 0. We can then calculate the slope of the line through the points <m>(a,f(a))</m> and <m>(a+h,f(a+h)).</m> In this case, we find the secant line has a slope given by the following difference quotient with increment <m>h\text{ : }</m></p><me>m_{\text{ sec }}=\frac{f(a+h)-f(a)}{a+h-a}=\frac{f(a+h)-f(a)}{h}.</me>
+
 <definition> <!-- Change next /note to /definition and remove above note-->
 <p id="fs-id1169738924962">Let <m>f</m> be a function defined on an interval <m>I</m> containing <m>a.</m> If <m>x\neq a</m> is in <m>I,</m> then</p>
 <me>Q=\frac{f(x)-f(a)}{x-a}</me>
 <p id="fs-id1169738879993">is a <term>difference quotient</term>.</p>
 <p id="fs-id1169739195558">Also, if <m>h\neq 0</m> is chosen so that <m>a+h</m> is in <m>I,</m> then</p>
 <me>Q=\frac{f(a+h)-f(a)}{h}</me>
-<p id="fs-id1169738913121">is a difference quotient with increment <m>h.</m></p>
+<p id="fs-id1169738913121">is a difference quotient with <term>increment</term> <m>h.</m></p>
 </definition>
 <note id="fs-id1169739019841" class="media-2">
 <p xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1169739040482">View the development of the <url href="http://www.openstax.org/l/20_calcapplets" visual="http://www.openstax.org/l/20_calcapplets">derivative</url> with this applet.</p></note>
-<p id="fs-id1169738819917">These two expressions for calculating the slope of a secant line are illustrated in <xref ref="CNX_Calc_Figure_03_01_002"/>. We will see that each of these two methods for finding the slope of a secant line is of value. Depending on the setting, we can choose one or the other. The primary consideration in our choice usually depends on ease of calculation.</p>
+<p id="fs-id1169738819917">These two expressions for calculating the slope of a secant line are illustrated in <xref ref="CNX_Calc_Figure_03_01_002"/>. We will see that each of these two methods for finding the slope of a secant line is of value. Depending on the setting, we can choose one or the other.</p>
 <figure xml:id="CNX_Calc_Figure_03_01_002">
 <image source="ch3/CNX_Calc_Figure_03_01_002.jpg" width="100%">
 <description>"This figure consists of two graphs labeled a and b. Figure a shows the Cartesian coordinate plane with 0, a, and x marked on the x-axis. There is a curve labeled y = f(x) with points marked (a, f(a)) and (x, f(x)). There is also a straight line that crosses these two points (a, f(a)) and (x, f(x)). At the bottom of the graph, the equation msec = (f(x) - f(a))/(x - a) is given. Figure b shows a similar graph, but this time a + h is marked on the x-axis instead of x. Consequently, the curve labeled y = f(x) passes through (a, f(a)) and (a + h, f(a + h)) as does the straight line. At the bottom of the graph, the equation msec = (f(a + h) - f(a))/h is given."
  </description></image> <caption>We can calculate the slope of a secant line in either of two ways.</caption>
 </figure>
-<p id="fs-id1169738909226">In <xref ref="CNX_Calc_Figure_03_01_003"/>(a) we see that, as the values of <m>x</m> approach <m>a,</m> the slopes of the secant lines provide better estimates of the rate of change of the function at <m>a.</m> Furthermore, the secant lines themselves approach the tangent line to the function at <m>a,</m> which represents the limit of the secant lines. Similarly, <xref ref="CNX_Calc_Figure_03_01_003"/>(b) shows that as the values of <m>h</m> get closer to <m>0,</m> the secant lines also approach the tangent line. The slope of the tangent line at <m>a</m> is the rate of change of the function at <m>a,</m> as shown in <xref ref="CNX_Calc_Figure_03_01_003"/>(c).</p>
+
+<p id="fs-id1169738909226">In <xref ref="CNX_Calc_Figure_03_01_003"/>(a) we see that, as the values of <m>x</m> approach <m>a,</m> the slopes of the secant lines provide better estimates of the rate of change of the function at <m>a.</m> Furthermore, the secant lines themselves approach the tangent line to the function at <m>a,</m> which represents the limit of the secant lines.
+</p>
+
+<p> Similarly, <xref ref="CNX_Calc_Figure_03_01_003"/>(b) shows that as the values of <m>h</m> get closer to <m>0,</m> the secant lines also approach the tangent line. The slope of the tangent line at <m>a</m> is the rate of change of the function at <m>a,</m> as shown in <xref ref="CNX_Calc_Figure_03_01_003"/>(c).</p>
 <figure xml:id="CNX_Calc_Figure_03_01_003">
 <image source="ch3/CNX_Calc_Figure_03_01_003.jpg" width="100%">
 <description>"This figure consists of three graphs labeled a, b, and c. Figure a shows the Cartesian coordinate plane with 0, a, x2, and x1 marked in order on the x-axis. There is a curve labeled y = f(x) with points marked (a, f(a)), (x2, f(x2)), and (x1, f(x1)). There are three straight lines: the first crosses (a, f(a)) and (x1, f(x1)); the second crosses (a, f(a)) and (x2, f(x2)); and the third only touches (a, f(a)), making it the tangent. At the bottom of the graph, the equation mtan = limx \to  a (f(x) - f(a))/(x - a) is given. Figure b shows a similar graph, but this time a + h2 and a + h1 are marked on the x-axis instead of x2 and x1. Consequently, the curve labeled y = f(x) passes through (a, f(a)), (a + h2, f(a + h2)), and (a + h1, f(a + h1)) and the straight lines similarly cross the graph as in Figure a. At the bottom of the graph, the equation mtan = limh \to  0 (f(a + h) - f(a))/h is given. Figure c shows only the curve labeled y = f(x) and its tangent at point (a, f(a))."
 </description></image> <caption>The secant lines approach the tangent line (shown in green) as the second point approaches the first.</caption>
 </figure>
-<note id="fs-id1169739096692" class="media-2">
+<!-- note id="fs-id1169739096692" class="media-2">
 <p id="fs-id1169738875428">You can use this <url href="http://www.openstax.org/l/20_diffmicros" visual="http://www.openstax.org/l/20_diffmicros">site</url> to explore graphs to see if they have a tangent line at a point.</p>
-</note>
+</note -->
+
 <p id="fs-id1169738949813">In <xref ref="CNX_Calc_Figure_03_01_008"/> we show the graph of <m>f(x)=\sqrt{x}</m> and its tangent line at <m>(1,1)</m> in a series of tighter intervals about <m>x=1.</m> As the intervals become narrower, the graph of the function and its tangent line appear to coincide, making the values on the tangent line a good approximation to the values of the function for choices of <m>x</m> close to <m>1.</m> In fact, the graph of <m>f(x)</m> itself appears to be locally linear in the immediate vicinity of <m>x=1.</m></p>
 <figure xml:id="CNX_Calc_Figure_03_01_008">
 <image source="ch3/CNX_Calc_Figure_03_01_008.jpg" width="100%">
 <description>"This figure consists of four graphs labeled a, b, c, and d. Figure a shows the graphs of the square root of x and the equation y = (x + 1)/2 with the x-axis going from 0 to 4 and the y-axis going from 0 to 2.5. The graphs of these two functions look very close near 1; there is a box around where these graphs look close. Figure b shows a close up of these same two functions in the area of the box from Figure a, specifically x going from 0 to 2 and y going from 0 to 1.4. Figure c is the same graph as Figure b, but this one has a box from 0 to 1.1 in the x coordinate and 0.8 and 1 on the y coordinate. There is an arrow indicating that this is blown up in Figure d. Figure d shows a very close picture of the box from Figure c, and the two functions appear to be touching for almost the entire length of the graph."</description></image> <caption>For values of <m>x</m> close to <m>1,</m> the graph of <m>f(x)=\sqrt{x}</m> and its tangent line appear to coincide.</caption>
 </figure>
 <p id="fs-id1169738971600">Formally we may define the tangent line to the graph of a function as follows.</p>
-<definition > <!-- Change next /note to /definition and remove above note-->
-<p id="fs-id1169738962299">Let <m>f(x)</m> be a function defined in an open interval containing <m>a.</m> The <emphasis effect="italics">tangent line</emphasis> to <m>f(x)</m> at <m>a</m> is the line passing through the point <m>(a,f(a))</m> having slope</p>
+
+<definition xml:id="def-tangentline"> <!-- Change next /note to /definition and remove above note-->
+<p id="fs-id1169738962299">Let <m>f(x)</m> be a function defined in an open interval containing <m>a.</m> The <term>tangent line</term> to <m>f(x)</m> at <m>a</m> is the line passing through the point <m>(a,f(a))</m> having slope</p>
 <men xml:id="fs-id1169739226063">m_{\text{ tan }}=\lim_{x\to a}\frac{f(x)-f(a)}{x-a}</men>
 <p id="fs-id1169738970954">provided this limit exists.</p>
-<p id="fs-id1169738947329">Equivalently, we may define the tangent line to <m>f(x)</m> at <m>a</m> to be the line passing through the point <m>(a,f(a))</m> having slope</p>
+<p id="fs-id1169738947329">Equivalently, we may define the <term>tangent line</term> to <m>f(x)</m> at <m>a</m> to be the line passing through the point <m>(a,f(a))</m> having slope</p>
 <men xml:id="fs-id1169738970614">m_{\text{ tan }}=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}</men>
 <p id="fs-id1169738888769">provided this limit exists.</p>
 </definition>
-<p id="fs-id1169739243045">Just as we have used two different expressions to define the slope of a secant line, we use two different forms to define the slope of the tangent line. In this text we use both forms of the definition. As before, the choice of definition will depend on the setting. Now that we have formally defined a tangent line to a function at a point, we can use this definition to find equations of tangent lines.</p>
+
+<p id="fs-id1169739243045">Just as we have used two different expressions to define the slope of a secant line, we use two different forms to define the slope of the tangent line. In this text we use both forms of the definition. Now that we have formally defined a tangent line to a function at a point, we can use this definition to find equations of tangent lines.</p>
+
 <example xml:id="fs-id1169739298611">
  <statement id="fs-id1169738975370">
 <title>Finding a Tangent Line</title>
@@ -73,10 +87,12 @@
 </statement>
 <solution id="fs-id1169739186668">
 <p id="fs-id1169738899144">First find the slope of the tangent line. In this example, use <xref ref="fs-id1169739226063"/>.</p>
-<md>
+	<md>
   <mrow>m_{\text{ tan }}\amp=\lim_{x\to 3}\frac{f(x)-f(3)}{x-3}\amp\amp\text{ Apply the definition. }</mrow>
   <mrow>\amp=\lim_{x\to 3}\frac{x^2-9}{x-3}\amp\amp\text{ Substitute } f(x)=x^2 \text{ and } f(3)=9.</mrow>
-  <mrow>\amp=\lim_{x\to 3}\frac{(x-3)(x+3)}{x-3}=\lim_{x\to 3}(x+3)=6\amp\amp\text{ Factor the numerator to evaluate the limit. }</mrow></md>
+  <mrow>\amp=\lim_{x\to 3}\frac{(x-3)(x+3)}{x-3}\amp\amp\text{ Factor the numerator to evaluate the limit. }</mrow>
+  <mrow>\amp=\lim_{x\to 3}(x+3)=6</mrow>
+	</md>
 <p id="fs-id1169739020694">Next, find a point on the tangent line. Since the line is tangent to the graph of <m>f(x)</m> at <m>x=3,</m> it passes through the point <m>(3,f(3)).</m> We have <m>f(3)=9,</m> so the tangent line passes through the point <m>(3,9).</m></p>
 <p id="fs-id1169738993948">Using the point-slope equation of the line with the slope <m>m=6</m> and the point <m>(3,9),</m> we obtain the line <m>y-9=6(x-3).</m> Simplifying, we have <m>y=6x-9.</m> The graph of <m>f(x)=x^2</m> and its tangent line at <m>3</m> are shown in <xref ref="CNX_Calc_Figure_03_01_005"/>.</p>
 <figure xml:id="CNX_Calc_Figure_03_01_005">
@@ -84,8 +100,8 @@
 <description>"This figure consists of the graphs of f(x) = x squared and y = 6x - 9. The graphs of these functions appear to touch at x = 3."  </description></image> <caption>The tangent line to <m>f(x)</m> at <m>x=3.</m></caption>
 </figure>
 </solution>
-
 </example>
+
 <example xml:id="fs-id1169739223534">
 <title>The Slope of a Tangent Line Revisited</title>
 <statement id="fs-id1169739030059">
@@ -94,12 +110,14 @@
 <solution id="fs-id1169739023994">
 <p id="fs-id1169738885423">The steps are very similar to <xref ref="fs-id1169739298611"/>. See <xref ref="fs-id1169738970614"/> for the definition.</p>
 <md>
-  <mrow>m_{\text{ tan }}\amp=\lim_{h\to 0}\frac{f(3+h)-f(3)}{h}\amp\text{ Apply the definition. }</mrow>
-  <mrow>\amp=\lim_{h\to 0}\frac{(3+h)^2-9}{h}\amp\text{ Substitute } f(3+h)=(3+h)^2 \text{ and } f(3)=9.</mrow>
-  <mrow>\amp=\lim_{h\to 0}\frac{9+6h+h^2-9}{h}\amp\text{ Expand and simplify to evaluate the limit. }</mrow><mrow>\amp=\lim_{h\to 0}\frac{h(6+h)}{h}=\lim_{h\to 0}(6+h)=6</mrow></md>
+  <mrow>m_{\text{ tan }}\amp=\lim_{h\to 0}\frac{f(3+h)-f(3)}{h}\amp\amp\text{ Apply the definition. }</mrow>
+  <mrow>\amp=\lim_{h\to 0}\frac{(3+h)^2-9}{h}\amp\amp\text{ Substitute } f(3+h)=(3+h)^2 \text{ and } f(3)=9.</mrow>
+  <mrow>\amp=\lim_{h\to 0}\frac{9+6h+h^2-9}{h}\amp\amp\text{ Expand and simplify to evaluate the limit. }</mrow><mrow>\amp=\lim_{h\to 0}\frac{h(6+h)}{h}=\lim_{h\to 0}(6+h)=6</mrow>
+  </md>
 <p id="fs-id1169738960593">We obtained the same value for the slope of the tangent line by using the other definition, demonstrating that the formulas can be interchanged.</p>
 </solution>
 </example>
+
 <example xml:id="fs-id1169738966727">
 <title>Finding the Equation of a Tangent Line</title>
  <statement id="fs-id1169738969706">
@@ -108,21 +126,26 @@
 <solution id="fs-id1169738999233">
 <p id="fs-id1169739001198">We can use <xref ref="fs-id1169739226063"/>, but as we have seen, the results are the same if we use <xref ref="fs-id1169738970614"/>.</p>
 <md>
-  <mrow>m_{\text{ tan }}\amp=\lim_{x\to 2}\frac{f(x)-f(2)}{x-2}\amp\text{ Apply the definition. }</mrow>
-  <mrow>\amp=\lim_{x\to 2}\frac{\frac{1}{x}-\frac{1}{2}}{x-2}\amp\text{ Substitute } f(x)=\frac{1}{x} \text{ and }f(2)=\frac{1}{2}.</mrow>
-  <mrow>\amp=\lim_{x\to 2}\frac{\left(\frac{1}{x}-\frac{1}{2}\right)}{\left(x-2\right)}\cdot \frac{2x}{2x}\amp\text{ Multiply numerator and denominator by } 2x \text{ to simplify fractions. }</mrow>
-  <mrow>\amp=\lim_{x\to 2}\frac{2-x}{2x(x-2)}\amp\text{ Simplify. }</mrow>
-  <mrow>\amp=\lim_{x\to 2}\frac{-1}{2x}\amp\text{ Simplify using } \frac{2-x}{x-2}=-1,\text{ for } x\neq 2.</mrow>
-  <mrow>\amp=-\frac{1}{4}\amp\text{ Evaluate the limit. }</mrow></md>
-<p id="fs-id1169739270491">We now know that the slope of the tangent line is <m>-\frac{1}{4}.</m> To find the equation of the tangent line, we also need a point on the line. We know that <m>f(2)=\frac{1}{2}.</m> Since the tangent line passes through the point <m>(2,\frac{1}{2})</m> we can use the point-slope equation of a line to find the equation of the tangent line. Thus the tangent line has the equation <m>y=-\frac{1}{4}x+1.</m> The graphs of <m>f(x)=\frac{1}{x}</m> and <m>y=-\frac{1}{4}x+1</m> are shown in <xref ref="CNX_Calc_Figure_03_01_006"/>.</p>
+  <mrow>m_{\text{ tan }}\amp=\lim_{x\to 2}\frac{f(x)-f(2)}{x-2}\amp\amp\text{ Apply the definition. }</mrow>
+  <mrow>\amp=\lim_{x\to 2}\frac{\frac{1}{x}-\frac{1}{2}}{x-2}\amp\amp\text{ Substitute } f(x)=\frac{1}{x} \text{ and }f(2)=\frac{1}{2}.</mrow>
+  <mrow>\amp=\lim_{x\to 2}\frac{\left(\frac{1}{x}-\frac{1}{2}\right)}{\left(x-2\right)}\cdot \frac{2x}{2x}\amp\amp\text{ Multiply numerator and denominator by } 2x \text{ to simplify fractions. }</mrow>
+  <mrow>\amp=\lim_{x\to 2}\frac{2-x}{2x(x-2)}\amp\amp\text{ Simplify. }</mrow>
+  <mrow>\amp=\lim_{x\to 2}\frac{-1}{2x}\amp\amp\text{ Simplify using } \frac{2-x}{x-2}=-1,\text{ for } x\neq 2.</mrow>
+  <mrow>\amp=-\frac{1}{4}\amp\amp\text{ Evaluate the limit. }</mrow>
+  </md>
+<p id="fs-id1169739270491">We now know that the slope of the tangent line is <m>-\frac{1}{4}.</m> To find the equation of the tangent line, we also need a point on the line. We know that <m>\ds f(2)=\frac{1}{2}.</m> Since the tangent line passes through the point <m>(2,\frac{1}{2})</m> we can use the point-slope equation of a line to find the equation of the tangent line. Thus the tangent line has the equation 
+	<md>
+	y-\frac{1}{2}=-\frac{1}{4}\left(x-2\right)
+	</md>,
+or <m>\ds y=-\frac{1}{4}x+1.</m> The graphs of <m>\ds f(x)=\frac{1}{x}</m> and <m>\ds y=-\frac{1}{4}x+1</m> are shown in <xref ref="CNX_Calc_Figure_03_01_006"/>.</p>
 <figure xml:id="CNX_Calc_Figure_03_01_006">
-<image source="ch3/CNX_Calc_Figure_03_01_006.jpg" width="50%">
+<image source="ch3/CNX_Calc_Figure_03_01_006.jpg" width="60%">
 <description>"This figure consists of the graphs of f(x) = 1/x and y = -x/4 + 1. The part of the graph f(x) = 1/x in the first quadrant appears to touch the other function’s graph at x = 2."
   </description></image> <caption>The line is tangent to <m>f(x)</m> at <m>x=2.</m></caption>
 </figure>
 </solution>
-
 </example>
+
 <exercise>  <statement id="fs-id1169739231712">
 <p id="fs-id1169739231715">Find the slope of the line tangent to the graph of <m>f(x)=\sqrt{x}</m> at <m>x=4.</m></p>
 </statement>
@@ -134,16 +157,19 @@
 </hint>
 </exercise>
 </subsection>
+
 <subsection id="fs-id1169739028315">
 <title>The Derivative of a Function at a Point</title>
-<p id="fs-id1169739269344">The type of limit we compute in order to find the slope of the line tangent to a function at a point occurs in many applications across many disciplines. These applications include velocity and acceleration in physics, marginal profit functions in business, and growth rates in biology. This limit occurs so frequently that we give this value a special name: the <term>derivative</term>. The process of finding a derivative is called <term>differentiation</term>.</p>
+<p id="fs-id1169739269344">The type of limit we compute in order to find the slope of the line tangent to a function at a point occurs in many applications across many disciplines. These applications include velocity and acceleration in physics, marginal profit functions in business, and growth rates in biology. This limit occurs so frequently that we give this value a special name: the <em>derivative</em>. The process of finding a derivative is called <em>differentiation</em>.</p>
 <definition>
-<p id="fs-id1169738859079">Let <m>f(x)</m> be a function defined in an open interval containing <m>a.</m> The derivative of the function <m>f(x)</m> at <m>a,</m> denoted by <m>f'(a),</m> is defined by</p>
+<p id="fs-id1169738859079">Let <m>f(x)</m> be a function defined in an open interval containing <m>a.</m> The <term>derivative</term> of the function <m>f(x)</m> at <m>a,</m> denoted by <m>f'(a),</m> is defined by</p>
 <men xml:id="fs-id1169739179144">f'(a)=\lim_{x\to a}\frac{f(x)-f(a)}{x-a}</men>
 <p id="fs-id1169739032184">provided this limit exists.</p>
+
 <p id="fs-id1169739032188">Alternatively, we may also define the derivative of <m>f(x)</m> at <m>a</m> as</p>
 <men xml:id="fs-id1169739188551">f'(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}.</men>
 </definition>
+
 <example xml:id="fs-id1169739198956">
 <title>Estimating a Derivative</title>
  <statement id="fs-id1169739204504">
@@ -187,6 +213,7 @@
 </solution>
 
 </example>
+
 <exercise> <!-- Change /note to /end exercise-->
 
 <!-- Move title outside statement--> <statement id="fs-id1169739298318">
@@ -199,8 +226,8 @@
 
 <p id="fs-id1169739027513">Evaluate <m>\frac{(x+h)-x^2}{h}</m> at <m>h=-0.1,-0.01,-0.001,0.001,0.01,0.1</m></p>
 </hint>
-
 </exercise>
+
 <example xml:id="fs-id1169739044032">
 <title>Finding a Derivative</title>
 <statement id="fs-id1169739129044">
@@ -208,7 +235,10 @@
 </statement>
 <solution id="fs-id1169739104710">
 <p id="fs-id1169739104712">Substitute the given function and value directly into the equation.</p>
-<md><mrow>f'(x)\amp=\lim_{x\to 2}\frac{f(x)-f(2)}{x-2}\amp\text{ Apply the definition. }</mrow><mrow>\amp=\lim_{x\to 2}\frac{(3x^2-4x+1)-5}{x-2}\amp\text{ Substitute } f(x)=3x^2-4x+1 \text{ and } f(2)=5.</mrow><mrow>\amp=\lim_{x\to 2}\frac{(x-2)(3x+2)}{x-2}\amp\text{ Simplify and factor the numerator. }</mrow><mrow>\amp=\lim_{x\to 2}(3x+2)\amp\text{ Cancel the common factor. }</mrow><mrow>\amp=8\amp\text{ Evaluate the limit. }</mrow></md>
+<md><mrow>f'(x)\amp=\lim_{x\to 2}\frac{f(x)-f(2)}{x-2}\amp\amp\text{ Apply the definition. }</mrow><mrow>\amp=\lim_{x\to 2}\frac{(3x^2-4x+1)-5}{x-2}\amp\amp\text{ Substitute } f(x)=3x^2-4x+1 \text{ and } f(2)=5.</mrow>
+<mrow>\amp=\lim_{x\to 2}\frac{(x-2)(3x+2)}{x-2}\amp\amp\text{ Simplify and factor the numerator. }</mrow>
+<mrow>\amp=\lim_{x\to 2}(3x+2)\amp\amp\text{ Cancel the common factor. }</mrow>
+<mrow>\amp=8\amp\amp\text{ Evaluate the limit. }</mrow></md>
 </solution>
 
 </example>
@@ -228,11 +258,12 @@
   <mrow>\amp=8\amp\amp\text{ Evaluate the limit. }</mrow></md>
 <p id="fs-id1169738850760">The results are the same whether we use <xref ref="fs-id1169739179144"/> or <xref ref="fs-id1169739188551"/>.</p>
 </solution>
-
 </example>
-<exercise>  <statement id="fs-id1169739236876">
-<p id="fs-id1169739269938">For <m>f(x)=x^2+3x+2,</m> find <m>f'(1).</m></p>
-</statement>
+
+<exercise>  
+	<statement id="fs-id1169739236876">
+	<p id="fs-id1169739269938">For <m>f(x)=x^2+3x+2,</m> find <m>f'(1).</m></p>
+	</statement>
 <solution id="fs-id1169739293548">
 <p id="fs-id1169739293550"><m>f'(1)=5</m></p>
 </solution>
@@ -242,21 +273,26 @@
 </hint>
 </exercise>
 </subsection>
+
 <subsection id="fs-id1169736616175">
 <title>Velocities and Rates of Change</title>
 <p id="fs-id1169739353680">Now that we can evaluate a derivative, we can use it in velocity applications. Recall that if <m>s(t)</m> is the position of an object moving along a coordinate axis, the <term class="no-emphasis">average velocity</term> of the object over a time interval <m>[a,t]</m> if <m>t\gt a</m> or <m>[t,a]</m> if <m>t\lt a</m> is given by the difference quotient</p>
 <men xml:id="fs-id1169739303202">v_\text{ ave }=\frac{s(t)-s(a)}{t-a}.</men>
 <p id="fs-id1169739189992">As the values of <m>t</m> approach <m>a,</m> the values of <m>v_\text{ ave }</m> approach the value we call the <term class="no-emphasis">instantaneous velocity</term> at <m>a.</m> That is, instantaneous velocity at <m>a,</m> denoted <m>v(a),</m> is given by</p>
 <men>v(a)=s'(a)=\lim_{t\to a}\frac{s(t)-s(a)}{t-a}.</men>
+
 <p id="fs-id1169739064816">To better understand the relationship between average velocity and instantaneous velocity, see <xref ref="CNX_Calc_Figure_03_01_007"/>. In this figure, the slope of the tangent line (shown in red) is the instantaneous velocity of the object at time <m>t=a</m> whose position at time <m>t</m> is given by the function <m>s(t).</m> The slope of the secant line (shown in green) is the average velocity of the object over the time interval <m>[a,t].</m></p>
+
 <figure xml:id="CNX_Calc_Figure_03_01_007">
   <image source="ch3/CNX_Calc_Figure_03_01_007.jpg" width="50%">
-<description>"This figure consists of the Cartesian coordinate plane with 0, a, and t1 marked on the t-axis. The function y = s(t) is graphed in the first quadrant along with two lines marked tangent and secant. The tangent line touches y = s(t) at only one point, (a, s(a)). The secant line touches y = s(t) at two points: (a, s(a)) and (t1, s(t1))." </description></image> <caption>The slope of the secant line is the average velocity over the interval <m>[a,t].</m> The slope of the tangent line is the instantaneous velocity.</caption>
+<description>"This figure consists of the Cartesian coordinate plane with 0, a, and t1 marked on the t-axis. The function y = s(t) is graphed in the first quadrant along with two lines marked tangent and secant. The tangent line touches y = s(t) at only one point, (a, s(a)). The secant line touches y = s(t) at two points: (a, s(a)) and (t1, s(t1))." </description>
+	</image> 
+	<caption>The slope of the secant line is the average velocity over the interval <m>[a,t].</m> The slope of the tangent line is the instantaneous velocity.</caption>
 </figure>
-<p id="fs-id1169736619727">We can use <xref ref="fs-id1169739179144"/> to calculate the instantaneous velocity, or we can estimate the velocity of a moving object by using a table of values. We can then confirm the estimate by using <xref ref="fs-id1169739303202"/>.</p>
-<example xml:id="fs-id1169739179204">
 
-<!--Commenting our physics
+<p id="fs-id1169736619727">We can use <xref ref="fs-id1169739179144"/> to calculate the instantaneous velocity, or we can estimate the velocity of a moving object by using a table of values. We can then confirm the estimate by using <xref ref="fs-id1169739303202"/>.</p>
+
+<example xml:id="fs-id1169739179204">
 <title>Estimating Velocity</title>
 <statement id="fs-id1169739179208">
 <p id="fs-id1169739188880">A lead weight on a spring is oscillating up and down. Its position at time <m>t</m> with respect to a fixed horizontal line is given by <m>s(t)=\sin t</m> (<xref ref="CNX_Calc_Figure_03_01_010"/>). Use a table of values to estimate <m>v(0).</m> Check the estimate by using <xref ref="fs-id1169739179144"/>.</p>
@@ -303,11 +339,12 @@
 </table>
 <p id="fs-id1169739188902">From the table we see that the average velocity over the time interval <m>[-0.1,0]</m> is <m>0.998334166,</m> the average velocity over the time interval <m>[-0.01,0]</m> is <m>0.9999833333,</m> and so forth. Using this table of values, it appears that a good estimate is <m>v(0)=1.</m></p>
 <p id="fs-id1169739298311">By using <xref ref="fs-id1169739179144"/>, we can see that</p>
-<me>v(0)=s'(0)=\lim_{t\to 0}\frac{\sin t-\sin 0}{t-0}=\lim_{t\to 0}\frac{\sin tt}=1.</me>
+<me>v(0)=s'(0)=\lim_{t\to 0}\frac{\sin t-\sin 0}{t-0}=\lim_{t\to 0}\frac{\sin{t}}{t}=1.</me>
 <p id="fs-id1169739111046">Thus, in fact, <m>v(0)=1.</m></p>
 </solution>
--->
+</example>
 
+<!--
 <title> Estimating Marginal Cost</title>
 <statement>
 <p>The cost function for coffee is given by <m>C(x)=\frac{18}{x}</m> where <m>x</m> is the number of thousand items made. Use a table to estimate the marginal cost of producing 1000 items and interpret.</p>
@@ -350,8 +387,9 @@
 <p id="fs-id1169739188902">From the table we see that the slope of the secant line over the interval <m>[0.9,1]</m> is <m>-20,</m> the slope of the secant line over the interval <m>[0.99,1]</m> is <m>-18.18181818,</m> and so forth. Using this table of values, it appears that a good estimate is <m>C'(1)=-18.</m></p>
 <p> When <m>1000</m> items are produced, the cost is decreasing at a rate of <m>\$18</m> per thousand items made. So if we produce <m>1000</m> more items, we can expect costs to drop by <m>\$18</m>.</p>
 </solution>
+-->
 
-</example>
+
 <exercise>  <statement id="fs-id1169739220846">
 <p id="fs-id1169739220848">A rock is dropped from a height of <m>64</m> feet. Its height above ground at time <m>t</m> seconds later is given by <m>s(t)=-16t^2+64,0 \leq t \leq 2.</m> Find its instantaneous velocity <m>1</m> second after it is dropped, using <xref ref="fs-id1169739179144"/>.</p>
 </statement>
@@ -366,8 +404,9 @@
 </exercise>
 <p id="fs-id1169739305376">As we have seen throughout this section, the slope of a tangent line to a function and instantaneous velocity are related concepts. Each is calculated by computing a derivative and each measures the instantaneous rate of change of a function, or the rate of change of a function at any point along the function.</p>
 <definition>
-<p id="fs-id1169739269977">The <term>instantaneous rate of change</term> of a function <m>f(x)</m> at a value <m>a</m> is its derivative <m>f'(a).</m></p>
+<p id="fs-id1169739269977">The <term>instantaneous rate of change</term> of a function <m>f(x)</m> at a value <m>a</m> is the derivative <m>f'(a).</m></p>
 </definition>
+
 <example xml:id="fs-id1169739204154">
 <title>Chapter Opener: Estimating Rate of Change of Velocity</title>
  <statement id="fs-id1169739204158">
@@ -376,6 +415,7 @@
 <description>"The same sports car speeding along a winding road from the beginning of the chapter."
  </description></image> <caption>(credit: modification of work by Codex41, Flickr)</caption>
 </figure>
+
 <p id="fs-id1169739204172">Reaching a top speed of <m>270.49</m> mph, the Hennessey Venom GT is one of the fastest cars in the world. In tests it went from <m>0</m> to <m>60</m> mph in <m>3.05</m> seconds, from <m>0 \text{ to } 100</m> mph in <m>5.88</m> seconds, from <m>0 \text{ to } 200</m> mph in <m>14.51</m> seconds, and from <m>0 \text{ to } 229.9</m> mph in <m>19.96</m> seconds. Use this data to draw a conclusion about the rate of change of velocity (that is, its <term class="no-emphasis">acceleration</term>) as it approaches <m>229.9</m> mph. Does the rate at which the car is accelerating appear to be increasing, decreasing, or constant?</p>
 </statement>
 <solution id="fs-id1169739298971">
@@ -417,8 +457,6 @@
 <cell valign="top" halign ="left"><m>t</m></cell>
 <cell valign="top" halign ="left"><m>\frac{v(t)-v(19.96)}{t-19.96}=\frac{v(t)-337.19}{t-19.96}</m></cell>
 </row>
-
-
 <row>
 <cell valign="top" halign ="left"><m>0.0</m></cell>
 <cell valign="top" halign ="left"><m>16.89</m></cell>
@@ -440,8 +478,8 @@
 </table>
 <p id="fs-id1169739303947">The rate at which the car is accelerating is decreasing as its velocity approaches <m>229.9</m> mph <m>(337.19</m> ft/s).</p>
 </solution>
-
 </example>
+
 <example xml:id="fs-id1169739187343">
 <title>Rate of Change of Temperature</title>
  <statement id="fs-id1169739187347">
@@ -456,8 +494,9 @@
 <mrow>\amp=\lim_{t\to 3}0.4(t-7)\amp\amp\text{ Cancel. }</mrow><mrow>\amp=-1.6\amp\amp\text{ Evaluate the limit. }</mrow></md>
 <p id="fs-id1169739274032">The instantaneous rate of change of the temperature at midnight is <m>-1.6\text{ ° }\text{ F }</m> per hour.</p>
 </solution>
-
 </example>
+
+<!--
 <example xml:id="fs-id1169739253544">
 <title>Rate of Change of Profit</title>
  <statement id="fs-id1169739253548">
@@ -472,8 +511,9 @@
 <md><mrow>P'(10000)\amp=\lim_{x\to 10000}\frac{P(x)-P(10000)}{x-10000}</mrow><mrow>\amp=\lim_{x\to 10000}\frac{-0.01x^2+300x-10000-1990000}{x-10000}</mrow><mrow>\amp=\lim_{x\to 10000}\frac{-0.01x^2+300x-2000000}{x-10000}</mrow><mrow>\amp=100.</mrow></md>
 <p id="fs-id1169736587942">Since the rate of change of profit <m>P'(10,000)\gt 0</m> and <m>P(10,000)\gt 0,</m> the company should increase production.</p>
 </solution>
-
 </example>
+-->
+
 <exercise>  <statement id="fs-id1169739273083">
 <p id="fs-id1169739273085">A coffee shop determines that the daily profit on scones obtained by charging <m>s</m> dollars per scone is <m>P(s)=-20s^2+150s-10.</m> The coffee shop currently charges <m>\$3.25</m> per scone. Find <m>P'(3.25),</m> the rate of change of profit when the price is <m>\$3.25</m> and decide whether or not the coffee shop should consider raising or lowering its prices on scones.</p>
 </statement>
@@ -482,11 +522,15 @@
 </solution>
 <hint>
 
-<p id="fs-id1169736611546">Use <xref ref="fs-id1169739253544"/> for a guide.</p>
+<p>
+As the price <m>s</m> increases, is the profit increasing or decreasing?  If increasing, then the company can increase prices above <m>\$3.25</m> to expand their profit.  If decreasing, then the company would only lose profits if they increased the price.
+</p>
 </hint>
 
 </exercise>
 </subsection>
+
+<!--
 <subsection id="fs-id1169736611554" class="key-concepts">
 <title>Key Concepts</title>
 <ul id="fs-id1169736611561" list-type="bulleted" bullet-style="bullet">
@@ -522,7 +566,7 @@ Instantaneous velocity is given by<newline/>
 <m>\displaystyle{v(a)=s'(a)=\lim_{t\to a}\frac{s(t)-s(a)}{t-a}}</m></li>
 </ul>
 </subsection>
-<!-- <p> This book is a custom edition based on OpenStax Calculus Volume 1. You can download the original for free at https://openstax.org/details/books/calculus-volume-1. </p> -->
-
+<p> This book is a custom edition based on OpenStax Calculus Volume 1. You can download the original for free at https://openstax.org/details/books/calculus-volume-1. </p>
+-->
 </section>
 
