@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using the Fundamental Theorem of Calculus with Two Variable Limits of Integration.</span>
+</h2>
+<div class="para">Let <span class="process-math">\(F(x)=\displaystyle{ \int_{x}^{2x} t^3\, dt}.\)</span> Find <span class="process-math">\(F'(x) .\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fs-id1170572368864" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">We have <span class="process-math">\(F(x)=\displaystyle{ \int_{x}^{2x} t^3dt}.\)</span> Both limits of integration are variable, so we need to split this into two integrals. We get<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fs-id1170572142330" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+F(x)\amp =\displaystyle{ \int_{x}^{2x} t^3\, dt}\\
+\amp =\displaystyle{ \int_{x}^{0} t^3\, dt}+\displaystyle{ \int_{0}^{2x} t^3\, dt}\\
+\amp =- \displaystyle{ \int_{0}^{x} t^3\, dt}+\displaystyle{ \int_{0}^{2x} t^3\, dt}.
+\end{align*}
+</div>
+<div class="para">Differentiating the first term, we obtain<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fs-id1170571610445" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d}{dx}\left[- \displaystyle{ \int_{0}^{x} t^3\, dt}\right]=- x^3.
+\end{equation*}
+</div>
+<div class="para">Differentiating the second term, we first let <span class="process-math">\(u(x)=2x.\)</span> Then,<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fs-id1170572305916" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{d}{dx}\left[\displaystyle{ \int_{0}^{2x} t^3\, dt}\right]\amp =\frac{d}{dx}\left[\displaystyle{ \int_{0}^{u(x)} t^3\, dt}\right]\\
+\amp =(u(x))^3\frac{du}{dx} \\
+\amp =(2x)^3\cdot 2\\
+\amp =16x^3.
+\end{align*}
+</div>
+<div class="para">Thus,<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fs-id1170572207052" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+F'(x) \amp =\frac{d}{dx}\left[- \displaystyle{ \int_{0}^{x} t^3\, dt}\right]+\frac{d}{dx}\left[\displaystyle{ \int_{0}^{2x} t^3dt}\right]\\
+\amp =- x^3+16x^3\\
+\amp =15x^3.
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.3.8.1"><a tabindex="-1" href="#fs-id1170572351970" title="Copy heading and permalink for Solution 5.3.8.1" aria-label="Copy heading and permalink for Solution 5.3.8.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 5.3.8: Using the Fundamental Theorem of Calculus with Two Variable Limits of Integration"><a tabindex="-1" href="#fs-id1170572228878" title="Copy heading and permalink for Example 5.3.8: Using the Fundamental Theorem of Calculus with Two Variable Limits of Integration" aria-label="Copy heading and permalink for Example 5.3.8: Using the Fundamental Theorem of Calculus with Two Variable Limits of Integration">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="sec_Ch5Sec3.html#fs-id1170572228878">In Context</a></span>
+</body>
+</html>

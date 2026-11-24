@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3.16</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Roller-Skating Race.</span>
+</h2>
+<div class="para">James and Kathy are racing on roller skates. They race along a long, straight track, and whoever has gone the farthest after 5 sec wins a prize. If James can skate at a velocity of <span class="process-math">\(f(t)=5+2t\)</span> ft/sec and Kathy can skate at a velocity of <span class="process-math">\(g(t)=10+\cos (\frac{\pi}{2}t)\)</span> ft/sec, who is going to win the race?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fs-id1170571597335" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">We need to integrate both functions over the interval <span class="process-math">\([0,5]\)</span> and see which value is bigger. For James, we want to calculate<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fs-id1170572332613" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle{ \int_{0}^{5} 5+2t \, dt}.
+\end{equation*}
+</div>
+<div class="para">Using the power rule, we have<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fs-id1170571758991" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+\displaystyle{ \int_{0}^{5} 5+2t \, dt}\amp =5t+t^2\biggr\vert_0^5\\
+\amp =(25+25)-(0+0)=50.
+\end{align*}
+</div>
+<div class="para">Thus, James has skated 50 ft after 5 sec. Turning now to Kathy, we want to calculate<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fs-id1170571772586" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle{ \int_{0}^{5} 10}+\cos \left(\dfrac{\pi}{2}t\right)\, dt.
+\end{equation*}
+</div>
+<div class="para">We know <span class="process-math">\(\sin t\)</span> is an antiderivative of <span class="process-math">\(\cos  t,\)</span> so it is reasonable to expect that an antiderivative of <span class="process-math">\(\cos \left(\dfrac{\pi}{2}t\right)\)</span> would involve <span class="process-math">\(\sin\left(\dfrac{\pi}{2}t\right).\)</span> However, when we differentiate <span class="process-math">\(\sin\left(\dfrac{\pi}{2}t\right),\)</span> we get <span class="process-math">\(\dfrac{\pi}{2}\cos\left(\dfrac{\pi}{2}t\right)\)</span> as a result of the chain rule, so we have to account for this additional coefficient when we construct the antiderivative to integrate. We obtain<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fs-id1170572292292" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int_{0}^{5} 10+\cos \left(\dfrac{\pi}{2}t\right)\, dt\amp =10t+\dfrac{2}{\pi}\sin\left(\dfrac{\pi}{2}t\right)\biggr\vert_0^5\\
+\amp =\left(50+\dfrac{2}{\pi}\right)-\left(0-\dfrac{2}{\pi}\sin 0\right)\\
+\amp \approx 50.6.
+\end{align*}
+</div>
+<div class="para">Kathy has skated approximately 50.6 ft after 5 sec. Kathy wins, but not by much!<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fs-id1170572368405" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.3.16.1"><a tabindex="-1" href="#fs-id1170572332608" title="Copy heading and permalink for Solution 5.3.16.1" aria-label="Copy heading and permalink for Solution 5.3.16.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 5.3.16: A Roller-Skating Race"><a tabindex="-1" href="#fs-id1170571597325" title="Copy heading and permalink for Example 5.3.16: A Roller-Skating Race" aria-label="Copy heading and permalink for Example 5.3.16: A Roller-Skating Race">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="sec_Ch5Sec3.html#fs-id1170571597325">In Context</a></span>
+</body>
+</html>
