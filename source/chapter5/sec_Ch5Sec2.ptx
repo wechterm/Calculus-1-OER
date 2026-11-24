@@ -1,0 +1,1279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_Ch5Sec2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Definite Integral</title>
+  <introduction>
+  <title> Learning Objectives</title>
+  <ul>
+<li>State the definition of the definite integral.</li>
+<li>Explain the terms integrand, limits of integration, and variable of integration.</li>
+<li>Explain when a function is integrable.</li>
+<li>Describe the relationship between the definite integral and net area.</li>
+<li>Use geometry and the properties of definite integrals to evaluate them.</li>
+<li>Calculate the average value of a function.</li>
+</ul>
+<p xml:id="fs-id1170572548275">In the preceding section we defined the area under a curve <m>y=f(x)</m> above the interval <m>[a, b]</m> as a limit of regular Riemann sums:</p>
+<md>A=\lim_{n\to \infty }\displaystyle{\sum_{i=1}^n  f(x_i^*)\Delta x} .</md>
+<p xml:id="fs-id1170572370588">There, we required <m>f(x)</m> to be continuous and nonnegative. Unfortunately, real-world problems don’t always meet these restrictions. In this section, we look at how to apply the concept of the area under the curve to a broader collection of functions through the use of the definite integral.</p>
+
+</introduction>
+<subsection xml:id="fs-id1170572292984">
+<title>Definition and Notation</title>
+<p xml:id="fs-id1170572306246">The definite integral generalizes the concept of the area under a curve, and it too is defined as a limit.  We start by generalizing the Riemann sum construction from the previous section</p>
+
+<definition>  
+<p xml:id="fs-id1170572370693">A <term>partition</term> of <m>[a,b]</m> into <m>n</m> subintervals is a set of points <m>P=\{x_0, x_1, \ldots, x_n\}</m>, where </p> <md>
+  <mrow>a=x_0\lt x_1\lt x_2\lt  \cdots \lt x_n=b.</mrow>
+</md>
+<p>  The points <m>x_i</m> in <m>P</m> divide the interval <m>[a,b]</m> into subintervals of the form <m>[x_0,x_1],[x_1,x_2] , \dots ,  [x_{n-1} ,x_n]</m>. For each <m>1 \leq i \leq n</m>, the <term><m>\boldsymbol{i}</m>th subinterval</term> is <m>[x_{i-1}, x_i]</m>.  Then length of the <m>i</m>th subinterval is</p> <md>
+  <mrow> \Delta x_i = x_i-x_{i-1} </mrow>
+</md>
+<p>
+  If the subintervals all have the same width, the partition is called a <term>regular partition</term>, and we write <m>\Delta x</m> for the common length of all <m>\Delta x_i</m>.
+</p>
+</definition>
+
+<p>In the previous section we used regular partitions to find the area under a curve as a limit of regular Riemann sums:</p>
+<md><mrow>A=\lim_{n\to \infty }\displaystyle{\sum_{i=1}^n  f(x_i^*)\Delta x}, </mrow></md>
+<p> where <m> x_i^*</m> is an evaluation point chosen in the <m>i</m>th subinterval <m>[x_{i-1}, x_i]</m>.
+Recall that for a regular partition of <m>[a, b]</m>,</p>
+<md>
+  <mrow> \Delta x = \dfrac{b-a}{n} </mrow>
+</md>
+<p>
+So when we allow <m>n \rightarrow \infty</m> in the limit, the consequence is that <m>\Delta x \rightarrow 0</m>.  We could see this geometrically; not only did the Riemann sum approximation involve more approximating rectangles under the graph of <m>f</m>, but the width of those rectangles shrank as we increased <m>n</m>.
+</p>
+<p>
+  When a partition <m>a=x_0\lt x_1\lt x_2\lt  \cdots \lt x_n=b</m> of <m>[a, b]</m> is not regular, a Riemann sum approximation </p>
+<md><mrow>A=\lim_{n\to \infty }\displaystyle{\sum_{i=1}^n  f(x_i^*)\Delta x_i}, </mrow></md><p> includes rectangles of varying widths <m>\Delta x_i</m>.  In this case, simply including more partition points (and thus more rectangles) will not force the widths of the recangles to all shrink.  Intead, in the limit, we will require that the <em style="italic">largest</em> width subinterval shrinks as more partition points are added.  
+</p>
+<p>We lift the requirements that <m>f(x)</m> be continuous and nonnegative, and define the definite integral as follows.</p>
+
+<definition xml:id="def-definite-integral">
+<p xml:id="fs-id1170572449507">Let <m>f(x)</m> be a function defined on an interval <m>[a,b],</m> the <term>definite integral</term> of <m>f</m> from <m>a</m> to <m>b</m> is given by</p>
+<md>\displaystyle{\int_{a}^{b} f(x)dx} = \displaystyle{ \lim_{\max \Delta x_i \to 0}  }\displaystyle{\sum_{i=1}^n  f(x_i^* )\Delta x_i} ,</md>
+<p xml:id="fs-id1170572342258">provided the limit exists. If this limit exists, the function <m>f(x)</m> is said to be integrable on <m>[a,b],</m> or is an <term>integrable function</term>.</p>
+</definition>
+<p>
+  The limit appearing in the definition above is a more complicated object than the limits of functions we studied earlier.  Given an interval <m>[a, b]</m>, there are many choices of partitions of <m>[a, b]</m> for which <m>\max \Delta x_i \rightarrow 0</m> and many choices of evaluations points <m>x_i^*</m> in each subinterval of such a partition.  When we say the limit exists, we mean that the value is always the same real number regardless of the choice of partitions and the choice of evaluation points.  
+</p>
+
+<p xml:id="fs-id1170572173134">The integral symbol in the previous definition should look familiar. We have seen similar notation in the chapter on <xref ref="ch_fourth">Applications of Derivatives</xref>, where we used the indefinite integral symbol (without the <m>a</m> and <m>b</m> above and below) to represent an antiderivative. Although the notation for indefinite integrals may look similar to the notation for a definite integral, they are not the same. A definite integral is a number. An indefinite integral is a family of functions. Later in this chapter we examine how these concepts are related. However, close attention should always be paid to notation so we know whether we’re working with a definite integral or an indefinite integral.</p>
+<p xml:id="fs-id1170572206456">Integral notation goes back to the late seventeenth century and is one of the contributions of Gottfried Wilhelm <term class="no-emphasis">Leibniz</term>, who is often considered to be the codiscoverer of calculus, along with Isaac Newton. The integration symbol <m>\displaystyle\int</m> is an elongated S, suggesting summation. On a definite integral, above and below the summation symbol are the boundaries of the interval, <m>[a,b].</m> The numbers <m>a</m> and <m>b</m> are <m>x</m>-values and are called the <term>limits of integration</term>; specifically, <m>a</m> is the lower limit and <m>b</m> is the upper limit. To clarify, we are using the word <em>limit</em> in two different ways in the context of the definite integral. First, we talk about the limit of a sum as <m>\max\Delta x_i\to 0 .</m> Second, the boundaries of the region are called the <emphasis effect="italics">limits of integration</emphasis>.</p>
+<p xml:id="fs-id1170572212163">We call the function <m>f(x)</m> the <term>integrand</term>, and the <m>dx</m> indicates that <m>f(x)</m> is a function with respect to <m>x</m>, called the <term>variable of integration</term>. Note that, like the index in a sum, the variable of integration is a <term class="no-emphasis">dummy variable</term>, and has no impact on the computation of the integral. We could use any variable we like as the variable of integration:</p>
+<md>\displaystyle{\int_{a}^{b} f(x)dx} =\displaystyle{\int_{a}^{b} f(t)dt} =\displaystyle{\int_{a}^{b} f(u)du} </md>
+<p xml:id="fs-id1170572224660">Previously, we discussed the fact that if <m>f(x)</m> is continuous on <m>[a,b],</m> then the limit <m>\lim_{n\to \infty }\displaystyle{\sum_{i=1}^n  f(x_i^* )\Delta x} </m> for regular Riemann sums exists and is unique, independent of the choice of evaluation point.  This same result is true for non-regular partitions. This leads to the following theorem, which we state without proof.</p>
+<theorem> 
+<title>Continuous Functions Are Integrable</title>
+<p xml:id="fs-id1170572207625">If <m>f(x)</m> is continuous on <m>[a,b],</m> then <m>f</m> is integrable on <m>[a,b].</m></p>
+</theorem>
+<p xml:id="fs-id1170572415953">Functions that are not continuous on <m>[a,b]</m> may still be integrable, depending on the nature of the discontinuities. For example, functions with a finite number of jump discontinuities on a closed interval are integrable.</p>
+
+</subsection>
+<subsection xml:id="fs-id1170572218456">
+<title>Evaluating Definite Integrals</title>
+
+<p>
+When a function <m>f</m> is integrable on <m>[a, b]</m>, then the limit in <xref ref="def-definite-integral" /> exists and is the same value regardless of the choice of partition and evaluation points.  For this reason, if we know that <m>f</m> is integrable on <m>[a, b]</m>, we can evaluate the limint in the definition of the definite integral by using any convenient partition and choice of sample points.  In particular, when <m>f</m> is integrable on <m>[a, b]</m>, we can use a limit of right regular Riemann sums to evaluate the definite integral.
+</p>
+<theorem> 
+<p>If <m>f(x)</m> is integrable on <m>[a,b],</m> then</p> <md>
+  <mrow>\int_a^b f(x) dx = \lim_{n \rightarrow \infty} \sum_{i=1}^n f(a+i\Delta x) \Delta x,</mrow>
+</md>
+<p>where</p> <md>
+  <mrow>\Delta x=\frac{b-a}{n}.</mrow>
+</md>
+</theorem>
+
+<p xml:id="fs-id1170572451163">We will explore several cases where we can carry out the limit definition of the definite integral for right regular Riemann sums.  A few summation formulas can help simplify the summation process further. These are shown in the next rule, for <term>sums and powers of integers</term>, and we use them in the next set of examples.</p>
+<theorem>
+<title>Rule: Sums and Powers of Integers</title>
+<ol marker= "(a)">
+<li>The sum of the first <m>n</m> integers is given by
+<md>\displaystyle{  \sum_{i=1}^{n} i}=1+2+ \cdots +n=\frac{n(n+1)}{2}.</md></li>
+<li>The sum of the first <m>n</m> squares is given by
+<md>\displaystyle{  \sum_{i=1}^{n} i^2}=1^2+2^2+ \cdots +n^2=\frac{n(n+1)(2n+1)}{6}.</md></li>
+<li>The sum of the first <m>n</m> cubes is given by
+<md>\displaystyle{  \sum_{i=1}^{n} i^3}=1^3+2^3+ \cdots +n^3=\frac{n^2(n+1)^2}{4}.</md></li>
+</ol>
+</theorem>
+<example xml:id="fs-id1170572218770">
+<title>Evaluation Using Sigma Notation</title>
+<statement xml:id="fs-id1170571596048">
+<p xml:id="fs-id1170572297312">Write using sigma notation and evaluate:</p>
+<ol marker="(a)">
+<li>The sum of the terms <m>(i-3)^2 </m> for <m>i=1,2 , \dots ,  200.</m></li>
+<li>The sum of the terms <m>(i^3-i^2)</m> for <m>i=1,2,3,4,5,6.</m></li>
+</ol>
+</statement>
+<solution xml:id="fs-id1170572337072">
+<ol marker="(a)">
+<li>Multiplying out <m>(i-3)^2 ,</m> we can break the expression into three terms.
+<md>
+  <mrow>\displaystyle{  \sum_{i=1}^{200} (i-3)^2 }\amp =\displaystyle{  \sum_{i=1}^{200} (i^2-6i+9)}</mrow>
+  <mrow>\amp=\displaystyle{  \sum_{i=1}^{200} i^2}-\displaystyle{  \sum_{i=1}^{200} 6i}+\displaystyle{  \sum_{i=1}^{200} 9}</mrow>
+  <mrow>\amp =\displaystyle{  \sum_{i=1}^{200} i^2}-6\displaystyle{  \sum_{i=1}^{200} i}+\displaystyle{  \sum_{i=1}^{200} 9}</mrow>
+  <mrow>\amp =\frac{200(200+1)(400+1)}{6}-6[\frac{200(200+1)}{2}]+9(200)</mrow>
+  <mrow>\amp =2,686,700-120,600+1800</mrow>
+  <mrow>\amp =2,567,900</mrow></md>
+</li>
+<li>Use sigma notation property iv. and the rules for the sum of squared terms and the sum of cubed terms.
+<md><mrow>\displaystyle{  \sum_{i=1}^{6} (i^3-i^2)}\amp =\displaystyle{  \sum_{i=1}^{6} i^3}-\displaystyle{  \sum_{i=1}^{6} i^2}</mrow>
+<mrow>\amp=\frac{6^2(6+1)^2}{4}-\frac{6(6+1)(2(6)+1)}{6}</mrow>
+<mrow>\amp=\frac{1764}{4}-\frac{546}{6}</mrow>
+<mrow>\amp=350</mrow></md></li>
+</ol>
+</solution>
+</example>
+<exercise> <statement xml:id="fs-id1170572439151">
+<p xml:id="fs-id1170572439153">Find the sum of the values of <m>4+3i</m> for <m>i=1,2 , \dots ,  100.</m></p>
+</statement>
+<solution xml:id="fs-id1170572248098">
+<p xml:id="fs-id1170572292992">15,550</p>
+</solution>
+<hint>
+<p xml:id="fs-id1170572248094">Use the properties of sigma notation to solve the problem.</p>
+</hint></exercise>
+<example xml:id="fs-id1170572337091">
+<title>Finding the Sum of the Function Values</title>
+<statement xml:id="fs-id1170572337095">
+<p xml:id="fs-id1170571657241">Find the sum of the values of <m>f(x)=x^3</m> over the integers <m>1,2,3 , \dots ,  10.</m></p>
+</statement>
+<solution xml:id="fs-id1170572211730">
+<p xml:id="fs-id1170571599435">Using the formula, we have</p>
+<md>
+  <mrow>\displaystyle{  \sum_{i=0}^{10} i^3}\amp =\frac{10^2(10+1)^2}{4}</mrow>
+  <mrow>\amp=\frac{100(121)}{4}</mrow>
+  <mrow>\amp=3025.</mrow></md>
+</solution>
+</example>
+<exercise> <statement xml:id="fs-id1170572178192">
+<p xml:id="fs-id1170572330437">Evaluate the sum indicated by the notation <m>\displaystyle{  \sum_{k=1}^{20}(2k+1)}.</m></p>
+</statement>
+<solution xml:id="fs-id1170572280442">
+<p xml:id="fs-id1170572280444">440</p>
+</solution>
+<hint>
+<p xml:id="fs-id1170571618983">Use the rule on sum and powers of integers.</p>
+</hint></exercise>
+
+<example xml:id="fs-id1170571648750">
+<title>Evaluating an Integral Using the Definition</title>
+ <statement xml:id="fs-id1170572205028">
+<p xml:id="fs-id1170572224815">Use the definition of the definite integral to evaluate <m>\displaystyle{\int_{0}^{2} x^2dx} .</m> Use a right-endpoint approximation to generate the Riemann sum.</p>
+</statement>
+<solution xml:id="fs-id1170572481139">
+<p xml:id="fs-id1170571597912">We first want to set up a Riemann sum. Based on the limits of integration, we have <m>a=0</m> and <m>b=2.</m> For <m>i=0,1,2\text{ ,…, } n,</m> let <m>P={x_i}</m> be a regular partition of <m>[0,2].</m> Then</p>
+<md>\Delta x=\frac{b-a}{n}=\frac{2}{n}.</md>
+<p xml:id="fs-id1170572170120">Since we are using a right-endpoint approximation to generate Riemann sums, for each <m>i</m>, we need to calculate the function value at the right endpoint of the interval <m>[x_{i-1} ,x_i].</m> The right endpoint of the interval is <m>x_i,</m> and since <m>P</m> is a regular partition,</p>
+<md>x_i=x_0+i\Delta x=0+i\left[\frac{2}{n}\right]=\frac{2i}{n}.</md>
+<p xml:id="fs-id1170572092766">Thus, the function value at the right endpoint of the interval is</p>
+<md>f(x_i)=x_i^2=\left(\frac{2i}{n}\right)^2=\frac{4i^2}{n^2}.</md>
+<p xml:id="fs-id1170571637000">Then the Riemann sum takes the form</p>
+<md>\displaystyle{\sum_{i=1}^n  f(x_i)\Delta x} =\displaystyle{\sum_{i=1}^n  \left(\frac{4i^2}{n^2}\right)\frac{2}{n}} =\displaystyle{\sum_{i=1}^n  \frac{8i^2}{n^3}} =\frac{8}{n^3}\displaystyle{\sum_{i=1}^n  i^2} .</md>
+<p xml:id="fs-id1170572551697">Using the summation formula for <m>\displaystyle{\sum_{i=1}^n  i^2} ,</m> we have</p>
+<md><mrow>\displaystyle{\sum_{i=1}^n  f(x_i)\Delta x} \amp =\frac{8}{n^3}\displaystyle{\sum_{i=1}^n  i^2} </mrow><mrow>\amp =\frac{8}{n^3}\left[\frac{n(n+1)(2n+1)}{6}\right]</mrow><mrow>\amp =\frac{8}{n^3}\left[\frac{2n^3+3n^2+n}{6}\right]</mrow><mrow>\amp =\frac{16n^3+24n^2+n}{6n^3}</mrow><mrow>\amp =\frac{8}{3}+\frac{4}{n}+\frac{1}{6n^2}.</mrow></md>
+<p xml:id="fs-id1170572107833">Now, to calculate the definite integral, we need to take the limit as <m>n\to \infty .</m> We get</p>
+<md>
+  <mrow>\displaystyle{\int_{0}^{2} x^2dx} \amp = \displaystyle{\lim_{n\to \infty }\sum_{i=1}^n  f(x_i)\Delta x} </mrow>
+  <mrow>\amp =\lim_{n\to \infty }\left(\frac{8}{3}+\frac{4}{n}+\frac{1}{6n^2}\right)</mrow>
+  <mrow>\amp =\lim_{n\to \infty }\left(\frac{8}{3}\right)+\lim_{n\to \infty }\left(\frac{4}{n}\right)+\lim_{n\to \infty }\left(\frac{1}{6n^2}\right)</mrow>
+  <mrow>\amp =\frac{8}{3}+0+0=\frac{8}{3}.</mrow></md>
+</solution>
+</example>
+<exercise> <statement xml:id="fs-id1170571645667">
+<p xml:id="fs-id1170571609556">Use the definition of the definite integral to evaluate <m>\displaystyle{\int_{0}^{3} (2x-1)dx} .</m> Use a right-endpoint approximation to generate the Riemann sum.</p>
+</statement>
+<solution xml:id="fs-id1170572479098">
+<p xml:id="fs-id1170572558729">6</p>
+</solution>
+<hint>
+<p xml:id="fs-id1170572330423">Use the solving strategy from <xref ref="fs-id1170571648750"/>.</p>
+</hint></exercise>
+
+<p xml:id="fs-id1170572369250">Evaluating definite integrals this way can be quite tedious because of the complexity of the calculations. Later in this chapter we develop techniques for evaluating definite integrals <emphasis effect="italics">without</emphasis> taking limits of Riemann sums. However, when <m>f</m> is non-negative on <m>[a,b]</m>, we can rely on the fact that definite integrals represent the area under the curve, and we can evaluate definite integrals by using geometric formulas to calculate that area. We do this to confirm that definite integrals do, indeed, represent areas, so we can then discuss what to do in the case of a curve of a function dropping below the <m>x</m>-axis.</p>
+<example xml:id="fs-id1170571775733">
+<title>Using Geometric Formulas to Calculate Definite Integrals</title>
+ <statement xml:id="fs-id1170572228359">
+<p xml:id="fs-id1170571655551">Use the formula for the area of a circle to evaluate <m>\displaystyle{\int_{3}^{6} \sqrt{9-(x-3)^2}dx} .</m></p>
+</statement>
+<solution xml:id="fs-id1170572331956">
+<p xml:id="fs-id1170572332919">The function describes a semicircle with radius 3. To find</p>
+<md>\displaystyle{\int_{3}^{6} \sqrt{9-(x-3)^2 }dx} ,</md>
+<p >we want to find the area under the curve over the interval <m>[3,6].</m> The formula for the area of a circle is <m>A=\pi r^2.</m> The area of a semicircle is just one-half the area of a circle, or <m>A=(\frac{1}{2})\pi r^2.</m> The shaded area in <xref ref="CNX_Calc_Figure_05_02_001"/> covers one-half of the semicircle, or <m>A=(\frac{1}{4})\pi r^2.</m> Thus,</p>
+<md><mrow>\int_{3}^{6}\sqrt{9- (x-3)^2 }\amp =\frac{1}{4}\pi (3)^2 </mrow><mrow>\amp =\frac{9}{4}\pi</mrow><mrow>\approx 7.069.</mrow></md>
+<figure xml:id="CNX_Calc_Figure_05_02_001">
+<image source="ch5/CNX_Calc_Figure_05_02_009.jpg" width="50%">
+<description>"A graph of a semi circle in quadrant one over the interval [0,6] with center at (3,0). The area under the curve over the interval [3,6] is shaded in blue."  </description></image> <caption>The value of the integral of the function <m>f(x)</m> over the interval <m>[3,6]</m> is the area of the shaded region.</caption>
+</figure>
+</solution>
+</example>
+<exercise> <statement xml:id="fs-id1170572551862">
+<p xml:id="fs-id1170572551864">Use the formula for the area of a trapezoid to evaluate <m>\displaystyle{\int_{2}^{4} (2x+3)dx} .</m></p>
+</statement>
+<solution xml:id="fs-id1170572430377">
+<p xml:id="fs-id1170572430379">18 square units</p>
+</solution>
+<hint>
+<p xml:id="fs-id1170572448386">Graph the function <m>f(x)</m> and calculate the area under the function on the interval <m>[2,4].</m></p>
+</hint></exercise>
+</subsection>
+<subsection xml:id="fs-id1170572430386">
+<title>Area and the Definite Integral</title>
+<introduction>
+<p xml:id="fs-id1170572430392">Our study of Riemann sums arose from our attempts to approximate the area under the graph of a continuous, non-negative function on a closed interval <m>[a,b]</m>, and these same Riemann sums appeared in the limit definition of the definite integral.  However, when we defined the definite integral, we lifted the requirement that <m>f(x)</m> be nonnegative. How do we interpret “the area under the curve” when <m>f(x)</m> is negative?</p>
+</introduction>
+<subsubsection xml:id="fs-id1170571600645">
+<title>Net Signed Area</title>
+<p xml:id="fs-id1170571600651">Let us return to the Riemann sum. Consider, for example, the function <m>f(x)=2-2x^2</m> (shown in <xref ref="CNX_Calc_Figure_05_02_002"/>) on the interval <m>[0,2].</m> Use a regular partition with <m>n=8</m> subintervals and choose <m>{x_i^*}</m> as the left endpoint of each subinterval. Construct a rectangle on each subinterval of height <m>f(x_i^*)</m> and width Δ<m>x</m>. When <m>f(x_i^* )</m> is positive, the product <m>f(x_i^* )\Delta x</m> represents the area of the rectangle, as before. When <m>f(x_i^* )</m> is negative, however, the product <m>f(x_i^* )\Delta x</m> represents the <emphasis effect="italics">negative</emphasis> of the area of the rectangle. The Riemann sum then captures</p>
+<md>\displaystyle{\sum_{i=1}^{8}f(x_i^*)\Delta x} =(\text{Area of rectangles above the } x\text{-axis })-(\text{Area of rectangles below the } x\text{-axis })</md>
+<figure xml:id="CNX_Calc_Figure_05_02_002">
+<image source="ch5/CNX_Calc_Figure_05_02_003.jpg" width="50%">
+<description>"A graph of a downward opening parabola over [-1, 2] with vertex at (0,2) and x-intercepts at (-1,0) and (1,0). Eight rectangles are drawn evenly over [0,2] with heights determined by the value of the function at the left endpoints of each." </description></image> <caption>For a function that is partly negative, the Riemann sum is the area of the rectangles above the <m>x</m>-axis less the area of the rectangles below the <m>x</m>-axis.</caption>
+</figure>
+<p xml:id="fs-id1170571671431">Taking the limit as <m>n\to \infty ,</m> the Riemann sum approaches the area between the curve above the <m>x</m>-axis and the <m>x</m>-axis, less the area between the curve below the <m>x</m>-axis and the <m>x</m>-axis, as shown in <xref ref="CNX_Calc_Figure_05_02_003"/>. Then,</p>
+<md><mrow>\displaystyle{\int_{0}^{2} f(x)dx} \amp =\lim_{n\to \infty }\displaystyle{\sum_{i=1}^n  f(x_i^*)\Delta x} </mrow><mrow>\amp =A_1-A_2.</mrow></md>
+<p xml:id="fs-id1170572294442">The quantity <m>A_1-A_2</m> is called the <term>net signed area</term> under the curve.</p>
+<figure xml:id="CNX_Calc_Figure_05_02_003">
+  <image source="ch5/CNX_Calc_Figure_05_02_002.jpg" width="50%">
+<description>"A graph of a downward opening parabola over [-2, 2] with vertex at (0,2) and x-intercepts at (-1,0) and (1,0). The area in quadrant one under the curve is shaded blue and labeled A1. The area in quadrant four above the curve and to the left of x=2 is shaded blue and labeled A2."  </description></image> <caption>In the limit, the definite integral equals area <m>A_{1}</m>  less area <m>A_{2}</m> , or the net signed area.</caption>
+</figure>
+<p xml:id="fs-id1170572449095">Notice that net signed area can be positive, negative, or zero. If the area above the <m>x</m>-axis is larger, the net signed area is positive. If the area below the <m>x</m>-axis is larger, the net signed area is negative. If the areas above and below the <m>x</m>-axis are equal, the net signed area is zero.</p>
+<example xml:id="fs-id1170572449111">
+<title>Finding the Net Signed Area</title>
+ <statement xml:id="fs-id1170572449116">
+<p xml:id="fs-id1170572449121">Find the net signed area between the curve of the function <m>f(x)=2x</m> and the <m>x</m>-axis over the interval <m>[-3,3].</m></p>
+</statement>
+<solution xml:id="fs-id1170571712237">
+<p xml:id="fs-id1170571712242">The function produces a straight line that forms two triangles: one from <m>x=-3</m> to <m>x=0</m> and the other from <m>x=0</m> to <m>x=3</m> (<xref ref="CNX_Calc_Figure_05_02_004"/>). Using the geometric formula for the area of a triangle, <m>A=\dfrac{1}{2}bh,</m> the area of triangle <m>A_{1}</m> , above the axis, is</p>
+<md><mrow>A_1=\dfrac{1}{2}\cdot 3 \cdot 6=9</mrow>,</md>
+<p xml:id="fs-id1170571609222">where 3 is the base and <m>2(3)=6</m> is the height. The area of triangle <m>A_{2}</m> , below the axis, is</p>
+<md><mrow>A_2=\dfrac{1}{2}\cdot 3 \cdot 6=9,</mrow></md>
+<p xml:id="fs-id1170572380038">where 3 is the base and 6 is the height. Thus, the net area is</p>
+<md><mrow>\displaystyle{\int_{-3}^{3}2x\, dx} =A_1-A_2=9-9=0.</mrow></md>
+<figure xml:id="CNX_Calc_Figure_05_02_004">
+  <image source="ch5/CNX_Calc_Figure_05_02_005.jpg" width="50%">
+<description>"A graph of an increasing line over [-6, 6] going through the origin and (-3, -6) and (3,6). The area under the line in quadrant one over [0,3] is shaded blue and labeled A1, and the area above the line in quadrant three over [-3,0] is shaded blue and labeled A2."  </description></image> <caption>The area above the curve and below the <m>x</m>-axis equals the area below the curve and above the <m>x</m>-axis.</caption>
+</figure>
+<p xml:id="fs-id1170571699045"><emphasis effect="bold">Analysis</emphasis></p>
+<p xml:id="fs-id1170571699050">If <m>A_{1}</m>  is the area above the <m>x</m>-axis and <m>A_{2}</m>  is the area below the <m>x</m>-axis, then the net area is <m>A_1-A_2.</m> Since the areas of the two triangles are equal, the net area is zero.</p>
+</solution>
+</example>
+<exercise> <statement xml:id="fs-id1170572338459">
+<p xml:id="fs-id1170572338461">Find the net signed area of <m>f(x)=x-2</m> over the interval <m>[0,6],</m> illustrated in the following image.</p>
+<image source="ch5/CNX_Calc_Figure_05_02_006.jpg" width="50%">
+<description>"A graph of an increasing line going through (-2,-4), (0,-2), (2,0), (4,2) and (6,4). The area above the curve in quadrant four is shaded blue and labeled A2, and the area under the curve and to the left of x=6 in quadrant one is shaded and labeled A1."</description></image>
+</statement>
+<solution xml:id="fs-id1170572420082">
+<p xml:id="fs-id1170572420084">6</p>
+</solution>
+<hint>
+<p xml:id="fs-id1170572420074">Use the solving method described in <xref ref="fs-id1170572449111"/>.</p>
+</hint></exercise>
+</subsubsection>
+<subsubsection xml:id="fs-id1170572420092">
+<title>Total Area</title>
+<p xml:id="fs-id1170572420097">One application of the definite integral is finding <term class="no-emphasis">displacement</term> when given a velocity function. If <m>v(t)</m> represents the velocity of an object as a function of time, then the area under the curve tells us how far the object is from its original position. This is a very important application of the definite integral, and we examine it in more detail later in the chapter. For now, we just look at some basics to get a feel for how this works by studying constant velocities.</p>
+<p xml:id="fs-id1170572624823">When velocity is a constant, the area under the curve is just velocity times time. This idea is already very familiar. If a car travels away from its starting position in a straight line at a speed of 75 mph for 2 hours, then it is 150 mi away from its original position (<xref ref="CNX_Calc_Figure_05_02_006"/>). Using integral notation, we have</p>
+<md>\displaystyle{\int_{0}^{2} 75dt} =150.</md>
+<figure xml:id="CNX_Calc_Figure_05_02_006">
+<image source="ch5/CNX_Calc_Figure_05_02_015.jpg" width="50%">
+<description>"A graph in quadrant 1 with the x-axis labeled as t (hours) and y-axis labeled as v (mi/hr). The area under the line v(t) = 75 is shaded blue over [0,2]."  </description></image> <caption>The area under the curve <m>v(t)=75</m> tells us how far the car is from its starting point at a given time.</caption>
+</figure>
+<p xml:id="fs-id1170571637505">In the context of displacement, net signed area allows us to take direction into account. If a car travels straight north at a speed of 60 mph for 2 hours, it is 120 mi north of its starting position. If the car then turns around and travels south at a speed of 40 mph for 3 hours, it will be back at it starting position (<xref ref="CNX_Calc_Figure_05_02_007"/>). Again, using integral notation, we have</p>
+<md><mrow>\displaystyle{\int_{0}^{2} 60dt} +\displaystyle{\int_{2}^{5} -40dt} \amp =120-120</mrow><mrow>\amp =0.</mrow></md>
+<p xml:id="fs-id1170571609297">In this case the displacement is zero.</p>
+<figure xml:id="CNX_Calc_Figure_05_02_007">
+  <image source="ch5/CNX_Calc_Figure_05_02_016.jpg" width="50%">
+<description>"A graph in quadrants one and four with the x-axis labeled as t (hours) and the y axis labeled as v (mi/hr). The first part of the graph is the line v(t) = 60 over [0,2], and the area under the line in quadrant one is shaded. The second part of the graph is the line v(t) = -40 over [2,5], and the area above the line in quadrant four is shaded." </description></image> <caption>The area above the axis and the area below the axis are equal, so the net signed area is zero.</caption>
+</figure>
+<p xml:id="fs-id1170571609320">Suppose we want to know how far the car travels overall, regardless of direction. In this case, we want to know the area between the curve and the <m>x</m>-axis, regardless of whether that area is above or below the axis. This is called the <term>total area</term>.</p>
+<p xml:id="fs-id1170571609332">Graphically, it is easiest to think of calculating total area by adding the areas above the axis and the areas below the axis (rather than subtracting the areas below the axis, as we did with net signed area). To accomplish this mathematically, we use the absolute value function. Thus, the total distance traveled by the car is</p>
+<md><mrow>\displaystyle{\int_{0}^{2} |60|dt} +\displaystyle{\int_{2}^{5} |-40|dt} \amp =\displaystyle{\int_{0}^{2} 60dt} +\displaystyle{\int_{2}^{5} 40dt} </mrow><mrow>\amp =120+120</mrow><mrow>\amp =240.</mrow></md>
+<p xml:id="fs-id1170572368682">Bringing these ideas together formally, we state the following definitions.</p>
+<definition>
+<p xml:id="fs-id1170572368688">Let <m>f(x)</m> be an integrable function defined on an interval <m>[a,b].</m> Let <m>A_{1}</m>  represent the area between <m>f(x)</m> and the <m>x</m>-axis that lies <emphasis effect="italics">above</emphasis> the axis and let <m>A_{2}</m>  represent the area between <m>f(x)</m> and the <m>x</m>-axis that lies <emphasis effect="italics">below</emphasis> the axis. Then, the <emphasis effect="bold">net signed area</emphasis> between <m>f(x)</m> and the <m>x</m>-axis is given by</p>
+<md>\displaystyle{\int_{a}^{b} f(x)dx} =A_1-A_2.</md>
+<p xml:id="fs-id1170572376450">The <emphasis effect="bold">total area</emphasis> between <m>f(x)</m> and the <m>x</m>-axis is given by</p>
+<md>\int_{a}^{b}|f(x)|dx=A_1+A_2.</md>
+</definition>
+<example xml:id="fs-id1170572163843">
+<title>Finding the Total Area</title>
+ <statement xml:id="fs-id1170572163847">
+<p xml:id="fs-id1170572163853">Find the total area between <m>f(x)=x-2</m> and the <m>x</m>-axis over the interval <m>[0,6].</m></p>
+</statement>
+<solution xml:id="fs-id1170572444225">
+<p xml:id="fs-id1170572444230">Calculate the <m>x</m>-intercept as <m>(2,0)</m> (set <m>y=0,</m> solve for <m>x</m>). To find the total area, take the area below the <m>x</m>-axis over the subinterval <m>[0,2]</m> and add it to the area above the <m>x</m>-axis on the subinterval <m>[2,6]</m> (<xref ref="CNX_Calc_Figure_05_02_008"/>).</p>
+<figure xml:id="CNX_Calc_Figure_05_02_008">
+<image source="ch5/CNX_Calc_Figure_05_02_008.jpg" width="50%">
+<description>"A graph of a increasing line f(x) = x-2 going through the points (-2,-4), (0,2), (2,0), (4,2), and (6,4). The area under the line in quadrant one and to the left of the line x=6 is shaded and labeled A1. The area above the line in quadrant four is shaded and labeled A2." </description></image> <caption>The total area between the line and the x-axis over <m>[0,6]</m> is <m>A_{2}</m>  plus <m>A_{1}</m> .</caption>
+</figure>
+<p xml:id="fs-id1170571599762">We have</p>
+<md>\displaystyle{\int_{0}^{6} |(x-2)|dx} =A_2+A_1.</md>
+<p xml:id="fs-id1170572229842">Then, using the formula for the area of a triangle, we obtain</p>
+<md>A_2=\frac{1}{2}bh=\frac{1}{2}\cdot 2\cdot 2=2</md>
+<md>A_1=\frac{1}{2}bh=\frac{1}{2}\cdot 4\cdot 4=8.</md>
+<p xml:id="fs-id1170572621626">The total area, then, is</p>
+<md>A_1+A_2=8+2=10.</md>
+</solution>
+</example>
+<exercise> <statement xml:id="fs-id1170572621672">
+<p xml:id="fs-id1170572621674">Find the total area between the function <m>f(x)=2x</m> and the <m>x</m>-axis over the interval <m>[-3,3].</m></p>
+</statement>
+<solution xml:id="fs-id1170571711340">
+<p>18</p>
+</solution>
+<hint>
+<p xml:id="fs-id1170571711332">Review the solving strategy in <xref ref="fs-id1170572163843"/>.</p>
+</hint></exercise>
+</subsubsection>
+</subsection>
+<subsection xml:id="fs-id1170571711350">
+<title>Properties of the Definite Integral</title>
+<p xml:id="fs-id1170571711356">The properties of indefinite integrals apply to definite integrals as well. Definite integrals also have properties that relate to the limits of integration. These properties, along with the rules of integration that we examine later in this chapter, help us manipulate expressions to evaluate definite integrals.</p>
+<note xml:id="fs-id1170571711362">
+<title>Rule: Properties of the Definite Integral</title>
+<ol marker="(a)">
+<li><md>\displaystyle{\int_{a}^{a} f(x)dx=0} </md>If the limits of integration are the same, <m>\Delta x =0</m> for any partition, and the region under the curve contains no area.</li>
+<li><md>\displaystyle{\int_{b}^{a} f(x)dx} =-\displaystyle{\int_{a}^{b} f(x)dx} </md>If the limits are reversed, then place a negative sign in front of the integral.</li>
+<li><md>\displaystyle{\int_{a}^{b} [f(x)+g(x)]dx} =\displaystyle{\int_{a}^{b} f(x)dx} +\displaystyle{\int_{a}^{b} g(x)dx} </md>The integral of a sum is the sum of the integrals.</li>
+<li><md>\displaystyle{\int_{a}^{b} [f(x)-g(x)]dx=\displaystyle{\int_{a}^{b} f(x)dx-\displaystyle{\int_{a}^{b} g(x)dx} } } </md>The integral of a difference is the difference of the integrals.</li>
+<li><md>\displaystyle{\int_{a}^{b} cf(x)dx} =c\displaystyle{\int_{a}^{b} f(x)} </md>for constant <m>c</m>. The integral of the product of a constant and a function is equal to the constant multiplied by the integral of the function.</li>
+<li><md>\displaystyle{\int_{a}^{b} f(x)dx} =\displaystyle{\int_{a}^{c} f(x)dx} +\displaystyle{\int_{c}^{b} f(x)dx} </md>Although this formula normally applies when <m>c</m> is between <m>a</m> and <m>b</m>, the formula holds for all values of <m>a</m>, <m>b</m>, and <m>c</m>, provided <m>f(x)</m> is integrable on the largest interval.</li>
+</ol>
+</note>
+<example xml:id="fs-id1170572274820">
+<title>Using the Properties of the Definite Integral</title>
+ <statement xml:id="fs-id1170572274825">
+<p xml:id="fs-id1170572274830">Use the properties of the definite integral to express the definite integral of <m>f(x)=-3x^3+2x+2</m> over the interval <m>[-2,1]</m> as the sum of three definite integrals.</p>
+</statement>
+<solution xml:id="fs-id1170571733903">
+<p xml:id="fs-id1170571733908">Using integral notation, we have <m>\displaystyle{\int_{-2}^{1}(-3x^3+2x+2)dx} .</m> We apply properties 3. and 5. to get</p>
+<md><mrow>\displaystyle{\int_{-2}^{1}(-3x^3+2x+2)dx} \amp =\displaystyle{\int_{-2}^{1}-3x^3dx} +\displaystyle{\int_{-2}^{1}2xdx} +\displaystyle{\int_{-2}^{1}2dx} </mrow><mrow>\amp =-3\displaystyle{\int_{-2}^{1}x^3dx} +2\displaystyle{\int_{-2}^{1}xdx} +\displaystyle{\int_{-2}^{1}2dx} .</mrow></md>
+</solution>
+</example>
+<exercise> <statement xml:id="fs-id1170572307264">
+<p xml:id="fs-id1170572307267">Use the properties of the definite integral to express the definite integral of <m>f(x)=6x^3-4x^2+2x-3</m> over the interval <m>[1,3]</m> as the sum of four definite integrals.</p>
+</statement>
+<solution xml:id="fs-id1170572376229">
+<p xml:id="fs-id1170572376231"><m>6\displaystyle{\int_{1}^{3} x^3dx} -4\displaystyle{\int_{1}^{3} x^2dx} +2\displaystyle{\int_{1}^{3} xdx} -\int_{1}^{3}3dx</m></p>
+</solution>
+<hint>
+<p xml:id="fs-id1170572376220">Use the solving strategy from <xref ref="fs-id1170572274820"/> and the properties of definite integrals.</p>
+</hint></exercise>
+<example xml:id="fs-id1170572098842">
+<title>Using the Properties of the Definite Integral</title>
+ <statement xml:id="fs-id1170572098846">
+<p xml:id="fs-id1170572098851">If it is known that <m>\displaystyle{\int_{0}^{8} f(x)dx} =10</m> and <m>\displaystyle{\int_{0}^{5} f(x)dx} =5,</m> find the value of <m>\displaystyle{\int_{5}^{8} f(x)dx} .</m></p>
+</statement>
+<solution xml:id="fs-id1170572344239">
+<p xml:id="fs-id1170572344244">By property 6.,</p>
+<md>\displaystyle{\int_{a}^{b} f(x)dx} =\displaystyle{\int_{a}^{c} f(x)dx} +\displaystyle{\int_{c}^{b} f(x)dx} .</md>
+<p xml:id="fs-id1170572551964">Thus,</p>
+<md><mrow>\displaystyle{\int_{0}^{8} f(x)dx} \amp = \displaystyle{\int_{0}^{5} f(x)dx} +\displaystyle{\int_{5}^{8} f(x)dx} </mrow><mrow>10\amp = 5+\displaystyle{\int_{5}^{8} f(x)dx} </mrow><mrow>5\amp = \displaystyle{\int_{5}^{8} f(x)dx} .</mrow></md>
+</solution>
+</example>
+<exercise> <statement xml:id="fs-id1170572500600">
+<p xml:id="fs-id1170572500602">If it is known that <m>\displaystyle{\int_{1}^{5} f(x)dx} =-3</m> and <m>\displaystyle{\int_{2}^{5} f(x)dx} =4,</m> find the value of <m>\displaystyle{\int_{1}^{2} f(x)dx} .</m></p>
+</statement>
+<solution xml:id="fs-id1170572444362">
+<p xml:id="fs-id1170572444364">-7</p>
+</solution>
+<hint>
+<p xml:id="fs-id1170572444354">Use the solving strategy from <xref ref="fs-id1170572098842"/> and the rule on properties of definite integrals.</p>
+</hint></exercise>
+</subsection>
+<subsection xml:id="fs-id1170572444371">
+<title>Comparison Properties of Integrals</title>
+<p xml:id="fs-id1170572444376">A picture can sometimes tell us more about a function than the results of computations. Comparing functions by their graphs as well as by their algebraic expressions can often give new insight into the process of integration. Intuitively, we might say that if a function <m>f(x)</m> is above another function <m>g(x),</m> then the area between <m>f(x)</m> and the <m>x</m>-axis is greater than the area between <m>g(x)</m> and the <m>x</m>-axis. This is true depending on the interval over which the comparison is made. The properties of definite integrals are valid whether <m>a\lt b,a=b,</m> or <m>a\gt b.</m> The following properties, however, concern only the case <m>a\leq b,</m> and are used when we want to compare the sizes of integrals.</p>
+<theorem> <!-- Change next end note to end theorem -->
+<title>Comparison Theorem</title>
+<ol marker="(i)">
+<li>If <m>f(x)\geq 0</m> for <m>a\leq x\leq b,</m> then
+<md>\displaystyle{\int_{a}^{b} f(x)dx} \geq 0.</md></li>
+<li>If <m>f(x)\geq g(x)</m> for <m>a\leq x\leq b,</m> then
+<md>\displaystyle{\int_{a}^{b} f(x)dx} \geq \displaystyle{\int_{a}^{b} g(x)dx} .</md></li>
+<li>If <m>m</m> and <m>M</m> are constants such that <m>m\leq f(x)\leq M</m> for <m>a\leq x\leq b,</m> then
+<md>(b-a) \leq \displaystyle{\int_{a}^{b} f(x)dx}  \leq M(b-a).</md></li>
+</ol>
+</theorem>
+<example xml:id="fs-id1170571769594">
+<title>Comparing Two Functions over a Given Interval</title>
+ <statement xml:id="fs-id1170571769598">
+<p xml:id="fs-id1170571769603">Compare <m>f(x)=\sqrt{1+x^2}</m> and <m>g(x)=\sqrt{1+x}</m> over the interval <m>[0,1].</m></p>
+</statement>
+<solution xml:id="fs-id1170572628464">
+<p xml:id="fs-id1170572628469">Graphing these functions is necessary to understand how they compare over the interval <m>[0,1].</m> Initially, when graphed on a graphing calculator, <m>f(x)</m> appears to be above <m>g(x)</m> everywhere. However, on the interval <m>[0,1],</m> the graphs appear to be on top of each other. We need to zoom in to see that, on the interval <m>[0,1],g(x)</m> is above <m>f(x).</m> The two functions intersect at <m>x=0</m> and <m>x=1</m> (<xref ref="CNX_Calc_Figure_05_02_009"/>).</p>
+<figure xml:id="CNX_Calc_Figure_05_02_009">
+<image source="ch5/CNX_Calc_Figure_05_02_011.jpg" width="50%">
+<description>"A graph of the function f(x) = sqrt(1 + x^2) in red and g(x) = sqrt(1 + x) in blue over [-2, 3]. The function f(x) appears above g(x) except over the interval [0,1]. A second, zoomed-in graph shows this interval more clearly."  </description></image> <caption>(a) The function <m>f(x)</m> appears above the function <m>g(x)</m> except over the interval <m>[0,1]</m> (b) Viewing the same graph with a greater zoom shows this more clearly.</caption>
+</figure>
+<p xml:id="fs-id1170572331851">We can see from the graph that over the interval <m>[0,1],g(x)\geq f(x).</m> Comparing the integrals over the specified interval <m>[0,1],</m> we also see that <m>\displaystyle{\int_{0}^{1} g(x)dx} \geq \displaystyle{\int_{0}^{1} f(x)dx} </m> (<xref ref="CNX_Calc_Figure_05_02_010"/>). The thin, red-shaded area shows just how much difference there is between these two integrals over the interval <m>[0,1].</m></p>
+<figure xml:id="CNX_Calc_Figure_05_02_010">
+  <image source="ch5/CNX_Calc_Figure_05_02_012.jpg" width="50%">
+<description>"A graph showing the functions f(x) = sqrt(1 + x^2) and g(x) = sqrt(1 + x) over [-3, 3]. The area under g(x) in quadrant one over [0,1] is shaded. The area under g(x) and f(x) is included in this shaded area. The second, zoomed-in graph shows more clearly that equality between the functions only holds at the endpoints."</description></image> <caption>(a) The graph shows that over the interval <m>[0,1],g(x)\geq f(x),</m> where equality holds only at the endpoints of the interval. (b) Viewing the same graph with a greater zoom shows this more clearly.</caption>
+</figure>
+</solution>
+</example>
+</subsection>
+<subsection xml:id="fs-id1170571653448">
+<title>Average Value of a Function</title>
+<p xml:id="fs-id1170571653453">We often need to find the average of a set of numbers, such as an average test grade. Suppose you received the following test scores in your algebra class: 89, 90, 56, 78, 100, and 69. Your semester grade is your average of test scores and you want to know what grade to expect. We can find the average by adding all the scores and dividing by the number of scores. In this case, there are six test scores. Thus,</p>
+<md>\frac{89+90+56+78+100+69}{6}=\frac{482}{6}\approx 80.33.</md>
+<p xml:id="fs-id1170571788116">Therefore, your average test grade is approximately 80.33.</p>
+<p xml:id="fs-id1170571788122">Suppose, however, that we have a function <m>v(t)</m> that gives us the speed of an object at any time <m>t</m>, and we want to find the object’s average speed. The function <m>v(t)</m> takes on an infinite number of values, so we can’t use the process just described. Fortunately, we can use a definite integral to find the average value of a function such as this.</p>
+<p xml:id="fs-id1170571597403">Let <m>f(x)</m> be continuous over the interval <m>[a,b]</m> and let <m>[a,b]</m> be divided into <m>n</m> subintervals of width <m>\Delta x=\displaystyle\frac{b-a}{n}.</m> Choose an evaluation point <m>x_i^* </m> in each subinterval and calculate <m>f(x_i^* )</m> for <m>i=1,2, \dots, n.</m> In other words, consider each <m>f(x_i^*)</m> as a sampling of the function over each subinterval. The average value of the function may then be approximated as</p>
+<md>\frac{f(x_1^*)+f(x_2^* )+ \cdots +f(x_n^*)}{n}=\left(f(x_1^*)+f(x_2^* )+ \cdots +f(x_n^*)\right)\dfrac{1}{n},</md>
+<p xml:id="fs-id1170572369399">which is the same expression used to calculate the average of then <m>n</m>discrete values <m>f(x_1^*), f(x_2^*), \dots f(x_n^*)</m>.</p>
+<p xml:id="fs-id1170572369402">But we know <m>\Delta x=\displaystyle\frac{b-a}{n},</m> so </p>
+  <md> \frac{1}{n}=\frac{1}{n}\cdot \frac{b-a}{b-a}=\frac{b-a}{n}\cdot \frac{1}{b-a}=\Delta x \cdot \frac{1}{b-a}
+  </md>
+  <p> and </p>
+<md>\frac{f(x_1^*)+f(x_2^* )+ \cdots +f(x_n^* )}{n}=\left(f(x_1^*)+f(x_2^*)+ \cdots +f(x_n^*)\right) \Delta x \cdot\frac{1}{b-a}.</md>
+<p xml:id="fs-id1170571733970"> Thus, an approximate value for the average value of the function is given by</p>
+<md>\left(\frac{1}{b-a}\right)\left[\left(f(x_1^*)+f(x_2^*)+ \cdots +f(x_n^*) \right)\Delta x \right] =\frac{1}{b-a}\displaystyle{\sum_{i=1}^n  f(x_i^* )\Delta x} .</md>
+<p xml:id="fs-id1170572274944">This is a Riemann sum. To improve the approximations, we increase the value of <m>n</m>.  If we allow <m>n \rightarrow infty</m>, we obtain the following definition.</p>
+<definition>
+<p xml:id="fs-id1170572510089">Let <m>f(x)</m> be continuous over the interval <m>[a,b].</m> Then, the <term>average value of the function</term> <m>f(x)</m> (or <term><m>f_{\text{ave}}</m> </term>) on <m>[a,b]</m> is given by</p>
+<md xml:id="Average-Value_52">f_{\text{ ave }}=\frac{1}{b-a}\displaystyle{\int_{a}^{b} f(x)dx} .</md>
+</definition>
+<example xml:id="fs-id1170571712593">
+<title>Finding the Average Value of a Linear Function</title>
+ <statement xml:id="fs-id1170571712597">
+<p xml:id="fs-id1170571712602">Find the average value of <m>f(x)=x+1</m> over the interval <m>[0,5].</m></p>
+</statement>
+<solution xml:id="fs-id1170572443607">
+<p xml:id="fs-id1170572443612">First, graph the function on the stated interval, as shown in <xref ref="CNX_Calc_Figure_05_02_011"/>.</p>
+<figure xml:id="CNX_Calc_Figure_05_02_011">
+<image source="ch5/CNX_Calc_Figure_05_02_017.jpg" width="50%">
+<description>"A graph in quadrant one showing the shaded area under the function f(x) = x + 1 over [0,5]."  </description></image> <caption>The graph shows the area under the function <m>f(x)=x+1</m> over <m>[0,5].</m></caption>
+</figure>
+<p xml:id="fs-id1170572419232">The region is a trapezoid lying on its side, so we can use the area formula for a trapezoid <m>A=\frac{1}{2}h(a+b),</m> where <m>h</m> represents height, and <m>a</m> and <m>b</m> represent the two parallel sides. Then,</p>
+<md><mrow>\displaystyle{\int_{0}^{5} x} +1dx\amp =\frac{1}{2}h(a+b)</mrow><mrow>\amp =\frac{1}{2}\cdot 5\cdot (1+6)</mrow><mrow>\amp =\frac{35}{2}.</mrow></md>
+<p xml:id="fs-id1170571699476">Thus the average value of the function is</p>
+<md>\frac{1}{5-0}\displaystyle{\int_{0}^{5} x} +1dx=\frac{1}{5}\cdot \frac{35}{2}=\frac{7}{2}.</md>
+</solution>
+</example>
+<exercise> <statement xml:id="fs-id1170571678851">
+<p xml:id="fs-id1170571678853">Find the average value of <m>f(x)=6-2x</m> over the interval <m>[0,3].</m></p>
+</statement>
+<solution xml:id="fs-id1170572601246">
+<p xml:id="fs-id1170572601248">3</p>
+</solution>
+<hint>
+<p xml:id="fs-id1170572601242">Use the average value formula, and use geometry to evaluate the integral.</p>
+</hint></exercise>
+</subsection>
+
+<subsection xml:id="fs-id1170572601256">
+  <title>Key Concepts</title>
+  <ul>
+    <li>
+      <p>The definite integral can be used to calculate net signed area, which is the area above the <m>x</m>-axis less the area below the <m>x</m>-axis. Net signed area can be positive, negative, or zero.</p>
+    </li>
+    <li>
+      <p>The component parts of the definite integral are the integrand, the variable of integration, and the limits of integration.</p>
+    </li>
+    <li>
+      <p>Continuous functions on a closed interval are integrable. Functions that are not continuous may still be integrable, depending on the nature of the discontinuities.</p>
+    </li>
+    <li>
+      <p>The properties of definite integrals can be used to evaluate integrals.</p>
+    </li>
+    <li>
+      <p>The area under the curve of many functions can be calculated using geometric formulas.</p>
+    </li>
+    <li>
+      <p>The average value of a function can be calculated using definite integrals.</p>
+    </li>
+  </ul>
+</subsection>
+
+<subsection xml:id="fs-id1170572601305">
+  <title>Key Equations</title>
+  <ul>
+    <li>
+      <p><alert>Definite Integral</alert></p>
+      <md>
+        <mrow>\int_a^b f(x)\, dx \amp= \lim_{\max \Delta x_i \to 0} \sum_{i=1}^n f(x_i^*)\Delta x_i</mrow>
+      </md>
+    </li>
+    <li>
+      <p><alert>Sums and Powers of Integers</alert></p>
+      <md>
+        <mrow>\sum_{i=1}^n i \amp= 1 + 2 + \cdots + n = \frac{n(n+1)}{2}</mrow>
+        <mrow>\sum_{i=1}^n i^2 \amp= 1^2 + 2^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}</mrow>
+        <mrow>\sum_{i=1}^n i^3 \amp= 1^3 + 2^3 + \cdots + n^3 = \frac{n^2(n+1)^2}{4}</mrow>
+      </md>
+    </li>
+    <li>
+      <p><alert>Properties of the Definite Integral</alert></p>
+      <md>
+        <mrow>\int_a^a f(x)\, dx \amp= 0</mrow>
+        <mrow>\int_b^a f(x)\, dx \amp= -\int_a^b f(x)\, dx</mrow>
+        <mrow>\int_a^b \bigl[f(x) + g(x)\bigr]\, dx \amp= \int_a^b f(x)\, dx + \int_a^b g(x)\, dx</mrow>
+        <mrow>\int_a^b \bigl[f(x) - g(x)\bigr]\, dx \amp= \int_a^b f(x)\, dx - \int_a^b g(x)\, dx</mrow>
+        <mrow>\int_a^b c f(x)\, dx \amp= c\int_a^b f(x)\, dx \quad \text{for constant } c</mrow>
+        <mrow>\int_a^b f(x)\, dx \amp= \int_a^c f(x)\, dx + \int_c^b f(x)\, dx</mrow>
+      </md>
+    </li>
+  </ul>
+</subsection>
+
+<exercises xml:id="fs-id1170571539130">
+
+  <exercisegroup>
+    <introduction>
+      <p>In the following exercises, express the limits as integrals.</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170571539139">
+      <statement>
+        <p><m>\displaystyle \lim_{n \to \infty} \sum_{i=1}^n (x_i^*)\Delta x</m> over <m>[1, 3]</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571543215">
+      <statement>
+        <p><m>\displaystyle \lim_{n \to \infty} \sum_{i=1}^n \bigl(5(x_i^*)^2 - 3(x_i^*)^3\bigr)\Delta x</m> over <m>[0, 2]</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572456369">
+        <p><m>\displaystyle \int_0^2 (5x^2 - 3x^3)\, dx</m></p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572396476">
+      <statement>
+        <p><m>\displaystyle \lim_{n \to \infty} \sum_{i=1}^n \sin^2(2\pi x_i^*)\Delta x</m> over <m>[0, 1]</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571580958">
+      <statement>
+        <p><m>\displaystyle \lim_{n \to \infty} \sum_{i=1}^n \cos^2(2\pi x_i^*)\Delta x</m> over <m>[0, 1]</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572218599">
+        <p><m>\displaystyle \int_0^1 \cos^2(2\pi x)\, dx</m></p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In the following exercises, given <m>L_n</m> or <m>R_n</m> as indicated, express their limits as <m>n \to \infty</m> as definite integrals, identifying the correct intervals.</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170572386107">
+      <statement>
+        <p><m>\displaystyle L_n = \frac{1}{n}\sum_{i=1}^n \frac{i - 1}{n}</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572386184">
+      <statement>
+        <p><m>\displaystyle R_n = \frac{1}{n}\sum_{i=1}^n \frac{i}{n}</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572643208">
+        <p><m>\displaystyle \int_0^1 x\, dx</m></p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572643237">
+      <statement>
+        <p><m>\displaystyle L_n = \frac{2}{n}\sum_{i=1}^n \left(1 + 2\frac{i - 1}{n}\right)</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572373704">
+      <statement>
+        <p><m>\displaystyle R_n = \frac{3}{n}\sum_{i=1}^n \left(3 + 3\frac{i}{n}\right)</m></p>
+      </statement>
+      <solution xml:id="fs-id1170571710640">
+        <p><m>\displaystyle \int_3^6 x\, dx</m></p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571710670">
+      <statement>
+        <p><m>\displaystyle L_n = \frac{2\pi}{n}\sum_{i=1}^n 2\pi\frac{i - 1}{n}\cos\left(2\pi\frac{i - 1}{n}\right)</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572399037">
+      <statement>
+        <p><m>\displaystyle R_n = \frac{1}{n}\sum_{i=1}^n \left(1 + \frac{i}{n}\right)\log\left(\left(1 + \frac{i}{n}\right)^2\right)</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572168726">
+        <p><m>\displaystyle \int_1^2 x\log(x^2)\, dx</m></p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In the following exercises, evaluate the integrals of the functions graphed using the formulas for areas of triangles and circles, and subtracting the areas below the <m>x</m>-axis.</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170572168783">
+      <statement>
+        <image source="ch5/CNX_Calc_Figure_05_02_201.jpg" width="50%">
+          <description>A graph containing the upper half of three circles on the x-axis. The first has center at (1, 0) and radius 1, corresponding to the function sqrt(2x - x^2) over [0, 2]. The second has center at (4, 0) and radius 2, corresponding to the function sqrt(-12 + 8x - x^2) over [2, 6]. The last has center at (9, 0) and radius 3, corresponding to the function sqrt(-72 + 18x - x^2) over [6, 12]. All three semicircles are shaded.</description>
+        </image>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572629210">
+      <statement>
+        <image source="ch5/CNX_Calc_Figure_05_02_202.jpg" width="50%">
+          <description>A graph of three isosceles triangles corresponding to the functions 1 - |x - 1| over [0, 2], 2 - |x - 4| over [2, 6], and 3 - |x - 9| over [6, 12]. The first triangle has vertices at (0, 0), (2, 0), and (1, 1). The second triangle has vertices at (2, 0), (6, 0), and (4, 2). The last has vertices at (6, 0), (12, 0), and (9, 3). All three are shaded.</description>
+        </image>
+      </statement>
+      <solution xml:id="fs-id1170572629227">
+        <p><m>1 + 2\cdot 2 + 3\cdot 3 = 14</m></p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571689722">
+      <statement>
+        <image source="ch5/CNX_Calc_Figure_05_02_203.jpg" width="50%">
+          <description>A graph with three parts. The first is the upper half of a circle with center at (1, 0) and radius 1, which corresponds to the function sqrt(2x - x^2) over [0, 2]. The second is a triangle with vertices at (2, 0), (6, 0), and (4, -2), which corresponds to the function |x - 4| - 2 over [2, 6]. The last is the upper half of a circle with center at (9, 0) and radius 3, which corresponds to the function sqrt(-72 + 18x - x^2) over [6, 12]. All three are shaded.</description>
+        </image>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571689786">
+      <statement>
+        <image source="ch5/CNX_Calc_Figure_05_02_204.jpg" width="50%">
+          <description>A graph of three shaded triangles. The first has vertices at (0, 0), (2, 0), and (1, 1) and corresponds to the function 1 - |x - 1| over [0, 2]. The second has vertices at (2, 0), (6, 0), and (4, -2) and corresponds to the function |x - 4| - 2 over [2, 6]. The third has vertices at (6, 0), (12, 0), and (9, 3) and corresponds to the function 3 - |x - 9| over [6, 12].</description>
+        </image>
+      </statement>
+      <solution xml:id="fs-id1170571689805">
+        <p><m>1 - 4 + 9 = 6</m></p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572378990">
+      <statement>
+        <image source="ch5/CNX_Calc_Figure_05_02_205.jpg" width="50%">
+          <description>A graph with three shaded parts. The first is the upper half of a circle with center at (1, 0) and radius 1, corresponding to the function sqrt(2x - x^2) over [0, 2]. The second is the lower half of a circle with center at (4, 0) and radius 2, corresponding to the function -sqrt(-12 + 8x - x^2) over [2, 6]. The last is the upper half of a circle with center at (9, 0) and radius 3, corresponding to the function sqrt(-72 + 18x - x^2) over [6, 12].</description>
+        </image>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572379049">
+      <statement>
+        <image source="ch5/CNX_Calc_Figure_05_02_206.jpg" width="50%">
+          <description>A graph with three shaded parts. The first is a triangle with vertices at (0, 0), (2, 0), and (1, 1), corresponding to the function 1 - |x - 1| over [0, 2]. The second is the lower half of a circle with center at (4, 0) and radius 2, corresponding to the function -sqrt(-12 + 8x - x^2) over [2, 6]. The last is a triangle with vertices at (6, 0), (12, 0), and (9, 3), corresponding to the function 3 - |x - 9| over [6, 12].</description>
+        </image>
+      </statement>
+      <solution xml:id="fs-id1170572379056">
+        <p><m>1 - 2\pi + 9 = 10 - 2\pi</m></p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In the following exercises, evaluate the integral using area formulas.</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170571571954">
+      <statement>
+        <p><m>\displaystyle \int_0^3 (3 - x)\, dx</m></p>
+      </statement>
+    </exercise>
+
+<exercise xml:id="fs-id1170571572010">
+      <statement>
+        <p><m>\displaystyle \int_2^3 (3 - x)\, dx</m></p>
+      </statement>
+      <solution xml:id="fs-id1170571777867">
+        <p>The integral is the area of the triangle, <m>\frac{1}{2}</m>.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571777884">
+      <statement>
+        <p><m>\displaystyle \int_{-3}^3 (3 - \lvert x \rvert)\, dx</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571777937">
+      <statement>
+        <p><m>\displaystyle \int_0^6 (3 - \lvert x - 3 \rvert)\, dx</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572569970">
+        <p>The integral is the area of the triangle, <m>9</m>.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572569980">
+      <statement>
+        <p><m>\displaystyle \int_{-2}^2 \sqrt{4 - x^2}\, dx</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572309996">
+      <statement>
+        <p><m>\displaystyle \int_1^5 \sqrt{4 - (x - 3)^2}\, dx</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572310044">
+        <p>The integral is the area <m>\frac{1}{2}\pi r^2 = 2\pi</m>.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571613708">
+      <statement>
+        <p><m>\displaystyle \int_0^{12} \sqrt{36 - (x - 6)^2}\, dx</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571613791">
+      <statement>
+        <p><m>\displaystyle \int_{-2}^3 (3 - \lvert x \rvert)\, dx</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572347000">
+        <p>The integral is the area of the <q>big</q> triangle less the <q>missing</q> triangle, <m>9 - \frac{1}{2} = \frac{17}{2}</m>.</p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In the following exercises, use averages of values at the left (<m>L</m>) and right (<m>R</m>) endpoints to compute the integrals of the piecewise linear functions with graphs that pass through the given list of points over the indicated intervals.</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170572347040">
+      <statement>
+        <p><m>\{(0, 0), (2, 1), (4, 3), (5, 0), (6, 0), (8, 3)\}</m> over <m>[0, 8]</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572329988">
+      <statement>
+        <p><m>\{(0, 2), (1, 0), (3, 5), (5, 5), (6, 2), (8, 0)\}</m> over <m>[0, 8]</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572379156">
+        <p><m>L = 2 + 0 + 10 + 5 + 4 = 21</m>, <m>R = 0 + 10 + 10 + 2 + 0 = 22</m>, <m>\dfrac{L + R}{2} = 21.5</m></p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572434958">
+      <statement>
+        <p><m>\{(-4, -4), (-2, 0), (0, -2), (3, 3), (4, 3)\}</m> over <m>[-4, 4]</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572627112">
+      <statement>
+        <p><m>\{(-4, 0), (-2, 2), (0, 0), (1, 2), (3, 2), (4, 0)\}</m> over <m>[-4, 4]</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572504512">
+        <p><m>L = 0 + 4 + 0 + 4 + 2 = 10</m>, <m>R = 4 + 0 + 2 + 4 + 0 = 10</m>, <m>\dfrac{L + R}{2} = 10</m></p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>Suppose that <m>\displaystyle \int_0^4 f(x)\, dx = 5</m> and <m>\displaystyle \int_0^2 f(x)\, dx = -3</m>, and <m>\displaystyle \int_0^4 g(x)\, dx = -1</m> and <m>\displaystyle \int_0^2 g(x)\, dx = 2</m>. In the following exercises, compute the integrals.</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170571712839">
+      <statement>
+        <p><m>\displaystyle \int_0^4 \bigl(f(x) + g(x)\bigr)\, dx</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572129831">
+      <statement>
+        <p><m>\displaystyle \int_2^4 \bigl(f(x) + g(x)\bigr)\, dx</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572379214">
+        <p><m>\displaystyle \int_2^4 f(x)\, dx + \int_2^4 g(x)\, dx = 8 - 3 = 5</m></p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572330198">
+      <statement>
+        <p><m>\displaystyle \int_0^2 \bigl(f(x) - g(x)\bigr)\, dx</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572129078">
+      <statement>
+        <p><m>\displaystyle \int_2^4 \bigl(f(x) - g(x)\bigr)\, dx</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572129130">
+        <p><m>\displaystyle \int_2^4 f(x)\, dx - \int_2^4 g(x)\, dx = 8 + 3 = 11</m></p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572223529">
+      <statement>
+        <p><m>\displaystyle \int_0^2 \bigl(3f(x) - 4g(x)\bigr)\, dx</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572309791">
+      <statement>
+        <p><m>\displaystyle \int_2^4 \bigl(4f(x) - 3g(x)\bigr)\, dx</m></p>
+      </statement>
+      <solution xml:id="fs-id1170571547403">
+        <p><m>\displaystyle 4\int_2^4 f(x)\, dx - 3\int_2^4 g(x)\, dx = 32 + 9 = 41</m></p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In the following exercises, use the identity <m>\displaystyle \int_{-A}^A f(x)\, dx = \int_{-A}^0 f(x)\, dx + \int_0^A f(x)\, dx</m> to compute the integrals.</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170571629004">
+      <statement>
+        <p><m>\displaystyle \int_{-\pi}^{\pi} \frac{\sin t}{1 + t^2}\, dt</m> (<em>Hint:</em> <m>\sin(-t) = -\sin(t)</m>)</p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572582637">
+      <statement>
+        <p><m>\displaystyle \int_{-\sqrt{\pi}}^{\sqrt{\pi}} \frac{t}{1 + \cos t}\, dt</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572351510">
+        <p>The integrand is odd; the integral is zero.</p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In the following exercises, find the net signed area between <m>f(x)</m> and the <m>x</m>-axis.</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170572351520">
+      <statement>
+        <p><m>\displaystyle \int_1^3 (2 - x)\, dx</m> (<em>Hint:</em> Look at the graph of <m>f</m>.)</p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572351584">
+      <statement>
+        <p><m>\displaystyle \int_2^4 (x - 3)^3\, dx</m> (<em>Hint:</em> Look at the graph of <m>f</m>.)</p>
+      </statement>
+      <solution xml:id="fs-id1170571638084">
+        <p>The integrand is antisymmetric with respect to <m>x = 3</m>. The integral is zero.</p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In the following exercises, given that <m>\displaystyle \int_0^1 x\, dx = \frac{1}{2}</m>, <m>\displaystyle \int_0^1 x^2\, dx = \frac{1}{3}</m>, and <m>\displaystyle \int_0^1 x^3\, dx = \frac{1}{4}</m>, compute the integrals.</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170571610324">
+      <statement>
+        <p><m>\displaystyle \int_0^1 (1 + x + x^2 + x^3)\, dx</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572448448">
+      <statement>
+        <p><m>\displaystyle \int_0^1 (1 - x + x^2 - x^3)\, dx</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572448500">
+        <p><m>1 - \dfrac{1}{2} + \dfrac{1}{3} - \dfrac{1}{4} = \dfrac{7}{12}</m></p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572368467">
+      <statement>
+        <p><m>\displaystyle \int_0^1 (1 - x)^2\, dx</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572306381">
+      <statement>
+        <p><m>\displaystyle \int_0^1 (1 - 2x)^3\, dx</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572306424">
+        <p><m>\displaystyle \int_0^1 (1 - 6x + 12x^2 - 8x^3)\, dx = \bigl[x - 3x^2 + 4x^3 - 2x^4\bigr]_0^1 = (1 - 3 + 4 - 2) - (0 - 0 + 0 - 0) = 0</m></p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572503294">
+      <statement>
+        <p><m>\displaystyle \int_0^1 \left(6x - \frac{4}{3}x^2\right)\, dx</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572558042">
+      <statement>
+        <p><m>\displaystyle \int_0^1 (7 - 5x^3)\, dx</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572558085">
+        <p><m>7 - \dfrac{5}{4} = \dfrac{23}{4}</m></p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In the following exercises, use the <xref ref="fs-id1170571653089" text="custom">comparison theorem</xref>.</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170572558117">
+      <statement>
+        <p>Show that <m>\displaystyle \int_0^3 (x^2 - 6x + 9)\, dx \geq 0</m>.</p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571813998">
+      <statement>
+        <p>Show that <m>\displaystyle \int_{-2}^3 (x - 3)(x + 2)\, dx \leq 0</m>.</p>
+      </statement>
+      <solution xml:id="fs-id1170572307625">
+        <p>The integrand is negative over <m>(-2, 3)</m> (and nonpositive over <m>[-2, 3]</m>).</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572307652">
+      <statement>
+        <p>Show that <m>\displaystyle \int_0^1 \sqrt{1 + x^3}\, dx \leq \int_0^1 \sqrt{1 + x^2}\, dx</m>.</p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572480473">
+      <statement>
+        <p>Show that <m>\displaystyle \int_1^2 \sqrt{1 + x}\, dx \leq \int_1^2 \sqrt{1 + x^2}\, dx</m>.</p>
+      </statement>
+      <solution xml:id="fs-id1170572624742">
+        <p><m>x \leq x^2</m> over <m>[1, 2]</m>, so <m>\sqrt{1 + x} \leq \sqrt{1 + x^2}</m> over <m>[1, 2]</m>.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572218472">
+      <statement>
+        <p>Show that <m>\displaystyle \int_0^{\pi/2} \sin t\, dt \geq \frac{\pi}{4}</m>. (<em>Hint:</em> <m>\sin t \geq \dfrac{2t}{\pi}</m> over <m>\left[0, \dfrac{\pi}{2}\right]</m>)</p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571712390">
+      <statement>
+        <p>Show that <m>\displaystyle \int_{-\pi/4}^{\pi/4} \cos t\, dt \geq \frac{\pi\sqrt{2}}{4}</m>.</p>
+      </statement>
+      <solution xml:id="fs-id1170571712449">
+        <p><m>\cos(t) \geq \dfrac{\sqrt{2}}{2}</m> over <m>\left[-\dfrac{\pi}{4}, \dfrac{\pi}{4}\right]</m>. Multiply by the length of the interval to get the inequality.</p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In the following exercises, find the average value <m>f_{\text{ave}}</m> of <m>f</m> between <m>a</m> and <m>b</m>, and find a point <m>c</m> where <m>f(c) = f_{\text{ave}}</m>.</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170571629716">
+      <statement>
+        <p><m>f(x) = x^2</m>, <m>a = -1</m>, <m>b = 1</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571542812">
+      <statement>
+        <p><m>f(x) = x^5</m>, <m>a = -1</m>, <m>b = 1</m></p>
+      </statement>
+      <solution xml:id="fs-id1170571542854">
+        <p><m>f_{\text{ave}} = 0</m>; <m>c = 0</m></p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571542884">
+      <statement>
+        <p><m>f(x) = \sqrt{4 - x^2}</m>, <m>a = 0</m>, <m>b = 2</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571624147">
+      <statement>
+        <p><m>f(x) = 3 - \lvert x \rvert</m>, <m>a = -3</m>, <m>b = 3</m></p>
+      </statement>
+      <solution xml:id="fs-id1170571698166">
+        <p><m>f_{\text{ave}} = \dfrac{3}{2}</m> when <m>c = \pm \dfrac{3}{2}</m></p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571698196">
+      <statement>
+        <p><m>f(x) = \sin x</m>, <m>a = 0</m>, <m>b = 2\pi</m></p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572309562">
+      <statement>
+        <p><m>f(x) = \cos x</m>, <m>a = 0</m>, <m>b = 2\pi</m></p>
+      </statement>
+      <solution xml:id="fs-id1170572309608">
+        <p><m>f_{\text{ave}} = 0</m>; <m>c = \dfrac{\pi}{2}, \dfrac{3\pi}{2}</m></p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In the following exercises, approximate the average value using Riemann sums <m>L_{100}</m> and <m>R_{100}</m>. How does your answer compare with the exact given answer?</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170572617925">
+      <statement>
+        <p><term>[T]</term> <m>y = \ln(x)</m> over the interval <m>[1, 4]</m>; the exact solution is <m>\dfrac{\ln(256)}{3} - 1</m>.</p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572618040">
+      <statement>
+        <p><term>[T]</term> <m>y = e^{x/2}</m> over the interval <m>[0, 1]</m>; the exact solution is <m>2(\sqrt{e} - 1)</m>.</p>
+      </statement>
+      <solution xml:id="fs-id1170572554273">
+        <p><m>L_{100} = 1.294</m>, <m>R_{100} = 1.301</m>; the exact average is between these values.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572554311">
+      <statement>
+        <p><term>[T]</term> <m>y = \tan x</m> over the interval <m>\left[0, \dfrac{\pi}{4}\right]</m>; the exact solution is <m>\dfrac{2\ln(2)}{\pi}</m>.</p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170571612045">
+      <statement>
+        <p><term>[T]</term> <m>y = \dfrac{x + 1}{\sqrt{4 - x^2}}</m> over the interval <m>[-1, 1]</m>; the exact solution is <m>\dfrac{\pi}{6}</m>.</p>
+      </statement>
+      <solution xml:id="fs-id1170571637416">
+        <p><m>L_{100} \times \left(\dfrac{1}{2}\right) = 0.5178</m>, <m>R_{100} \times \left(\dfrac{1}{2}\right) = 0.5294</m></p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In the following exercises, compute the average value using the left Riemann sums <m>L_N</m> for <m>N = 1, 10, 100</m>. How does the accuracy compare with the given exact value?</p>
+    </introduction>
+
+    <exercise xml:id="fs-id1170571817346">
+      <statement>
+        <p><term>[T]</term> <m>y = x^2 - 4</m> over the interval <m>[0, 2]</m>; the exact solution is <m>-\dfrac{8}{3}</m>.</p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572292384">
+      <statement>
+        <p><term>[T]</term> <m>y = x e^{x^2}</m> over the interval <m>[0, 2]</m>; the exact solution is <m>\dfrac{1}{4}(e^4 - 1)</m>.</p>
+      </statement>
+      <solution xml:id="fs-id1170572373488">
+        <p><m>L_1 = 0</m>, <m>L_{10} \times \left(\dfrac{1}{2}\right) = 8.743493</m>, <m>L_{100} \times \left(\dfrac{1}{2}\right) = 12.861728</m>. The exact answer is <m>\approx 26.799</m>, so <m>L_{100}</m> is not accurate.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572373581">
+      <statement>
+        <p><term>[T]</term> <m>y = \left(\dfrac{1}{2}\right)^x</m> over the interval <m>[0, 4]</m>; the exact solution is <m>\dfrac{15}{64\ln(2)}</m>.</p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="fs-id1170572380131">
+      <statement>
+        <p><term>[T]</term> <m>y = x\sin(x^2)</m> over the interval <m>[-\pi, 0]</m>; the exact solution is <m>\dfrac{\cos(\pi^2) - 1}{2\pi}</m>.</p>
+      </statement>
+      <solution xml:id="fs-id1170572172957">
+        <p><m>L_1 \times \left(\dfrac{1}{\pi}\right) = 1.352</m>, <m>L_{10} \times \left(\dfrac{1}{\pi}\right) = -0.1837</m>, <m>L_{100} \times \left(\dfrac{1}{\pi}\right) = -0.2956</m>. The exact answer is <m>\approx -0.303</m>, so <m>L_{100}</m> is not accurate to the first decimal.</p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercise xml:id="fs-id1170571557785">
+    <statement>
+      <p>Suppose that <m>\displaystyle A = \int_0^{2\pi} \sin^2 t\, dt</m> and <m>\displaystyle B = \int_0^{2\pi} \cos^2 t\, dt</m>. Show that <m>A + B = 2\pi</m> and <m>A = B</m>.</p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572572944">
+    <statement>
+      <p>Suppose that <m>\displaystyle A = \int_{-\pi/4}^{\pi/4} \sec^2 t\, dt = 2</m> and <m>\displaystyle B = \int_{-\pi/4}^{\pi/4} \tan^2 t\, dt</m>. Show that <m>A - B = \dfrac{\pi}{2}</m>.</p>
+    </statement>
+    <solution xml:id="fs-id1170571614588">
+      <p>Use <m>\tan^2\theta + 1 = \sec^2\theta</m>. Then, <m>\displaystyle A - B = \int_{-\pi/4}^{\pi/4} 1\, dx = \frac{\pi}{2}</m>.</p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572610142">
+    <statement>
+      <p>Show that the average value of <m>\sin^2 t</m> over <m>[0, 2\pi]</m> is equal to <m>1/2</m>. Without further calculation, determine whether the average value of <m>\sin^2 t</m> over <m>[0, \pi]</m> is also equal to <m>1/2</m>.</p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572371992">
+    <statement>
+      <p>Show that the average value of <m>\cos^2 t</m> over <m>[0, 2\pi]</m> is equal to <m>1/2</m>. Without further calculation, determine whether the average value of <m>\cos^2(t)</m> over <m>[0, \pi]</m> is also equal to <m>1/2</m>.</p>
+    </statement>
+    <solution xml:id="fs-id1170572372083">
+      <p><m>\displaystyle \int_0^{2\pi} \cos^2 t\, dt = \pi</m>, so divide by the length <m>2\pi</m> of the interval. Since <m>\cos^2 t</m> has period <m>\pi</m>, yes, it is true.</p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572560196">
+    <statement>
+      <p>Explain why the graphs of a quadratic function (parabola) <m>p(x)</m> and a linear function <m>\ell(x)</m> can intersect in at most two points. Suppose that <m>p(a) = \ell(a)</m> and <m>p(b) = \ell(b)</m>, and that <m>\displaystyle \int_a^b p(t)\, dt \gt \int_a^b \ell(t)\, dt</m>. Explain why <m>\displaystyle \int_c^d p(t)\, dt \gt \int_c^d \ell(t)\, dt</m> whenever <m>a \leq c \lt d \leq b</m>.</p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572332688">
+    <statement>
+      <p>Suppose that parabola <m>p(x) = ax^2 + bx + c</m> opens downward (<m>a \lt 0</m>) and has a vertex with <m>y</m>-coordinate <m>y = c - \dfrac{b^2}{4a} \gt 0</m>. For which interval <m>[A, B]</m> is <m>\displaystyle \int_A^B (ax^2 + bx + c)\, dx</m> as large as possible?</p>
+    </statement>
+    <solution xml:id="fs-id1170572274652">
+      <p>The integral is maximized when one uses the largest interval on which <m>p</m> is nonnegative. Thus, <m>A = \dfrac{-b + \sqrt{b^2 - 4ac}}{2a}</m> and <m>B = \dfrac{-b - \sqrt{b^2 - 4ac}}{2a}</m>.</p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572274743">
+    <introduction>
+      <p>Suppose <m>[a, b]</m> can be subdivided into subintervals <m>a = a_0 \lt a_1 \lt a_2 \lt \cdots \lt a_N = b</m> such that either <m>f \geq 0</m> over <m>[a_{i-1}, a_i]</m> or <m>f \leq 0</m> over <m>[a_{i-1}, a_i]</m>. Set <m>\displaystyle A_i = \int_{a_{i-1}}^{a_i} f(t)\, dt</m>.</p>
+    </introduction>
+    <task>
+      <statement>
+        <p>Explain why <m>\displaystyle \int_a^b f(t)\, dt = A_1 + A_2 + \cdots + A_N</m>.</p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>Then, explain why <m>\displaystyle \left\lvert \int_a^b f(t)\, dt \right\rvert \leq \int_a^b \lvert f(t) \rvert\, dt</m>.</p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572330166">
+    <statement>
+      <p>Suppose <m>f</m> and <m>g</m> are continuous functions such that <m>\displaystyle \int_c^d f(t)\, dt \leq \int_c^d g(t)\, dt</m> for every subinterval <m>[c, d]</m> of <m>[a, b]</m>. Explain why <m>f(x) \leq g(x)</m> for all values of <m>x</m> in <m>[a, b]</m>.</p>
+    </statement>
+    <solution xml:id="fs-id1170571596324">
+      <p>If <m>f(t_0) \gt g(t_0)</m> for some <m>t_0 \in [a, b]</m>, then since <m>f - g</m> is continuous, there is a subinterval <m>[c, d] \subseteq [a, b]</m> containing <m>t_0</m> such that <m>f(t) \gt g(t)</m> over <m>[c, d]</m>, and then <m>\displaystyle \int_c^d f(t)\, dt \gt \int_c^d g(t)\, dt</m> over this interval.</p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572557929">
+    <statement>
+      <p>Suppose the average value of <m>f</m> over <m>[a, c]</m> is <m>1</m> and the average value of <m>f</m> over <m>[c, b]</m> is <m>1</m>, where <m>a \lt c \lt b</m>. Show that the average value of <m>f</m> over <m>[a, b]</m> is also <m>1</m>.</p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572370995">
+    <statement>
+      <p>Suppose that <m>[a, b]</m> can be partitioned taking <m>a = a_0 \lt a_1 \lt \cdots \lt a_N = b</m> such that the average value of <m>f</m> over each subinterval <m>[a_{i-1}, a_i]</m> is equal to <m>1</m> for each <m>i = 1, \ldots, N</m>. Explain why the average value of <m>f</m> over <m>[a, b]</m> is also equal to <m>1</m>.</p>
+    </statement>
+    <solution xml:id="fs-id1170572370325">
+      <p>The integral of <m>f</m> over an interval is the same as the integral of the average of <m>f</m> over that interval. Thus,</p>
+      <md>
+        <mrow>\int_a^b f(t)\, dt \amp= \int_{a_0}^{a_1} f(t)\, dt + \int_{a_1}^{a_2} f(t)\, dt + \cdots + \int_{a_{N-1}}^{a_N} f(t)\, dt</mrow>
+        <mrow>\amp= \int_{a_0}^{a_1} 1\, dt + \int_{a_1}^{a_2} 1\, dt + \cdots + \int_{a_{N-1}}^{a_N} 1\, dt</mrow>
+        <mrow>\amp= (a_1 - a_0) + (a_2 - a_1) + \cdots + (a_N - a_{N-1}) = a_N - a_0 = b - a.</mrow>
+      </md>
+      <p>Dividing through by <m>b - a</m> gives the desired identity.</p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572353400">
+    <statement>
+      <p>Suppose that for each <m>i</m> such that <m>1 \leq i \leq N</m> one has <m>\displaystyle \int_{i-1}^i f(t)\, dt = i</m>. Show that <m>\displaystyle \int_0^N f(t)\, dt = \frac{N(N + 1)}{2}</m>.</p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572390663">
+    <statement>
+      <p>Suppose that for each <m>i</m> such that <m>1 \leq i \leq N</m> one has <m>\displaystyle \int_{i-1}^i f(t)\, dt = i^2</m>. Show that <m>\displaystyle \int_0^N f(t)\, dt = \frac{N(N + 1)(2N + 1)}{6}</m>.</p>
+    </statement>
+    <solution xml:id="fs-id1170571654042">
+      <p><m>\displaystyle \int_0^N f(t)\, dt = \sum_{i=1}^N \int_{i-1}^i f(t)\, dt = \sum_{i=1}^N i^2 = \frac{N(N + 1)(2N + 1)}{6}</m></p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572447512">
+    <statement>
+      <p><term>[T]</term> Compute the left and right Riemann sums <m>L_{10}</m> and <m>R_{10}</m> and their average <m>\dfrac{L_{10} + R_{10}}{2}</m> for <m>f(t) = t^2</m> over <m>[0, 1]</m>. Given that <m>\displaystyle \int_0^1 t^2\, dt = 0.\overline{3}</m>, to how many decimal places is <m>\dfrac{L_{10} + R_{10}}{2}</m> accurate?</p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572370443">
+    <statement>
+      <p><term>[T]</term> Compute the left and right Riemann sums, <m>L_{10}</m> and <m>R_{10}</m>, and their average <m>\dfrac{L_{10} + R_{10}}{2}</m> for <m>f(t) = 4 - t^2</m> over <m>[1, 2]</m>. Given that <m>\displaystyle \int_1^2 (4 - t^2)\, dt = 1.\overline{6}</m>, to how many decimal places is <m>\dfrac{L_{10} + R_{10}}{2}</m> accurate?</p>
+    </statement>
+    <solution xml:id="fs-id1170571543367">
+      <p><m>L_{10} = 1.815</m>, <m>R_{10} = 1.515</m>, <m>\dfrac{L_{10} + R_{10}}{2} = 1.665</m>, so the estimate is accurate to two decimal places.</p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="fs-id1170571543430">
+    <statement>
+      <p>If <m>\displaystyle \int_1^5 \sqrt{1 + t^4}\, dt = 41.7133\ldots</m>, what is <m>\displaystyle \int_1^5 \sqrt{1 + u^4}\, du</m>?</p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572367461">
+    <statement>
+      <p>Estimate <m>\displaystyle \int_0^1 t\, dt</m> using the left and right endpoint sums, each with a single rectangle. How does the average of these left and right endpoint sums compare with the actual value <m>\displaystyle \int_0^1 t\, dt</m>?</p>
+    </statement>
+    <solution xml:id="fs-id1170572367515">
+      <p>The average is <m>1/2</m>, which is equal to the integral in this case.</p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="fs-id1170571838064">
+    <statement>
+      <p>Estimate <m>\displaystyle \int_0^1 t\, dt</m> by comparison with the area of a single rectangle with height equal to the value of <m>t</m> at the midpoint <m>t = \frac{1}{2}</m>. How does this midpoint estimate compare with the actual value <m>\displaystyle \int_0^1 t\, dt</m>?</p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="fs-id1170571838158">
+    <introduction>
+      <p>From the graph of <m>\sin(2\pi x)</m> shown:</p>
+      <image source="ch5/CNX_Calc_Figure_05_02_207.jpg" width="50%">
+        <description>A graph of the function f(x) = sin(2pi*x) over [0, 2]. The function is shaded over [0.7, 1] above the curve and below the x-axis, over [1, 1.5] under the curve and above the x-axis, and over [1.5, 1.7] above the curve and under the x-axis. The graph is antisymmetric with respect to t = 1/2 over [0, 1].</description>
+      </image>
+    </introduction>
+    <task>
+      <statement>
+        <p>Explain why <m>\displaystyle \int_0^1 \sin(2\pi t)\, dt = 0</m>.</p>
+      </statement>
+      <solution>
+        <p>The graph is antisymmetric with respect to <m>t = \frac{1}{2}</m> over <m>[0, 1]</m>, so the average value is zero.</p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>Explain why, in general, <m>\displaystyle \int_a^{a+1} \sin(2\pi t)\, dt = 0</m> for any value of <m>a</m>.</p>
+      </statement>
+      <solution>
+        <p>For any value of <m>a</m>, the graph over <m>[a, a + 1]</m> is a horizontal shift of the graph over <m>[0, 1]</m>, so the net areas above and below the axis do not change and the average remains zero.</p>
+      </solution>
+    </task>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572643336">
+    <statement>
+      <p>If <m>f</m> is <m>1</m>-periodic (<m>f(t + 1) = f(t)</m>), odd, and integrable over <m>[0, 1]</m>, is it always true that <m>\displaystyle \int_0^1 f(t)\, dt = 0</m>?</p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="fs-id1170572350691">
+    <statement>
+      <p>If <m>f</m> is <m>1</m>-periodic and <m>\displaystyle \int_0^1 f(t)\, dt = A</m>, is it necessarily true that <m>\displaystyle \int_a^{1+a} f(t)\, dt = A</m> for all <m>a</m>?</p>
+    </statement>
+    <solution xml:id="fs-id1170572398846">
+      <p>Yes, the integral over any interval of length <m>1</m> is the same.</p>
+    </solution>
+  </exercise>
+
+</exercises>
+
+</section>
